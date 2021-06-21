@@ -1,0 +1,42 @@
+# Dimensional Horror
+ship_design = {
+	name = "Dimensional Horrorworm"
+	ship_size = dimensional_horrorworm
+	section = {
+		template = "DIMENSIONAL_HORRORWORM_KEY"
+		slot = "mid"
+		component = {
+			slot = "PRIMARY_WEAPON_01"
+			template = "ENERGY_LANCE_1"
+		}	
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_MASS_DRIVER_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_SHIELD_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_SHIELD_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_SHIELD_1"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "MEDIUM_ARMOR_1"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "MEDIUM_ARMOR_1"
+		}
+	}
+	required_component = "CORVETTE_FISSION_REACTOR"
+	required_component = "HYPER_DRIVE_1"
+	required_component = "DIMENSIONAL_HORRORWORM_COMBAT_COMPUTER_DEFAULT"
+	required_component = "SHIP_THRUSTER_1"
+	required_component = "SENSOR_1"
+}

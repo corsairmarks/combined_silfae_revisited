@@ -1,0 +1,51 @@
+#reloadable with 'reload stats'
+# This file is where you start when you want to configure something new, then go to sections
+
+# Dimensional Horror
+dimensional_horrorworm = {
+	formation_priority = 3
+	graphical_culture = no
+	is_space_object = yes
+	max_speed = @speed_default # was 9.5 - that is very slow in the current system
+	acceleration = 0.5
+	rotation_speed = 0.5
+	collision_radius = 1.5
+	modifier = {
+		ship_evasion_mult = 0.25
+		ship_evasion_add = 80
+	}
+	max_hitpoints = 150
+	size_multiplier = 1
+	fleet_slot_size = 1
+	section_slots = { 
+		"mid" = { locator = "part1" }
+	}
+	num_target_locators = 2
+	is_space_station = no
+	icon_frame = 5
+	base_buildtime = 50
+	can_have_federation_design = no
+	prerequisites = { tech_hollowrift }
+	combat_disengage_chance = 1.00
+	class = shipclass_military
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "combat_computers"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	is_designable = yes
+	enable_default_design = yes
+	default_behavior = line
+	construction_type = starbase_shipyard
+	resources = {
+		category = ships
+		upkeep = {
+			energy = @corvette_upkeep_energy
+			alloys = @corvette_upkeep_alloys
+		}
+	}
+	min_upgrade_cost = {
+		alloys = 1
+	}
+}
+

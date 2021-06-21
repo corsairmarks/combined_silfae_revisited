@@ -1,0 +1,4 @@
+# This file originally contained duplicate scripts from gfx/models/ships/guardians/dimensional_horror/dimensional_horror.gfx
+# It had the same content and generated a lot of error logs, so this file eliminates it from being processed.
+objectTypes = {
+}
