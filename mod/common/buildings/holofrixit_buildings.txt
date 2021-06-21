@@ -1,0 +1,94 @@
+building_polarizing_nexus_1 = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	potential = {
+		exists = owner
+		owner = { has_country_flag = is_holofrixit }
+		NOT = { has_modifier = resort_colony }
+	}
+	destroy_trigger = {
+		exists = owner
+		owner = { NOT = { has_country_flag = is_holofrixit } }
+		has_modifier = resort_colony
+	}
+	resources = {
+		category = planet_buildings
+		cost = { minerals = @b1_minerals }
+	}
+	country_modifier = { country_resource_max_energy_add = 1000 }
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				has_building = building_energy_grid
+				has_building = building_energy_nexus
+			}
+		}
+		modifier = { planet_technician_energy_produces_mult = 0.025 }
+	}
+	upgrades = { building_polarizing_nexus_2 }
+}
+
+building_polarizing_nexus_2 = {
+	base_buildtime = @b2_time
+	can_build = no
+	icon = building_polarizing_nexus_1
+	potential = {
+		exists = owner
+		owner = { has_country_flag = is_holofrixit }
+		NOT = { has_modifier = resort_colony }
+	}
+	destroy_trigger = {
+		exists = owner
+		owner = { NOT = { has_country_flag = is_holofrixit } }
+		has_modifier = resort_colony
+	}
+	resources = {
+		category = planet_buildings
+		cost = { minerals = @b2_minerals }
+	}
+	allow = { has_upgraded_capital = yes }
+	country_modifier = { country_resource_max_energy_add = 2000 }
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				has_building = building_energy_grid
+				has_building = building_energy_nexus
+			}
+		}
+		modifier = { planet_technician_energy_produces_mult = 0.05 }
+	}
+	prerequisites = { tech_power_plant_2 }
+	upgrades = { building_polarizing_nexus_3 }
+}
+
+building_polarizing_nexus_3 = {
+	base_buildtime = @b3_time
+	can_build = no
+	icon = "building_polarizing_nexus_2"
+	potential = {
+		exists = owner
+		owner = { has_country_flag = is_holofrixit }
+		NOT = { has_modifier = resort_colony }
+	}
+	destroy_trigger = {
+		exists = owner
+		owner = { NOT = { has_country_flag = is_holofrixit } }
+		has_modifier = resort_colony
+	}
+	resources = {
+		category = planet_buildings
+		cost = { minerals = @b3_minerals }
+	}
+	allow = { has_major_upgraded_capital = yes }
+	country_modifier = { country_resource_max_energy_add = 3000 }
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				has_building = building_energy_grid
+				has_building = building_energy_nexus
+			}
+		}
+		modifier = { planet_technician_energy_produces_mult = 0.075 }
+	}
+	prerequisites = { tech_power_plant_3 }
+}

@@ -1,0 +1,348 @@
+
+# not sure if this will be used anymore!
+# but, check 00_scripted_effects.txt:8808 for create_built_robot_species
+# that seems to be the new way to set things up for building
+
+breedable_holodrone_pop_1 = {
+	prerequisites = {
+		"tech_holocastes"
+	}
+	cost = {
+		minerals = 40
+	}
+	allow = {
+		has_country_flag = is_holofrixit
+	}
+	potential_build = {
+		has_country_flag = is_holofrixit
+	}
+	species = {
+		name = "Holofrixit"
+		class = HLFRXT
+		portrait = holofrixit_drone_01
+		traits = {
+			trait = trait_holofrixit
+			trait = trait_pc_arctic_preference
+		}
+		pops_auto_growth = 15.0
+		pops_can_be_colonizers = yes
+		pops_can_migrate = yes
+		pops_can_reproduce = yes
+		pops_can_join_factions = no
+		pop_maintenance = 0.8
+		can_generate_leaders = no
+		pops_can_be_slaves = yes
+		can_be_modified = no
+		consumer_goods = yes
+		pops_have_happiness = yes
+		pop_ethics = owner # can also be pop_ethics = { some_ethic some_other_ethic etc }
+	}
+}
+
+breedable_ganglion_pop_1 = {
+	prerequisites = {
+		"tech_holocastes"
+	}
+	cost = {
+		energy = 200
+	}
+	allow = {
+		has_country_flag = is_holofrixit
+	}
+	potential_build = {
+		has_country_flag = is_holofrixit
+	}
+	species = {
+		name = "PSYCHO_GANGLION"
+		class = HLFRXT
+		portrait = holofrixit_scientist_01
+		traits = {
+			trait = trait_holofrixit
+			trait = trait_hologanglion
+			trait = trait_pc_arctic_preference
+		}
+		new_pop_resource_requirement = {
+			type = robot_food
+			value = 5.0
+		}
+		pops_auto_growth = 1.5
+		pops_can_be_colonizers = no
+		pops_can_migrate = yes
+		pops_can_reproduce = no
+		pops_can_join_factions = yes
+		pop_maintenance = 1.3
+		can_generate_leaders = yes
+		pops_can_be_slaves = yes
+		can_be_modified = no
+		consumer_goods = yes
+		pops_have_happiness = yes
+		pop_ethics = owner # can also be pop_ethics = { some_ethic some_other_ethic etc }
+	}
+}
+
+breedable_holowarrior_pop_1 = {
+	prerequisites = {
+		"tech_holocastes"
+	}	
+	cost = {
+		energy = 100
+	}
+	allow = {
+		has_country_flag = is_holofrixit
+	}
+	potential_build = {
+		has_country_flag = is_holofrixit
+	}
+	species = {
+		name = "HOLOFRI_WARRIOR"
+		class = HLFRXT
+		portrait = holofrixit_warrior_01
+		traits = {
+			trait = trait_holofrixit
+			trait = trait_holowarrior
+			trait = trait_pc_arctic_preference
+		}
+		new_pop_resource_requirement = {
+			type = robot_food
+			value = 60.0
+		}
+		pops_auto_growth = 0.8
+		pops_can_be_colonizers = yes
+		pops_can_migrate = yes
+		pops_can_reproduce = yes
+		pops_can_join_factions = yes
+		pop_maintenance = 1.1
+		can_generate_leaders = no
+		pops_can_be_slaves = yes
+		can_be_modified = yes
+		consumer_goods = yes
+		pops_have_happiness = yes
+		pop_ethics = owner # can also be pop_ethics = { some_ethic some_other_ethic etc }
+	}
+}
+
+breedable_holowarrior_pop_2 = {
+	prerequisites = {
+		"tech_holocastes"
+		"tech_epigenetic_triggers"
+	}
+	cost = {
+		energy = 500
+	}
+	allow = {
+		has_country_flag = is_holofrixit
+	}
+	potential_build = {
+		has_country_flag = is_holofrixit
+	}
+	species = {
+		name = "HOLOFRI_WARRIOR_2"
+		class = HLFRXT
+		portrait = holofrixit_warrior_02
+		traits = {
+			trait = trait_holofrixit
+			trait = trait_holowarrior_2
+			trait = trait_pc_arctic_preference
+		}
+		new_pop_resource_requirement = {
+			type = robot_food
+			value = 50.0
+		}
+		pops_auto_growth = 0.1
+		pops_can_be_colonizers = no
+		pops_can_migrate = yes
+		pops_can_reproduce = yes
+		pops_can_join_factions = yes
+		pop_maintenance = 2.0
+		can_generate_leaders = no
+		pops_can_be_slaves = yes
+		can_be_modified = yes
+		pops_have_happiness = yes
+		consumer_goods = no
+		pop_ethics = owner # can also be pop_ethics = { some_ethic some_other_ethic etc }
+	}
+}
+
+#breedable_holoverseer_pop_1 = {
+#		
+#	prerequisites = {
+#		"tech_holocastes"
+#	}
+#	cost = {
+#		energy = 500
+#	}
+#	
+#	allow = {
+#		has_country_flag = is_holofrixit
+#	}
+#	
+#	potential_build = {
+#		always = yes
+#	}
+#	
+#	species = {
+#		name = "HOLOFRI_VERSEER"
+#		class = "HLFRXT"
+#		portrait = "holofrixit_female_01"
+#		traits = {
+#			trait = "trait_holofrixit"
+#			trait = "trait_holoverseer"
+#		}
+#		
+#		new_pop_resource_requirement = {
+#			type = robot_food
+#			value = 5.0
+#		}
+#		pops_auto_growth = 1.0
+#		
+#		pops_can_be_colonizers = no
+#		pops_can_migrate = no
+#		pops_can_reproduce = no
+#		pops_can_join_factions = yes
+#		pop_maintenance = 1.7
+#		can_generate_leaders = yes
+#		pops_can_be_slaves = yes
+#		can_be_modified = yes
+#		pops_have_happiness = yes
+#		pop_ethics = owner #can also be pop_ethics = { some_ethic some_other_ethic etc }
+#	}
+#}
+
+buildable_holofrixigram_pop_1 = {
+	prerequisites = {
+		"tech_holocastes"
+		"tech_robotic_workers"
+	}
+	cost = {
+		energy = 250
+	}
+	allow = {
+		OR = {
+			has_policy_flag = ai_servitude
+			has_policy_flag = ai_full_rights
+		}
+	}
+	potential_build = {
+		NOT = {
+			has_technology = tech_droid_workers
+			has_technology = tech_synthetic_workers
+		}
+		has_country_flag = is_holofrixit
+	}
+	species = {
+		name = "HOLOFRI_XIGRAM"
+		class = ROBOT
+		portrait = holofrixit_gram_01
+		traits = {
+			trait = trait_holofrixit
+			trait = trait_holofrixigram
+		}
+		# TODO: see change_species_characteristics docs https://stellaris.paradoxwikis.com/Effects
+		new_pop_resource_requirement = {
+			type = robot_food
+			value = 2.0
+		}
+		pops_auto_growth = 0.3
+		pops_auto_upgrade_to = buildable_holofrixigram_pop_2
+		pops_can_be_colonizers = no
+		pops_can_migrate = no
+		pops_can_reproduce = no
+		pops_can_join_factions = no
+		pop_maintenance = 1.4
+		can_generate_leaders = no
+		pops_can_be_slaves = no
+		can_be_modified = no
+		pops_have_happiness = no
+		consumer_goods = no
+		pop_ethics = owner # can also be pop_ethics = { some_ethic some_other_ethic etc }
+	}
+}
+
+buildable_holofrixigram_pop_2 = {
+	prerequisites = {
+		"tech_holocastes"
+		"tech_droid_workers"
+	}
+	cost = {
+		energy = 350
+	}
+	allow = {
+		OR = {
+			has_policy_flag = ai_servitude
+			has_policy_flag = ai_full_rights
+		}
+	}
+	potential_build = {
+		NOT = { has_technology = tech_synthetic_workers }
+		has_country_flag = is_holofrixit
+	}
+	species = {
+		name = "HOLOFRI_XIGRAM_2"
+		class = "ROBOT"
+		portrait = "holofrixit_gram_02"
+		traits = {
+			trait = "trait_holofrixit"
+			trait = "trait_holofrixigram_2"
+		}
+		new_pop_resource_requirement = {
+			type = robot_food
+			value = 7.0
+		}
+		pops_auto_growth = 0.3
+		pops_auto_upgrade_to = buildable_holofrixigram_pop_3
+		pops_can_be_colonizers = no
+		pops_can_migrate = no
+		pops_can_reproduce = no
+		pops_can_join_factions = no
+		pop_maintenance = 1.6
+		can_generate_leaders = no
+		pops_can_be_slaves = no
+		can_be_modified = no
+		pops_have_happiness = no
+		consumer_goods = no
+		pop_ethics = owner # can also be pop_ethics = { some_ethic some_other_ethic etc }
+	}
+}
+
+buildable_holofrixigram_pop_3 = {
+	prerequisites = {
+		"tech_synthetic_workers"
+	}
+	cost = {
+		energy = 450
+	}
+	allow = {
+		OR = {
+			has_policy_flag = ai_servitude
+			has_policy_flag = ai_full_rights
+		}
+	}
+	potential_build = {
+		NOT = { has_country_flag = synthetic_age }
+		has_country_flag = is_holofrixit
+	}
+	species = {
+		name = "HOLOFRI_XIGRAM_3"
+		class = ROBOT
+		portrait = holofrixit_gram_03
+		traits = {
+			trait = trait_holofrixit
+			trait = trait_holofrixigram_3
+		}
+		new_pop_resource_requirement = {
+			type = robot_food
+			value = 15.0
+		}
+		pops_auto_growth = 0.3
+		pops_can_be_colonizers = yes
+		pops_can_migrate = yes
+		pops_can_reproduce = yes
+		pops_can_join_factions = yes
+		pop_maintenance = 1.8
+		can_generate_leaders = yes
+		pops_can_be_slaves = yes
+		can_be_modified = no
+		pops_have_happiness = yes
+		pop_ethics = owner # can also be pop_ethics = { some_ethic some_other_ethic etc }
+	}
+}

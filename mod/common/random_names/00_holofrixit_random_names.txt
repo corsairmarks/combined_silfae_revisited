@@ -1,0 +1,2 @@
+# TODO: add gov't type names
+# https://stellaris.paradoxwikis.com/Government_modding (see the gov't data structuree notes)

@@ -1,0 +1,301 @@
+##################
+# Species Traits #
+##################
+
+trait_holofrixit = {
+	cost = 2
+	allowed_archetypes = { HOLOARCH }
+	# initial = no
+	species_potential_add = { always = no } # TODO: trying to prevent its use on custom races
+	randomized = no
+	modification = no
+	modifier = {	
+		pop_environment_tolerance = 1.0
+		army_attack_damage_mult = -0.02
+		army_defense_damage_mult = -0.02
+		army_defense_morale_mult = -0.02
+		army_health = -0.5
+		army_morale = 0.5
+		armies_upkeep_mult = -0.25
+		planet_jobs_physics_research_produces_mult = -0.01
+		planet_jobs_society_research_produces_mult = -0.01
+		planet_jobs_engineering_research_produces_mult = 0.01
+		planet_jobs_energy_produces_mult = 0.02
+		planet_jobs_minerals_produces_mult = 0.03
+		pop_happiness = 0.25
+		pop_ethics_shift_speed_mult = -0.15
+		pop_growth_from_immigration = 0.35
+		pop_resettlement_cost_mult = -0.1
+		pop_growth_speed = 0.15
+		species_leader_exp_gain = 0.2
+		leader_age = -20
+		leaders_cost_mult = -0.5
+		pop_cat_slave_happiness = 1.0 # I think that's what pop_slavery_tolerance did?
+
+		# ORIGINAL
+		# pop_environment_tolerance = 1.0
+		# army_attack_damage_mult = -0.02
+		# army_defense_damage_mult = -0.02
+		# army_defense_morale_mult = -0.02
+		# army_health = -0.5
+		# army_morale = 0.5
+		# army_upkeep_mult = -0.25
+		# tile_resource_physics_research_mult = -0.01
+		# tile_resource_society_research_mult = -0.01
+		# tile_resource_engineering_research_mult = 0.01
+		# tile_resource_energy_mult = 0.02
+		# tile_resource_minerals_mult = 0.03
+		# pop_happiness = 0.25
+		# pop_ethic_shift = -0.15
+		# pop_migration_speed = 0.35
+		# pop_resettlement_cost_mult = -0.1
+		# pop_growth_req_mult = -0.15
+		# species_leader_exp_gain = 0.2
+		# leader_age = -20
+		# leader_influence_cost = -0.50
+		# pop_slavery_tolerance = 1.0
+	}
+}
+
+trait_hologanglion = {
+	cost = 0
+	initial = no
+	randomized = no
+	modification = no
+	modifier = {	
+		army_attack_damage_mult = -0.05
+		army_defense_damage_mult = -0.05
+		army_defense_morale_mult = -0.05
+		armies_upkeep_mult = -0.25
+		planet_jobs_physics_research_produces_mult = 0.25
+		planet_jobs_society_research_produces_mult = 0.25
+		planet_jobs_engineering_research_produces_mult = 0.25
+		planet_jobs_minerals_produces_mult = -1.0
+		planet_jobs_energy_produces_mult = -0.05
+		pop_happiness = -0.01
+		pop_ethics_shift_speed_mult = 0.17
+		pop_growth_from_immigration = -0.05
+		pop_resettlement_cost_mult = 0.1
+		# pop_war_happiness = -0.05
+
+		# ORIGINAL
+		# army_attack_damage_mult = -0.05
+		# army_defense_damage_mult = -0.05
+		# army_defense_morale_mult = -0.05
+		# army_upkeep_mult = -0.25
+		# tile_resource_physics_research_mult = 0.25
+		# tile_resource_society_research_mult = 0.25
+		# tile_resource_engineering_research_mult = 0.25
+		# tile_resource_minerals_mult = -1.0
+		# tile_resource_energy_mult = -0.05
+		# pop_happiness = -0.01
+		# pop_ethic_shift = 0.17
+		# pop_migration_speed = -0.05
+		# pop_resettlement_cost_mult = 0.1
+		# pop_war_happiness = -0.05
+	}
+}
+
+trait_holowarrior = {
+	cost = 0
+	initial = no
+	randomized = no
+	modification = no
+
+	modifier = {	
+		army_attack_damage_mult = 0.05
+		army_defense_damage_mult = 0.05
+		army_defense_morale_mult = 0.05
+		army_health = 0.6
+		army_morale = 0.15
+		planet_jobs_physics_research_produces_mult = -0.75
+		planet_jobs_society_research_produces_mult = -0.75
+		planet_jobs_engineering_research_produces_mult = -0.75
+		planet_jobs_minerals_produces_mult = -0.1
+		planet_jobs_energy_produces_mult = -0.2
+		pop_happiness = 0.1
+		pop_ethics_shift_speed_mult = -0.1
+		pop_growth_from_immigration = -0.05
+		pop_resettlement_cost_mult = 0.01
+		planet_army_build_speed_mult = 0.03
+		armies_cost_mult = 0.05
+		# pop_fortification_defense = 0.03
+		# pop_war_happiness = 0.25
+
+		# ORIGINAL
+		# army_attack_damage_mult = 0.05
+		# army_defense_damage_mult = 0.05
+		# army_defense_morale_mult = 0.05
+		# army_health = 0.6
+		# army_morale = 0.15
+		# tile_resource_physics_research_mult = -0.75
+		# tile_resource_society_research_mult = -0.75
+		# tile_resource_engineering_research_mult = -0.75
+		# tile_resource_minerals_mult = -0.1
+		# tile_resource_energy_mult = -0.2
+		# pop_happiness = 0.1
+		# pop_ethic_shift = -0.1
+		# pop_migration_speed = -0.05
+		# pop_resettlement_cost_mult = 0.01
+		# planet_army_build_speed_mult = 0.03
+		# planet_army_build_cost_mult = 0.05
+		# pop_fortification_defense = 0.03
+		# pop_war_happiness = 0.25
+	}
+}
+
+trait_holowarrior_2 = {
+	cost = 0
+	initial = no
+	randomized = no
+	modification = no
+
+	modifier = {	
+		army_attack_damage_mult = 0.25
+		army_defense_damage_mult = 0.25
+		army_defense_morale_mult = 0.25
+		army_health = 0.9
+		army_morale = 0.25
+		planet_jobs_physics_research_produces_mult = -1.0
+		planet_jobs_society_research_produces_mult = -1.0
+		planet_jobs_engineering_research_produces_mult = -1.0
+		planet_jobs_minerals_produces_mult = -0.75
+		planet_jobs_energy_produces_mult = -0.75
+		pop_happiness = 0.2
+		pop_ethics_shift_speed_mult = -0.5
+		pop_growth_from_immigration = -0.15
+		pop_resettlement_cost_mult = 0.05
+		planet_army_build_speed_mult = 0.03
+		armies_cost_mult = 0.09
+		# pop_fortification_defense = 0.05
+		# pop_war_happiness = 0.5
+
+		# ORIGINAL
+		# army_attack_damage_mult = 0.25
+		# army_defense_damage_mult = 0.25
+		# army_defense_morale_mult = 0.25
+		# army_health = 0.9
+		# army_morale = 0.25
+		# tile_resource_physics_research_mult = -1.0
+		# tile_resource_society_research_mult = -1.0
+		# tile_resource_engineering_research_mult = -1.0
+		# tile_resource_minerals_mult = -0.75
+		# tile_resource_energy_mult = -0.75
+		# pop_happiness = 0.2
+		# pop_ethic_shift = -0.5
+		# pop_migration_speed = -0.15
+		# pop_resettlement_cost_mult = 0.05
+		# planet_army_build_speed_mult = 0.03
+		# planet_army_build_cost_mult = 0.09
+		# pop_fortification_defense = 0.05
+		# pop_war_happiness = 0.5
+	}
+}
+
+trait_holofrixigram = {
+	cost = 0
+	initial = no
+	randomized = no
+	modification = no
+	modifier = {	
+		army_attack_damage_mult = -1.0
+		army_defense_damage_mult = -1.0
+		army_defense_morale_mult = -1.0
+		planet_jobs_physics_research_produces_mult = -1.0
+		planet_jobs_society_research_produces_mult = -1.0
+		planet_jobs_engineering_research_produces_mult = -1.0
+		planet_jobs_minerals_produces_mult = -1.0
+		planet_jobs_energy_produces_mult = 0.75
+		pop_ethics_shift_speed_mult = -1.0
+		pop_growth_from_immigration = -1.0
+		pop_resettlement_cost_mult = 1.0
+
+		# ORIGINAL
+		# army_attack_damage_mult = -1.0
+		# army_defense_damage_mult = -1.0
+		# army_defense_morale_mult = -1.0
+		# tile_resource_physics_research_mult = -1.0
+		# tile_resource_society_research_mult = -1.0
+		# tile_resource_engineering_research_mult = -1.0
+		# tile_resource_minerals_mult = -1.0
+		# tile_resource_energy_mult = 0.75
+		# pop_ethic_shift = -1.0
+		# pop_migration_speed = -1.0
+		# pop_resettlement_cost_mult = 1.0
+	}
+}
+trait_holofrixigram_2 = {
+	cost = 0
+	initial = no
+	randomized = no
+	modification = no
+	modifier = {	
+		army_attack_damage_mult = -0.5
+		army_defense_damage_mult = -0.5
+		army_defense_morale_mult = -0.5
+		planet_jobs_physics_research_produces_mult = -0.5
+		planet_jobs_society_research_produces_mult = -0.5
+		planet_jobs_engineering_research_produces_mult = -0.5
+		planet_jobs_minerals_produces_mult = -1.0
+		planet_jobs_energy_produces_mult = 0.8
+		pop_ethics_shift_speed_mult = -1.0
+		pop_growth_from_immigration = -1.0
+		pop_resettlement_cost_mult = 1.0
+
+		# ORIGINAL
+		# army_attack_damage_mult = -0.5
+		# army_defense_damage_mult = -0.5
+		# army_defense_morale_mult = -0.5
+		# tile_resource_physics_research_mult = -0.5
+		# tile_resource_society_research_mult = -0.5
+		# tile_resource_engineering_research_mult = -0.5
+		# tile_resource_minerals_mult = -1.0
+		# tile_resource_energy_mult = 0.8
+		# pop_ethic_shift = -1.0
+		# pop_migration_speed = -1.0
+		# pop_resettlement_cost_mult = 1.0
+	}
+}
+trait_holofrixigram_3 = {
+	cost = 0
+	initial = no
+	randomized = no
+	modification = no
+	modifier = {	
+		planet_jobs_minerals_produces_mult = -1.0
+		planet_jobs_energy_produces_mult = 0.9
+		pop_ethics_shift_speed_mult = -0.5
+		pop_growth_from_immigration = -0.5
+		pop_resettlement_cost_mult = 1.0
+		# pop_war_happiness = -0.05 # not sure I can apply this; apparently broke in 1.6.2
+
+		# ORIGINAL
+		# tile_resource_minerals_mult = -1.0
+		# tile_resource_energy_mult = 0.9
+		# pop_ethic_shift = -0.5
+		# pop_migration_speed = -0.5
+		# pop_resettlement_cost_mult = 1.0
+		# pop_war_happiness = -0.05
+	}
+}
+
+#trait_holoverseer = {
+#	cost = 0
+#	initial = no
+#	randomized = no
+#	modification = no
+#
+#	modifier = {	
+#		tile_resource_physics_research_mult = -0.7
+#		tile_resource_society_research_mult = -0.7
+#		tile_resource_engineering_research_mult = -0.7
+#		tile_resource_minerals_mult = -1.0
+#		tile_resource_energy_mult = -1.0
+#		pop_happiness = 0.01
+#		pop_ethic_shift = 0.01
+#		pop_migration_speed = -0.5
+#		pop_resettlement_cost_mult = 0.05
+#		pop_robot_production_output = 0.15
+#		influence_gain_mult = 0.01
+#	}
+#}

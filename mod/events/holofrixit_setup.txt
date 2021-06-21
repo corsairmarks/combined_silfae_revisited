@@ -1,0 +1,215 @@
+namespace = holofrixit_evt
+
+### Hidden Game Start Event
+event = {
+	id = holofrixit_evt.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_playable_country = {
+			limit = { has_country_flag = is_holofrixit }
+			country_event = { id = holofrixit_evt.2 }
+		}
+		every_system = {
+			limit = { has_star_flag = holofrixit_system }
+			every_system_planet = {
+				limit = { has_planet_flag = holofrixit_system_capital }
+				planet_event = { id = holofrixit_evt.3 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = holofrixit_evt.2
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = { 
+		give_technology = { tech = tech_administrative_ai }
+		give_technology = { tech = tech_self_aware_logic }
+		give_technology = { tech = tech_powered_exoskeletons }
+		give_technology = { tech = tech_robotic_workers }
+		give_technology = { tech = tech_extradimensional_weapon_1 }
+		give_technology = { tech = tech_synthetic_leaders }
+		give_technology = { tech = tech_holocastes }
+		set_policy = {
+			policy = artificial_intelligence_policy 
+			option = ai_servitude
+			cooldown = no
+		}
+		add_modifier = {
+			modifier = holofrixit_mod
+			days = -1
+		}
+		######################################################################
+		create_species = {
+			name = owner_species
+			plural = owner_species
+			adjective = owner_species
+			class = owner_species
+			portrait = holofrixit
+			homeworld = home_planet
+			traits = {
+				ideal_planet_class = owner_species
+				trait = trait_holofrixit
+			}
+			new_pop_resource_requirement = {
+				type = robot_food
+				value = 80.0
+			}
+			pop_maintenance = 1.0
+			pops_auto_growth = 1.0 # TODO original was 4.0
+			pops_can_reproduce = yes
+			pops_can_be_colonizers = yes
+			pops_can_migrate = yes
+			pops_can_join_factions = yes
+			pops_can_be_slaves = yes
+			pops_have_happiness = yes
+			can_be_modified = yes
+			can_generate_leaders = yes
+			pop_ethics = random	# can also be pop_ethics = { some_ethic some_other_ethic etc }
+			# TODO: how to match country ethics?
+		}
+		#every_owned_pop = { change_species = last_created_species }
+		#every_owned_leader = { change_species = last_created_species }
+		#every_pool_leader = { change_species = last_created_species }
+
+		# this is copy/pasted from the cybernetic mod effect 00_scripted_effects.txt:3766
+		# every_owned_pop = {
+		# 	limit = { is_exact_same_species = event_target:changing_species }
+		# 	change_species = last_created_species
+		# }
+		# every_owned_leader = {
+		# 	limit = { is_exact_same_species = event_target:changing_species }
+		# 	change_species = last_created_species
+		# }
+		# every_pool_leader = {
+		# 	limit = { is_exact_same_species = event_target:changing_species }
+		# 	change_species = last_created_species
+		# }
+		# every_owned_army = {
+		# 	limit = {
+		# 		exists = species
+		# 		is_exact_same_species = event_target:changing_species
+		# 	}
+		# 	change_species = last_created_species
+		# }
+		# every_owned_ship = {
+		# 	limit = {
+		# 		is_ship_class = shipclass_colonizer
+		# 		is_exact_same_species = event_target:changing_species
+		# 	}
+		# 	change_species = last_created_species
+		# }
+
+		# TODO: test that change_all works
+		change_dominant_species = { species = last_created_species change_all = yes }
+		######################################################################
+		capital_scope = { 
+			# every_tile = { kill_pop = yes }
+			# best_tile_for_pop = { create_pop = { species = "pure_holofrixits" ethos = owner } }
+			# best_tile_for_pop = { create_pop = { species = "pure_holofrixits" ethos = owner } }
+			# best_tile_for_pop = { create_pop = { species = "pure_holofrixits" ethos = owner } }
+			# best_tile_for_pop = { create_pop = { species = "pure_holofrixits" ethos = owner } }
+			# best_tile_for_pop = { create_pop = { species = "pure_holofrixits" ethos = owner } }
+			# best_tile_for_pop = { create_pop = { species = "pure_holofrixits" ethos = owner } }
+			# best_tile_for_pop = { create_pop = { species = "pure_holofrixits" ethos = owner } }
+
+			# swap food deposits for generator
+			every_deposit = {
+				limit = { has_deposit_category = deposit_cat_food }
+				if = {
+					limit = {
+						check_modifier_value = {
+							modifier = district_farming_max
+							value = 3
+						}
+					}
+					PREV = { add_random_3_generator_district_deposit = yes }
+					remove_deposit = yes
+				}
+				else_if = {
+					limit = {
+						check_modifier_value = {
+							modifier = district_farming_max
+							value = 2
+						}
+					}
+					PREV = { add_random_2_generator_district_deposit = yes }
+					remove_deposit = yes
+				}
+				else_if = {
+					limit = {
+						check_modifier_value = {
+							modifier = district_farming_max
+							value = 1
+						}
+					}
+					PREV = { add_random_1_generator_district_deposit = yes }
+					remove_deposit = yes
+				}
+				else = {
+					log = "unable to replace food deposit of type: [This.GetName]"
+				}
+			}
+
+			# swap farming districts for generator
+			while = {
+				limit = {
+					num_districts = {
+						type = district_farming
+						value > 0
+					}
+				}
+				remove_district = district_farming
+				add_district = district_generator
+			}
+
+			# switch farming districts for generator (uncapped - this should only happen on Hive Worlds)
+			while = {
+				limit = {
+					num_districts = {
+						type = district_farming_uncapped
+						value > 0
+					}
+				}
+				remove_district = district_farming_uncapped
+				add_district = district_generator_uncapped
+			}
+
+			# switch farming districts for generator districts (ringworlds)
+			# TODO: this will probably break unless I check that generator districts are ok on the ringworld (vs commercial)
+			while = {
+				limit = {
+					num_districts = {
+						type = district_rw_farming
+						value > 0
+					}
+				}
+				
+				remove_district = district_rw_farming
+				add_district = district_rw_generator
+			}
+			# TODO: how would this work with voidborn?  Remove hydroponics but how to get more energy?
+		
+			add_building = building_polarizing_nexus_1
+		}
+	}
+}
+
+planet_event = {
+	id = holofrixit_evt.3
+	hide_window = yes
+	is_triggered_only = yes
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+	}
+	trigger = {
+		has_planet_flag = holofrixit_system_capital
+	}
+	immediate = {
+		clear_holofrixit_system_capital_non_pop_blockers = yes
+		generate_holofixit_system_capital_pop_blockers = yes
+	}
+}
