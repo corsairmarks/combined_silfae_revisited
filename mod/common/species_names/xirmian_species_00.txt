@@ -1,0 +1,9 @@
+XIRM = {
+	xirmian = {
+		name = "Xirmian"
+		plural = "Xirmians"
+		home_planet = "Wurthe"
+		home_system = "Taxeema"
+		name_list = XIRM1
+	}
+}
