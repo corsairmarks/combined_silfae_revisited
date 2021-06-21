@@ -1,0 +1,30 @@
+namespace = hyenafolk_evt
+
+### Hidden Game Start Event
+event = {
+	id = hyenafolk_evt.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		# trigger the final initializer for the hyenafolk_system
+		every_system = {
+			limit = { has_star_flag = hyenafolk_system }
+			every_system_planet = {
+				limit = { has_planet_flag = hyenafolk_system_capital }
+				planet_event = { id = hyenafolk_evt.2 }
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = hyenafolk_evt.2
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_planet_flag = hyenafolk_system_capital
+	}
+	immediate = {
+		generate_hyenafolk_system_capital_blockers = yes
+	}
+}
