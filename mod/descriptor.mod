@@ -7,7 +7,8 @@ replace_path="Animated Hyena Portraits"
 tags={
 	"Fixes"
 	"Gameplay"
+	"Graphics"
 	"Species"
 }
 version="1.0.0"
-supported_version="2.8.1"
+supported_version="3.0.*"
