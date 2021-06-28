@@ -8,36 +8,36 @@ There are lots of other mods which contain these portraits, so why should you ch
 
 All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.0.*, the latest version when this was written.
 
-[h2]Dependencies[/h2]
-
-In order for this mod to function, you [b]must[/b] install these two mods:
-
-* [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1126014321]Animated Hyena Portraits[/url] by Silfae
-* [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2247427791]Silfae's city sets updated[/url] by Nozeminer
-
 [h2]Compatibility[/h2]
 
 Compatible with any mod that does not add the same portraits, species class, or art assets.
 
-The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
+The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the two dependency mods.
 
 Not compatible with achievements.
 
+[h3]Dependencies[/h3]
+
+In order for this mod to fully function, you [b]must[/b] install these two mods:
+
+* [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1126014321]Animated Hyena Portraits[/url] by [url=https://steamcommunity.com/profiles/76561198021525667/myworkshopfiles/]Silfae[/url]
+* [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2247427791]Silfae's city sets updated[/url] by [url=https://steamcommunity.com/profiles/76561198008987068/myworkshopfiles/]Nozeminer[/url]
+
 [h3]Known Issues[/h3]
 
-This mod overwrites the corresponding species class added by "Silfae's city sets updated" so that it will not be available for use.  Instead, the original species class from Silfae (with localisation) is used.  Expect to see one line in error.log like this:
+This mod overwrites the corresponding species class added by "Silfae's city sets updated" so that it will not be available for use (it existed only to allow selecting the city portraits).  Instead, the original species class from Silfae (with localisation) is used.  Expect to see one line in error.log like this:
 
 [code]
 [05:11:30][game_singleobjectdatabase.h:147]: Object with key: Silfae-Hyena already exists
 [/code]
 
-[h3]When to install[/h3]
+[h3]When to Install[/h3]
 
-This mod should be added before the game has started.  If you remove it, your game may have graphical problems if any species was using the custom portraits or city graphics.
+This mod should be added before the game has started and not removed from savegames that are using it.  If you remove it, your savegame may have graphical problems if any species was using the custom portraits or city graphics.
 
 [h2]Changelog[/h2]
 
-* 1.0.0 Initial version
+See the [url=]Change Notes[/url]
 
 [h2]Source Code[/h2]
 
@@ -45,6 +45,6 @@ Hosted on [url=https://github.com/corsairmarks/hyenafolk_portraits_revisited]Git
 
 [h1]Special Thanks[/h1]
 
-I was inspired to extend the original mod when I saw Endugu's extension of Silfae's Animated Xirmian Portraits.  Modular mods that require downloading the original mod(s) help give credit where credit is due.
+I was inspired to extend the original mod when I saw [url=https://steamcommunity.com/profiles/76561198037630876/myworkshopfiles/]Endugu[/url]'s [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1584824947]expansion[/url] of [url=https://steamcommunity.com/profiles/76561198021525667/myworkshopfiles/]Silfae[/url]'s [url=https://steamcommunity.com/workshop/filedetails/?id=881118424]Animated Xirmian Portraits[/url].  Modular mods that require downloading the original mod(s) help give credit where credit is due.
 
-An extre special thanks to Silfae for creating and sharing so many animated portraits with the community.
+An extra special thanks to Silfae for creating and sharing so many detailed, animated portraits for the community.
