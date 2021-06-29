@@ -14,7 +14,7 @@ hyenafolk1 = {
 		trait = trait_resilient
 		# due to trait cost changes, the original design had an extra point
 		# communal was added to reflect the Viverrokan history of living in
-		# cities backed tighly around the few hospitable areas of their homeworld
+		# cities packed tighly around the few hospitable areas of their homeworld
 		trait = trait_communal
 		trait = trait_conservational
 		trait = trait_repugnant
