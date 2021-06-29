@@ -10,10 +10,10 @@ generate_hyenafolk_system_capital_blockers = {
 		limit = { owner = { has_origin = origin_post_apocalyptic } }
 		while = {
 			count = @addl_pop_blockers
-			add_deposit = d_tomb_world_ruins
+			add_hyenafolk_blocker_and_planet_size_if_needed_effect = { BLOCKER = d_tomb_world_ruins }
 		}
-		add_deposit = d_radioactive_wasteland
-		add_deposit = d_bomb_crater
+		add_hyenafolk_blocker_and_planet_size_if_needed_effect = { BLOCKER = d_radioactive_wasteland }
+		add_hyenafolk_blocker_and_planet_size_if_needed_effect = { BLOCKER = d_bomb_crater }
 	}
 	else_if = {
 		limit = {
@@ -22,17 +22,17 @@ generate_hyenafolk_system_capital_blockers = {
 				NOT = { has_origin = origin_machine }
 			}
 		}
-		add_deposit = d_former_battlefield
+		add_hyenafolk_blocker_and_planet_size_if_needed_effect = { BLOCKER = d_former_battlefield }
 		while = {
 			count = @addl_machine_blockers
-			add_deposit = d_strip_mine
+			add_hyenafolk_blocker_and_planet_size_if_needed_effect = { BLOCKER = d_strip_mine }
 		}
 	}
 	else_if = {
 		limit = { owner = { has_civic = civic_machine_servitor } }
 		while = {
 			count = @addl_pop_blockers
-			add_deposit = d_unsupervised_settlement
+			add_hyenafolk_blocker_and_planet_size_if_needed_effect = { BLOCKER = d_unsupervised_settlement }
 		}
 	}
 	else_if = {
@@ -42,10 +42,10 @@ generate_hyenafolk_system_capital_blockers = {
 				NOT = { has_origin = origin_machine }
 			}
 		}
-		add_deposit = d_assimilators_ruins
+		add_hyenafolk_blocker_and_planet_size_if_needed_effect = { BLOCKER = d_assimilators_ruins }
 		while = {
 			count = @addl_machine_blockers
-			add_deposit = d_strip_mine
+			add_hyenafolk_blocker_and_planet_size_if_needed_effect = { BLOCKER = d_strip_mine }
 		}
 	}
 	else_if = {
@@ -55,24 +55,24 @@ generate_hyenafolk_system_capital_blockers = {
 				NOT = { has_origin = origin_machine }
 			}
 		}
-		add_deposit = d_machine_empire_ruins
+		add_hyenafolk_blocker_and_planet_size_if_needed_effect = { BLOCKER = d_machine_empire_ruins }
 		while = {
 			count = @addl_machine_blockers
-			add_deposit = d_strip_mine
+			add_hyenafolk_blocker_and_planet_size_if_needed_effect = { BLOCKER = d_strip_mine }
 		}
 	}
 	else_if = {
 		limit = { owner = { has_authority = auth_hive_mind } }
 		while = {
 			count = @addl_pop_blockers
-			add_deposit = d_collapsed_burrows
+			add_hyenafolk_blocker_and_planet_size_if_needed_effect = { BLOCKER = d_collapsed_burrows }
 		}
 	}
 	else_if = {
 		limit = { owner = { NOT = { has_origin = origin_machine } } }
 		while = {
 			count = @addl_pop_blockers
-			add_deposit = d_decrepit_dwellings
+			add_hyenafolk_blocker_and_planet_size_if_needed_effect = { BLOCKER = d_decrepit_dwellings }
 		}
 	}
 	if = {
@@ -105,12 +105,12 @@ generate_hyenafolk_system_capital_blockers = {
 			limit = { is_planet_class = pc_gaia }
 			while = {
 				count = @addl_blockers
-				add_deposit = d_mountain_range
+				add_hyenafolk_blocker_and_planet_size_if_needed_effect = { BLOCKER = d_mountain_range }
 				# extra features compensate for not having feature blockers
 				random_list = {
-					33 = { add_deposit = d_tropical_island }
-					33 = { add_deposit = d_tempestous_mountain }
-					33 = { add_deposit = d_rich_mountain }
+					33 = { add_hyenafolk_blocker_and_planet_size_if_needed_effect = { BLOCKER = d_tropical_island } }
+					33 = { add_hyenafolk_blocker_and_planet_size_if_needed_effect = { BLOCKER = d_tempestous_mountain } }
+					33 = { add_hyenafolk_blocker_and_planet_size_if_needed_effect = { BLOCKER = d_rich_mountain } }
 				}
 			}
 		}
@@ -118,22 +118,35 @@ generate_hyenafolk_system_capital_blockers = {
 			limit = { is_cold = yes }
 			while = {
 				count = @addl_blockers
-				add_deposit = d_massive_glacier
+				add_hyenafolk_blocker_and_planet_size_if_needed_effect = { BLOCKER = d_massive_glacier }
 			}
 		}
 		else_if = {
 			limit = { is_dry = yes }
 			while = {
 				count = @addl_blockers
-				add_deposit = d_quicksand_basin
+				add_hyenafolk_blocker_and_planet_size_if_needed_effect = { BLOCKER = d_quicksand_basin }
 			}
 		}
 		else_if = {
 			limit = { is_wet = yes }
 			while = {
 				count = @addl_blockers
-				add_deposit = d_dense_jungle
+				add_hyenafolk_blocker_and_planet_size_if_needed_effect = { BLOCKER = d_dense_jungle }
 			}
 		}
 	}
+}
+
+add_hyenafolk_blocker_and_planet_size_if_needed_effect = {
+	if = {
+		limit = { free_district_slots > 0 }
+		add_deposit = $BLOCKER$
+	}
+	else_if = {
+		limit = { planet_size < 25 }
+		change_planet_size = 1
+		add_deposit = $BLOCKER$
+	}
+	#else do nothing
 }
