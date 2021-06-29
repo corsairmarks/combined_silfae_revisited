@@ -1,20 +1,20 @@
-hyenafolk_male_clothes_01 = {
-	default = "gfx/models/portraits/hyenafolk/hyenafolk_outfit_ruler.dds" 
+hyenafolk_female_clothes_01 = {
+	default = "gfx/models/portraits/hyenafolk/hyenafolk_female_outfit_ruler.dds" 
 	game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
-		default = "gfx/models/portraits/hyenafolk/hyenafolk_outfit_ruler.dds"
+		default = "gfx/models/portraits/hyenafolk/hyenafolk_female_outfit_ruler.dds" 
 	}
 	#species scope
 	species = { #generic portrait for a species
 		random = {
 			list = {
-				"gfx/models/portraits/hyenafolk/hyenafolk_outfit_ruler.dds"
-				"gfx/models/portraits/hyenafolk/hyenafolk_outfit_governor.dds"
+				"gfx/models/portraits/hyenafolk/hyenafolk_female_outfit_ruler.dds"
+				"gfx/models/portraits/hyenafolk/hyenafolk_female_outfit_governor.dds"
 			}
 		}
 	}
 	#pop scope
 	pop = { #for a specific pop
-		default = "gfx/models/portraits/hyenafolk/hyenafolk_outfit_peasant_01.dds"
+		default = "gfx/models/portraits/hyenafolk/hyenafolk_female_outfit_peasant_01.dds"
 		random = {
 			trigger = {
 				OR = {
@@ -29,8 +29,8 @@ hyenafolk_male_clothes_01 = {
 				}
 			}
 			list = {
-				"gfx/models/portraits/hyenafolk/hyenafolk_outfit_admiral.dds"
-				"gfx/models/portraits/hyenafolk/hyenafolk_outfit_general.dds"
+				"gfx/models/portraits/hyenafolk/hyenafolk_female_outfit_admiral.dds"
+				"gfx/models/portraits/hyenafolk/hyenafolk_female_outfit_general.dds"
 			}
 		}
 		random = {
@@ -71,8 +71,8 @@ hyenafolk_male_clothes_01 = {
 				}
 			}
 			list = {
-				"gfx/models/portraits/hyenafolk/hyenafolk_outfit_governor.dds"
-				"gfx/models/portraits/hyenafolk/hyenafolk_outfit_peasant_01.dds"
+				"gfx/models/portraits/hyenafolk/hyenafolk_female_outfit_governor.dds"
+				"gfx/models/portraits/hyenafolk/hyenafolk_female_outfit_peasant_01.dds"
 			}
 		}
 		random = {
@@ -110,11 +110,11 @@ hyenafolk_male_clothes_01 = {
 				}
 			}
 			list = {
-				"gfx/models/portraits/hyenafolk/hyenafolk_outfit_ruler.dds"
-				"gfx/models/portraits/hyenafolk/hyenafolk_outfit_governor.dds"
+				"gfx/models/portraits/hyenafolk/hyenafolk_female_outfit_ruler.dds"
+				"gfx/models/portraits/hyenafolk/hyenafolk_female_outfit_governor.dds"
 			}
 		}
-		"gfx/models/portraits/hyenafolk/hyenafolk_outfit_scientist.dds" = {
+		"gfx/models/portraits/hyenafolk/hyenafolk_female_outfit_scientist.dds" = {
 			OR ={
 				has_job = head_researcher
 				has_job = researcher
@@ -127,7 +127,7 @@ hyenafolk_male_clothes_01 = {
 				has_job = primitive_researcher_2
 			}
 		}
-		"gfx/models/portraits/hyenafolk/hyenafolk_outfit_ruler.dds" = {
+		"gfx/models/portraits/hyenafolk/hyenafolk_female_outfit_ruler.dds" = {
 			OR = {
 				has_job = executive
 				has_job = manager
@@ -137,7 +137,7 @@ hyenafolk_male_clothes_01 = {
 				has_job = primitive_noble
 			}
 		}
-		"gfx/models/portraits/hyenafolk/hyenafolk_outfit_governor.dds" = {
+		"gfx/models/portraits/hyenafolk/hyenafolk_female_outfit_governor.dds" = {
 			OR = {
 				has_job = administrator
 				has_job = high_priest
@@ -158,10 +158,10 @@ hyenafolk_male_clothes_01 = {
 	}
 	#leader scope
 	leader = { #scientists, generals, admirals, governor
-		"gfx/models/portraits/hyenafolk/hyenafolk_outfit_scientist.dds" = { leader_class = scientist }
-		"gfx/models/portraits/hyenafolk/hyenafolk_outfit_general.dds" = { leader_class = general }
-		"gfx/models/portraits/hyenafolk/hyenafolk_outfit_admiral.dds" = { leader_class = admiral }
-		"gfx/models/portraits/hyenafolk/hyenafolk_outfit_governor.dds" = {
+		"gfx/models/portraits/hyenafolk/hyenafolk_female_outfit_scientist.dds" = { leader_class = scientist }
+		"gfx/models/portraits/hyenafolk/hyenafolk_female_outfit_general.dds" = { leader_class = general }
+		"gfx/models/portraits/hyenafolk/hyenafolk_female_outfit_admiral.dds" = { leader_class = admiral }
+		"gfx/models/portraits/hyenafolk/hyenafolk_female_outfit_governor.dds" = {
 			OR = {
 				leader_class = governor
 				leader_class = envoy
@@ -170,6 +170,7 @@ hyenafolk_male_clothes_01 = {
 	}
 	#leader scope 
 	ruler = { #for rulers
+		default = "gfx/models/portraits/hyenafolk/hyenafolk_female_outfit_ruler.dds"
 		random = {
 			trigger = {
 				owner = {
@@ -178,26 +179,17 @@ hyenafolk_male_clothes_01 = {
 				}
 			}
 			list = {
-				"gfx/models/portraits/hyenafolk/hyenafolk_outfit_ruler.dds"
-				"gfx/models/portraits/hyenafolk/hyenafolk_outfit_governor.dds"
+				"gfx/models/portraits/hyenafolk/hyenafolk_female_outfit_ruler.dds"
+				"gfx/models/portraits/hyenafolk/hyenafolk_female_outfit_governor.dds"
 			}
 		}
 		random = {
 			trigger = { owner = { has_militarist_government = yes } }
 			list = {
-				"gfx/models/portraits/hyenafolk/hyenafolk_outfit_admiral.dds"
-				"gfx/models/portraits/hyenafolk/hyenafolk_outfit_general.dds"
+				"gfx/models/portraits/hyenafolk/hyenafolk_female_outfit_admiral.dds"
+				"gfx/models/portraits/hyenafolk/hyenafolk_female_outfit_general.dds"
 			}
 		}
-		"gfx/models/portraits/hyenafolk/hyenafolk_outfit_scientist.dds" = { owner = { has_materialist_government = yes } }
-	}
-}
-
-hyenafolk_male_clothes_plebs = {
-	default = "gfx/models/portraits/hyenafolk/hyenafolk_outfit_peasant_01.dds"
-	#leader scope
-	ruler = { #for rulers
-		default = "gfx/models/portraits/hyenafolk/hyenafolk_male_outfit_ruler.dds" # necessary to trick the game into having two blank outfits so that the clothing selector stays active
-		"gfx/models/portraits/hyenafolk/hyenafolk_outfit_peasant_01.dds" = { always = yes }
+		"gfx/models/portraits/hyenafolk/hyenafolk_female_outfit_scientist.dds" = { owner = { has_materialist_government = yes } }
 	}
 }
