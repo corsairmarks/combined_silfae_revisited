@@ -20,8 +20,10 @@ Not compatible with achievements.
 
 In order for this mod to fully function, you [b]must[/b] install these two mods:
 
-* [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1126014321]Animated Hyena Portraits[/url] by [url=https://steamcommunity.com/profiles/76561198021525667/myworkshopfiles/]Silfae[/url]
-* [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2247427791]Silfae's city sets updated[/url] by [url=https://steamcommunity.com/profiles/76561198008987068/myworkshopfiles/]Nozeminer[/url]
+[list]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1126014321]Animated Hyena Portraits[/url] by [url=https://steamcommunity.com/profiles/76561198021525667/myworkshopfiles/]Silfae[/url]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2247427791]Silfae's city sets updated[/url] by [url=https://steamcommunity.com/profiles/76561198008987068/myworkshopfiles/]Nozeminer[/url]
+[/list]
 
 [h3]Known Issues[/h3]
 
