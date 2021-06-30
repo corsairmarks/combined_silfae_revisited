@@ -6,7 +6,14 @@ There are lots of other mods which contain these portraits, so why should you ch
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.0.*, the latest version when this was written.
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.0.*, the latest version when this was written.  Updates include:
+
+* Fix the broken portrait clothing selector for male rulers
+* Update the namelist to account for all built-in army types, remove obsolete entries
+* Update the custom starting system initializer for 3.0 (all the built-in ones)
+* Custom starting intializer now supoports a variety of civics and origin starts
+* Add an extra species trait (Communal) to the prescripted empire, because Repugnant is now -2 points
+* Update portrait and clothing selection for Pops - your Pops will wear clothing based on their jobs
 
 ## Compatibility
 
@@ -23,6 +30,10 @@ In order for this mod to function, you **must** install these two mods:
 * [Animated Hyena Portraits](https://steamcommunity.com/sharedfiles/filedetails/?id=1126014321) by Silfae
 * [Silfae's city sets updated](https://steamcommunity.com/sharedfiles/filedetails/?id=2247427791) by Nozeminer
 
+### When to Install
+
+This mod should be added before the game has started.  If you remove it, your game may have graphical problems if any species was using the custom portraits or city graphics.
+
 ## Known Issues
 
 This mod overwrites the corresponding species class added by "Silfae's city sets updated" so that it will not be available for use.  Instead, the original species class from Silfae (with localisation) is used.  Expect to see one line in error.log like this:
@@ -30,10 +41,6 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 ```
 [05:11:30][game_singleobjectdatabase.h:147]: Object with key: Silfae-Hyena already exists
 ```
-
-### When to Install
-
-This mod should be added before the game has started.  If you remove it, your game may have graphical problems if any species was using the custom portraits or city graphics.
 
 ## Changelog
 
