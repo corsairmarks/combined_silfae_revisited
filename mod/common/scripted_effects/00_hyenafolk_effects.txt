@@ -83,7 +83,6 @@ generate_hyenafolk_system_capital_blockers = {
 			owner = {
 				NOR = {
 					has_origin = origin_post_apocalyptic
-					has_origin = origin_remnants
 					AND = {
 						has_authority = auth_machine_intelligence
 						NOT = { has_civic = civic_machine_servitor }
