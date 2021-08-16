@@ -7,17 +7,16 @@
 # generate_start_deposits_and_blockers, which sets up the default blockers
 # based on origin/civic/authority
 generate_romaneagles_system_capital_blockers = {
-	# Relic worlds get city blockers
+	# Most origins get mountains as the size blocker type
 	if = {
-		limit = { owner = { has_origin = origin_remnants } }
-		while = {
-			count = @size_blockers
-			add_deposit = d_city_ruins
+		limit = {
+			owner = {
+				NOR = {
+					has_origin = origin_machine
+					has_origin = origin_remnants
+				}
+			}
 		}
-	}
-	# Most other planets get mountains as the size blocker type
-	else_if = {
-		limit = { owner = { NOT = { has_origin = origin_machine } } }
 		while = {
 			count = @size_blockers
 			add_deposit = d_mountain_range
@@ -102,13 +101,9 @@ generate_romaneagles_system_capital_blockers = {
 			count = @addl_pop_blockers
 			add_deposit = d_decrepit_dwellings
 		}
-		# this adds more blockers than a size 22 relic world can handle, so skip
-		if = {
-			limit = { owner = { NOT = { has_origin = origin_remnants } } }
-			while = {
-				count = @addl_blockers
-				add_deposit = d_failing_infrastructure
-			}
+		while = {
+			count = @addl_blockers
+			add_deposit = d_failing_infrastructure
 		}
 	}
 }
