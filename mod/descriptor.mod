@@ -1,4 +1,4 @@
-name="Animated Hyena Portraits Revisited"
+name="Animated Hyena Portraits: Revisited"
 dependencies={
 	"Animated Hyena Portraits"
 	"Silfae's city sets updated"
