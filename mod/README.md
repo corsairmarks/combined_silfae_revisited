@@ -25,7 +25,7 @@ Not compatible with achievements.
 
 ### Dependencies
 
-In order for this mod to function, you **must** install these two mods:
+In order for this mod to function, you **must** install these two mods and load them before this one:
 
 * [Animated Hyena Portraits](https://steamcommunity.com/sharedfiles/filedetails/?id=1126014321) by Silfae
 * [Silfae's city sets updated](https://steamcommunity.com/sharedfiles/filedetails/?id=2247427791) by Nozeminer

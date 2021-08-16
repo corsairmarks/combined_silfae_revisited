@@ -27,7 +27,7 @@ Not compatible with achievements.
 
 [h3]Dependencies[/h3]
 
-In order for this mod to function, you [b]must[/b] install these two mods:
+In order for this mod to function, you [b]must[/b] install these two mods and load them before this one:
 
 [list]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1126014321]Animated Hyena Portraits[/url] by Silfae
