@@ -67,13 +67,16 @@ hyenafolk_system = {
 		name = "Kortomaton"
 		class = ideal_planet_class
 		home_planet = yes
+		starting_planet = yes
 		size = 19
 		orbit_distance = 20
 		orbit_angle = 45
+		deposit_blockers = none
+		modifiers = none
 		flags = { hyenafolk_system_capital }
 		init_effect = {
-			generate_empire_home_planet = yes
 			prevent_anomaly = yes
+			generate_empire_home_planet = yes
 		}
 	}
 	planet = {
