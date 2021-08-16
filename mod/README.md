@@ -32,7 +32,7 @@ In order for this mod to function, you **must** install these two mods and load 
 
 ### When to Install
 
-This mod should be added before the game has started.  If you remove it, your game may have graphical problems if any species was using the custom portraits or city graphics.
+This mod should be added before the game has started.  If you remove it from a game in progress, your game may have graphical problems if any species was using the custom portraits or city graphics.
 
 ## Known Issues
 
