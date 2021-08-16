@@ -1,0 +1,60 @@
+[h1]Overview[/h1]
+
+Have you seen the fantastic, animated portraits from Silfae's "Animated Aquilese Portraits" mod?  Do you wish that the gameplay elements were up-to-date so that you can play the Enchirian Empire as originally designed?  Then this mod is for you!
+
+There are lots of other mods which contain these portraits, so why should you choose this one?  None of the others update the custom solar system initializer, but this one does!  Please enjoy my translation of Silfae's custom empire into modern Stellaris.
+
+[h1]Changes[/h1]
+
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.0.*, the latest version when this was written.  Updates include:
+
+[list]
+[*]Fix the broken portrait clothing selector for male rulers
+[*]Update the namelist to account for all built-in army types, remove obsolete entries
+[*]Update the custom starting system initializer and special neighbors for 3.0
+[*]Custom starting intializer now supports a variety of civics and origin starts (all the built-in ones)
+[*]Remove a species trait (Resilient) from the prescripted empire, because Charismatic is now 2 points
+[/list]
+
+[h2]Compatibility[/h2]
+
+Compatible with any mod that does not add the same portraits, species class, or art assets.
+
+The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
+
+Not compatible with achievements.
+
+[h3]Dependencies[/h3]
+
+In order for this mod to function, you [b]must[/b] install these two mods and load them before this one:
+
+[list]
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=910576007]Animated Aquilese Portraits[/url] by Silfae
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2247427791]Silfae's city sets updated[/url] by Nozeminer
+[/list]
+
+[h3]When to Install[/h3]
+
+This mod should be added before the game has started.  If you remove it from a game in progress, your game may have graphical problems if any species was using the custom portraits or city graphics.
+
+[h2]Known Issues[/h2]
+
+This mod overwrites the corresponding species class added by "Silfae's city sets updated" so that it will not be available for use.  Instead, the original species class from Silfae (with localisation) is used.  Expect to see one line in error.log like this:
+
+[code]
+[01:11:01][game_singleobjectdatabase.h:147]: Object with key: Silfae-Eagles already exists
+[/code]
+
+[h2]Changelog[/h2]
+
+See [url=]Change Notes[/url]
+
+[h2]Source Code[/h2]
+
+Hosted on [url=https://github.com/corsairmarks/romaneagles_portraits_revisited]GitHub[/url].
+
+[h1]Special Thanks[/h1]
+
+I was inspired to extend the original mod when I saw [url=https://steamcommunity.com/profiles/76561198037630876/myworkshopfiles/]Endugu[/url]'s [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1584824947]expansion[/url] of [url=https://steamcommunity.com/profiles/76561198021525667/myworkshopfiles/]Silfae[/url]'s [url=https://steamcommunity.com/workshop/filedetails/?id=881118424]Animated Xirmian Portraits[/url].  Modular mods that require downloading the original mod(s) help give credit where credit is due.
+
+An extra special thanks to Silfae for creating and sharing so many detailed, animated portraits for the community.
