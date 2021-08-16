@@ -24,7 +24,7 @@ Check each of the contained mods for an explicit list of incompatibility notes.
 
 [h2]Dependencies[/h2]
 
-In order for this mod to function, you [b]must[/b] install these mods (and load them _before_ this one):
+In order for this mod to function, you [b]must[/b] install these mods (and load them [i]before[/i] this one):
 
 [list]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1126014321]Animated Hyena Portraits[/url] by Silfae
