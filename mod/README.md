@@ -8,7 +8,7 @@ Individual mods update first, then changes are merged here.
 
 This is a bundle of mods to make it a little easier to sub.  Please check each individual mod for the effects and any known issues.  The large hex strings are the commit hashes - that is mostly for my own record-keeping to know what revision of the other source code is contained here.
 
-* [Animated Hyena Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2576290763) ([Source](https://github.com/corsairmarks/https://github.com/corsairmarks/hyenafolk_portraits_revisited) e3f4b824d8231d98215e848b71f70de41ca69bd9)
+* [Animated Hyena Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2576290763) ([Source](https://github.com/corsairmarks/https://github.com/corsairmarks/hyenafolk_portraits_revisited) 507e6cfaa2f909b3c74b913e8765bb66777a7a6b)
 
 ## Source Code
 
