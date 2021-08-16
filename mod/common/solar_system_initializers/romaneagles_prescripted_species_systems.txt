@@ -186,7 +186,6 @@ romaneagles_system = {
 		}
 	}
 	neighbor_system = {
-		trigger = { num_guaranteed_colonies >= 2 }
 		distance = { min = 10 max = 50 }	
 		initializer = "romaneagles_neighbor_t2"
 	}
@@ -195,17 +194,12 @@ romaneagles_system = {
 		distance = { min = 10 max = 50 }	
 		initializer = "romaneagles_neighbor_t1"
 	}
-	# The original script included only the special starting systems.  However, a ruined
-	# ringworld and natives with a random environment aren't a strong start.
+	# The original script included only the special starting systems.  However,
+	# a ruined, unrepairable ringworld isn't a strong start.
 	neighbor_system = {
 		trigger = { num_guaranteed_colonies >= 2 }
 		hyperlane_jumps = { min = 1 max = @jumps }
 		initializer = "neighbor_t1"
-	}
-	neighbor_system = {
-		trigger = { num_guaranteed_colonies >= 1 }
-		hyperlane_jumps = { min = 1 max = @jumps }
-		initializer = "neighbor_t1_first_colony"
 	}
 }
 
