@@ -48,9 +48,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 
 [h2]Changelog[/h2]
 
-[list]
-[*]1.0.0 Initial version
-[/list]
+See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2576290763]Change Notes[/url]
 
 [h2]Source Code[/h2]
 
