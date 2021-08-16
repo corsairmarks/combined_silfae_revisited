@@ -85,7 +85,7 @@ romaneagles_system = {
 			prevent_anomaly = yes
 			add_deposit = d_energy_5 
 		}
-		moon = {
+		planet = {
 			name = "Tremusintium"
 			orbit_distance = 20
 			class = pc_toxic
@@ -98,7 +98,7 @@ romaneagles_system = {
 				add_deposit = d_society_2
 			}
 		}
-		moon = {
+		planet = {
 			name = "Saritarion"
 			orbit_distance = 10
 			class = pc_barren
@@ -113,12 +113,12 @@ romaneagles_system = {
 				add_deposit = d_minerals_5
 			}
 		}
-		moon = {
+		planet = {
 			name = "Enchiria Rotomaron" 
 			orbit_distance = 20
 			class = pc_alpine
 			orbit_angle = -90
-			size = 20
+			size = 21
 			starting_planet = yes
 			home_planet = yes
 			has_ring = yes
@@ -128,7 +128,7 @@ romaneagles_system = {
 				prevent_anomaly = yes
 			}
 		}
-		moon = {
+		planet = {
 			name = "Calirterum"
 			orbit_distance = 30
 			class = pc_gas_giant

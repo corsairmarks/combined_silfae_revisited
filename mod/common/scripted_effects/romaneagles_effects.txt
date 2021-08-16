@@ -1,4 +1,4 @@
-@size_blockers = 4
+@size_blockers = 1
 @addl_pop_blockers = 2
 @addl_blockers = 1
 @addl_machine_blockers = 2
