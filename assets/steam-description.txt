@@ -1,0 +1,40 @@
+[h1]Overview[/h1]
+
+This mod is a compilation of my adaptations of Silfae's portrait mods.  Please see the description of each individual mod for what the effects are.
+
+Individual mods update first, then changes are merged here.
+
+[h1]Bundled Mods[/h1]
+
+This is a bundle of mods to make it a little easier to sub.  Please check each individual mod for the effects and any known issues.  The large hex strings are the commit hashes - that is mostly for my own record-keeping to know what revision of the other source code is contained here.
+
+* [url=https://steamcommunity.com/sharedfiles/filedetails/?id=]Animated Hyena Portraits Revisited[/url] ([url=https://github.com/corsairmarks/https://github.com/corsairmarks/hyenafolk_portraits_revisited]Source[/url] e3f4b824d8231d98215e848b71f70de41ca69bd9)
+
+[h2]Source Code[/h2]
+
+Hosted on [url=https://github.com/corsairmarks/combined_silfae_revisited]Github[/url]
+
+[h1]Compatibility[/h1]
+
+Requires Stellaris 3.0.* and disables achievements.
+
+Check each of the contained mods for an explicit list of incompatibility notes.
+
+[h2]Dependencies[/h2]
+
+In order for this mod to function, you [b]must[/b] install these mods (and load them _before_ this one):
+
+* [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1126014321]Animated Hyena Portraits[/url] by Silfae
+* [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2247427791]Silfae's city sets updated[/url] by Nozeminer
+
+These mods are not included as part of this mod so that the original authors get credit via mod subscriptions.
+
+[h2]When to Install[/h2]
+
+You should only add this mod before starting a new game, or remove it before starting a new game.  It should [b]not[/b] be added to or removed from an in-progress game.
+
+[h2]Changelog[/h2]
+
+See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/]Change Notes[/url].
+
+[url=https://discord.gg/bHVez2C][img]https://i.imgur.com/4Und3QN.png[/img][/url]
