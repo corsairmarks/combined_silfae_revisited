@@ -12,7 +12,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 [*]Fix the broken portrait clothing selector for male rulers
 [*]Update the namelist to account for all built-in army types, remove obsolete entries
 [*]Update the custom starting system initializer and special neighbors for 3.0
-[*]Custom starting intializer now supports a variety of civics and origin starts (all the built-in ones)
+[*]Custom starting initializer now supports a variety of civics and origin starts (all the built-in ones)
 [*]Remove a species trait (Resilient) from the prescripted empire, because Charismatic is now 2 points
 [/list]
 
