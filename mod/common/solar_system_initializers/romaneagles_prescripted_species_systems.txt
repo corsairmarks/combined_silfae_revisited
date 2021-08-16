@@ -328,13 +328,12 @@ romaneagles_neighbor_t2 = {
 	planet = {
 		name = "Collapsed Krehem"
 		class = pc_black_hole
-		size = { min = 20 max = 35 }
+		size = { min = 20 max = 25 }
 		orbit_distance = 0
 		orbit_angle = { min = 90 max = 270 }
 		init_effect = {
 			clear_deposits = yes
 			add_deposit = d_dark_matter_deposit_1
-			add_deposit = d_energy_5
 		}
 	}
 	planet = {
@@ -356,7 +355,7 @@ romaneagles_neighbor_t2 = {
 		orbit_distance = 0
 	}
 	planet = {
-		class = "pc_ringworld_seam"
+		class = "pc_ringworld_seam_damaged"
 		name = "Ring Section C"
 		orbit_angle = 30
 		orbit_distance = 0
@@ -368,7 +367,7 @@ romaneagles_neighbor_t2 = {
 		orbit_distance = 0
 	}
 	planet = {
-		class = "pc_ringworld_tech"
+		class = "pc_ringworld_tech_damaged"
 		name = "Ring Section E"
 		orbit_angle = 30
 		orbit_distance = 0
@@ -441,11 +440,13 @@ romaneagles_neighbor_t2 = {
 		orbit_distance = 40
 		orbit_angle = 180
 		init_effect = {
-			change_pc = pc_k_star
 			clear_deposits = yes
+			change_pc = pc_k_star
+			add_deposit = d_energy_5
 		}
 	}
 	planet = {
+		name = random
 		orbit_distance = 104
 		class = pc_asteroid
 		orbit_angle = 20
