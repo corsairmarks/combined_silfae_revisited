@@ -1,6 +1,6 @@
 # Overview
 
-Have you seen the fantastic, animated portaits from Silfae's "Animated Hyena Portraits" mod?  Do you wish that the gameplay elements were up-to-date so that you can play the Viverran Rising Throne as originally designed?  Then this mod is for you!
+Have you seen the fantastic, animated portraits from Silfae's "Animated Hyena Portraits" mod?  Do you wish that the gameplay elements were up-to-date so that you can play the Viverran Rising Throne as originally designed?  Then this mod is for you!
 
 There are lots of other mods which contain these portraits, so why should you choose this one?  None of the others update the custom solar system initializer, but this one does!  Please enjoy my translation of Silfae's custom empire into modern Stellaris.
 
@@ -10,8 +10,8 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 
 * Fix the broken portrait clothing selector for male rulers
 * Update the namelist to account for all built-in army types, remove obsolete entries
-* Update the custom starting system initializer for 3.0 (all the built-in ones)
-* Custom starting intializer now supoports a variety of civics and origin starts
+* Update the custom starting system initializer for 3.0
+* Custom starting initializer now supports a variety of civics and origin starts (all the built-in ones)
 * Add an extra species trait (Communal) to the prescripted empire, because Repugnant is now -2 points
 * Update portrait and clothing selection for Pops - your Pops will wear clothing based on their jobs
 
