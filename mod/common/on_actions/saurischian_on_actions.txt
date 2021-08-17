@@ -1,0 +1,6 @@
+on_game_start = {
+	events = {
+		saurischian_evt.13
+		saurischian_evt.1
+	}
+}
