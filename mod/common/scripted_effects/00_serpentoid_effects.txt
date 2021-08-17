@@ -123,6 +123,10 @@ generate_serpentoid_system_capital_blockers = {
 		}
 		remove_modifier = dreary_planet
 	}
+	if = {
+		limit = { owner = { has_origin = origin_remnants } }
+		set_planet_size = 25 # this system is designed to have a big planet, so increase to the maximum
+	}
 }
 
 # establish contact with primitives if not Resource Consolidation origin
@@ -149,10 +153,6 @@ serpentoid_system_primitives_final_pass = {
 		owner = {
 			establish_contact = { who = solar_system.owner }
 			establish_communications_no_message = solar_system.owner
-		}
-		if = {
-			limit = { has_origin = origin_remnants }
-			set_planet_size = 25 # this system is designed to have a big planet, so increase to the maximum
 		}
 	}
 }
