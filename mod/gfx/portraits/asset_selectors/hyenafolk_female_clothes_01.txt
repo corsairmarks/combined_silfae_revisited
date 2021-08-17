@@ -115,7 +115,7 @@ hyenafolk_female_clothes_01 = {
 			}
 		}
 		"gfx/models/portraits/hyenafolk/hyenafolk_female_outfit_scientist.dds" = {
-			OR ={
+			OR = {
 				has_job = head_researcher
 				has_job = researcher
 				has_job = dimensional_portal_researcher
