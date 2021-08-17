@@ -61,9 +61,9 @@ event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 	trigger = {
-		NOT = { has_global_flag = xirmian_revisited_installed }
+		NOT = { has_global_flag = saurischian_revisited_installed }
 	}
 	immediate = {
-		set_global_flag = xirmian_revisited_installed
+		set_global_flag = saurischian_revisited_installed
 	}
 }
