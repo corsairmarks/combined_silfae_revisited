@@ -205,7 +205,7 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
-					OR ={
+					OR = {
 						has_job = head_researcher
 						has_job = researcher
 						has_job = dimensional_portal_researcher
