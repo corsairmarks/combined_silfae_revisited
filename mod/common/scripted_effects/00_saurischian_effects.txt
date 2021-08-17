@@ -40,7 +40,7 @@ generate_saurischian_system_capital_blockers = {
 				add_deposit = d_dangerous_wildlife_blocker
 			}
 		}
-		# Relic and tomb worlds get city blockers
+		# Relic and tomb worlds get more city blockers
 		else = {
 			while = {
 				count = @size_blockers_02
@@ -74,7 +74,10 @@ generate_saurischian_system_capital_blockers = {
 				# has no pop-generating blockers and has more difficult blockers in general
 				remove_deposit = yes
 			}
-			set_variable = { which = local_feature_blockers value = @feature_blockers }
+			set_variable = {
+				which = local_feature_blockers
+				value = @feature_blockers
+			}
 			# Machine empires get slightly fewer blockers added because they keep some of their default blockers
 			if = {
 				limit = {
@@ -107,8 +110,14 @@ generate_saurischian_system_capital_blockers = {
 			}
 			else_if = {
 				limit = { is_planet_class = pc_gaia }
+				# reduce the number of blockers by half because non-feature blockers use up more territory
+				divide_variable = {
+					which = local_feature_blockers
+					value = 2
+				}
+				floor_variable = local_feature_blockers
 				while = {
-					count = "@\\[ local_feature_blockers - 2 ]" # reduce the number of blockers because non-feature blockers use up more territory
+					count = local_feature_blockers
 					add_deposit = d_mountain_range
 					# extra features compensate for not having feature blockers
 					random_list = {
@@ -155,13 +164,7 @@ generate_saurischian_system_capital_blockers = {
 # otherwise, nuke 'em! (this represents wrecking the biosphere while consolidating)
 saurischian_system_primitives_final_pass = {
 	if = {
-		limit = { solar_system.owner = { NOT = { has_origin = origin_machine } } }
-		owner = {
-			establish_contact = { who = solar_system.owner }
-			establish_communications_no_message = solar_system.owner
-		}
-	}
-	else = {
+		limit = { solar_system.owner = { has_origin = origin_machine } }
 		owner = { destroy_country = yes }
 		destroy_colony = yes
 		change_pc = pc_nuked
@@ -173,5 +176,11 @@ saurischian_system_primitives_final_pass = {
 			add_deposit = d_organic_slurry
 		}
 		set_planet_flag = nuked_planet_anomalies_disabled
+	}
+	else = {
+		owner = {
+			establish_contact = { who = solar_system.owner }
+			establish_communications_no_message = solar_system.owner
+		}
 	}
 }
