@@ -10,7 +10,7 @@ This is a bundle of mods to make it a little easier to sub.  Please check each i
 
 * [Animated Aquilese Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2576769521) ([Source](https://github.com/corsairmarks/romaneagles_portraits_revisited) affa2af4656ca9c63d7d371e49b165ae1ee08106)
 * [Animated Hyena Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2576290763) ([Source](https://github.com/corsairmarks/hyenafolk_portraits_revisited) 2fa586d0e1d4086bf7be4c3491da1e0a0a62c2b1)
-* [Animated Serpentoid Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2577093634) ([Source](https://github.com/corsairmarks/serpentoid_portraits_revisited) 498a87f0ec916e709401efec0c9706ae3cfe8c11)
+* [Animated Serpentoid Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2577093634) ([Source](https://github.com/corsairmarks/serpentoid_portraits_revisited) b676681ac60bef27279da286773d8f46260809b3)
 
 ## Source Code
 
