@@ -1,6 +1,6 @@
 @size_blockers_01 = 2
 @size_blockers_02 = 2
-@feature_blockers = 5
+@feature_blockers = 4
 
 # add extra blockers - based on code from 01_start_of_game_effects.txt:183
 # generate_start_deposits_and_blockers, which sets up the default blockers
@@ -74,10 +74,6 @@ generate_saurischian_system_capital_blockers = {
 				# has no pop-generating blockers and has more difficult blockers in general
 				remove_deposit = yes
 			}
-			set_variable = {
-				which = local_feature_blockers
-				value = @feature_blockers
-			}
 			# Machine empires get slightly fewer blockers added because they keep some of their default blockers
 			if = {
 				limit = {
@@ -85,10 +81,6 @@ generate_saurischian_system_capital_blockers = {
 						has_authority = auth_machine_intelligence
 						NOT = { has_civic = civic_machine_servitor }
 					}
-				}
-				subtract_variable = {
-					which = local_feature_blockers
-					value = 2
 				}
 				# Add an extra special blocker for assimilators and non-exterminators - 
 				# exterminators already have 2 special blockers by default
@@ -100,6 +92,10 @@ generate_saurischian_system_capital_blockers = {
 					limit = { owner = { NOT = { has_civic = civic_machine_terminator } } }
 					add_deposit = d_machine_empire_ruins
 				}
+			}
+			set_variable = {
+				which = local_feature_blockers
+				value = @feature_blockers
 			}
 			if = {
 				limit = { is_planet_class = pc_nuked }
@@ -131,7 +127,7 @@ generate_saurischian_system_capital_blockers = {
 				limit = { is_planet_class = pc_relic }
 				# Relic worlds get extra deposits and a bump in size - the default origin is size 22
 				# No extra blockers because it already has 5 from the origin
-				change_planet_size = 1
+				change_planet_size = 2
 				add_deposit = d_rich_mountain
 				add_deposit = d_searing_desert
 			}
@@ -156,6 +152,7 @@ generate_saurischian_system_capital_blockers = {
 					add_deposit = d_dense_jungle
 				}
 			}
+			clear_variable = local_feature_blockers
 		}
 	}
 }
