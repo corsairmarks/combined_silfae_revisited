@@ -1,0 +1,5 @@
+on_gamer_start = {
+	events = {
+		horrorworm_evt.13
+	}
+}
