@@ -34,9 +34,6 @@
 		constructor = {
 		}
 		
-		mining_station = { }
-		research_station = { }
-		observation_station = { }
 		military_station_small = { }
 		military_station_medium = { }
 		military_station_large = { }	
