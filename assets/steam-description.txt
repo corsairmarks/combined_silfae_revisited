@@ -87,7 +87,7 @@ In game terms, the fourth color of Phenotype 9 is the same as the third color.
 
 [h2]Changelog[/h2]
 
-[url=]Change Notes[/url]
+See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2578037235]Change Notes[/url]
 
 [h2]Source Code[/h2]
 
