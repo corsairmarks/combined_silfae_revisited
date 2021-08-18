@@ -1,10 +1,12 @@
-﻿HRWRM1 = {
+﻿# additional random names sourced from https://www.fantasynamegenerators.com/lovecraftian-names.php
+HRWRM1 = {
 	### SHIPS
 	randomized = no
 	ship_names = {
 		generic = {
 			"Kthug'mu" "Gaiolk'vhoxr" "Bhoggi" "Haxa" "Vhaiold'gnuxr" "Inuigha" "Yamhorv'gnos" "Unudhexz" "Aiudethrhih" "Yokhuga"
 			"D'orulbh" "Xutlolbh" "Gog'ender" "Hedhel" "Ghrothl'endi" "Aigraothrh'mo" "Iucnuilen" "Uvitluss" "Igritloss" "Iauzhibhe"
+			Mlylah "Z'eldu" "Hymbr'thu" Zhombreg Brovhush "Yovh'olli" Ebhoghirh Iungolpe Iubraggud Ukholler
 		}
 
 		corvette = {
@@ -37,6 +39,13 @@
 		military_station_small = { }
 		military_station_medium = { }
 		military_station_large = { }	
+	}
+	ship_class_names = {
+		generic = {
+			"Z'iobruxz" Ghyklosh "Zaombr'ke" Truxad Gralki "Iuv'yxho" "Iuvh'aaleth" "Iuc'thaognnulbh" Aizhocnul Iugraoggdan
+			Zoxho Xirror "Cnaz'ru" Mloudrrarc Ngaabbo "Ikthaoct'mu" Iuvraagro "Id'ouct'kex" "Oc'therotl" Icnogna
+			"Mh'oxhar" Govho "V'upu" Cthalpod Bradra "Imh'avhe" Icthaollax "Amh'avh'thi" Ungalush Aikegolbh
+		}
 	}
 	fleet_names = {
 		random_names = {
