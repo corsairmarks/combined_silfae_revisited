@@ -175,7 +175,7 @@ entity = {
 
 entity = {
 	name = "horrorworm_01_corvette_M1S1_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "medium_gun_01" position = { 0 0 0 } }
 	locator = { name = "small_gun_01" position = { 0 0 0 } }
 	
@@ -199,7 +199,7 @@ entity = {
 
 entity = {
 	name = "horrorworm_01_corvette_S3_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "small_gun_01" position = { 0 0 0 } }
 	locator = { name = "small_gun_02" position = { 0 0 0 } }
 	locator = { name = "small_gun_03" position = { 0 0 0 } }
@@ -226,7 +226,7 @@ entity = {
 
 entity = {
 	name = "horrorworm_01_corvette_S1_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	
 	default_state = "idle"
 	state = { name = "idle" state_time = 5
@@ -249,13 +249,13 @@ entity = {
 # BOW
 entity = {
 	name = "horrorworm_01_destroyer_bow_L1_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "large_gun_01" position = { 0 0 0 } }
 }
 
 entity = {
 	name = "horrorworm_01_destroyer_bow_M1S2_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "medium_gun_01" position = { 0 0 0 } }
 	locator = { name = "small_gun_01" position = { 0 0 0 } }
 	locator = { name = "small_gun_02" position = { 0 0 0 } }
@@ -274,7 +274,7 @@ entity = {
 
 entity = {
 	name = "horrorworm_01_destroyer_bow_S3_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "small_gun_01" position = { 0 0 0 } }
 	locator = { name = "small_gun_02" position = { 0 0 0 } }
 	locator = { name = "small_gun_03" position = { 0 0 0 } }
@@ -294,7 +294,7 @@ entity = {
 # STERN
 entity = {
 	name = "horrorworm_01_destroyer_stern_S2_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "small_gun_01" position = { 0 0 0 } }
 	locator = { name = "small_gun_02" position = { 0 0 0 } }
 	
@@ -318,7 +318,7 @@ entity = {
 
 entity = {
 	name = "horrorworm_01_destroyer_stern_M1_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "medium_gun_01" position = { 0 0 0 } }
 
 	default_state = "idle"
@@ -342,7 +342,7 @@ entity = {
 # BOW
 entity = {
 	name = "horrorworm_01_cruiser_bow_L1_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "large_gun_01" position = { 0 0 0 } }
 	
 	default_state = "idle"
@@ -359,7 +359,7 @@ entity = {
 
 entity = {
 	name = "horrorworm_01_cruiser_bow_M1S2_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "medium_gun_01" position = { 0 0 0 } }
 	locator = { name = "small_gun_01" position = { 0 0 0 } }
 	locator = { name = "small_gun_02" position = { 0 0 0 } }
@@ -376,7 +376,7 @@ entity = {
 
 entity = {
 	name = "horrorworm_01_cruiser_bow_M2_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "medium_gun_01" position = { 0 0 0 } }
 	locator = { name = "medium_gun_02" position = { 0 0 0 } }
 	
@@ -395,7 +395,7 @@ entity = {
 # MID
 entity = {
 	name = "horrorworm_01_cruiser_mid_S2HB_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "small_gun_01" position = { 0 0 0 } }
 	locator = { name = "small_gun_02" position = { 0 0 0 } }
 	locator = { name = "strike_craft_locator_01" position = { 0 0 0 } }
@@ -412,7 +412,7 @@ entity = {
 
 entity = {
 	name = "horrorworm_01_cruiser_mid_L1M1_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "large_gun_01" position = { 0 0 0 } }
 	locator = { name = "medium_gun_01" position = { 0 0 0 } }
 	
@@ -430,7 +430,7 @@ entity = {
 
 entity = {
 	name = "horrorworm_01_cruiser_mid_M3_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "medium_gun_01" position = { 0 0 0 } }
 	locator = { name = "medium_gun_02" position = { 0 0 0 } }
 	locator = { name = "medium_gun_03" position = { 0 0 0 } }
@@ -449,7 +449,7 @@ entity = {
 
 entity = {
 	name = "horrorworm_01_cruiser_mid_M2S2_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "medium_gun_01" position = { 0 0 0 } }
 	locator = { name = "medium_gun_02" position = { 0 0 0 } }
 	locator = { name = "small_gun_01" position = { 0 0 0 } }
@@ -470,7 +470,7 @@ entity = {
 # STERN
 entity = {
 	name = "horrorworm_01_cruiser_stern_M1_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "medium_gun_01" position = { 0 0 0 } }
 	
 	default_state = "idle"
@@ -499,7 +499,7 @@ entity = {
 
 entity = {
 	name = "horrorworm_01_cruiser_stern_S2_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "small_gun_01" position = { 0 0 0 } }
 	locator = { name = "small_gun_02" position = { 0 0 0 } }
 	
@@ -530,7 +530,7 @@ entity = {
 # BOW
 entity = {
 	name = "horrorworm_01_battleship_bow_L1M1S2_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "large_gun_01" position = { 0 0 0 } }
 	locator = { name = "medium_gun_01" position = { 0 0 0 } }
 	locator = { name = "small_gun_01" position = { 0 0 0 } }
@@ -552,7 +552,7 @@ entity = {
 
 entity = {
 	name = "horrorworm_01_battleship_bow_L1S4_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	
 	default_state = "idle"
 	state = { name = idle	state_time = 5
@@ -570,7 +570,7 @@ entity = {
 
 entity = {
 	name = "horrorworm_01_battleship_bow_L2_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "large_gun_01" position = { 0 0 0 } }
 	locator = { name = "large_gun_02" position = { 0 0 0 } }
 	
@@ -590,7 +590,7 @@ entity = {
 
 entity = {
 	name = "horrorworm_01_battleship_bow_M1S2SHB_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "medium_gun_01" position = { 0 0 0 } }
 	locator = { name = "small_gun_01" position = { 0 0 0 } }
 	locator = { name = "small_gun_02" position = { 0 0 0 } }
@@ -617,7 +617,7 @@ entity = {
 
 entity = {
 	name = "horrorworm_01_battleship_bow_M2S4_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	
 	default_state = "idle"
 	state = { name = idle	state_time = 5
@@ -635,7 +635,7 @@ entity = {
 
 entity = {
 	name = "horrorworm_01_battleship_bow_M3S2_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	
 	default_state = "idle"
 	state = { name = idle	state_time = 5
@@ -656,7 +656,7 @@ entity = {
 #MID
 entity = {
 	name = "horrorworm_01_battleship_mid_L2S4_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	
 	default_state = "idle"
 	state = { name = idle	state_time = 5
@@ -674,7 +674,7 @@ entity = {
 
 entity = {
 	name = "horrorworm_01_battleship_mid_L1M4_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	
 	default_state = "idle"
 	state = { name = idle	state_time = 5
@@ -692,7 +692,7 @@ entity = {
 
 entity = {
 	name = "horrorworm_01_battleship_mid_L2M2_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "large_gun_01" position = { 0 0 0 } }
 	locator = { name = "large_gun_02" position = { 0 0 0 } }
 	locator = { name = "medium_gun_01" position = { 0 0 0 } }
@@ -714,7 +714,7 @@ entity = {
 
 entity = {
 	name = "horrorworm_01_battleship_mid_L3_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "large_gun_01" position = { 0 0 0 } }
 	locator = { name = "large_gun_02" position = { 0 0 0 } }
 	locator = { name = "large_gun_03" position = { 0 0 0 } }
@@ -735,7 +735,7 @@ entity = {
 
 entity = {
 	name = "horrorworm_01_battleship_mid_M4SHB_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "medium_gun_01" position = { 0 0 0 } }
 	locator = { name = "medium_gun_02" position = { 0 0 0 } }
 	locator = { name = "medium_gun_03" position = { 0 0 0 } }
@@ -763,7 +763,7 @@ entity = {
 
 entity = {
 	name = "horrorworm_01_battleship_mid_S4LHB_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "small_gun_01" position = { 0 0 0 } }
 	locator = { name = "small_gun_02" position = { 0 0 0 } }
 	locator = { name = "small_gun_03" position = { 0 0 0 } }
@@ -797,7 +797,7 @@ entity = {
 # STERN
 entity = {
 	name = "horrorworm_01_battleship_stern_L1_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "large_gun_01" position = { 0 0 0 } }
 	
 	default_state = idle
@@ -824,7 +824,7 @@ entity = {
 
 entity = {
 	name = "horrorworm_01_battleship_stern_M1S2_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	
 	default_state = idle
 	state = { name = "idle" state_time = 5
@@ -850,7 +850,7 @@ entity = {
 
 entity = {
 	name = "horrorworm_01_battleship_stern_M2_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "medium_gun_01" position = { 0 0 0 } }
 	locator = { name = "medium_gun_02" position = { 0 0 0 } }
 	
@@ -878,7 +878,7 @@ entity = {
 
 entity = {
 	name = "horrorworm_01_battleship_stern_S4_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	
 	default_state = idle
 	state = { name = "idle" state_time = 5
@@ -905,7 +905,7 @@ entity = {
 
 entity = {
 	name = "horrorworm_01_battleship_bow_XL1_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "xl_gun_01" position = { 0 0 0 } }
 	
 	default_state = "idle"
@@ -1092,20 +1092,20 @@ entity = {
 
 entity = {
 	name = "horrorworm_01_military_station_section_heavy_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "large_gun_01" position = { 0 0 0 } }
 }
 
 entity = {
 	name = "horrorworm_01_military_station_section_medium_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "medium_gun_01" position = { 0 0 0 } }
 	locator = { name = "medium_gun_02" position = { 0 0 0 } }
 }
 
 entity = {
 	name = "horrorworm_01_military_station_section_light_entity"
-	pdxmesh = ""
+	pdxmesh = "locator_mesh"
 	locator = { name = "small_gun_01" position = { 0 0 0 } }
 	locator = { name = "small_gun_02" position = { 0 0 0 } }
 	locator = { name = "small_gun_03" position = { 0 0 0 } }
@@ -1935,7 +1935,7 @@ entity = {
 	pdxmesh = "horrorworm_01_station_large_mesh"
 	
 	default_state = "idle"
-	state = { name = "idle" state_time = 5
+	state = { name = "idle" animation = "idle" state_time = 5
 		event = { trigger_once = yes sound = { soundeffect = "place_construction" } }
 	}
 }
@@ -1945,7 +1945,7 @@ entity = {
 	pdxmesh = "horrorworm_01_station_small_mesh"	
 	
 	default_state = "idle"
-	state = { name = "idle" state_time = 5
+	state = { name = "idle" animation = "idle" state_time = 5
 		event = { trigger_once = yes sound = { soundeffect = "place_construction" } }
 	}
 }
