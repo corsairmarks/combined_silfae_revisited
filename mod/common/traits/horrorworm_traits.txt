@@ -7,6 +7,7 @@ trait_horrorworm = {
 	randomized = no
 	modification = no
 	advanced_trait = yes
+	potential_crossbreeding_chance = 0
 	species_potential_add = {
 		exists = ROOT
 		ROOT = {
@@ -18,7 +19,7 @@ trait_horrorworm = {
 		FROM = {
 			is_scope_type = country
 			has_country_flag = is_horrorworms
-			has_civic = civic_hive_devouring_swarm
+			has_valid_civic = civic_hive_devouring_swarm
 		}
 	}
 	species_possible_remove = { always = no }
