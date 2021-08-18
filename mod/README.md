@@ -8,11 +8,11 @@ There are other mods which contain these portraits, so why should you choose thi
 
 All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.0.*, the latest version when this was written.  Updates include:
 
-* Fixing the included shipset
+* Fix the included Prethoryn-swap shipset `horrorworm_01`
     * Ensure the ship entities are blank for ship sections and instead use the ship hull as the attachment point for the modified Prethoryn graphics
     * Add missing entities and weapon locators
     * Remove duplication
-    * Fallback for titans, juggernauts, and colossi is to the molluscoid shipset
+    * Fallback for titans, juggernauts, and colossi is based on your species's graphical culture - for the Hollow that is molluscoid
 * Fix the included custom ship type (Dimensional Horrorworm with an XL slot) - note that Leviathans is required for the ship model
     * Fix the ship class, section, and default design to work in 3.0
     * Fix portrait selectors to offer fewer phenotypes with the correct multiple color options - the graphics have been there the whole time, just needed some tweaking for presentation
