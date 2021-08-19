@@ -47,6 +47,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 * 1.0.0 Initial version
 * 1.0.1 Fix Machine World origin to have correct districts
 * 1.0.2 Adjust system initializer description
+* 1.0.3 Fix a different clothing selector that I broke
 
 ## Source Code
 
