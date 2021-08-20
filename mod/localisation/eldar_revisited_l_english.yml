@@ -1,0 +1,14 @@
+﻿l_english:
+ trait_eldar_age: ""
+ trait_eldar_age_desc: "§LEldar mature more slowly than the younger species, but their overall lifespans are longer.§!\n"
+ TRAIT_ELDAR_AGE_EFFECT: "Leaders begin between 60 and 90 years of age but live about 40 years longer."
+
+ # Duplicate localisation for modified deposits
+ d_massive_crevice_ulthwe: "$d_massive_crevice$"
+ d_massive_crevice_ulthwe_desc: "$d_massive_crevice_desc$"
+ d_ancient_reactor_pits_ulthwe: "$d_ancient_reactor_pits$"
+ d_ancient_reactor_pits_ulthwe_desc: "$d_ancient_reactor_pits_desc$"
+ d_ruined_arcology_ulthwe: "$d_ruined_arcology$"
+ d_ruined_arcology_ulthwe_desc: "$d_ruined_arcology_desc$"
+ d_dense_ruins_ulthwe: "Damaged Archives"
+ d_dense_ruins_ulthwe_desc: "Although the Archives contain knowledge most of our species has forgotten, damage to the infrastructure prevents researchers from fully plumbing their secrets."

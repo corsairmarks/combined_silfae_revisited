@@ -1,0 +1,525 @@
+# THIS = planet, capital
+# FROM = species, founder
+generate_ulthwe_start_deposits_and_blockers = {
+	clear_deposits = yes
+	# no blockers except special lithoid blockers, which don't reduce districts
+	if = {
+		limit = { owner = { is_lithoid_empire = yes } }
+		if = {
+			limit = { owner = { has_valid_civic = civic_hive_devouring_swarm } }
+			while = {
+				count = 2
+				add_deposit = d_hibernating_lithoids
+			}
+		}
+		else_if = {
+			limit = { owner = { NOT = { has_origin = origin_lithoid } } }
+			while = {
+				count = 4
+				add_deposit = d_hibernating_lithoids
+			}
+		}
+		# yes this means terravores get 2 + 4 blockers; it's that way in the base game files
+		if = {
+			limit = { owner = { has_origin = origin_lithoid } }
+			add_deposit = d_lithoid_crater
+			add_modifier = { modifier = lithoid_crater }
+			while = {
+				count = 4
+				add_deposit = d_buried_lithoids
+			}
+		}
+	}
+
+	# other origin-related deposits
+	if = {
+		limit = { owner = { has_origin = origin_tree_of_life } }
+		add_deposit = d_tree_of_life_home
+	}
+	else_if = {
+		limit = { owner = { has_origin = origin_machine } }
+		add_deposit = d_resource_consolidation_1
+		add_deposit = d_machine_minerals
+		if = {
+			limit = { owner = { has_valid_civic = civic_machine_assimilator } }
+			add_deposit = d_organic_slurry
+		}
+	}
+	else_if = {
+		limit = { has_origin = origin_life_seeded }
+		add_deposit = d_dust_caverns
+		add_deposit = d_bubbling_swamp
+		add_deposit = d_crystalline_caverns
+	}
+	else_if = {
+		limit = { has_origin = origin_remnants }
+		while = {
+			count = 5
+			add_deposit = d_ruined_arcology_ulthwe
+		}
+	}
+
+	# craftworld gets special habitat deposit, but only if Federations DLC is available
+	if = {
+		limit = { has_federations_dlc = yes }
+		add_deposit = d_arcane_replicator
+	}
+
+	if = {
+		limit = { owner = { NOT = { has_origin = origin_machine } } }
+		if = {
+			limit = {
+				owner = {
+					is_machine_empire = yes
+					NOT = { has_valid_civic = civic_machine_servitor }
+				}
+			}
+			add_deposit = d_metal_boneyard
+			add_deposit = d_organic_landfill
+		}
+		else = {
+			# 3 generator + 3 mining for all habitable planet classes
+			switch = {
+				trigger = is_planet_class
+				pc_gaia = {
+					random_list = {
+						50 = { add_deposit = d_frozen_gas_lake }
+						50 = { add_deposit = d_searing_desert }
+					}
+					add_deposit = d_buzzing_plains
+					random_list = {
+						50 = { add_deposit = d_ore_rich_caverns }
+						50 = { add_deposit = d_prosperous_mesa }
+					}
+					add_deposit = d_mineral_striations
+				}
+				pc_relic = {
+					add_deposit = d_central_spire
+					add_deposit = d_ancient_reactor_pits_ulthwe
+					add_deposit = d_relic_metal_boneyard
+					while = {
+						count = 3
+						add_deposit = d_dense_ruins_ulthwe
+					}
+					add_deposit = d_massive_crevice_ulthwe
+				}
+				pc_arid = {
+					add_deposit = d_searing_desert
+					add_deposit = d_arid_highlands
+					add_deposit = d_ore_rich_caverns
+					add_deposit = d_veiny_cliffs
+				}
+				pc_desert = {
+					add_deposit = d_searing_desert
+					add_deposit = d_arid_highlands
+					add_deposit = d_prosperous_mesa
+					add_deposit = d_mineral_fields
+				}
+				pc_savannah = {
+					add_deposit = d_searing_desert
+					add_deposit = d_arid_highlands
+					add_deposit = d_prosperous_mesa
+					add_deposit = d_mineral_fields
+				}
+				pc_continental = {
+					add_deposit = d_rushing_waterfalls
+					add_deposit = d_hot_springs
+					add_deposit = d_prosperous_mesa
+					add_deposit = d_veiny_cliffs
+				}
+				pc_ocean = {
+					add_deposit = d_rushing_waterfalls
+					add_deposit = d_hot_springs
+					add_deposit = d_ore_rich_caverns
+					add_deposit = d_mineral_fields
+				}
+				pc_tropical = {
+					add_deposit = d_rushing_waterfalls
+					add_deposit = d_hot_springs
+					add_deposit = d_prosperous_mesa
+					add_deposit = d_mineral_fields
+				}
+				pc_alpine = {
+					add_deposit = d_frozen_gas_lake
+					add_deposit = d_hot_springs
+					add_deposit = d_ore_rich_caverns
+					add_deposit = d_veiny_cliffs
+				}
+				pc_arctic = {
+					add_deposit = d_frozen_gas_lake
+					add_deposit = d_hot_springs
+					add_deposit = d_ore_rich_caverns
+					add_deposit = d_veiny_cliffs
+				}
+				pc_tundra = {
+					add_deposit = d_frozen_gas_lake
+					add_deposit = d_hot_springs
+					add_deposit = d_ore_rich_caverns
+					add_deposit = d_mineral_fields
+				}
+				pc_nuked = {
+					add_deposit = d_searing_desert
+					add_deposit = d_hot_springs
+					add_deposit = d_ore_rich_caverns
+					add_deposit = d_veiny_cliffs
+				}
+			}
+		}
+	}
+}
+
+# THIS = planet, capital
+# FROM = species, founder
+generate_ulthwe_start_buildings_and_districts = {
+	if = {
+		limit = { owner = { is_machine_empire = yes } }
+		add_building = building_machine_capital
+		add_building = building_machine_assembly_plant
+		add_building = building_uplink_node
+		if = {
+			limit = { has_valid_civic = civic_machine_assimilator }
+			add_building = building_organic_sanctuary
+		}
+		while = {
+			count = 2
+			add_district = district_nexus
+		}
+	}
+	else_if = {
+		limit = { owner = { is_hive_empire = yes } }
+		add_building = building_hive_capital
+		add_building = building_spawning_pool
+		add_building = building_hive_node
+		while = {
+			count = 2
+			add_district = district_hive
+		}
+	}
+	else = {
+		add_building = building_capital
+		if = {
+			limit = { owner = { has_origin = origin_mechanists } }
+			add_building = building_robot_assembly_plant
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_origin = origin_necrophage
+					NOT = { has_valid_civic = civic_fanatic_purifiers }
+				}
+			}
+			add_building = building_necrophage_elevation_chamber
+		}
+		add_building = building_bureaucratic_1
+		while = {
+			count = 2
+			add_district = district_city
+		}
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						is_spiritualist = no
+						is_megacorp = yes
+					}
+				}
+			}
+			add_building = building_commercial_zone
+		}
+		else_if = {
+			limit = { owner = { has_valid_civic = civic_death_cult } }
+			add_building = building_sacrificial_temple_1
+		}
+		else = {
+			add_building = building_temple
+		}
+	}
+	while = {
+		count = 2
+		add_district = district_industrial
+	}
+	set_variable = {
+		which = num_rural_districts
+		value = 2
+	}
+	if = {
+		limit = { owner = { has_origin = origin_default } }
+		change_variable = {
+			which = num_rural_districts
+			value = 1
+		}
+	}
+	if = {
+		limit = { owner = { has_origin = origin_machine } }
+		while = {
+			count = num_rural_districts
+			add_district = district_generator_uncapped
+		}
+		while = {
+			count = num_rural_districts
+			add_district = district_mining_uncapped
+		}
+	}
+	else = {
+		while = {
+			count = num_rural_districts
+			add_district = district_generator
+		}
+		while = {
+			count = num_rural_districts
+			add_district = district_mining
+		}
+	}
+	clear_variable = num_rural_districts
+	if = {
+		limit = { owner = { NOT = { has_origin = origin_remnants } } }
+		add_building = building_research_lab_1
+	}
+	if = {
+		limit = {
+			owner = {
+				OR = {
+					is_lithoid_empire = no
+					last_created_species = { is_lithoid = no }
+					has_origin = origin_tree_of_life
+				}
+			}
+		}
+		add_building = building_hydroponics_farm
+	}
+}
+
+# THIS = planet, capital
+# FROM = species, founder
+generate_ulthwe_starting_resources = {
+	# additional resources based on empire type and possible subspecies
+	# logically the same as the last section of common/scripted_effects/01_start_of_game_effects.txt - generate_start_buildings_and_districts
+	owner = {
+		if = {
+			limit = { has_authority = auth_machine_intelligence }
+			add_resource = { energy = 100 }
+			if = {
+				limit = {
+					OR = {
+						has_valid_civic = civic_machine_servitor
+						has_valid_civic = civic_machine_assimilator
+					}
+				}
+				if = {
+					limit = { last_created_species = { is_lithoid = yes } }
+					add_resource = { minerals = 100	}
+				}
+				else = {
+					add_resource = { food = 100	}
+				}
+			}
+			else = {
+				add_resource = { energy = 100 }
+			}
+		}
+		else = {
+			if = {
+				limit = { is_lithoid_empire = no }
+				add_resource = { food = 100	}
+				if = {
+					limit = { last_created_species = { is_lithoid = yes } }
+					add_resource = { minerals = 100 }
+				}
+				else = {
+					add_resource = { food = 100 }
+				}
+			}
+			else = {
+				add_resource = { minerals = 100 }
+				if = {
+					limit = { last_created_species = { is_lithoid = no } }
+					add_resource = { food = 100	}
+				}
+				else = {
+					add_resource = { minerals = 100 }
+				}
+			}
+		}
+	}
+}
+
+# same as vanilla, adjust while testing - I expect to end with fewer pops
+# THIS = planet, capital
+# FROM = species, founder
+generate_ulthwe_start_pops = {
+	set_variable = {
+		which = main_species_pops
+		value = 0
+	}
+	set_variable = {
+		which = secondary_species_pops
+		value = 0
+	}
+	if = {
+		limit = { owner = { is_machine_empire = yes } }
+		set_variable = {
+			which = main_species_pops
+			value = 29
+		}
+		if = {
+			limit = { owner = { has_valid_civic = civic_machine_assimilator } }
+			set_variable = {
+				which = secondary_species_pops
+				value = 10
+			}
+			last_created_species = {
+				set_citizenship_type = {
+					country = owner
+					type = citizenship_full_machine
+				}
+				set_living_standard = {
+					country = owner
+					type = living_standard_hive_mind
+				}
+			}
+		}
+		else_if = {
+			limit = { owner = { has_valid_civic = civic_machine_servitor } }
+			set_variable = {
+				which = main_species_pops
+				value = 33
+			}
+			set_variable = {
+				which = secondary_species_pops
+				value = 5
+			}
+			last_created_species = {
+				set_citizenship_type = {
+					country = owner
+					type = citizenship_limited
+				}
+				set_living_standard = {
+					country = owner
+					type = living_standard_organic_trophy
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = { owner = { is_hive_empire = yes } }
+		set_variable = {
+			which = main_species_pops
+			value = 33
+		}
+	}
+	else = {
+		# regular empire/fallback
+		set_variable = {
+			which = main_species_pops
+			value = 28
+		}
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_origin = origin_syncretic_evolution
+						has_origin = origin_necrophage
+					}
+				}
+			}
+			last_created_species = {
+				set_species_flag = syncretic_species@owner
+				if = {
+					limit = { owner = { has_origin = origin_syncretic_evolution } }
+					set_citizenship_type = {
+						country = owner
+						type = citizenship_slavery
+					}
+				}
+			}
+			if = {
+				limit = {
+					owner = {
+						has_origin = origin_necrophage
+						has_valid_civic = civic_fanatic_purifiers
+					}
+				}
+				set_variable = {
+					which = secondary_species_pops
+					value = 9
+				}
+			}
+			else = {
+				set_variable = {
+					which = secondary_species_pops
+					value = 12
+				}
+			}
+		}
+		else_if = {
+			limit = { owner = { has_origin = origin_mechanists } }
+			owner = { create_built_robot_species = yes }
+			set_variable = {
+				which = secondary_species_pops
+				value = 8
+			}
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = secondary_species_pops
+				value > 0
+			}
+		}
+		subtract_variable = {
+			which = main_species_pops
+			value = secondary_species_pops
+		}
+		while = {
+			count = secondary_species_pops
+			create_pop = {
+				species = last_created_species
+				ethos = random
+			}
+			if = {
+				limit = { owner = { is_gestalt = yes } }
+				last_created_pop = { clear_ethos = yes }
+			}
+		}
+	}
+	while = {
+		count = main_species_pops
+		create_pop = {
+			species = owner_main_species
+			ethos = random
+		}
+	}
+	if = {
+		limit = { owner = { has_origin = origin_default } }
+		while = {
+			count = 4
+			create_pop = {
+				species = owner_main_species
+				ethos = random
+			}
+		}
+	}
+	clear_variable = main_species_pops
+	clear_variable = secondary_species_pops
+}
+
+# THIS = planet, capital
+# FROM = species, founder
+generate_ulthwe_final_pass = {
+	# need the extra space!
+	add_modifier = { modifier = mastery_of_nature }
+	# origin-related modifiers
+	if = {
+		limit = { owner = { has_origin = origin_lithoid } }
+		add_modifier = { modifier = lithoid_crater }
+	}
+	else_if = {
+		limit = { owner = { has_origin = origin_lost_colony } }
+		add_modifier = { modifier = colonial_spirit_mod }
+	}
+	else_if = {
+		limit = { owner = { has_origin = origin_default } }
+		add_modifier = { modifier = prosp_uni_mod days = 7200 }
+	}
+}

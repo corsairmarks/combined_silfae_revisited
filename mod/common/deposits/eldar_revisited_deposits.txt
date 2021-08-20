@@ -1,0 +1,106 @@
+# duplicate of d_massive_crevice but does not reduce available districts
+d_massive_crevice_ulthwe = {
+	time = 270
+	icon = d_massive_crevice
+	is_for_colonizeable = yes
+	category = deposit_cat_rare_blocker	
+	potential = { always = no }
+	use_weights_for_blocker_swap_types = no
+	blocker_swap_types = { d_industrial_sector }
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 1000
+		}
+	}
+}
+
+# duplicate of d_ancient_reactor_pits nut only provides +3 generator districts
+d_ancient_reactor_pits_ulthwe = {
+	is_for_colonizeable = yes
+	icon = d_reactor
+	potential = { always = no }
+	planet_modifier = { 
+		district_generator_max = 3
+	}
+}
+
+# duplicate of d_ruined_arcology but does not reduce available districts
+d_ruined_arcology_ulthwe = {
+	time = 365
+	icon = d_city_ruins
+	is_for_colonizeable = yes
+	category = deposit_cat_blockers
+	potential = { always = no }
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 750
+			minerals = 250
+		}
+	}
+	on_cleared = {
+		if = {
+			limit = {
+				exists = owner
+				owner = { has_ancrel = yes }
+			}
+			custom_tooltip = minor_artifacts_found
+			random_list = {
+				33 = { owner = { add_resource = { minor_artifacts = 1 } } }
+				33 = { owner = { add_resource = { minor_artifacts = 3 } } }
+				33 = { owner = { add_resource = { minor_artifacts = 5 } } }
+			}
+		}
+		if = {
+			limit = {
+				owner = { has_origin = origin_remnants }
+				is_capital = yes
+			}
+			custom_tooltip = rediscover_tech
+			hidden_effect = { owner = { country_event = { id = origin.3100 } } }
+		}
+	}
+}
+
+# new deposit to block 6 out of 8 scientist jobs from d_central_spire
+d_dense_ruins_ulthwe = {
+	icon = d_ruins_small
+	is_for_colonizeable = yes
+	time = 120
+	category = deposit_cat_rare_blocker
+	potential = { always = no }
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_researcher_add = -2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = -2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			job_calculator_add = -2
+		}
+	}
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 500
+		}
+	}
+}
