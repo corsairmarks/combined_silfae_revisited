@@ -13,8 +13,7 @@ Notes
     * Can randomly spawn
     * Prescripted empire gains Psionic Theory for free
     * Names are a somewhat more lore-friendly
-* Update custom challenge-start initializer for 3.0
-* Rebuilt custom system initializer:
+* Rebuilt challenge-start custom solar system initializer for 3.0:
     * Setup to work correctly for all origins/civics in unmodded Stellaris that do not restrict the starting system initializers (i.e. Origin Shattered Ring or Origin: Void Dwellers)
     * Add modified starting deposits for use with Origin: Remnants
 
