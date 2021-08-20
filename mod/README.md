@@ -27,7 +27,7 @@ Notes
 
 ## Source Code
 
-Hosted on [GitHub]()
+Hosted on [GitHub](https://github.com/corsairmarks/eldar_portraits_revisited)
 
 ### Development Notes
 
