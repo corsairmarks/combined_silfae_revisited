@@ -7,6 +7,7 @@ Summary
 Notes
 
 * Update the namelist to account for all built-in army types, remove obsolete entries
+* Add custom trait to Eldar that makes their leaders begin at an older age, but live longer
 * Update prescripted empire for 3.0
     * Now has Origin: Remnants (requires Ancient Relics)
     * You can use the portraits for your own empire without any DLC requirements
