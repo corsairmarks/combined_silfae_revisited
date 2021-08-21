@@ -4,6 +4,6 @@ ELDR = {
 		plural = "Eldar"
 		home_planet = "Xant"
 		home_system = "Xanta"
-		name_list = eldarnames
+		name_list = ELDR1
 	}
 }

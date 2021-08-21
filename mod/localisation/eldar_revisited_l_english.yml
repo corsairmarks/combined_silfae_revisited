@@ -1,4 +1,5 @@
 ﻿l_english:
+ name_list_ELDR1: "Eldar"
  trait_eldar_age: "Ældari Longevity"
  trait_eldar_age_desc: "§LThis species matures more slowly than the most species, but their overall lifespans are longer.§!\n"
  TRAIT_ELDAR_AGE_EFFECT: "Leaders begin between §Y60§! and §Y90§! years of age but live about §G+40§! years longer."

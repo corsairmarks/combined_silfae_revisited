@@ -1,5 +1,5 @@
 ﻿### Eldar
-eldarnames = {	
+ELDR1 = {	
 	category = "Eldar"
 	should_name_home_system_planets = no
 	randomized = no
