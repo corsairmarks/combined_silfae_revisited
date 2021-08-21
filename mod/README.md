@@ -6,17 +6,18 @@ Summary
 
 Notes
 
+* Enhance clothing selectors to be influenced by pop job
 * Update the namelist to account for all built-in army types, remove obsolete entries
-* Add custom trait to Eldar that makes their leaders begin at an older age, but live longer
+* Add custom trait to Eldar that makes their leaders begin at an older age, but live longer to compensate
 * Update prescripted empire for 3.0
     * Now has Origin: Remnants (requires Ancient Relics)
     * You can use the portraits for your own empire without any DLC requirements
     * Can randomly spawn
-    * Prescripted empire gains Psionic Theory for free
+    * Gains Psionic Theory for free
     * Names are a somewhat more lore-friendly
 * Rebuilt challenge-start custom solar system initializer for 3.0:
     * Setup to work correctly for all origins/civics in unmodded Stellaris that do not restrict the starting system initializers (i.e. Origin Shattered Ring or Origin: Void Dwellers)
-    * Any empire using this initializer gains Weather COntrol Systems (`tech_housing_1`) for free
+    * Any empire using this initializer gains Weather Control Systems (`tech_housing_1`) for free
     * Add modified starting deposits for use with Origin: Remnants
 
 ## Compatibility
