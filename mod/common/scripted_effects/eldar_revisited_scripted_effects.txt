@@ -357,8 +357,6 @@ generate_eldar_system_start_buildings_and_districts = {
 	}
 }
 
-# phage needs +1 city
-
 # additional resources based on empire type and possible subspecies
 # THIS = planet, capital
 # FROM = species, founder
