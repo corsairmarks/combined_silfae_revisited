@@ -104,3 +104,32 @@ d_dense_ruins_eldar_system = {
 		}
 	}
 }
+
+# requires Federations
+d_arcane_replicator_eldar_system = {
+	is_for_colonizeable = yes
+	icon = d_station_reactor
+	category = deposit_cat_rare
+	potential = { always = no }
+	resources = {
+		category = planet_deposits
+		produces = {
+			alloys = 12
+			consumer_goods = 4
+		}
+	}
+}
+
+# requires Federations
+d_arcane_replicator_eldar_system_gestalt = {
+	is_for_colonizeable = yes
+	icon = d_station_reactor
+	category = deposit_cat_rare
+	potential = { always = no }
+	resources = {
+		category = planet_deposits
+		produces = {
+			alloys = 12
+		}
+	}
+}
