@@ -268,7 +268,10 @@ generate_eldar_system_start_buildings_and_districts = {
 				}
 			}
 		}
-		add_building = building_hydroponics_farm
+		while = {
+			count = 2
+			add_building = building_hydroponics_farm
+		}
 	}
 }
 
