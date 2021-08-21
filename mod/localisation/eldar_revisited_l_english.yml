@@ -11,7 +11,7 @@
  d_ancient_reactor_pits_eldar_system_desc: "$d_ancient_reactor_pits_desc$"
  d_ruined_arcology_eldar_system: "$d_ruined_arcology$"
  d_ruined_arcology_eldar_system_desc: "$d_ruined_arcology_desc$"
- d_dense_ruins_eldar_system: "Damaged Archives"
+ d_dense_ruins_eldar_system: "£blocker£ Damaged Archives"
  d_dense_ruins_eldar_system_desc: "Although the Archives contain knowledge most of our species has forgotten, damage to the infrastructure prevents researchers from fully plumbing their secrets."
  d_arcane_replicator_eldar_system: "$d_arcane_replicator$"
  d_arcane_replicator_eldar_system_desc: "This ancient machine is nestled deep within the craftworld's interior, built into its main reactor from where it also draws its power. A relic of when the craftworld was constructed, its matter replication technology has been lost to time."
