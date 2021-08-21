@@ -38,7 +38,6 @@ generate_eldar_system_start_deposits_and_blockers = {
 	}
 	else_if = {
 		limit = { owner = { has_origin = origin_machine } }
-		add_deposit = d_resource_consolidation_1
 		add_deposit = d_machine_minerals
 		if = {
 			limit = { owner = { has_valid_civic = civic_machine_assimilator } }
@@ -59,10 +58,16 @@ generate_eldar_system_start_deposits_and_blockers = {
 		}
 	}
 
-	# craftworld gets special habitat deposit, but only if Federations DLC is available
+	# craftworld gets special deposit that duplicates the habitat arcane replicator, but only if Federations DLC is available
 	if = {
 		limit = { has_federations_dlc = yes }
-		add_deposit = d_arcane_replicator
+		if = {
+			limit = { owner = { country_uses_consumer_goods = yes } }
+			add_deposit = d_arcane_replicator_eldar_system
+		}
+		else = {
+			add_deposit = d_arcane_replicator_eldar_system_gestalt
+		}
 	}
 
 	if = {
@@ -71,7 +76,10 @@ generate_eldar_system_start_deposits_and_blockers = {
 			limit = {
 				owner = {
 					is_machine_empire = yes
-					NOT = { has_valid_civic = civic_machine_servitor }
+					NOR = {
+						has_origin = origin_remnants
+						has_valid_civic = civic_machine_servitor
+					}
 				}
 			}
 			add_deposit = d_metal_boneyard
@@ -178,8 +186,16 @@ generate_eldar_system_start_buildings_and_districts = {
 		add_building = building_machine_assembly_plant
 		add_building = building_uplink_node
 		if = {
-			limit = { owner = { has_valid_civic = civic_machine_assimilator } }
+			limit = { owner = { has_valid_civic = civic_machine_servitor } }
 			add_building = building_organic_sanctuary
+			add_district = district_nexus
+		}
+		else_if = {
+			limit = { owner = { has_origin = origin_machine } }
+			add_district = district_generator_uncapped
+		}
+		else = {
+			add_district = district_generator
 		}
 		while = {
 			count = 2
@@ -192,7 +208,7 @@ generate_eldar_system_start_buildings_and_districts = {
 		add_building = building_spawning_pool
 		add_building = building_hive_node
 		while = {
-			count = 2
+			count = 3
 			add_district = district_hive
 		}
 	}
@@ -218,6 +234,29 @@ generate_eldar_system_start_buildings_and_districts = {
 		}
 		if = {
 			limit = {
+				owner = { 
+					OR = {
+						has_origin = origin_remnants
+						AND = {
+							is_lithoid_empire = yes
+							OR = {
+								NOR = {
+									has_origin = origin_syncretic_evolution
+									has_origin = origin_necrophage
+								}
+								last_created_species = { is_lithoid = yes }
+							}
+						}
+					}
+				}
+			}
+			add_district = district_generator
+		}
+		else = {
+			add_district = district_city
+		}
+		if = {
+			limit = {
 				owner = {
 					OR = {
 						is_spiritualist = no
@@ -235,24 +274,42 @@ generate_eldar_system_start_buildings_and_districts = {
 			add_building = building_temple
 		}
 	}
-	while = {
-		count = 2
+	if = {
+		limit = { owner = { is_machine_empire = yes } }
+		if = {
+			limit = { owner = { has_origin = origin_machine } }
+			add_district = district_generator_uncapped
+		}
+		else = {
+			add_district = district_generator
+		}
+	}
+	else_if = {
+		limit = { owner = { has_origin = origin_mechanists } }
+		add_district = district_generator
+	}
+	else_if = {
+		limit = { owner = { is_hive_empire = yes } }
+		add_district = district_hive
+	}
+	else = {
 		add_district = district_industrial
 	}
+	add_district = district_industrial
 	if = {
 		limit = { owner = { has_origin = origin_machine } }
 		while = {
 			count = 2
 			add_district = district_generator_uncapped
-			add_district = district_mining_uncapped
 		}
+		add_district = district_mining_uncapped
 	}
 	else = {
 		while = {
 			count = 2
-			add_district = district_generator
 			add_district = district_mining
 		}
+		add_district = district_generator
 	}
 	if = {
 		limit = { owner = { NOT = { has_origin = origin_remnants } } }
@@ -262,18 +319,45 @@ generate_eldar_system_start_buildings_and_districts = {
 		limit = {
 			owner = {
 				OR = {
-					is_lithoid_empire = no
-					last_created_species = { is_lithoid = no }
+					is_machine_empire = no
+					has_valid_civic = civic_machine_assimilator
+					has_valid_civic = civic_machine_servitor
+				}
+				OR = {
+					AND = {
+						is_lithoid_empire = no
+						last_created_species = { is_lithoid = no }
+					}
 					has_origin = origin_tree_of_life
 				}
 			}
 		}
-		while = {
-			count = 2
+		add_building = building_hydroponics_farm
+		if = {
+			limit = {
+				owner = {
+					NOR = {
+						has_valid_civic = civic_machine_assimilator
+						has_valid_civic = civic_machine_servitor
+						has_origin = origin_necrophage
+						has_origin = origin_mechanists
+					}
+				}
+			}
+			add_building = building_hydroponics_farm
+		}
+		if = {
+			limit = { owner = { is_hive_empire = yes } }
 			add_building = building_hydroponics_farm
 		}
 	}
+	else_if = {
+		limit = { owner = { is_regular_empire = yes } }
+		add_building = building_commercial_zone
+	}
 }
+
+# phage needs +1 city
 
 # additional resources based on empire type and possible subspecies
 # THIS = planet, capital
@@ -355,11 +439,11 @@ generate_eldar_system_start_pops = {
 			}
 			last_created_species = {
 				set_citizenship_type = {
-					country = owner
+					country = PREV.owner
 					type = citizenship_full_machine
 				}
 				set_living_standard = {
-					country = owner
+					country = PREV.owner
 					type = living_standard_hive_mind
 				}
 			}
@@ -376,11 +460,11 @@ generate_eldar_system_start_pops = {
 			}
 			last_created_species = {
 				set_citizenship_type = {
-					country = owner
+					country = PREV.owner
 					type = citizenship_limited
 				}
 				set_living_standard = {
-					country = owner
+					country = PREV.owner
 					type = living_standard_organic_trophy
 				}
 			}
@@ -409,11 +493,11 @@ generate_eldar_system_start_pops = {
 				}
 			}
 			last_created_species = {
-				set_species_flag = syncretic_species@owner
+				set_species_flag = syncretic_species@PREV.owner
 				if = {
-					limit = { owner = { has_origin = origin_syncretic_evolution } }
+					limit = { PREV.owner = { has_origin = origin_syncretic_evolution } }
 					set_citizenship_type = {
-						country = owner
+						country = PREV.owner
 						type = citizenship_slavery
 					}
 				}
@@ -487,6 +571,7 @@ generate_eldar_system_start_pops = {
 				ethos = random
 			}
 		}
+		add_modifier = { modifier = mastery_of_nature }
 	}
 	clear_variable = main_species_pops
 	clear_variable = secondary_species_pops
@@ -507,7 +592,7 @@ generate_eldar_system_final_pass = {
 	else_if = {
 		limit = { owner = { has_origin = origin_default } }
 		add_modifier = { modifier = prosp_uni_mod days = 7200 }
-		add_modifier = { modifier = mastery_of_nature }
+		change_planet_size = 2
 		add_district = district_generator
 		add_district = district_mining
 	}

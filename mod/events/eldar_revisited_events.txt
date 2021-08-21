@@ -59,8 +59,27 @@ country_event = {
 	}
 	immediate = {
 		give_technology = {
+			tech = tech_hydroponics
+			message = no
+		}
+		give_technology = {
 			tech = tech_housing_1
 			message = no
 		}
+	}
+}
+
+# triggered by on_game_start_country
+country_event = {
+	id = eldar_evt.4
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_default
+		exists = capital_scope
+		capital_scope = { has_planet_flag = is_silfae_eldar_craftworld }
+	}
+	immediate = {
+		capital_scope = { change_planet_size = -2 }
 	}
 }
