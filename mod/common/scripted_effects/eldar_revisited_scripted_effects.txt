@@ -46,13 +46,13 @@ generate_ulthwe_start_deposits_and_blockers = {
 		}
 	}
 	else_if = {
-		limit = { has_origin = origin_life_seeded }
+		limit = { owner = { has_origin = origin_life_seeded } }
 		add_deposit = d_dust_caverns
 		add_deposit = d_bubbling_swamp
 		add_deposit = d_crystalline_caverns
 	}
 	else_if = {
-		limit = { has_origin = origin_remnants }
+		limit = { owner = { has_origin = origin_remnants } }
 		while = {
 			count = 5
 			add_deposit = d_ruined_arcology_ulthwe
@@ -177,7 +177,7 @@ generate_ulthwe_start_buildings_and_districts = {
 		add_building = building_machine_assembly_plant
 		add_building = building_uplink_node
 		if = {
-			limit = { has_valid_civic = civic_machine_assimilator }
+			limit = { owner = { has_valid_civic = civic_machine_assimilator } }
 			add_building = building_organic_sanctuary
 		}
 		while = {
@@ -254,9 +254,6 @@ generate_ulthwe_start_buildings_and_districts = {
 		while = {
 			count = num_rural_districts
 			add_district = district_generator_uncapped
-		}
-		while = {
-			count = num_rural_districts
 			add_district = district_mining_uncapped
 		}
 	}
@@ -264,9 +261,6 @@ generate_ulthwe_start_buildings_and_districts = {
 		while = {
 			count = num_rural_districts
 			add_district = district_generator
-		}
-		while = {
-			count = num_rural_districts
 			add_district = district_mining
 		}
 	}
@@ -476,10 +470,12 @@ generate_ulthwe_start_pops = {
 			create_pop = {
 				species = last_created_species
 				ethos = random
-			}
-			if = {
-				limit = { owner = { is_gestalt = yes } }
-				last_created_pop = { clear_ethos = yes }
+				effect = {
+					if = {
+						limit = { owner = { is_gestalt = yes } }
+						clear_ethos = yes
+					}
+				}
 			}
 		}
 	}
