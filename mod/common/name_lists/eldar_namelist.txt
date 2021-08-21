@@ -8,22 +8,22 @@ eldarnames = {
 			"Iyallir Mon'keigh" "Scuraith Uial Elourge" "Nikav Uial Suda" "Garoth Kion We" "Neosfail Gaied" "Marb Eaxamar"
 			"Lavair Uial Estera" "Larr Kion Brathai" "Ishsoem Eakion Catumen" "Sin' Kion Ainulin"
 		}
-	
+
 		corvette = {
 			"Tagtha Uial Tial" "Kharant Eakion" "Suitheakion'eliath" "Tosthuich Eihk" "Soa'addol" "Av Kion Xios" "Xama Nikav"
 			"Larr Leanir" "Jiorquas Eakion Choma" "Ishtikam Kahli" "'nash Uial Dael" "Istau Uial Bonnikel"
 		}
-		
+
 		destroyer = {
 			"Fiallathandire'rilli" "Uial Taluclu" "Liras Eakion Caihe" "Uom Ifeth" "Ca Liad" "Liann Dial" "Yiss'rea"
 			"Gorach Uial Quas" "Ainaarin Eakion Dieliet" "Uom Rega" "Creliam B'fheidir" "Ceiful Sutherial"
 		}
-		
+
 		cruiser = {
 			"Quas Mile'ionahd" "Caurmenli Taluclu" "Gyaran Kion Ehk" "Offigascarath Sercam" "Tageth Furtafar" "Neosfai Uial Agai" "Ran' Eakion Shair"
 			"Choma Kion Muraddin" "Buanial Eakion Tiel" "Iyalith Baharr" "Ian Eakion Mear'feothan" "Koruan Eakion Iyallir" "Bruiith Buanneth" "Lir Uial Iren"
 		}
-		
+
 		battleship = {
 			"Riuway Kion Faras" "Hasoi Uial Arathi" "Arebennian Kion Unan" "Ishkioum Mirrotuis" "Boniokel Uial Arathinos" "Creliam Kion Fian" "Badbaltrilas Ann"
 			"Koesh Kion Nive" "Urgebelash Talu" "Elohar Tossirial" "Lan Uial Ashami" "Ainn Eakion Suinmure" "Ulem Uial Kiar" "Dyann Cre" "Aiel Eshairr" "Weand Uial Subarn"
@@ -32,36 +32,39 @@ eldarnames = {
 		titan = { }
 
 		juggernaut = { }
-		
+
 		colossus = { }
 
 		science = {
-			"Lavair Eakion Harakh" "Addin Unan" "Ill'haranshemash" "Lavai Uial Fian Dialcaman" "Catumen Kion Losse" 
+			"Lavair Eakion Harakh" "Addin Unan" "Ill'haranshemash" "Lavai Uial Fian Dialcaman" "Catumen Kion Losse"
 		}
-		
+
 		colonizer = {
-			"Coriam Zapat" "Druchii Arten" "Harakh Eakion Eshairr" "Kerun Eakion Anu" "Fhirin Boniokar" "'iok Uial Riuway" 
+			"Coriam Zapat" "Druchii Arten" "Harakh Eakion Eshairr" "Kerun Eakion Anu" "Fhirin Boniokar" "'iok Uial Riuway"
 		}
-		
+
 		constructor = { }
-		
+
+		transport = { }
+
 		mining_station = { }
+
 		research_station = { }
-		observation_station = { }
-		starbase_outpost = {
-			random_names = {
-				"Mecinfic Outpost" "Huxinfic Outpost" "Ytranfic Outpost" "Cabbinfic Outpost" "Lopinfic Outpost" "Draxinfic Outpost" "Ekerinfic Outpost" "Xapinfic Outpost"
-			}
-			sequential_name = "%O% Frontier Outpost"
+
+		observation_station = {
+			# previously these names were for outpost_station, but those don't exist anymore
+			"Mecinfic Outpost" "Huxinfic Outpost" "Ytranfic Outpost" "Cabbinfic Outpost" "Lopinfic Outpost" "Draxinfic Outpost" "Ekerinfic Outpost" "Xapinfic Outpost"
 		}
-	
+
 		military_station_small = { }
 	
 		military_station_medium = { }
 	
 		military_station_large = { }
+
+		ion_cannon = { }
 	}
-	
+
 	fleet_names = {
 		random_names = {
 			"Baktax Husk Squadron" "Kabbloc Husk Squadron" "Vactix Husk Squadron" "Polatricall Husk Squadron" "Jaktox Husk Squadron"
@@ -91,19 +94,19 @@ eldarnames = {
 		defense_army = {
 			sequential_name = "%O% Guardian Defenders"
 		}
-			
+
 		assault_army = {
 			sequential_name = "%O% Storm Guardians"
 		}
-		
+
 		slave_army = {
 			sequential_name = "%O% Servitude Swarm"
 		}
-		
+
 		clone_army = {
 			sequential_name = "%O% Clone Swarm"
 		}
-		
+
 		robotic_army = {
 			sequential_name = "%O% Wraithguard"
 		}
@@ -115,20 +118,40 @@ eldarnames = {
 		undead_army = {
 			sequential_name = "%O% Gravebound Caste"
 		}
-		
+
 		psionic_army = {
 			sequential_name = "%O% Warlocks"
 		}
-		
+
 		xenomorph_army = {
 			sequential_name = "%O% Xeno Caste"
 		}
-		
+
 		gene_warrior_army = {
 			sequential_name = "%O% Aspect Warriors"
 		}
+
+		occupation_army = {
+			sequential_name = "%O% Guardian Garrison"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% Wraithguard Garrison"
+		}
+
+		primitive_army = {
+			sequential_name = "Primitive Army %C%"
+		}
+
+		industrial_army = {
+			sequential_name = "Industrial Army %C%"
+		}
+
+		postatomic_army = {
+			sequential_name = "Post-Atomic Army %C%"
+		}
 	}
-	
+
 	### PLANETS
 	planet_names = {
 		generic = {
@@ -139,43 +162,43 @@ eldarnames = {
 				"Awixall Tymcrix" "Pobbnic Tymcrix" "Buktryx Tymcrix" "Moxfroc Oxocodolf" "Hullpax Oxocodolf" "Raxibb Oxocodolf" "Zalibbac Oxocodolf"
 			}
 		}
-		
+
 		pc_desert = {
 			names = {
 			}
 		}
-		
+
 		pc_tropical = {
 			names = {
 			}
 		}
-		
+
 		pc_arid = {
 			names = {
 			}
 		}
-		
+
 		pc_continental = {
 			names = {
 			}
 		}
-		
+
 		pc_ocean = {
 			names = {
 			}
 		}
-		
+
 		pc_tundra = {
 			names = {
 			}
 		}
-		
+
 		pc_arctic = {
 			names = {
 			}
 		}
 	}
-	
+
 	### CHARACTERS
 	character_names = {
 		default = {
@@ -277,7 +300,7 @@ eldarnames = {
 				Ulriarma Umann Umdriel Umrilann Uram Urnielle Urrinam Valaromra Valianol Valkana Vana Vanedra Virian Vivandrel Yalanna Yraine Yrroaine Yrthea Yuviel
 				Yva Yvrola Yvsol Yvthea 
 			}
-			
+
 			# Always combined with a first name
 			second_names = {
 				Aearian Aedbaen Aeddriel Aedranbaen Aedrolrior Aedsebaen Aedtain Aekisnel Aelbaire Aeldith Aelfbhir Aelfrobhir Aelfselryel Aelfsobhir Aelfthil
@@ -332,7 +355,7 @@ eldarnames = {
 				Valahuir Valanduil Valentyr Valin Veassen Verdur Vermaeien Veryarathion Vil-Hatarn Vilideso Yavandir Yrirtil Yrrelrea Yrrir Yrrotil Yrtil Yrtle Yvorwe
 				Yvrilriol Yvrywe Yvtaen Yvwe
 			}
-			
+
 			regnal_first_names_male = {
 				Aearian Aedbaen Aeddriel Aedranbaen Aedrolrior Aedsebaen Aedtain Aekisnel Aelbaire Aeldith Aelfbhir Aelfrobhir Aelfselryel Aelfsobhir
 				Aelfthil Aelribaire Aelsalriorn Aelsibaire Aelthar Aelthyan Aen Aenarma Aenbrior Aenethis Aenil Aenrybrior Aensiltair Aenthin Aenubrior
@@ -390,7 +413,7 @@ eldarnames = {
 				Urfinthrin Urranir Urriorl Urrithrin Urthrin Valahuir Valanduil Valentyr Valin Veassen Verdur Vermaeien Veryarathion Vil-Hatarn Vilideso
 				Yavandir Yrirtil Yrrelrea Yrrir Yrrotil Yrtil Yrtle Yvorwe Yvrilriol Yvrywe Yvtaen Yvwe 
 			}
-			
+
 			regnal_first_names_female = {
 				Aedalser Aedfansar Aedron Aedys Aelfayrs Aelfionn Aelfsayrs Aelfsenelle Aelfyrs Aellieth Aelrin Aelryys Aelsath Aelys Aenalyll Aenarma Aensalyll
 				Aensalys Aensher Aenyll Aethantrys Aethsantrys Aethsanys Aethtrys Airwen Alane Alarielle Althartryan Althbeth Althsetryan Althseyrs Althtryan
@@ -430,7 +453,7 @@ eldarnames = {
 				Ulriarma Umann Umdriel Umrilann Uram Urnielle Urrinam Valaromra Valianol Valkana Vana Vanedra Virian Vivandrel Yalanna Yraine Yrroaine Yrthea Yuviel
 				Yva Yvrola Yvsol Yvthea 
 			}
-			
+
 			regnal_second_names = {
 				Aearian Aedbaen Aeddriel Aedranbaen Aedrolrior Aedsebaen Aedtain Aekisnel Aelbaire Aeldith Aelfbhir Aelfrobhir Aelfselryel Aelfsobhir Aelfthil
 				Aelribaire Aelsalriorn Aelsibaire Aelthar Aelthyan Aen Aenarma Aenbrior Aenethis Aenil Aenrybrior Aensiltair Aenthin Aenubrior Aerandir Aestar
