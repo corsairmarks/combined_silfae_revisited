@@ -8,23 +8,11 @@ eldar_system = {
 			}
 		}
 	}
-	class = sc_pulsar
 	usage = custom_empire
+	class = sc_silfae_eye_of_terror
 	planet = {
-		name = ""
-		class = pc_black_hole
+		class = star
 		size = 250
-		orbit_distance = 0
-		init_effect = {
-			clear_deposits = yes
-			prevent_anomaly = yes
-		}
-	}
-	planet = {
-		name = ""
-		class = pc_pulsar
-		size = 410
-		orbit_distance = 0
 		init_effect = {
 			clear_deposits = yes
 			prevent_anomaly = yes

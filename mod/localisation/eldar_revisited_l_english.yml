@@ -17,3 +17,8 @@
  d_arcane_replicator_eldar_system_desc: "This ancient machine is nestled deep within the craftworld's interior, built into its main reactor from where it also draws its power. A relic of when the craftworld was constructed, its matter replication technology has been lost to time."
  d_arcane_replicator_eldar_system_gestalt: "$d_arcane_replicator$"
  d_arcane_replicator_eldar_system_gestalt_desc: "$d_arcane_replicator_eldar_system_desc$"
+ # Eye of Terror star/planet class
+ sc_silfae_eye_of_terror: "$pc_silfae_eye_of_terror$"
+ sc_silfae_eye_of_terror_desc: "$pc_silfae_eye_of_terror_desc$"
+ pc_silfae_eye_of_terror: "Eye of Terror"
+ pc_silfae_eye_of_terror_desc: "A massive tear through space-time inside which any separation between realspace and the Shroud has been erased. It pulls fiercly at its own edges, prising more of realspace into itself with the inexorable grasp of a black hole. Within it, objects absorbed from realspace are continuously twisted and reshaped by the malevolent, fickle whims of whichever Shroud entity currently dominates the region. Others gather to attempt forcing their true forms through into realspace. None have fully succeeded... yet."
