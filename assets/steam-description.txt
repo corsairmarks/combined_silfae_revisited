@@ -1,6 +1,6 @@
 [h1]Overview[/h1]
 
-Do you like space-elves? Perhaps even from a certain grimdark IP? Silfae's "Animated Eldar Portraits" mod fits the bill, but unfortunately the custom empire and starting system are no longer functional due to changes in Stellaris.  With this mod, now you can play as Ulthwé Craftworld uisng the special Eye of Terror system initializer as Silfae designed it (portraits and starting system availble for use with custom empires).
+Do you like space-elves? Perhaps even from a certain grimdark IP? Silfae's "Animated Eldar Portraits" mod fits the bill, but unfortunately the custom empire and starting system are no longer functional due to changes in Stellaris.  With this mod, now you can play as Ulthwé Craftworld using the special Eye of Terror system initializer as Silfae designed it (portraits and starting system available for use with custom empires).
 
 There are lots of other mods which contain these portraits, so why should you choose this one?  None of the others update the custom solar system initializer or address the "Eldar leaders die quickly" issue, but this one does!  Please enjoy my translation of Silfae's custom empire into modern Stellaris.
 
