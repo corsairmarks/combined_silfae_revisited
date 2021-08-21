@@ -61,6 +61,8 @@ eldarcraft1 = {
 		clothes = 4
 		ruler_title = "Farseer"
 		ruler_title_female = "Farseer"
+		heir_title = "Seer"
+		heir_title_female = "Seer"
 	}
 	flags = { is_silfae_eldar }
 }
