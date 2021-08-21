@@ -30,3 +30,12 @@ empire_init_capital_planet = {
 		eldar_evt.1
 	}
 }
+
+# fired when a planet has been terraformed
+# THIS = planet
+# FROM = country, terraforming
+on_terraforming_complete = {
+	events = {
+		eldar_evt.5
+	}
+}

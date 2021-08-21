@@ -83,3 +83,38 @@ country_event = {
 		capital_scope = { change_planet_size = -2 }
 	}
 }
+
+# ensure that restoring/creating an ecu/machine/hive world on the craftworld retains the arcane replicator - for the original owner only
+# triggered by on_game_start_country and the mega.201 override
+# ROOT = planet
+# FROM = country - unclear whether the current owner, or the country that initiated terraforming
+planet_event = {
+	id = eldar_evt.5
+	hide_window = yes
+	is_triggered_only = yes
+	pre_triggers = {
+		has_owner = yes
+		original_owner = yes
+	}
+	trigger = {
+		has_planet_flag = is_silfae_eldar_craftworld
+		OR = {
+			is_planet_class = pc_city
+			is_planet_class = pc_machine
+			is_planet_class = pc_hive
+		}
+		NOR = {
+			has_deposit = d_arcane_replicator_eldar_system
+			has_deposit = d_arcane_replicator_eldar_system_gestalt
+		}
+	}
+	immediate = {
+		if = {
+			limit = { owner = { country_uses_consumer_goods = yes } }
+			add_deposit = d_arcane_replicator_eldar_system
+		}
+		else = {
+			add_deposit = d_arcane_replicator_eldar_system_gestalt
+		}
+	}
+}
