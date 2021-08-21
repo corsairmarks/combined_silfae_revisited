@@ -1,28 +1,60 @@
 # Overview
 
-Summary
+Do you like space-elves? Perhaps even from a certain grimdark IP? Silfae's "Animated Eldar Portraits" mod fits the bill, but unfortunately the custom empire and starting system are no longer functional due to changes in Stellaris.  With this mod, now you can play as Ulthwé Craftworld uisng the special Eye of Terror system initializer as Silfae designed it (portraits and starting system availble for use with custom empires).
+
+There are lots of other mods which contain these portraits, so why should you choose this one?  None of the others update the custom solar system initializer or address the "Eldar leaders die quickly" issue, but this one does!  Please enjoy my translation of Silfae's custom empire into modern Stellaris.
 
 # Changes
 
-Notes
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.0.*, the latest version when this was written.  Updates include:
 
-* Enhance clothing selectors to be influenced by pop job
+* Enhance clothing selectors to be influenced by Pop job
 * Update the namelist to account for all built-in army types, remove obsolete entries
-* Add custom trait to Eldar that makes their leaders begin at an older age, but live longer to compensate
+* Add custom trait "Ældari Longevity" to the Eldar species class
+    * This trait makes their leaders begin at an older age (previously this effect was from species class itself)
+    * Add bonus lifespan to compensate for their older starting age
+    * Automatically given to any species designed with the Eldar portraits
 * Update prescripted empire for 3.0
     * Now has Origin: Remnants (requires Ancient Relics)
-    * You can use the portraits for your own empire without any DLC requirements
     * Can randomly spawn
     * Gains Psionic Theory for free
-    * Names are a somewhat more lore-friendly
+    * Ulthwé names and colors are a somewhat more lore-friendly
 * Rebuilt challenge-start custom solar system initializer for 3.0:
-    * Setup to work correctly for all origins/civics in unmodded Stellaris that do not restrict the starting system initializers (i.e. Origin Shattered Ring or Origin: Void Dwellers)
-    * Any empire using this initializer gains Weather Control Systems (`tech_housing_1`) for free
-    * Add modified starting deposits for use with Origin: Remnants
+    * Setup to work correctly for all origins/civics in unmodded Stellaris that do not restrict the starting system initializers (i.e. Origin: Shattered Ring or Origin: Void Dwellers)
+    * Rebuild district and building creation and Pop generation
+    * Any empire using this initializer gains Hydroponics Farming (`tech_hydroponics`) and Weather Control Systems (`tech_housing_1`) for free
+    * Add modified Origin: Remnants starting capital deposits for use with this initializer
+    * The Eye of Terror is its own graphics entity with a Stellaris-flavored description and adds the negative effects of _both_ black holes and pulsars
+* You can use the Eldar portraits and/or custom initializer for your own empire without any DLC requirements
+* Fix the file type on the incuded event image - it was a `.png` with the `.dds` extension - it is now distributed in the correct `.dds` format for Stellaris (not in use... yet)
 
 ## Compatibility
 
-Notes
+Compatible with any mod that does not add the same portraits, species class, or art assets.
+
+May conflict with other mods that need to alter how relic worlds are upgraded.
+
+The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
+
+Not compatible with achievements.
+
+### Dependencies
+
+In order for this mod to function, you **must** install the following mod and load it before this one:
+
+[Animated Eldar Portraits](https://steamcommunity.com/sharedfiles/filedetails/?id=707415339) by Silfae
+
+### When to Install
+
+This mod should be added before the game has started.  If you remove it from a game in progress, your game may have graphical problems if any species was using the custom portraits.
+
+## Known Issues
+
+This mod overwrites one event from the base game related to restoring relic worlds to ecumenopoleis (`mega.200`).  Expect to see one line in error.log like this:
+
+```
+[16:33:48][eventmanager.cpp:355]: an event with id [mega.201] already exists!  file: events/megacorp_events.txt line: 190
+```
 
 ## Changelog
 
@@ -35,3 +67,9 @@ Hosted on [GitHub](https://github.com/corsairmarks/eldar_portraits_revisited)
 ### Development Notes
 
 It is best to clone this repository into `<Stellaris User's Directory>/Paradox Interactive/Stellaris/mod`, and then make a connection to the `mod` folder via a `*.mod` file's `path` property.  That will ensure the game can see the files, and also that CWTools will parse them.  Also note that the README.md file exists in the `mod` directory but is symbolically linked in the root directory.
+
+# Special Thanks
+
+I was inspired to extend the original mod when I saw [Endugu](https://steamcommunity.com/profiles/76561198037630876/myworkshopfiles/)'s [expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=1584824947) of [Silfae](https://steamcommunity.com/profiles/76561198021525667/myworkshopfiles/)'s [Animated Xirmian Portraits](https://steamcommunity.com/workshop/filedetails/?id=881118424).  Modular mods that require downloading the original mod(s) help give credit where credit is due.
+
+An extra special thanks to Silfae for creating and sharing so many detailed, animated portraits for the community.
