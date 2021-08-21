@@ -16,6 +16,7 @@ Notes
     * Names are a somewhat more lore-friendly
 * Rebuilt challenge-start custom solar system initializer for 3.0:
     * Setup to work correctly for all origins/civics in unmodded Stellaris that do not restrict the starting system initializers (i.e. Origin Shattered Ring or Origin: Void Dwellers)
+    * Any empire using this initializer gains Weather COntrol Systems (`tech_housing_1`) for free
     * Add modified starting deposits for use with Origin: Remnants
 
 ## Compatibility
