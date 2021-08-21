@@ -43,7 +43,7 @@ eldar_system = {
 		}
 		moon = {
 			class = ideal_planet_class
-			orbit_distance = 0
+			orbit_distance = 10
 			orbit_angle = 40
 			size = 6
 			home_planet = yes
@@ -51,7 +51,7 @@ eldar_system = {
 			has_ring = no
 			deposit_blockers = none
 			modifiers = none
-			flags = { special_start_planet is_silfae_ulthwe_craftworld }
+			flags = { special_start_planet is_silfae_eldar_craftworld }
 			init_effect = {
 				prevent_anomaly = yes
 				generate_empire_home_planet = yes
@@ -59,35 +59,3 @@ eldar_system = {
 		}
 	}
 }
-
-# orginal
-# random_tile = {
-# 	limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
-# 	set_building = "building_capital_1"
-# 	set_deposit = d_energy_deposit
-# 	random_neighboring_tile = {
-# 		limit = { has_blocker = no has_building = no }
-# 		set_deposit = d_vast_farmland_deposit
-# 		set_building = "building_hydroponics_farm_1"
-# 	}
-# 	random_neighboring_tile = {
-# 		limit = { has_blocker = no has_building = no }
-# 		set_building = "building_power_plant_1"
-# 		set_deposit = d_energy_deposit
-# 	}
-# 	random_neighboring_tile = {
-# 		limit = { has_blocker = no has_building = no }
-# 		set_building = "building_mining_network_1"
-# 		set_deposit = d_rich_mineral_deposit
-# 	}
-# }
-
-# random_tile = {
-# 	limit = { has_blocker = no has_building = no }
-# 	set_building = "building_basic_science_lab_1"
-# 	random_list = {
-# 		33 = { set_deposit = d_engineering_deposit }
-# 		33 = { set_deposit = d_society_deposit }
-# 		33 = { set_deposit = d_physics_deposit }
-# 	}
-# }

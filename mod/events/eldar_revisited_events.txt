@@ -21,15 +21,15 @@ planet_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		has_planet_flag = is_silfae_ulthwe_craftworld
+		has_planet_flag = is_silfae_eldar_craftworld
 		solar_system = { has_star_flag = is_silfae_eye_of_terror }
 	}
 	immediate = {
-		generate_ulthwe_start_deposits_and_blockers = yes
-		generate_ulthwe_start_buildings_and_districts = yes
-		generate_ulthwe_starting_resources = yes
-		generate_ulthwe_start_pops = yes
-		generate_ulthwe_final_pass = yes
+		generate_eldar_system_start_deposits_and_blockers = yes
+		generate_eldar_system_start_buildings_and_districts = yes
+		generate_eldar_system_starting_resources = yes
+		generate_eldar_system_start_pops = yes
+		generate_eldar_system_final_pass = yes
 	}
 }
 
@@ -44,6 +44,22 @@ country_event = {
 	immediate = {
 		give_technology = {
 			tech = tech_psionic_theory
+			message = no
+		}
+	}
+}
+
+# triggered by empire_init_add_technologies
+country_event = {
+	id = eldar_evt.3
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		capital_scope = { has_planet_flag = is_silfae_eldar_craftworld }
+	}
+	immediate = {
+		give_technology = {
+			tech = tech_housing_1
 			message = no
 		}
 	}

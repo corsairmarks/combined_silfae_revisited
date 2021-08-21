@@ -1,6 +1,6 @@
 # THIS = planet, capital
 # FROM = species, founder
-generate_ulthwe_start_deposits_and_blockers = {
+generate_eldar_system_start_deposits_and_blockers = {
 	clear_deposits = yes
 	# no blockers except special lithoid blockers, which don't reduce districts
 	if = {
@@ -55,7 +55,7 @@ generate_ulthwe_start_deposits_and_blockers = {
 		limit = { owner = { has_origin = origin_remnants } }
 		while = {
 			count = 5
-			add_deposit = d_ruined_arcology_ulthwe
+			add_deposit = d_ruined_arcology_eldar_system
 		}
 	}
 
@@ -95,13 +95,13 @@ generate_ulthwe_start_deposits_and_blockers = {
 				}
 				pc_relic = {
 					add_deposit = d_central_spire
-					add_deposit = d_ancient_reactor_pits_ulthwe
+					add_deposit = d_ancient_reactor_pits_eldar_system
 					add_deposit = d_relic_metal_boneyard
 					while = {
 						count = 3
-						add_deposit = d_dense_ruins_ulthwe
+						add_deposit = d_dense_ruins_eldar_system
 					}
-					add_deposit = d_massive_crevice_ulthwe
+					add_deposit = d_massive_crevice_eldar_system
 				}
 				pc_arid = {
 					add_deposit = d_searing_desert
@@ -168,9 +168,10 @@ generate_ulthwe_start_deposits_and_blockers = {
 	}
 }
 
+# set up the buildings for the custom initializer
 # THIS = planet, capital
 # FROM = species, founder
-generate_ulthwe_start_buildings_and_districts = {
+generate_eldar_system_start_buildings_and_districts = {
 	if = {
 		limit = { owner = { is_machine_empire = yes } }
 		add_building = building_machine_capital
@@ -238,33 +239,21 @@ generate_ulthwe_start_buildings_and_districts = {
 		count = 2
 		add_district = district_industrial
 	}
-	set_variable = {
-		which = num_rural_districts
-		value = 2
-	}
-	if = {
-		limit = { owner = { has_origin = origin_default } }
-		change_variable = {
-			which = num_rural_districts
-			value = 1
-		}
-	}
 	if = {
 		limit = { owner = { has_origin = origin_machine } }
 		while = {
-			count = num_rural_districts
+			count = 2
 			add_district = district_generator_uncapped
 			add_district = district_mining_uncapped
 		}
 	}
 	else = {
 		while = {
-			count = num_rural_districts
+			count = 2
 			add_district = district_generator
 			add_district = district_mining
 		}
 	}
-	clear_variable = num_rural_districts
 	if = {
 		limit = { owner = { NOT = { has_origin = origin_remnants } } }
 		add_building = building_research_lab_1
@@ -283,10 +272,10 @@ generate_ulthwe_start_buildings_and_districts = {
 	}
 }
 
+# additional resources based on empire type and possible subspecies
 # THIS = planet, capital
 # FROM = species, founder
-generate_ulthwe_starting_resources = {
-	# additional resources based on empire type and possible subspecies
+generate_eldar_system_starting_resources = {
 	# logically the same as the last section of common/scripted_effects/01_start_of_game_effects.txt - generate_start_buildings_and_districts
 	owner = {
 		if = {
@@ -340,7 +329,7 @@ generate_ulthwe_starting_resources = {
 # same as vanilla, adjust while testing - I expect to end with fewer pops
 # THIS = planet, capital
 # FROM = species, founder
-generate_ulthwe_start_pops = {
+generate_eldar_system_start_pops = {
 	set_variable = {
 		which = main_species_pops
 		value = 0
@@ -502,9 +491,7 @@ generate_ulthwe_start_pops = {
 
 # THIS = planet, capital
 # FROM = species, founder
-generate_ulthwe_final_pass = {
-	# need the extra space!
-	add_modifier = { modifier = mastery_of_nature }
+generate_eldar_system_final_pass = {
 	# origin-related modifiers
 	if = {
 		limit = { owner = { has_origin = origin_lithoid } }
@@ -517,5 +504,8 @@ generate_ulthwe_final_pass = {
 	else_if = {
 		limit = { owner = { has_origin = origin_default } }
 		add_modifier = { modifier = prosp_uni_mod days = 7200 }
+		add_modifier = { modifier = mastery_of_nature }
+		add_district = district_generator
+		add_district = district_mining
 	}
 }

@@ -1,5 +1,5 @@
 # duplicate of d_massive_crevice but does not reduce available districts
-d_massive_crevice_ulthwe = {
+d_massive_crevice_eldar_system = {
 	time = 270
 	icon = d_massive_crevice
 	is_for_colonizeable = yes
@@ -16,7 +16,7 @@ d_massive_crevice_ulthwe = {
 }
 
 # duplicate of d_ancient_reactor_pits nut only provides +3 generator districts
-d_ancient_reactor_pits_ulthwe = {
+d_ancient_reactor_pits_eldar_system = {
 	is_for_colonizeable = yes
 	icon = d_reactor
 	potential = { always = no }
@@ -26,7 +26,7 @@ d_ancient_reactor_pits_ulthwe = {
 }
 
 # duplicate of d_ruined_arcology but does not reduce available districts
-d_ruined_arcology_ulthwe = {
+d_ruined_arcology_eldar_system = {
 	time = 365
 	icon = d_city_ruins
 	is_for_colonizeable = yes
@@ -64,7 +64,7 @@ d_ruined_arcology_ulthwe = {
 }
 
 # new deposit to block 6 out of 8 scientist jobs from d_central_spire
-d_dense_ruins_ulthwe = {
+d_dense_ruins_eldar_system = {
 	icon = d_ruins_small
 	is_for_colonizeable = yes
 	time = 120
