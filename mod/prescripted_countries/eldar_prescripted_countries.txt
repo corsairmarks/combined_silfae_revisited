@@ -45,10 +45,10 @@ eldarcraft1 = {
 			file = "circle.dds"
 		}
 		colors = {
-			"blue"
-			"green"
-			"green"
-			"green"
+			"black"
+			"beige"
+			"null"
+			"null"
 		}
 	}
 	ruler = {
@@ -57,8 +57,8 @@ eldarcraft1 = {
 		name = "Eldrad Ulthran"
 		portrait = eldar_male_01
 		texture = 1
-		hair = 4
-		clothes = 4
+		hair = 5
+		clothes = 0
 		ruler_title = "Farseer"
 		ruler_title_female = "Farseer"
 		heir_title = "Seer"
