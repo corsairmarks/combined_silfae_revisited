@@ -50,7 +50,7 @@ This mod should be added before the game has started.  If you remove it from a g
 
 ## Known Issues
 
-This mod overwrites one event from the base game related to restoring relic worlds to ecumenopoleis (`mega.200`).  Expect to see one line in error.log like this:
+This mod preempts one event from the base game related to restoring relic worlds to ecumenopoleis (`mega.200`).  Expect to see one line in error.log like this:
 
 ```
 [16:33:48][eventmanager.cpp:355]: an event with id [mega.201] already exists!  file: events/megacorp_events.txt line: 190
