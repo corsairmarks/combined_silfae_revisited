@@ -329,6 +329,169 @@ generate_eldar_system_starting_resources = {
 	}
 }
 
+# same as vanilla, adjust while testing - I expect to end with fewer pops
+# THIS = planet, capital
+# FROM = species, founder
+generate_eldar_system_start_pops = {
+	set_variable = {
+		which = main_species_pops
+		value = 0
+	}
+	set_variable = {
+		which = secondary_species_pops
+		value = 0
+	}
+	if = {
+		limit = { owner = { is_machine_empire = yes } }
+		set_variable = {
+			which = main_species_pops
+			value = 29
+		}
+		if = {
+			limit = { owner = { has_valid_civic = civic_machine_assimilator } }
+			set_variable = {
+				which = secondary_species_pops
+				value = 10
+			}
+			last_created_species = {
+				set_citizenship_type = {
+					country = owner
+					type = citizenship_full_machine
+				}
+				set_living_standard = {
+					country = owner
+					type = living_standard_hive_mind
+				}
+			}
+		}
+		else_if = {
+			limit = { owner = { has_valid_civic = civic_machine_servitor } }
+			set_variable = {
+				which = main_species_pops
+				value = 33
+			}
+			set_variable = {
+				which = secondary_species_pops
+				value = 5
+			}
+			last_created_species = {
+				set_citizenship_type = {
+					country = owner
+					type = citizenship_limited
+				}
+				set_living_standard = {
+					country = owner
+					type = living_standard_organic_trophy
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = { owner = { is_hive_empire = yes } }
+		set_variable = {
+			which = main_species_pops
+			value = 33
+		}
+	}
+	else = {
+		# regular empire/fallback
+		set_variable = {
+			which = main_species_pops
+			value = 28
+		}
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_origin = origin_syncretic_evolution
+						has_origin = origin_necrophage
+					}
+				}
+			}
+			last_created_species = {
+				set_species_flag = syncretic_species@owner
+				if = {
+					limit = { owner = { has_origin = origin_syncretic_evolution } }
+					set_citizenship_type = {
+						country = owner
+						type = citizenship_slavery
+					}
+				}
+			}
+			if = {
+				limit = {
+					owner = {
+						has_origin = origin_necrophage
+						has_valid_civic = civic_fanatic_purifiers
+					}
+				}
+				set_variable = {
+					which = secondary_species_pops
+					value = 9
+				}
+			}
+			else = {
+				set_variable = {
+					which = secondary_species_pops
+					value = 12
+				}
+			}
+		}
+		else_if = {
+			limit = { owner = { has_origin = origin_mechanists } }
+			owner = { create_built_robot_species = yes }
+			set_variable = {
+				which = secondary_species_pops
+				value = 8
+			}
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = secondary_species_pops
+				value > 0
+			}
+		}
+		subtract_variable = {
+			which = main_species_pops
+			value = secondary_species_pops
+		}
+		while = {
+			count = secondary_species_pops
+			create_pop = {
+				species = last_created_species
+				ethos = random
+				effect = {
+					if = {
+						limit = { owner = { is_gestalt = yes } }
+						clear_ethos = yes
+					}
+				}
+			}
+		}
+	}
+	while = {
+		count = main_species_pops
+		create_pop = {
+			species = owner_main_species
+			ethos = random
+		}
+	}
+	if = {
+		limit = { owner = { has_origin = origin_default } }
+		while = {
+			count = 4
+			create_pop = {
+				species = owner_main_species
+				ethos = random
+			}
+		}
+	}
+	clear_variable = main_species_pops
+	clear_variable = secondary_species_pops
+}
+
 # THIS = planet, capital
 # FROM = species, founder
 generate_eldar_system_final_pass = {

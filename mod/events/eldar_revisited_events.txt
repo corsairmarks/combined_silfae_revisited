@@ -28,7 +28,7 @@ planet_event = {
 		generate_eldar_system_start_deposits_and_blockers = yes
 		generate_eldar_system_start_buildings_and_districts = yes
 		generate_eldar_system_starting_resources = yes
-		generate_start_pops = yes
+		generate_eldar_system_start_pops = yes
 		generate_eldar_system_final_pass = yes
 	}
 }
