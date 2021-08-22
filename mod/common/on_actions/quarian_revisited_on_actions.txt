@@ -1,0 +1,6 @@
+# fired when the game starts
+on_game_start = {
+	events = {
+		quarian_evt.13 # flag mod as installed
+	}
+}

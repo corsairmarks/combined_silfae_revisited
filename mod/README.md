@@ -8,6 +8,19 @@ There are lots of other mods which contain the same or similar portraits portrai
 
 All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.0.*, the latest version when this was written.  Updates include:
 
+* Fix invalid texture reference in `quarian_female_01_portrait.mesh`
+* Improve Quarian clothing selectors to be influenced by Pop job
+* Update the namelist to account for all built-in army types, remove obsolete entries; Army names more lore-friendly
+* Update custom starting initializer for 3.0, and provide a version with a planet and one that will work with the Void Dwellers origin
+* Add custom trait "Wanderers" that is a higher-powered verion of Nomadic: +30% growth from immigration, -50% resettlement cost, +50% pop automatic resettlement chance
+* Replace original "Quarian" trait with "Immunocompromised" that gives +5% engineering research, -2.5% habitability (0 points) - available for any species
+* Update prescripted empire for 3.0
+    * Now has Origin: Void Dwellers (requires Federations)
+    * Species traits altered: Void Dwellers, Wanderers, Intelligent, Immunocompromised, Nonadaptive, Deviants (selected based on the effects of Silfae's original design)
+    * Starting leader begins with three traits: Home in the Sky, Space Miner, and Fleet Organizer
+    * Can randomly spawn
+* You can use the Quarian portraits for your own empire without any DLC requirements
+
 ## Compatibility
 
 Compatible with any mod that does not add the same portraits, species class, or art assets.
@@ -47,3 +60,6 @@ It is best to clone this repository into `<Stellaris User's Directory>/Paradox I
 I was inspired to extend the original mod when I saw [Endugu](https://steamcommunity.com/profiles/76561198037630876/myworkshopfiles/)'s [expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=1584824947) of [Silfae](https://steamcommunity.com/profiles/76561198021525667/myworkshopfiles/)'s [Animated Xirmian Portraits](https://steamcommunity.com/workshop/filedetails/?id=881118424).  Modular mods that require downloading the original mod(s) help give credit where credit is due.
 
 An extra special thanks to Silfae for creating and sharing so many detailed, animated portraits for the community.
+
+# TODO quarian_female_01_portrait.mesh has en error on line 252 that references human_female_clothes_governer.dds - should be quarian_female_clothes_governer.dds
+# Need to export from PDX format to use Blender https://github.com/ross-g/io_pdx_mesh
