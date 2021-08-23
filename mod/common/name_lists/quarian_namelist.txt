@@ -81,59 +81,59 @@
 	army_names = {
 		# TODO: themed names
 		machine_defense = {
-			sequential_name = "%O% Militia"
+			sequential_name = "%O% Migrant Militia"
 		}
 		
 		machine_assault_1 = {
-			sequential_name = "%O% Huntresses"
+			sequential_name = "%O% Migrant Marines"
 		}
 		
 		machine_assault_2 = {
-			sequential_name = "%O% Huntresses"
+			sequential_name = "%O% Migrant Marines"
 		}
 		
 		machine_assault_3 = {
-			sequential_name = "%O% Huntresses"
+			sequential_name = "%O% Migrant Marines"
 		}
 
 		defense_army = {
-			sequential_name = "%O% Militia"
+			sequential_name = "%O% Migrant Militia"
 		}
 
 		assault_army = {
-			sequential_name = "%O% Huntresses"
+			sequential_name = "%O% Migrant Marines"
 		}
 
 		slave_army = {
-			sequential_name = "%O% Penal Irregulars"
+			sequential_name = "%O% Indentured Marines"
 		}
 
 		clone_army = {
-			sequential_name = "%O% Clone Irregulars"
+			sequential_name = "%O% Clone Marines"
 		}
 
 		undead_army = {
-			sequential_name = "%O% Banshees"
+			sequential_name = "%O% Dread Marines"
 		}
 
 		robotic_army = {
-			sequential_name = "%O% Robotic Irregulars"
+			sequential_name = "%O% Geth Marines"
 		}
 
 		robotic_defense_army = {
-			sequential_name = "%O% Robotic Militia"
+			sequential_name = "%O% Geth Militia"
 		}
 
 		psionic_army = {
-			sequential_name = "%O% Biotics"
+			sequential_name = "%O% Biotic Marines"
 		}
 
 		xenomorph_army = {
-			sequential_name = "%O% Rachni"
+			sequential_name = "%O% Rachni Swarm"
 		}
 
 		gene_warrior_army = {
-			sequential_name = "%O% Justicars"
+			sequential_name = "%O% Enhanced Marines"
 		}
 
 		occupation_army = {
@@ -141,7 +141,7 @@
 		}
 
 		robotic_occupation_army = {
-			sequential_name = "%O% Mechanized Garrison"
+			sequential_name = "%O% Geth Garrison"
 		}
 
 		primitive_army = {
