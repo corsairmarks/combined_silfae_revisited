@@ -66,7 +66,7 @@ This mod overrides [b]origin_void_dwellers[/b] in order to add its new initializ
 
 [h2]Changelog[/h2]
 
-See [url=]Change Notes[/url]
+See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2583358569]Change Notes[/url]
 
 [h2]Source Code[/h2]
 
