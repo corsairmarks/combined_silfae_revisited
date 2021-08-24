@@ -1,6 +1,6 @@
 # Overview
 
-Are you a fanatic xenophile when it comes to blue aliens? Do you wish Silfae's "Animated Quarian Portraits" mod was up-to-date?  This mod is for you! Now you can play the Migrant Fleet as designed and use all the gameplay elements for your own empires.
+Have you seen the enviro-suited intensity of Silfae's "Animated Quarian Portraits" mod?  Do you wish that the gameplay elements were up-to-date so that you can play the Migrant Fleet or make a new species of interstellar wanderers?  Then this mod is for you!
 
 There are lots of other mods which contain the same or similar portraits, so why should you choose this one? Silfae's art style meshes well with Stellaris, or maybe you want to play her version of the Migrant Fleet - content which this mod again makes playable.  Please enjoy my translation of Silfae's custom empire into modern Stellaris.
 
