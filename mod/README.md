@@ -59,6 +59,7 @@ This mod preempts one event from the base game related to restoring relic worlds
 ## Changelog
 
 * 1.0.0 Initial version
+* More clothing selector improvement
 
 ## Source Code
 
