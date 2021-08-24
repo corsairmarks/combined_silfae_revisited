@@ -1,13 +1,33 @@
-# This is a template which multiple species can use. 
+# This is a template which multiple species can use.
 
 xirmian_female_clothes_01 = {
 	default = "gfx/models/portraits/xirmian/xirmian_female_outfit_ruler.dds"
 	game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
-		default = "gfx/models/portraits/xirmian/xirmian_female_outfit_ruler.dds"
+		random = {
+			list = {
+				"gfx/models/portraits/xirmian/xirmian_female_outfit_ruler.dds"
+				"gfx/models/portraits/xirmian/xirmian_female_outfit_governor.dds"
+				"gfx/models/portraits/xirmian/xirmian_female_outfit_scientist.dds"
+				"gfx/models/portraits/xirmian/xirmian_female_outfit_admiral.dds"
+				"gfx/models/portraits/xirmian/xirmian_female_outfit_general.dds"
+				"gfx/models/portraits/xirmian/xirmian_female_outfit_peasant_01.dds"
+				"gfx/models/portraits/xirmian/xirmian_female_outfit_peasant_02.dds"
+			}
+		}
 	}
 	#species scope
 	species = { #generic portrait for a species
-		default = "gfx/models/portraits/xirmian/xirmian_female_outfit_ruler.dds" 
+		random = {
+			list = {
+				"gfx/models/portraits/xirmian/xirmian_female_outfit_ruler.dds"
+				"gfx/models/portraits/xirmian/xirmian_female_outfit_governor.dds"
+				"gfx/models/portraits/xirmian/xirmian_female_outfit_scientist.dds"
+				"gfx/models/portraits/xirmian/xirmian_female_outfit_admiral.dds"
+				"gfx/models/portraits/xirmian/xirmian_female_outfit_general.dds"
+				"gfx/models/portraits/xirmian/xirmian_female_outfit_peasant_01.dds"
+				"gfx/models/portraits/xirmian/xirmian_female_outfit_peasant_02.dds"
+			}
+		}
 	}
 	#pop scope
 	#some entries intentionally have repeated options to give more weight to some choices (Stellaris does this in the base game with things like human hairstyles)
@@ -17,10 +37,12 @@ xirmian_female_clothes_01 = {
 				OR = {
 					has_job = head_researcher
 					has_job = researcher
-					has_job = dimensional_portal_researcher
 					has_job = brain_drone
 					has_job = calculator
+					has_job = dimensional_portal_researcher
 					has_job = dimensional_portal_researcher_gestalt
+					has_job = death_chronicler
+					has_job = chronicle_drone
 					has_job = fe_archivist
 					has_job = primitive_researcher
 					has_job = primitive_researcher_2
@@ -39,6 +61,7 @@ xirmian_female_clothes_01 = {
 				OR = {
 					has_job = duelist
 					has_job = enforcer
+					has_job = telepath
 					has_job = necromancer
 					has_job = soldier
 					has_job = titan_hunter
@@ -102,7 +125,7 @@ xirmian_female_clothes_01 = {
 			}
 		}
 	}
-	#leader scope 
+	#leader scope
 	ruler = { #for rulers
 		default = "gfx/models/portraits/xirmian/xirmian_female_outfit_ruler.dds"
 		"gfx/models/portraits/xirmian/xirmian_female_outfit_ruler.dds" = { owner = { has_generic_government = yes } }
