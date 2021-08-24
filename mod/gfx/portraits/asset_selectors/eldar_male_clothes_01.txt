@@ -3,6 +3,15 @@ eldar_male_clothes_01 = {
 	default = "gfx/models/portraits/eldar/eldar_male_clothes_ruler.dds"
 	game_setup = {#will run with a limited country scope. species and government is set but the country does not actually exist
 		default = "gfx/models/portraits/eldar/eldar_male_clothes_ruler.dds"
+		random = {
+			list = {
+				"gfx/models/portraits/eldar/eldar_male_clothes_ruler.dds"
+				"gfx/models/portraits/eldar/eldar_male_clothes.dds"
+				"gfx/models/portraits/eldar/eldar_male_clothes_governer.dds"
+				"gfx/models/portraits/eldar/eldar_male_clothes_admiral.dds"
+				"gfx/models/portraits/eldar/eldar_male_clothes_general.dds"
+			}
+		}
 	}
 	#species scope
 	species = { #generic portrait for a species
@@ -53,11 +62,13 @@ eldar_male_clothes_01 = {
 					# military
 					has_job = duelist
 					has_job = enforcer
+					has_job = telepath
 					has_job = necromancer
 					has_job = soldier
 					has_job = titan_hunter
 					has_job = patrol_drone
 					has_job = warrior_drone
+					has_job = fe_protector
 					has_job = primitive_warrior
 					has_job = primitive_warrior_2
 				}
@@ -73,11 +84,13 @@ eldar_male_clothes_01 = {
 				OR = {
 					has_job = duelist
 					has_job = enforcer
+					has_job = telepath
 					has_job = necromancer
 					has_job = soldier
 					has_job = titan_hunter
 					has_job = patrol_drone
 					has_job = warrior_drone
+					has_job = fe_protector
 					has_job = primitive_warrior
 					has_job = primitive_warrior_2
 				}
@@ -91,17 +104,16 @@ eldar_male_clothes_01 = {
 			OR = {
 				has_job = head_researcher
 				has_job = researcher
-				has_job = dimensional_portal_researcher
 				has_job = brain_drone
 				has_job = calculator
+				has_job = dimensional_portal_researcher
 				has_job = dimensional_portal_researcher_gestalt
 				has_job = fe_archivist
-				has_job = death_chronicler
 				has_job = spawning_drone
 				has_job = replicator
 				has_job = roboticist
 				has_job = evaluator
-				has_job = primitive_warrior
+				has_job = death_chronicler
 				has_job = chronicle_drone
 				has_job = primitive_researcher
 				has_job = primitive_researcher_2
