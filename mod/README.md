@@ -51,6 +51,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 ## Changelog
 
 * 1.0.0 Initial version
+* Minor clothing fixes, prevent awakened empire from using personality
 
 ## Source Code
 
