@@ -79,7 +79,6 @@
 	}
 	### ARMIES
 	army_names = {
-		# TODO: themed names
 		machine_defense = {
 			sequential_name = "%O% Migrant Militia"
 		}
