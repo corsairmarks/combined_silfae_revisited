@@ -75,7 +75,7 @@ This mod overrides the deposit [b]d_alien_pets_deposit[/b] which generates a lin
 
 [h2]Changelog[/h2]
 
-See [url=]Change Notes[/url]
+See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2584680339]Change Notes[/url]
 
 [h2]Source Code[/h2]
 
