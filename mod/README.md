@@ -2,14 +2,14 @@
 
 Have you experienced the sleek, tentacled allure of Silfae's "Animated Octee-lan Portraits" mod?  Do you wish that the gameplay elements were up-to-date so that you can play the Kuri-octa-Xibi and rebel against the Beep-Boops?  Then this mod is for you!
 
-There are other mods which contain the same portraits, so why should you choose this one?  This mod fixes the old code so that the special starting system (containing your former machine overlords) is playable and ensures all the assets are usable by players.  Please enjoy my translation of Silfae's custom empire into modern Stellaris.
+There are other mods which contain the same portraits, so why should you choose this one?  This mod fixes the old code so that the special starting system (containing your former machine overlords) is playable and ensures all the assets are usable by players.  Please enjoy my adaptation of Silfae's custom empire into modern Stellaris.
 
 # Changes
 
 All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.0.*, the latest version when this was written.  Updates include:
 
 * Remove duplication in room selector
-* Remove alternate (blank) city graphics - mostly they were a gimick to try and get a static diplomacy backdrop; set the `graphical_culture` does not define a cityset
+* Remove alternate (blank) city graphics - mostly they were to try and get a static diplomacy backdrop but only worked for colonies with city size 4; set the `graphical_culture` does not define a cityset
 * Add a static room that looks identical to the original room plus backdrop image - this room is used by the predefined empire by default
 * Original room (with see-through viewport) also remains available for use with custom empires
 * Update the namelist to account for all built-in army types, remove obsolete entries
@@ -23,17 +23,19 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 * Override Isolated Valley (`d_alien_pets_deposit`) to support new zoo building
 * Update prescripted empire for 3.0:
     * Octee-lan species: remove Communal to bring trait point total back to up 0 - this is because Charismatic is now 2 points now
-    * Now has Origin: Syncretic Evolution (the Quui-chi are the secondary species; requires Utopia)
+    * Now has Origin: Syncretic Evolution (the Quoi-chi are the secondary species; requires Utopia)
     * Can randomly spawn
-* Update custom starting initializer for 3.0:
+* Update custom starting initializer (Tsukimi Pool) for 3.0:
     * Now supports a variety of civics and origin starts (all the built-in ones)
     * Muubul species: add Quick Learners because they had an extra point
     * Yuibitt species: add Strong because they had an extra point
     * Xueench species: remove Solitary because this species had a point remaining but couldn't spend it
+    * Your former overlords, the Beep Boops, will spawn if the Synthetic Dawn DLC is active
     * Beep-Boop species: removed High Maintenance, add Efficient Processors so that all points are spent
     * Beep-Boop empire: now has custom `country_type` so they can fight you, and you won't automatically gain control of their planet for owning the starbase
     * Beep-Boops will hate you for rejecting them
-* You can use the Octee-lan portraits for your own empire without any DLC requirements
+* You can use the Octee-lan portraits for your own empires without any DLC requirements
+* You can use the Beep-Boop portrait (there is only one) for your own machine empires if you have Synthetic Dawn
 
 ## Compatibility
 
@@ -80,5 +82,3 @@ It is best to clone this repository into `<Stellaris User's Directory>/Paradox I
 I was inspired to extend the original mod when I saw [Endugu](https://steamcommunity.com/profiles/76561198037630876/myworkshopfiles/)'s [expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=1584824947) of [Silfae](https://steamcommunity.com/profiles/76561198021525667/myworkshopfiles/)'s [Animated Xirmian Portraits](https://steamcommunity.com/workshop/filedetails/?id=881118424).  Modular mods that require downloading the original mod(s) help give credit where credit is due.
 
 An extra special thanks to Silfae for creating and sharing so many detailed, animated portraits for the community.
-
-TODO requires synthetic dawn
