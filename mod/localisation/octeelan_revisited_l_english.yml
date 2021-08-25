@@ -27,6 +27,9 @@
  PEEBOOP_hand_plural: "grappling clamps"
  PEEBOOP_tooth: "nutrition compactor"
  PEEBOOP_tooth_plural: "nutrition compactors"
+ machine_defense_peepboop: "$machine_defense$"
+ machine_defense_peepboop_desc: "$machine_defense_desc$"
+ machine_defense_peepboop_army_name: "Beep-Boop Sentinels"
  # special building, blocker deposit, and technology for PEEBOOPs
  d_octeelan_xeno_preserve: "$d_xeno_preserve$"
  d_octeelan_xeno_preserve_desc: "$d_xeno_preserve_desc$"

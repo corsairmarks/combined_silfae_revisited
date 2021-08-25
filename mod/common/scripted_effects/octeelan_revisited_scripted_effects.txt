@@ -453,10 +453,12 @@ setup_peepboop_homeworld = {
 	while = {
 		count = 6
 		create_army = {
-			name = random
 			owner = last_created_country
 			species = owner_main_species
-			type = machine_defense
+			type = machine_defense_peepboop
+			effect = {
+				set_name = machine_defense_peepboop_army_name
+			}
 		}
 	}
 }
