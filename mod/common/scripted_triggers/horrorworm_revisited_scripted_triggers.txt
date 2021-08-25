@@ -1,0 +1,3 @@
+has_apocalypse_ahwpr = {
+	host_has_dlc = "Apocalypse"
+}

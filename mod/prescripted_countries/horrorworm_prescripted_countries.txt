@@ -1,6 +1,8 @@
 horrorworm1 = {
+	playable = has_apocalypse_ahwpr
 	ship_prefix = "Tk'"
 	spawn_enabled = yes
+	ignore_portrait_duplication = yes
 	spawn_as_fallen = no
 	species = {
 		class = HRWRM
