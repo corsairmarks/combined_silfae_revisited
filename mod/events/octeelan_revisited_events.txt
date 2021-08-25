@@ -89,7 +89,6 @@ planet_event = {
 		has_owner = yes
 	}
 	trigger = {
-		owner = { has_country_flag = is_octeelans }
 		solar_system = { has_star_flag = is_peepboop_octeelan_system }
 		has_planet_flag = is_octeelan_homeworld
 	}
