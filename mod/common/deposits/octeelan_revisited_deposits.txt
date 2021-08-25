@@ -26,21 +26,23 @@ d_octeelan_xeno_preserve = {
 							home_planet = { is_planet = PREVPREVPREV }
 						}
 					}
-					save_event_target_as = preserved_species
+					species = { save_event_target_as = preserved_species }
 				}
 			}
 			else = {
 				create_species = {
 					name = random
+					name_list = random
 					class = random_non_machine
 					portrait = random
-					traits = random
+					homeworld = THIS
 					traits = {
 						ideal_planet_class = THIS
+						trait = random_traits
 					}
-					effect = {
-						save_event_target_as = preserved_species
-					}
+				}
+				last_created_species = {
+					save_event_target_as = preserved_species
 				}
 			}
 			create_pop = {
