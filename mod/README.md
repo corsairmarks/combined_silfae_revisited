@@ -9,7 +9,7 @@ There are other mods which contain the same portraits, so why should you choose 
 All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.0.*, the latest version when this was written.  Updates include:
 
 * Remove duplication in room selector
-* Remove alternate (blank) city graphics - mostly they were to try and get a static diplomacy backdrop but only worked for colonies with city size 4; set the `graphical_culture` does not define a cityset
+* Remove alternate (blank) city graphics - mostly they were to try and get a static diplomacy backdrop but only worked for colonies with city size 4; set the `graphical_culture` to not define a cityset
 * Add a static room that looks identical to the original room plus backdrop image - this room is used by the predefined empire by default
 * Original room (with see-through viewport) also remains available for use with custom empires
 * Update the namelist to account for all built-in army types, remove obsolete entries
@@ -68,6 +68,7 @@ This mod overrides the deposit `d_alien_pets_deposit` which generates a line in 
 ## Changelog
 
 * 1.0.0 Initial version
+* 1.0.1 Tsukimi Pool special bonus species available for any empire using the initializer
 
 ## Source Code
 
