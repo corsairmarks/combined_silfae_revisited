@@ -1,8 +1,8 @@
 hyenafolk1 = {
 	ship_prefix = "Iliq"
 	spawn_enabled = yes
+	ignore_portrait_duplication = yes
 	spawn_as_fallen = no
-	ignore_portrait_duplication = no
 	species = {
 		class = HYNFLK
 		portrait = hyenafolk
