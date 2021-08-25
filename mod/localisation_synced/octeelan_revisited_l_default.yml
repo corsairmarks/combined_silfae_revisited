@@ -1,0 +1,18 @@
+﻿l_default:
+ # octeelan
+ octeelan_name: "Octee-lan"
+ octeelan_plural: "Octee-lans"
+ octeelan_adjective: "Octee-lan"
+ # octeenlan_system extra xenos
+ octeelan_system_AVI_name: "Qoui-chi"
+ octeelan_system_AVI_plural: "Qoui-chiin"
+ octeelan_system_AVI_adjective: "Qoui-chian"
+ octeelan_system_MOL1_name: "Muubul"
+ octeelan_system_MOL1_plural: "Muubul"
+ octeelan_system_MOL1_adjective: "Muubul"
+ octeelan_system_MOL2_name: "Yuibitt"
+ octeelan_system_MOL2_plural: "Yuibitts"
+ octeelan_system_MOL2_adjective: "Yuibittan"
+ octeelan_system_FUN_name: "Xueench"
+ octeelan_system_FUN_plural: "Xueenchi"
+ octeelan_system_FUN_adjective: "Xueenchan"
