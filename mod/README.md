@@ -12,7 +12,6 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 * Remove alternate (blank) city graphics - mostly they were a gimick to try and get a static diplomacy backdrop; set the `graphical_culture` does not define a cityset
 * Add a static room that looks identical to the original room plus backdrop image - this room is used by the predefined empire by default
 * Original room (with see-through viewport) also remains available for use with custom empires
-* Fix city levels other than 4 having the wrong graphics (static graphic is now level 1, with blank graphics for levels 2 through 5)
 * Update the namelist to account for all built-in army types, remove obsolete entries
 * Fix definitions for Octee-lan custom greeting sound
 * Robot species (Beep-Boop) now uses the default robot sounds instead of (non-robotic) mammalian sounds
