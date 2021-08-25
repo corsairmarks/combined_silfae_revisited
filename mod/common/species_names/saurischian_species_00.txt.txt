@@ -1,9 +1,9 @@
 SRSCN = {
 	saurischian = {
-		name = Astroraptor
-		plural = Astroraptors
-		home_planet = Cratzipec
-		home_system = Quark
-		name_list = "REP2"
+		name = "Astroraptors"
+		plural = "Astroraptors"
+		home_planet = "Cratzipec"
+		home_system = "Twin Quarks"
+		name_list = REP2
 	}
 }
