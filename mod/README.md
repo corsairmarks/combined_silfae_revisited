@@ -39,7 +39,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 
 ## Compatibility
 
-In order to add a new solar system initializer that is compatible with Void Dwellers, it is necessary to override `origin_void_dwellers` add it to the list of allowed initializers.  That means this mod is incompatible with other mods that modify that origin definition, such as other mods that add new initializers for Void Dwellers.
+In order to add maske the Alien Zoo available to gestalts (needed for the Beep-Boops), it is necessary to override `d_alien_pets_deposit`.  That means this mod is incompatible with other mods that modify that planetary deposit - although I doubt many do.
 
 Compatible with any other mod that does not add the same portraits, species class, or art assets.
 
