@@ -1,3 +1,90 @@
+[h1]Overview[/h1]
 
+Have you experienced the sleek, tentacled allure of Silfae's "Animated Octee-lan Portraits" mod?  Do you wish that the gameplay elements were up-to-date so that you can play the Kuri-octa-Xibi and rebel against the Beep-Boops?  Then this mod is for you!
+
+There are other mods which contain the same portraits, so why should you choose this one?  This mod fixes the old code so that the special starting system (containing your former machine overlords) is playable and ensures all the assets are usable by players.  Please enjoy my adaptation of Silfae's custom empire into modern Stellaris.
+
+[h1]Changes[/h1]
+
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.0.*, the latest version when this was written.  Updates include:
+
+[list]
+[*]Remove duplication in room selector
+[*]Remove alternate (blank) city graphics - mostly they were to try and get a static diplomacy backdrop but only worked for colonies with city size 4; set the [b]graphical_culture[/b] does not define a cityset
+[*]Add a static room that looks identical to the original room plus backdrop image - this room is used by the predefined empire by default
+[*]Original room (with see-through viewport) also remains available for use with custom empires
+[*]Update the namelist to account for all built-in army types, remove obsolete entries
+[*]Fix definitions for Octee-lan custom greeting sound
+[*]Robot species (Beep-Boop) now uses the default robot sounds instead of (non-robotic) mammalian sounds
+[*]Code now sets any leader using the Octee-lan portrait to have [b]gender = female[/b]
+    [list]
+    [*]Species description and use of a female title for both male/female rulers indicates this is intended
+    [*]All your Octee-lan-portrait leaders will show as Female in the UI and use female pronouns (she/her/hers)
+    [*]Events (hidden) fire on game start, leaders spawning, when elections begin
+    [/list]
+[*]Add gestalt version of the Alien Zoo (both a building and technology) which is available to non-genocidal gestalt empires
+[*]Override Isolated Valley ([b]d_alien_pets_deposit[/b]) to support new zoo building
+[*]Update prescripted empire for 3.0:
+    [list]
+    [*]Octee-lan species: remove Communal to bring trait point total back to up 0 - this is because Charismatic is now 2 points now
+    [*]Now has Origin: Syncretic Evolution (the Quoi-chi are the secondary species; requires Utopia)
+    [*]Can randomly spawn
+    [/list]
+[*]Update custom starting initializer (Tsukimi Pool) for 3.0:
+    [list]
+    [*]Now supports a variety of civics and origin starts (all the built-in ones)
+    [*]Muubul species: add Quick Learners because they had an extra point
+    [*]Yuibitt species: add Strong because they had an extra point
+    [*]Xueench species: remove Solitary because this species had a point remaining but couldn't spend it
+    [*]Your former overlords, the Beep Boops, will spawn if the Synthetic Dawn DLC is active
+    [*]Beep-Boop species: removed High Maintenance, add Efficient Processors so that all points are spent
+    [*]Beep-Boop empire: now has custom [b]country_type[/b] so they can fight you, and you won't automatically gain control of their planet for owning the starbase
+    [*]Beep-Boops will hate you for rejecting them
+    [/list]
+[*]You can use the Octee-lan portraits for your own empires without any DLC requirements
+[*]You can use the Beep-Boop portrait (there is only one) for your own machine empires if you have Synthetic Dawn
+[/list]
+
+[h2]Compatibility[/h2]
+
+In order to add a new solar system initializer that is compatible with Void Dwellers, it is necessary to override [b]origin_void_dwellers[/b] add it to the list of allowed initializers.  That means this mod is incompatible with other mods that modify that origin definition, such as other mods that add new initializers for Void Dwellers.
+
+Compatible with any other mod that does not add the same portraits, species class, or art assets.
+
+The Launcher will tell you that some mods are outdated - that is because the dependency is out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mod.
+
+Not compatible with achievements.
+
+[h3]Dependencies[/h3]
+
+In order for this mod to function, you [b]must[/b] install the following mod and load it before this one:
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=929140455]Animated Octee-lan Portraits[/url] by Silfae
+
+[h3]When to Install[/h3]
+
+This mod should be added before the game has started.  If you remove it from a game in progress, your game may have graphical problems if any species was using the custom portraits.
+
+[h2]Known Issues[/h2]
+
+This mod overrides the deposit [b]d_alien_pets_deposit[/b] which generates a line in the error log like this:
+
+[code]
+[17:58:08][game_singleobjectdatabase.h:147]: Object with key: d_alien_pets_deposit already exists
+[/code]
+
+[h2]Changelog[/h2]
+
+See [url=]Change Notes[/url]
+
+[h2]Source Code[/h2]
+
+Hosted on [url=https://github.com/corsairmarks/octeelan_portraits_revisited]GitHub[/url]
+
+[h1]Special Thanks[/h1]
+
+I was inspired to extend the original mod when I saw [url=https://steamcommunity.com/profiles/76561198037630876/myworkshopfiles/]Endugu[/url]'s [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1584824947]expansion[/url] of [url=https://steamcommunity.com/profiles/76561198021525667/myworkshopfiles/]Silfae[/url]'s [url=https://steamcommunity.com/workshop/filedetails/?id=881118424]Animated Xirmian Portraits[/url].  Modular mods that require downloading the original mod(s) help give credit where credit is due.
+
+An extra special thanks to Silfae for creating and sharing so many detailed, animated portraits for the community.
 
 [url=https://discord.gg/bHVez2C][img]https://i.imgur.com/4Und3QN.png[/img][/url]
