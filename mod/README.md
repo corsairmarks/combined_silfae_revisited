@@ -29,6 +29,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     * Now uses Origin: Survivor (requires DLC: Apocalypse) to represent the Hollow's explosive arrival in this dimension
     * Update the custom trait Astral Horror to use modifiers available in Stellaris 3.0
     * Add Repugnant trait to the Hollow - the effects of the old Repugnant trait were built-in to Astral Horror, but the new effects require the Repugnant trait to be active
+* You can use the Hollow portraits and/or custom initializer for your own empire without any DLC requirements
 
 ## Compatibility
 
@@ -76,6 +77,7 @@ In game terms, the fourth color of Phenotype 9 is the same as the third color.
 ## Changelog
 
 * 1.0.0 Initial version
+* 1.0.1 Require APocalypse for prescripted empire, extra names for randomisation, allow portraits as secondary species and to be randomized
 
 ## Source Code
 
