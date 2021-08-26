@@ -8,7 +8,7 @@ planet_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		owner = { has_valid_civic = civic_shadowy_evolution }
+		owner = { has_origin = origin_shadowy_evolution }
 	}
 	immediate = {
 		if = {
@@ -39,12 +39,12 @@ event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		any_playable_country = { has_valid_civic = civic_shadowy_evolution }
+		any_playable_country = { has_origin = origin_shadowy_evolution }
 	}
 	immediate = {
 		set_update_modifiers_batch = begin
 		every_playable_country = {
-			limit = { has_valid_civic = civic_shadowy_evolution }
+			limit = { has_origin = origin_shadowy_evolution }
 			calculate_shadowyrep_morale = yes
 			calculate_shadowyrep_happiness = yes
 		}

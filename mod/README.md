@@ -4,6 +4,10 @@ Have you seen the insidious, sleek portraits from Silfae's "Animated Portraits -
 
 There are other mods which contain these portraits, so why should you choose this one?  None of the others update the special Grand Illusion gameplay, but this one does!  Please enjoy my translation of Silfae's custom empire into modern Stellaris.
 
+## Important Performance Notes
+
+This mod can have a performance impact on your games, becasue it iterated all the Pops in empiress with the special origin on a monthly basis.  It is off-limits for the AI to randomly pick for this reason.  There is a reason Paradox moved away from this mechanic for Rogue Servitors.
+
 # Changes
 
 All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.0.*, the latest version when this was written.  Updates include:
@@ -12,11 +16,17 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 * Allow portraits to be randomly selected
 * **Rebuild special Rogue Servitor-like gameplay for balancing your ruler Pops versus the unwitting slaves**
     * Rebuild special Pop happiness mechanics to have clearer if/else code, reduce usage of `every_owned_pop` for some performance gains
-    * Convert "Parasitic Evolution" into an origin instead of a civic
     * Update game events for setting up custom origin, including using `set_update_modifiers_batch` for some performance gains
+    * Convert "Parasitic Evolution" into an origin instead of a civic (including graphics for the selection screen and icon)
+    * As with the original civic, Origin: Parasitic Evolution is not available for the AI
 * Update all custom negative traits to work with Stellaris 3.0
-    * Traits us up-to-date-modifiers
+    * Traits use up-to-date-modifiers
     * Most of the `BIOLOGICAL` traits are now available to use on `LITHOID`s too
+* Update prescripted empire for 3.0:
+    * Now uses the new Origin: Parasitic Evolution (requires Utopia)
+    * Now has Civic: Shadow Council to replace the civic which became the origin
+    * Can randomly spawn
+* You can use Silfae's custom Reptilian portraits (mixed, just Reptilians, or just just "Humans") for your own empires without any DLC requirements
 
 # * Fix the broken portrait clothing selector for male rulers
 * Update portrait selection for Pops - higher-strata Pops (rulers, complex drones, bio-trophies, and precursors) may use laurel wreaths
@@ -46,7 +56,7 @@ This mod should be added before the game has started.  If you remove it from a g
 This mod overwrites the corresponding species class added by "Silfae's city sets updated" so that it will not be available for use.  Instead, the original species class from Silfae (with localisation) is used.  Expect to see one line in error.log like this:
 
 ```
-
+[15:41:32][game_singleobjectdatabase.h:147]: Object with key: Silfae-ThirdEye already exists
 ```
 
 ## Changelog

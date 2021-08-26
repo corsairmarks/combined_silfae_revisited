@@ -1,9 +1,0 @@
-# fired during empire initialization when starting a new game
-# Called before empire_init_create_capital_pops.
-# THIS = planet, capital
-# FROM = species, founder
-empire_init_capital_planet = {
-	events = {
-		slreptilian_evt.1
-	}
-}

@@ -1,18 +1,11 @@
-
-civic_shadowy_evolution = {
-	modification = no
+origin_shadowy_evolution = {
+	is_origin = yes
+	icon = gfx/interface/icons/origins/origins_shadowy_evolution.dds
+	picture = gfx/event_pictures/origins/origin_shadowy_evolution.dds
 	playable = { has_utopia = yes }
 	ai_playable = { has_utopia = yes }
 	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
 	possible = {
-		origin = {
-			NOR = {
-				value = origin_syncretic_evolution
-				value = origin_mechanists
-				value = origin_necrophage
-				value = origin_void_dwellers
-			}
-		}
 		civics = {
 			NOR = {
 				value = civic_fanatic_purifiers
@@ -32,10 +25,11 @@ civic_shadowy_evolution = {
 			factor = 0
 		}
 	}
-	description = civic_tooltip_shadowy_evolution_effects
+	description = origin_tooltip_shadowy_evolution_effects
 	has_secondary_species = {
-		title = civic_shadowy_evolution_secondary_species
+		title = origin_shadowy_evolution_secondary_species
 	}
+	flags = { special_start_planet }
 }
 
 civic_geneticists = {
