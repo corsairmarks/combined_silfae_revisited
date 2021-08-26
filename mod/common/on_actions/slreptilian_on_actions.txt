@@ -1,5 +1,5 @@
 # fired when the game starts
-on_game_start_country = {
+on_game_start = {
 	events = {
 		slreptilians.2
 	}
