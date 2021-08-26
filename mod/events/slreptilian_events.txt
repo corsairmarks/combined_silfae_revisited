@@ -1,7 +1,8 @@
 namespace = slreptilians
 
+# triggered by empire_init_capital_planet
 # ROOT = planet, capital
-# FROM = species, secondary
+# FROM = species, main
 planet_event = {
 	id = slreptilians.1
 	hide_window = yes
@@ -10,41 +11,29 @@ planet_event = {
 		owner = { has_valid_civic = civic_shadowy_evolution }
 	}
 	immediate = {
-		# TODO: need to prevent default setup - probably make this an origin!
-		# I think origins can apply country flags via flags = { }
-		# TODO set up main and secondary species pops
-		last_created_species = { save_event_target_as = secondary_species }
 		if = {
-			limit = { owner = { has_valid_civic = civic_shadowy_evolution } }
-			event_target:secondary_species = {
-				set_citizenship_type = {
-					country = ROOT.owner
-					type = citizenship_slavery
+			limit = { 
+				has_planet_flag = planet_earth
+				owner = { 
+					NOR = {
+						has_origin = origin_shattered_ring	#setup in initializer 
+						has_origin = origin_remnants		#custom blockers
+					}
 				}
 			}
-			while = {
-				count = 7
-				# random_tile = {
-				# 	limit = {
-				# 		OR = {
-				# 			has_building = building_power_plant_1
-				# 			has_building = building_mining_network_1
-				# 			has_building = building_hydroponics_farm_1
-				# 			has_building = building_basic_science_lab_1 
-				# 		}
-				# 		has_pop = no
-				# 	}
-				# 	create_pop = {
-				# 		species = event_target:secondary_species
-				# 		ethos = random
-				# 	}
-				# }
-			}
+			generate_earth_deposits_and_blockers = yes
 		}
+		else = {
+			generate_start_deposits_and_blockers = yes
+		}
+		generate_start_buildings_and_districts = yes
+		generate_shadowy_evolution_start_pops = yes
+		generate_home_planet_final_pass = yes
 	}
 }
 
-# Global Modifier check
+# Global modifier check
+# triggered by on_game_start and on_monthly_pulse
 event = { 
 	id = slreptilians.2
 	hide_window = yes
@@ -64,6 +53,8 @@ event = {
 }
 
 # Geneticist bonus research
+# triggered by empire_init_add_technologies
+# ROOT = country
 country_event = { 
 	id = slreptilians.2001
 	hide_window = yes
