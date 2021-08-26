@@ -1,0 +1,5 @@
+﻿l_english:
+ trait_accelerated_metabolism_lithoid: "$trait_accelerated_metabolism$"
+ trait_accelerated_metabolism_lithoid_desc: "$trait_accelerated_metabolism_desc$"
+ trait_genetic_degradation_lithoid: "$trait_genetic_degradation$"
+ trait_genetic_degradation_lithoid_desc: "$trait_genetic_degradation_desc$"
