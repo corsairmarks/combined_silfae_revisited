@@ -4,6 +4,6 @@
  trait_genetic_degradation_lithoid: "$trait_genetic_degradation$"
  trait_genetic_degradation_lithoid_desc: "$trait_genetic_degradation_desc$"
  origin_shadowy_evolution: "$civic_shadowy_evolution$" 
- origin_shadowy_evolution_desc: "$civic_shadowy_evolution_desc$"
+ origin_shadowy_evolution_desc: "This species has adapted to survive by leeching off the work and skills of other species. Its members discreetly control other societies, manipulating them from the shadows."
  origin_shadowy_evolution_secondary_species: "$civic_shadowy_evolution_secondary_species$"
- origin_tooltip_shadowy_evolution_effects: "- Start with §H4§! £pops£ Pops of your main species, ruling from the shadows.\n- Start with §H24§! £pops£ Pops of a secondary, enslaved species who are blissfully ignorant of their servitude.\n- Unaware, enslaved  £pops£ Pops are happy and productive, but §Hmust remain ignorant§! for maximum benefit.\n- Unenslaved £pops£ Pops are part of the §Hshadow regime§!; the higher the percentage the harder it is to maintain the charade."
+ origin_tooltip_shadowy_evolution_effects: "- Start with §H4§! £pops£ Pops of your §Hprimary species§!, ruling from the shadows.\n- Start with §H24§! £pops£ Pops of a secondary, enslaved species who are blissfully ignorant of their servitude.\n- Unaware, enslaved  £pops£ Pops are happy and productive, but §Hmust remain ignorant§! for maximum benefit.\n- Unenslaved £pops£ Pops are part of the §Hshadow regime§!; the higher the percentage the harder it is to maintain the charade."
