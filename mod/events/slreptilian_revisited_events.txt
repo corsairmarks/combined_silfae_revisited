@@ -12,3 +12,20 @@ event = {
 		set_global_flag = slreptilian_revisited_installed
 	}
 }
+
+# triggered by 
+planet_event = {
+	id = slreptilian_evt.1
+	hide_window = yes
+	is_triggered_only = yes
+	pre_triggers = {
+		has_owner = yes
+	}
+	trigger = {
+		owner = { has_valid_civic = civic_shadowy_evolution }
+	}
+	immediate = {
+		# disable default initialization - we need to do it manually in slreptilians.1, but civics can't add country flags
+		set_planet_flag = special_start_planet
+	}
+}
