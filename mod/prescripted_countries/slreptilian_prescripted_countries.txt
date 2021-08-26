@@ -35,6 +35,7 @@ slreptilian1 = {
 	initializer = sol_system_initializer
 	graphical_culture = mammalian_01
 	city_graphical_culture = slreptilian_01
+	origin = origin_default
 	empire_flag = {
 		icon = {
 			category = "human"
@@ -53,6 +54,7 @@ slreptilian1 = {
 	}
 	flags = { is_slreptilians custom_start_screen }
 	ruler = {
+		leader_class = ruler
 		gender = male
 		name = "Tetran"
 		portrait = slreptilian_01
