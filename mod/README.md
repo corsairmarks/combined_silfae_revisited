@@ -69,6 +69,7 @@ This mod overrides the deposit `d_alien_pets_deposit` which generates a line in 
 
 * 1.0.0 Initial version
 * 1.0.1 Tsukimi Pool special bonus species available for any empire using the initializer
+* 1.0.2 Random names for Beep-Boops
 
 ## Source Code
 
