@@ -1,7 +1,7 @@
 origin_shadowy_evolution = {
 	is_origin = yes
 	icon = gfx/interface/icons/origins/origins_shadowy_evolution.dds
-	picture = gfx/event_pictures/origins/origin_shadowy_evolution.dds
+	picture = GFX_origin_shadowy_evolution
 	playable = { has_utopia = yes }
 	ai_playable = { has_utopia = yes }
 	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
