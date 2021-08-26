@@ -1,0 +1,79 @@
+namespace = slreptilians
+
+# ROOT = planet, capital
+# FROM = species, secondary
+planet_event = {
+	id = slreptilians.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		owner = { has_valid_civic = civic_shadowy_evolution }
+	}
+	immediate = {
+		# TODO: need to prevent default setup - probably make this an origin!
+		# I think origins can apply country flags via flags = { }
+		# TODO set up main and secondary species pops
+		last_created_species = { save_event_target_as = secondary_species }
+		if = {
+			limit = { owner = { has_valid_civic = civic_shadowy_evolution } }
+			event_target:secondary_species = {
+				set_citizenship_type = {
+					country = ROOT.owner
+					type = citizenship_slavery
+				}
+			}
+			while = {
+				count = 7
+				# random_tile = {
+				# 	limit = {
+				# 		OR = {
+				# 			has_building = building_power_plant_1
+				# 			has_building = building_mining_network_1
+				# 			has_building = building_hydroponics_farm_1
+				# 			has_building = building_basic_science_lab_1 
+				# 		}
+				# 		has_pop = no
+				# 	}
+				# 	create_pop = {
+				# 		species = event_target:secondary_species
+				# 		ethos = random
+				# 	}
+				# }
+			}
+		}
+	}
+}
+
+# Global Modifier check
+event = { 
+	id = slreptilians.2
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		any_playable_country = { has_valid_civic = civic_shadowy_evolution }
+	}
+	immediate = {
+		set_update_modifiers_batch = begin
+		every_playable_country = {
+			limit = { has_valid_civic = civic_shadowy_evolution }
+			calculate_shadowyrep_morale = yes
+			calculate_shadowyrep_happiness = yes
+		}
+		set_update_modifiers_batch = end
+	}
+}
+
+# Geneticist bonus research
+country_event = { 
+	id = slreptilians.2001
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_valid_civic = civic_geneticists
+	}
+	immediate = {
+		give_technology = { tech = tech_genome_mapping		message = no }
+		give_technology = { tech = tech_vitality_boosters	message = no }
+		give_technology = { tech = tech_epigenetic_triggers	message = no }
+	}
+}
