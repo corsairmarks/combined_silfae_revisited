@@ -1,0 +1,14 @@
+namespace = slreptilian_evt
+
+# flag mod as active
+event = {
+	id = slreptilian_evt.13
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = { has_global_flag = slreptilian_revisited_installed }
+	}
+	immediate = {
+		set_global_flag = slreptilian_revisited_installed
+	}
+}
