@@ -337,6 +337,7 @@ setup_peepboop_homeworld = {
 	clear_deposits = yes
 	create_species = {
 		name = "Beep-Boop"
+		plural = "Beep-Boops"
 		name_list = AI
 		class = PEEBOOP
 		portrait = peepboop1
