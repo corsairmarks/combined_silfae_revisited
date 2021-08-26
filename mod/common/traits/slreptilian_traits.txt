@@ -78,6 +78,7 @@ trait_genetic_degradation = {
 }
 
 trait_genetic_degradation_lithoid = {
+	icon = gfx/interface/icons/traits/trait_genetic_degradation.dds
 	cost = -2
 	potential_crossbreeding_chance = 0.5
 	initial = no
@@ -144,6 +145,7 @@ trait_accelerated_metabolism = {
 
 trait_accelerated_metabolism_lithoid = {
 	cost = -1
+	icon = gfx/interface/icons/traits/trait_accelerated_metabolism.dds
 	potential_crossbreeding_chance = 0.5
 	initial = no
 	randomized = no
