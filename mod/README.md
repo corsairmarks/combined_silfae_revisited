@@ -10,6 +10,8 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 
 * Fix the broken portrait clothing selector for male rulers
 * Update the namelist to account for all built-in army types, remove obsolete entries
+* Update portrait selection for Pops - highe-strata Pops (rulers, complex drones, bio-trophies, and precursors) may use laurel wreaths
+* Update clothing selection for Pops - your Pops will wear clothing based on their jobs
 * Update the custom starting system initializer and special neighbors for 3.0
 * Custom starting initializer now supports a variety of civics and origin starts (all the built-in ones)
 * Remove a species trait (Resilient) from the prescripted empire, because Charismatic is now 2 points
@@ -45,6 +47,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 
 * 1.0.0 Initial version
 * 1.0.1 Adjust system initializer description
+* 1.0.2 Enhanced portrait and clothing selectors, allow portraits to be randomized
 
 ## Source Code
 
