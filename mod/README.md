@@ -77,7 +77,7 @@ In game terms, the fourth color of Phenotype 9 is the same as the third color.
 ## Changelog
 
 * 1.0.0 Initial version
-* 1.0.1 Require APocalypse for prescripted empire, extra names for randomisation, allow portraits as secondary species and to be randomized
+* 1.0.1 Require Apocalypse for prescripted empire, extra names for randomisation, allow portraits as secondary species and to be randomized
 
 ## Source Code
 
