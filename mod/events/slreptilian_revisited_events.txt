@@ -12,3 +12,22 @@ event = {
 		set_global_flag = slreptilian_revisited_installed
 	}
 }
+
+# triggered by empire_init_capital_planet
+# ROOT = planet, capital
+# FROM = species, founder
+planet_event = {
+	id = slreptilian_evt.1
+	hide_window = yes
+	is_triggered_only = yes
+	pre_triggers = {
+		has_owner = yes
+	}
+	trigger = {
+		owner = { has_origin = origin_shadowy_evolution }
+	}
+	immediate = {
+		# disable default initialization
+		set_planet_flag = special_start_planet
+	}
+}

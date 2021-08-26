@@ -29,7 +29,6 @@ origin_shadowy_evolution = {
 	has_secondary_species = {
 		title = origin_shadowy_evolution_secondary_species
 	}
-	flags = { special_start_planet }
 }
 
 civic_geneticists = {
