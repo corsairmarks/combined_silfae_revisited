@@ -6,7 +6,7 @@ There are other mods which contain these portraits, so why should you choose thi
 
 ## Important Performance Notes
 
-This mod can have a performance impact on your games, becasue it iterated all the Pops in empiress with the special origin on a monthly basis.  It is off-limits for the AI to randomly pick for this reason.  There is a reason Paradox moved away from this mechanic for Rogue Servitors.
+This mod can have a performance impact on your games, because it iterates all the Pops in empires with the special origin on a monthly basis.  It is off-limits for the AI to randomly pick for this reason.  There is a reason Paradox moved away from this mechanic for Rogue Servitors.
 
 # Changes
 
@@ -26,7 +26,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     * Now uses the new Origin: Parasitic Evolution (requires Utopia)
     * Now has Civic: Shadow Council to replace the civic which became the origin
     * Can randomly spawn
-* You can use Silfae's custom Reptilian portraits (mixed, just Reptilians, or just just "Humans") for your own empires without any DLC requirements
+* You can use Silfae's custom Reptilian portraits (mixed, just Reptilians, or just "Humans") for your own empires without any DLC requirements
 
 # * Fix the broken portrait clothing selector for male rulers
 * Update portrait selection for Pops - higher-strata Pops (rulers, complex drones, bio-trophies, and precursors) may use laurel wreaths
