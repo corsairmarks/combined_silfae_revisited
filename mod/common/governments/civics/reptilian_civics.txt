@@ -10,6 +10,7 @@ civic_shadowy_evolution = {
 				value = origin_syncretic_evolution
 				value = origin_mechanists
 				value = origin_necrophage
+				value = origin_void_dwellers
 			}
 		}
 		civics = {
