@@ -242,3 +242,44 @@ calculate_shadowyrep_happiness = {
 		}
 	}
 }
+
+# set up starting pops - called by slreptilians.1
+# THIS = planet, capital
+generate_shadowy_evolution_start_pops = {
+	while = {
+		count = 4
+		create_pop = {
+			species = owner_main_species
+			ethos = random
+		}
+	}
+	last_created_species = {
+		set_species_flag = syncretic_species@PREV.owner
+		save_event_target_as = secondary_species
+		set_citizenship_type = {
+			type = citizenship_slavery
+			country = PREV.owner
+		}
+		set_slavery_type = {
+			type = slavery_indentured
+			country = PREV.owner
+		}
+	}
+	while = {
+		limit = { num_pops < 28 }
+		create_pop = {
+			species = event_target:secondary_species
+			ethos = random
+		}
+	}
+	if = {
+		limit = { owner = { has_origin = origin_default } }
+		while = {
+			count = 4
+			create_pop = {
+				species = owner_main_species
+				ethos = random
+			}
+		}
+	}
+}
