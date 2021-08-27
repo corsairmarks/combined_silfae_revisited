@@ -11,6 +11,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 * Renamed species class to "Sleek Reptilian" so there isn't confusion with the built-in Reptilian species class
 * Remove duplication in room selector, allow it to always be chosen
 * Allow portraits to be randomly selected
+* Add a namelist for `SLRPTLN` (necessary for randomized species to get names)
 * Fix mesh definitions to use the correctly-named animations (`slreptilian` uses `reptilian_04`)
 * Fix portrait selectors so male/female reptilians aren't considered different phenotypes
 * Update clothing selection for Pops - your Pops will wear clothing based on their jobs
