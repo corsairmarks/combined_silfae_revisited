@@ -46,7 +46,6 @@ event = {
 		every_playable_country = {
 			limit = { has_origin = origin_shadowy_evolution }
 			calculate_shadowyrep_morale = yes
-			calculate_shadowyrep_happiness = yes
 		}
 		set_update_modifiers_batch = end
 	}
