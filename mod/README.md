@@ -4,16 +4,17 @@ Have you seen the insidious, sleek portraits from Silfae's "Animated Portraits -
 
 There are other mods which contain these portraits, so why should you choose this one?  None of the others update the special Grand Illusion gameplay, but this one does!  Please enjoy my translation of Silfae's custom empire into modern Stellaris.
 
-## Important Performance Notes
-
-This mod can have a performance impact on your games, because it iterates all the Pops in empires with the special origin on a monthly basis.  It is off-limits for the AI to randomly pick for this reason.  There is a reason Paradox moved away from this mechanic for Rogue Servitors.
-
 # Changes
 
 All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.0.*, the latest version when this was written.  Updates include:
 
+* Renamed species class to "Sleek Reptilian" so there isn't confusion with the built-in Reptilian species class
 * Remove duplication in room selector, allow it to always be chosen
 * Allow portraits to be randomly selected
+* Fix mesh definitions to use the correctly-named animations (`slreptilian` uses `reptilian_04`)
+* Fix portrait selectors so male/female reptilians aren't considered different phenotypes
+* Update clothing selection for Pops - your Pops will wear clothing based on their jobs
+* Update hair selection for Pops - reduce duplication
 * **Rebuild special Rogue Servitor-like gameplay for balancing your ruler Pops versus the unwitting slaves**
     * Rebuild special Pop happiness mechanics to have clearer if/else code, reduce usage of `every_owned_pop` for some performance gains
     * Update game events for setting up custom origin, including using `set_update_modifiers_batch` for some performance gains
@@ -22,15 +23,12 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 * Update all custom negative traits to work with Stellaris 3.0
     * Traits use up-to-date-modifiers
     * Most of the `BIOLOGICAL` traits are now available to use on `LITHOID`s too
+    * These traits were originally designed as advanced traits, which means you must have Evolutionary Mastery to use them
 * Update prescripted empire for 3.0:
     * Now uses the new Origin: Parasitic Evolution (requires Utopia)
     * Now has Civic: Shadow Council to replace the civic which became the origin
     * Can randomly spawn
-* You can use Silfae's custom Reptilian portraits (mixed, just Reptilians, or just "Humans") for your own empires without any DLC requirements
-
-# * Fix the broken portrait clothing selector for male rulers
-* Update portrait selection for Pops - higher-strata Pops (rulers, complex drones, bio-trophies, and precursors) may use laurel wreaths
-* Update clothing selection for Pops - your Pops will wear clothing based on their jobs
+* You can use Silfae's custom Sleek Reptilian portraits (mixed, just Reptilians, or just "Humans") for your own empires without any DLC requirements
 
 ## Compatibility
 
@@ -76,5 +74,3 @@ It is best to clone this repository into `<Stellaris User's Directory>/Paradox I
 I was inspired to extend the original mod when I saw [Endugu](https://steamcommunity.com/profiles/76561198037630876/myworkshopfiles/)'s [expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=1584824947) of [Silfae](https://steamcommunity.com/profiles/76561198021525667/myworkshopfiles/)'s [Animated Xirmian Portraits](https://steamcommunity.com/workshop/filedetails/?id=881118424).  Modular mods that require downloading the original mod(s) help give credit where credit is due.
 
 An extra special thanks to Silfae for creating and sharing so many detailed, animated portraits for the community.
-
-TODO: original start seemed to be 1 rept, 7 human
