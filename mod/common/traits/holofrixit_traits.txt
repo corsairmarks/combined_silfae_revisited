@@ -1,9 +1,51 @@
 ##################
 # Species Traits #
 ##################
+# These traits are a combination of the original holofrixit traits and the special
+# capabilities of the matching buildable Pops
+
+# TODO: set up the species with portraits to match originals!
+# TODO: set up portrait groups for eac holofrixit type that can be picked,
+# TODO: set up a mixed-bag of portraits, with job-based clothes (instead of the caste-based standard)
+
+
+# might be doable with a self modifier?
+# let's check 1.9 mass production...
+# drone 15
+# ganglion 1.5
+# holowarrior 0.8, geneholowarrior 0.1
+# original holofrixigrams have 0.3 (vs standard 1.0) auto-growth - not sure what that does
 
 trait_holofrixit = {
 	cost = 2
+	allowed_archetypes = { HOLOARCH }
+	potential_crossbreeding_chance = 0
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
+	sorting_priority = 18
+	initial = yes
+	randomized = no
+	modification = no
+	modifier = {
+		pop_environment_tolerance = 1.0
+		army_health = -0.5
+		army_morale = 0.5
+		armies_upkeep_mult = -0.25
+		pop_happiness = 0.25
+		pop_government_ethic_attraction = 0.15 # half conformists
+		pop_growth_from_immigration = 0.35
+		pop_resettlement_cost_mult = -0.1
+		pop_growth_speed = 0.15
+		species_leader_exp_gain = 0.2
+		leader_age = -20
+		leaders_cost_mult = -0.5
+		leader_skill_levels = -2 # TODO - test that this works
+		pop_cat_slave_happiness = 1.0 # I think that's what pop_slavery_tolerance did?
+	}
+}
+
+trait_holodrone = {
+	cost = 0
 	allowed_archetypes = { HOLOARCH }
 	potential_crossbreeding_chance = 0
 	species_potential_add = { always = no }
@@ -12,54 +54,35 @@ trait_holofrixit = {
 	initial = yes
 	randomized = no
 	modification = no
-	modifier = {	
-		pop_environment_tolerance = 1.0
-		army_attack_damage_mult = -0.02
-		army_defense_damage_mult = -0.02
-		army_defense_morale_mult = -0.02
-		army_health = -0.5
-		army_morale = 0.5
-		armies_upkeep_mult = -0.25
-		planet_jobs_physics_research_produces_mult = -0.01
-		planet_jobs_society_research_produces_mult = -0.01
-		planet_jobs_engineering_research_produces_mult = 0.01
-		planet_jobs_energy_produces_mult = 0.02
-		planet_jobs_minerals_produces_mult = 0.03
-		pop_happiness = 0.25
-		pop_ethics_shift_speed_mult = -0.15
-		pop_growth_from_immigration = 0.35
-		pop_resettlement_cost_mult = -0.1
-		pop_growth_speed = 0.15
-		species_leader_exp_gain = 0.2
-		leader_age = -20
-		leaders_cost_mult = -0.5
-		pop_cat_slave_happiness = 1.0 # I think that's what pop_slavery_tolerance did?
-
-		# ORIGINAL
-		# pop_environment_tolerance = 1.0
-		# army_attack_damage_mult = -0.02
-		# army_defense_damage_mult = -0.02
-		# army_defense_morale_mult = -0.02
-		# army_health = -0.5
-		# army_morale = 0.5
-		# army_upkeep_mult = -0.25
-		# tile_resource_physics_research_mult = -0.01
-		# tile_resource_society_research_mult = -0.01
-		# tile_resource_engineering_research_mult = 0.01
-		# tile_resource_energy_mult = 0.02
-		# tile_resource_minerals_mult = 0.03
-		# pop_happiness = 0.25
-		# pop_ethic_shift = -0.15
-		# pop_migration_speed = 0.35
-		# pop_resettlement_cost_mult = -0.1
-		# pop_growth_req_mult = -0.15
-		# species_leader_exp_gain = 0.2
-		# leader_age = -20
-		# leader_influence_cost = -0.50
-		# pop_slavery_tolerance = 1.0
+	opposites = {
+		trait_hologanglion
+		trait_holofrixigram
+		trait_holofrixigram_2
+		trait_holofrixigram_3
+		trait_holowarrior
+		trait_holowarrior_2
 	}
+	prerequisites = { tech_holocastes }
+	modifier = {
+		armies_cost_mult = -0.5
+		armies_upkeep_mult = -0.5
+		army_damage_mult = -0.5
+		army_attack_health_mult = -0.5
+		army_defense_health_mult = -0.5
+		army_attack_morale_mult = -0.5
+		army_defense_morale_mult = -0.5
+		pop_growth_speed = 5
+		planet_pops_upkeep_mult = -0.2
+		planet_jobs_physics_research_produces_mult = -0.25
+		planet_jobs_society_research_produces_mult = -0.25
+		planet_jobs_engineering_research_produces_mult = -0.25
+		planet_jobs_unity_produces_mult = -0.25
+	}
+	# holofrixit_drone_01
+	# no factions, no leaders, no modification
 }
 
+# TODO: reduce to .15, add intelligent, sedentary
 trait_hologanglion = {
 	cost = 0
 	allowed_archetypes = { HOLOARCH }
@@ -71,6 +94,7 @@ trait_hologanglion = {
 	randomized = no
 	modification = no
 	opposites = {
+		trait_holodrone
 		trait_holofrixigram
 		trait_holofrixigram_2
 		trait_holofrixigram_3
@@ -78,38 +102,22 @@ trait_hologanglion = {
 		trait_holowarrior_2
 	}
 	prerequisites = { tech_holocastes }
-	modifier = {	
-		army_attack_damage_mult = -0.05
-		army_defense_damage_mult = -0.05
-		army_defense_morale_mult = -0.05
-		armies_upkeep_mult = -0.25
-		planet_jobs_physics_research_produces_mult = 0.25
-		planet_jobs_society_research_produces_mult = 0.25
-		planet_jobs_engineering_research_produces_mult = 0.25
-		planet_jobs_minerals_produces_mult = -1.0
-		planet_jobs_energy_produces_mult = -0.05
+	modifier = {
+		armies_cost_mult = -0.6
+		armies_upkeep_mult = -0.6
+		army_damage_mult = -0.6
+		army_attack_health_mult = -0.5
+		army_defense_health_mult = -0.5
+		army_attack_morale_mult = -0.6
+		army_defense_morale_mult = -0.6
+		planet_pops_upkeep_mult = 0.3
+		planet_researchers_produces_mult = 0.25
+		planet_miners_produces_mult = -1
+		planet_technician_produces_mult = -0.5
 		pop_happiness = -0.01
-		pop_ethics_shift_speed_mult = 0.17
-		pop_growth_from_immigration = -0.05
-		pop_resettlement_cost_mult = 0.1
-		# pop_war_happiness = -0.05
-
-		# ORIGINAL
-		# army_attack_damage_mult = -0.05
-		# army_defense_damage_mult = -0.05
-		# army_defense_morale_mult = -0.05
-		# army_upkeep_mult = -0.25
-		# tile_resource_physics_research_mult = 0.25
-		# tile_resource_society_research_mult = 0.25
-		# tile_resource_engineering_research_mult = 0.25
-		# tile_resource_minerals_mult = -1.0
-		# tile_resource_energy_mult = -0.05
-		# pop_happiness = -0.01
-		# pop_ethic_shift = 0.17
-		# pop_migration_speed = -0.05
-		# pop_resettlement_cost_mult = 0.1
-		# pop_war_happiness = -0.05
+		pop_government_ethic_attraction = -0.15 # nullifies original, for total of 0 (TODO: Suggestible as 0.15, -1)
 	}
+	# no reproduction, no colonizers, no modification
 }
 
 trait_holowarrior = {
@@ -123,6 +131,7 @@ trait_holowarrior = {
 	randomized = no
 	modification = no
 	opposites = {
+		trait_holodrone
 		trait_hologanglion
 		trait_holofrixigram
 		trait_holofrixigram_2
@@ -130,45 +139,24 @@ trait_holowarrior = {
 		trait_holowarrior_2
 	}
 	prerequisites = { tech_holocastes }
-	modifier = {	
-		army_attack_damage_mult = 0.05
-		army_defense_damage_mult = 0.05
-		army_defense_morale_mult = 0.05
-		army_health = 0.6
-		army_morale = 0.15
-		planet_jobs_physics_research_produces_mult = -0.75
-		planet_jobs_society_research_produces_mult = -0.75
-		planet_jobs_engineering_research_produces_mult = -0.75
-		planet_jobs_minerals_produces_mult = -0.1
-		planet_jobs_energy_produces_mult = -0.2
+	modifier = {
+		armies_cost_mult = 0.05
+		armies_upkeep_mult = 0.2
+		army_damage_mult = 0.25
+		army_attack_health_mult = 0.25
+		army_defense_health_mult = 0.25
+		army_attack_morale_mult = 0.25
+		army_defense_morale_mult = 0.25
+		planet_army_build_speed_mult = 0.1
+		planet_pops_upkeep_mult = 0.5
+		planet_researchers_produces_mult = -0.75
+		planet_miners_produces_mult = -0.15
+		planet_technician_produces_mult = -0.3
 		pop_happiness = 0.1
-		pop_ethics_shift_speed_mult = -0.1
+		pop_government_ethic_attraction = 0.1 # almost up to full conformists 0.25 (vs 0.3)
 		pop_growth_from_immigration = -0.05
 		pop_resettlement_cost_mult = 0.01
-		planet_army_build_speed_mult = 0.03
-		armies_cost_mult = 0.05
-		# pop_fortification_defense = 0.03
-		# pop_war_happiness = 0.25
-
-		# ORIGINAL
-		# army_attack_damage_mult = 0.05
-		# army_defense_damage_mult = 0.05
-		# army_defense_morale_mult = 0.05
-		# army_health = 0.6
-		# army_morale = 0.15
-		# tile_resource_physics_research_mult = -0.75
-		# tile_resource_society_research_mult = -0.75
-		# tile_resource_engineering_research_mult = -0.75
-		# tile_resource_minerals_mult = -0.1
-		# tile_resource_energy_mult = -0.2
-		# pop_happiness = 0.1
-		# pop_ethic_shift = -0.1
-		# pop_migration_speed = -0.05
-		# pop_resettlement_cost_mult = 0.01
-		# planet_army_build_speed_mult = 0.03
-		# planet_army_build_cost_mult = 0.05
-		# pop_fortification_defense = 0.03
-		# pop_war_happiness = 0.25
+		# no leaders, # rest normal
 	}
 }
 
@@ -183,6 +171,7 @@ trait_holowarrior_2 = {
 	randomized = no
 	modification = no
 	opposites = {
+		trait_holodrone
 		trait_hologanglion
 		trait_holofrixigram
 		trait_holofrixigram_2
@@ -190,45 +179,24 @@ trait_holowarrior_2 = {
 		trait_holowarrior
 	}
 	prerequisites = { tech_epigenetic_triggers }
-	modifier = {	
-		army_attack_damage_mult = 0.25
-		army_defense_damage_mult = 0.25
-		army_defense_morale_mult = 0.25
-		army_health = 0.9
-		army_morale = 0.25
-		planet_jobs_physics_research_produces_mult = -1.0
-		planet_jobs_society_research_produces_mult = -1.0
-		planet_jobs_engineering_research_produces_mult = -1.0
-		planet_jobs_minerals_produces_mult = -0.75
-		planet_jobs_energy_produces_mult = -0.75
+	modifier = {
+		armies_cost_mult = 0.1
+		armies_upkeep_mult = 0.4
+		army_damage_mult = 0.5
+		army_attack_health_mult = 0.5
+		army_defense_health_mult = 0.5
+		army_attack_morale_mult = 0.5
+		army_defense_morale_mult = 0.5
+		planet_army_build_speed_mult = 0.1
+		planet_pops_upkeep_mult = 1
+		planet_researchers_produces_mult = -1
+		planet_miners_produces_mult = -0.3
+		planet_technician_produces_mult = -0.6
 		pop_happiness = 0.2
-		pop_ethics_shift_speed_mult = -0.5
+		pop_government_ethic_attraction = 0.35 # now up to 50%
 		pop_growth_from_immigration = -0.15
 		pop_resettlement_cost_mult = 0.05
-		planet_army_build_speed_mult = 0.03
-		armies_cost_mult = 0.09
-		# pop_fortification_defense = 0.05
-		# pop_war_happiness = 0.5
-
-		# ORIGINAL
-		# army_attack_damage_mult = 0.25
-		# army_defense_damage_mult = 0.25
-		# army_defense_morale_mult = 0.25
-		# army_health = 0.9
-		# army_morale = 0.25
-		# tile_resource_physics_research_mult = -1.0
-		# tile_resource_society_research_mult = -1.0
-		# tile_resource_engineering_research_mult = -1.0
-		# tile_resource_minerals_mult = -0.75
-		# tile_resource_energy_mult = -0.75
-		# pop_happiness = 0.2
-		# pop_ethic_shift = -0.5
-		# pop_migration_speed = -0.15
-		# pop_resettlement_cost_mult = 0.05
-		# planet_army_build_speed_mult = 0.03
-		# planet_army_build_cost_mult = 0.09
-		# pop_fortification_defense = 0.05
-		# pop_war_happiness = 0.5
+		# no leaders, # no colonizers, no consumer goods (inconsistent argh)
 	}
 }
 
@@ -243,6 +211,7 @@ trait_holofrixigram = {
 	randomized = no
 	modification = no
 	opposites = {
+		trait_holodrone
 		trait_hologanglion
 		trait_holofrixigram_2
 		trait_holofrixigram_3
@@ -250,31 +219,20 @@ trait_holofrixigram = {
 		trait_holowarrior_2
 	}
 	prerequisites = { tech_robotic_workers }
-	modifier = {	
-		army_attack_damage_mult = -1.0
-		army_defense_damage_mult = -1.0
-		army_defense_morale_mult = -1.0
-		planet_jobs_physics_research_produces_mult = -1.0
-		planet_jobs_society_research_produces_mult = -1.0
-		planet_jobs_engineering_research_produces_mult = -1.0
-		planet_jobs_minerals_produces_mult = -1.0
-		planet_jobs_energy_produces_mult = 0.75
-		pop_ethics_shift_speed_mult = -1.0
-		pop_growth_from_immigration = -1.0
-		pop_resettlement_cost_mult = 1.0
-
-		# ORIGINAL
-		# army_attack_damage_mult = -1.0
-		# army_defense_damage_mult = -1.0
-		# army_defense_morale_mult = -1.0
-		# tile_resource_physics_research_mult = -1.0
-		# tile_resource_society_research_mult = -1.0
-		# tile_resource_engineering_research_mult = -1.0
-		# tile_resource_minerals_mult = -1.0
-		# tile_resource_energy_mult = 0.75
-		# pop_ethic_shift = -1.0
-		# pop_migration_speed = -1.0
-		# pop_resettlement_cost_mult = 1.0
+	modifier = {
+		army_damage_mult = -1
+		army_attack_health_mult = -1
+		army_defense_health_mult = -1
+		army_attack_morale_mult = -1
+		army_defense_morale_mult = -1
+		planet_pops_upkeep_mult = 0.4
+		planet_researchers_produces_mult = -1
+		planet_miners_produces_mult = -1
+		planet_technician_produces_mult = 0.75
+		pop_government_ethic_attraction = 1
+		pop_growth_from_immigration = -1
+		pop_resettlement_cost_mult = 1
+		# migrate no, colonize no, reproduce no, factions no, leaders no, slaves no, mod no, happiness no, CG no
 	}
 }
 
@@ -289,6 +247,7 @@ trait_holofrixigram_2 = {
 	randomized = no
 	modification = no
 	opposites = {
+		trait_holodrone
 		trait_hologanglion
 		trait_holofrixigram
 		trait_holofrixigram_3
@@ -296,31 +255,20 @@ trait_holofrixigram_2 = {
 		trait_holowarrior_2
 	}
 	prerequisites = { tech_droid_workers }
-	modifier = {	
-		army_attack_damage_mult = -0.5
-		army_defense_damage_mult = -0.5
+	modifier = {
+		army_damage_mult = -0.5
+		army_attack_health_mult = -0.5
+		army_defense_health_mult = -0.5
+		army_attack_morale_mult = -0.5
 		army_defense_morale_mult = -0.5
-		planet_jobs_physics_research_produces_mult = -0.5
-		planet_jobs_society_research_produces_mult = -0.5
-		planet_jobs_engineering_research_produces_mult = -0.5
-		planet_jobs_minerals_produces_mult = -1.0
-		planet_jobs_energy_produces_mult = 0.8
-		pop_ethics_shift_speed_mult = -1.0
-		pop_growth_from_immigration = -1.0
-		pop_resettlement_cost_mult = 1.0
-
-		# ORIGINAL
-		# army_attack_damage_mult = -0.5
-		# army_defense_damage_mult = -0.5
-		# army_defense_morale_mult = -0.5
-		# tile_resource_physics_research_mult = -0.5
-		# tile_resource_society_research_mult = -0.5
-		# tile_resource_engineering_research_mult = -0.5
-		# tile_resource_minerals_mult = -1.0
-		# tile_resource_energy_mult = 0.8
-		# pop_ethic_shift = -1.0
-		# pop_migration_speed = -1.0
-		# pop_resettlement_cost_mult = 1.0
+		planet_pops_upkeep_mult = 0.6
+		planet_researchers_produces_mult = -0.5
+		planet_miners_produces_mult = -1
+		planet_technician_produces_mult = 0.8
+		pop_government_ethic_attraction = 1
+		pop_growth_from_immigration = -1
+		pop_resettlement_cost_mult = 1
+		# migrate no, colonize no, reproduce no, factions no, leaders no, slaves no, mod no, happiness no, CG no
 	}
 }
 
@@ -335,6 +283,7 @@ trait_holofrixigram_3 = {
 	randomized = no
 	modification = no
 	opposites = {
+		trait_holodrone
 		trait_hologanglion
 		trait_holofrixigram
 		trait_holofrixigram_2
@@ -342,20 +291,14 @@ trait_holofrixigram_3 = {
 		trait_holowarrior_2
 	}
 	prerequisites = { tech_synthetic_workers }
-	modifier = {	
-		planet_jobs_minerals_produces_mult = -1.0
-		planet_jobs_energy_produces_mult = 0.9
-		pop_ethics_shift_speed_mult = -0.5
+	modifier = {
+		planet_pops_upkeep_mult = 0.8
+		planet_miners_produces_mult = -1
+		planet_technician_produces_mult = 0.9
+		pop_government_ethic_attraction = 0.5
 		pop_growth_from_immigration = -0.5
-		pop_resettlement_cost_mult = 1.0
-		# pop_war_happiness = -0.05 # not sure I can apply this; apparently broke in 1.6.2
-
-		# ORIGINAL
-		# tile_resource_minerals_mult = -1.0
-		# tile_resource_energy_mult = 0.9
-		# pop_ethic_shift = -0.5
-		# pop_migration_speed = -0.5
-		# pop_resettlement_cost_mult = 1.0
-		# pop_war_happiness = -0.05
+		pop_resettlement_cost_mult = 1
+		# mod no, rest yes
+		# notably can reproduce = yes
 	}
 }
