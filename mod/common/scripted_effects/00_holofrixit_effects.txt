@@ -5,9 +5,12 @@ clear_holofrixit_system_capital_non_pop_blockers = {
 		limit = { owner = { NOT = { has_origin = origin_remnants } } }
 		every_deposit = {
 			limit = {
-				is_deposit_type = d_tomb_world_wasteland
-				is_deposit_type = d_strip_mine
-				is_deposit_type = d_failing_infrastructure
+				is_blocker = yes
+				OR = {
+					is_deposit_type = d_tomb_world_wasteland
+					is_deposit_type = d_strip_mine
+					is_deposit_type = d_failing_infrastructure
+				}
 			}
 			remove_deposit = yes
 		}
