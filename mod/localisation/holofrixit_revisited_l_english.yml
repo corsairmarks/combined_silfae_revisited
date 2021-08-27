@@ -8,6 +8,8 @@
  HLFRXT_ear: "$ART_ear$"
  HLFRXT_ear_plural: "$ART_ear_plural$"
  name_list_HLFRXT1: "Holofrixit 1"
+ trait_holodrone: "Holodrone"
+ trait_holodrone_desc: "§LBasic Holofrixit drones. They breed rapidly and are suitable for manual labor, but are physically frail. Their lack of individual initiative and intelligence are serious drawbacks for intellectually demanding tasks.§!\n"
  # New government/authority
  gov_holofrixit: "Holofrixit Xechiros Protocol"
  gov_holofrixit_desc: "The free-thinking Xechiros caste makes up the entirety of the government. The ruling $RT_NETMINISTRATOR$ weilds singular control over foreign and domestic policy. The rest of the ruling caste composes a tightly-knit bureaucracy which implements these policies and is responsible for the minutae of daily administration."
