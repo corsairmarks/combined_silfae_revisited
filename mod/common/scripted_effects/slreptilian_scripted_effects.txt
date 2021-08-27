@@ -243,14 +243,6 @@ generate_shadowy_evolution_start_pops = {
 	last_created_species = {
 		set_species_flag = syncretic_species@PREV.owner
 		save_event_target_as = secondary_species
-		set_citizenship_type = {
-			type = citizenship_slavery
-			country = PREV.owner
-		}
-		set_slavery_type = {
-			type = slavery_indentured
-			country = PREV.owner
-		}
 	}
 	while = {
 		limit = { num_pops < 28 }
