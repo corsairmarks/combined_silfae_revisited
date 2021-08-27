@@ -17,7 +17,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 * Update clothing selection for Pops - your Pops will wear clothing based on their jobs
 * Update hair selection for Pops - reduce duplication
 * **Rebuild special Rogue Servitor-like gameplay for balancing your ruler Pops versus the unwitting slaves**
-    * Rebuild special Pop happiness mechanics to have clearer if/else code, reduce usage of `every_owned_pop` for some performance gains
+    * Rebuild special Pop happiness mechanics to have clearer if/else code, use the country modifier for all bonuses (as opposed to iterating all the Pops)
     * Update game events for setting up custom origin, including using `set_update_modifiers_batch` for some performance gains
     * Convert "Parasitic Evolution" into an origin instead of a civic (including graphics for the selection screen and icon)
     * As with the original civic, Origin: Parasitic Evolution is not available for the AI
