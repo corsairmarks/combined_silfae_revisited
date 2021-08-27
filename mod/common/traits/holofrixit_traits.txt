@@ -5,8 +5,11 @@
 trait_holofrixit = {
 	cost = 2
 	allowed_archetypes = { HOLOARCH }
-	# initial = no
-	species_potential_add = { always = no } # TODO: trying to prevent its use on custom races
+	potential_crossbreeding_chance = 0
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
+	sorting_priority = 15
+	initial = yes
 	randomized = no
 	modification = no
 	modifier = {	
@@ -59,9 +62,22 @@ trait_holofrixit = {
 
 trait_hologanglion = {
 	cost = 0
+	allowed_archetypes = { HOLOARCH }
+	potential_crossbreeding_chance = 0
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
+	sorting_priority = 15
 	initial = no
 	randomized = no
 	modification = no
+	opposites = {
+		trait_holofrixigram
+		trait_holofrixigram_2
+		trait_holofrixigram_3
+		trait_holowarrior
+		trait_holowarrior_2
+	}
+	prerequisites = { tech_holocastes }
 	modifier = {	
 		army_attack_damage_mult = -0.05
 		army_defense_damage_mult = -0.05
@@ -98,10 +114,22 @@ trait_hologanglion = {
 
 trait_holowarrior = {
 	cost = 0
+	allowed_archetypes = { HOLOARCH }
+	potential_crossbreeding_chance = 0
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
+	sorting_priority = 15
 	initial = no
 	randomized = no
 	modification = no
-
+	opposites = {
+		trait_hologanglion
+		trait_holofrixigram
+		trait_holofrixigram_2
+		trait_holofrixigram_3
+		trait_holowarrior_2
+	}
+	prerequisites = { tech_holocastes }
 	modifier = {	
 		army_attack_damage_mult = 0.05
 		army_defense_damage_mult = 0.05
@@ -146,10 +174,22 @@ trait_holowarrior = {
 
 trait_holowarrior_2 = {
 	cost = 0
+	allowed_archetypes = { HOLOARCH }
+	potential_crossbreeding_chance = 0
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
+	sorting_priority = 15
 	initial = no
 	randomized = no
 	modification = no
-
+	opposites = {
+		trait_hologanglion
+		trait_holofrixigram
+		trait_holofrixigram_2
+		trait_holofrixigram_3
+		trait_holowarrior
+	}
+	prerequisites = { tech_epigenetic_triggers }
 	modifier = {	
 		army_attack_damage_mult = 0.25
 		army_defense_damage_mult = 0.25
@@ -194,9 +234,22 @@ trait_holowarrior_2 = {
 
 trait_holofrixigram = {
 	cost = 0
+	allowed_archetypes = { HOLOARCH }
+	potential_crossbreeding_chance = 0
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
+	sorting_priority = 15
 	initial = no
 	randomized = no
 	modification = no
+	opposites = {
+		trait_hologanglion
+		trait_holofrixigram_2
+		trait_holofrixigram_3
+		trait_holowarrior
+		trait_holowarrior_2
+	}
+	prerequisites = { tech_robotic_workers }
 	modifier = {	
 		army_attack_damage_mult = -1.0
 		army_defense_damage_mult = -1.0
@@ -224,11 +277,25 @@ trait_holofrixigram = {
 		# pop_resettlement_cost_mult = 1.0
 	}
 }
+
 trait_holofrixigram_2 = {
 	cost = 0
+	allowed_archetypes = { HOLOARCH }
+	potential_crossbreeding_chance = 0
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
+	sorting_priority = 15
 	initial = no
 	randomized = no
 	modification = no
+	opposites = {
+		trait_hologanglion
+		trait_holofrixigram
+		trait_holofrixigram_3
+		trait_holowarrior
+		trait_holowarrior_2
+	}
+	prerequisites = { tech_droid_workers }
 	modifier = {	
 		army_attack_damage_mult = -0.5
 		army_defense_damage_mult = -0.5
@@ -256,11 +323,25 @@ trait_holofrixigram_2 = {
 		# pop_resettlement_cost_mult = 1.0
 	}
 }
+
 trait_holofrixigram_3 = {
 	cost = 0
+	allowed_archetypes = { HOLOARCH }
+	potential_crossbreeding_chance = 0
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
+	sorting_priority = 15
 	initial = no
 	randomized = no
 	modification = no
+	opposites = {
+		trait_hologanglion
+		trait_holofrixigram
+		trait_holofrixigram_2
+		trait_holowarrior
+		trait_holowarrior_2
+	}
+	prerequisites = { tech_synthetic_workers }
 	modifier = {	
 		planet_jobs_minerals_produces_mult = -1.0
 		planet_jobs_energy_produces_mult = 0.9
@@ -278,24 +359,3 @@ trait_holofrixigram_3 = {
 		# pop_war_happiness = -0.05
 	}
 }
-
-#trait_holoverseer = {
-#	cost = 0
-#	initial = no
-#	randomized = no
-#	modification = no
-#
-#	modifier = {	
-#		tile_resource_physics_research_mult = -0.7
-#		tile_resource_society_research_mult = -0.7
-#		tile_resource_engineering_research_mult = -0.7
-#		tile_resource_minerals_mult = -1.0
-#		tile_resource_energy_mult = -1.0
-#		pop_happiness = 0.01
-#		pop_ethic_shift = 0.01
-#		pop_migration_speed = -0.5
-#		pop_resettlement_cost_mult = 0.05
-#		pop_robot_production_output = 0.15
-#		influence_gain_mult = 0.01
-#	}
-#}
