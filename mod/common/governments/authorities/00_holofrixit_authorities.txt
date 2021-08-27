@@ -7,12 +7,15 @@ auth_holofrixit = {
 			value = ethic_fanatic_materialist
 			NOT = { value = ethic_gestalt_consciousness }
 		}
-		civics = {
-			value = civic_technocracy
-		}
+		civics = { value = civic_technocracy }
 	}
 	icon = "gfx/interface/icons/governments/holofrixit_network.dds"
-	random_weight = { base = 0 }
+	random_weight = {
+		base = 0
+		modifier = {
+			factor = 0
+		}
+	}
 	election_type = oligarchic
 	can_have_emergency_elections = yes
 	emergency_election_cost = 300
@@ -25,14 +28,11 @@ auth_holofrixit = {
 		building_time_mult = -0.15
 		armies_upkeep_mult = -0.2
 		planet_jobs_robotic_produces_mult = 0.1
-		# faction_surpression_cost = -0.05 # this no longer exists
 		edicts_influence_cost_mult = -0.05
-		# country_leader_cap = 8 # seems this no longer exists - it would have increased the maximum number of leaders by 8
+		leader_skill_levels = 8
 		country_leader_pool_size = -1
 	}
 	can_reform = no
 	has_factions = yes
-	tags = {
-		AUTHORITY_ELECTION_ON_RULER_DEATH
-	}
+	tags = { AUTHORITY_ELECTION_ON_RULER_DEATH AUTHORITY_ELECTION_ON_EMERGENCY }
 }

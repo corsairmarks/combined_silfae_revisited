@@ -11,7 +11,6 @@ gov_holofrixit = {
 		has_authority = auth_holofrixit
 		custom_tooltip = {
 			text = requires_being_holofrixit
-			has_country_flag = is_holofrixit
 			has_ethic = ethic_fanatic_materialist
 			has_civic = civic_technocracy
 		}
