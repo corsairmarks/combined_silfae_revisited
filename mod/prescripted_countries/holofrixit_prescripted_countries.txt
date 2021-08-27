@@ -43,8 +43,7 @@ holofrixit1 = {
 	ruler = {
 		gender = male
 		name = "Liti-dek"
-		portrait = "holofrixit_male_01"
-		# age = 34
+		portrait = holofrixit_male_01
 		texture = 4
 		hair = -1
 		clothes = -1
@@ -54,9 +53,9 @@ holofrixit1 = {
 		trait = trait_ruler_industrialist
 		trait = trait_ruler_logistic_understanding
 	}
-	spawn_enabled = no
+	spawn_enabled = yes
 	spawn_as_fallen = no
 	ethic = ethic_authoritarian
 	ethic = ethic_fanatic_materialist
-	room = "personality_hive_mind_room"
+	room = personality_hive_mind_room
 }
