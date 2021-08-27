@@ -1,5 +1,18 @@
 namespace = holofrixit_evt
 
+# flag mod as active
+event = {
+	id = holofrixit_evt.13
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = { has_global_flag = holofrixit_revisited_installed }
+	}
+	immediate = {
+		set_global_flag = holofrixit_revisited_installed
+	}
+}
+
 ### Hidden Game Start Event
 event = {
 	id = holofrixit_evt.1

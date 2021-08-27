@@ -1,7 +1,7 @@
-
-# Triggers when the game starts
+# fired when the game starts
 on_game_start = {
 	events = {
+		holofrixit_evt.13 # flag mod as installed
 		holofrixit_evt.1
 	}
 }
