@@ -168,7 +168,6 @@ trait_atrophied_limbs = {
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
 		pop_amenities_usage_mult = 1
-		planet_jobs_slave_produces_mult = -0.75
 		planet_jobs_worker_produces_mult = -0.75
 	}
 	ai_weight = {
