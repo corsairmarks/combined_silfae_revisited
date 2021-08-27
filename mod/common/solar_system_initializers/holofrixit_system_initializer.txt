@@ -1,7 +1,6 @@
 @jumps = 3
 
 holofrixit_system_initializer = {
-	name = "Zessi"
 	class = sc_pulsar
 	asteroid_belt = {
 		type = rocky_asteroid_belt
@@ -22,11 +21,9 @@ holofrixit_system_initializer = {
 	planet = {
 		name = "Ixet"
 		class = star
-		size = 25
 		orbit_distance = 0
 	}
 	planet = {
-		name = "Zixiprat"
 		class = ideal_planet_class
 		orbit_distance = 40
 		orbit_angle = 90
@@ -35,11 +32,12 @@ holofrixit_system_initializer = {
 		home_planet = yes
 		has_ring = no
 		entity = zixiprat_01_entity
+		deposit_blockers = none
 		modifiers = none
 		flags = { holofrixit_system_capital }
 		init_effect = {
-			generate_empire_home_planet = yes
 			prevent_anomaly = yes
+			generate_empire_home_planet = yes
 			create_ambient_object = {
 				type = ancient_battlefield_object
 				location = THIS
@@ -77,11 +75,6 @@ holofrixit_system_initializer = {
 		orbit_angle = 60
 		size = 4
 		has_ring = no
-		flags = { starting_deposit }
-		init_effect = {
-			clear_deposits = yes
-			add_deposit = d_minerals_5 
-		}
 	}
 	planet = {
 		name = "Quikki-X2459"
@@ -90,11 +83,6 @@ holofrixit_system_initializer = {
 		orbit_angle = -310
 		size = 1
 		has_ring = no
-		flags = { starting_deposit }
-		init_effect = {
-			clear_deposits = yes
-			add_deposit = d_minerals_3 
-		}
 	}
 	planet = {
 		name = "Cold Gates - Brah"
@@ -107,90 +95,60 @@ holofrixit_system_initializer = {
 		class = pc_ringworld_seam_damaged
 		orbit_distance = 0
 		orbit_angle = -195
-		init_effect = {
-			prevent_anomaly = yes
-		}
 	}
 	planet = {
 		name = "Cold Gates - Mrae"
 		class = pc_ringworld_seam_damaged
 		orbit_distance = 0
 		orbit_angle = -195
-		init_effect = {
-			prevent_anomaly = yes
-		}
 	}
 	planet = {
 		name = "Cold Gates - Gluhut"
 		class = pc_ringworld_seam_damaged
 		orbit_distance = 0
 		orbit_angle = -195
-		init_effect = {
-			prevent_anomaly = yes
-		}
 	}
 	planet = {
 		name = "Cold Gates - Dru"
 		class = pc_ringworld_tech_damaged
 		orbit_distance = 0
 		orbit_angle = -195
-		init_effect = {
-			prevent_anomaly = yes
-		}
 	}
 	planet = {
 		name = "Cold Gates - Chix"
 		class = pc_ringworld_seam_damaged
 		orbit_distance = 0
 		orbit_angle = -195
-		init_effect = {
-			prevent_anomaly = yes
-		}
 	}
 	planet = {
 		name = "Cold Gates - Zweep"
 		class = pc_ringworld_seam_damaged
 		orbit_distance = 0
 		orbit_angle = -195
-		init_effect = {
-			prevent_anomaly = yes
-		}
 	}
 	planet = {
 		name = "Cold Gates - Glerg"
 		class = pc_ringworld_seam_damaged
 		orbit_distance = 0
 		orbit_angle = -195
-		init_effect = {
-			prevent_anomaly = yes
-		}
 	}
 	planet = {
 		name = "Cold Gates - Xuxx"
 		class = pc_ringworld_habitable_damaged
 		orbit_distance = 0
 		orbit_angle = -195
-		init_effect = {
-			prevent_anomaly = yes
-		}
 	}
 	planet = {
 		name = "Cold Gates - Tsow"
 		class = pc_ringworld_seam_damaged
 		orbit_distance = 0
 		orbit_angle = -195
-		init_effect = {
-			prevent_anomaly = yes
-		}
 	}
 	planet = {
 		name = "Cold Gates - Shult"
 		class = pc_ringworld_habitable_damaged
 		orbit_distance = 0
 		orbit_angle = -195
-		init_effect = {
-			prevent_anomaly = yes
-		}
 	}
 	planet = {
 		name = "Hyppiro"
