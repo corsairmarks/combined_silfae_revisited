@@ -97,7 +97,7 @@ add_random_3_generator_district_deposit = {
 		add_deposit = d_underwater_vent
 	}
 	else = {
-		log = "unable to randomize size 3 generator deposit for class: [This.GetClassName]"
+		log_error = "unable to randomize size 3 generator deposit for class: \\[This.GetClassName]"
 	}
 }
 
@@ -130,7 +130,7 @@ add_random_2_generator_district_deposit = {
 		}
 	}
 	else = {
-		log = "unable to randomize size 2 generator deposit for class: [This.GetClassName]"
+		log_error = "unable to randomize size 2 generator deposit for class: \\[This.GetClassName]"
 	}
 }
 
@@ -155,6 +155,6 @@ add_random_1_generator_district_deposit = {
 		add_deposit = d_buzzing_plains
 	}
 	else = {
-		log = "unable to randomize size 1 generator deposit for class: [This.GetClassName]"
+		log_error = "unable to randomize size 1 generator deposit for class: \\[This.GetClassName]"
 	}
 }
