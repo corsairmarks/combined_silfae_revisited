@@ -202,7 +202,6 @@ portrait_groups = {
 					holofrixit_drone_01
 				}
 			}
-
 		}
 
 		#species scope
