@@ -1,11 +1,9 @@
 # Holofrixit Hive-network
 auth_holofrixit = {
+	potential = { species = { value = HOLOARCH } }
 	possible = {
-		species = { value = HOLOARCH }
-		ethics = {
-			value = ethic_fanatic_materialist
-			NOT = { value = ethic_gestalt_consciousness }
-		}
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		origin = { value = origin_holofrixit }
 	}
 	icon = "gfx/interface/icons/governments/holofrixit_network.dds"
 	random_weight = {

@@ -9,11 +9,6 @@ gov_holofrixit = {
 	should_force_rename = no
 	possible = {
 		has_authority = auth_holofrixit
-		custom_tooltip = {
-			text = requires_being_holofrixit
-			has_ethic = ethic_fanatic_materialist
-			has_civic = civic_technocracy
-		}
 		hidden_trigger = { 
 			NOR = { 
 				is_country_type = fallen_empire
