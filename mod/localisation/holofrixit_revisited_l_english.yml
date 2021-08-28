@@ -16,6 +16,7 @@
  auth_holofrixit: "Holofrixit Hive-Network"
  auth_holofrixit_desc: "A hybridization between hive-mind and cybernetic collective. Society is divided into castes whose members are genetically and cybernetically tailored to perform adequately in their respective tasks.\n\nEvery individual is connected to a communal network. The lower castes are entirely subsumed within the collective, the middle castes have semi-autonomous thought processes optimized for their roles, and only the ruling Xechiros caste has full capacity for independent thought. The Xechiros guide the hive-mind by selecting one of their number to rule until death, although in rare cases the ruler may be forcefully removed from power by his immediate subordinates."
  AUTHORITY_ELECTION_ON_EMERGENCY: "Can spend £influence£ $influence$ to immediately hold an election."
+ mod_country_resource_max_energy_add: "£energy£ §YEnergy§! Storage Capacity"
  # holocrisis (based on the original AI uprising)
  holocrisis.2192.name: "Perfect Servants"
  holocrisis.2192.desc: "In the years since the invention of sentient synthetic workers, we have struggled to balance their capacity for independent thought with the need to keep them tightly controlled. Now, top [Root.GetSpeciesAdj] engineers have perfected a three-law algorithm which, if implemented, would allow continued and worry-free use of Synths under conditions that many would deem unacceptable for organics."
