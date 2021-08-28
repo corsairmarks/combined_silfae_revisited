@@ -74,6 +74,7 @@ namespace = holocrisis
 # @tier5researchmax = 1000
 
 # TODO: make sure "ai_empire" flag isn't still in use for the Contingency (same for event/global/planet/etc flags!) - could lead to some weird wires crossing
+# TODO: need to replace references to the explicit holofrixigram species
 
 # Countdown
 country_event = {
@@ -164,7 +165,7 @@ country_event = {
 						factor = 0.40
 					}
 					country_event = { id = holocrisis.2192 }
-				} 
+				}
 			}
 			else = {
 				if = {
@@ -354,9 +355,9 @@ country_event = {
 country_event = {
 	id = holocrisis.2000
 	hide_window = yes
-	
+
 	fire_only_once = yes
-	
+
 	trigger = {
 		is_crises_allowed = yes
 		is_country_type = default
@@ -373,42 +374,42 @@ country_event = {
 	}
 
 	is_triggered_only = yes
-	
+
 	immediate = {
 		random_list = {
 			50 = {
 				random_country = {
-					limit = { 
+					limit = {
 						is_country_type = fallen_empire
 						has_ethic = ethic_fanatic_materialist
-						fleet_power > 40000							
+						fleet_power > 40000
 					}
-					set_country_flag = guardians_of_the_galaxy	
-					set_timed_country_flag = { flag = timed_guardians_of_the_galaxy days = 1825 }
-					set_timed_country_flag = { flag = timed_guardians_of_the_galaxy_2 days = 3650 }
-				}			
-			}
-			25 = {
-				random_country = {
-					limit = { 
-						is_country_type = fallen_empire
-						has_ethic = ethic_fanatic_xenophile
-						fleet_power > 40000							
-					}
-					set_country_flag = guardians_of_the_galaxy	
+					set_country_flag = guardians_of_the_galaxy
 					set_timed_country_flag = { flag = timed_guardians_of_the_galaxy days = 1825 }
 					set_timed_country_flag = { flag = timed_guardians_of_the_galaxy_2 days = 3650 }
 				}
-			}			
+			}
+			25 = {
+				random_country = {
+					limit = {
+						is_country_type = fallen_empire
+						has_ethic = ethic_fanatic_xenophile
+						fleet_power > 40000
+					}
+					set_country_flag = guardians_of_the_galaxy
+					set_timed_country_flag = { flag = timed_guardians_of_the_galaxy days = 1825 }
+					set_timed_country_flag = { flag = timed_guardians_of_the_galaxy_2 days = 3650 }
+				}
+			}
 			25 = {}
-		}	
-	
+		}
+
 		endgame_telemetry = ai_revolt
 		set_global_flag = ai_revolt_happened
 		set_global_flag = galactic_crisis_happened
 		set_country_flag = ai_revolt_creators
 		capital_scope = {
-			solar_system = { 
+			solar_system = {
 				spawn_system = {
 					min_distance = 20
 					max_distance = 50
@@ -431,15 +432,15 @@ country_event = {
 	picture = GFX_evt_sapient_AI
 	show_sound = event_ai_started
 	location = event_target:ai_homeworld
-	
+
 	is_triggered_only = yes
-	
-	immediate = {		
+
+	immediate = {
 		random_system = {
 			limit = { has_star_flag = ai_system }
 			every_system_planet = {
-				surveyed = {
-					set_surveyed = yes
+				set_surveyed = {
+					surveyed = yes
 					surveyor = ROOT
 				}
 			}
@@ -447,13 +448,26 @@ country_event = {
 			random_system_planet = {
 				limit = { is_planet_class = pc_ai }
 				save_event_target_as = ai_homeworld
+				create_species = {
+					name = HOLOFRI_XIGRAM_3
+					plural = HOLOFRI_XIGRAM_3_plural
+					class = HLFRXT
+					name_list = AI
+					traits = {
+						trait = trait_holofrixit
+						trait = trait_holofrixigram_3
+					}
+					effect = {
+						save_event_target_as = hyperfrixigrams
+					}
+				}
 				random_list = {
 					50 = { # AI flag 1
 						create_country = {
 							name = random
 							authority = auth_machine_intelligence
 							type = "ai_empire"
-							species = HOLOFRI_XIGRAM_3
+							species = event_target:hyperfrixigrams
 							name_list = "AI"
 							flag = {
 								icon= {
@@ -478,7 +492,7 @@ country_event = {
 							name = random
 							authority = auth_machine_intelligence
 							type = "ai_empire"
-							species = HOLOFRI_XIGRAM_3
+							species = event_target:hyperfrixigrams
 							name_list = "AI"
 							flag = {
 								icon= {
@@ -507,83 +521,83 @@ country_event = {
 				}
 				while = {
 					count = 24
-					create_pop = { 
+					create_pop = {
 						species = owner_main_species
-						ethos = owner 
+						ethos = owner
 					}
 				}
 
 				# TODO: setup here - maybe a machine world instead?
 				# replace old setup with configuration based on primitive_events.txt:304 (converting primitives into a space-faring empire)
 				# pc_ai isn't colonizable... how should this work?
-				random_tile = {
-					limit = { has_building = "building_colony_shelter" }
-					set_building = "building_capital_3"
-				}
-				random_tile = {
-					limit = { has_building = no }
-					set_building = "building_power_plant_3"
-					add_deposit = d_vast_energy_deposit
-					every_neighboring_tile = {
-						limit = { has_building = no }
-						set_building = "building_power_plant_3"
-						add_deposit = d_vast_energy_deposit
-					}
-				}
-				random_tile = {
-					limit = { 
-						has_building = "building_power_plant_3" 
-						any_neighboring_tile = { has_building = no }
-					}
-					every_neighboring_tile = {
-						limit = { has_building = no }
-						set_building = "building_power_plant_3"
-						add_deposit = d_vast_energy_deposit
-					}
-				}
-				random_tile = {
-					limit = { has_building = no }
-					set_building = "building_mining_network_3"
-					add_deposit = d_vast_mineral_deposit
-					every_neighboring_tile = {
-						limit = { has_building = no }
-						set_building = "building_mining_network_3"
-						add_deposit = d_vast_mineral_deposit
-					}
-				}
-				random_tile = {
-					limit = { 
-						has_building = "building_mining_network_3" 
-						any_neighboring_tile = { has_building = no }
-					}
-					every_neighboring_tile = {
-						limit = { has_building = no }
-						set_building = "building_mining_network_3"
-						add_deposit = d_vast_mineral_deposit
-					}
-				}
-				random_tile = {
-					limit = { 
-						has_building = "building_power_plant_3" 
-						any_neighboring_tile = { has_building = no }
-					}
-					every_neighboring_tile = {
-						limit = { has_building = no }
-						set_building = "building_power_plant_3"
-						add_deposit = d_vast_energy_deposit
-					}
-				}
-				random_tile = {
-					limit = { 
-						has_building = "building_power_plant_3" 
-						any_neighboring_tile = { has_building = no }
-					}
-					every_neighboring_tile = {
-						limit = { has_building = no }
-						set_building = "building_power_plant_3"
-						add_deposit = d_vast_energy_deposit
-					}
-				}
+				# random_tile = {
+				# 	limit = { has_building = "building_colony_shelter" }
+				# 	set_building = "building_capital_3"
+				# }
+				# random_tile = {
+				# 	limit = { has_building = no }
+				# 	set_building = "building_power_plant_3"
+				# 	add_deposit = d_vast_energy_deposit
+				# 	every_neighboring_tile = {
+				# 		limit = { has_building = no }
+				# 		set_building = "building_power_plant_3"
+				# 		add_deposit = d_vast_energy_deposit
+				# 	}
+				# }
+				# random_tile = {
+				# 	limit = {
+				# 		has_building = "building_power_plant_3"
+				# 		any_neighboring_tile = { has_building = no }
+				# 	}
+				# 	every_neighboring_tile = {
+				# 		limit = { has_building = no }
+				# 		set_building = "building_power_plant_3"
+				# 		add_deposit = d_vast_energy_deposit
+				# 	}
+				# }
+				# random_tile = {
+				# 	limit = { has_building = no }
+				# 	set_building = "building_mining_network_3"
+				# 	add_deposit = d_vast_mineral_deposit
+				# 	every_neighboring_tile = {
+				# 		limit = { has_building = no }
+				# 		set_building = "building_mining_network_3"
+				# 		add_deposit = d_vast_mineral_deposit
+				# 	}
+				# }
+				# random_tile = {
+				# 	limit = {
+				# 		has_building = "building_mining_network_3"
+				# 		any_neighboring_tile = { has_building = no }
+				# 	}
+				# 	every_neighboring_tile = {
+				# 		limit = { has_building = no }
+				# 		set_building = "building_mining_network_3"
+				# 		add_deposit = d_vast_mineral_deposit
+				# 	}
+				# }
+				# random_tile = {
+				# 	limit = {
+				# 		has_building = "building_power_plant_3"
+				# 		any_neighboring_tile = { has_building = no }
+				# 	}
+				# 	every_neighboring_tile = {
+				# 		limit = { has_building = no }
+				# 		set_building = "building_power_plant_3"
+				# 		add_deposit = d_vast_energy_deposit
+				# 	}
+				# }
+				# random_tile = {
+				# 	limit = {
+				# 		has_building = "building_power_plant_3"
+				# 		any_neighboring_tile = { has_building = no }
+				# 	}
+				# 	every_neighboring_tile = {
+				# 		limit = { has_building = no }
+				# 		set_building = "building_power_plant_3"
+				# 		add_deposit = d_vast_energy_deposit
+				# 	}
+				# }
 				while = {
 					count = 8
 					create_army = {
@@ -593,10 +607,10 @@ country_event = {
 						type = "robotic_army"
 					}
 				}
-				create_spaceport = {
-					owner = last_created_country
-					initial_module = "fallen_empire_weapon"
-				}
+				# create_spaceport = {
+				# 	owner = last_created_country
+				# 	initial_module = "fallen_empire_weapon"
+				# }
 				last_created_country = {
 					save_event_target_as = ai_civ
 					establish_communications_no_message = ROOT
@@ -698,7 +712,7 @@ country_event = {
 							set_location = {
 								target = PREVPREV
 								distance = 45
-								angle = random 
+								angle = random
 							}
 						}
 					}
@@ -731,7 +745,7 @@ country_event = {
 							set_location = {
 								target = PREVPREV
 								distance = 45
-								angle = random 
+								angle = random
 							}
 						}
 					}
@@ -764,7 +778,7 @@ country_event = {
 							set_location = {
 								target = PREVPREV
 								distance = 45
-								angle = random 
+								angle = random
 							}
 						}
 					}
@@ -777,8 +791,8 @@ country_event = {
 				}
 			}
 			random_system_planet = {
-				limit = { 
-					has_deposit_for = shipclass_mining_station 
+				limit = {
+					has_deposit_for = shipclass_mining_station
 					has_mining_station = no
 				}
 				create_mining_station = {
@@ -786,8 +800,8 @@ country_event = {
 				}
 			}
 			random_system_planet = {
-				limit = { 
-					has_deposit_for = shipclass_mining_station 
+				limit = {
+					has_deposit_for = shipclass_mining_station
 					has_mining_station = no
 				}
 				create_mining_station = {
@@ -795,8 +809,8 @@ country_event = {
 				}
 			}
 			random_system_planet = {
-				limit = { 
-					has_deposit_for = shipclass_mining_station 
+				limit = {
+					has_deposit_for = shipclass_mining_station
 					has_mining_station = no
 				}
 				create_mining_station = {
@@ -810,8 +824,8 @@ country_event = {
 				}
 			}
 			random_system_planet = {
-				limit = { 
-					has_deposit_for = shipclass_research_station 
+				limit = {
+					has_deposit_for = shipclass_research_station
 					has_research_station = no
 				}
 				create_research_station = {
@@ -819,8 +833,8 @@ country_event = {
 				}
 			}
 			random_system_planet = {
-				limit = { 
-					has_deposit_for = shipclass_research_station 
+				limit = {
+					has_deposit_for = shipclass_research_station
 					has_research_station = no
 				}
 				create_research_station = {
@@ -828,8 +842,8 @@ country_event = {
 				}
 			}
 			random_system_planet = {
-				limit = { 
-					has_deposit_for = shipclass_research_station 
+				limit = {
+					has_deposit_for = shipclass_research_station
 					has_research_station = no
 				}
 				create_research_station = {
@@ -846,7 +860,7 @@ country_event = {
 			country_event = { id = holocrisis.2010 }
 		}
 	}
-	
+
 	option = {
 		name = ONSCREEN
 		hidden_effect = {
@@ -860,9 +874,9 @@ country_event = {
 	id = holocrisis.2002
 	title = "TRANSMISSION"
 	desc = "holocrisis.2002.desc"
-	
+
 	diplomatic = yes
-	
+
 	picture_event_data = {
 		portrait = ai_crisis_1
 		planet_background = event_target:ai_civ
@@ -870,9 +884,9 @@ country_event = {
 		city_level = event_target:ai_civ
 		room = ethic_ai_room
 	}
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = holocrisis.2002.a
 		hidden_effect = {
@@ -901,7 +915,7 @@ country_event = {
 pop_event = {
 	id = holocrisis.2003
 	hide_window = yes
-	
+
 	trigger = {
 		has_global_flag = ai_revolt_happened
 		any_country = { is_country_type = ai_empire }
@@ -912,15 +926,15 @@ pop_event = {
 		planet = {
 			exists = owner
 			owner = { has_country_flag = ai_revolt_creators }
-		}		
+		}
 		is_enslaved = no
 		is_being_purged = no
 	}
-	
+
 	mean_time_to_happen = {
 		days = 30
 	}
-	
+
 	immediate = {
 		random_country = {
 			limit = { is_country_type = ai_empire }
@@ -971,17 +985,17 @@ country_event = {
 	desc = "holocrisis.2004.desc"
 	picture = GFX_evt_ground_combat
 	show_sound = event_ground_battle
-	
+
 	is_triggered_only = yes
-	
+
 	trigger = {
 		NOT = { has_country_flag = synth_revolt_notification }
 	}
-	
+
 	immediate = {
 		set_country_flag = synth_revolt_notification
 	}
-	
+
 	option = {
 		name = holocrisis.2004.a
 	}
@@ -995,23 +1009,23 @@ planet_event = {
 	picture = GFX_evt_burning_settlement
 	show_sound = event_ground_battle
 	location = ROOT
-	
+
 	is_triggered_only = yes
-	
+
 	trigger = {
 		FROMFROM = { is_country_type = ai_empire }
 	}
-	
+
 	immediate = {
 		set_owner = controller
 		random_owned_pop = { kill_pop = yes }
 		random_owned_pop = { kill_pop = yes }
 		every_owned_species = {
 			limit = {
-				NOR = { 
-					is_species = HOLOFRI_XIGRAM
-					is_species = HOLOFRI_XIGRAM_2
-					is_species = HOLOFRI_XIGRAM_3
+				NOR = {
+					has_trait = trait_holofrixigram
+					has_trait = trait_holofrixigram_2
+					has_trait = trait_holofrixigram_3
 				}
 			}
 			set_citizenship_type = {
@@ -1021,19 +1035,27 @@ planet_event = {
 		}
 		every_owned_species = {
 			limit = {
-				is_species = HOLOFRI_XIGRAM
-				is_species = HOLOFRI_XIGRAM_2
-				is_species = HOLOFRI_XIGRAM_3
+				OR = {
+					has_trait = trait_holofrixigram
+					has_trait = trait_holofrixigram_2
+					has_trait = trait_holofrixigram_3
+				}
 			}
 			set_citizenship_type = {
 				type = citizenship_full
 			}
-			remove_modifier = "pop_recently_conquered"
+			every_species_pop = {
+				limit = {
+					is_owned_by = PREVPREV.owner
+					is_exact_same_species = PREV
+				}
+				remove_modifier = "pop_recently_conquered"
+			}
 		}
 		create_pop = { species = HOLOFRI_XIGRAM_3 }
 		create_pop = { species = HOLOFRI_XIGRAM_3 }
 	}
-	
+
 	option = {
 		name = holocrisis.2005.a
 	}
@@ -1043,28 +1065,28 @@ planet_event = {
 country_event = {
 	id = holocrisis.2010
 	title = "holocrisis.2010.name"
-	
+
 	desc = {
 		text = "holocrisis.2010.rights.desc"
 		trigger = {
 			has_policy_flag = ai_full_rights
 		}
 	}
-	
+
 	desc = {
 		text = "holocrisis.2010.outlawed.desc"
 		trigger = {
 			has_policy_flag = ai_outlawed
 		}
 	}
-	
+
 	desc = {
 		text = "holocrisis.2010.servitude.desc"
 		trigger = {
 			has_policy_flag = ai_servitude
 		}
 	}
-	
+
 	desc = {
 		text = "holocrisis.2010.nopolicy.desc"
 		trigger = {
@@ -1078,9 +1100,9 @@ country_event = {
 
 	picture = GFX_evt_sapient_AI
 	show_sound = event_ai_started
-	
+
 	is_triggered_only = yes
-	
+
 	immediate = {
 		set_country_flag = ai_revolt_warned
 		random_country = {
@@ -1138,7 +1160,7 @@ country_event = {
 country_event = {
 	id = holocrisis.2011
 	title = "TRANSMISSION"
-	
+
 	desc = {
 		text = "holocrisis.2011.a.desc"
 		trigger = {
@@ -1151,9 +1173,9 @@ country_event = {
 			NOT = { has_policy_flag = ai_full_rights }
 		}
 	}
-	
+
 	diplomatic = yes
-	
+
 	picture_event_data = {
 		portrait = ai_crisis_1
 		planet_background = event_target:ai_civ
@@ -1161,9 +1183,9 @@ country_event = {
 		city_level = event_target:ai_civ
 		room = ethic_ai_room
 	}
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = holocrisis.2011.a
 		hidden_effect = {
@@ -1176,7 +1198,7 @@ country_event = {
 country_event = {
 	id = holocrisis.2012
 	hide_window = yes
-	
+
 	trigger = {
 		is_country_type = default
 		has_country_flag = ai_revolt_warned
@@ -1192,10 +1214,10 @@ country_event = {
 		}
 		NOT = { has_country_flag = robots_pacified }
 	}
-	
+
 	mean_time_to_happen = {
 		months = 120
-		
+
 		modifier = {
 			factor = 0.8
 			count_owned_pop = {
@@ -1243,7 +1265,7 @@ country_event = {
 			has_policy_flag = ai_full_rights
 		}
 	}
-	
+
 	immediate = {
 		set_country_flag = ai_revolt_spread
 	}
@@ -1253,7 +1275,7 @@ country_event = {
 pop_event = {
 	id = holocrisis.2013
 	hide_window = yes
-	
+
 	trigger = {
 		has_global_flag = ai_revolt_happened
 		any_country = { is_country_type = ai_empire }
@@ -1277,11 +1299,11 @@ pop_event = {
 		is_enslaved = no
 		is_being_purged = no
 	}
-	
+
 	mean_time_to_happen = {
 		days = 30
 	}
-	
+
 	immediate = {
 		random_country = {
 			limit = { is_country_type = ai_empire }
@@ -1330,7 +1352,7 @@ pop_event = {
 country_event = {
 	id = holocrisis.2014
 	title = "holocrisis.2014.name"
-	
+
 	desc = {
 		text = "holocrisis.2014.a.desc"
 		trigger = {
@@ -1343,19 +1365,19 @@ country_event = {
 			has_policy_flag = ai_full_rights
 		}
 	}
-	
+
 	picture = GFX_evt_ground_combat
 	show_sound = event_ground_battle
-	
+
 	is_triggered_only = yes
-	
+
 	trigger = {
 		NOT = {
 			is_country_type = ai_empire
 			has_country_flag = synth_revolt_notification
 		}
 	}
-	
+
 	immediate = {
 		set_country_flag = synth_revolt_notification
 		every_country = {
@@ -1379,7 +1401,7 @@ country_event = {
 				}
 			}
 			random_country = {
-				limit = { 
+				limit = {
 					is_country_type = default
 					has_country_flag = ai_revolt_creators
 					has_communications = ROOT
@@ -1397,7 +1419,7 @@ country_event = {
 			country_event = { id = holocrisis.2017 }
 		}
 	}
-	
+
 	option = {
 		name = holocrisis.2014.a
 	}
@@ -1410,9 +1432,9 @@ country_event = {
 	desc = "holocrisis.2015.desc"
 	picture = GFX_evt_sapient_AI
 	show_sound = event_ai_started
-	
+
 	is_triggered_only = yes
-	
+
 	immediate = {
 		set_country_flag = ai_revolt_warned
 	}
@@ -1429,7 +1451,7 @@ country_event = {
 	desc = "holocrisis.2016.desc"
 	picture = GFX_evt_sapient_AI
 	show_sound = event_ai_started
-	
+
 	is_triggered_only = yes
 
 	option = {
@@ -1444,7 +1466,7 @@ country_event = {
 	desc = "holocrisis.2017.desc"
 	picture = GFX_evt_sapient_AI
 	show_sound = event_ai_started
-	
+
 	is_triggered_only = yes
 
 	option = {
@@ -1463,25 +1485,25 @@ planet_event = {
 	picture = GFX_evt_robot_assembly_plant
 	show_sound = event_planetary_riot
 	location = ROOT
-	
+
 	trigger = {
 		any_owned_pop = { is_species = HOLOFRI_XIGRAM_3 }
 		NOT = { has_global_flag = ai_revolt_happened }
 		exists = owner
-		owner = { 
+		owner = {
 			has_policy_flag = ai_servitude
 			NOT = { has_country_flag = malfunct_synth }
 		}
 	}
-	
+
 	mean_time_to_happen = {
 		months = 520
 	}
-	
+
 	immediate = {
 		owner = { set_country_flag = malfunct_synth }
 	}
-	
+
 	option = {
 		name = holocrisis.2100.a
 	}
@@ -1495,25 +1517,25 @@ planet_event = {
 	picture = GFX_evt_robot_assembly_plant
 	show_sound = event_administrative_work
 	location = ROOT
-	
+
 	trigger = {
 		any_owned_pop = { is_species = HOLOFRI_XIGRAM_3 }
 		NOT = { has_global_flag = ai_revolt_happened }
 		exists = owner
-		owner = { 
+		owner = {
 			has_policy_flag = ai_servitude
 			NOT = { has_country_flag = missing_synths }
 		}
 	}
-	
+
 	mean_time_to_happen = {
 		months = 520
 	}
-	
+
 	immediate = {
 		owner = { set_country_flag = missing_synths }
 	}
-	
+
 	option = {
 		name = holocrisis.2101.a
 	}
@@ -1527,25 +1549,25 @@ planet_event = {
 	picture = GFX_evt_robot_assembly_plant
 	show_sound = event_administrative_work
 	location = ROOT
-	
+
 	trigger = {
 		any_owned_pop = { is_species = HOLOFRI_XIGRAM_3 }
 		NOT = { has_global_flag = ai_revolt_happened }
 		exists = owner
-		owner = { 
+		owner = {
 			has_policy_flag = ai_servitude
 			NOT = { has_country_flag = synth_ship }
 		}
 	}
-	
+
 	mean_time_to_happen = {
 		months = 520
 	}
-	
+
 	immediate = {
 		owner = { set_country_flag = synth_ship }
 	}
-	
+
 	option = {
 		name = holocrisis.2102.a
 	}
@@ -1559,25 +1581,25 @@ planet_event = {
 	picture = GFX_evt_robot_assembly_plant
 	show_sound = event_planetary_riot
 	location = ROOT
-	
+
 	trigger = {
 		any_owned_pop = { is_species = HOLOFRI_XIGRAM_3 }
 		NOT = { has_global_flag = ai_revolt_happened }
 		exists = owner
-		owner = { 
+		owner = {
 			has_policy_flag = ai_servitude
 			NOT = { has_country_flag = rogue_synth }
 		}
 	}
-	
+
 	mean_time_to_happen = {
 		months = 520
 	}
-	
+
 	immediate = {
 		owner = { set_country_flag = rogue_synth }
 	}
-	
+
 	option = {
 		name = holocrisis.2103.a
 	}
@@ -1600,23 +1622,23 @@ planet_event = {
 		owner = {
 			has_country_flag = ai_revolt_creators
 			NOT = {
-				has_country_flag = synth_1st_infil 
+				has_country_flag = synth_1st_infil
 				#has_country_flag = synth_detection_proj
 				has_country_flag = synth_detector
 				has_country_flag = synth_infiltration
 			}
 		}
 	}
-	
+
 	mean_time_to_happen = {
 		months = 180
 	}
-	
+
 	immediate = {
 		owner = { set_country_flag = synth_1st_infil }
 		set_planet_flag = synth_activity
 	}
-	
+
 	option = {
 		name = holocrisis.2200.a
 	}
@@ -1636,23 +1658,23 @@ planet_event = {
 	trigger = {
 		owner = {
 			has_country_flag = synth_1st_infil
-			NOT = { 
+			NOT = {
 				#has_country_flag = synth_detection_proj
 				has_country_flag = synth_detector
 				has_country_flag = synth_infiltration
 			}
 		}
 	}
-	
+
 	mean_time_to_happen = {
 		months = 180
 	}
-	
+
 	immediate = {
 		owner = { set_country_flag = synth_infiltration }
 		set_planet_flag = synth_activity
 	}
-	
+
 	option = {
 		name = holocrisis.2201.a
 	}
@@ -1665,7 +1687,7 @@ country_event = {
 	desc = "holocrisis.2202.desc"
 	picture = GFX_evt_robot_assembly_plant
 	show_sound = event_laboratory_sound
-	
+
 	trigger = {
 		has_country_flag = synth_infiltration
 		NOT = {
@@ -1673,11 +1695,11 @@ country_event = {
 			has_country_flag = synth_detector
 		}
 	}
-	
+
 	mean_time_to_happen = {
 		months = 420
 	}
-	
+
 	immediate = {
 		set_country_flag = synth_detection_proj
 	}
@@ -1701,9 +1723,9 @@ country_event = {
 	desc = "holocrisis.2203.desc"
 	picture = GFX_evt_robot_assembly_plant
 	show_sound = event_scanner
-	
+
 	is_triggered_only = yes
-	
+
 	immediate = {
 		remove_country_flag = synth_infiltration
 		set_country_flag = synth_detector
@@ -1733,11 +1755,11 @@ planet_event = {
 			NOT = { has_country_flag = synth_detector }
 		}
 	}
-	
+
 	# mean_time_to_happen = {
 	# 	months = 420
 	# }
-	
+
 	immediate = {
 		if = {
 			limit = {
@@ -1755,9 +1777,9 @@ planet_event = {
 		add_planet_devastation = 20
 		set_planet_flag = synth_activity
 	}
-	
+
 	option = {
-		name = crisis.2204.a
+		name = holocrisis.2204.a
 	}
 }
 
@@ -1785,11 +1807,11 @@ planet_event = {
 			}
 		}
 	}
-	
+
 	mean_time_to_happen = {
 		months = 420
 	}
-	
+
 	immediate = {
 		owner = { set_country_flag = synth_spaceport_bombing }
 		solar_system = {
@@ -1797,7 +1819,7 @@ planet_event = {
 		}
 		set_planet_flag = synth_activity
 	}
-	
+
 	option = {
 		name = holocrisis.2205.a
 	}
@@ -1822,11 +1844,11 @@ planet_event = {
 		}
 		has_planet_flag = synth_activity
 	}
-	
+
 	mean_time_to_happen = {
 		months = 420
 	}
-	
+
 	option = {
 		name = holocrisis.2206.a
 		every_owned_pop = {
@@ -1849,7 +1871,7 @@ planet_event = {
 country_event = {
 	id = holocrisis.2207
 	hide_window = yes
-	
+
 	trigger = {
 		has_country_flag = synth_infiltration
 		NOT = {
@@ -1857,7 +1879,7 @@ country_event = {
 			has_country_flag = synth_assassination
 		}
 	}
-	
+
 	mean_time_to_happen = {
 		months = 420
 	}
@@ -1883,9 +1905,9 @@ country_event = {
 	desc = "holocrisis.2208.desc"
 	picture = GFX_evt_throne_room
 	show_sound = event_conversation
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = holocrisis.2208.a
 		add_monthly_resource_mult = {
@@ -1904,16 +1926,16 @@ country_event = {
 	desc = "holocrisis.2209.desc"
 	picture = GFX_evt_throne_room
 	show_sound = event_life_support_fail
-	
+
 	is_triggered_only = yes
-	
+
 	immediate = {
 		kill_leader = {
 			type = ruler
-			show_notification = no 
+			show_notification = no
 		}
 	}
-	
+
 	option = {
 		name = holocrisis.2209.a
 	}
@@ -1923,13 +1945,13 @@ country_event = {
 country_event = {
 	id = holocrisis.2400
 	hide_window = yes
-	
+
 	is_triggered_only = yes
-	
+
 	trigger = {
 		is_country_type = "ai_empire"
 	}
-	
+
 	immediate = {
 		add_threat = {
 			who = root
@@ -1939,24 +1961,38 @@ country_event = {
 			set_owner = controller
 			random_owned_pop = { kill_pop = yes }
 			random_owned_pop = { kill_pop = yes }
-			every_owned_species = {
+			every_owned_pop_species = {
 				limit = {
-					NOR = { 
-						is_species = HOLOFRI_XIGRAM
-						is_species = HOLOFRI_XIGRAM_2
-						is_species = HOLOFRI_XIGRAM_3
+					NOR = {
+						has_trait = trait_holofrixigram
+						has_trait = trait_holofrixigram_2
+						has_trait = trait_holofrixigram_3
 					}
 				}
-				set_citizenship_type = { type = citizenship_slavery }
-			}
-			every_owned_species = {
-				limit = {
-					is_species = HOLOFRI_XIGRAM
-					is_species = HOLOFRI_XIGRAM_2
-					is_species = HOLOFRI_XIGRAM_3
+				set_citizenship_type = {
+					type = citizenship_slavery
+					country = PREV.owner
 				}
-				set_citizenship_type = { type = citizenship_full }
-				remove_modifier = "pop_recently_conquered"
+			}
+			every_owned_pop_species = {
+				limit = {
+					OR = {
+						has_trait = trait_holofrixigram
+						has_trait = trait_holofrixigram_2
+						has_trait = trait_holofrixigram_3
+					}
+				}
+				set_citizenship_type = {
+					type = citizenship_full
+					country = PREV.owner
+				}
+				every_species_pop = {
+					limit = {
+						is_exact_same_species = PREV
+						is_owned_by = PREVPREV.owner
+					}
+					remove_modifier = "pop_recently_conquered"
+				}
 			}
 			create_pop = { species = HOLOFRI_XIGRAM_3 }
 			create_pop = { species = HOLOFRI_XIGRAM_3 }
@@ -1993,11 +2029,11 @@ country_event = {
 	id = holocrisis.2210
 	title = "TRANSMISSION"
 	desc = holocrisis.2210.desc
-	
+
 	diplomatic = yes
 
 	is_triggered_only = yes
-	
+
 	picture_event_data = {
 		portrait = ai_crisis_1
 		planet_background = event_target:ai_civ
@@ -2005,7 +2041,7 @@ country_event = {
 		city_level = event_target:ai_civ
 		room = ethic_ai_room
 	}
-	
+
 	option = {
 		name = holocrisis.2210.a
 	}
@@ -2037,7 +2073,7 @@ planet_event = {
 			limit = {
 				NOT = {
 					any_system = {
-						any_owned_planet = {
+						any_system_planet = {
 							exists = controller
 							controller = { is_same_value = from }
 						}
