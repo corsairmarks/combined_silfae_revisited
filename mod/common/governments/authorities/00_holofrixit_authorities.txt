@@ -1,13 +1,11 @@
 # Holofrixit Hive-network
 auth_holofrixit = {
-	playable = { has_country_flag = is_holofrixit }
 	possible = {
 		species = { value = HOLOARCH }
 		ethics = {
 			value = ethic_fanatic_materialist
 			NOT = { value = ethic_gestalt_consciousness }
 		}
-		civics = { value = civic_technocracy }
 	}
 	icon = "gfx/interface/icons/governments/holofrixit_network.dds"
 	random_weight = {
@@ -28,8 +26,7 @@ auth_holofrixit = {
 		building_time_mult = -0.15
 		armies_upkeep_mult = -0.2
 		planet_jobs_robotic_produces_mult = 0.1
-		edicts_influence_cost_mult = -0.05
-		leader_skill_levels = 8
+		edicts_cost_mult = -0.05
 		country_leader_pool_size = -1
 	}
 	can_reform = no
