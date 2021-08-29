@@ -9,6 +9,7 @@ holofrixit1 = {
 		adjective = "Xechiran"
 		name_list = ART1
 		trait = trait_holofrixit
+		trait = trait_holooverseer
 	}
 	name = "Holosphere"
 	adjective = "Xitovirtual"
@@ -22,7 +23,7 @@ holofrixit1 = {
 	authority = auth_holofrixit
 	advisor_voice_type = "l_machine"
 	civics = { civic_technocracy civic_efficient_bureaucracy }
-	origin = origin_default
+	origin = origin_holofrixit
 	empire_flag = {
 		icon = {
 			category = "domination"

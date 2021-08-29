@@ -2,12 +2,31 @@
 on_game_start = {
 	events = {
 		holofrixit_evt.13 # flag mod as installed
-		holofrixit_evt.1
 	}
 }
 
+# fired during empire initialization when starting a new game
+# THIS = country
+empire_init_add_technologies = {
+	events = {
+		holofrixit_evt.3
+	}
+}
+
+# fired during empire initialization when starting a new game
+# THIS = planet, capital
+# FROM = species, founder
+empire_init_capital_planet = {
+	events = {
+		holofrixit_evt.2
+	}
+}
+
+# fired when a country has increased the level of a tech, use last_increased_tech trigger to check tech and level.
+# THIS = country
 on_tech_increased = {
 	events = {
 		holocrisis.2190
+		# holofrixit_evt.4 # TODO upgrade holowarriors and holofrixigrams
 	}
 }
