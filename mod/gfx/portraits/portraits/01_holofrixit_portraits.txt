@@ -14,6 +14,12 @@ portraits = {
 			"gfx/models/portraits/holofrixit/holofrixit_warrior_body_02.dds"
 		}
 	}
+	holofrixit_warrior_11 = {	entity = "portrait_holofrixit_warrior_01_entity"	clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings"
+		character_textures = {
+			"gfx/models/portraits/holofrixit/holofrixit_warrior_body_01.dds"
+			"gfx/models/portraits/holofrixit/holofrixit_warrior_body_02.dds"
+		}
+	}
 	holofrixit_scientist_01 = {	entity = "portrait_holofrixit_drone_01_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings"
 		character_textures = {
 			"gfx/models/portraits/holofrixit/holofrixit_scientist_body_01.dds"
@@ -31,6 +37,35 @@ portraits = {
 	}
 	holofrixit_gram_03 = {	entity = "portrait_holofrixit_drone_01_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings"
 		character_textures = {
+			"gfx/models/portraits/holofrixit/holofrixit_gram_body_03.dds"
+		}
+	}
+	holofrixit_gram_04 = {	entity = "portrait_holofrixit_drone_02_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings"
+		character_textures = {
+			"gfx/models/portraits/holofrixit/holofrixit_gram_body_01.dds"
+		}
+	}
+	holofrixit_gram_05 = {	entity = "portrait_holofrixit_drone_02_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings"
+		character_textures = {
+			"gfx/models/portraits/holofrixit/holofrixit_gram_body_02.dds"
+		}
+	}
+	holofrixit_gram_06 = {	entity = "portrait_holofrixit_drone_02_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings"
+		character_textures = {
+			"gfx/models/portraits/holofrixit/holofrixit_gram_body_03.dds"
+		}
+	}
+	holofrixit_gram_11 = {	entity = "portrait_holofrixit_drone_01_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings"
+		character_textures = {
+			"gfx/models/portraits/holofrixit/holofrixit_gram_body_01.dds"
+			"gfx/models/portraits/holofrixit/holofrixit_gram_body_02.dds"
+			"gfx/models/portraits/holofrixit/holofrixit_gram_body_03.dds"
+		}
+	}
+	holofrixit_gram_12 = {	entity = "portrait_holofrixit_drone_02_entity" clothes_selector = "no_texture" hair_selector = "no_texture"	greeting_sound = "molluscoid_01_greetings"
+		character_textures = {
+			"gfx/models/portraits/holofrixit/holofrixit_gram_body_01.dds"
+			"gfx/models/portraits/holofrixit/holofrixit_gram_body_02.dds"
 			"gfx/models/portraits/holofrixit/holofrixit_gram_body_03.dds"
 		}
 	}
@@ -174,11 +209,9 @@ portrait_groups = {
 					holofrixit_male_13
 					holofrixit_male_14
 					holofrixit_scientist_01
-					holofrixit_warrior_01
-					holofrixit_warrior_02
-					holofrixit_gram_01
-					holofrixit_gram_02
-					holofrixit_gram_03
+					holofrixit_warrior_11
+					holofrixit_gram_11
+					holofrixit_gram_12
 					holofrixit_drone_01
 				}
 			}
@@ -194,11 +227,9 @@ portrait_groups = {
 					holofrixit_female_13
 					holofrixit_female_14
 					holofrixit_scientist_01
-					holofrixit_warrior_01
-					holofrixit_warrior_02
-					holofrixit_gram_01
-					holofrixit_gram_02
-					holofrixit_gram_03
+					holofrixit_warrior_11
+					holofrixit_gram_11
+					holofrixit_gram_12
 					holofrixit_drone_01
 				}
 			}
@@ -208,18 +239,10 @@ portrait_groups = {
 		species = { #generic portrait for a species
 			add = {
 				portraits = {
-					holofrixit_male_01
-					holofrixit_male_02
-					holofrixit_male_03
-					holofrixit_male_04
 					holofrixit_male_11
 					holofrixit_male_12
 					holofrixit_male_13
 					holofrixit_male_14
-					holofrixit_female_01
-					holofrixit_female_02
-					holofrixit_female_03
-					holofrixit_female_04
 					holofrixit_female_11
 					holofrixit_female_12
 					holofrixit_female_13
@@ -232,6 +255,7 @@ portrait_groups = {
 		pop = { #for a specific pop
 			add = {
 				portraits = {
+					# TODO pop-specific outfits
 					holofrixit_drone_01
 				}
 			}
@@ -249,10 +273,6 @@ portrait_groups = {
 					}
 				}
 				portraits = {
-					holofrixit_male_01
-					holofrixit_male_02
-					holofrixit_male_03
-					holofrixit_male_04
 					holofrixit_male_11
 					holofrixit_male_12
 					holofrixit_male_13
@@ -269,10 +289,6 @@ portrait_groups = {
 					}
 				}
 				portraits = {
-					holofrixit_female_01
-					holofrixit_female_02
-					holofrixit_female_03
-					holofrixit_female_04
 					holofrixit_female_11
 					holofrixit_female_12
 					holofrixit_female_13
@@ -324,6 +340,104 @@ portrait_groups = {
 					holofrixit_male_12
 					holofrixit_male_13
 					holofrixit_male_14
+				}
+			}
+		}
+	}
+	holofrixigram = {
+		default = holofrixit_gram_03
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					holofrixit_gram_11
+					holofrixit_gram_12
+				}
+			}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					holofrixit_gram_01
+				}
+			}
+			add = {
+				trigger = { owner = { has_technology = tech_droid_workers } }
+				portraits = {
+					holofrixit_gram_02
+				}
+			}
+			add = {
+				trigger = { owner = { has_technology = tech_synthetic_workers } }
+				portraits = {
+					holofrixit_gram_03
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					holofrixit_gram_01
+				}
+			}
+			add = {
+				trigger = { owner = { has_technology = tech_droid_workers } }
+				portraits = {
+					holofrixit_gram_02
+				}
+			}
+			add = {
+				trigger = { owner = { has_technology = tech_synthetic_workers } }
+				portraits = {
+					holofrixit_gram_03
+				}
+			}
+		}
+
+		#leader scope
+		leader = { #scientists, generals, admirals, governor, envoy
+			add = {
+				portraits = {
+					holofrixit_gram_01
+				}
+			}
+			add = {
+				trigger = { owner = { has_technology = tech_droid_workers } }
+				portraits = {
+					holofrixit_gram_02
+				}
+			}
+			add = {
+				trigger = { owner = { has_technology = tech_synthetic_workers } }
+				portraits = {
+					holofrixit_gram_03
+				}
+			}
+		}
+
+		#leader scope
+		ruler = {
+			add = {
+				portraits = {
+					holofrixit_gram_01
+					holofrixit_gram_04
+				}
+			}
+			add = {
+				trigger = { owner = { has_technology = tech_droid_workers } }
+				portraits = {
+					holofrixit_gram_02
+					holofrixit_gram_05
+				}
+			}
+			add = {
+				trigger = { owner = { has_technology = tech_synthetic_workers } }
+				portraits = {
+					holofrixit_gram_03
+					holofrixit_gram_06
 				}
 			}
 		}
