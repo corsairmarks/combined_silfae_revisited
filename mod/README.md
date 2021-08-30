@@ -84,26 +84,19 @@ An extra special thanks to Silfae for creating and sharing so many detailed, ani
 # TODO add notes about incompatibility with Silicoids
 # Also add note to Silicoids
 
-# TODO consider weak/strong/very strong to help with weighting (intelligent, ingenious, etc)
-# or overwrite pop_jobs (blah)
+# TODO overwrite pop_jobs (blah) + triggers, add notes about jobs overrides
 
 # event on_tech_increased that upgrades them all to the new trait? leave old ones able to be modded (apply template) but special trait(s) can't be removed
 # on_tech_increased to upgrade trait levels automagically (and convert all references - yay ezmode)
 
-# when creating initial ganglions, warriors - use the base species but swap the holodrone to hologanglion/holowarrior/holofrixigram
-# when editing holofrixigrams, consider them as similar robot/droid/synth
-
 # TODO: could add country modifier during a war with +happiness for warriors, -happniess for ganglions
-
-# TODO: need a holo-drone trait image
-
-# look into the gun locators for the unbidden ships
-# C&P for all unbidden ship colors
 
 # TODO: Holofrixit consume energy, probably need to edit pop_categories (no food)
 
 # TODO: Xechiros will only take ruler jobs
 # TODO: require corresponding traits for each leader role
 # => override 
+
+# Caste-restricted leaders
 
 # Battle Thrall military leaders for ?
