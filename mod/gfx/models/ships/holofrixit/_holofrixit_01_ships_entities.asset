@@ -1,22 +1,6 @@
-@destroyer_scale = 7.5
-@corvette_scale = 6.5
-@cruiser_scale = 10.0
-@battleship_scale = 14.0
-@missile_scale = 1.0
-@transport_scale = 9.0
-@colonizer_scale = 12.0
-@science_scale = 1.0
-@constructor_scale = 12.0
-@military_station_small = 5.0
-@military_station_medium = 7.0
-@military_station_large = 9.0
-@orbital_station = 1.5
-@research_station = 1.0
-@mining_station = 2.0
-@terraforming_station = 4.0
+
 @hlfrx_bloom_factor = 0.5
 @exd_dissolve_h = 0.75
-
 
 ###################################################################################
 ###																				###
@@ -93,7 +77,7 @@ entity = {
 	default_state = "idle"
 	state = { name = "idle"			animation = "idle" }
 	state = { name = "moving"		animation = "idle" }
-	state = { name = "death"		animation = "death" }
+	state = { name = "death"		animation = "death" looping = no }
 }
 
 entity = {
@@ -121,6 +105,19 @@ entity = {
 		event = { time = 0 node = "root" particle = "ed_purple_explosion_effect"	keep_particle = yes trigger_once = yes }
 	}
 
+	#locator = { name = "large_gun_01" position = { 0 0 0 } }
+	#locator = { name = "large_gun_02" position = { 0 0 0 } }
+	#locator = { name = "large_gun_03" position = { 0 0 0 } }
+
+	#locator = { name = "large_gun_01_l" position = { 0 0 0 } }
+	#locator = { name = "large_gun_01_r" position = { 0 0 0 } }
+	#locator = { name = "large_gun_02_l" position = { 0 0 0 } }
+	#locator = { name = "large_gun_02_r" position = { 0 0 0 } }
+	#locator = { name = "large_gun_03_l" position = { 0 0 0 } }
+	#locator = { name = "large_gun_03_r" position = { 0 0 0 } }
+
+
+
 	game_data = {
 		uv_animation_speed 		= 0.2
 		uv_animation_direction 	= { 0.0 0.02 }
@@ -137,7 +134,7 @@ entity = {
 	default_state = "idle"
 	state = { name = "idle"			animation = "idle" }
 	state = { name = "moving"		animation = "idle" }
-	state = { name = "death"		animation = "death" }
+	state = { name = "death"		animation = "death" looping = no }
 }
 
 entity = {
@@ -165,6 +162,17 @@ entity = {
 		event = { time = 0 node = "root" particle = "ed_purple_explosion_effect"	keep_particle = yes trigger_once = yes }
 	}
 
+	#locator = { name = "medium_gun_01" position = { 0 0 0 } }
+	#locator = { name = "medium_gun_02" position = { 0 0 0 } }
+	#locator = { name = "medium_gun_03" position = { 0 0 0 } }
+
+	#locator = { name = "medium_gun_01_l" position = { 0 0 0 } }
+	#locator = { name = "medium_gun_02_l" position = { 0 0 0 } }
+	#locator = { name = "medium_gun_03_l" position = { 0 0 0 } }
+	#locator = { name = "medium_gun_01_r" position = { 0 0 0 } }
+	#locator = { name = "medium_gun_02_r" position = { 0 0 0 } }
+	#locator = { name = "medium_gun_03_r" position = { 0 0 0 } }
+
 	game_data = {
 		uv_animation_speed 		= 0.2
 		uv_animation_direction 	= { 0.0 0.02 }
@@ -181,7 +189,7 @@ entity = {
 	default_state = "idle"
 	state = { name = "idle"			animation = "idle" }
 	state = { name = "moving"		animation = "idle" }
-	state = { name = "death"		animation = "death" }
+	state = { name = "death"		animation = "death" looping = no }
 }
 
 entity = {
@@ -240,6 +248,7 @@ entity = {
 	scale = 0.8
 }
 
+
 ###################################################################################
 ###																				###
 ###								CIVILIAN SHIPS									###
@@ -253,15 +262,21 @@ entity = {
 	default_state = "idle"
 	state = { name = "idle"			animation = "idle" }
 	state = { name = "moving"		animation = "idle" }
-	state = { name = "death"		animation = "death" }
+	state = { name = "death"		animation = "death" looping = no }
 }
 
 entity = {
-	name = "holofrixit_01_construction_ship_ed_entity"
+	name = "holofrixit_01_constructor_ed_entity"
 	pdxmesh = "extra_dimensional_01_civilian_mesh"
+	#locator = { name = "test" 	position = { 0 0 -100 } }
+	locator = { name = "bow_node" 	position = { 0 0 -30 } }
 
 	default_state = "idle"
 	state = { name = "idle"		state_time = 5
+		#event = { time = 0 node = test particle = "ed_purple_anchor_construction_effect"	keep_particle = yes trigger_once = yes }
+		#event = { time = 0 node = test particle = "ed_purple_construction_effect"	keep_particle = yes trigger_once = yes }
+		#event = { time = 0 node = "bow_node" particle = "ed_purple_construction_ship_effect"	keep_particle = yes trigger_once = yes }
+
 		event = { time = 0 particle = "extra_dimensional_large_def_ship_effect"	keep_particle = yes trigger_once = yes }
 		event = { time = 0 node = "engine_medium_01" particle = "extradimensional_01_def_exhaust_idle"	keep_particle = yes trigger_once = yes }
 		event = { time = 0 node = "engine_medium_02" particle = "extradimensional_01_def_exhaust_idle"	keep_particle = yes trigger_once = yes }
@@ -274,9 +289,25 @@ entity = {
 		event = { time = 0 node = "engine_medium_02" particle = "extradimensional_01_def_exhaust_moving"	keep_particle = yes trigger_once = yes }
 		event = { time = 0 node = "engine_medium_03" particle = "extradimensional_01_def_exhaust_moving"	keep_particle = yes trigger_once = yes }
 	}
+	state = { name = "working"						state_time = 5		looping = no	next_state = working_looping
+		event = { time = 0 node = "bow_node" particle = "ed_purple_construction_ship_effect"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 particle = "extra_dimensional_large_def_ship_effect"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_medium_01" particle = "extradimensional_01_def_exhaust_idle"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_medium_02" particle = "extradimensional_01_def_exhaust_idle"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_medium_03" particle = "extradimensional_01_def_exhaust_idle"	keep_particle = yes trigger_once = yes }
+		start_event = { trigger_once = yes sound = { soundeffect = "ex_starship_hum" } }
+	}
+	state = { name = "working_looping"				state_time = 5
+		event = { time = 0 node = "bow_node" particle = "ed_purple_construction_ship_effect"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 particle = "extra_dimensional_large_def_ship_effect"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_medium_01" particle = "extradimensional_01_def_exhaust_idle"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_medium_02" particle = "extradimensional_01_def_exhaust_idle"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_medium_03" particle = "extradimensional_01_def_exhaust_idle"	keep_particle = yes trigger_once = yes }
+		start_event = { trigger_once = yes sound = { soundeffect = "ex_starship_hum" } }
+	}
 
 	state = { name = "death"		state_time = 5
-		event = { time = 0 node = "root" particle = "ed_purple_explosion_effect"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 particle = "ed_purple_explosion_effect"	keep_particle = yes trigger_once = yes }
 	}
 
 	locator = { name = "part1" }
@@ -295,8 +326,10 @@ entity = {
 	default_state = "idle"
 	state = { name = "idle"			animation = "idle" }
 	state = { name = "moving"		animation = "idle" }
-	state = { name = "death"		animation = "death" }
+	state = { name = "death"		animation = "death" looping = no }
 }
+
+entity = { name = "holofrixit_01_sponsored_colonizer_entity" clone = "holofrixit_01_colonizer_entity" }
 
 entity = {
 	name = "holofrixit_01_colony_ship_entity"
@@ -337,7 +370,7 @@ entity = {
 	default_state = "idle"
 	state = { name = "idle"			animation = "idle" }
 	state = { name = "moving"		animation = "idle" }
-	state = { name = "death"		animation = "death" }
+	state = { name = "death"		animation = "death" looping = no }
 	game_data = {
 		size = 7.5
 	}
@@ -374,7 +407,7 @@ entity = {
 		uv_animation_direction 	= { 0.0 0.02 }
 		bloom_factor = @hlfrx_bloom_factor
 	}
-	scale = 0.6
+	scale = 0.75
 }
 
 entity = {
@@ -384,7 +417,7 @@ entity = {
 	default_state = "idle"
 	state = { name = "idle"			animation = "idle" }
 	state = { name = "moving"		animation = "idle" }
-	state = { name = "death"		animation = "death" }
+	state = { name = "death"		animation = "death" looping = no }
 }
 
 entity = {
@@ -469,16 +502,20 @@ entity = {
 # CIVILIAN
 entity = {
 	name = "holofrixit_01_mining_station_entity"
+	locator = { name = "part1" 			position = { 0 0 0 } }
+}
+
+entity = {
+	name = "holofrixit_01_mining_station_core_entity"
 	pdxmesh = "extra_dimensional_01_station_small_mesh"
 	scale = @exd_small_station
-
 	locator = { name = "part1" 			position = { 0 0 0 } }
 
 	default_state = "idle"
 	state = { name = "idle"		state_time = 5
 		event = { time = 0 particle = "extra_dimensional_small_def_station_effect"	keep_particle = yes trigger_once = yes }
 		start_event = { trigger_once = yes sound = { soundeffect = "ex_mining_station_signals" } }
-		}
+	}
 	state = { name = "moving"		state_time = 5
 		event = { time = 0 particle = "extra_dimensional_small_def_station_effect"	keep_particle = yes trigger_once = yes }
 	}
@@ -492,6 +529,11 @@ entity = {
 
 entity = {
 	name = "holofrixit_01_research_station_entity"
+	locator = { name = "part1" 	position = { 0 0 0 } }
+}
+
+entity = {
+	name = "holofrixit_01_research_station_core_entity"
 	pdxmesh = "extra_dimensional_01_station_small_mesh"
 	scale = @exd_small_station
 
@@ -501,7 +543,35 @@ entity = {
 	state = { name = "idle"		state_time = 5
 		event = { time = 0 particle = "extra_dimensional_small_def_station_effect"	keep_particle = yes trigger_once = yes }
 		start_event = { trigger_once = yes sound = { soundeffect = "ex_mining_station_signals" } }
-		}
+	}
+	state = { name = "moving"		state_time = 5
+		event = { time = 0 particle = "extra_dimensional_small_def_station_effect"	keep_particle = yes trigger_once = yes }
+	}
+
+	game_data = {
+		uv_animation_speed 		= 0.2
+		uv_animation_direction 	= { 0.0 0.02 }
+		bloom_factor = @hlfrx_bloom_factor
+	}
+}
+
+entity = {
+	name = "holofrixit_01_terraform_station_entity"
+	locator = { name = "part1" 	position = { 0 0 0 } }
+}
+
+entity = {
+	name = "holofrixit_01_terraform_station_core_entity"
+	pdxmesh = "extra_dimensional_01_station_small_mesh"
+	scale = @exd_small_station
+
+	locator = { name = "part1" 			position = { 0 0 0 } }
+
+	default_state = "idle"
+	state = { name = "idle"		state_time = 5
+		event = { time = 0 particle = "extra_dimensional_small_def_station_effect"	keep_particle = yes trigger_once = yes }
+		start_event = { trigger_once = yes sound = { soundeffect = "ex_mining_station_signals" } }
+	}
 	state = { name = "moving"		state_time = 5
 		event = { time = 0 particle = "extra_dimensional_small_def_station_effect"	keep_particle = yes trigger_once = yes }
 	}
@@ -515,6 +585,11 @@ entity = {
 
 entity = {
 	name = "holofrixit_01_wormhole_station_entity"
+	locator = { name = "part1" 	position = { 0 0 0 } }
+}
+
+entity = {
+	name = "holofrixit_01_wormhole_station_core_entity"
 	pdxmesh = "extra_dimensional_01_station_small_mesh"
 	scale = @exd_small_station
 
@@ -522,7 +597,7 @@ entity = {
 	state = { name = "idle"		state_time = 5
 		event = { time = 0 particle = "extra_dimensional_small_def_station_effect"	keep_particle = yes trigger_once = yes }
 		start_event = { trigger_once = yes sound = { soundeffect = "ex_mining_station_signals" } }
-		}
+	}
 	state = { name = "moving"		state_time = 5
 		event = { time = 0 particle = "extra_dimensional_small_def_station_effect"	keep_particle = yes trigger_once = yes }
 	}
@@ -536,6 +611,11 @@ entity = {
 
 entity = {
 	name = "holofrixit_01_observation_station_entity"
+	locator = { name = "part1" 	position = { 0 0 0 } }
+}
+
+entity = {
+	name = "holofrixit_01_observation_station_core_entity"
 	pdxmesh = "extra_dimensional_01_station_small_mesh"
 	scale = @exd_small_station
 
@@ -543,7 +623,7 @@ entity = {
 	state = { name = "idle"		state_time = 5
 		event = { time = 0 particle = "extra_dimensional_small_def_station_effect"	keep_particle = yes trigger_once = yes }
 		start_event = { trigger_once = yes sound = { soundeffect = "ex_mining_station_signals" } }
-		}
+	}
 	state = { name = "moving"		state_time = 5
 		event = { time = 0 particle = "extra_dimensional_small_def_station_effect"	keep_particle = yes trigger_once = yes }
 	}
@@ -557,9 +637,11 @@ entity = {
 
 # MILITARY
 entity = {
-	name = "holofrixit_01_military_station_large_ed_entity"
+	name = "holofrixit_01_military_station_large_core_entity"
 	pdxmesh = "extra_dimensional_01_station_large_mesh"
 	locator = { name = "part1" 	position = { 0 0 0 } }
+	locator = { name = "root" 	position = { 0 0 0 } }
+	locator = { name = "death_locator" 	position = { 0 0 0 } rotation = { 45 0 0 } }
 
 	locator = { name = "medium_gun_01" position = { 0 0 0 } }
 	locator = { name = "medium_gun_02" position = { 0 0 0 } }
@@ -573,9 +655,13 @@ entity = {
 	state = { name = "idle"		state_time = 5
 		event = { time = 0 particle = "extra_dimensional_large_def_station_effect"	keep_particle = yes trigger_once = yes }
 		start_event = { trigger_once = yes sound = { soundeffect = "ex_mining_station_signals" } }
-		}
+	}
 	state = { name = "moving"		state_time = 5
 		event = { time = 0 particle = "extra_dimensional_large_def_station_effect"	keep_particle = yes trigger_once = yes }
+	}
+
+	state = { name = "death"		state_time = 5		looping = no
+		event = { time = 0 node = "death_locator" particle = "ed_purple_explosion_effect"	keep_particle = yes trigger_once = yes }
 	}
 
 	game_data = {
@@ -587,8 +673,25 @@ entity = {
 
 entity = {
 	name = "holofrixit_01_military_station_small_ed_entity"
+	locator = { name = "part1" 	position = { 0 0 0 } }
+
+	game_data = {
+  		raytrace_projectiles = no
+  		dissolve_on_death = 3.0
+		ship_color = hsv { 0.75 1.0 0.75 1.0 }
+ 	}
+
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 }
+	state = { name = "death" state_time = 7 looping = no }
+}
+
+entity = {
+	name = "holofrixit_01_military_station_small_core_entity"
 	pdxmesh = "extra_dimensional_01_station_small_mesh"
 	locator = { name = "part1" 	position = { 0 0 0 } }
+	locator = { name = "root" 	position = { 0 0 0 } }
+	locator = { name = "death_locator" 	position = { 0 -2 0 } rotation = { 35 0 0 } }
 	scale = @exd_small_station
 
 	default_state = "idle"
@@ -599,110 +702,8 @@ entity = {
 	state = { name = "moving"		state_time = 5
 		event = { time = 0 particle = "extra_dimensional_small_def_station_effect"	keep_particle = yes trigger_once = yes }
 	}
-
-	game_data = {
-		uv_animation_speed 		= 0.2
-		uv_animation_direction 	= { 0.0 0.02 }
-		bloom_factor = @hlfrx_bloom_factor
-	}
-}
-
-##################         	 CONSTRUCTION ENTITIES           ########################
-
-entity = {
-	name = "holofrixit_01_military_station_large_ed_construction_entity"
-	pdxmesh = "extra_dimensional_01_station_large_mesh"
-
-	default_state = "idle"
-	state = { name = "idle"		state_time = 5
-		event = { time = 0 particle = "extra_dimensional_large_def_station_effect"	keep_particle = yes trigger_once = yes }	}
-	state = { name = "moving"		state_time = 5
-		event = { time = 0 particle = "extra_dimensional_large_def_station_effect"	keep_particle = yes trigger_once = yes }
-	}
-
-	scale = @exd_large_station
-}
-#green
-entity = {
-	name = "holofrixit_01_military_station_large_construction_green_entity"
-	pdxmesh = "extra_dimensional_01_station_large_green_mesh"
-
-	default_state = "idle"
-	state = { name = "idle"		state_time = 5
-		event = { time = 0 particle = "extra_dimensional_large_green_station_effect"	keep_particle = yes trigger_once = yes }	}
-	state = { name = "moving"		state_time = 5
-		event = { time = 0 particle = "extra_dimensional_large_green_station_effect"	keep_particle = yes trigger_once = yes }
-	}
-
-	scale = @exd_large_station
-}
-#orange
-entity = {
-	name = "holofrixit_01_military_station_large_construction_orange_entity"
-	pdxmesh = "extra_dimensional_01_station_large_orange_mesh"
-
-	default_state = "idle"
-	state = { name = "idle"		state_time = 5
-		event = { time = 0 particle = "extra_dimensional_large_orange_station_effect"	keep_particle = yes trigger_once = yes }	}
-	state = { name = "moving"		state_time = 5
-		event = { time = 0 particle = "extra_dimensional_large_orange_station_effect"	keep_particle = yes trigger_once = yes }
-	}
-
-	scale = @exd_large_station
-}
-
-entity = {
-	name = "holofrixit_01_military_station_small_ed_construction_entity"
-	pdxmesh = "extra_dimensional_01_station_small_mesh"
-
-	default_state = "idle"
-	state = { name = "idle"		state_time = 5
-		event = { time = 0 particle = "extra_dimensional_small_def_station_effect"	keep_particle = yes trigger_once = yes }	}
-	state = { name = "moving"		state_time = 5
-		event = { time = 0 particle = "extra_dimensional_small_def_station_effect"	keep_particle = yes trigger_once = yes }
-	}
-
-	scale = @exd_small_station
-}
-#green
-entity = {
-	name = "holofrixit_01_military_station_medium_construction_green_entity"
-	pdxmesh = "extra_dimensional_01_station_small_green_mesh"
-
-	default_state = "idle"
-	state = { name = "idle"		state_time = 5
-		event = { time = 0 particle = "extra_dimensional_small_green_station_effect"	keep_particle = yes trigger_once = yes }	}
-	state = { name = "moving"		state_time = 5
-		event = { time = 0 particle = "extra_dimensional_small_green_station_effect"	keep_particle = yes trigger_once = yes }
-	}
-
-	scale = @exd_small_station
-}
-#orange
-entity = {
-	name = "holofrixit_01_military_station_medium_construction_orange_entity"
-	pdxmesh = "extra_dimensional_01_station_small_orange_mesh"
-
-	default_state = "idle"
-	state = { name = "idle"		state_time = 5
-		event = { time = 0 particle = "extra_dimensional_small_orange_station_effect"	keep_particle = yes trigger_once = yes }	}
-	state = { name = "moving"		state_time = 5
-		event = { time = 0 particle = "extra_dimensional_small_orange_station_effect"	keep_particle = yes trigger_once = yes }
-	}
-
-	scale = @exd_small_station
-}
-
-entity = {
-	name = "holofrixit_01_mi_entity"
-	pdxmesh = "extra_dimensional_01_station_small_green_mesh"
-	scale = @exd_small_station
-
-	default_state = "idle"
-	state = { name = "idle"		state_time = 5
-		event = { time = 0 particle = "extra_dimensional_small_def_station_effect"	keep_particle = yes trigger_once = yes }	}
-	state = { name = "moving"		state_time = 5
-		event = { time = 0 particle = "extra_dimensional_small_def_station_effect"	keep_particle = yes trigger_once = yes }
+	state = { name = "death"		state_time = 5
+		event = { time = 0 node = "death_locator" particle = "ed_purple_explosion_effect"	keep_particle = yes trigger_once = yes }
 	}
 
 	game_data = {
@@ -712,108 +713,9 @@ entity = {
 	}
 }
 
-#green
-entity = {
-	name = "holofrixit_01_science_station_green_entity"
-	pdxmesh = "extra_dimensional_01_station_small_green_mesh"
-	scale = @exd_small_station
-
-	game_data = {
-		uv_animation_speed 		= 0.2
-		uv_animation_direction 	= { 0.0 0.02 }
-		bloom_factor = @hlfrx_bloom_factor
-	}
-}
-#orange
-entity = {
-	name = "holofrixit_01_science_station_orange_entity"
-	pdxmesh = "extra_dimensional_01_station_small_orange_mesh"
-	scale = @exd_small_station
-
-	game_data = {
-		uv_animation_speed 		= 0.2
-		uv_animation_direction 	= { 0.0 0.02 }
-		bloom_factor = @hlfrx_bloom_factor
-	}
-}
-
-entity = {
-	name = "holofrixit_01_terraform_station_entity"
-	pdxmesh = "extra_dimensional_01_station_small_mesh"
-	scale = @exd_small_station
-
-	game_data = {
-		uv_animation_speed 		= 0.2
-		uv_animation_direction 	= { 0.0 0.02 }
-		bloom_factor = @hlfrx_bloom_factor
-	}
-}
-#green
-entity = {
-	name = "holofrixit_01_terraform_station_core_green_entity"
-	pdxmesh = "extra_dimensional_01_station_small_green_mesh"
-	scale = @exd_small_station
-
-	game_data = {
-		uv_animation_speed 		= 0.2
-		uv_animation_direction 	= { 0.0 0.02 }
-		bloom_factor = @hlfrx_bloom_factor
-	}
-}
-#orange
-entity = {
-	name = "holofrixit_01_terraform_station_core_orange_entity"
-	pdxmesh = "extra_dimensional_01_station_small_orange_mesh"
-	scale = @exd_small_station
-
-	game_data = {
-		uv_animation_speed 		= 0.2
-		uv_animation_direction 	= { 0.0 0.02 }
-		bloom_factor = @hlfrx_bloom_factor
-	}
-}
-
-### SPECIAL
-
-# Dimensional Portal
-entity = {
-	name = "holofrixit_01_dimensional_portal_ed_entity"
-	scale = 1
-
-	locator = {
-		name = "root"
-	}
-}
-
-# Dimensional Portal
-entity = {
-	name = "holofrixit_01_dimensional_portal_ed_blue_entity"
-	pdxmesh = "portal_mesh"
-
-	locator = { name = "part1" 	position = { 0 0 0 } }
-
-	default_state = idle
-	state = { name = "idle"		animation = "idle"		animation_blend_time = 0.3
-		start_event = { trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_idle" } }
-
-		event = { time = 0 node = "root2" particle = "portal_inner_effect_particle" keep_particle = yes trigger_once = yes }
-		event = { time = 0 node = "clock_12_locator" particle = "portal_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
-		event = { time = 0 node = "clock_3_locator" particle = "portal_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
-		event = { time = 0 node = "clock_6_locator" particle = "portal_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
-		event = { time = 0 node = "clock_9_locator" particle = "portal_effect_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "ex_dimensional_portal_thunder" } }
-	}
-
-	#game_data = {
-	#	uv_animation_speed 		= 0.25
-	#	uv_animation_direction 	= { 0.0 -1.0 }
-	#}
-
-	scale = 30.0
-}
-
-########################################################
-########################################################
-########################################################
+#########################################################
+####		STANDARD SHIP SECTIONS (invisible)		#####
+#########################################################
 
 entity = {
 	name = "holofrixit_01_corvette_entity"
@@ -840,6 +742,22 @@ entity = {
 		event = { time = 0 node = "root" particle = "ed_purple_explosion_effect"	keep_particle = yes trigger_once = yes }
 	}
 
+	locator = { name = "part1" position = { 0 0 0 } }
+
+	# actual positions taken from mesh file
+
+	#locator = { name = "medium_gun_01" position = { 0 2.24 -5.68 } }
+	#locator = { name = "medium_gun_01_l" position = { 3.17 2.24 -5.68 } }
+	#locator = { name = "medium_gun_01_r" position = { -2.62 2.24 -5.68 } }
+
+	#locator = { name = "medium_gun_02" position = { 0 -0.39 3.7 } }
+	#locator = { name = "medium_gun_02_l" position = { 2.62 -0.05 4.04 } }
+	#locator = { name = "medium_gun_02_r" position = { -2.55 -0.05 4.04 } }
+
+	#locator = { name = "medium_gun_03" position = { 0 1.6 11.44 } }
+	#locator = { name = "medium_gun_03_l" position = { 2.4 2.84 12 } }
+	#locator = { name = "medium_gun_03_r" position = { -2.52 2.84 12 } }
+
 	game_data = {
 		uv_animation_speed 		= 0.2
 		uv_animation_direction 	= { 0.0 0.02 }
@@ -849,10 +767,9 @@ entity = {
 }
 
 entity = {
-		name = "holofrixit_01_destroyer_entity"
-		pdxmesh = "extra_dimensional_01_warship_medium_mesh"
-		locator = { name = "part1" }
-		scale = 0.8
+	name = "holofrixit_01_destroyer_entity"
+	pdxmesh = "extra_dimensional_01_warship_medium_mesh"
+	scale = 0.8
 
 	default_state = "idle"
 	state = { name = "idle"		state_time = 5
@@ -871,12 +788,32 @@ entity = {
 		event = { time = 0 node = "root" particle = "ed_purple_explosion_effect"	keep_particle = yes trigger_once = yes }
 	}
 
-		game_data = {
-			uv_animation_speed 		= 0.2
-			uv_animation_direction 	= { 0.0 0.02 }
-			bloom_factor = @hlfrx_bloom_factor
-		}
+	locator = { name = "part1" position = { 0 0 0 } }
+	locator = { name = "part2" position = { 0 0 0 } }
 
+	# actual positions taken from mesh file
+
+	#locator = { name = "large_gun_01" position = { 0 2.79 7.61 } }
+	#locator = { name = "large_gun_01_l" position = { 1.08 2.79 7.03 } }
+	#locator = { name = "large_gun_01_l_l" position = { 2.47 2.79 6.61 } }
+	#locator = { name = "large_gun_01_l_r" position = { 0.25 2.79 7.14 } }
+	#locator = { name = "large_gun_01_r" position = { -1.83 2.79 6.89 } }
+	#locator = { name = "large_gun_01_r_l" position = { -1.11 2.79 6.89 } }
+	#locator = { name = "large_gun_01_r_r" position = { -2.44 2.79 6.89 } }
+
+	#locator = { name = "medium_gun_01" position = { 0 1.8 -9.9 } }
+	#locator = { name = "medium_gun_01_l" position = { 2.38 1.8 -9.9 } }
+	#locator = { name = "medium_gun_01_r" position = { -2.5 1.8 -9.9 } }
+
+	#locator = { name = "medium_gun_02" position = { 0 4.31 0.51 } }
+	#locator = { name = "medium_gun_02_l" position = { 1.74 4.31 0.51 } }
+	#locator = { name = "medium_gun_02_r" position = { -2.08 4.31 0.51 } }
+
+	game_data = {
+		uv_animation_speed 		= 0.2
+		uv_animation_direction 	= { 0.0 0.02 }
+		bloom_factor = @hlfrx_bloom_factor
+	}
 }
 
 entity = {
@@ -903,6 +840,23 @@ entity = {
 	state = { name = "death"		state_time = 5
 		event = { time = 0 node = "root" particle = "ed_purple_explosion_effect"	keep_particle = yes trigger_once = yes }
 	}
+
+	locator = { name = "part1" position = { 0 0 0 } }
+	locator = { name = "part2" position = { 0 0 0 } }
+	locator = { name = "part3" position = { 0 0 0 } }
+
+	#locator = { name = "large_gun_01" position = { 0 1.89 -20.35 } }
+	#locator = { name = "large_gun_01_l" position = { 3.7 1.89 -20.35 } }
+	#locator = { name = "large_gun_01_r" position = { -3.53 1.89 -20.35 } }
+
+	#locator = { name = "large_gun_02" position = { 0 2.98 -4.61 } }
+	#locator = { name = "large_gun_02_l" position = { 2.95 2.98 -4.61 } }
+	#locator = { name = "large_gun_02_r" position = { -3.06 2.98 -4.61 } }
+
+	#locator = { name = "large_gun_03" position = { 0 4.61 14.03 } }
+	#locator = { name = "large_gun_03_l" position = { 5.85 4.61 14.03 } }
+	#locator = { name = "large_gun_03_r" position = { -5.93 4.61 14.03 } }
+
 	game_data = {
 		uv_animation_speed 		= 0.2
 		uv_animation_direction 	= { 0.0 0.02 }
@@ -934,7 +888,12 @@ entity = {
 		event = { time = 0 node = "root" particle = "ed_purple_explosion_effect"	keep_particle = yes trigger_once = yes }
 	}
 
-	locator = { name = "part1" }
+	locator = { name = "part1" position = { 0 0 0 } }
+	locator = { name = "part2" position = { 0 0 0 } }
+	locator = { name = "part3" position = { 0 0 0 } }
+
+	# the civilian ship mesh has no weapon locators for reference, so the sections will just put them at 0 0 0
+	
 	game_data = {
 		uv_animation_speed 		= 0.2
 		uv_animation_direction 	= { 0.0 0.09 }
@@ -945,7 +904,6 @@ entity = {
 
 entity = {
 	name = "holofrixit_01_corvette_M1S1_entity"
-	pdxmesh = "locator_mesh"
 
 	default_state = "idle"
 	state = { name = "idle" state_time = 5
@@ -963,11 +921,15 @@ entity = {
 		event = { time = 0 node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
 	}
 	state = { name = "death" state_time = 5 }
+
+	locator = { name = "small_gun_01" position = { 0 2.24 -5.68 } }
+	locator = { name = "medium_gun_01" position = { 0 -0.39 3.7 } }
+	#locator = { name = "medium_gun_03" position = { 0 1.6 11.44 } }
 }
 
 entity = {
 	name = "holofrixit_01_corvette_S3_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = "idle"
 	state = { name = "idle" state_time = 5
@@ -987,11 +949,15 @@ entity = {
 		event = { time = 0 node = "light_locator_02" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
 	}
 	state = { name = "death" state_time = 5 }
+	
+	locator = { name = "small_gun_01" position = { 0 2.24 -5.68 } }
+	locator = { name = "small_gun_02" position = { 0 -0.39 3.7 } }
+	locator = { name = "small_gun_03" position = { 0 1.6 11.44 } }
 }
 
 entity = {
 	name = "holofrixit_01_corvette_S1_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = "idle"
 	state = { name = "idle" state_time = 5
@@ -1009,16 +975,23 @@ entity = {
 		event = { time = 0 node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
 	}
 	state = { name = "death" state_time = 5 }
+
+	locator = { name = "small_gun_01" position = { 0 2.24 -5.68 } }
+	#locator = { name = "medium_gun_02" position = { 0 -0.39 3.7 } }
+	#locator = { name = "medium_gun_03" position = { 0 1.6 11.44 } }
 }
 
+# BOW
 entity = {
 	name = "holofrixit_01_destroyer_bow_L1_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
+
+	locator = { name = "large_gun_01" position = { 0 2.79 7.61 } }
 }
 
 entity = {
 	name = "holofrixit_01_destroyer_bow_M1S2_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = "idle"
 	state = { name = "idle" state_time = 5
@@ -1030,11 +1003,15 @@ entity = {
 		event = { time = 0 node = "light_locator_02" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
 	}
 	state = { name = "death" state_time = 5 }
+
+	locator = { name = "medium_gun_01" position = { 0 2.79 7.61 } }
+	locator = { name = "small_gun_01" position = { 1.08 2.79 7.03 } }
+	locator = { name = "small_gun_02" position = { -1.83 2.79 6.89 } }
 }
 
 entity = {
 	name = "holofrixit_01_destroyer_bow_S3_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = "idle"
 	state = { name = "idle" state_time = 5
@@ -1046,12 +1023,16 @@ entity = {
 		event = { time = 0 node = "light_locator_02" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
 	}
 	state = { name = "death" state_time = 5 }
+
+	locator = { name = "small_gun_01" position = { 0 2.79 7.61 } }
+	locator = { name = "small_gun_02" position = { 1.08 2.79 7.03 } }
+	locator = { name = "small_gun_03" position = { -1.83 2.79 6.89 } }
 }
 
 # STERN
 entity = {
 	name = "holofrixit_01_destroyer_stern_S2_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = "idle"
 	state = { name = "idle" state_time = 5
@@ -1069,11 +1050,14 @@ entity = {
 		event = { time = 0 node = "light_locator_02" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
 	}
 	state = { name = "death" state_time = 5 }
+
+	locator = { name = "small_gun_01" position = { 0 1.8 -9.9 } }
+	locator = { name = "small_gun_02" position = { 0 4.31 0.51 } }
 }
 
 entity = {
 	name = "holofrixit_01_destroyer_stern_M1_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = "idle"
 	state = { name = "idle" state_time = 5
@@ -1091,12 +1075,14 @@ entity = {
 		event = { time = 0 node = "light_locator_02" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
 	}
 	state = { name = "death" state_time = 5 }
+
+	locator = { name = "medium_gun_01" position = { 0 1.8 -9.9 } }
 }
 
 # BOW
 entity = {
 	name = "holofrixit_01_cruiser_bow_L1_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = "idle"
 	state = { name = "idle" state_time = 5
@@ -1108,11 +1094,14 @@ entity = {
 		event = { time = 0 node = "light_locator_02" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
 	}
 	state = { name = "death" state_time = 5 }
+
+	locator = { name = "large_gun_01" position = { 0 0 0 } }
+
 }
 
 entity = {
 	name = "holofrixit_01_cruiser_bow_M1S2_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = "idle"
 	state = { name = "idle" state_time = 5
@@ -1122,11 +1111,15 @@ entity = {
 		event = { time = 0 node = "light_locator_01" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
 	}
 	state = { name = "death" state_time = 5 }
+
+	locator = { name = "medium_gun_01" position = { 0 0 0 } }
+	locator = { name = "small_gun_01" position = { 0 0 0 } }
+	locator = { name = "small_gun_02" position = { 0 0 0 } }
 }
 
 entity = {
 	name = "holofrixit_01_cruiser_bow_M2_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = "idle"
 	state = { name = "idle" state_time = 5
@@ -1138,12 +1131,15 @@ entity = {
 		event = { time = 0 node = "light_locator_02" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
 	}
 	state = { name = "death" state_time = 5 }
+
+	locator = { name = "medium_gun_01" position = { 0 0 0 } }
+	locator = { name = "medium_gun_02" position = { 0 0 0 } }
 }
 
 # MID
 entity = {
 	name = "holofrixit_01_cruiser_mid_S2HB_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = "idle"
 	state = { name = "idle" state_time = 5
@@ -1154,16 +1150,19 @@ entity = {
 	}
 	state = { name = "death" state_time = 5 }
 
+	locator = { name = "small_gun_01" position = { 0 0 0 } }
+	locator = { name = "small_gun_02" position = { 0 0 0 } }
+
 	#TEMP LOCATOR REPLACE IN SCENE
-	#locator = {
-	#	name = "strike_craft_locator_01"
-	#	rotation = { -90 0 0 }
-	#}
+	locator = {
+		name = "strike_craft_locator_01"
+		rotation = { -90 0 0 }
+	}
 }
 
 entity = {
 	name = "holofrixit_01_cruiser_mid_L1M1_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = "idle"
 	state = { name = "idle" state_time = 5
@@ -1175,11 +1174,14 @@ entity = {
 		event = { time = 0 node = "light_locator_02" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
 	}
 	state = { name = "death" state_time = 5 }
+
+	locator = { name = "large_gun_01" position = { 0 0 0 } }
+	locator = { name = "medium_gun_01" position = { 0 0 0 } }
 }
 
 entity = {
 	name = "holofrixit_01_cruiser_mid_M3_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = "idle"
 	state = { name = "idle" state_time = 5
@@ -1191,11 +1193,15 @@ entity = {
 		event = { time = 0 node = "light_locator_02" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
 	}
 	state = { name = "death" state_time = 5 }
+
+	locator = { name = "medium_gun_01" position = { 0 0 0 } }
+	locator = { name = "medium_gun_02" position = { 0 0 0 } }
+	locator = { name = "medium_gun_03" position = { 0 0 0 } }
 }
 
 entity = {
 	name = "holofrixit_01_cruiser_mid_M2S2_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = "idle"
 	state = { name = "idle" state_time = 5
@@ -1207,12 +1213,17 @@ entity = {
 		event = { time = 0 node = "light_locator_02" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
 	}
 	state = { name = "death" state_time = 5 }
+
+	locator = { name = "medium_gun_01" position = { 0 0 0 } }
+	locator = { name = "medium_gun_02" position = { 0 0 0 } }
+	locator = { name = "small_gun_01" position = { 0 0 0 } }
+	locator = { name = "small_gun_02" position = { 0 0 0 } }
 }
 
 # STERN
 entity = {
 	name = "holofrixit_01_cruiser_stern_M1_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = "idle"
 	state = { name = "idle" state_time = 5
@@ -1236,11 +1247,13 @@ entity = {
 		event = { time = 0 node = "light_locator_02" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
 	}
 	state = { name = "death" state_time = 5 }
+
+	locator = { name = "medium_gun_01" position = { 0 0 0 } }
 }
 
 entity = {
 	name = "holofrixit_01_cruiser_stern_S2_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = "idle"
 	state = { name = "idle" state_time = 5
@@ -1264,12 +1277,15 @@ entity = {
 		event = { time = 0 node = "light_locator_02" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
 	}
 	state = { name = "death" state_time = 5 }
+
+	locator = { name = "small_gun_01" position = { 0 0 0 } }
+	locator = { name = "small_gun_02" position = { 0 0 0 } }
 }
 
 # BOW
 entity = {
 	name = "holofrixit_01_battleship_bow_L1M1S2_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = "idle"
 	state = { name = idle	state_time = 5
@@ -1283,11 +1299,23 @@ entity = {
 	}
 
 	state = { name = "death" state_time = 5 }
+
+	locator = { name = "large_gun_01" position = { 0 1.89 -20.35 } }
+	locator = { name = "small_gun_01" position = { 3.7 1.89 -20.35 } }
+	locator = { name = "small_gun_02" position = { -3.53 1.89 -20.35 } }
+
+	locator = { name = "medium_gun_01" position = { 0 2.98 -4.61 } }
+	#locator = { name = "large_gun_02_l" position = { 2.95 2.98 -4.61 } }
+	#locator = { name = "large_gun_02_r" position = { -3.06 2.98 -4.61 } }
+
+	#locator = { name = "large_gun_03" position = { 0 4.61 14.03 } }
+	#locator = { name = "large_gun_03_l" position = { 5.85 4.61 14.03 } }
+	#locator = { name = "large_gun_03_r" position = { -5.93 4.61 14.03 } }
 }
 
 entity = {
 	name = "holofrixit_01_battleship_bow_L1S4_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = "idle"
 	state = { name = idle	state_time = 5
@@ -1301,11 +1329,23 @@ entity = {
 	}
 
 	state = { name = "death" state_time = 5 }
+
+	locator = { name = "large_gun_01" position = { 0 1.89 -20.35 } }
+	locator = { name = "small_gun_02" position = { 3.7 1.89 -20.35 } }
+	locator = { name = "small_gun_02" position = { -3.53 1.89 -20.35 } }
+
+	#locator = { name = "large_gun_02" position = { 0 2.98 -4.61 } }
+	locator = { name = "small_gun_03" position = { 2.95 2.98 -4.61 } }
+	locator = { name = "small_gun_04" position = { -3.06 2.98 -4.61 } }
+
+	#locator = { name = "large_gun_03" position = { 0 4.61 14.03 } }
+	#locator = { name = "large_gun_03_l" position = { 5.85 4.61 14.03 } }
+	#locator = { name = "large_gun_03_r" position = { -5.93 4.61 14.03 } }
 }
 
 entity = {
 	name = "holofrixit_01_battleship_bow_L2_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = "idle"
 	state = { name = idle	state_time = 5
@@ -1319,11 +1359,23 @@ entity = {
 	}
 
 	state = { name = "death" state_time = 5 }
+
+	#locator = { name = "large_gun_01" position = { 0 1.89 -20.35 } }
+	locator = { name = "large_gun_01" position = { 3.7 1.89 -20.35 } }
+	locator = { name = "large_gun_02" position = { -3.53 1.89 -20.35 } }
+
+	#locator = { name = "large_gun_02" position = { 0 2.98 -4.61 } }
+	#locator = { name = "large_gun_02_l" position = { 2.95 2.98 -4.61 } }
+	#locator = { name = "large_gun_02_r" position = { -3.06 2.98 -4.61 } }
+
+	#locator = { name = "large_gun_03" position = { 0 4.61 14.03 } }
+	#locator = { name = "large_gun_03_l" position = { 5.85 4.61 14.03 } }
+	#locator = { name = "large_gun_03_r" position = { -5.93 4.61 14.03 } }
 }
 
 entity = {
 	name = "holofrixit_01_battleship_bow_M1S2SHB_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = "idle"
 	state = { name = idle	state_time = 5
@@ -1337,6 +1389,18 @@ entity = {
 	}
 
 	state = { name = "death" state_time = 5 }
+
+	locator = { name = "medium_gun_01" position = { 0 1.89 -20.35 } }
+	locator = { name = "small_gun_01" position = { 3.7 1.89 -20.35 } }
+	locator = { name = "small_gun_02" position = { -3.53 1.89 -20.35 } }
+
+	#locator = { name = "large_gun_02" position = { 0 2.98 -4.61 } }
+	#locator = { name = "large_gun_02_l" position = { 2.95 2.98 -4.61 } }
+	#locator = { name = "large_gun_02_r" position = { -3.06 2.98 -4.61 } }
+
+	#locator = { name = "large_gun_03" position = { 0 4.61 14.03 } }
+	#locator = { name = "large_gun_03_l" position = { 5.85 4.61 14.03 } }
+	#locator = { name = "large_gun_03_r" position = { -5.93 4.61 14.03 } }
 
 	#TEMP LOCATOR REPLACE IN SCENE
 	locator = {
@@ -1347,7 +1411,7 @@ entity = {
 
 entity = {
 	name = "holofrixit_01_battleship_bow_M2S4_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = "idle"
 	state = { name = idle	state_time = 5
@@ -1361,11 +1425,23 @@ entity = {
 	}
 
 	state = { name = "death" state_time = 5 }
+
+	locator = { name = "medium_gun_01" position = { 0 1.89 -20.35 } }
+	locator = { name = "small_gun_01" position = { 3.7 1.89 -20.35 } }
+	locator = { name = "small_gun_02" position = { -3.53 1.89 -20.35 } }
+
+	locator = { name = "medium_gun_02" position = { 0 2.98 -4.61 } }
+	locator = { name = "small_gun_03" position = { 2.95 2.98 -4.61 } }
+	locator = { name = "small_gun_04" position = { -3.06 2.98 -4.61 } }
+
+	#locator = { name = "large_gun_03" position = { 0 4.61 14.03 } }
+	#locator = { name = "large_gun_03_l" position = { 5.85 4.61 14.03 } }
+	#locator = { name = "large_gun_03_r" position = { -5.93 4.61 14.03 } }
 }
 
 entity = {
 	name = "holofrixit_01_battleship_bow_M3S2_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = "idle"
 	state = { name = idle	state_time = 5
@@ -1379,6 +1455,18 @@ entity = {
 		event = { time = 0 node = "light_02" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
 		event = { time = 0 node = "light_03" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
 	}
+
+	locator = { name = "medium_gun_01" position = { 0 1.89 -20.35 } }
+	locator = { name = "medium_gun_02" position = { 3.7 1.89 -20.35 } }
+	locator = { name = "medium_gun_03" position = { -3.53 1.89 -20.35 } }
+
+	#locator = { name = "large_gun_02" position = { 0 2.98 -4.61 } }
+	locator = { name = "small_gun_01" position = { 2.95 2.98 -4.61 } }
+	locator = { name = "small_gun_01" position = { -3.06 2.98 -4.61 } }
+
+	#locator = { name = "large_gun_03" position = { 0 4.61 14.03 } }
+	#locator = { name = "large_gun_03_l" position = { 5.85 4.61 14.03 } }
+	#locator = { name = "large_gun_03_r" position = { -5.93 4.61 14.03 } }
 
 	state = { name = "death" state_time = 5 }
 }
@@ -1386,7 +1474,7 @@ entity = {
 #MID
 entity = {
 	name = "holofrixit_01_battleship_mid_L2S4_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = "idle"
 	state = { name = idle	state_time = 5
@@ -1400,11 +1488,23 @@ entity = {
 	}
 
 	state = { name = "death" state_time = 5 }
+
+	#locator = { name = "large_gun_01" position = { 0 1.89 -20.35 } }
+	locator = { name = "small_gun_01" position = { 3.7 1.89 -20.35 } }
+	locator = { name = "small_gun_02" position = { -3.53 1.89 -20.35 } }
+
+	#locator = { name = "large_gun_02" position = { 0 2.98 -4.61 } }
+	locator = { name = "small_gun_03" position = { 2.95 2.98 -4.61 } }
+	locator = { name = "small_gun_04" position = { -3.06 2.98 -4.61 } }
+
+	#locator = { name = "large_gun_03" position = { 0 4.61 14.03 } }
+	locator = { name = "large_gun_01" position = { 5.85 4.61 14.03 } }
+	locator = { name = "large_gun_02" position = { -5.93 4.61 14.03 } }
 }
 
 entity = {
 	name = "holofrixit_01_battleship_mid_L1M4_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = "idle"
 	state = { name = idle	state_time = 5
@@ -1418,11 +1518,23 @@ entity = {
 	}
 
 	state = { name = "death" state_time = 5 }
+
+	#locator = { name = "large_gun_01" position = { 0 1.89 -20.35 } }
+	#locator = { name = "large_gun_01_l" position = { 3.7 1.89 -20.35 } }
+	#locator = { name = "large_gun_01_r" position = { -3.53 1.89 -20.35 } }
+
+	#locator = { name = "large_gun_02" position = { 0 2.98 -4.61 } }
+	locator = { name = "small_gun_01" position = { 2.95 2.98 -4.61 } }
+	locator = { name = "small_gun_02" position = { -3.06 2.98 -4.61 } }
+
+	locator = { name = "large_gun_01" position = { 0 4.61 14.03 } }
+	locator = { name = "small_gun_03" position = { 5.85 4.61 14.03 } }
+	locator = { name = "small_gun_04" position = { -5.93 4.61 14.03 } }
 }
 
 entity = {
 	name = "holofrixit_01_battleship_mid_L2M2_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = "idle"
 	state = { name = idle	state_time = 5
@@ -1436,11 +1548,23 @@ entity = {
 	}
 
 	state = { name = "death" state_time = 5 }
+
+	#locator = { name = "large_gun_01" position = { 0 1.89 -20.35 } }
+	#locator = { name = "large_gun_01_l" position = { 3.7 1.89 -20.35 } }
+	#locator = { name = "large_gun_01_r" position = { -3.53 1.89 -20.35 } }
+
+	locator = { name = "large_gun_01" position = { 0 2.98 -4.61 } }
+	#locator = { name = "large_gun_02_l" position = { 2.95 2.98 -4.61 } }
+	#locator = { name = "large_gun_02_r" position = { -3.06 2.98 -4.61 } }
+
+	locator = { name = "large_gun_02" position = { 0 4.61 14.03 } }
+	locator = { name = "medium_gun_01" position = { 5.85 4.61 14.03 } }
+	locator = { name = "medium_gun_02" position = { -5.93 4.61 14.03 } }
 }
 
 entity = {
 	name = "holofrixit_01_battleship_mid_L3_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = "idle"
 	state = { name = idle	state_time = 5
@@ -1454,11 +1578,23 @@ entity = {
 	}
 
 	state = { name = "death" state_time = 5 }
+
+	#locator = { name = "large_gun_01" position = { 0 1.89 -20.35 } }
+	#locator = { name = "large_gun_01_l" position = { 3.7 1.89 -20.35 } }
+	#locator = { name = "large_gun_01_r" position = { -3.53 1.89 -20.35 } }
+
+	#locator = { name = "large_gun_02" position = { 0 2.98 -4.61 } }
+	#locator = { name = "large_gun_02_l" position = { 2.95 2.98 -4.61 } }
+	#locator = { name = "large_gun_02_r" position = { -3.06 2.98 -4.61 } }
+
+	locator = { name = "large_gun_01" position = { 0 4.61 14.03 } }
+	locator = { name = "large_gun_02" position = { 5.85 4.61 14.03 } }
+	locator = { name = "large_gun_03" position = { -5.93 4.61 14.03 } }
 }
 
 entity = {
 	name = "holofrixit_01_battleship_mid_M4SHB_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = "idle"
 	state = { name = idle	state_time = 5
@@ -1472,6 +1608,18 @@ entity = {
 	}
 
 	state = { name = "death" state_time = 5 }
+
+	#locator = { name = "large_gun_01" position = { 0 1.89 -20.35 } }
+	#locator = { name = "large_gun_01_l" position = { 3.7 1.89 -20.35 } }
+	#locator = { name = "large_gun_01_r" position = { -3.53 1.89 -20.35 } }
+
+	#locator = { name = "large_gun_02" position = { 0 2.98 -4.61 } }
+	locator = { name = "medium_gun_01" position = { 2.95 2.98 -4.61 } }
+	locator = { name = "medium_gun_02" position = { -3.06 2.98 -4.61 } }
+
+	#locator = { name = "large_gun_03" position = { 0 4.61 14.03 } }
+	locator = { name = "medium_gun_03" position = { 5.85 4.61 14.03 } }
+	locator = { name = "medium_gun_04" position = { -5.93 4.61 14.03 } }
 
 	#TEMP LOCATOR REPLACE IN SCENE
 	locator = {
@@ -1482,7 +1630,7 @@ entity = {
 
 entity = {
 	name = "holofrixit_01_battleship_mid_S4LHB_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = "idle"
 	state = { name = idle	state_time = 5
@@ -1496,6 +1644,18 @@ entity = {
 	}
 
 	state = { name = "death" state_time = 5 }
+
+	#locator = { name = "large_gun_01" position = { 0 1.89 -20.35 } }
+	#locator = { name = "large_gun_01_l" position = { 3.7 1.89 -20.35 } }
+	#locator = { name = "large_gun_01_r" position = { -3.53 1.89 -20.35 } }
+
+	#locator = { name = "large_gun_02" position = { 0 2.98 -4.61 } }
+	locator = { name = "small_gun_01" position = { 2.95 2.98 -4.61 } }
+	locator = { name = "small_gun_02" position = { -3.06 2.98 -4.61 } }
+
+	#locator = { name = "large_gun_03" position = { 0 4.61 14.03 } }
+	locator = { name = "small_gun_03" position = { 5.85 4.61 14.03 } }
+	locator = { name = "small_gun_04" position = { -5.93 4.61 14.03 } }
 
 	#TEMP LOCATOR REPLACE IN SCENE
 	locator = {
@@ -1512,7 +1672,7 @@ entity = {
 # STERN
 entity = {
 	name = "holofrixit_01_battleship_stern_L1_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = idle
 	state = { name = "idle" state_time = 5
@@ -1534,11 +1694,23 @@ entity = {
 		event = { time = 0 node = "light_02" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
 	}
 	state = { name = "death" state_time = 5 }
+
+	#locator = { name = "large_gun_01" position = { 0 1.89 -20.35 } }
+	#locator = { name = "large_gun_01_l" position = { 3.7 1.89 -20.35 } }
+	#locator = { name = "large_gun_01_r" position = { -3.53 1.89 -20.35 } }
+
+	#locator = { name = "large_gun_02" position = { 0 2.98 -4.61 } }
+	#locator = { name = "large_gun_02_l" position = { 2.95 2.98 -4.61 } }
+	#locator = { name = "large_gun_02_r" position = { -3.06 2.98 -4.61 } }
+
+	locator = { name = "large_gun_01" position = { 0 4.61 14.03 } }
+	#locator = { name = "large_gun_03_l" position = { 5.85 4.61 14.03 } }
+	#locator = { name = "large_gun_03_r" position = { -5.93 4.61 14.03 } }
 }
 
 entity = {
 	name = "holofrixit_01_battleship_stern_M1S2_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = idle
 	state = { name = "idle" state_time = 5
@@ -1560,11 +1732,23 @@ entity = {
 		event = { time = 0 node = "light_02" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
 	}
 	state = { name = "death" state_time = 5 }
+
+	#locator = { name = "large_gun_01" position = { 0 1.89 -20.35 } }
+	#locator = { name = "large_gun_01_l" position = { 3.7 1.89 -20.35 } }
+	#locator = { name = "large_gun_01_r" position = { -3.53 1.89 -20.35 } }
+
+	#locator = { name = "large_gun_02" position = { 0 2.98 -4.61 } }
+	#locator = { name = "large_gun_02_l" position = { 2.95 2.98 -4.61 } }
+	#locator = { name = "large_gun_02_r" position = { -3.06 2.98 -4.61 } }
+
+	locator = { name = "medium_gun_01" position = { 0 4.61 14.03 } }
+	locator = { name = "small_gun_02" position = { 5.85 4.61 14.03 } }
+	locator = { name = "small_gun_03" position = { -5.93 4.61 14.03 } }
 }
 
 entity = {
 	name = "holofrixit_01_battleship_stern_M2_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = idle
 	state = { name = "idle" state_time = 5
@@ -1586,11 +1770,23 @@ entity = {
 		event = { time = 0 node = "light_02" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
 	}
 	state = { name = "death" state_time = 5 }
+
+	#locator = { name = "large_gun_01" position = { 0 1.89 -20.35 } }
+	#locator = { name = "large_gun_01_l" position = { 3.7 1.89 -20.35 } }
+	#locator = { name = "large_gun_01_r" position = { -3.53 1.89 -20.35 } }
+
+	#locator = { name = "large_gun_02" position = { 0 2.98 -4.61 } }
+	#locator = { name = "large_gun_02_l" position = { 2.95 2.98 -4.61 } }
+	#locator = { name = "large_gun_02_r" position = { -3.06 2.98 -4.61 } }
+
+	#locator = { name = "large_gun_03" position = { 0 4.61 14.03 } }
+	locator = { name = "medium_gun_01" position = { 5.85 4.61 14.03 } }
+	locator = { name = "medium_gun_02" position = { -5.93 4.61 14.03 } }
 }
 
 entity = {
 	name = "holofrixit_01_battleship_stern_S4_entity"
-	pdxmesh = "locator_mesh"
+	pdxmesh = locator_mesh
 
 	default_state = idle
 	state = { name = "idle" state_time = 5
@@ -1612,6 +1808,18 @@ entity = {
 		event = { time = 0 node = "light_02" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
 	}
 	state = { name = "death" state_time = 5 }
+
+	#locator = { name = "large_gun_01" position = { 0 1.89 -20.35 } }
+	#locator = { name = "large_gun_01_l" position = { 3.7 1.89 -20.35 } }
+	#locator = { name = "large_gun_01_r" position = { -3.53 1.89 -20.35 } }
+
+	#locator = { name = "large_gun_02" position = { 0 2.98 -4.61 } }
+	locator = { name = "small_gun_01" position = { 2.95 2.98 -4.61 } }
+	locator = { name = "small_gun_02" position = { -3.06 2.98 -4.61 } }
+
+	#locator = { name = "large_gun_03" position = { 0 4.61 14.03 } }
+	locator = { name = "small_gun_03" position = { 5.85 4.61 14.03 } }
+	locator = { name = "small_gun_04" position = { -5.93 4.61 14.03 } }
 }
 
 entity = {
@@ -1685,7 +1893,7 @@ entity = {
 	state = { name = "idle"		state_time = 5
 		event = { time = 0 particle = "extra_dimensional_small_def_station_effect"	keep_particle = yes trigger_once = yes }
 		start_event = { trigger_once = yes sound = { soundeffect = "ex_mining_station_signals" } }
-		}
+	}
 	state = { name = "moving"		state_time = 5
 		event = { time = 0 particle = "extra_dimensional_small_def_station_effect"	keep_particle = yes trigger_once = yes }
 	}
@@ -1707,7 +1915,7 @@ entity = {
 	state = { name = "idle"		state_time = 5
 		event = { time = 0 particle = "extra_dimensional_small_def_station_effect"	keep_particle = yes trigger_once = yes }
 		start_event = { trigger_once = yes sound = { soundeffect = "ex_mining_station_signals" } }
-		}
+	}
 	state = { name = "moving"		state_time = 5
 		event = { time = 0 particle = "extra_dimensional_small_def_station_effect"	keep_particle = yes trigger_once = yes }
 	}
@@ -1721,17 +1929,38 @@ entity = {
 
 entity = {
 	name = "holofrixit_01_military_station_section_heavy_entity"
-	pdxmesh = "locator_mesh"
+	locator = { name = "large_gun_01" position = { 0 0 0 } }
 }
 
 entity = {
 	name = "holofrixit_01_military_station_section_medium_entity"
-	pdxmesh = "locator_mesh"
+	locator = { name = "medium_gun_01" position = { 0 0 0 } }
+	locator = { name = "medium_gun_02" position = { 0 0 0 } }
 }
 
 entity = {
 	name = "holofrixit_01_military_station_section_light_entity"
-	pdxmesh = "locator_mesh"
+	locator = { name = "small_gun_01" position = { 0 0 0 } }
+	locator = { name = "small_gun_02" position = { 0 0 0 } }
+	locator = { name = "small_gun_03" position = { 0 0 0 } }
+	locator = { name = "small_gun_04" position = { 0 0 0 } }
+}
+
+entity = {
+	name = "holofrixit_01_orbital_station_hangarbay_section_entity"
+	locator = { name = "strike_craft_locator_01" position = { 0 0 0 } }
+}
+
+entity = {
+	name = "holofrixit_01_orbital_station_assemblyyard_section_entity"
+}
+
+entity = {
+	name = "holofrixit_01_orbital_station_refinery_section_entity"
+}
+
+entity = {
+	name = "holofrixit_01_orbital_station_science_section_entity"
 }
 
 entity = {
@@ -1749,7 +1978,7 @@ entity = {
 	state = { name = "idle"		state_time = 5
 		event = { time = 0 particle = "extra_dimensional_small_def_station_effect"	keep_particle = yes trigger_once = yes }
 		start_event = { trigger_once = yes sound = { soundeffect = "ex_mining_station_signals" } }
-		}
+	}
 	state = { name = "moving"		state_time = 5
 		event = { time = 0 particle = "extra_dimensional_small_def_station_effect"	keep_particle = yes trigger_once = yes }
 	}
@@ -1783,109 +2012,49 @@ entity = {
 entity = {
 	name = "holofrixit_01_military_station_small_construction_entity"
 	pdxmesh = "extra_dimensional_01_station_small_mesh"
-		default_state = "idle"
-		state = { name = "idle" animation = idle
-		event = { trigger_once = yes sound = { soundeffect = "place_construction" } }
-		}
 }
 
 entity = {
 	name = "holofrixit_01_military_station_medium_construction_entity"
 	pdxmesh = "extra_dimensional_01_station_small_mesh"
-		default_state = "idle"
-		state = { name = "idle" animation = idle
-		event = { trigger_once = yes sound = { soundeffect = "place_construction" } }
-		}
 }
 
 entity = {
 	name = "holofrixit_01_military_station_large_construction_entity"
 	pdxmesh = "extra_dimensional_01_station_large_mesh"
-		default_state = "idle"
-		state = { name = "idle" animation = idle
-		event = { trigger_once = yes sound = { soundeffect = "place_construction" } }
-		}
 }
 
 entity = {
 	name = "holofrixit_01_orbital_station_construction_entity"
 	pdxmesh = "extra_dimensional_01_station_large_mesh"
-		default_state = "idle"
-		state = { name = "idle" animation = idle
-		event = { trigger_once = yes sound = { soundeffect = "place_construction" } }
-		}
 }
 
 entity = {
 	name = "holofrixit_01_mining_station_construction_entity"
 	pdxmesh = "extra_dimensional_01_station_small_mesh"
-		default_state = "idle"
-		state = { name = "idle" animation = idle
-		event = { trigger_once = yes sound = { soundeffect = "place_construction" } }
-		}
 }
 
 entity = {
 	name = "holofrixit_01_research_station_construction_entity"
 	pdxmesh = "extra_dimensional_01_station_small_mesh"
-		default_state = "idle"
-		state = { name = "idle" animation = idle
-		event = { trigger_once = yes sound = { soundeffect = "place_construction" } }
-		}
 }
 
 entity = {
 	name = "holofrixit_01_observation_station_construction_entity"
 	pdxmesh = "extra_dimensional_01_station_small_mesh"
-		default_state = "idle"
-		state = { name = "idle" animation = idle
-		event = { trigger_once = yes sound = { soundeffect = "place_construction" } }
-		}
 }
 
 entity = {
 	name = "holofrixit_01_terraform_station_construction_entity"
 	pdxmesh = "extra_dimensional_01_station_small_mesh"
-		default_state = "idle"
-		state = { name = "idle" animation = idle
-		event = { trigger_once = yes sound = { soundeffect = "place_construction" } }
-		}
 }
 
 entity = {
 	name = "holofrixit_01_wormhole_station_construction_entity"
 	pdxmesh = "extra_dimensional_01_station_small_mesh"
-		default_state = "idle"
-		state = { name = "idle" animation = idle
-		event = { trigger_once = yes sound = { soundeffect = "place_construction" } }
-		}
 }
 
 entity = {
 	name = "holofrixit_01_outpost_station_construction_entity"
 	pdxmesh = "extra_dimensional_01_station_small_mesh"
-		default_state = "idle"
-		state = { name = "idle" state_time = 5
-			event = { trigger_once = yes sound = { soundeffect = "place_construction" } }
-		}
-}
-
-entity = {
-	name = "holofrixit_01_orbital_station_assemblyyard_section_entity"
-	locator = { name = "turret_muzzle_01" 	position = { 0 0 0 } }
-}
-
-entity = {
-	name = "holofrixit_01_orbital_station_hangarbay_section_entity"
-	locator = { name = "turret_muzzle_01" 	position = { 0 0 0 } }
-}
-
-entity = {
-	name = "holofrixit_01_orbital_station_refinery_section_entity"
-	locator = { name = "turret_muzzle_01" 	position = { 0 0 0 } }
-}
-
-entity = {
-	name = "holofrixit_01_orbital_station_science_section_entity"
-	locator = { name = "turret_muzzle_01" 	position = { 0 0 0 } }
 }
