@@ -506,10 +506,9 @@ entity = {
 }
 
 entity = {
-	name = "holofrixit_01_mining_station_core_entity"
+	name = "holofrixit_01_mining_station_section_entity"
 	pdxmesh = "extra_dimensional_01_station_small_mesh"
 	scale = @exd_small_station
-	locator = { name = "part1" 			position = { 0 0 0 } }
 
 	default_state = "idle"
 	state = { name = "idle"		state_time = 5
@@ -533,11 +532,9 @@ entity = {
 }
 
 entity = {
-	name = "holofrixit_01_research_station_core_entity"
+	name = "holofrixit_01_research_station_section_entity"
 	pdxmesh = "extra_dimensional_01_station_small_mesh"
 	scale = @exd_small_station
-
-	locator = { name = "part1" 			position = { 0 0 0 } }
 
 	default_state = "idle"
 	state = { name = "idle"		state_time = 5
@@ -561,11 +558,9 @@ entity = {
 }
 
 entity = {
-	name = "holofrixit_01_terraform_station_core_entity"
+	name = "holofrixit_01_terraform_station_section_entity"
 	pdxmesh = "extra_dimensional_01_station_small_mesh"
 	scale = @exd_small_station
-
-	locator = { name = "part1" 			position = { 0 0 0 } }
 
 	default_state = "idle"
 	state = { name = "idle"		state_time = 5
@@ -589,7 +584,7 @@ entity = {
 }
 
 entity = {
-	name = "holofrixit_01_wormhole_station_core_entity"
+	name = "holofrixit_01_wormhole_station_section_entity"
 	pdxmesh = "extra_dimensional_01_station_small_mesh"
 	scale = @exd_small_station
 
@@ -615,7 +610,7 @@ entity = {
 }
 
 entity = {
-	name = "holofrixit_01_observation_station_core_entity"
+	name = "holofrixit_01_observation_station_section_entity"
 	pdxmesh = "extra_dimensional_01_station_small_mesh"
 	scale = @exd_small_station
 
@@ -1858,13 +1853,18 @@ entity = {
 	name = "holofrixit_01_military_station_large_entity"
 	pdxmesh = "extra_dimensional_01_station_large_mesh"
 	locator = { name = "part1" 	position = { 0 0 0 } }
+	locator = { name = "part2" 	position = { 0 0 0 } }
+	locator = { name = "part3" 	position = { 0 0 0 } }
+	locator = { name = "part4" 	position = { 0 0 0 } }
+	locator = { name = "part5" 	position = { 0 0 0 } }
+	locator = { name = "part6" 	position = { 0 0 0 } }
 
-	locator = { name = "medium_gun_01" position = { 0 0 0 } }
-	locator = { name = "medium_gun_02" position = { 0 0 0 } }
-	locator = { name = "small_gun_01" position = { 0 0 0 } }
-	locator = { name = "small_gun_02" position = { 0 0 0 } }
-	locator = { name = "small_gun_03" position = { 0 0 0 } }
-	locator = { name = "small_gun_04" position = { 0 0 0 } }
+	# locator = { name = "medium_gun_01" position = { 0 0 0 } }
+	# locator = { name = "medium_gun_02" position = { 0 0 0 } }
+	# locator = { name = "small_gun_01" position = { 0 0 0 } }
+	# locator = { name = "small_gun_02" position = { 0 0 0 } }
+	# locator = { name = "small_gun_03" position = { 0 0 0 } }
+	# locator = { name = "small_gun_04" position = { 0 0 0 } }
 	scale = @exd_large_station
 
 	default_state = "idle"
@@ -1887,6 +1887,9 @@ entity = {
 	name = "holofrixit_01_military_station_medium_entity"
 	pdxmesh = "extra_dimensional_01_station_small_mesh"
 	locator = { name = "part1" 	position = { 0 0 0 } }
+	locator = { name = "part2" 	position = { 0 0 0 } }
+	locator = { name = "part3" 	position = { 0 0 0 } }
+	locator = { name = "part4" 	position = { 0 0 0 } }
 	scale = @exd_small_station
 
 	default_state = "idle"
@@ -1909,6 +1912,7 @@ entity = {
 	name = "holofrixit_01_military_station_small_entity"
 	pdxmesh = "extra_dimensional_01_station_small_mesh"
 	locator = { name = "part1" 	position = { 0 0 0 } }
+	locator = { name = "part2" 	position = { 0 0 0 } }
 	scale = @exd_small_station
 
 	default_state = "idle"
@@ -1948,19 +1952,23 @@ entity = {
 
 entity = {
 	name = "holofrixit_01_orbital_station_hangarbay_section_entity"
+	locator = { name = "turret_muzzle_01" 	position = { 0 0 0 } }
 	locator = { name = "strike_craft_locator_01" position = { 0 0 0 } }
 }
 
 entity = {
 	name = "holofrixit_01_orbital_station_assemblyyard_section_entity"
+	locator = { name = "turret_muzzle_01" 	position = { 0 0 0 } }
 }
 
 entity = {
 	name = "holofrixit_01_orbital_station_refinery_section_entity"
+	locator = { name = "turret_muzzle_01" 	position = { 0 0 0 } }
 }
 
 entity = {
 	name = "holofrixit_01_orbital_station_science_section_entity"
+	locator = { name = "turret_muzzle_01" 	position = { 0 0 0 } }
 }
 
 entity = {
@@ -2006,6 +2014,7 @@ entity = {
 		event = { time = 0.5 node = "light_locator_02" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
 	}
 
+	locator = { name = "part1" 	position = { 0 0 0 } }
 	scale = 1.2
 }
 
