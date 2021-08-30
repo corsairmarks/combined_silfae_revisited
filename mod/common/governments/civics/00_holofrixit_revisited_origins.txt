@@ -4,7 +4,13 @@ origin_holofrixit = {
 	picture = GFX_origin_overtuned
 	potential = {
 		authority = { value = auth_holofrixit }
-		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		ethics = {
+			OR = {
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
+			}
+			NOT = { value = ethic_gestalt_consciousness }
+		}
 	}
 	possible = { always = yes }
 	random_weight = {
