@@ -22,7 +22,6 @@ auth_holofrixit = {
 	uses_mandates = yes
 	country_modifier = {
 		building_time_mult = -0.15
-		armies_upkeep_mult = -0.2
 		planet_jobs_robotic_produces_mult = 0.1
 		edicts_cost_mult = -0.05
 		country_leader_pool_size = -1
