@@ -1,8 +1,17 @@
 HLFRXT = {
 	archetype = HOLOARCH
-	possible_secondary = { always = no text = SECONDARY_SPECIES_CLASS_INVALID }
 	portraits = {
 		"holofrixit"
+		"hologanglion"
+		"holowarrior"
+		"holodrone"
+		"holofrixigram"
+	}
+	non_randomized_portraits = {
+		"hologanglion"
+		"holowarrior"
+		"holodrone"
+		"holofrixigram"
 	}
 	robotic = yes
 	graphical_culture = holofrixit_01

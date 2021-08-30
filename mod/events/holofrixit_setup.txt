@@ -65,6 +65,7 @@ planet_event = {
 		else = {
 			generate_start_deposits_and_blockers = yes
 		}
+		add_building = building_robot_assembly_plant
 		generate_start_buildings_and_districts = yes
 		add_building = building_polarizing_nexus_1
 		# swap food deposits for energy deposits
@@ -142,19 +143,105 @@ country_event = {
 		has_origin = origin_holofrixit
 	}
 	immediate = {
-		give_technology = { tech = tech_administrative_ai			message = no }
-		give_technology = { tech = tech_self_aware_logic			message = no }
 		give_technology = { tech = tech_powered_exoskeletons		message = no }
 		give_technology = { tech = tech_robotic_workers				message = no }
-		# give_technology = { tech = tech_synthetic_leaders			message = no }
 		give_technology = { tech = tech_extradimensional_weapon_1	message = no }
 		give_technology = { tech = tech_holocastes					message = no }
-		# TODO - too early
-		# set_policy = {
-		# 	policy = artificial_intelligence_policy
-		# 	option = ai_servitude
-		# 	cooldown = no
-		# }
+	}
+}
+
+# triggered by on_game_start_country
+# ROOT = country
+country_event = {
+	id = holofrixit_evt.4
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_holofrixit
+	}
+	immediate = {
 		add_modifier = { modifier = holofrixit_mod }
+		every_owned_pop_species = {
+			limit = { NOT = { is_species = PREV.owner_species } }
+			if = {
+				limit = { has_species_flag = hologanglion_species@PREV }
+				# change_species_characteristics = {
+				# 	pops_can_be_colonizers = no
+				# 	pops_can_reproduce = no
+				# }
+				set_citizenship_type = {
+					type = citizenship_slavery
+					country = PREV
+					cooldown = no
+				}
+				set_slavery_type = {
+					type = slavery_indentured
+					country = PREV
+					cooldown = no
+				}
+				set_living_standard = {
+					type = living_standard_normal
+					country = PREV
+					cooldown = no
+				}
+			}
+			else_if = {
+				limit = { has_species_flag = holowarrior_species@PREV }
+				# change_species_characteristics = {
+				# 	pops_can_be_colonizers = no
+				# 	pops_can_join_factions = no
+				# }
+				set_citizenship_type = {
+					type = citizenship_slavery
+					country = PREV
+					cooldown = no
+				}
+				set_slavery_type = {
+					type = slavery_military
+					country = PREV
+					cooldown = no
+				}
+				set_living_standard = {
+					type = living_standard_normal
+					country = PREV
+					cooldown = no
+				}
+			}
+			else_if = {
+				limit = { has_species_flag = holodrone_species@PREV }
+				# change_species_characteristics = {
+				# 	can_generate_leaders = no
+				# 	pops_can_join_factions = no
+				# }
+				set_citizenship_type = {
+					type = citizenship_slavery
+					country = PREV
+					cooldown = no
+				}
+				set_slavery_type = {
+					type = slavery_indentured
+					country = PREV
+					cooldown = no
+				}
+				set_living_standard = {
+					type = living_standard_subsistence
+					country = PREV
+					cooldown = no
+				}
+			}
+			else_if = {
+				limit = { has_species_flag = holofrixigram_species@PREV }
+				set_citizenship_type = {
+					type = citizenship_robot_servitude
+					country = PREV
+					cooldown = no
+				}
+				set_living_standard = {
+					type = living_standard_servitude
+					country = PREV
+					cooldown = no
+				}
+			}
+		}
 	}
 }

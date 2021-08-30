@@ -5,6 +5,13 @@ on_game_start = {
 	}
 }
 
+# fired when the game starts for each country
+on_game_start_country = {
+	events = {
+		holofrixit_evt.4
+	}
+}
+
 # fired during empire initialization when starting a new game
 # THIS = country
 empire_init_add_technologies = {
@@ -27,6 +34,6 @@ empire_init_capital_planet = {
 on_tech_increased = {
 	events = {
 		holocrisis.2190
-		# holofrixit_evt.4 # TODO upgrade holowarriors and holofrixigrams
+		# holofrixit_evt.5 # TODO upgrade holowarriors and holofrixigrams
 	}
 }

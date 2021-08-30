@@ -1,61 +1,47 @@
+# generate initial xechiros Pops
 # generate specialized holofrixit castes and initial Pops for each
 # THIS = planet
 generate_holofrixit_start_pops = {
-	owner = { save_event_target_as = holofrixit_country }
-	FROM = { save_event_target_as = holooverseer_species }
 	# founders are the xechiros
 	while = {
 		count = 2
 		create_pop = {
-			species = event_target:holooverseer_species
-			ethos = event_target:holofrixit_country
+			species = owner.owner_species
+			ethos = owner
 		}
 	}
 
 	# hologanglions
-	create_species = {
-		is_mod = no
-		name = NAME_ganglion
-		plural = NAME_ganglion_plural
-		adjective = NAME_ganglion_adjective
-		name_list = event_target:holooverseer_species
-		class = event_target:holooverseer_species
-		homeworld = THIS
-		traits = event_target:holooverseer_species
-		# pops_can_be_colonizers = no
-		# pops_can_reproduce = no
+	owner.owner_species = {
+		create_species = {
+			name = PRESCRIPTED_caste_ganglion
+			plural = PRESCRIPTED_caste_ganglion_plural
+			adjective = PRESCRIPTED_caste_ganglion_adjective
+			namelist = THIS
+			class = THIS
+			homeworld = THIS
+			traits = THIS
+			pops_can_be_colonizers = no
+			pops_can_reproduce = no
+			effect = {
+				change_species_portrait = hologanglion
+				save_event_target_as = hologanglion_species
+			}
+		}
 	}
 	modify_species = {
-		species = last_created_species
+		base = none
+		species = event_target:hologanglion_species
 		change_scoped_species = yes
 		remove_trait = trait_holooverseer
 		add_trait = trait_hologanglion
 		effect = {
-			change_species_portrait = holofrixit_scientist_01
-			# change_species_characteristics = {
-			# 	pops_can_be_colonizers = no
-			# 	pops_can_reproduce = no
-			# }
-			set_citizenship_type = {
-				type = citizenship_slavery
-				country = event_target:holofrixit_country
-				cooldown = no
-			}
-			set_living_standard = {
-				type = living_standard_normal
-				country = event_target:holofrixit_country
-				cooldown = no
-			}
-			set_slavery_type = {
-				type = slavery_indentured
-				country = event_target:holofrixit_country
-				cooldown = no
-			}
+			set_species_flag = hologanglion_species@PREV.owner
 			save_event_target_as = hologanglion_species
 		}
 	}
 	while = {
-		count = 2
+		count = 3
 		create_pop = {
 			species = event_target:hologanglion_species
 			ethos = owner
@@ -63,44 +49,31 @@ generate_holofrixit_start_pops = {
 	}
 
 	# holowarriors
-	create_species = {
-		is_mod = no
-		name = NAME_holowarrior
-		plural = NAME_holowarrior_plural
-		adjective = NAME_holowarrior_adjective
-		name_list = event_target:holooverseer_species
-		class = event_target:holooverseer_species
-		homeworld = THIS
-		traits = event_target:holooverseer_species
-		# pops_can_be_colonizers = no
-		# pops_can_reproduce = no
+	owner.owner_species = {
+		create_species = {
+			name = PRESCRIPTED_caste_holowarrior
+			plural = PRESCRIPTED_caste_holowarrior_plural
+			adjective = PRESCRIPTED_caste_holowarrior_adjective
+			namelist = THIS
+			class = THIS
+			homeworld = THIS
+			traits = THIS
+			pops_can_be_colonizers = no
+			pops_can_join_factions = no
+			effect = {
+				change_species_portrait = holowarrior
+				save_event_target_as = holowarrior_species
+			}
+		}
 	}
 	modify_species = {
-		species = last_created_species
+		base = none
+		species = event_target:holowarrior_species
 		change_scoped_species = yes
 		remove_trait = trait_holooverseer
 		add_trait = trait_holowarrior
 		effect = {
-			change_species_portrait = holofrixit_warrior_01
-			# change_species_characteristics = {
-			# 	pops_can_be_colonizers = no
-			# 	pops_can_join_factions = no
-			# }
-			set_citizenship_type = {
-				type = citizenship_slavery
-				country = event_target:holofrixit_country
-				cooldown = no
-			}
-			set_living_standard = {
-				type = living_standard_normal
-				country = event_target:holofrixit_country
-				cooldown = no
-			}
-			set_slavery_type = {
-				type = slavery_military
-				country = event_target:holofrixit_country
-				cooldown = no
-			}
+			set_species_flag = holowarrior_species@PREV.owner
 			save_event_target_as = holowarrior_species
 		}
 	}
@@ -109,44 +82,66 @@ generate_holofrixit_start_pops = {
 		ethos = random
 	}
 
-	# holofrixigrams
-	create_species = {
-		is_mod = no
-		name = NAME_holofrixigram
-		plural = NAME_holofrixigram_plural
-		adjective = NAME_holofrixigram_adjective
-		name_list = event_target:holooverseer_species
-		class = event_target:holooverseer_species
-		homeworld = THIS
-		traits = event_target:holooverseer_species
-		# pops_can_migrate = no
-		# pops_can_be_colonizers = no
-		# pops_can_reproduce = no
+	# holodrones
+	owner.owner_species = {
+		create_species = {
+			name = PRESCRIPTED_caste_drone
+			plural = PRESCRIPTED_caste_drone_plural
+			adjective = PRESCRIPTED_caste_drone_adjective
+			namelist = THIS
+			class = THIS
+			homeworld = THIS
+			traits = THIS
+			can_generate_leaders = no
+			pops_can_join_factions = no
+			effect = {
+				change_species_portrait = holodrone
+				save_event_target_as = holodrone_species
+			}
+		}
 	}
 	modify_species = {
-		species = last_created_species
-		# ideal_planet_class = THIS
+		species = event_target:holodrone_species
+		change_scoped_species = yes
+		remove_trait = trait_holooverseer
+		add_trait = trait_holodrone
+		effect = {
+			set_species_flag = holodrone_species@PREV.owner
+			save_event_target_as = holodrone_species
+		}
+	}
+	while = {
+		count = 12
+		create_pop = {
+			species = event_target:holodrone_species
+			ethos = random
+		}
+	}
+
+	# holofrixigrams
+	owner.owner_species = {
+		create_species = {
+			name = PRESCRIPTED_caste_holofrixigram
+			plural = PRESCRIPTED_caste_holofrixigram_plural
+			adjective = PRESCRIPTED_caste_holofrixigram_adjective
+			namelist = THIS
+			class = THIS
+			homeworld = THIS
+			traits = THIS
+			effect = {
+				change_species_portrait = holofrixigram
+				save_event_target_as = holofrixigram_species
+			}
+		}
+	}
+	modify_species = {
+		species = event_target:holofrixigram_species
 		change_scoped_species = yes
 		remove_trait = trait_holooverseer
 		add_trait = trait_holofrixigram
 		add_trait = trait_mechanical # needed for robot servitude
 		effect = {
-			change_species_portrait = holofrixigram
-			# change_species_characteristics = {
-			# 	pops_can_migrate = no
-			# 	pops_can_be_colonizers = no
-			# 	pops_can_reproduce = no
-			# }
-			set_citizenship_type = {
-				type = citizenship_robot_servitude
-				country = event_target:holofrixit_country
-				cooldown = no
-			}
-			set_living_standard = {
-				type = living_standard_servitude
-				country = event_target:holofrixit_country
-				cooldown = no
-			}
+			set_species_flag = holofrixigram_species@PREV.owner
 			save_event_target_as = holofrixigram_species
 		}
 	}
@@ -158,63 +153,6 @@ generate_holofrixit_start_pops = {
 		}
 	}
 	owner = { set_built_species = event_target:holofrixigram_species }
-
-	# holodrones
-	create_species = {
-		is_mod = no
-		name = NAME_drone
-		plural = NAME_drone_plural
-		adjective = NAME_drone_adjective
-		name_list = event_target:holooverseer_species
-		class = event_target:holooverseer_species
-		homeworld = THIS
-		traits = event_target:holooverseer_species
-		# can_generate_leaders = no
-		# pops_can_join_factions = no
-		effect = {
-			save_event_target_as = holodrone_species
-		}
-	}
-	modify_species = {
-		species = last_created_species
-		# ideal_planet_class = THIS
-		change_scoped_species = yes
-		portrait = holofrixit_drone_01
-		remove_trait = trait_holooverseer
-		add_trait = trait_holodrone
-		effect = {
-			change_species_portrait = holofrixit_drone_01
-			change_species_characteristics = {
-				can_generate_leaders = no
-				pops_can_join_factions = no
-			}
-			set_citizenship_type = {
-				type = citizenship_slavery
-				country = event_target:holofrixit_country
-				cooldown = no
-			}
-			set_living_standard = {
-				type = living_standard_normal
-				country = event_target:holofrixit_country
-				cooldown = no
-			}
-			set_slavery_type = {
-				type = slavery_indentured
-				country = event_target:holofrixit_country
-				cooldown = no
-			}
-			save_event_target_as = holodrone_species
-		}
-	}
-	while = {
-		count = 13
-		create_pop = {
-			species = event_target:holodrone_species
-			ethos = random
-		}
-	}
-	# this will make them the same... not sure if it'll make them a subspecies tho
-	# set_species_identity = <target>
 }
 
 # refer to 01_planetary_deposits.txt for the potential for each deposit
