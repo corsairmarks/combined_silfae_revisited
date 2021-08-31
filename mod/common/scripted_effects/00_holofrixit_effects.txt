@@ -163,7 +163,7 @@ generate_holofrixit_start_pops = {
 		}
 	}
 	while = {
-		count = 6
+		count = 8
 		create_pop = {
 			species = event_target:holofrixigram_species
 			ethos = random
