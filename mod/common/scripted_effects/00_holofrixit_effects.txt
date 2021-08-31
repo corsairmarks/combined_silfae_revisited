@@ -74,6 +74,7 @@ generate_holofrixit_start_pops = {
 		add_trait = trait_holowarrior
 		effect = {
 			set_species_flag = holowarrior_species@PREV.owner
+			set_species_flag = allow_military_leaders_honored_protectors@PREV.owner
 			save_event_target_as = holowarrior_species
 		}
 	}
