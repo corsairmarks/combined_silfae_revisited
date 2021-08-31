@@ -14,6 +14,7 @@ generate_holofrixit_start_pops = {
 	# hologanglions
 	owner.owner_species = {
 		create_species = {
+			is_mod = no
 			name = PRESCRIPTED_caste_ganglion
 			plural = PRESCRIPTED_caste_ganglion_plural
 			adjective = PRESCRIPTED_caste_ganglion_adjective
@@ -36,12 +37,13 @@ generate_holofrixit_start_pops = {
 		remove_trait = trait_holooverseer
 		add_trait = trait_hologanglion
 		effect = {
+			set_species_flag = holofrixit_caste@PREV
 			set_species_flag = hologanglion_species@PREV.owner
 			save_event_target_as = hologanglion_species
 		}
 	}
 	while = {
-		count = 6
+		count = 5
 		create_pop = {
 			species = event_target:hologanglion_species
 			ethos = owner
@@ -51,6 +53,7 @@ generate_holofrixit_start_pops = {
 	# holowarriors
 	owner.owner_species = {
 		create_species = {
+			is_mod = no
 			name = PRESCRIPTED_caste_holowarrior
 			plural = PRESCRIPTED_caste_holowarrior_plural
 			adjective = PRESCRIPTED_caste_holowarrior_adjective
@@ -73,6 +76,7 @@ generate_holofrixit_start_pops = {
 		remove_trait = trait_holooverseer
 		add_trait = trait_holowarrior
 		effect = {
+			set_species_flag = holofrixit_caste@PREV
 			set_species_flag = holowarrior_species@PREV.owner
 			set_species_flag = allow_military_leaders_honored_protectors@PREV.owner
 			save_event_target_as = holowarrior_species
@@ -86,6 +90,7 @@ generate_holofrixit_start_pops = {
 	# holodrones
 	owner.owner_species = {
 		create_species = {
+			is_mod = no
 			name = PRESCRIPTED_caste_drone
 			plural = PRESCRIPTED_caste_drone_plural
 			adjective = PRESCRIPTED_caste_drone_adjective
@@ -107,12 +112,13 @@ generate_holofrixit_start_pops = {
 		remove_trait = trait_holooverseer
 		add_trait = trait_holodrone
 		effect = {
+			set_species_flag = holofrixit_caste@PREV
 			set_species_flag = holodrone_species@PREV.owner
 			save_event_target_as = holodrone_species
 		}
 	}
 	while = {
-		count = 10
+		count = 11
 		create_pop = {
 			species = event_target:holodrone_species
 			ethos = random
@@ -122,6 +128,7 @@ generate_holofrixit_start_pops = {
 	# holofrixigrams
 	owner.owner_species = {
 		create_species = {
+			is_mod = no
 			name = PRESCRIPTED_caste_holofrixigram
 			plural = PRESCRIPTED_caste_holofrixigram_plural
 			adjective = PRESCRIPTED_caste_holofrixigram_adjective
@@ -129,6 +136,9 @@ generate_holofrixit_start_pops = {
 			class = THIS
 			homeworld = THIS
 			traits = THIS
+			traits = {
+				trait = trait_mechanical # needed for robot servitude
+			}
 			effect = {
 				change_species_portrait = holofrixigram
 				save_event_target_as = holofrixigram_species
@@ -140,8 +150,8 @@ generate_holofrixit_start_pops = {
 		change_scoped_species = yes
 		remove_trait = trait_holooverseer
 		add_trait = trait_holofrixigram
-		add_trait = trait_mechanical # needed for robot servitude
 		effect = {
+			set_species_flag = holofrixit_caste@PREV
 			set_species_flag = holofrixigram_species@PREV.owner
 			save_event_target_as = holofrixigram_species
 		}
