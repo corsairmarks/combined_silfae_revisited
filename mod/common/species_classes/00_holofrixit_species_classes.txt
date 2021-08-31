@@ -1,8 +1,8 @@
 HLFRXT = {
 	archetype = HOLOARCH
 	randomized = no
-	playable = { NOT = { has_global_flag = game_started } }
-	possible_secondary = { always = no }
+	playable = { always = yes }
+	possible_secondary = { always = yes }
 	robotic = yes
 	portraits = {
 		"holofrixit"
