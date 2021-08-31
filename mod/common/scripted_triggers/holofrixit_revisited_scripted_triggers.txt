@@ -1,4 +1,4 @@
 # THIS = something with species (country/species/pop)
 is_holofrixit = {
-	species = { has_trait = trait_holofrixit }
+	species = { is_archetype = HOLOARCH }
 }
