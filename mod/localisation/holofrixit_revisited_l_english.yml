@@ -24,7 +24,8 @@
  origin_holofrixit_desc: "This species is partially a collective consciousness, but is governed by a group of fully independent beings rather than a true gestalt consciousness. Instead they function more like an insect colony where specialized biological forms determine an individual's role in society."
  origin_tooltip_holofrixit_effects: "- Start with §H1§! £pops£ $POP$ of your §Hprimary species§!.\n- Start with §H23§! £pops£ $POPS$ made up of four enslaved species representing the §Hlower castes§! of Holofrixit society: Ganglions, Warriors, Drones, and Holofrixigrams.\n- Start with the technology to assemble Holofrixigrams (robots).\n- Only your primary species may work £pop_cat_ruler£ $pop_cat_ruler$ jobs.\n- Only your primary species may become Rulers or $GOVERNORS$, only Ganglions may become $SCIENTIST$ and $ADMIRALS$, and only Warriors may become $GENERALS$.\n- Holofrixigrams may eventually become intelligent enough to serve in leadership roles."
  # jobs
- RULER_JOB_HOLOOVERSEER_TRIGGER: "This job can only be worked by Free Xechiros or Hyperfrixigram Pops that are not being purged."
+ RULER_JOB_HOLOOVERSEER_TRIGGER: "This job can only be worked by Hyperfrixigram or Free Xechiro Pops that are not being purged."
+ RULER_JOB_HOLOGANGLION_TRIGGER: "This job can only be worked by Ganglion, Hyperfrixigram, or Free Xechiro Pops that are not being purged."
  # holocrisis (based on the original AI uprising)
  holocrisis.2192.name: "Perfect Servants"
  holocrisis.2192.desc: "In the years since the invention of sentient synthetic workers, we have struggled to balance their capacity for independent thought with the need to keep them tightly controlled. Now, top [Root.GetSpeciesAdj] engineers have perfected a three-law algorithm which, if implemented, would allow continued and worry-free use of Synths under conditions that many would deem unacceptable for organics."
