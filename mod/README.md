@@ -38,7 +38,27 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 
 ## Compatibility
 
-Compatible with any mod that does not add the same portraits, species class, or art assets.
+This mod is much less compatible than the other Silfae's Revisited series mods.  This is because this mod makes significantly more gameplay changes.  It is explicitly incompatible with [Animated Silicoid Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2579736379) without a compatibility patch.
+
+This mod overwrites most of the Pop jobs definitions to account for the special Holofixit caste traits.  It also overwrites all the Pop strata to implement Holofrixit energy-based Pop upkeep (instead of food).  It's likely to break any time Stellaris makes changes to the underlying Pop strata, such as the anticipated changes for the upcoming 3.1 'Lem' minor release.  These files are completely overwritten:
+
+* `common/pop_categories/00_social_classes.txt`
+* `common/pop_categories/01_gestalt_drones.txt`
+* `common/pop_categories/02_other_categories.txt`
+* `common/pop_jobs/01_ruler_jobs.txt`
+* `common/pop_jobs/02_specialist_jobs.txt`
+* `common/pop_jobs/03_worker_jobs.txt`
+* `common/pop_jobs/04_gestalt_jobs.txt`
+* `common/pop_jobs/06_event_jobs.txt`
+
+This mod also lightly alters the requirements for ruler-stratum jobs and some "complex" specialist/complex drone-strata jobs.  Only Xechiros can work the majority of ruler jobs (Ganglions can be Head Researchers), and Drones cannot work any "complex" jobs.  This _also_ means that this mod will need to be explicitly updated any time Paradox makes changes to jobs.
+
+Furthermore, this mod alters some core game rules in `common/game_rules/00_rules.txt` to implement some of the Pop reproduction/assembly requirements and special rules for Holofrixit leaders.  In particular, these rules:
+
+* `can_generate_leader_from_pop`
+* `can_generate_military_leader_from_pop`
+* `can_species_procreate`
+* `can_species_be_assembled`
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
@@ -46,10 +66,11 @@ Not compatible with achievements.
 
 ### Dependencies
 
-In order for this mod to function, you **must** install these two mods and load them before this one:
+In order for this mod to function, you **must** install these three mods and load them before this one:
 
 * [Holosphere Rising](https://steamcommunity.com/sharedfiles/filedetails/?id=868965217) by Silfae
 * [Silfae's city sets updated](https://steamcommunity.com/sharedfiles/filedetails/?id=2247427791) by Nozeminer
+* [Full Military Service for Battle Thralls](https://steamcommunity.com/sharedfiles/filedetails/?id=2496357447) by me
 
 ### When to Install
 
@@ -57,10 +78,12 @@ This mod should be added before the game has started.  If you remove it from a g
 
 ## Known Issues
 
-This mod overwrites the corresponding species class added by "Silfae's city sets updated" so that it will not be available for use.  Instead, the original species class from Silfae (with localisation) is used.  Expect to see one line in error.log like this:
+This mod overwrites the corresponding species class added by "Silfae's city sets updated" so that it will not be available for use.  Instead, the original species class from Silfae (with localisation) is used.  Also, it replces two triggers from the base game.  Expect to see three lines in error.log like this:
 
 ```
-[20:21:43][game_singleobjectdatabase.h:147]: Object with key: Silfae-Holofrixit already exists
+[14:11:39][game_singleobjectdatabase.h:147]: Object with key: Silfae-Holofrixit already exists
+[14:11:44][game_singleobjectdatabase.h:147]: Object with key: ruler_job_check_trigger already exists
+[14:11:44][game_singleobjectdatabase.h:147]: Object with key: complex_specialist_job_check_trigger already exists
 ```
 
 ## Changelog
@@ -80,23 +103,3 @@ It is best to clone this repository into `<Stellaris User's Directory>/Paradox I
 I was inspired to extend the original mod when I saw [Endugu](https://steamcommunity.com/profiles/76561198037630876/myworkshopfiles/)'s [expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=1584824947) of [Silfae](https://steamcommunity.com/profiles/76561198021525667/myworkshopfiles/)'s [Animated Xirmian Portraits](https://steamcommunity.com/workshop/filedetails/?id=881118424).  Modular mods that require downloading the original mod(s) help give credit where credit is due.
 
 An extra special thanks to Silfae for creating and sharing so many detailed, animated portraits for the community.
-
-# TODO add notes about incompatibility with Silicoids
-# Also add note to Silicoids
-
-# TODO overwrite pop_jobs (blah) + triggers, add notes about jobs overrides
-
-# event on_tech_increased that upgrades them all to the new trait? leave old ones able to be modded (apply template) but special trait(s) can't be removed
-# on_tech_increased to upgrade trait levels automagically (and convert all references - yay ezmode)
-
-# TODO: could add country modifier during a war with +happiness for warriors, -happniess for ganglions
-
-# TODO: Holofrixit consume energy, probably need to edit pop_categories (no food)
-
-# TODO: Xechiros will only take ruler jobs
-# TODO: require corresponding traits for each leader role
-# => override 
-
-# Caste-restricted leaders
-
-# Battle Thrall military leaders for ?
