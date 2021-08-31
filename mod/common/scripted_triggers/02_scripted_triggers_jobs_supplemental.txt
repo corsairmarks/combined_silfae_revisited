@@ -1,0 +1,40 @@
+head_researcher_job_check_trigger = {
+	if = {
+		limit = {
+			exists = owner
+			owner = {
+				has_origin = origin_holofrixit
+				has_trait = trait_holooverseer
+			}
+		}
+		custom_tooltip = {
+			text = RULER_JOB_HOLOOVERSEER_TRIGGER
+			OR = {
+				has_trait = trait_hologanglion
+				has_trait = trait_holooverseer
+				has_trait = trait_holofrixigram_3
+			}
+			is_enslaved = no
+			is_being_purged = no
+			is_being_assimilated = no
+		}
+	}
+	else = {
+		ruler_job_check_trigger = yes
+	}
+}
+
+complex_drone_job_check_trigger = {
+	custom_tooltip = DRONE_JOB_TRIGGER
+	hidden_trigger = {
+		exists = owner
+		owner = { is_gestalt = yes }
+		is_being_purged = no
+		is_enslaved = no
+		is_being_assimilated = no
+		NOR = {
+			has_trait = trait_holodrone
+			has_citizenship_type = { type = citizenship_organic_trophy }
+		}
+	}
+}
