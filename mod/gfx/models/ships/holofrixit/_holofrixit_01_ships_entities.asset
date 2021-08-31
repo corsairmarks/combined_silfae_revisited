@@ -407,7 +407,7 @@ entity = {
 		uv_animation_direction 	= { 0.0 0.02 }
 		bloom_factor = @hlfrx_bloom_factor
 	}
-	scale = 0.75
+	scale = 0.6
 }
 
 entity = {
