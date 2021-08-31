@@ -4,7 +4,7 @@
 generate_holofrixit_start_pops = {
 	# founders are the xechiros
 	while = {
-		count = 2
+		count = 1
 		create_pop = {
 			species = owner.owner_species
 			ethos = owner
@@ -41,7 +41,7 @@ generate_holofrixit_start_pops = {
 		}
 	}
 	while = {
-		count = 3
+		count = 6
 		create_pop = {
 			species = event_target:hologanglion_species
 			ethos = owner
@@ -111,7 +111,7 @@ generate_holofrixit_start_pops = {
 		}
 	}
 	while = {
-		count = 12
+		count = 10
 		create_pop = {
 			species = event_target:holodrone_species
 			ethos = random
