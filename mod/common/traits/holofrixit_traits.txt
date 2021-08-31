@@ -22,7 +22,6 @@ trait_holofrixit = {
 		army_defense_health_mult = -0.5
 		army_attack_morale_mult = -0.5
 		army_defense_morale_mult = -0.5
-		pop_environment_tolerance = 1.0
 		pop_government_ethic_attraction = 0.15
 		pop_resettlement_cost_mult = -0.1
 		species_leader_exp_gain = 0.2

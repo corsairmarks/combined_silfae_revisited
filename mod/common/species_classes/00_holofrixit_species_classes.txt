@@ -1,19 +1,34 @@
 HLFRXT = {
 	archetype = HOLOARCH
+	randomized = no
+	playable = { NOT = { has_global_flag = game_started } }
+	possible_secondary = { always = no }
+	use_climate_preference = no
+	robotic = yes
 	portraits = {
 		"holofrixit"
+		"holooverseer"
 		"hologanglion"
 		"holowarrior"
 		"holodrone"
 		"holofrixigram"
 	}
 	non_randomized_portraits = {
+		"holooverseer"
 		"hologanglion"
 		"holowarrior"
 		"holodrone"
 		"holofrixigram"
 	}
-	robotic = yes
+	graphical_culture = holofrixit_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+}
+
+HLFRXTALT = {
+	archetype = BIOLOGICAL
+	portraits = {
+		"holofrixit"
+	}
 	graphical_culture = holofrixit_01
 	move_pop_sound_effect = "moving_pop_confirmation"
 }
