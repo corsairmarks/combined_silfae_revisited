@@ -10,11 +10,13 @@ head_researcher_job_check_trigger = {
 		custom_tooltip = {
 			text = RULER_JOB_HOLOOVERSEER_TRIGGER
 			OR = {
+				AND = {
+					is_enslaved = no
+					has_trait = trait_holooverseer
+				}
 				has_trait = trait_hologanglion
-				has_trait = trait_holooverseer
 				has_trait = trait_holofrixigram_3
 			}
-			is_enslaved = no
 			is_being_purged = no
 			is_being_assimilated = no
 		}
