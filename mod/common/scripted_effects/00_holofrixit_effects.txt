@@ -37,7 +37,7 @@ generate_holofrixit_start_pops = {
 		remove_trait = trait_holooverseer
 		add_trait = trait_hologanglion
 		effect = {
-			set_species_flag = holofrixit_caste@PREV
+			set_species_flag = holofrixit_caste@PREV.owner
 			set_species_flag = hologanglion_species@PREV.owner
 			save_event_target_as = hologanglion_species
 		}
@@ -76,7 +76,7 @@ generate_holofrixit_start_pops = {
 		remove_trait = trait_holooverseer
 		add_trait = trait_holowarrior
 		effect = {
-			set_species_flag = holofrixit_caste@PREV
+			set_species_flag = holofrixit_caste@PREV.owner
 			set_species_flag = holowarrior_species@PREV.owner
 			set_species_flag = allow_military_leaders_honored_protectors@PREV.owner
 			save_event_target_as = holowarrior_species
@@ -112,7 +112,7 @@ generate_holofrixit_start_pops = {
 		remove_trait = trait_holooverseer
 		add_trait = trait_holodrone
 		effect = {
-			set_species_flag = holofrixit_caste@PREV
+			set_species_flag = holofrixit_caste@PREV.owner
 			set_species_flag = holodrone_species@PREV.owner
 			save_event_target_as = holodrone_species
 		}
@@ -151,7 +151,7 @@ generate_holofrixit_start_pops = {
 		remove_trait = trait_holooverseer
 		add_trait = trait_holofrixigram
 		effect = {
-			set_species_flag = holofrixit_caste@PREV
+			set_species_flag = holofrixit_caste@PREV.owner
 			set_species_flag = holofrixigram_species@PREV.owner
 			save_event_target_as = holofrixigram_species
 		}
