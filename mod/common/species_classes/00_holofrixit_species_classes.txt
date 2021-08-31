@@ -3,7 +3,6 @@ HLFRXT = {
 	randomized = no
 	playable = { NOT = { has_global_flag = game_started } }
 	possible_secondary = { always = no }
-	use_climate_preference = no
 	robotic = yes
 	portraits = {
 		"holofrixit"
