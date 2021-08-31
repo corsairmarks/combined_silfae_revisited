@@ -10,6 +10,49 @@ can_generate_leader_from_pop = {
 	}
 	OR = {
 		is_robot_pop = no
+		ROOT = {
+			has_origin = origin_holofrixit
+			PREV.species = {
+				OR = {
+					NOT = { has_trait = trait_holofrixit }
+					has_trait = trait_holooverseer
+					has_trait = trait_hologanglion
+					# has_trait = trait_holowarrior
+					# has_trait = trait_holowarrior_2
+				}
+			}
+		}
+		ROOT = { has_technology = tech_synthetic_leaders }
+		ROOT = { has_authority = auth_machine_intelligence }
+		ROOT = { is_mechanical_empire = yes }
+	}
+	OR = {
+		is_same_species = ROOT
+		ROOT = {
+			NAND = {
+				has_origin = origin_necrophage
+				has_trait = trait_necrophage
+			}
+		}
+	}
+}
+
+# ROOT = country
+# THIS = pop
+can_generate_military_leader_from_pop = {
+	can_be_military_leader = yes
+	OR = {
+		is_robot_pop = no
+		ROOT = {
+			has_origin = origin_holofrixit
+			PREV.species = {
+				OR = {
+					NOT = { has_trait = trait_holofrixit }
+					has_trait = trait_holowarrior
+					has_trait = trait_holowarrior_2
+				}
+			}
+		}
 		ROOT = { has_technology = tech_synthetic_leaders }
 		ROOT = { has_authority = auth_machine_intelligence }
 		ROOT = { is_mechanical_empire = yes }
