@@ -4,8 +4,6 @@
 # These traits are a combination of the original holofrixit traits and the special
 # capabilities of the matching buildable Pops
 
-# TODO: set up the species with portraits to match originals!
-# TODO: set up portrait groups for eac holofrixit type that can be picked,
 # TODO: set up a mixed-bag of portraits, with job-based clothes (instead of the caste-based standard)
 
 trait_holofrixit = {
@@ -120,7 +118,6 @@ trait_hologanglion = {
 		planet_researchers_produces_mult = 0.25
 		planet_miners_produces_mult = -1
 		planet_technician_produces_mult = -0.5
-		pop_growth_speed_reduction = 1
 		pop_government_ethic_attraction = -0.15 # nullifies original, for total of 0 (TODO: Suggestible as 0.15, -1)
 		pop_cat_slave_happiness = 0.2
 	}
@@ -185,7 +182,7 @@ trait_holowarrior_2 = {
 		trait_holofrixigram_3
 		trait_holowarrior
 	}
-	prerequisites = { tech_epigenetic_triggers }
+	prerequisites = { tech_holocastes tech_epigenetic_triggers }
 	modifier = {
 		armies_cost_mult = 1
 		armies_upkeep_mult = 1
@@ -225,7 +222,7 @@ trait_holofrixigram = {
 		trait_holowarrior
 		trait_holowarrior_2
 	}
-	prerequisites = { tech_robotic_workers }
+	prerequisites = { tech_holocastes tech_robotic_workers }
 	modifier = {
 		planet_pops_upkeep_mult = 0.4
 		planet_researchers_produces_mult = -1
@@ -253,7 +250,7 @@ trait_holofrixigram_2 = {
 		trait_holowarrior
 		trait_holowarrior_2
 	}
-	prerequisites = { tech_droid_workers }
+	prerequisites = { tech_holocastes tech_droid_workers }
 	modifier = {
 		planet_pops_upkeep_mult = 0.6
 		planet_researchers_produces_mult = -0.5
@@ -281,7 +278,7 @@ trait_holofrixigram_3 = {
 		trait_holowarrior
 		trait_holowarrior_2
 	}
-	prerequisites = { tech_synthetic_workers }
+	prerequisites = { tech_holocastes tech_synthetic_workers }
 	modifier = {
 		planet_pops_upkeep_mult = 0.8
 		planet_miners_produces_mult = -1
