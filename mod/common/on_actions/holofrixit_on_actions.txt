@@ -33,7 +33,7 @@ empire_init_capital_planet = {
 # THIS = country
 on_tech_increased = {
 	events = {
+		holofrixit_evt.5
 		holocrisis.2190
-		# holofrixit_evt.5 # TODO upgrade holowarriors and holofrixigrams
 	}
 }
