@@ -230,10 +230,7 @@ trait_holofrixigram = {
 		planet_pops_upkeep_mult = 0.4
 		planet_researchers_produces_mult = -1
 		planet_miners_produces_mult = -1
-		planet_technician_produces_mult = 0.75
-		pop_government_ethic_attraction = 1
-		pop_growth_from_immigration = -1
-		pop_resettlement_cost_mult = 1
+		planet_technician_produces_mult = 0.6
 	}
 }
 
@@ -262,10 +259,6 @@ trait_holofrixigram_2 = {
 		planet_researchers_produces_mult = -0.5
 		planet_miners_produces_mult = -1
 		planet_technician_produces_mult = 0.8
-		pop_government_ethic_attraction = 1
-		pop_growth_from_immigration = -1
-		pop_resettlement_cost_mult = 1
-		# migrate no, colonize no, reproduce no, factions no, leaders no, slaves no, mod no, happiness no, CG no
 	}
 }
 
@@ -292,11 +285,6 @@ trait_holofrixigram_3 = {
 	modifier = {
 		planet_pops_upkeep_mult = 0.8
 		planet_miners_produces_mult = -1
-		planet_technician_produces_mult = 0.9
-		pop_government_ethic_attraction = 0.5
-		pop_growth_from_immigration = -0.5
-		pop_resettlement_cost_mult = 1
-		# mod no, rest yes
-		# notably can reproduce = yes
+		planet_technician_produces_mult = 1
 	}
 }
