@@ -303,36 +303,36 @@ country_event = {
 		}
 	}
 	immediate = {
-		switch = {
-			trigger = last_increased_tech
-			tech_epigenetic_triggers = {
-				every_owned_pop_species = {
-					limit = { has_trait = trait_holowarrior }
-					modify_species = {
-						remove_trait = trait_holowarrior
-						add_trait = trait_holowarrior_2
-						change_scoped_species = yes
-					}
+		if = {
+			limit = { last_increased_tech = tech_epigenetic_triggers }
+			every_owned_pop_species = {
+				limit = { has_trait = trait_holowarrior }
+				modify_species = {
+					remove_trait = trait_holowarrior
+					add_trait = trait_holowarrior_2
+					change_scoped_species = yes
 				}
 			}
-			tech_droid_workers = {
-				every_owned_pop_species = {
-					limit = { has_trait = trait_holofrixigram }
-					modify_species = {
-						remove_trait = trait_holofrixigram
-						add_trait = trait_holofrixigram_2
-						change_scoped_species = yes
-					}
+		}
+		else_if = {
+			limit = { last_increased_tech = tech_droid_workers }
+			every_owned_pop_species = {
+				limit = { has_trait = trait_holofrixigram }
+				modify_species = {
+					remove_trait = trait_holofrixigram
+					add_trait = trait_holofrixigram_2
+					change_scoped_species = yes
 				}
 			}
-			tech_synthetic_workers = {
-				every_owned_pop_species = {
-					limit = { has_trait = trait_holofrixigram_2 }
-					modify_species = {
-						remove_trait = trait_holofrixigram_2
-						add_trait = trait_holofrixigram_3
-						change_scoped_species = yes
-					}
+		}
+		else_if = {
+			limit = { last_increased_tech = tech_synthetic_workers }
+			every_owned_pop_species = {
+				limit = { has_trait = trait_holofrixigram_2 }
+				modify_species = {
+					remove_trait = trait_holofrixigram_2
+					add_trait = trait_holofrixigram_3
+					change_scoped_species = yes
 				}
 			}
 		}
