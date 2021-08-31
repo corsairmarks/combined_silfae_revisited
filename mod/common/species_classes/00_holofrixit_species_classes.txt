@@ -7,18 +7,17 @@ HLFRXT = {
 	robotic = yes
 	portraits = {
 		"holofrixit"
-		"holooverseer"
-		"hologanglion"
-		"holowarrior"
-		"holodrone"
-		"holofrixigram"
 	}
-	non_randomized_portraits = {
-		"holooverseer"
-		"hologanglion"
-		"holowarrior"
-		"holodrone"
-		"holofrixigram"
+	custom_portraits = {
+		randomized = { always = no }
+		playable = { always = no }
+		portraits = {
+			"holooverseer"
+			"hologanglion"
+			"holowarrior"
+			"holodrone"
+			"holofrixigram"
+		}
 	}
 	graphical_culture = holofrixit_01
 	move_pop_sound_effect = "moving_pop_confirmation"

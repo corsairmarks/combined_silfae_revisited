@@ -3,6 +3,12 @@
 # THIS = planet
 generate_holofrixit_start_pops = {
 	# founders are the xechiros
+	owner_species = {
+		if = {
+			limit = { species_portrait = holofrixit }
+			change_species_portrait = holooverseer
+		}
+	}
 	while = {
 		count = 1
 		create_pop = {
