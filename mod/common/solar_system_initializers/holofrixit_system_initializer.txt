@@ -4,7 +4,7 @@ holofrixit_system_initializer = {
 	class = sc_pulsar
 	asteroid_belt = {
 		type = rocky_asteroid_belt
-		radius = 90
+		radius = 45
 	}
 	usage = custom_empire
 	flags = { empire_home_system holofrixit_system }
@@ -25,9 +25,9 @@ holofrixit_system_initializer = {
 	}
 	planet = {
 		class = ideal_planet_class
-		orbit_distance = 40
+		orbit_distance = 25
 		orbit_angle = 90
-		size = 9
+		size = 14
 		starting_planet = yes
 		home_planet = yes
 		has_ring = no
@@ -48,16 +48,104 @@ holofrixit_system_initializer = {
 		}
 	}
 	planet = {
+		name = "Cold Gates - Brah"
+		class = pc_ringworld_seam_damaged
+		orbit_distance = 20
+		orbit_angle = 0
+	}
+	planet = {
+		name = "Cold Gates - Zyk"
+		class = pc_ringworld_tech_damaged
+		orbit_distance = 0
+		orbit_angle = 30
+	}
+	planet = {
+		name = "Cold Gates - Mrae"
+		class = pc_ringworld_habitable_damaged
+		orbit_distance = 0
+		orbit_angle = 30
+	}
+	planet = {
+		name = "Cold Gates - Gluhut"
+		class = pc_ringworld_seam_damaged
+		orbit_distance = 0
+		orbit_angle = 30
+	}
+	planet = {
+		name = "Cold Gates - Dru"
+		class = pc_ringworld_tech_damaged
+		orbit_distance = 0
+		orbit_angle = 30
+	}
+	planet = {
+		name = "Cold Gates - Chix"
+		class = pc_ringworld_habitable_damaged
+		orbit_distance = 0
+		orbit_angle = 30
+	}
+	planet = {
+		name = "Cold Gates - Zweep"
+		class = pc_ringworld_seam_damaged
+		orbit_distance = 0
+		orbit_angle = 30
+	}
+	planet = {
+		name = "Cold Gates - Glerg"
+		class = pc_ringworld_tech_damaged
+		orbit_distance = 0
+		orbit_angle = 30
+	}
+	planet = {
+		name = "Cold Gates - Xuxx"
+		class = pc_ringworld_habitable_damaged
+		orbit_distance = 0
+		orbit_angle = 30
+	}
+	planet = {
+		name = "Cold Gates - Tsow"
+		class = pc_ringworld_seam_damaged
+		orbit_distance = 0
+		orbit_angle = 30
+	}
+	planet = {
+		name = "Cold Gates - Shult"
+		class = pc_ringworld_tech_damaged
+		orbit_distance = 0
+		orbit_angle = 30
+	}
+	planet = {
+		name = "Cold Gates - Zuq"
+		class = pc_ringworld_habitable_damaged
+		orbit_distance = 0
+		orbit_angle = 30
+	}
+	planet = {
+		name = "Mattri-X1873"
+		class = pc_asteroid 
+		orbit_distance = 2
+		orbit_angle = 150
+		size = 4
+		has_ring = no
+	}
+	planet = {
+		name = "Quikki-X2459"
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = 260
+		size = 1
+		has_ring = no
+	}
+	planet = {
 		name = "Pzika"
 		class = pc_frozen
-		orbit_distance = 30
-		orbit_angle = 105
+		orbit_distance = 20
+		orbit_angle = 225
 		size = 10
 		has_ring = no
-		flags = { starting_deposit }
+		flags = { ignore_startup_effect starting_deposit }
 		init_effect = {
 			clear_deposits = yes
-			set_deposit = d_living_metal_deposit 
+			add_deposit = d_living_metal_deposit 
 			create_ambient_object = {
 				type = large_debris_object
 				location = THIS
@@ -69,108 +157,26 @@ holofrixit_system_initializer = {
 		}
 	}
 	planet = {
-		name = "Mattri-X1873"
-		class = pc_asteroid 
-		orbit_distance = 20
-		orbit_angle = 60
-		size = 4
-		has_ring = no
-	}
-	planet = {
-		name = "Quikki-X2459"
-		class = pc_asteroid
-		orbit_distance = 2
-		orbit_angle = -310
-		size = 1
-		has_ring = no
-	}
-	planet = {
-		name = "Cold Gates - Brah"
-		class = pc_ringworld_tech_damaged
-		orbit_distance = 1
-		orbit_angle = -195
-	}
-	planet = {
-		name = "Cold Gates - Zyk"
-		class = pc_ringworld_seam_damaged
-		orbit_distance = 0
-		orbit_angle = -195
-	}
-	planet = {
-		name = "Cold Gates - Mrae"
-		class = pc_ringworld_seam_damaged
-		orbit_distance = 0
-		orbit_angle = -195
-	}
-	planet = {
-		name = "Cold Gates - Gluhut"
-		class = pc_ringworld_seam_damaged
-		orbit_distance = 0
-		orbit_angle = -195
-	}
-	planet = {
-		name = "Cold Gates - Dru"
-		class = pc_ringworld_tech_damaged
-		orbit_distance = 0
-		orbit_angle = -195
-	}
-	planet = {
-		name = "Cold Gates - Chix"
-		class = pc_ringworld_seam_damaged
-		orbit_distance = 0
-		orbit_angle = -195
-	}
-	planet = {
-		name = "Cold Gates - Zweep"
-		class = pc_ringworld_seam_damaged
-		orbit_distance = 0
-		orbit_angle = -195
-	}
-	planet = {
-		name = "Cold Gates - Glerg"
-		class = pc_ringworld_seam_damaged
-		orbit_distance = 0
-		orbit_angle = -195
-	}
-	planet = {
-		name = "Cold Gates - Xuxx"
-		class = pc_ringworld_habitable_damaged
-		orbit_distance = 0
-		orbit_angle = -195
-	}
-	planet = {
-		name = "Cold Gates - Tsow"
-		class = pc_ringworld_seam_damaged
-		orbit_distance = 0
-		orbit_angle = -195
-	}
-	planet = {
-		name = "Cold Gates - Shult"
-		class = pc_ringworld_habitable_damaged
-		orbit_distance = 0
-		orbit_angle = -195
-	}
-	planet = {
 		name = "Hyppiro"
 		class = pc_gas_giant
-		orbit_distance = 45
-		orbit_angle = -460
+		orbit_distance = 35
+		orbit_angle = 260
 		size = 38
 		has_ring = yes
 		entity = gas_giant_02_entity
-		change_orbit = 6
 		init_effect = {
 			create_ambient_object = {
 				type = ancient_battlefield_object
 				location = THIS
 			}
 		}
+		change_orbit = 10
 		moon = {
 			name = "Zip-X1967"
 			class = pc_asteroid
 			size = 1
-			orbit_distance = 2
-			orbit_angle = 0
+			orbit_distance = 1
+			orbit_angle = { min = 60 max = 300 }
 			has_ring = no
 		}
 		moon = {
@@ -178,7 +184,7 @@ holofrixit_system_initializer = {
 			class = pc_asteroid
 			size = 1
 			orbit_distance = 1
-			orbit_angle = 0
+			orbit_angle = { min = 60 max = 300 }
 			has_ring = no
 		}
 		moon = {
@@ -186,14 +192,14 @@ holofrixit_system_initializer = {
 			class = pc_asteroid 
 			size = 1
 			orbit_distance = 2
-			orbit_angle = 0
+			orbit_angle = { min = 60 max = 300 }
 			has_ring = no
 		}
 	}
 	planet = {
 		name = "Quaxika"
 		class = pc_gas_giant
-		orbit_distance = 75
+		orbit_distance = 55
 		orbit_angle = 170
 		size = 21
 		has_ring = no
@@ -203,7 +209,7 @@ holofrixit_system_initializer = {
 	planet = {
 		name = "Zup-ro"
 		class = pc_gas_giant
-		orbit_distance = 35
+		orbit_distance = 45
 		orbit_angle = 125
 		size = 18
 		has_ring = no
