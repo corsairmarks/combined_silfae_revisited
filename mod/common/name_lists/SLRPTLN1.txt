@@ -42,9 +42,9 @@ SLRPTLN1 = {
 
 	fleet_names = {
 		random_names = {
-			TODO
+			"Hidden Agenda" "Secret-Keepers" "Controlling Interest" "Concealed Motives" "Disguised Intentions"
 		}
-		sequential_name = "%O% TODO"
+		sequential_name = "%O% Puppetmasters"
 	}
 	
 	army_names = {
