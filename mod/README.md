@@ -13,7 +13,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     * Fix portrait selector and mesh errors (lead to error logs)
     * Set all the main Holofrixit portraits to have a version with and without the Unbidden sparkles
     * Adjust portrait grouping so that all Holofrixit portraits can be selected by the player when creating a custom empire
-    * TODO Add Pop-job-based selectors for empires that are not using the custom origin
+    * Add Pop-job-based selectors for empires that are not using the custom origin
 * Attach special Holofrixit features to an origin, which allows players to opt out of it
 * **Rebuild Holofrixit "caste"-based playstyle to work with the Pop job system and new way of assembling robot Pops
     * Remove old-style "buildable Pops"
@@ -27,14 +27,9 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 * Remove unnecessary old army overrides
 * Adjust Holowarrior and Hologenotype armies
 * Update Polarizing Nexus energy storage building
-
-
-
-* Update prescripted empire for 3.0:
-    * Can randomly spawn
-
-* Add a namelist for `XXX` (necessary for randomized species to get names)
 * You can use Silfae's Holofrixit portraits for your own empires without any DLC requirements
+* Added a second species class (Holofrixit Alt.) that is a `BIOLOGICAL` archetype, so you can play without the requirement for energy upkeep
+* Disable the "Holocrisis" - a duplicate of original AI rebellion - at least until I can spend more time updating it to work with the current game version
 
 ## Compatibility
 
