@@ -44,6 +44,6 @@ on_tech_increased = {
 # FROM = leader
 on_leader_spawned = {
 	events = {
-		holofrixit_evt.6
+		holofrixit_evt.7
 	}
 }
