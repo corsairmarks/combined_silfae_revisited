@@ -106,7 +106,7 @@ can_species_be_assembled = {
 	OR = {
 		AND = {
 			is_robotic = yes
-			root = {
+			ROOT = {
 				check_modifier_value = {
 					modifier = planet_pop_assembly_add
 					value > 0
@@ -115,7 +115,7 @@ can_species_be_assembled = {
 		}
 		AND = {
 			is_organic_species = yes
-			root = {
+			ROOT = {
 				check_modifier_value = {
 					modifier = planet_pop_assembly_organic_add
 					value > 0
@@ -125,6 +125,6 @@ can_species_be_assembled = {
 	}
 	has_population_control = {
 		value = no
-		country = root.owner
+		country = ROOT.owner
 	}
 }
