@@ -1,6 +1,6 @@
 # Overview
 
-Have you seen the insidious, sleek portraits from Silfae's "Holosphere Rising" mod?  Do you long to steer the unwitting masses with up-to-date gameplay elements and play the Holosphere as originally designed?  Then this mod is for you!
+Have you seen the azure, chitinous portraits from Silfae's "Holosphere Rising" mod?  Do you want to manage techno-arthropoid hives with up-to-date gameplay elements and play the Holosphere as originally designed?  Then this mod is for you!
 
 There are other mods which contain these portraits, so why should you choose this one?  None of the others update special holofrixit caste-based gameplay, but this one does!  Please enjoy my adaptation of Silfae's custom empire into modern Stellaris.
 
