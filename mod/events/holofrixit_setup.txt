@@ -189,11 +189,6 @@ country_event = {
 					country = PREV
 					cooldown = no
 				}
-				set_population_controls = {
-					type = population_control_yes
-					country = PREV
-					cooldown = no
-				}
 				set_colonization_controls = {
 					type = colonization_control_no
 					country = PREV
@@ -219,11 +214,6 @@ country_event = {
 				}
 				set_living_standard = {
 					type = living_standard_normal
-					country = PREV
-					cooldown = no
-				}
-				set_population_controls = {
-					type = population_control_yes
 					country = PREV
 					cooldown = no
 				}
