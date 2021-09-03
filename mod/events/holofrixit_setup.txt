@@ -346,7 +346,7 @@ leader_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		has_trait = trait_holofrixit
+		species = { has_trait = trait_holofrixit }
 	}
 	immediate = {
 		switch = {
