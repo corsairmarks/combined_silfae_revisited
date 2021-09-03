@@ -1,8 +1,8 @@
 # Overview
 
-Have you seen the insidious, sleek portraits from Silfae's "Holosphere Rising" mod?  Do you long to steer the unwitting masses with up-to-date gameplay elements and play the Global Earth Order as originally designed?  Then this mod is for you!
+Have you seen the insidious, sleek portraits from Silfae's "Holosphere Rising" mod?  Do you long to steer the unwitting masses with up-to-date gameplay elements and play the Holosphere as originally designed?  Then this mod is for you!
 
-There are other mods which contain these portraits, so why should you choose this one?  None of the others update special holofrixit gameplay or the holofrixigam crisis, but thi one does!  Please enjoy my adaptation of Silfae's custom empire into modern Stellaris.
+There are other mods which contain these portraits, so why should you choose this one?  None of the others update special holofrixit caste-based gameplay, but this one does!  Please enjoy my adaptation of Silfae's custom empire into modern Stellaris.
 
 # Changes
 
@@ -15,21 +15,22 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     * Adjust portrait grouping so that all Holofrixit portraits can be selected by the player when creating a custom empire
     * Add Pop-job-based selectors for empires that are not using the custom origin
 * Attach special Holofrixit features to an origin, which allows players to opt out of it
-* **Rebuild Holofrixit "caste"-based playstyle to work with the Pop job system and new way of assembling robot Pops
+* **Rebuild Holofrixit "caste"-based playstyle to work with the Pop job system and new way of assembling robot Pops**
     * Remove old-style "buildable Pops"
     * Reduce amount modifiers attached to the shared Holofrixit trait
     * Adjust special "caste" traits (Hologanglion, Holowarrior/Hologenotype, Holofrixigram/Advanced Holofrixigram/Hyperfrixigram) for up-to-date modifiers
     * Add Holodrone trait for basic drones
-    * Add Xechiro trait for highest caste (also the only species that can generate leaders)
-    * Start with Pops from each of the four Pop-based castes, but overall fewer than normal empires
+    * Add Xechiro trait for highest caste
+    * Start with Pops from each of the five castes, but overall fewer than normal empires
     * Holofrixit government is now divided into the Xechiros Protocol government and Hive-network authority, available only with the Holofrixit origin
     * Add random names for the Holofrixit government
 * Remove unnecessary old army overrides
 * Adjust Holowarrior and Hologenotype armies
 * Update Polarizing Nexus energy storage building
 * You can use Silfae's Holofrixit portraits for your own empires without any DLC requirements
-* Added a second species class (Holofrixit Alt.) that is a `BIOLOGICAL` archetype, so you can play without the requirement for energy upkeep
-* Disable the "Holocrisis" - a duplicate of original AI rebellion - at least until I can spend more time updating it to work with the current game version
+    * Using the main Holofrixit species class will consume energy instead of food
+    * Added a second species class (Holofrixit Alt.) that is a `BIOLOGICAL` archetype, so you can choose to play without the requirement for energy upkeep
+* Disable the "Holocrisis" - a duplicate of original AI rebellion - at least until I can spend more time updating it to work with the current game version **postponed until after 3.1 'Lem'**
 
 ## Compatibility
 
