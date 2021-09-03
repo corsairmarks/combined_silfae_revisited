@@ -8,6 +8,7 @@
  HLFRXT_ear: "$ART_ear$"
  HLFRXT_ear_plural: "$ART_ear_plural$"
  name_list_HLFRXT1: "Holofrixit 1"
+ name_list_HLFRXTALT1: "$name_list_HLFRXT1$"
  trait_holooverseer: "Xechiro"
  trait_holooverseer_desc: "§LThe Holofrixit administrative caste, born with a full emotional and cognitive spectrum. Only they are able to lead and coordinate the efforts of each hive.§!\n"
  trait_holodrone: "Holodrone"
