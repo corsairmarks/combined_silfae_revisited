@@ -308,10 +308,7 @@ ensure_leader_species_correct_holofrixit_caste = {
 		owner = {
 			random_owned_pop_species = {
 				limit = { has_trait = $TRAIT$ }
-				PREVPREV = {
-					change_species = PREV
-					log = "changed to \\[Prev.GetName]" # TODO remove
-				}
+				PREVPREV = { change_species = PREV }
 			}
 		}
 	}
