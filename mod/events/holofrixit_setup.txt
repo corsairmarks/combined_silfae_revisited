@@ -417,13 +417,13 @@ country_event = {
 	}
 	immediate = {
 		every_owned_leader = {
-			limit = { has_trait = trait_holofrixit }
+			limit = { species = { has_trait = trait_holofrixit } }
 			leader_event = {
 				id = holofrixit_evt.6
 			}
 		}
 		every_pool_leader = {
-			limit = { has_trait = trait_holofrixit }
+			limit = { species = { has_trait = trait_holofrixit } }
 			leader_event = {
 				id = holofrixit_evt.6
 			}
