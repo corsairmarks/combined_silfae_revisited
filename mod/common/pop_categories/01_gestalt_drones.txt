@@ -45,28 +45,25 @@ complex_drone = {
 			trigger = {
 				is_organic_species = yes
 				is_lithoid = no
+				is_holofrixit = no
 			}
 			food = @living_standard_food_normal
 		}
 
 		upkeep = {
-			trigger = {
-				is_organic_species = yes
-				is_lithoid = yes
-			}
+			trigger = { is_lithoid = yes }
 			minerals = @living_standard_food_normal
 		}
 
 		upkeep = {
-			trigger = {
-				is_holofrixit = yes
-			}
-			energy = @living_standard_food_normal
+			trigger = { is_holofrixit = yes }
+			energy = @living_standard_energy_normal
 		}
 
 		upkeep = {
 			trigger = {
 				is_robotic_species = yes
+				is_holofrixit = no
 			}
 			energy = @living_standard_energy_normal
 		}
@@ -170,15 +167,13 @@ simple_drone = {
 			trigger = {
 				is_organic_species = yes
 				is_lithoid = no
+				is_holofrixit = no
 			}
 			food = @living_standard_food_normal
 		}
 
 		upkeep = {
-			trigger = {
-				is_organic_species = yes
-				is_lithoid = yes
-			}
+			trigger = { is_lithoid = yes }
 			minerals = @living_standard_food_normal
 		}
 
@@ -190,7 +185,7 @@ simple_drone = {
 					species = { NOT = { has_trait = trait_mechanical } }
 				}
 			}
-			energy = @living_standard_food_normal
+			energy = @living_standard_energy_normal
 		}
 		upkeep = {
 			trigger = {
@@ -204,6 +199,7 @@ simple_drone = {
 		upkeep = {
 			trigger = {
 				is_robotic_species = yes
+				is_holofrixit = no
 				is_unemployed = no
 			}
 			energy = @living_standard_energy_normal
@@ -211,6 +207,7 @@ simple_drone = {
 		upkeep = {
 			trigger = {
 				is_robotic_species = yes
+				is_holofrixit = no
 				is_unemployed = yes
 			}
 			energy = @living_standard_energy_unemployed

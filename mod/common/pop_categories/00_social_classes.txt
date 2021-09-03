@@ -140,6 +140,7 @@ ruler = {
 			trigger = {
 				is_organic_species = yes
 				is_lithoid = no
+				is_holofrixit = no
 				has_shared_burden_living_standard_type = yes
 				owner = { is_primitive = no }
 			}
@@ -148,7 +149,6 @@ ruler = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
 				is_lithoid = yes
 				has_shared_burden_living_standard_type = yes
 				owner = { is_primitive = no }
@@ -158,18 +158,18 @@ ruler = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
 				is_holofrixit = yes
 				has_shared_burden_living_standard_type = yes
 				owner = { is_primitive = no }
 			}
-			energy = @living_standard_food_normal
+			energy = @living_standard_energy_normal
 			consumer_goods = @living_standard_luxuries_shared_burden
 		}
 		upkeep = {
 			trigger = {
 				is_organic_species = yes
 				is_lithoid = no
+				is_holofrixit = no
 				owner = { is_primitive = no }
 				OR = {
 					has_academic_living_standard_type = yes
@@ -184,7 +184,6 @@ ruler = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
 				is_lithoid = yes
 				owner = { is_primitive = no }
 				OR = {
@@ -210,13 +209,14 @@ ruler = {
 					has_stratified_living_standard_type = yes
 				}
 			}
-			energy = @living_standard_food_normal
+			energy = @living_standard_energy_normal
 			consumer_goods = @living_standard_luxuries_very_high
 		}
 		upkeep = {
 			trigger = {
 				is_organic_species = yes
 				is_lithoid = no
+				is_holofrixit = no
 				has_low_living_standard_type = yes
 				owner = { is_primitive = no }
 			}
@@ -225,7 +225,6 @@ ruler = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
 				is_lithoid = yes
 				has_low_living_standard_type = yes
 				owner = { is_primitive = no }
@@ -239,13 +238,15 @@ ruler = {
 				has_low_living_standard_type = yes
 				owner = { is_primitive = no }
 			}
-			energy = @living_standard_food_normal
+			energy = @living_standard_energy_normal
 			consumer_goods = @living_standard_luxuries_high
 		}
 		# Primitives
 		upkeep = {
 			trigger = {
+				is_organic_species = yes
 				is_lithoid = no
+				is_holofrixit = no
 				owner = { is_primitive = yes }
 			}
 			food = @living_standard_food_normal
@@ -262,13 +263,14 @@ ruler = {
 				is_holofrixit = yes
 				owner = { is_primitive = yes }
 			}
-			energy = @living_standard_food_normal
+			energy = @living_standard_energy_normal
 		}
 
 		# Robotic Upkeep
 		upkeep = {
 			trigger = {
 				is_robotic_species = yes
+				is_holofrixit = no
 				has_shared_burden_living_standard_type = yes
 			}
 			energy = @living_standard_energy_normal
@@ -277,6 +279,7 @@ ruler = {
 		upkeep = {
 			trigger = {
 				is_robotic_species = yes
+				is_holofrixit = no
 				OR = {
 					has_academic_living_standard_type = yes
 					has_very_high_living_standard_type = yes
@@ -291,6 +294,7 @@ ruler = {
 		upkeep = {
 			trigger = {
 				is_robotic_species = yes
+				is_holofrixit = no
 				has_low_living_standard_type = yes
 			}
 			energy = @living_standard_energy_normal
@@ -473,6 +477,7 @@ specialist = {
 			trigger = {
 				is_organic_species = yes
 				is_lithoid = no
+				is_holofrixit = no
 				has_shared_burden_living_standard_type = yes
 				owner = { is_primitive = no }
 			}
@@ -481,7 +486,6 @@ specialist = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
 				is_lithoid = yes
 				has_shared_burden_living_standard_type = yes
 				owner = { is_primitive = no }
@@ -495,13 +499,14 @@ specialist = {
 				has_shared_burden_living_standard_type = yes
 				owner = { is_primitive = no }
 			}
-			energy = @living_standard_food_normal
+			energy = @living_standard_energy_normal
 			consumer_goods = @living_standard_luxuries_shared_burden
 		}
 		upkeep = {
 			trigger = {
 				is_organic_species = yes
 				is_lithoid = no
+				is_holofrixit = no
 				owner = { is_primitive = no }
 				OR = {
 					has_academic_living_standard_type = yes
@@ -513,7 +518,6 @@ specialist = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
 				is_lithoid = yes
 				owner = { is_primitive = no }
 				OR = {
@@ -533,13 +537,14 @@ specialist = {
 					has_very_high_living_standard_type = yes
 				}
 			}
-			energy = @living_standard_food_normal
+			energy = @living_standard_energy_normal
 			consumer_goods = @living_standard_luxuries_very_high
 		}
 		upkeep = {
 			trigger = {
 				is_organic_species = yes
 				is_lithoid = no
+				is_holofrixit = no
 				owner = { is_primitive = no }
 				OR = {
 					has_high_living_standard_type = yes
@@ -552,7 +557,6 @@ specialist = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
 				is_lithoid = yes
 				owner = { is_primitive = no }
 				OR = {
@@ -574,13 +578,14 @@ specialist = {
 					has_stratified_living_standard_type = yes
 				}
 			}
-			energy = @living_standard_food_normal
+			energy = @living_standard_energy_normal
 			consumer_goods = @living_standard_luxuries_high
 		}
 		upkeep = {
 			trigger = {
 				is_organic_species = yes
 				is_lithoid = no
+				is_holofrixit = no
 				has_low_living_standard_type = yes
 				owner = { is_primitive = no }
 			}
@@ -589,7 +594,6 @@ specialist = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
 				is_lithoid = yes
 				has_low_living_standard_type = yes
 				owner = { is_primitive = no }
@@ -603,13 +607,15 @@ specialist = {
 				has_low_living_standard_type = yes
 				owner = { is_primitive = no }
 			}
-			energy = @living_standard_food_normal
+			energy = @living_standard_energy_normal
 			consumer_goods = @living_standard_luxuries_normal
 		}
 		# Primitives
 		upkeep = {
 			trigger = {
+				is_organic_species = yes
 				is_lithoid = no
+				is_holofrixit = no
 				owner = { is_primitive = yes }
 			}
 			food = @living_standard_food_normal
@@ -626,13 +632,14 @@ specialist = {
 				is_holofrixit = yes
 				owner = { is_primitive = yes }
 			}
-			energy = @living_standard_food_normal
+			energy = @living_standard_energy_normal
 		}
 
 		# Robotic Upkeep
 		upkeep = {
 			trigger = {
 				is_robotic_species = yes
+				is_holofrixit = no
 				has_shared_burden_living_standard_type = yes
 			}
 			energy = @living_standard_energy_normal
@@ -641,6 +648,7 @@ specialist = {
 		upkeep = {
 			trigger = {
 				is_robotic_species = yes
+				is_holofrixit = no
 				OR = {
 					has_academic_living_standard_type = yes
 					has_very_high_living_standard_type = yes
@@ -652,6 +660,7 @@ specialist = {
 		upkeep = {
 			trigger = {
 				is_robotic_species = yes
+				is_holofrixit = no
 				has_high_living_standard_type = yes
 			}
 			energy = @living_standard_energy_normal
@@ -660,6 +669,7 @@ specialist = {
 		upkeep = {
 			trigger = {
 				is_robotic_species = yes
+				is_holofrixit = no
 				has_normal_living_standard_type = yes
 			}
 			energy = @living_standard_energy_normal
@@ -668,6 +678,7 @@ specialist = {
 		upkeep = {
 			trigger = {
 				is_robotic_species = yes
+				is_holofrixit = no
 				has_stratified_living_standard_type = yes
 			}
 			energy = @living_standard_energy_normal
@@ -676,6 +687,7 @@ specialist = {
 		upkeep = {
 			trigger = {
 				is_robotic_species = yes
+				is_holofrixit = no
 				has_low_living_standard_type = yes
 			}
 			energy = @living_standard_energy_normal
@@ -871,6 +883,7 @@ worker = {
 			trigger = {
 				is_organic_species = yes
 				is_lithoid = no
+				is_holofrixit = no
 				has_shared_burden_living_standard_type = yes
 				owner = { is_primitive = no }
 			}
@@ -879,7 +892,6 @@ worker = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
 				is_lithoid = yes
 				has_shared_burden_living_standard_type = yes
 				owner = { is_primitive = no }
@@ -893,13 +905,14 @@ worker = {
 				has_shared_burden_living_standard_type = yes
 				owner = { is_primitive = no }
 			}
-			energy = @living_standard_food_normal
+			energy = @living_standard_energy_normal
 			consumer_goods = @living_standard_luxuries_shared_burden
 		}
 		upkeep = {
 			trigger = {
 				is_organic_species = yes
 				is_lithoid = no
+				is_holofrixit = no
 				has_very_high_living_standard_type = yes
 				owner = { is_primitive = no }
 			}
@@ -908,7 +921,6 @@ worker = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
 				is_lithoid = yes
 				has_very_high_living_standard_type = yes
 				owner = { is_primitive = no }
@@ -922,13 +934,14 @@ worker = {
 				has_very_high_living_standard_type = yes
 				owner = { is_primitive = no }
 			}
-			energy = @living_standard_food_normal
+			energy = @living_standard_energy_normal
 			consumer_goods = @living_standard_luxuries_very_high
 		}
 		upkeep = {
 			trigger = {
 				is_organic_species = yes
 				is_lithoid = no
+				is_holofrixit = no
 				has_high_living_standard_type = yes
 				owner = { is_primitive = no }
 			}
@@ -937,7 +950,6 @@ worker = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
 				is_lithoid = yes
 				has_high_living_standard_type = yes
 				owner = { is_primitive = no }
@@ -951,13 +963,14 @@ worker = {
 				has_high_living_standard_type = yes
 				owner = { is_primitive = no }
 			}
-			energy = @living_standard_food_normal
+			energy = @living_standard_energy_normal
 			consumer_goods = @living_standard_luxuries_high
 		}
 		upkeep = {
 			trigger = {
 				is_organic_species = yes
 				is_lithoid = no
+				is_holofrixit = no
 				owner = { is_primitive = no }
 				OR = {
 					has_normal_living_standard_type = yes
@@ -969,7 +982,6 @@ worker = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
 				is_lithoid = yes
 				owner = { is_primitive = no }
 				OR = {
@@ -989,13 +1001,14 @@ worker = {
 					has_academic_living_standard_type = yes
 				}
 			}
-			energy = @living_standard_food_normal
+			energy = @living_standard_energy_normal
 			consumer_goods = @living_standard_luxuries_normal
 		}
 		upkeep = {
 			trigger = {
 				is_organic_species = yes
 				is_lithoid = no
+				is_holofrixit = no
 				has_stratified_living_standard_type = yes
 				owner = { is_primitive = no }
 			}
@@ -1004,7 +1017,6 @@ worker = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
 				is_lithoid = yes
 				has_stratified_living_standard_type = yes
 				owner = { is_primitive = no }
@@ -1018,13 +1030,14 @@ worker = {
 				has_stratified_living_standard_type = yes
 				owner = { is_primitive = no }
 			}
-			energy = @living_standard_food_normal
+			energy = @living_standard_energy_normal
 			consumer_goods = @living_standard_luxuries_low
 		}
 		upkeep = {
 			trigger = {
 				is_organic_species = yes
 				is_lithoid = no
+				is_holofrixit = no
 				has_low_living_standard_type = yes
 				owner = { is_primitive = no }
 			}
@@ -1033,7 +1046,6 @@ worker = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
 				is_lithoid = yes
 				has_low_living_standard_type = yes
 				owner = { is_primitive = no }
@@ -1047,14 +1059,16 @@ worker = {
 				has_low_living_standard_type = yes
 				owner = { is_primitive = no }
 			}
-			energy = @living_standard_food_normal
+			energy = @living_standard_energy_normal
 			consumer_goods = @living_standard_luxuries_very_low
 		}
 
 		# Primitives
 		upkeep = {
 			trigger = {
+				is_organic_species = yes
 				is_lithoid = no
+				is_holofrixit = no
 				owner = { is_primitive = yes }
 			}
 			food = @living_standard_food_normal
@@ -1071,13 +1085,14 @@ worker = {
 				is_holofrixit = yes
 				owner = { is_primitive = yes }
 			}
-			energy = @living_standard_food_normal
+			energy = @living_standard_energy_normal
 		}
 
 		# Robotic Upkeep
 		upkeep = {
 			trigger = {
 				is_robotic_species = yes
+				is_holofrixit = no
 				has_shared_burden_living_standard_type = yes
 			}
 			energy = @living_standard_energy_normal
@@ -1086,6 +1101,7 @@ worker = {
 		upkeep = {
 			trigger = {
 				is_robotic_species = yes
+				is_holofrixit = no
 				has_very_high_living_standard_type = yes
 			}
 			energy = @living_standard_energy_normal
@@ -1094,6 +1110,7 @@ worker = {
 		upkeep = {
 			trigger = {
 				is_robotic_species = yes
+				is_holofrixit = no
 				has_high_living_standard_type = yes
 			}
 			energy = @living_standard_energy_normal
@@ -1102,6 +1119,7 @@ worker = {
 		upkeep = {
 			trigger = {
 				is_robotic_species = yes
+				is_holofrixit = no
 				OR = {
 					has_normal_living_standard_type = yes
 					has_academic_living_standard_type = yes
@@ -1113,6 +1131,7 @@ worker = {
 		upkeep = {
 			trigger = {
 				is_robotic_species = yes
+				is_holofrixit = no
 				has_stratified_living_standard_type = yes
 			}
 			energy = @living_standard_energy_normal
@@ -1121,6 +1140,7 @@ worker = {
 		upkeep = {
 			trigger = {
 				is_robotic_species = yes
+				is_holofrixit = no
 				has_low_living_standard_type = yes
 			}
 			energy = @living_standard_energy_normal
