@@ -9,6 +9,7 @@ on_game_start = {
 on_game_start_country = {
 	events = {
 		holofrixit_evt.4
+		holofrixit_evt.8
 	}
 }
 
@@ -35,5 +36,14 @@ on_tech_increased = {
 	events = {
 		holofrixit_evt.5
 		# holocrisis.2190
+	}
+}
+
+# fired when a new leader is generated for an empire, to be available for recruitment
+# THIS = country
+# FROM = leader
+on_leader_spawned = {
+	events = {
+		holofrixit_evt.6
 	}
 }

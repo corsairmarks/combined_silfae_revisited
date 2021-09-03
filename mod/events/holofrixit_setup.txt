@@ -338,3 +338,95 @@ country_event = {
 		}
 	}
 }
+
+# triggered by holofrixit_evt.7 and holofrixit_evt.8
+# ROOT = leader
+leader_event = {
+	id = holofrixit_evt.6
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_trait = trait_holofrixit
+	}
+	immediate = {
+		switch = {
+			trigger = leader_class
+			governor = {
+				ensure_leader_species_correct_holofrixit_caste = { TRAIT = trait_holooverseer }
+			}
+			scientist = {
+				ensure_leader_species_correct_holofrixit_caste = { TRAIT = trait_hologanglion }
+			}
+			admiral = {
+				if = {
+					limit = { PREV = { has_technology = tech_epigenetic_triggers } }
+					ensure_leader_species_correct_holofrixit_caste = { TRAIT = trait_holowarrior_2 }
+				}
+				else = {
+					ensure_leader_species_correct_holofrixit_caste = { TRAIT = trait_holowarrior }
+				}
+			}
+			general = {
+				if = {
+					limit = { PREV = { has_technology = tech_epigenetic_triggers } }
+					ensure_leader_species_correct_holofrixit_caste = { TRAIT = trait_holowarrior_2 }
+				}
+				else = {
+					ensure_leader_species_correct_holofrixit_caste = { TRAIT = trait_holowarrior }
+				}
+			}
+			envoy = {
+				ensure_leader_species_correct_holofrixit_caste = { TRAIT = trait_holooverseer }
+			}
+			ruler = {
+				ensure_leader_species_correct_holofrixit_caste = { TRAIT = trait_holooverseer }
+			}
+		}
+	}
+}
+
+# triggered by on_leader_spawned
+# ROOT = country
+# FROM = leader
+country_event = {
+	id = holofrixit_evt.7
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_holofrixit
+		exists = FROM
+		FROM = { has_trait = trait_holofrixit }
+	}
+	immediate = {
+		FROM = {
+			leader_event = {
+				id = holofrixit_evt.6
+			}
+		}
+	}
+}
+
+# triggered by on_game_start_country
+# ROOT = country
+country_event = {
+	id = holofrixit_evt.8
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_holofrixit
+	}
+	immediate = {
+		every_owned_leader = {
+			limit = { has_trait = trait_holofrixit }
+			leader_event = {
+				id = holofrixit_evt.6
+			}
+		}
+		every_pool_leader = {
+			limit = { has_trait = trait_holofrixit }
+			leader_event = {
+				id = holofrixit_evt.6
+			}
+		}
+	}
+}

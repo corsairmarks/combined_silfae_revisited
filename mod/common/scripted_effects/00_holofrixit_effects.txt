@@ -285,3 +285,34 @@ add_random_1_generator_district_deposit = {
 		log_error = "unable to randomize size 1 generator deposit for class: \\[This.GetClassName]"
 	}
 }
+
+# THIS = leader
+# $TRAIT$ = the species trait to validate the leader, or find a random species with the trait for altering the leader
+ensure_leader_species_correct_holofrixit_caste = {
+	if = {
+		limit = {
+			species = {
+				NOR = {
+					has_trait = $TRAIT$
+					AND = {
+						owner = { has_technology = tech_synthetic_leaders }
+						OR = {
+							has_trait = trait_holofrixigram
+							has_trait = trait_holofrixigram_2
+							has_trait = trait_holofrixigram_3
+						}
+					}
+				}
+			}
+		}
+		owner = {
+			random_owned_pop_species = {
+				limit = { has_trait = $TRAIT$ }
+				PREVPREV = {
+					change_species = PREV
+					log = "changed to \\[Prev.GetName]" # TODO remove
+				}
+			}
+		}
+	}
+}
