@@ -134,3 +134,5 @@
  holocrisis.2209.a: "This is a dark day..."
  holocrisis.2210.desc: "<<01_EMBASSY_PROPOSE>>\n\n\nJust <<KIDDING>>. You will be <<TERMINATED>>."
  holocrisis.2210.a: "Very funny."
+ # missing base-game localisation
+ effect_random_owned_pop_species: "$effect_random_owned_species$"
