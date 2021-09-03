@@ -295,7 +295,7 @@ ensure_leader_species_correct_holofrixit_caste = {
 				NOR = {
 					has_trait = $TRAIT$
 					AND = {
-						owner = { has_technology = tech_synthetic_leaders }
+						PREV.owner = { has_technology = tech_synthetic_leaders }
 						OR = {
 							has_trait = trait_holofrixigram
 							has_trait = trait_holofrixigram_2
