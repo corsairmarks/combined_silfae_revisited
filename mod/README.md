@@ -36,6 +36,12 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 
 This mod is much less compatible than the other Silfae's Revisited series mods.  This is because this mod makes significantly more gameplay changes.  It is explicitly incompatible with [Animated Silicoid Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2579736379) without a compatibility patch.
 
+The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
+
+Not compatible with achievements.
+
+### File Overwrites
+
 This mod overwrites most of the Pop jobs definitions to account for the special Holofixit caste traits.  It also overwrites all the Pop strata to implement Holofrixit energy-based Pop upkeep (instead of food).  It's likely to break any time Stellaris makes changes to the underlying Pop strata, such as the anticipated changes for the upcoming 3.1 'Lem' minor release.  These files are completely overwritten:
 
 * `common/pop_categories/00_social_classes.txt`
@@ -47,7 +53,16 @@ This mod overwrites most of the Pop jobs definitions to account for the special 
 * `common/pop_jobs/04_gestalt_jobs.txt`
 * `common/pop_jobs/06_event_jobs.txt`
 
+### Partial Overrides
+
 This mod also lightly alters the requirements for ruler-stratum jobs and some "complex" specialist/complex drone-strata jobs.  Only Xechiros can work the majority of ruler jobs (Ganglions can be Head Researchers), and Drones cannot work any "complex" jobs.  This _also_ means that this mod will need to be explicitly updated any time Paradox makes changes to jobs.
+
+Job-related triggers overridden:
+
+* `ruler_job_check_trigger`
+* `complex_specialist_job_check_trigger`
+* `is_organic_species` most Holofrixits qualify as organic
+* `is_robotic_species` Holofrixigrams are entirely mechanical
 
 Furthermore, this mod alters some core game rules in `common/game_rules/00_rules.txt` to implement some of the Pop reproduction/assembly requirements and special rules for Holofrixit leaders.  In particular, these rules:
 
@@ -55,10 +70,6 @@ Furthermore, this mod alters some core game rules in `common/game_rules/00_rules
 * `can_generate_military_leader_from_pop`
 * `can_species_procreate`
 * `can_species_be_assembled`
-
-The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
-
-Not compatible with achievements.
 
 ### Dependencies
 
