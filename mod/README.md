@@ -8,6 +8,7 @@ There are other mods which contain these portraits, so why should you choose thi
 
 All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.0.*, the latest version when this was written.  Updates include:
 
+* Update Holofrixit shipset (reuse of Unbidden) to work with current Stellaris - starbases, titans, juggernauts, and colossi fall back to molluscoid (the fallback for the Unbidden)
 * Enhance Holofrixit portrait usage:
     * Allow portraits to be randomly selected
     * Fix portrait selector and mesh errors (lead to error logs)
