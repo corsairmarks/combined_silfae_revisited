@@ -61,6 +61,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 ## Changelog
 
 * 1.0.0 Initial version
+* 1.1.0 Add missing fleet names, add government random names, fix missing localisation
 
 ## Source Code
 
