@@ -306,9 +306,19 @@ ensure_leader_species_correct_holofrixit_caste = {
 			}
 		}
 		owner = {
-			random_owned_pop_species = {
-				limit = { has_trait = $TRAIT$ }
-				PREVPREV = { change_species = PREV }
+			if = {
+				limit = { days_passed > 0 }
+				random_owned_pop_species = {
+					limit = { has_trait = $TRAIT$ }
+					PREVPREV = { change_species = PREV }
+				}
+			}
+			else = {
+				# since random_owned_pop_species doesn't work at game start...
+				random_owned_pop = {
+					limit = { species = { has_trait = $TRAIT$ } }
+					PREVPREV = { change_species = PREV.species }
+				}
 			}
 		}
 	}

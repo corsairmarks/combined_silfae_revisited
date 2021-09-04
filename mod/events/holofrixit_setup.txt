@@ -385,7 +385,7 @@ country_event = {
 	trigger = {
 		has_origin = origin_holofrixit
 		exists = FROM
-		FROM = { has_trait = trait_holofrixit }
+		FROM.species = { has_trait = trait_holofrixit }
 	}
 	immediate = {
 		FROM = {

@@ -6,6 +6,7 @@ on_game_start = {
 }
 
 # fired when the game starts for each country
+# THIS = country
 on_game_start_country = {
 	events = {
 		holofrixit_evt.4
