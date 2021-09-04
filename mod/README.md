@@ -60,6 +60,7 @@ This mod preempts one event from the base game related to restoring relic worlds
 
 * 1.0.0 Initial version
 * 1.0.1 More clothing selector improvement, don't allow other species to pick the free Eldar trait
+* 1.0.2 Namelist tweaks
 
 ## Source Code
 
