@@ -1,3 +1,12 @@
+HLFRXTALT = {
+	archetype = BIOLOGICAL
+	portraits = {
+		"holofrixit"
+	}
+	graphical_culture = holofrixit_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+}
+
 HLFRXT = {
 	archetype = HOLOARCH
 	randomized = no
@@ -17,15 +26,6 @@ HLFRXT = {
 			"holodrone"
 			"holofrixigram"
 		}
-	}
-	graphical_culture = holofrixit_01
-	move_pop_sound_effect = "moving_pop_confirmation"
-}
-
-HLFRXTALT = {
-	archetype = BIOLOGICAL
-	portraits = {
-		"holofrixit"
 	}
 	graphical_culture = holofrixit_01
 	move_pop_sound_effect = "moving_pop_confirmation"
