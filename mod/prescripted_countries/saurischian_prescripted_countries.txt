@@ -1,12 +1,12 @@
 saurischian1 = {
-	ship_prefix="ZAKA"
+	ship_prefix = "ZAKA"
 	species = {
 		class = SRSCN
 		portrait = "saurischian"
 		name = "Astroraptor"
 		plural = "Astroraptors"
 		adjective = "Saurischian"
-		name_list = saurischiannames
+		name_list = SRSCN1
 		trait = trait_quick_learners
 		trait = trait_very_strong
 		trait = trait_nomadic
