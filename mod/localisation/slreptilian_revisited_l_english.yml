@@ -8,3 +8,5 @@
  origin_shadowy_evolution_secondary_species: "$civic_shadowy_evolution_secondary_species$"
  origin_tooltip_shadowy_evolution_effects: "- Start with §H6§! £pops£ Pops of your §Hprimary species§!, ruling from the shadows.\n- Start with §H22§! £pops£ Pops of a secondary, enslaved species who are blissfully ignorant of their servitude.\n- Unaware, enslaved  £pops£ Pops are happy and productive, but §Hmust remain ignorant§! for maximum benefit.\n- Unenslaved £pops£ Pops are part of the §Hshadow regime§!; the higher the percentage the harder it is to maintain the charade."
  name_list_SLRPTLN1: "Sleek Reptilian 1"
+ mod_planet_pops_minerals_upkeep_mult: "$POP$ $minerals$ $UPKEEP$"
+ mod_planet_pops_food_upkeep_mult: "$POP$ $food$ $UPKEEP$"
