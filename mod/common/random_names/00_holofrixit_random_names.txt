@@ -1,6 +1,6 @@
-### Holofrixit Xechiros Protocol
+### Holofrixit Xechiro Protocol
 
-# Xechiros Protocol
+# Xechiro Protocol
 empire_name_parts_list = {
 	key = "gov_holofrixit"
 	parts = {
@@ -18,7 +18,7 @@ empire_name_parts_list = {
 	}
 }
 
-# Xechiros Protocol Descriptive
+# Xechiro Protocol Descriptive
 empire_name_parts_list = {
 	key = "gov_holofrixit_desc"
 	parts = {
@@ -33,7 +33,7 @@ empire_name_parts_list = {
 	}
 }
 
-# Xechiros Protocol Middle Descriptive
+# Xechiro Protocol Middle Descriptive
 empire_name_parts_list = {
 	key = "gov_holofrixit_mid_desc"
 	parts = {
@@ -66,7 +66,7 @@ empire_name_format = {
 	prefix_format = "[This.Capital.System.GetName] <gov_holofrixit>"
 }
 
-# Xechiros Protocol 2
+# Xechiro Protocol 2
 empire_name_format = {
 	random_weight = {
 		factor = 0
@@ -86,7 +86,7 @@ empire_name_format = {
 	prefix_format = "[This.Capital.GetName] <gov_holofrixit>"
 }
 
-# Xechiros Protocol 3
+# Xechiro Protocol 3
 empire_name_format = {
 	random_weight = {
 		factor = 0
@@ -106,7 +106,7 @@ empire_name_format = {
 	prefix_format = "[This.GetSpeciesName] <gov_holofrixit>"
 }
 
-# Xechiros Protocol 4
+# Xechiro Protocol 4
 empire_name_format = {
 	random_weight = {
 		factor = 0
@@ -126,7 +126,7 @@ empire_name_format = {
 	prefix_format = "[This.GetSpeciesName] <gov_holofrixit>"
 }
 
-# Xechiros Protocol 5
+# Xechiro Protocol 5
 empire_name_format = {
 	random_weight = {
 		factor = 0
