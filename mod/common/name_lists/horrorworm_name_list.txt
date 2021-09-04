@@ -1,7 +1,7 @@
 ﻿# additional random names sourced from https://www.fantasynamegenerators.com/lovecraftian-names.php
 HRWRM1 = {
+	category = "Eltryrad"
 	### SHIPS
-	randomized = no
 	ship_names = {
 		generic = {
 			"Kthug'mu" "Gaiolk'vhoxr" "Bhoggi" "Haxa" "Vhaiold'gnuxr" "Inuigha" "Yamhorv'gnos" "Unudhexz" "Aiudethrhih" "Yokhuga"
@@ -9,36 +9,31 @@ HRWRM1 = {
 			Mlylah "Z'eldu" "Hymbr'thu" Zhombreg Brovhush "Yovh'olli" Ebhoghirh Iungolpe Iubraggud Ukholler
 		}
 
-		corvette = {
-		}
-		
-		destroyer = {
-		}
-		
-		cruiser = {
-		}
-		
-		battleship = {
-		}
+		corvette = { }
 
-		titan = {
-		}
+		destroyer = { }
 
-		colossus = {
-		}
-		
-		science = {
-		}
-		
-		colonizer = {
-		}
-		
-		constructor = {
-		}
-		
+		cruiser = { }
+
+		battleship = { }
+
+		titan = { }
+
+		colossus = { }
+
+		science = { }
+
+		colonizer = { }
+
+		constructor = { }
+
 		military_station_small = { }
+
 		military_station_medium = { }
-		military_station_large = { }	
+
+		military_station_large = { }
+
+		ion_cannon = { }
 	}
 	ship_class_names = {
 		generic = {
@@ -49,7 +44,7 @@ HRWRM1 = {
 	}
 	fleet_names = {
 		random_names = {
-			"Eldritch Swarm" "Weird Slimes" "Screechers" 
+			"Eldritch Swarm" "Weird Slimes" "Screechers"
 		}
 		sequential_name = "%O% Eldritch Swarm"
 	}
@@ -73,39 +68,39 @@ HRWRM1 = {
 		defense_army = {
 			sequential_name = "%O% Cruxyn"
 		}
-			
+
 		assault_army = {
 			sequential_name = "%O% Raspryr"
 		}
-		
+
 		slave_army = {
 			sequential_name = "%O% Hollows"
 		}
-		
-		clone_army = { 
+
+		clone_army = {
 			sequential_name = "%O% Mirrored Srel"
 		}
 
 		undead_army = {
 			sequential_name = "%O% Ancient Raspryr"
 		}
-		
+
 		robotic_army = {
 			sequential_name = "%O% Sklinths"
 		}
-		
+
 		robotic_defense_army = {
 			sequential_name = "%O% Skrarah"
 		}
-		
-		psionic_army = { 
+
+		psionic_army = {
 			sequential_name = "%O% Neurkt'ryn"
 		}
-		
+
 		xenomorph_army = {
 			sequential_name = "%O% Clythrit"
 		}
-		
+
 		gene_warrior_army = {
 			sequential_name = "%O% Genosrethitr"
 		}
@@ -114,45 +109,38 @@ HRWRM1 = {
 	planet_names = {
 		generic = {
 			names = {
-				Graathu'lreh Zeetrux'it Frrtrixicleh Warldytrach Zrutlzyx Clrrxiatch 
+				Graathu'lreh Zeetrux'it Frrtrixicleh Warldytrach Zrutlzyx Clrrxiatch
 				Eerythfilath Shyrmptixith Drylytyt Qurlypratyt Zserrtkreh Qurriptmik
 				Yyrlyqen Rfytlytreex Wrptalyt Glglrypmitat Wrrcl'rt Venrretrit
 			}
 		}
-		
+
 		pc_desert = {
-			names = {
-			}
+			names = { }
 		}
-		
+
 		pc_tropical = {
-			names = {
-			}
+			names = { }
 		}
-		
+
 		pc_arid = {
-			names = {
-			}
+			names = { }
 		}
-		
+
 		pc_continental = {
-			names = {
-			}
+			names = { }
 		}
-		
+
 		pc_ocean = {
-			names = {
-			}
+			names = { }
 		}
-		
+
 		pc_tundra = {
-			names = {
-			}
+			names = { }
 		}
-		
+
 		pc_arctic = {
-			names = {
-			}
+			names = { }
 		}
 	}
 	### CHARACTERS
@@ -161,32 +149,22 @@ HRWRM1 = {
 			# A complete name
 			full_names = {
 				Chubretlet Eithu I'botsk Phathosi Rhu'yil Rteli'chuart Schuau Thaugusho Thothot Tuacryplat U'guakek Zokr Zothrileyt
-				Cner'zhorc Kthoughi Griged Vhathla Mhaiopes Ocnurr'ithur Ikhixhil Yonulku Iuxaiolpuh Iumheggubl Mh'uithlo Mlozid Ngaxusz Vughr Ghrouthlag 
+				Cner'zhorc Kthoughi Griged Vhathla Mhaiopes Ocnurr'ithur Ikhixhil Yonulku Iuxaiolpuh Iumheggubl Mh'uithlo Mlozid Ngaxusz Vughr Ghrouthlag
 				Edoggu Exydrrexr Iuzarrolbh Iauthaacnis Akthabruh Xipa Niodrr'dri Ghrixl Dydhra D'oulalb Ivagn'kru Aiughrulthi Emhethr'rosz Yocxujhas
 				Ycthiondast Khozt'xa Daiognneth Shycnolbh Shydhux Zhogho Iacthigid Ivrobhaxr Iac'thivhon Engidh'mitl Actidrr'dritl Kthibhin Vhuiggu Kuggor
 				Kthaiozotl Truivh'zhal Iaxudhra Iauvrurr'mu Oz'aioth'rotl Aiuzhoul'dhred Ugrux'xess
 			}
-			# Always combined with a second name
-			first_names_male = {
-			}
-			# Always combined with a second name
-			first_names_female = {
-			}
-			# Always combined with a first name
-			second_names = {
-			}
+			# Always combined with a regnal second name
 			regnal_first_names = {
 				Chubretlet Eithu I'botsk Phathosi Rhu'yil Rteli'chuart Schuau Thaugusho Thothot Tuacryplat U'guakek Zokr Zothrileyt
-				Cner'zhorc Kthoughi Griged Vhathla Mhaiopes Ocnurr'ithur Ikhixhil Yonulku Iuxaiolpuh Iumheggubl Mh'uithlo Mlozid Ngaxusz Vughr Ghrouthlag 
+				Cner'zhorc Kthoughi Griged Vhathla Mhaiopes Ocnurr'ithur Ikhixhil Yonulku Iuxaiolpuh Iumheggubl Mh'uithlo Mlozid Ngaxusz Vughr Ghrouthlag
 				Edoggu Exydrrexr Iuzarrolbh Iauthaacnis Akthabruh Xipa Niodrr'dri Ghrixl Dydhra D'oulalb Ivagn'kru Aiughrulthi Emhethr'rosz Yocxujhas
 				Ycthiondast Khozt'xa Daiognneth Shycnolbh Shydhux Zhogho Iacthigid Ivrobhaxr Iac'thivhon Engidh'mitl Actidrr'dritl Kthibhin Vhuiggu Kuggor
 				Kthaiozotl Truivh'zhal Iaxudhra Iauvrurr'mu Oz'aioth'rotl Aiuzhoul'dhred Ugrux'xess
 			}
-			regnal_first_names_male = {
-			}
-			regnal_first_names_female = {
-			}
+			# Always combined with a regnal first name
 			regnal_second_names = {
+				Ghiggdo V'irvo Bhaozt'itrixr Thaoldolbh Ctuicta Yacxycn'vhe Iauctidra Yhagre Azhox'mu Iumhourra
 			}
 		}
 	}
