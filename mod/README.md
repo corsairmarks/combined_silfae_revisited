@@ -106,6 +106,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Fix accidental food usage (side-effect of identifying the species as organic)
     * Add namelist for `HLFXT` and `HLFXTALT` (duplicates of `ART1`)
     * Reweight Ganglion and Drone jobs - *frixigrams should always prefer technician jobs and weight lower than Ganglions for science
+* 1.0.2 Fix incorrect random name reference
 
 ## Source Code
 
