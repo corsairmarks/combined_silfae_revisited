@@ -161,7 +161,7 @@ head_researcher = {
 			has_trait = trait_holooverseer
 		}
 		modifier = {
-			factor = 3
+			factor = 5
 			has_trait = trait_hologanglion
 		}
 		modifier = {

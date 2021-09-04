@@ -258,6 +258,14 @@ technician = {
 		#}
 
 		modifier = {
+			weight = @specialist_job_weight
+			OR = {
+				has_trait = trait_holofrixigram
+				has_trait = trait_holofrixigram_2
+				has_trait = trait_holofrixigram_3
+			}
+		}
+		modifier = {
 			factor = 5
 			OR = {
 				has_trait = trait_holofrixigram

@@ -230,8 +230,16 @@ researcher = {
 		}
 		modifier = {
 			factor = 0.8
-			is_enslaved = yes
-			has_slavery_type = { type = slavery_indentured }
+			OR = {
+				AND = {
+					is_enslaved = yes
+					has_slavery_type = { type = slavery_indentured }
+				}
+				AND = {
+					has_trait = trait_mechanical
+					has_citizenship_type = { type = citizenship_robot_servitude }
+				}
+			}
 		}
 		modifier = {
 			factor = 1.5
@@ -250,7 +258,7 @@ researcher = {
 			has_trait = trait_holofrixigram_2
 		}
 		modifier = {
-			factor = 2
+			factor = 5
 			has_trait = trait_hologanglion
 		}
 	}
@@ -2351,7 +2359,6 @@ necro_apprentice = {
 		}
 	}
 }
-
 
 foundry = {
 	category = specialist
