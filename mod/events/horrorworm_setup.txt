@@ -1,28 +1,6 @@
 namespace = horrorworm_evt
 
-### Hidden Game Start Event
-event = {
-	id = horrorworm_evt.1
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
-		every_playable_country = {
-			limit = { has_country_flag = is_horrorworms }
-			country_event = { id = horrorworm_evt.2 }
-			home_planet = {
-				planet_event = { id = horrorworm_evt.4 }
-			}
-		}
-		every_system = {
-			limit = { has_star_flag = horrorworm_system }
-			every_system_planet = {
-				limit = { has_planet_flag = horrorworm_system_capital }
-				planet_event = { id = horrorworm_evt.3 }
-			}
-		}
-	}
-}
-
+# triggered by empire_init_add_technologies
 country_event = {
 	id = horrorworm_evt.2
 	hide_window = yes
@@ -33,10 +11,14 @@ country_event = {
 	}
 	immediate = { 
 		give_technology = { tech = tech_hollowrift }
-		give_technology = { tech = tech_energy_lance_1 }
+		give_technology = {
+			tech = tech_energy_lance_1
+			message = no
+		}
 	}
 }
 
+# triggered by empire_init_capital_planet
 planet_event = {
 	id = horrorworm_evt.3
 	hide_window = yes
@@ -53,6 +35,7 @@ planet_event = {
 	}
 }
 
+# triggered by empire_init_capital_planet
 planet_event = {
 	id = horrorworm_evt.4
 	hide_window = yes
@@ -69,6 +52,7 @@ planet_event = {
 	}
 }
 
+# triggered by on_game_start
 event = {
 	id = horrorworm_evt.13
 	hide_window = yes

@@ -1,5 +1,24 @@
-on_gamer_start = {
+# fired when the game starts
+on_game_start = {
 	events = {
-		horrorworm_evt.13
+		horrorworm_evt.13 # flag mod as installed
+	}
+}
+
+# fired during empire initialization when starting a new game
+# THIS = country
+empire_init_add_technologies = {
+	events = {
+		horrorworm_evt.2
+	}
+}
+
+# fired during empire initialization when starting a new game
+# THIS = planet, capital
+# FROM = species, founder
+empire_init_capital_planet = {
+	events = {
+		horrorworm_evt.3
+		horrorworm_evt.4
 	}
 }
