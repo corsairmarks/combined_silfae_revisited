@@ -7,11 +7,11 @@ empire_name_parts_list = {
 		"Database" = 3
 		"Protocol" = 3
 		"Network" = 3
-		"Hololeague" = 3
-		"Autocracy" = 2
+		"Hololeague" = 2
+		"Autocracy" = 3
 		"Hegemony" = 3
-		"Holocombine" = 3
-		"Holounion" = 3
+		"Holocombine" = 2
+		"Holounion" = 2
 		"Hierarchy" = 2
 		"Authority" = 1
 		"Sovereignty" = 1
@@ -24,8 +24,11 @@ empire_name_parts_list = {
 	parts = {
 		"Interstellar" = 1
 		"Holoassembly of" = 2
+		"Assembly of" = 3
 		"Hololeague of" = 2
+		"League of" = 3
 		"Holounion of" = 2
+		"Union of" = 3
 		"Holosphere of" = 3
 	}
 }
@@ -60,7 +63,7 @@ empire_name_format = {
 	}
 	format = format.gov_holofrixit.1
 	noun = "[This.Capital.System.GetName]"
-	prefix_format = "[This.Capital.System.GetName] <bureaucratic_autocracy>"
+	prefix_format = "[This.Capital.System.GetName] <gov_holofrixit>"
 }
 
 # Xechiros Protocol 2
