@@ -62,6 +62,7 @@ This mod overrides `origin_void_dwellers` in order to add its new initializer to
 
 * 1.0.0 Initial version
 * 1.0.1 Add second set of random species names, ensure original file is overwritten
+* 1.0.2 Tweak namelist
 
 ## Source Code
 
