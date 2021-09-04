@@ -29,6 +29,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     [*]Start with Pops from each of the five castes, but overall fewer than normal empires
     [*]Holofrixit government is now divided into the Xechiros Protocol government and Hive-network authority, available only with the Holofrixit origin
     [*]Add random names for the Holofrixit government
+    [*]Only Xechiros may be rulers or Governors, only Ganglions may be Scientists, and only Holowarriors may be Admirals and Generals - Holofrixigrams can be leaders with [b]tech_synthetic_leaders[/b], Drones can never be leaders, and other non-holofrixit species may produce leaders normally
     [/list]
 [*]Remove unnecessary old army overrides
 [*]Adjust Holowarrior and Hologenotype armies

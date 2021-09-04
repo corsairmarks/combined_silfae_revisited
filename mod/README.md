@@ -25,6 +25,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     * Start with Pops from each of the five castes, but overall fewer than normal empires
     * Holofrixit government is now divided into the Xechiros Protocol government and Hive-network authority, available only with the Holofrixit origin
     * Add random names for the Holofrixit government
+    * Only Xechiros may be rulers or Governors, only Ganglions may be Scientists, and only Holowarriors may be Admirals and Generals - Holofrixigrams can be leaders with `tech_synthetic_leaders`, Drones can never be leaders, and other non-holofrixit species may produce leaders normally
 * Remove unnecessary old army overrides
 * Adjust Holowarrior and Hologenotype armies
 * Update Polarizing Nexus energy storage building
@@ -99,6 +100,12 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 ## Changelog
 
 * 1.0.0 Initial version
+* 1.0.1 Bugfixes
+    * Ensure that species are properly upgraded into Advance Holofrixigrams/Hyperfrixigrams/Hologenotypes when the relevant technologies are discovered
+    * Fix incorrect scoping for initial leader checks (scientists will be Ganglions)
+    * Fix accidental food usage (side-effect of identifying the species as organic)
+    * Add namelist for `HLFXT` and `HLFXTALT` (duplicates of `ART1`)
+    * Reweight Ganglion and Drone jobs - *frixigrams should always prefer technician jobs and weight lower than Ganglions for science
 
 ## Source Code
 
