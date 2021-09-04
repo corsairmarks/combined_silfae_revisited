@@ -2,7 +2,6 @@
 ELDR1 = {	
 	category = "Eldar"
 	should_name_home_system_planets = no
-	randomized = no
 	ship_names = {
 		generic = {
 			"Iyallir Mon'keigh" "Scuraith Uial Elourge" "Nikav Uial Suda" "Garoth Kion We" "Neosfail Gaied" "Marb Eaxamar"
@@ -164,38 +163,31 @@ ELDR1 = {
 		}
 
 		pc_desert = {
-			names = {
-			}
+			names = { }
 		}
 
 		pc_tropical = {
-			names = {
-			}
+			names = { }
 		}
 
 		pc_arid = {
-			names = {
-			}
+			names = { }
 		}
 
 		pc_continental = {
-			names = {
-			}
+			names = { }
 		}
 
 		pc_ocean = {
-			names = {
-			}
+			names = { }
 		}
 
 		pc_tundra = {
-			names = {
-			}
+			names = { }
 		}
 
 		pc_arctic = {
-			names = {
-			}
+			names = { }
 		}
 	}
 
