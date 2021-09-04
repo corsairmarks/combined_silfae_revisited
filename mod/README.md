@@ -48,6 +48,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 * 1.0.0 Initial version
 * 1.0.1 Adjust system initializer description
 * 1.0.2 Enhanced portrait and clothing selectors, allow portraits to be randomized
+* 1.0.3 Ensure correct `graphical_culture`
 
 ## Source Code
 
