@@ -9,7 +9,7 @@ There are other mods which contain these portraits, so why should you choose thi
 All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.0.*, the latest version when this was written.  Updates include:
 
 [list]
-[*]Update Holofrixit shipset (reuse of Unbidden) to work with current Stellaris - starbases, titans, juggernauts, and colossi fall back to molluscoid (the fallback for the Unbidden)
+[*]Update Holofrixit shipset (Unbidden) to work with current Stellaris - fallback to molluscoid (the fallback for the Unbidden)
 [*]Enhance Holofrixit portrait usage:
     [list]
     [*]Allow portraits to be randomly selected
@@ -21,12 +21,12 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 [*]Attach special Holofrixit features to an origin, which allows players to opt out of it
 [*][b]Rebuild Holofrixit "caste"-based playstyle to work with the Pop job system and new way of assembling robot Pops[/b]
     [list]
-    [*]Remove old-style "buildable Pops"
-    [*]Reduce amount modifiers attached to the shared Holofrixit trait
-    [*]Adjust special "caste" traits (Hologanglion, Holowarrior/Hologenotype, Holofrixigram/Advanced Holofrixigram/Hyperfrixigram) for up-to-date modifiers
+    [*]Remove "buildable" Pops
+    [*]Reduce amount modifiers attached to Holofrixit trait
+    [*]Adjust special "caste" traits (Hologanglion, Holowarrior, Holofrixigram and improved versions) for up-to-date modifiers
     [*]Add Holodrone trait for basic drones
     [*]Add Xechiro trait for highest caste
-    [*]Start with Pops from each of the five castes, but overall fewer than normal empires
+    [*]Start with Pops from each of the five castes, but overall fewer than normal
     [*]Holofrixit government is now divided into the Xechiros Protocol government and Hive-network authority, available only with the Holofrixit origin
     [*]Add random names for the Holofrixit government
     [*]Only Xechiros may be rulers or Governors, only Ganglions may be Scientists, and only Holowarriors may be Admirals and Generals - Holofrixigrams can be leaders with [b]tech_synthetic_leaders[/b], Drones can never be leaders, and other non-holofrixit species may produce leaders normally
@@ -37,9 +37,9 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 [*]You can use Silfae's Holofrixit portraits for your own empires without any DLC requirements
     [list]
     [*]Using the main Holofrixit species class will consume energy instead of food
-    [*]Added a second species class (Holofrixit Alt.) that is a [b]BIOLOGICAL[/b] archetype, so you can choose to play without the requirement for energy upkeep
+    [*]Added second species class (Holofrixit Alt.) that is [b]BIOLOGICAL[/b] archetype, so you can play without the requirement for energy upkeep
     [/list]
-[*]Disable the "Holocrisis" - a duplicate of original AI rebellion - at least until I can spend more time updating it to work with the current game version [b]postponed until after 3.1 'Lem'[/b]
+[*]Disable the "Holocrisis" until updated [b]postponed until after 3.1 'Lem'[/b]
 [/list]
 
 [h2]Compatibility[/h2]
@@ -67,7 +67,7 @@ This mod overwrites most of the Pop jobs definitions to account for the special 
 
 [h3]Partial Overrides[/h3]
 
-This mod also lightly alters the requirements for ruler-stratum jobs and some "complex" specialist/complex drone-strata jobs.  Only Xechiros can work the majority of ruler jobs (Ganglions can be Head Researchers), and Drones cannot work any "complex" jobs.  This [i]also[/i] means that this mod will need to be explicitly updated any time Paradox makes changes to jobs.
+This mod alters the requirements for ruler-stratum jobs and some "complex" specialist/complex drone-strata jobs.  Only Xechiros can work the majority of ruler jobs (Ganglions can be Head Researchers), and Drones cannot work any "complex" jobs.  This [i]also[/i] means that this mod will need to be explicitly updated any time Paradox makes changes to jobs.
 
 Job-related triggers overridden:
 
@@ -123,7 +123,7 @@ Hosted on [url=https://github.com/corsairmarks/holosphere_rising_revisited]GitHu
 
 [h1]Special Thanks[/h1]
 
-I was inspired to extend the original mod when I saw [url=https://steamcommunity.com/profiles/76561198037630876/myworkshopfiles/]Endugu[/url]'s [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1584824947]expansion[/url] of [url=https://steamcommunity.com/profiles/76561198021525667/myworkshopfiles/]Silfae[/url]'s [url=https://steamcommunity.com/workshop/filedetails/?id=881118424]Animated Xirmian Portraits[/url].  Modular mods that require downloading the original mod(s) help give credit where credit is due.
+I was inspired to extend the original mod when I saw Endugu's [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1584824947]expansion[/url] of Silfae's [url=https://steamcommunity.com/workshop/filedetails/?id=881118424]Animated Xirmian Portraits[/url].  Modular mods that require downloading the original mod(s) help give credit where credit is due.
 
 An extra special thanks to Silfae for creating and sharing so many detailed, animated portraits for the community.
 
