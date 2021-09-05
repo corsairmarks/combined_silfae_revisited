@@ -351,6 +351,7 @@ setup_peepboop_homeworld = {
 			# remove High Maintenance because species had -4 trait points,
 			# add Efficient Processors to use full amount trait points
 		}
+		effect = { save_event_target_as = peepboop_species }
 	}
 	create_country = {
 		name = random
@@ -361,7 +362,7 @@ setup_peepboop_homeworld = {
 			civic = civic_machine_introspective
 		}
 		type = peep_boop
-		species = last_created_species
+		species = event_target:peepboop_species
 		name_list = AI
 		flag = {
 			icon= {
@@ -380,11 +381,12 @@ setup_peepboop_homeworld = {
 			}
 		}
 		effect = {
-			set_country_flag = is_peepboops@capital_scope.solar_system.owner
-			capital_scope.solar_system.owner = { establish_communications_no_message = PREV }
+			save_event_target_as = peepboop_country
+			set_country_flag = is_peepboops@PREV.solar_system.owner
+			PREV.solar_system.owner = { establish_communications_no_message = PREV }
 			establish_communications_no_message = capital_scope.solar_system.owner
 			set_origin = origin_fallen_empire
-			set_graphical_culture = ai_01
+			set_graphical_culture = mammalian_01
 			add_resource = {
 				energy = 300
 				minerals = 300
@@ -411,11 +413,12 @@ setup_peepboop_homeworld = {
 		}
 	}
 	create_colony = {
-		owner = last_created_country
-		species = last_created_species
+		owner = event_target:peepboop_country
+		species = event_target:peepboop_species
 		ethos = owner
 	}
 	set_name = "Oichi-kee"
+	set_capital = yes
 	# 9 energy + 6 minerals + 8 farming
 	while = {
 		count = 3
@@ -449,13 +452,13 @@ setup_peepboop_homeworld = {
 	}
 	while = {
 		limit = { num_pops < 21 }
-		create_pop = { species = owner_main_species }
+		create_pop = { species = event_target:peepboop_species }
 	}
 	while = {
 		count = 6
 		create_army = {
-			owner = last_created_country
-			species = owner_main_species
+			owner = event_target:peepboop_country
+			species = event_target:peepboop_species
 			type = machine_defense_peepboop
 			effect = {
 				set_name = machine_defense_peepboop_army_name
