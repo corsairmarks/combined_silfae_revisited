@@ -398,12 +398,6 @@ setup_peepboop_homeworld = {
 				option = diplo_stance_belligerent
 				cooldown = no
 			}
-			create_ship_design = { design = "NAME_AI_Transport" }
-			add_ship_design = last_created_design
-			create_ship_design = { design = "NAME_AI_Colonizer" }
-			add_ship_design = last_created_design
-			create_ship_design = { design = "NAME_AI_Constructor" }
-			add_ship_design = last_created_design
 			give_technology = { tech = tech_alien_life_studies_gestalt	message = no }
 			give_technology = { tech = tech_lasers_2					message = no }
 			give_technology = { tech = tech_fusion_power				message = no }
@@ -423,6 +417,7 @@ setup_peepboop_homeworld = {
 			give_technology = { tech = tech_destroyers					message = no }
 			give_technology = { tech = tech_corvette_hull_1				message = no }
 			give_technology = { tech = tech_corvette_build_speed		message = no }
+			give_technology = { tech = tech_peepboop_starbase			message = no }
 		}
 	}
 	create_colony = {
@@ -476,6 +471,34 @@ setup_peepboop_homeworld = {
 			effect = {
 				set_name = machine_defense_peepboop_army_name
 			}
+		}
+	}
+	create_fleet = {
+		name = NAME_peepboop_station_fleet
+		effect = {
+			set_owner = event_target:peepboop_country
+			create_ship = {
+				name = NAME_peepboop_station_ship
+				design = peepboop_starbase_starport
+				upgradable = yes
+				effect = {
+					starbase = {
+						set_starbase_building = {
+							slot = 0
+							building = crew_quarters
+						}
+						set_starbase_module = {
+							slot = 0
+							module = peepboop_solar_panel_network
+						}
+						set_starbase_module = {
+							slot = 1
+							module = peepboop_solar_panel_network
+						}
+					}
+				}
+			}
+			set_location = PREV
 		}
 	}
 }

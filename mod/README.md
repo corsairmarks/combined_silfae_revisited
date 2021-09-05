@@ -78,7 +78,8 @@ This mod preempts the event `action.85` and overrides the deposit `d_alien_pets_
 * 1.0.3 Ensure correct `graphical_culture`
 * 1.1.0 Adjust Beep-Boops to work like regular empire
     * Higher technology than starting tech
-    * 
+    * Start with a special starbase that orbits their homeworld but is functionally equivalent to a regular starbase
+    * Can build ships with their starbase - they don't like you, so be very wary of their naval buildup
 
 ## Source Code
 
