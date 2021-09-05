@@ -1,5 +1,5 @@
 ﻿ROEAGLE1 = {
-	category = "Aquilesi"
+	category = "Aquilese"
 	### SHIPS
 	ship_names = {
 		generic = {
