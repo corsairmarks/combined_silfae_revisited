@@ -403,6 +403,9 @@ setup_peepboop_homeworld = {
 			give_technology = { tech = tech_fusion_power				message = no }
 			give_technology = { tech = tech_hyper_drive_2				message = no }
 			give_technology = { tech = tech_shields_2					message = no }
+			give_technology = { tech = tech_administrative_ai			message = no }
+			give_technology = { tech = tech_combat_computers_1			message = no }
+			give_technology = { tech = tech_auxiliary_fire_control		message = no }
 			give_technology = { tech = tech_ground_defense_planning		message = no }
 			give_technology = { tech = tech_adaptive_combat_algorithms	message = no }
 			give_technology = { tech = tech_planetary_unification		message = no }
@@ -418,6 +421,12 @@ setup_peepboop_homeworld = {
 			give_technology = { tech = tech_corvette_hull_1				message = no }
 			give_technology = { tech = tech_corvette_build_speed		message = no }
 			give_technology = { tech = tech_peepboop_starbase			message = no }
+			create_ship_design = { design = NAME_military_station_small_point_defense_peepboop }
+			add_ship_design = last_created_design
+			create_ship_design = { design = NAME_military_station_small_line_peepboop }
+			add_ship_design = last_created_design
+			create_ship_design = { design = NAME_military_station_small_strike_craft_peepboop }
+			add_ship_design = last_created_design
 		}
 	}
 	create_colony = {
@@ -479,8 +488,9 @@ setup_peepboop_homeworld = {
 			set_owner = event_target:peepboop_country
 			create_ship = {
 				name = NAME_peepboop_station_ship
-				design = peepboop_starbase_starport
+				random_existing_design = peepboop_starbase_starport
 				upgradable = yes
+				prefix = no
 				effect = {
 					starbase = {
 						set_starbase_building = {
@@ -496,6 +506,24 @@ setup_peepboop_homeworld = {
 							module = peepboop_solar_panel_network
 						}
 					}
+				}
+			}
+			while = {
+				count = 2
+				create_ship = {
+					name = random
+					design = NAME_military_station_small_point_defense_peepboop
+					prefix = no
+				}
+				create_ship = {
+					name = random
+					design = NAME_military_station_small_line_peepboop
+					prefix = no
+				}
+				create_ship = {
+					name = random
+					design = NAME_military_station_small_strike_craft_peepboop
+					prefix = no
 				}
 			}
 			set_location = PREV

@@ -16,5 +16,9 @@
  octeelan_system_FUN_name: "Xueench"
  octeelan_system_FUN_plural: "Xueenchi"
  octeelan_system_FUN_adjective: "Xueenchan"
+ # Beep-Boop station names, design names
  NAME_peepboop_station_fleet: "Beep-Boop Orbitals"
  NAME_peepboop_station_ship: "Beep-Boop Station"
+ NAME_military_station_small_point_defense_peepboop: "Beep"
+ NAME_military_station_small_line_peepboop: "Boop"
+ NAME_military_station_small_strike_craft_peepboop: "Kssssssshhhh"
