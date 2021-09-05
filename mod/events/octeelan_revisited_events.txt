@@ -250,3 +250,24 @@ country_event = {
 		}
 	}
 }
+
+# triggered by on_single_player_save_game_load
+event = {
+	id = octeelan_evt.6
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_country = {
+			limit = {
+				has_country_flag = is_peepboops
+				NOT = { is_country_type = default }
+			}
+			set_country_type = default
+			set_policy = {
+				policy = diplomatic_stance
+				option = diplo_stance_belligerent
+				cooldown = no
+			}
+		}
+	}
+}

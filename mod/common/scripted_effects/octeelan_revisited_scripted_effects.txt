@@ -361,7 +361,7 @@ setup_peepboop_homeworld = {
 			civic = civic_machine_ota_updates
 			civic = civic_machine_introspective
 		}
-		type = peep_boop
+		type = default
 		species = event_target:peepboop_species
 		name_list = AI
 		flag = {
@@ -382,6 +382,7 @@ setup_peepboop_homeworld = {
 		}
 		effect = {
 			save_event_target_as = peepboop_country
+			set_country_flag = is_peepboops
 			set_country_flag = is_peepboops@PREV.solar_system.owner
 			PREV.solar_system.owner = { establish_communications_no_message = PREV }
 			establish_communications_no_message = capital_scope.solar_system.owner
@@ -392,24 +393,36 @@ setup_peepboop_homeworld = {
 				minerals = 300
 			}
 			set_ai_personality = machine_intelligence
+			set_policy = {
+				policy = diplomatic_stance
+				option = diplo_stance_belligerent
+				cooldown = no
+			}
 			create_ship_design = { design = "NAME_AI_Transport" }
 			add_ship_design = last_created_design
 			create_ship_design = { design = "NAME_AI_Colonizer" }
 			add_ship_design = last_created_design
 			create_ship_design = { design = "NAME_AI_Constructor" }
 			add_ship_design = last_created_design
-			give_technology = {
-				tech = tech_alien_life_studies_gestalt
-				message = no
-			}
-			give_technology = {
-				tech = tech_planetary_infrastructure_1
-				message = no
-			}
-			give_technology = {
-				tech = tech_planetary_infrastructure_2
-				message = no
-			}
+			give_technology = { tech = tech_alien_life_studies_gestalt	message = no }
+			give_technology = { tech = tech_lasers_2					message = no }
+			give_technology = { tech = tech_fusion_power				message = no }
+			give_technology = { tech = tech_hyper_drive_2				message = no }
+			give_technology = { tech = tech_shields_2					message = no }
+			give_technology = { tech = tech_ground_defense_planning		message = no }
+			give_technology = { tech = tech_adaptive_combat_algorithms	message = no }
+			give_technology = { tech = tech_planetary_unification		message = no }
+			give_technology = { tech = tech_planetary_infrastructure_1	message = no }
+			give_technology = { tech = tech_planetary_infrastructure_2	message = no }
+			give_technology = { tech = tech_ship_armor_2				message = no }
+			give_technology = { tech = tech_thrusters_2					message = no }
+			give_technology = { tech = tech_missiles_2					message = no }
+			give_technology = { tech = tech_mass_drivers_2				message = no }
+			give_technology = { tech = tech_strike_craft_1				message = no }
+			give_technology = { tech = tech_starbase_3					message = no }
+			give_technology = { tech = tech_destroyers					message = no }
+			give_technology = { tech = tech_corvette_hull_1				message = no }
+			give_technology = { tech = tech_corvette_build_speed		message = no }
 		}
 	}
 	create_colony = {

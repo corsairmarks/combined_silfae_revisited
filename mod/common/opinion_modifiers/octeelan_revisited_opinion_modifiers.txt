@@ -1,9 +1,6 @@
 # Scope is the opinionator and FROM the target of their opinion
 triggered_opinion_peepboop_rejection = {
-	trigger = {
-		is_country_type = peep_boop
-		has_country_flag = is_peepboops@FROM
-	}
+	trigger = { has_country_flag = is_peepboops@FROM }
 	opinion = {
 		base = -1000
 	}
@@ -11,10 +8,7 @@ triggered_opinion_peepboop_rejection = {
 
 triggered_opinion_former_pets = {
 	trigger = {
-		FROM = {
-			is_country_type = peep_boop
-			has_country_flag = is_peepboops@PREV
-		}
+		FROM = { has_country_flag = is_peepboops@PREV }
 	}
 	opinion = {
 		base = -500

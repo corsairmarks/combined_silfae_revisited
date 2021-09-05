@@ -32,7 +32,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     * Xueench species: remove Solitary because this species had a point remaining but couldn't spend it
     * Your former overlords, the Beep Boops, will spawn if the Synthetic Dawn DLC is active
     * Beep-Boop species: removed High Maintenance, add Efficient Processors so that all points are spent
-    * Beep-Boop empire: now has custom `country_type` so they can fight you, and you won't automatically gain control of their planet for owning the starbase
+    * Beep-Boop empire: now a regular empire, with a special exception allowing them to have a colony in the same system (in order to fight you)
     * Beep-Boops will hate you for rejecting them
 * You can use the Octee-lan portraits for your own empires without any DLC requirements
 * You can use the Beep-Boop portrait (there is only one) for your own machine empires if you have Synthetic Dawn
@@ -47,6 +47,10 @@ The Launcher will tell you that some mods are outdated - that is because the dep
 
 Not compatible with achievements.
 
+### Event Preemption
+
+In order to allow the Beep-Boops to have a planet in the same system as the player, this mod replaces the event `action.85` that is responsible for (on a monthly basis) transfering control of any colonies not owned by the system's starbase's owner to the starbase owner. The Beep-Boops have a special exception, otherwise this event continues to function as normal.
+
 ### Dependencies
 
 In order for this mod to function, you **must** install the following mod and load it before this one:
@@ -59,10 +63,11 @@ This mod should be added before the game has started.  If you remove it from a g
 
 ## Known Issues
 
-This mod overrides the deposit `d_alien_pets_deposit` which generates a line in the error log like this:
+This mod preempts the event `action.85` and overrides the deposit `d_alien_pets_deposit` which generates two lines in the error log like this:
 
 ```
-[17:58:08][game_singleobjectdatabase.h:147]: Object with key: d_alien_pets_deposit already exists
+[02:34:24][eventmanager.cpp:355]: an event with id [action.85] already exists!  file: events/on_action_events.txt line: 8811
+[02:34:24][game_singleobjectdatabase.h:147]: Object with key: d_alien_pets_deposit already exists
 ```
 
 ## Changelog
@@ -71,6 +76,9 @@ This mod overrides the deposit `d_alien_pets_deposit` which generates a line in 
 * 1.0.1 Tsukimi Pool special bonus species available for any empire using the initializer
 * 1.0.2 Random names for Beep-Boops
 * 1.0.3 Ensure correct `graphical_culture`
+* 1.1.0 Adjust Beep-Boops to work like regular empire
+    * Higher technology than starting tech
+    * 
 
 ## Source Code
 

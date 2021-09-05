@@ -14,6 +14,13 @@ on_game_start_country = {
 	}
 }
 
+# fired when a single-player game is loaded
+on_single_player_save_game_load = {
+	events = {
+		octeelan_evt.6
+	}
+}
+
 # fired when a new leader is generated for an empire, to be available for recruitment
 # THIS = country
 # FROM = leader

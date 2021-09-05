@@ -38,7 +38,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     [*]Xueench species: remove Solitary because this species had a point remaining but couldn't spend it
     [*]Your former overlords, the Beep Boops, will spawn if the Synthetic Dawn DLC is active
     [*]Beep-Boop species: removed High Maintenance, add Efficient Processors so that all points are spent
-    [*]Beep-Boop empire: now has custom [b]country_type[/b] so they can fight you, and you won't automatically gain control of their planet for owning the starbase
+    [*]Beep-Boop empire: now a regular empire, with a special exception allowing them to have a colony in the same system (in order to fight you)
     [*]Beep-Boops will hate you for rejecting them
     [/list]
 [*]You can use the Octee-lan portraits for your own empires without any DLC requirements
@@ -54,6 +54,10 @@ The Launcher will tell you that some mods are outdated - that is because the dep
 
 Not compatible with achievements.
 
+[h3]Event Preemption[/h3]
+
+In order to allow the Beep-Boops to have a planet in the same system as the player, this mod replaces the event [b]action.85[/b] that is responsible for (on a monthly basis) transfering control of any colonies not owned by the system's starbase's owner to the starbase owner. The Beep-Boops have a special exception, otherwise this event continues to function as normal.
+
 [h3]Dependencies[/h3]
 
 In order for this mod to function, you [b]must[/b] install the following mod and load it before this one:
@@ -66,10 +70,11 @@ This mod should be added before the game has started.  If you remove it from a g
 
 [h2]Known Issues[/h2]
 
-This mod overrides the deposit [b]d_alien_pets_deposit[/b] which generates a line in the error log like this:
+This mod preempts the event [b]action.85[/b] and overrides the deposit [b]d_alien_pets_deposit[/b] which generates two lines in the error log like this:
 
 [code]
-[17:58:08][game_singleobjectdatabase.h:147]: Object with key: d_alien_pets_deposit already exists
+[02:34:24][eventmanager.cpp:355]: an event with id [action.85] already exists!  file: events/on_action_events.txt line: 8811
+[02:34:24][game_singleobjectdatabase.h:147]: Object with key: d_alien_pets_deposit already exists
 [/code]
 
 [h2]Changelog[/h2]
