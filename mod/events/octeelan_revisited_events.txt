@@ -236,8 +236,8 @@ country_event = {
 		}
 	}
 	immediate = {
-			capital_scope.solar_system = {
-				random_system_planet = {
+		capital_scope.solar_system = {
+			random_system_planet = {
 					limit = { has_planet_flag = is_peepboop_homeworld }
 				if = {
 					limit = { has_synthethic_dawn = yes }
