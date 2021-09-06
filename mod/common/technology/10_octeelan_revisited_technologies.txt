@@ -60,26 +60,3 @@ tech_alien_life_studies_gestalt = {
 		}
 	}
 }
-
-tech_peepboop_starbase = {
-	icon = tech_starbase_2
-	cost = 0
-	area = engineering
-	start_tech = no
-	category = { voidcraft }
-	tier = 1
-	prerequisites = { tech_starbase_1 tech_starbase_2 }
-	potential = { has_country_flag = is_peepboops }
-	prereqfor_desc = {
-		ship = {
-			title = "TECH_UNLOCK_PEEPBOOP_OUTPOST_CONSTRUCTION_TITLE"
-			desc = "TECH_UNLOCK_PEEPBOOP_OUTPOST_CONSTRUCTION_DESC"
-		}
-		ship = {
-			title = "TECH_UNLOCK_PEEPBOOP_STARPORT_CONSTRUCTION_TITLE"
-			desc = "TECH_UNLOCK_PEEPBOOP_STARPORT_CONSTRUCTION_DESC"
-		}
-	}
-
-	# unlocks special Beep-Boop Outpost and Starport
-}
