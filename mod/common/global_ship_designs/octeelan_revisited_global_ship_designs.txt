@@ -100,11 +100,11 @@ ship_design = {
 			template = MEDIUM_ARMOR_2
 		}
 		component = {
-			slot = MEDIUM_UTILITY_1
+			slot = MEDIUM_UTILITY_2
 			template = MEDIUM_ARMOR_2
 		}
 		component = {
-			slot = MEDIUM_UTILITY_2
+			slot = MEDIUM_UTILITY_3
 			template = MEDIUM_ARMOR_2
 		}
 		component = {
@@ -132,7 +132,7 @@ ship_design = {
 			template = MEDIUM_SHIELD_2
 		}
 		component = {
-			slot = MEDIUM_UTILITY_2
+			slot = MEDIUM_UTILITY_3
 			template = MEDIUM_SHIELD_2
 		}
 		component = {
