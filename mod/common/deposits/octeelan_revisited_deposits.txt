@@ -58,10 +58,10 @@ d_octeelan_xeno_preserve = {
 		}
 	}
 	ai_weight = {
-		weight = 1
+		weight = 0
 		modifier = {
-			factor = 0
-			has_country_flag = is_peepboops
+			weight = 1
+			NOT = { has_country_flag = is_peepboops }
 		}
 	}
 }
