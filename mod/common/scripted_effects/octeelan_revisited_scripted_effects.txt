@@ -380,23 +380,41 @@ setup_peepboop_homeworld = {
 				"null"
 			}
 		}
+		ignore_initial_colony_error = yes
+		day_zero_contact = no
 		effect = {
 			save_event_target_as = peepboop_country
 			set_country_flag = is_peepboops
 			set_country_flag = is_peepboops@PREV.solar_system.owner
-			PREV.solar_system.owner = { establish_communications_no_message = PREV }
-			establish_communications_no_message = capital_scope.solar_system.owner
+			establish_communications_no_message = PREV.solar_system.owner
+			add_intel = {
+				who = PREV.solar_system.owner
+				amount = 40
+			}
+			PREV.solar_system.owner = {
+				establish_communications_no_message = event_target:peepboop_country
+				add_intel = {
+					who = event_target:peepboop_country
+					amount = 40
+				}
+			}
 			set_origin = origin_fallen_empire
 			set_graphical_culture = mammalian_01
 			add_resource = {
-				energy = 300
-				minerals = 300
+				energy = 1000
+				minerals = 1000
+				alloys = 1000
+				influence = 100
 			}
 			set_ai_personality = machine_intelligence
 			set_policy = {
 				policy = diplomatic_stance
 				option = diplo_stance_belligerent
 				cooldown = no
+			}
+			set_closed_borders = {
+				who = PREV.solar_system.owner
+				status = yes
 			}
 			give_technology = { tech = tech_alien_life_studies_gestalt	message = no }
 			give_technology = { tech = tech_lasers_2					message = no }
@@ -420,13 +438,17 @@ setup_peepboop_homeworld = {
 			give_technology = { tech = tech_destroyers					message = no }
 			give_technology = { tech = tech_corvette_hull_1				message = no }
 			give_technology = { tech = tech_corvette_build_speed		message = no }
-			give_technology = { tech = tech_peepboop_starbase			message = no }
+			give_technology = { tech = tech_faux_starbase_1				message = no }
+			give_technology = { tech = tech_faux_starbase_2				message = no }
 			create_ship_design = { design = NAME_military_station_small_point_defense_peepboop }
 			add_ship_design = last_created_design
 			create_ship_design = { design = NAME_military_station_small_line_peepboop }
 			add_ship_design = last_created_design
 			create_ship_design = { design = NAME_military_station_small_strike_craft_peepboop }
 			add_ship_design = last_created_design
+			create_ship_design = { design = NAME_starbase_faux_spaceport_peepboop }
+			add_ship_design = last_created_design
+			create_starting_leaders = yes
 		}
 	}
 	create_colony = {
@@ -482,51 +504,89 @@ setup_peepboop_homeworld = {
 			}
 		}
 	}
-	create_fleet = {
-		name = NAME_peepboop_station_fleet
-		effect = {
-			set_owner = event_target:peepboop_country
-			create_ship = {
-				name = NAME_peepboop_station_ship
-				random_existing_design = peepboop_starbase_starport
-				upgradable = yes
-				prefix = no
-				effect = {
-					starbase = {
-						set_starbase_building = {
-							slot = 0
-							building = crew_quarters
-						}
-						set_starbase_module = {
-							slot = 0
-							module = peepboop_solar_panel_network
-						}
-						set_starbase_module = {
-							slot = 1
-							module = peepboop_solar_panel_network
-						}
+	solar_system = {
+		every_system_planet = {
+			set_surveyed = {
+				surveyed = yes
+				surveyor = event_target:peepboop_country
+			}
+		}
+		set_surveyed = {
+			surveyed = yes
+			surveyor = event_target:peepboop_country
+		}
+		create_fleet = {
+			name = NAME_peepboop_station_fleet
+			effect = {
+				set_owner = event_target:peepboop_country
+				set_location = {
+					target = PREVPREV
+					distance = 10
+					angle = random
+				}
+				create_ship = {
+					name = NAME_peepboop_station_ship
+					design = NAME_starbase_faux_spaceport_peepboop
+					prefix = no
+				}
+				while = {
+					count = 2
+					create_ship = {
+						name = random
+						design = NAME_military_station_small_point_defense_peepboop
+						prefix = no
+					}
+					create_ship = {
+						name = random
+						design = NAME_military_station_small_line_peepboop
+						prefix = no
+					}
+					create_ship = {
+						name = random
+						design = NAME_military_station_small_strike_craft_peepboop
+						prefix = no
 					}
 				}
 			}
-			while = {
-				count = 2
+		}
+		create_fleet = {
+			effect = {
+				set_owner = event_target:peepboop_country
 				create_ship = {
 					name = random
-					design = NAME_military_station_small_point_defense_peepboop
-					prefix = no
+					random_existing_design = science
 				}
-				create_ship = {
-					name = random
-					design = NAME_military_station_small_line_peepboop
-					prefix = no
+				set_fleet_stance = evasive
+				set_location = {
+					target = PREVPREV
+					distance = 10
+					angle = random
 				}
+				owner = {
+					create_leader = {
+						class = scientist
+						sub_type = survey
+						name = random
+						species = owner_main_species
+					}
+				}
+				set_leader = last_created_leader
+			}
+		}
+		create_fleet = {
+			effect = {
+				set_owner = event_target:peepboop_country
 				create_ship = {
 					name = random
-					design = NAME_military_station_small_strike_craft_peepboop
-					prefix = no
+					random_existing_design = constructor
+				}
+				set_fleet_stance = evasive
+				set_location = {
+					target = PREVPREV
+					distance = 10
+					angle = random
 				}
 			}
-			set_location = PREV
 		}
 	}
 }

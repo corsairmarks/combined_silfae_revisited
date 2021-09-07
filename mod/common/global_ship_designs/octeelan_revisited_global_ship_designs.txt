@@ -189,3 +189,55 @@ ship_design = {
 		}
 	}
 }
+
+ship_design = {
+	name = NAME_starbase_faux_spaceport_peepboop
+	ship_size = starbase_faux_starport
+	required_component = FAUX_STARBASE_FUSION_REACTOR
+	required_component = SENSOR_1
+	required_component = FAUX_STARBASE_COMBAT_COMPUTER_2
+	section = {
+		slot = core
+		template = FAUX_STARPORT_STARBASE_SECTION
+		component = {
+			slot = MEDIUM_GUN_01
+			template = MISSILE_2
+		}
+		component = {
+			slot = MEDIUM_GUN_02
+			template = MEDIUM_BLUE_LASER
+		}
+		component = {
+			slot = MEDIUM_GUN_03
+			template = MEDIUM_MASS_DRIVER_2
+		}
+		component = {
+			slot = LARGE_UTILITY_1
+			template = LARGE_ARMOR_2
+		}
+		component = {
+			slot = LARGE_UTILITY_2
+			template = LARGE_ARMOR_2
+		}
+		component = {
+			slot = LARGE_UTILITY_3
+			template = LARGE_ARMOR_2
+		}
+		component = {
+			slot = LARGE_UTILITY_4
+			template = LARGE_SHIELD_2
+		}
+		component = {
+			slot = LARGE_UTILITY_5
+			template = LARGE_SHIELD_2
+		}
+		component = {
+			slot = LARGE_UTILITY_6
+			template = LARGE_SHIELD_2
+		}
+		component = {
+			slot = AUX_UTILITY_1
+			template = FIRE_CONTROL_1
+		}
+	}
+}
