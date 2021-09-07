@@ -417,25 +417,12 @@ setup_peepboop_homeworld = {
 				status = yes
 			}
 			give_technology = { tech = tech_alien_life_studies_gestalt	message = no }
-			give_technology = { tech = tech_lasers_2					message = no }
-			give_technology = { tech = tech_fusion_power				message = no }
-			give_technology = { tech = tech_hyper_drive_2				message = no }
-			give_technology = { tech = tech_shields_2					message = no }
-			give_technology = { tech = tech_administrative_ai			message = no }
-			give_technology = { tech = tech_combat_computers_1			message = no }
 			give_technology = { tech = tech_auxiliary_fire_control		message = no }
 			give_technology = { tech = tech_ground_defense_planning		message = no }
 			give_technology = { tech = tech_adaptive_combat_algorithms	message = no }
 			give_technology = { tech = tech_planetary_unification		message = no }
 			give_technology = { tech = tech_planetary_infrastructure_1	message = no }
 			give_technology = { tech = tech_planetary_infrastructure_2	message = no }
-			give_technology = { tech = tech_ship_armor_2				message = no }
-			give_technology = { tech = tech_thrusters_2					message = no }
-			give_technology = { tech = tech_missiles_2					message = no }
-			give_technology = { tech = tech_mass_drivers_2				message = no }
-			give_technology = { tech = tech_strike_craft_1				message = no }
-			give_technology = { tech = tech_starbase_3					message = no }
-			give_technology = { tech = tech_destroyers					message = no }
 			give_technology = { tech = tech_corvette_hull_1				message = no }
 			give_technology = { tech = tech_corvette_build_speed		message = no }
 			give_technology = { tech = tech_faux_starbase_1				message = no }
@@ -529,23 +516,20 @@ setup_peepboop_homeworld = {
 					design = NAME_starbase_faux_spaceport_peepboop
 					prefix = no
 				}
-				while = {
-					count = 2
-					create_ship = {
-						name = random
-						design = NAME_military_station_small_point_defense_peepboop
-						prefix = no
-					}
-					create_ship = {
-						name = random
-						design = NAME_military_station_small_line_peepboop
-						prefix = no
-					}
-					create_ship = {
-						name = random
-						design = NAME_military_station_small_strike_craft_peepboop
-						prefix = no
-					}
+				create_ship = {
+					name = random
+					design = NAME_military_station_small_point_defense_peepboop
+					prefix = no
+				}
+				create_ship = {
+					name = random
+					design = NAME_military_station_small_line_peepboop
+					prefix = no
+				}
+				create_ship = {
+					name = random
+					design = NAME_military_station_small_strike_craft_peepboop
+					prefix = no
 				}
 			}
 		}
