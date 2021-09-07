@@ -57,11 +57,8 @@ d_octeelan_xeno_preserve = {
 			energy = 300
 		}
 	}
-	ai_weight = {
-		weight = 0
-		modifier = {
-			weight = 1
-			NOT = { has_country_flag = is_peepboops }
-		}
+	can_be_cleared = {
+		exists = owner
+		owner = { NOT = { has_country_flag = is_peepboops } }
 	}
 }
