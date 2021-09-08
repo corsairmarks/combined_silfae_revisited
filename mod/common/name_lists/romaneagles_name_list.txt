@@ -1,50 +1,50 @@
 ﻿ROEAGLE1 = {
+	category = "Aquilese"
 	### SHIPS
-	randomized = no
 	ship_names = {
 		generic = {
-				"Veiia" "Antiuma" "Cumaea" "Metapontuma" "Aquaea Nocta" "Pompelea" "Hercalaria" "Aelia Caplia" "Piliae" "Venedia"
-				"Ravarenna" "Nediolina" "Paestuma" "Viroconia" "Virucola" "Lugdunama" "Agrigana" "Bracara" "Lutetia" "Ostia" "Stabiaea"
-				"Tergesta" "Brundisia" "Floremia" "Salerna" "Seleucia" "Thuburba" "Oenipontuma" "Noviomaga"
+			"Veiia" "Antiuma" "Cumaea" "Metapontuma" "Aquaea Nocta" "Pompelea" "Hercalaria" "Aelia Caplia" "Piliae" "Venedia"
+			"Ravarenna" "Nediolina" "Paestuma" "Viroconia" "Virucola" "Lugdunama" "Agrigana" "Bracara" "Lutetia" "Ostia" "Stabiaea"
+			"Tergesta" "Brundisia" "Floremia" "Salerna" "Seleucia" "Thuburba" "Oenipontuma" "Noviomaga"
 		}
 
-		corvette = {
-		}
-		
-		destroyer = {
-		}
-		
-		cruiser = {
-		}
-		
-		battleship = {
-		}
+		corvette = { }
 
-		titan = {
-		}
+		destroyer = { }
 
-		colossus = {
-		}
-		
-		science = {
-		}
-		
-		colonizer = {
-		}
-		
-		constructor = {
-		}
-		
+		cruiser = { }
+
+		battleship = { }
+
+		titan = { }
+
+		juggernaut = { }
+
+		colossus = { }
+
+		science = { }
+
+		colonizer = { }
+
+		constructor = { }
+
 		mining_station = { }
+
 		research_station = { }
+
 		observation_station = { }
+
 		military_station_small = { }
+
 		military_station_medium = { }
-		military_station_large = { }	
+
+		military_station_large = { }
+
+		ion_cannon = { }
 	}
 	fleet_names = {
 		random_names = {
-			"Classis Bellicaria" "Imperial Fleet" "Provincial Defense Garrison" 
+			"Classis Bellicaria" "Imperial Fleet" "Provincial Defense Garrison"
 		}
 		sequential_name = "%O% Classis"
 	}
@@ -64,27 +64,27 @@
 		machine_assault_3 = {
 			sequential_name = "%O% Velites"
 		}
-		
+
 		defense_army = {
 			sequential_name = "%O% Socii"
 		}
-			
+
 		assault_army = {
 			sequential_name = "%O% Velites"
 		}
-		
+
 		slave_army = {
 			sequential_name = "%O% Auxilia"
 		}
-		
-		clone_army = { 
+
+		clone_army = {
 			sequential_name = "%O% Gemini"
 		}
-		
+
 		robotic_army = {
 			sequential_name = "%O% Homuncoli"
 		}
-		
+
 		robotic_defense_army = {
 			sequential_name = "%O% Homuncoli"
 		}
@@ -92,15 +92,15 @@
 		undead_army = {
 			sequential_name = "%O% Immortui"
 		}
-		
-		psionic_army = { 
+
+		psionic_army = {
 			sequential_name = "%O% Princeps"
 		}
-		
+
 		xenomorph_army = {
 			sequential_name = "%O% Xenostati"
 		}
-		
+
 		gene_warrior_army = {
 			sequential_name = "%O% Gymnoxenorii"
 		}
@@ -115,54 +115,44 @@
 				Komorom Epsoresia Aesilis Apamermea Favesentia Sitifalis Nemaususua
 			}
 		}
-		
+
 		pc_desert = {
-			names = {
-			}
+			names = { }
 		}
-		
+
 		pc_tropical = {
-			names = {
-			}
+			names = { }
 		}
-		
+
 		pc_arid = {
-			names = {
-			}
+			names = { }
 		}
-		
+
 		pc_continental = {
-			names = {
-			}
+			names = { }
 		}
-		
+
 		pc_ocean = {
-			names = {
-			}
+			names = { }
 		}
-		
+
 		pc_tundra = {
-			names = {
-			}
+			names = { }
 		}
-		
+
 		pc_arctic = {
-			names = {
-			}
+			names = { }
 		}
 	}
 	### CHARACTERS
 	character_names = {
 		default = {
-			# A complete name
-			full_names = {
-			}
 			# Always combined with a second name
 			first_names_male = {
 				Aelianus Aelius Aemilianus Aemilius Aetius Africanus Agrippa Ahenobarbus Albanus Albinus Albus Antoninus Antonius Appius Aquila Aquilinius
 				Atilius Augustinus Augustus Aulus Aurelius Avilius Avitus Balbinus Balbus Blandinus Blandus Blasius Brutus Caecilius Caelius Caesar Caius Calvus Camillus
 				Cassian Cassianus Cassius Cato Celsus Cicero Cladius Cloelius Cnaeus Cornelius Crispinus Crispus Cyprianus Decimus Diocletianus Domitianus Domitius Drusus Duilius
-				Egnatius Ennius Fabianus Fabius Fabricius Faustinus Felix Festus Flavianus Flavius Florianus Florus Fulvius Gaius Gallus Germanus Glaucia Gnaeus Gordianus Gratianus 
+				Egnatius Ennius Fabianus Fabius Fabricius Faustinus Felix Festus Flavianus Flavius Florianus Florus Fulvius Gaius Gallus Germanus Glaucia Gnaeus Gordianus Gratianus
 				Hadrianus Herminius Hilarius Horatius Hortensius Ianuarius Iovianus Iovita Iulianus Iulius Iunius Iuvenalis Januarius Jovian Julius Jupiter Junius Laelius Laurentinus
 				Laurentius Livianus Livius Longinus Loukios Lucanus Lucianus Lucilius Lucius Lucretius Manius Manlius Marcellinus Marcellus Marcianus Marcius Marcus Marianus Martialis Martinus
 				Maxentius Maximianus Maximinus Maximus Naevius Nero nerva Nonus Octanvianus Otho Ovidius Paulinus Petronius Plinius Pompeius Pompilius Pontius Porcius Priscus Publius Quintilianus
@@ -182,32 +172,33 @@
 				Abronia Aburia Accia Accoleia Acerronia Acilia Actoria Acutia Aebutia Aelia Aemilia Afrania Albia Albinia Albucia Alfena Alfia Aliena Amafinia Ampia Ancharia Anicia Annaeia Annia Antia Antistia Antonia Aponia Appia Appuleia Apronia Apustia Aquillia Aquinia Arellia Arennia Arpineia Arria Arruntia Articuleia Asconia Asinia Ateia Aternia Atia Atilia Axia
 				Baebia Balventia Bantia Barbatia Betiliena Betucia Blossia Bruttia Burriena Caecia Caecilia Caecina Caedicia Caelia Caeparia Caepasia Caerellia Caesennia Caesetia Caesia Caesonia Caesulena Caetronia Calavia Calidia Calpurnia Calvisia Cania Canidia Caninia Cantia Cantilia Canuleia Canutia Carfulena Carisia Carpinatia Carteia Carvilia Cassia Castricia Castrinia Catia Catiena
 				Decia Decimia Dellia Didia Digitia Domitia Duilia Durmia Duronia Egilia Egnatia Egnatuleia Ennia Epidia Eppia Equitia Erucia
-				Fabia Fabricia Fadia Falcidia Fannia Farsuleia Faucia Fidiculania Flaminia Fonteia Foslia Fufia Fuficia Fufidia Fulcinia Fundaia Furia Furnia Gellia Geminia Genucia Gessia Grania Gratidia Gabinia Galeria Gallia Gargonia Gavia Gegania 
+				Fabia Fabricia Fadia Falcidia Fannia Farsuleia Faucia Fidiculania Flaminia Fonteia Foslia Fufia Fuficia Fufidia Fulcinia Fundaia Furia Furnia Gellia Geminia Genucia Gessia Grania Gratidia Gabinia Galeria Gallia Gargonia Gavia Gegania
 				Hateria Heia Helvia Hirtia Hirtuleia Horatia Helrivida Herennia Herminia Hirria Hosidia Hostilia Iccia Icilia Insteia Julia Junia Juventia Laberia Labiena Laceria Laelia Laenia Laetilia Laetoria Lafrenia Lamponia Laronia Lartia Latinia Lavinia Lecania Lentidia Licinia Ligaria Livia Lollia Lucceia Luciena Lucilia Lucretia Luria Luscia Lusia Lutatia
-				Maecia Maecilia Maelia Maenia Maevia Magia Mallia Mamilia Manilia Manlia Marcia Maria Matia Matiena Matinia Matrinia Memmia Menenia Menia Mescinia Messia Metilia Mettia Mimesia Minatia Minicia Minidia Minucia Modia Mucia Munatia Mussidia Mustia Mutia 
-				Naevia Nasennia Nasidia Nasidiena Nautia Neratia Neria Ninnia Nonia Norbana Obellia Obultronia Occia Oclatia Oclatinia Octavena Octavia Ofania Ofilia Ogulnia Ollia Opellia Orcivia Orfia Orfidia Oscia Novellia Novia Numeria Numicia Numisia Numitoria Nummia Numonia Nymphidia 
+				Maecia Maecilia Maelia Maenia Maevia Magia Mallia Mamilia Manilia Manlia Marcia Maria Matia Matiena Matinia Matrinia Memmia Menenia Menia Mescinia Messia Metilia Mettia Mimesia Minatia Minicia Minidia Minucia Modia Mucia Munatia Mussidia Mustia Mutia
+				Naevia Nasennia Nasidia Nasidiena Nautia Neratia Neria Ninnia Nonia Norbana Obellia Obultronia Occia Oclatia Oclatinia Octavena Octavia Ofania Ofilia Ogulnia Ollia Opellia Orcivia Orfia Orfidia Oscia Novellia Novia Numeria Numicia Numisia Numitoria Nummia Numonia Nymphidia
 				Paccia Pacidia Pacilia Paconia Pactumeia Pacuvia Palfuria Palpellia Pantuleia Papia Papinia Papiria Pasidia Pasidiena Passiena Patulcia Pedania Pedia Peducaea Percennia Perperna Pescennia Petillia Petreia Petronia Pinaria Pompeia Pompilia Pomponia Poppaea Porcia Postumia Potitia Procilia Publicia Publilia Quinctia Quinctilia Rabiria Remmia Romilia Roscia Rutilia
 				Salvia Scribonia Sedatia Sempronia Septimia Sergia Sertoria Servilia Sestia Sextia Sextilia Sicinia Sosia Stertinia Sulpicia Tarpeia Tarquinia Tarquitia Terentia Tineia Titia Tulia
 				Ulpia Ummidia Valeria Velia Verginia Vettia Veturia Vilia Vivia Vipsania Visellia Vitellia
 			}
-			regnal_first_names = {
-			}
+			# Always combined with a regnal second name
 			regnal_first_names_male = {
-				Augustus Tiberius Caligula Claudius Nero Galba Otho Vitellius Vespasianus Titus Domitianus Nerva Trajanus Hadrianus Aurelius Lucius Commodus Pertinax Didius Septimius Caracalla Geta Macrinus Diadumenian Elagabalus Severus Alexander Maximinus Gordian Pupienus Balbinus Gordianus Decius Philippus Hostilianus Trebonianus Volusianus Aemilianus Valerianus Gallienus Saloninus 
-				Quintillius Tacitus Florianus Probus Carus Numerianus Carinus Maxentius Constantinus Licinius Vetranio Julianus Jovianus 
+				Augustus Tiberius Caligula Claudius Nero Galba Otho Vitellius Vespasianus Titus Domitianus Nerva Trajanus Hadrianus Aurelius Lucius Commodus Pertinax Didius Septimius Caracalla Geta Macrinus Diadumenian Elagabalus Severus Alexander Maximinus Gordian Pupienus Balbinus Gordianus Decius Philippus Hostilianus Trebonianus Volusianus Aemilianus Valerianus Gallienus Saloninus
+				Quintillius Tacitus Florianus Probus Carus Numerianus Carinus Maxentius Constantinus Licinius Vetranio Julianus Jovianus
 			}
+			# Always combined with a regnal second name
 			regnal_first_names_female = {
-				Livia Orestilla Paulina Milonia Caesonia Messalina Agrippina Claudia Octavia Poppaea Sabina Statilia Galeria Domitia Longina Pompeia Vibia Galeria Faustina Bruttia Flavia Manlia Titiana Scantilla Domna Fulvia Plautilla Nonia Celsa Cornelia Aquilia Severa Sallustia Orbiana Caecilia Furia Sabinia Tranquillina Otacilia Cupressenia Herennia Etruscilla Afinia Gemina Baebiana Supera Cornelia Salonina 
-				Prisca Eutropia Maximiana Theodora Galeria Valeria Minervina Constantia Helena Marina Justina Laeta Aelia Flaccilla Eudoxia 
+				Livia Orestilla Paulina Milonia Caesonia Messalina Agrippina Claudia Octavia Poppaea Sabina Statilia Galeria Domitia Longina Pompeia Vibia Galeria Faustina Bruttia Flavia Manlia Titiana Scantilla Domna Fulvia Plautilla Nonia Celsa Cornelia Aquilia Severa Sallustia Orbiana Caecilia Furia Sabinia Tranquillina Otacilia Cupressenia Herennia Etruscilla Afinia Gemina Baebiana Supera Cornelia Salonina
+				Prisca Eutropia Maximiana Theodora Galeria Valeria Minervina Constantia Helena Marina Justina Laeta Aelia Flaccilla Eudoxia
 			}
+			# Always combined with a regnal first name
 			regnal_second_names = {
 				Abronia Aburia Accia Accoleia Acerronia Acilia Actoria Acutia Aebutia Aelia Aemilia Afrania Albia Albinia Albucia Alfena Alfia Aliena Amafinia Ampia Ancharia Anicia Annaeia Annia Antia Antistia Antonia Aponia Appia Appuleia Apronia Apustia Aquillia Aquinia Arellia Arennia Arpineia Arria Arruntia Articuleia Asconia Asinia Ateia Aternia Atia Atilia Axia
 				Baebia Balventia Bantia Barbatia Betiliena Betucia Blossia Bruttia Burriena Caecia Caecilia Caecina Caedicia Caelia Caeparia Caepasia Caerellia Caesennia Caesetia Caesia Caesonia Caesulena Caetronia Calavia Calidia Calpurnia Calvisia Cania Canidia Caninia Cantia Cantilia Canuleia Canutia Carfulena Carisia Carpinatia Carteia Carvilia Cassia Castricia Castrinia Catia Catiena
 				Decia Decimia Dellia Didia Digitia Domitia Duilia Durmia Duronia Egilia Egnatia Egnatuleia Ennia Epidia Eppia Equitia Erucia
-				Fabia Fabricia Fadia Falcidia Fannia Farsuleia Faucia Fidiculania Flaminia Fonteia Foslia Fufia Fuficia Fufidia Fulcinia Fundaia Furia Furnia Gellia Geminia Genucia Gessia Grania Gratidia Gabinia Galeria Gallia Gargonia Gavia Gegania 
+				Fabia Fabricia Fadia Falcidia Fannia Farsuleia Faucia Fidiculania Flaminia Fonteia Foslia Fufia Fuficia Fufidia Fulcinia Fundaia Furia Furnia Gellia Geminia Genucia Gessia Grania Gratidia Gabinia Galeria Gallia Gargonia Gavia Gegania
 				Hateria Heia Helvia Hirtia Hirtuleia Horatia Helrivida Herennia Herminia Hirria Hosidia Hostilia Iccia Icilia Insteia Julia Junia Juventia Laberia Labiena Laceria Laelia Laenia Laetilia Laetoria Lafrenia Lamponia Laronia Lartia Latinia Lavinia Lecania Lentidia Licinia Ligaria Livia Lollia Lucceia Luciena Lucilia Lucretia Luria Luscia Lusia Lutatia
-				Maecia Maecilia Maelia Maenia Maevia Magia Mallia Mamilia Manilia Manlia Marcia Maria Matia Matiena Matinia Matrinia Memmia Menenia Menia Mescinia Messia Metilia Mettia Mimesia Minatia Minicia Minidia Minucia Modia Mucia Munatia Mussidia Mustia Mutia 
-				Naevia Nasennia Nasidia Nasidiena Nautia Neratia Neria Ninnia Nonia Norbana Obellia Obultronia Occia Oclatia Oclatinia Octavena Octavia Ofania Ofilia Ogulnia Ollia Opellia Orcivia Orfia Orfidia Oscia Novellia Novia Numeria Numicia Numisia Numitoria Nummia Numonia Nymphidia 
+				Maecia Maecilia Maelia Maenia Maevia Magia Mallia Mamilia Manilia Manlia Marcia Maria Matia Matiena Matinia Matrinia Memmia Menenia Menia Mescinia Messia Metilia Mettia Mimesia Minatia Minicia Minidia Minucia Modia Mucia Munatia Mussidia Mustia Mutia
+				Naevia Nasennia Nasidia Nasidiena Nautia Neratia Neria Ninnia Nonia Norbana Obellia Obultronia Occia Oclatia Oclatinia Octavena Octavia Ofania Ofilia Ogulnia Ollia Opellia Orcivia Orfia Orfidia Oscia Novellia Novia Numeria Numicia Numisia Numitoria Nummia Numonia Nymphidia
 				Paccia Pacidia Pacilia Paconia Pactumeia Pacuvia Palfuria Palpellia Pantuleia Papia Papinia Papiria Pasidia Pasidiena Passiena Patulcia Pedania Pedia Peducaea Percennia Perperna Pescennia Petillia Petreia Petronia Pinaria Pompeia Pompilia Pomponia Poppaea Porcia Postumia Potitia Procilia Publicia Publilia Quinctia Quinctilia Rabiria Remmia Romilia Roscia Rutilia
 				Salvia Scribonia Sedatia Sempronia Septimia Sergia Sertoria Servilia Sestia Sextia Sextilia Sicinia Sosia Stertinia Sulpicia Tarpeia Tarquinia Tarquitia Terentia Tineia Titia Tulia
 				Ulpia Ummidia Valeria Velia Verginia Vettia Veturia Vilia Vivia Vipsania Visellia Vitellia
