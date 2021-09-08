@@ -178,11 +178,11 @@ serpentoid_system = {
 							category = "special"
 							file = "primitive.dds"
 						}
-						background= {
+						background = {
 							category = "backgrounds"
 							file = "new_dawn.dds"
 						}
-						colors={
+						colors = {
 							"turquoise"
 							"green"
 							"null"
@@ -326,11 +326,11 @@ serpentoid_system = {
 							category = "domination"
 							file = "domination_18.dds"
 						}
-						background= {
+						background = {
 							category = "backgrounds"
 							file = "vertical.dds"
 						}
-						colors={
+						colors = {
 							"black"
 							"orange"
 							"null"

@@ -1,37 +1,6 @@
 namespace = serpentoid_evt
 
-### Hidden Game Start Event
-event = {
-	id = serpentoid_evt.1
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
-		# trigger the final initializers for the serpentoid_system
-		every_system = {
-			limit = { has_star_flag = serpentoid_system }
-			every_system_planet = {
-				if = {
-					limit = { has_planet_flag = serpentoid_system_capital }
-					planet_event = { id = serpentoid_evt.2 }
-				}
-				else_if = {
-					limit = {
-						has_owner = yes
-						owner = { is_country_type = primitive }
-						has_planet_flag = serpentoid_system_primitives
-					}
-					planet_event = { id = serpentoid_evt.3 }
-				}
-			}
-		}
-		# trigger adding the building_space_pyramid for Ancient Technosethi
-		every_playable_country = {
-			limit = { has_country_flag = is_ancient_technosethi }
-			capital_scope = { planet_event = { id = serpentoid_evt.4 } }
-		}
-	}
-}
-
+# triggered by empire_init_capital_planet
 planet_event = {
 	id = serpentoid_evt.2
 	hide_window = yes
@@ -45,29 +14,27 @@ planet_event = {
 	}
 	immediate = {
 		generate_serpentoid_system_capital_blockers = yes
+		solar_system = {
+			every_system_planet = {
+				limit = {
+					has_planet_flag = serpentoid_system_primitives
+					has_owner = yes
+					owner = { is_country_type = primitive }
+				}
+				serpentoid_system_primitives_final_pass = yes
+			}
+		}
 	}
 }
 
-planet_event = {
-	id = serpentoid_evt.3
-	hide_window = yes
-	is_triggered_only = yes
-	pre_triggers = {
-		has_owner = yes
-	}
-	trigger = {
-		owner = { is_country_type = primitive }
-		has_planet_flag = serpentoid_system_primitives
-	}
-	immediate = {
-		serpentoid_system_primitives_final_pass = yes
-	}
-}
-
+# triggered by empire_init_capital_planet
 planet_event = {
 	id = serpentoid_evt.4
 	hide_window = yes
 	is_triggered_only = yes
+	trigger = {
+		owner = { has_country_flag = is_ancient_technosethi }
+	}
 	immediate = {
 		add_building = building_space_pyramid
 		owner.ruler = {
@@ -76,6 +43,7 @@ planet_event = {
 	}
 }
 
+# triggered by on_game_start
 event = {
 	id = serpentoid_evt.13
 	hide_window = yes

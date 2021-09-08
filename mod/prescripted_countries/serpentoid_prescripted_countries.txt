@@ -6,7 +6,7 @@ serpentoids1 = {
 		name = "She'ses"
 		plural = "She'sesi"
 		adjective = "She'sesi"
-		name_list = serpentoidnames
+		name_list = SRPT1
 		# the serpentoid qualities have been split into multiple traits to be more flexible (orignally it was one trait)
 		trait = trait_serpentoid_acumen
 		trait = trait_serpentoid_cunning
@@ -58,6 +58,7 @@ serpentoids1 = {
 		trait = trait_ruler_expansionist
 	}
 	spawn_enabled = yes
+	ignore_portrait_duplication = yes
 	ethic = ethic_authoritarian
 	ethic = ethic_fanatic_spiritualist
 	flags = { is_ancient_technosethi custom_start_screen }
