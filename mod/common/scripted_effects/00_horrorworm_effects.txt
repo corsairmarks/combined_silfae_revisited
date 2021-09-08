@@ -1,0 +1,131 @@
+generate_horrorworm_extra_armies = {
+	# known issue in Stellaris 2.8.*: assault armies automatically go to orbit unless there are other assault armies on the ground
+	while = {
+		count = 2
+		create_army = {
+			owner = owner
+			species = owner
+			type = "assault_army"
+		}
+	}
+	create_army = {
+		owner = owner
+		species = owner
+		type = "psionic_army"
+	}
+}
+
+generate_horrorworm_system_capital_blockers = {
+	# fill up district slots with blockers, except for machine world origin
+	if = {
+		limit = { owner = { NOT = { has_origin = origin_machine } } }
+		# This nasty switch is necessary because we can't "get" the number into a variable,
+		# and free_district_slots doesn't update inside a while during iteration that adds blockers.
+		switch = {
+			trigger = free_district_slots
+			0 = { set_variable = { which = num_free_districts value = 1 } }
+			1 = { set_variable = { which = num_free_districts value = 1 } }
+			2 = { set_variable = { which = num_free_districts value = 2 } }
+			3 = { set_variable = { which = num_free_districts value = 3 } }
+			4 = { set_variable = { which = num_free_districts value = 4 } }
+			5 = { set_variable = { which = num_free_districts value = 5 } }
+			6 = { set_variable = { which = num_free_districts value = 6 } }
+			7 = { set_variable = { which = num_free_districts value = 7 } }
+			8 = { set_variable = { which = num_free_districts value = 8 } }
+			9 = { set_variable = { which = num_free_districts value = 9 } }
+			10 = { set_variable = { which = num_free_districts value = 10 } }
+			11 = { set_variable = { which = num_free_districts value = 11 } }
+			12 = { set_variable = { which = num_free_districts value = 12 } }
+			13 = { set_variable = { which = num_free_districts value = 13 } }
+			14 = { set_variable = { which = num_free_districts value = 14 } }
+			15 = { set_variable = { which = num_free_districts value = 15 } }
+			16 = { set_variable = { which = num_free_districts value = 16 } }
+			17 = { set_variable = { which = num_free_districts value = 17 } }
+			18 = { set_variable = { which = num_free_districts value = 18 } }
+			19 = { set_variable = { which = num_free_districts value = 19 } }
+			20 = { set_variable = { which = num_free_districts value = 20 } }
+			21 = { set_variable = { which = num_free_districts value = 21 } }
+			22 = { set_variable = { which = num_free_districts value = 22 } }
+			23 = { set_variable = { which = num_free_districts value = 23 } }
+			24 = { set_variable = { which = num_free_districts value = 24 } }
+			25 = { set_variable = { which = num_free_districts value = 25 } }
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = num_free_districts
+					value > 0
+				}
+			}
+			while = {
+				count = num_free_districts
+				add_deposit = d_horrorworm_ancient_ruins
+			}
+			clear_variable = num_free_districts
+		}
+	}
+	# fill up all available jobs - special check for assimilators, because bio-trophy jobs make this infinite loop
+	if = {
+		limit = { owner = { has_valid_civic = civic_machine_servitor } }
+		# This nasty switch is necessary because we can't "get" the number into a variable,
+		# and free_jobs can't be compared to a variable.
+		switch = {
+			trigger = free_jobs
+			0 = { set_variable = { which = num_free_jobs value = 1 } }
+			1 = { set_variable = { which = num_free_jobs value = 1 } }
+			2 = { set_variable = { which = num_free_jobs value = 2 } }
+			3 = { set_variable = { which = num_free_jobs value = 3 } }
+			4 = { set_variable = { which = num_free_jobs value = 4 } }
+			5 = { set_variable = { which = num_free_jobs value = 5 } }
+			6 = { set_variable = { which = num_free_jobs value = 6 } }
+			7 = { set_variable = { which = num_free_jobs value = 7 } }
+			8 = { set_variable = { which = num_free_jobs value = 8 } }
+			9 = { set_variable = { which = num_free_jobs value = 9 } }
+			10 = { set_variable = { which = num_free_jobs value = 10 } }
+			11 = { set_variable = { which = num_free_jobs value = 11 } }
+			12 = { set_variable = { which = num_free_jobs value = 12 } }
+			13 = { set_variable = { which = num_free_jobs value = 13 } }
+			14 = { set_variable = { which = num_free_jobs value = 14 } }
+			15 = { set_variable = { which = num_free_jobs value = 15 } }
+			16 = { set_variable = { which = num_free_jobs value = 16 } }
+			17 = { set_variable = { which = num_free_jobs value = 17 } }
+			18 = { set_variable = { which = num_free_jobs value = 18 } }
+			19 = { set_variable = { which = num_free_jobs value = 19 } }
+			20 = { set_variable = { which = num_free_jobs value = 20 } }
+			21 = { set_variable = { which = num_free_jobs value = 21 } }
+			22 = { set_variable = { which = num_free_jobs value = 22 } }
+			23 = { set_variable = { which = num_free_jobs value = 23 } }
+			24 = { set_variable = { which = num_free_jobs value = 24 } }
+			25 = { set_variable = { which = num_free_jobs value = 25 } }
+		}
+		subtract_variable = {
+			which = num_free_jobs
+			value = 5 # the default number of biotrophies in Stellaris 3.0.*
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = num_free_jobs
+					value > 0
+				}
+			}
+			while = {
+				count = num_free_jobs
+				create_pop = { 
+					species = owner
+					ethos = owner
+				}
+			}
+		}
+		clear_variable = num_free_jobs
+	}
+	else = {
+		while = {
+			limit = { free_jobs > 0 }
+			create_pop = { 
+				species = owner
+				ethos = owner
+			}
+		}
+	}
+}
