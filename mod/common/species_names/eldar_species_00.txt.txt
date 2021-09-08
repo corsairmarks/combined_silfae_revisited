@@ -1,0 +1,16 @@
+ELDR = {
+	eldar1 = {
+		name = "Eldar"
+		plural = "Eldar"
+		home_planet = "Xant"
+		home_system = "Xanta"
+		name_list = ELDR1
+	}
+	eldar2 = {
+		name = "Eldar"
+		plural = "Eldar"
+		home_planet = "Ulthanash Shelwé"
+		home_system = "Eye of Terror"
+		name_list = ELDR1
+	}
+}

@@ -1,0 +1,120 @@
+namespace = eldar_evt
+
+# flag mod as active
+event = {
+	id = eldar_evt.13
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = { has_global_flag = eldar_revisited_installed }
+	}
+	immediate = {
+		set_global_flag = eldar_revisited_installed
+	}
+}
+
+# triggered by empire_init_capital_planet
+# ROOT = planet, capital
+# FROM = species, founder
+planet_event = {
+	id = eldar_evt.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_planet_flag = is_silfae_eldar_craftworld
+		solar_system = { has_star_flag = is_silfae_eye_of_terror }
+	}
+	immediate = {
+		generate_eldar_system_start_deposits_and_blockers = yes
+		generate_eldar_system_start_buildings_and_districts = yes
+		generate_eldar_system_starting_resources = yes
+		generate_eldar_system_start_pops = yes
+		generate_eldar_system_final_pass = yes
+	}
+}
+
+# triggered by empire_init_add_technologies
+country_event = {
+	id = eldar_evt.2
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = is_silfae_eldar
+	}
+	immediate = {
+		give_technology = {
+			tech = tech_psionic_theory
+			message = no
+		}
+	}
+}
+
+# triggered by empire_init_add_technologies
+country_event = {
+	id = eldar_evt.3
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		capital_scope = { has_planet_flag = is_silfae_eldar_craftworld }
+	}
+	immediate = {
+		give_technology = {
+			tech = tech_hydroponics
+			message = no
+		}
+		give_technology = {
+			tech = tech_housing_1
+			message = no
+		}
+	}
+}
+
+# triggered by on_game_start_country
+country_event = {
+	id = eldar_evt.4
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_default
+		exists = capital_scope
+		capital_scope = { has_planet_flag = is_silfae_eldar_craftworld }
+	}
+	immediate = {
+		capital_scope = { change_planet_size = -2 }
+	}
+}
+
+# ensure that restoring/creating an ecu/machine/hive world on the craftworld retains the arcane replicator - for the original owner only
+# triggered by on_game_start_country and the mega.201 override
+# ROOT = planet
+# FROM = country - unclear whether the current owner, or the country that initiated terraforming
+planet_event = {
+	id = eldar_evt.5
+	hide_window = yes
+	is_triggered_only = yes
+	pre_triggers = {
+		has_owner = yes
+		original_owner = yes
+	}
+	trigger = {
+		has_planet_flag = is_silfae_eldar_craftworld
+		OR = {
+			is_planet_class = pc_city
+			is_planet_class = pc_machine
+			is_planet_class = pc_hive
+		}
+		NOR = {
+			has_deposit = d_arcane_replicator_eldar_system
+			has_deposit = d_arcane_replicator_eldar_system_gestalt
+		}
+	}
+	immediate = {
+		if = {
+			limit = { owner = { country_uses_consumer_goods = yes } }
+			add_deposit = d_arcane_replicator_eldar_system
+		}
+		else = {
+			add_deposit = d_arcane_replicator_eldar_system_gestalt
+		}
+	}
+}

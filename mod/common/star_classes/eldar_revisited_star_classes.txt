@@ -1,0 +1,23 @@
+sc_silfae_eye_of_terror = {
+	class 			= pulsar
+	icon			= pulsar
+	icon_scale		= 2.25
+	planet			= { key = pc_silfae_eye_of_terror }
+	spawn_odds 		= 0
+	pc_desert 		= { spawn_odds = 0 }
+	pc_tropical 	= { spawn_odds = 0 }
+	pc_arid 		= {	spawn_odds = 0 }
+	pc_continental 	= { spawn_odds = 0 }
+	pc_ocean 		= { spawn_odds = 0 }
+	pc_tundra 		= { spawn_odds = 0 }
+	pc_arctic 		= { spawn_odds = 0 }
+	pc_gaia			= { spawn_odds = 0 }
+	pc_alpine		= { spawn_odds = 0 }
+	pc_savannah		= { spawn_odds = 0 }
+	is_environmental_hazard = yes
+	modifier = {
+		ship_shield_reduction = 1.0
+		ship_disengage_chance_reduction = 0.5
+		ship_emergency_ftl_min_days_mult = 0.5
+	}
+}
