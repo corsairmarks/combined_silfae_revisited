@@ -44,7 +44,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 
 [h2]Compatibility[/h2]
 
-Much less compatible than the other Silfae's Revisited series mods because this mod makes significantly more gameplay changes. It is explicitly incompatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2579736379]Animated Silicoid Portraits: Revisited[/url] without a compatibility patch.
+Much less compatible than the other Silfae's Revisited series mods because this mod makes significantly more gameplay changes. It is explicitly incompatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2579736379]Animated Silicoid Portraits: Revisited[/url] unless you use the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2596642632]compatibility patch[/url].
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number. This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed. You can safely ignore the out-of-date warning for the dependency mods.
 
@@ -123,7 +123,7 @@ Hosted on [url=https://github.com/corsairmarks/holosphere_rising_revisited]GitHu
 
 [h1]Special Thanks[/h1]
 
-I was inspired to extend the original mod when I saw Endugu's [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1584824947]expansion[/url] of Silfae's [url=https://steamcommunity.com/workshop/filedetails/?id=881118424]Animated Xirmian Portraits[/url]. Modular mods that require downloading the original mod(s) help give credit where credit is due.
+I was inspired to extend the original mod when I saw Endugu's expansion of Silfae's Animated Xirmian Portraits. Modular mods that require downloading the original mod(s) help give credit where credit is due.
 
 An extra special thanks to Silfae for creating and sharing so many detailed, animated portraits for the community.
 
