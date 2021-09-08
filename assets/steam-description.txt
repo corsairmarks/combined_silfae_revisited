@@ -31,7 +31,7 @@ Hosted on [url=https://github.com/corsairmarks/combined_silfae_revisited]Github[
 
 [h1]Compatibility[/h1]
 
-Requires Stellaris 3.0.* and disables achievements.
+Requires Stellaris 3.0.4 and disables achievements.
 
 Check each of the contained mods for an explicit list of incompatibility notes.
 
