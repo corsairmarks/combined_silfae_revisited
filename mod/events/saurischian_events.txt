@@ -1,32 +1,6 @@
 namespace = saurischian_evt
 
-### Hidden Game Start Event
-event = {
-	id = saurischian_evt.1
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
-		# trigger the final initializers for the saurischian_system
-		every_system = {
-			limit = { has_star_flag = saurischian_system }
-			every_system_planet = {
-				if = {
-					limit = { has_planet_flag = saurischian_system_capital }
-					planet_event = { id = saurischian_evt.2 }
-				}
-				else_if = {
-					limit = {
-						has_owner = yes
-						owner = { is_country_type = primitive }
-						has_planet_flag = saurischian_system_primitives
-					}
-					planet_event = { id = saurischian_evt.3 }
-				}
-			}
-		}
-	}
-}
-
+# triggered by empire_init_capital_planet
 planet_event = {
 	id = saurischian_evt.2
 	hide_window = yes
@@ -36,25 +10,20 @@ planet_event = {
 	}
 	immediate = {
 		generate_saurischian_system_capital_blockers = yes
+		solar_system = {
+			every_system_planet = {
+				limit = {
+					has_planet_flag = saurischian_system_primitives
+					has_owner = yes
+					owner = { is_country_type = primitive }
+				}
+				saurischian_system_primitives_final_pass = yes
+			}
+		}
 	}
 }
 
-planet_event = {
-	id = saurischian_evt.3
-	hide_window = yes
-	is_triggered_only = yes
-	pre_triggers = {
-		has_owner = yes
-	}
-	trigger = {
-		owner = { is_country_type = primitive }
-		has_planet_flag = saurischian_system_primitives
-	}
-	immediate = {
-		saurischian_system_primitives_final_pass = yes
-	}
-}
-
+# triggered by on_game_start
 event = {
 	id = saurischian_evt.13
 	hide_window = yes
