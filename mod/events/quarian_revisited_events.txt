@@ -1,0 +1,30 @@
+namespace = quarian_evt
+
+# flag mod as active
+event = {
+	id = quarian_evt.13
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = { has_global_flag = quarian_revisited_installed }
+	}
+	immediate = {
+		set_global_flag = quarian_revisited_installed
+	}
+}
+
+# triggered by on_game_start_country
+country_event = {
+	id = quarian_evt.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		owner_species = {
+			is_species_class = QRN
+		}
+		has_country_flag = is_silfae_quarian
+	}
+	immediate = {
+		ruler = { add_trait = leader_trait_fleet_organizer }
+	}
+}
