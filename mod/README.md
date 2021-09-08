@@ -10,7 +10,7 @@ This is a bundle of mods to make it a little easier to sub and ensure cross-comp
 
 * [Animated Asari Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2581752619) ([Source](https://github.com/corsairmarks/asari_portraits_revisited) ede7e83760c484f791a62ffdecd97a41c578624d)
 * [Animated Aquilese Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2576769521) ([Source](https://github.com/corsairmarks/romaneagles_portraits_revisited) 0f53196e0c167612451d03bac957a663fbf954bb)
-* [Animated Eldar Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2581388205) ([Source](https://github.com/corsairmarks/eldar_portraits_revisited) XXX)
+* [Animated Eldar Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2581388205) ([Source](https://github.com/corsairmarks/eldar_portraits_revisited) 171c79ee115a6214f9e86f20239ef3c5992ac797)
 * [Animated Hidden Eye Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2585946800) ([Source](https://github.com/corsairmarks/slreptilian_portraits_revisited) XXX)
 * [Animated Hollow Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2578037235) ([Source](https://github.com/corsairmarks/horrorworm_portraits_revisited) XXX)
 * [Animated Holosphere Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2592592503) ([Source](https://github.com/corsairmarks/holosphere_rising_revisited) XXX)
