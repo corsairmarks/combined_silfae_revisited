@@ -1,0 +1,57 @@
+holowarriors_army = {
+	damage = 1.15
+	health = 1.25
+	morale = 1.25
+	morale_damage = 1.25
+	collateral_damage = 1
+	war_exhaustion = 1
+	time = 90
+	icon_frame = 2
+	has_species = yes
+	resources = {
+		category = armies
+		cost = {
+			minerals = 250
+		}
+		upkeep = {
+			energy = 1.25
+		}
+	}
+	potential = {
+		owner = { has_authority = auth_holofrixit }
+	}
+	allow = {
+		FROM = { has_trait = trait_holowarrior }
+	}
+	show_tech_unlock_if = { has_authority = auth_holofrixit }
+	prerequisites = { tech_assault_armies }
+}
+
+geneholowarriors_army = {
+	damage = 1.5
+	health = 1.75
+	morale = 1.75
+	morale_damage = 1.25
+	collateral_damage = 0.75
+	war_exhaustion = 2
+	time = 180
+	icon_frame = 8
+	has_species = yes
+	resources = {
+		category = armies
+		cost = {
+			minerals = 250
+		}
+		upkeep = {
+			energy = 2.5
+		}
+	}
+	potential = {
+		owner = { has_authority = auth_holofrixit }
+	}
+	allow = {
+		FROM = { has_trait = trait_holowarrior_2 }
+	}
+	show_tech_unlock_if = { has_authority = auth_holofrixit }
+	prerequisites = { tech_epigenetic_triggers }
+}

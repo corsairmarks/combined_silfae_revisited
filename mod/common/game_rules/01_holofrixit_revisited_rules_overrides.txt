@@ -1,0 +1,129 @@
+#Checks whether any leaders (scientists etc) can be formed from this pop
+# ROOT = country
+# THIS = pop
+can_generate_leader_from_pop = {
+	has_citizenship_rights = yes
+	NOR = {
+		has_trait = trait_syncretic_proles
+		has_trait = trait_nerve_stapled
+		has_trait = trait_holodrone
+	}
+	OR = {
+		is_robot_pop = no
+		ROOT = {
+			has_origin = origin_holofrixit
+			PREV.species = {
+				OR = {
+					NOT = { has_trait = trait_holofrixit }
+					has_trait = trait_holooverseer
+					has_trait = trait_hologanglion
+					# has_trait = trait_holowarrior
+					# has_trait = trait_holowarrior_2
+				}
+			}
+		}
+		ROOT = { has_technology = tech_synthetic_leaders }
+		ROOT = { has_authority = auth_machine_intelligence }
+		ROOT = { is_mechanical_empire = yes }
+	}
+	OR = {
+		is_same_species = ROOT
+		ROOT = {
+			NAND = {
+				has_origin = origin_necrophage
+				has_trait = trait_necrophage
+			}
+		}
+	}
+}
+
+# ROOT = country
+# THIS = pop
+can_generate_military_leader_from_pop = {
+	can_be_military_leader = yes
+	OR = {
+		is_robot_pop = no
+		ROOT = {
+			has_origin = origin_holofrixit
+			PREV.species = {
+				OR = {
+					NOT = { has_trait = trait_holofrixit }
+					has_trait = trait_holowarrior
+					has_trait = trait_holowarrior_2
+				}
+			}
+		}
+		ROOT = { has_technology = tech_synthetic_leaders }
+		ROOT = { has_authority = auth_machine_intelligence }
+		ROOT = { is_mechanical_empire = yes }
+	}
+	OR = {
+		is_same_species = ROOT
+		ROOT = {
+			NAND = {
+				has_origin = origin_necrophage
+				has_trait = trait_necrophage
+			}
+		}
+	}
+}
+
+# Checks if a pop can procreate
+# THIS = Species
+# ROOT = Planet
+can_species_procreate = {
+	is_sapient = yes
+	NOR = {
+		has_trait = trait_machine_unit
+		has_trait = trait_mechanical
+		has_trait = trait_hologanglion
+	}
+	NAND = {
+		ROOT = { has_modifier = slave_colony }
+		NOT = { has_citizenship_type = { type = citizenship_slavery country = ROOT.owner } }
+	}
+	if = {
+		limit = {
+			has_trait = trait_necrophage
+		}
+		NOT = {
+			ROOT = {
+				any_owned_species = {
+					species_can_be_necrophaged = yes
+				}
+			}
+		}
+	}
+}
+
+# Checks if a pop can be assembled
+# THIS = species
+# ROOT = planet
+can_species_be_assembled = {
+	is_sapient = yes
+	NOT = { has_trait = trait_holodrone }
+	OR = {
+		AND = {
+			is_robotic = yes
+			ROOT = {
+				check_modifier_value = {
+					modifier = planet_pop_assembly_add
+					value > 0
+				}
+			}
+		}
+		AND = {
+			is_organic_species = yes
+			ROOT = {
+				check_modifier_value = {
+					modifier = planet_pop_assembly_organic_add
+					value > 0
+				}
+			}
+		}
+	}
+	has_population_control = {
+		value = no
+		country = ROOT.owner
+	}
+}
