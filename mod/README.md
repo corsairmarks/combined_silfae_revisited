@@ -16,7 +16,7 @@ This is a bundle of mods to make it a little easier to sub and ensure cross-comp
 * [Animated Holosphere Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2592592503) ([Source](https://github.com/corsairmarks/holosphere_rising_revisited) XXX)
 * [Animated Hyena Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2576290763) ([Source](https://github.com/corsairmarks/hyenafolk_portraits_revisited) a4bcbdea5b7f2919cf2e3c69a2965df1e837b6f5)
 * [Animated Octee-lan Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2584680339) ([Source](https://github.com/corsairmarks/octeelan_portraits_revisited) XXX)
-* [Animated Quarian Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2583358569) ([Source](https://github.com/corsairmarks/quarian_portraits_revisited) XXX)
+* [Animated Quarian Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2583358569) ([Source](https://github.com/corsairmarks/quarian_portraits_revisited) c0af7d1eccfd8243c5911be9718cc5b634431c79)
 * [Animated Raptor Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2577216891) ([Source](https://github.com/corsairmarks/saurischian_portraits_revisited) cc25708b88e17e2ea1a4c15322bc4579702ec0aa)
 * [Animated Serpentoid Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2577093634) ([Source](https://github.com/corsairmarks/serpentoid_portraits_revisited) f68157f050ceb17e82686e00a82097d89de713f3)
 * [Animated Shark Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2585030748) ([Source](https://github.com/corsairmarks/sharkanian_portraits_revisited) XXX)
