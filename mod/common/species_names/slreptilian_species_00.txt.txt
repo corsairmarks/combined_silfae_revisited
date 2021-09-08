@@ -1,0 +1,23 @@
+SLRPTLN  = {
+	slreptilian_01 = {
+		name = "Reptilian"
+		plural = "Reptilians"
+		home_planet = "Terra"
+		home_system = "Sol"
+		name_list = HUM3
+	}
+	slreptilian_02 = {
+		name = "Thin Man"
+		plural = "Thin Men"
+		home_planet = "Earth"
+		home_system = "Sol"
+		name_list = HUMAN1
+	}
+	slreptilian_03 = {
+		name = "Elder"
+		plural = "Elders"
+		home_planet = "Old Earth"
+		home_system = "Sol"
+		name_list = HUMAN3
+	}
+}

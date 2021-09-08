@@ -1,0 +1,69 @@
+namespace = slreptilians
+
+# triggered by empire_init_capital_planet
+# ROOT = planet, capital
+# FROM = species, main
+planet_event = {
+	id = slreptilians.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		owner = { has_origin = origin_shadowy_evolution }
+	}
+	immediate = {
+		if = {
+			limit = { 
+				has_planet_flag = planet_earth
+				owner = { 
+					NOR = {
+						has_origin = origin_shattered_ring	#setup in initializer 
+						has_origin = origin_remnants		#custom blockers
+					}
+				}
+			}
+			generate_earth_deposits_and_blockers = yes
+		}
+		else = {
+			generate_start_deposits_and_blockers = yes
+		}
+		generate_start_buildings_and_districts = yes
+		generate_shadowy_evolution_start_pops = yes
+		generate_home_planet_final_pass = yes
+	}
+}
+
+# Global modifier check
+# triggered by on_game_start and on_monthly_pulse
+event = { 
+	id = slreptilians.2
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		any_playable_country = { has_origin = origin_shadowy_evolution }
+	}
+	immediate = {
+		set_update_modifiers_batch = begin
+		every_playable_country = {
+			limit = { has_origin = origin_shadowy_evolution }
+			calculate_shadowyrep_morale = yes
+		}
+		set_update_modifiers_batch = end
+	}
+}
+
+# Geneticist bonus research
+# triggered by empire_init_add_technologies
+# ROOT = country
+country_event = { 
+	id = slreptilians.2001
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_valid_civic = civic_geneticists
+	}
+	immediate = {
+		give_technology = { tech = tech_genome_mapping		message = no }
+		give_technology = { tech = tech_vitality_boosters	message = no }
+		give_technology = { tech = tech_epigenetic_triggers	message = no }
+	}
+}

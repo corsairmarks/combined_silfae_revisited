@@ -1,0 +1,121 @@
+@enslaved_percentage_high = 0.75
+@enslaved_percentage_medium = 0.5
+@enslaved_percentage_low = 0.25
+@enslaved_percentage_critical = 0.1
+@enslaved_pop_modifier_duration_days = 120
+
+# THIS = country
+calculate_shadowyrep_morale = {
+	if = {
+		limit = {
+			pop_percentage = {
+				percentage > @enslaved_percentage_high
+				limit = { is_enslaved = yes }
+			}
+		}
+		if = {
+			limit = { NOT = { has_modifier = slreptilian_illusion_40 } }
+			add_modifier = { modifier = slreptilian_illusion_40 }
+		}
+		switch = {
+			trigger = has_modifier
+			slreptilian_illusion_30 = { remove_modifier = slreptilian_illusion_30 }
+			slreptilian_illusion_20 = { remove_modifier = slreptilian_illusion_20 }
+			slreptilian_illusion_10 = { remove_modifier = slreptilian_illusion_10 }
+			slreptilian_illusion_0 = { remove_modifier = slreptilian_illusion_0 }
+		}
+	}
+	else_if = {
+		limit = {
+			pop_percentage = {
+				percentage > @enslaved_percentage_medium
+				limit = { is_enslaved = yes }
+			}
+		}
+		if = {
+			limit = { NOT = { has_modifier = slreptilian_illusion_30 } }
+			add_modifier = { modifier = slreptilian_illusion_30 }
+		}
+		switch = {
+			trigger = has_modifier
+			slreptilian_illusion_40 = { remove_modifier = slreptilian_illusion_40 }
+			slreptilian_illusion_20 = { remove_modifier = slreptilian_illusion_20 }
+			slreptilian_illusion_10 = { remove_modifier = slreptilian_illusion_10 }
+			slreptilian_illusion_0 = { remove_modifier = slreptilian_illusion_0 }
+		}
+	}
+	else_if = {
+		limit = {
+			pop_percentage = {
+				percentage > @enslaved_percentage_low
+				limit = { is_enslaved = yes }
+			}
+		}
+		if = {
+			limit = { NOT = { has_modifier = slreptilian_illusion_20 } }
+			add_modifier = { modifier = slreptilian_illusion_20 }
+		}
+		switch = {
+			trigger = has_modifier
+			slreptilian_illusion_40 = { remove_modifier = slreptilian_illusion_40 }
+			slreptilian_illusion_30 = { remove_modifier = slreptilian_illusion_30 }
+			slreptilian_illusion_10 = { remove_modifier = slreptilian_illusion_10 }
+			slreptilian_illusion_0 = { remove_modifier = slreptilian_illusion_0 }
+		}
+	}
+	else_if = {
+		limit = {
+			pop_percentage = {
+				percentage > @enslaved_percentage_critical
+				limit = { is_enslaved = yes }
+			}
+		}
+		if = {
+			limit = { NOT = { has_modifier = slreptilian_illusion_10 } }
+			add_modifier = { modifier = slreptilian_illusion_10 }
+		}
+		switch = {
+			trigger = has_modifier
+			slreptilian_illusion_40 = { remove_modifier = slreptilian_illusion_40 }
+			slreptilian_illusion_30 = { remove_modifier = slreptilian_illusion_30 }
+			slreptilian_illusion_20 = { remove_modifier = slreptilian_illusion_20 }
+			slreptilian_illusion_0 = { remove_modifier = slreptilian_illusion_0 }
+		}
+	}
+	else = {
+		if = {
+			limit = { NOT = { has_modifier = slreptilian_illusion_0 } }
+			add_modifier = { modifier = slreptilian_illusion_0 }
+		}
+		switch = {
+			trigger = has_modifier
+			slreptilian_illusion_40 = { remove_modifier = slreptilian_illusion_40 }
+			slreptilian_illusion_30 = { remove_modifier = slreptilian_illusion_30 }
+			slreptilian_illusion_20 = { remove_modifier = slreptilian_illusion_20 }
+			slreptilian_illusion_10 = { remove_modifier = slreptilian_illusion_10 }
+		}
+	}
+}
+
+# set up starting pops - called by slreptilians.1
+# THIS = planet, capital
+generate_shadowy_evolution_start_pops = {
+	while = {
+		count = 6
+		create_pop = {
+			species = owner_main_species
+			ethos = random
+		}
+	}
+	last_created_species = {
+		set_species_flag = syncretic_species@PREV.owner
+		save_event_target_as = secondary_species
+	}
+	while = {
+		limit = { num_pops < 28 }
+		create_pop = {
+			species = event_target:secondary_species
+			ethos = random
+		}
+	}
+}

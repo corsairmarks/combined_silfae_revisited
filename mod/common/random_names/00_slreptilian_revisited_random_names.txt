@@ -1,0 +1,569 @@
+# Ascendancy of the Old Ones
+empire_name_parts_list = {
+	key = "old_ones_ascendancy"
+	parts = {
+		"Ascendancy" = 4
+		"Imperium" = 2
+		"Hegemony" = 2
+		"Autocracy" = 2
+		"Autarchy" = 2
+		"Hierarchy" = 2
+		"Chosen" = 3
+	}
+}
+
+# Concealed Overlordship
+empire_name_parts_list = {
+	key = "concealed_overlordship"
+	parts = {
+		"Hegemony" = 3
+		"Autocracy" = 1
+		"Overlordship" = 7
+		"Hierarchy" = 4
+		"Union" = 3
+		"State" = 2
+		"Authority" = 2
+		"Chosen" = 3
+	}
+}
+
+# Secret World Order
+empire_name_parts_list = {
+	key = "secret_world_order"
+	parts = {
+		"World Order" = 7
+		"Order" = 5
+		"Union" = 2
+		"League" = 2
+		"Consortium" = 3
+		"Directorate" = 3
+		"State" = 1
+		"Nation" = 1
+		"Sovereignty" = 1
+		"Privy Council" = 5
+		"Pact" = 5
+		"Regime" = 5
+		"Covenant" = 3
+		"Tribunal" = 3
+		"Conclave" = 3
+		"Chosen" = 2
+		"Coterie" = 3
+		"Cabal" = 3
+	}
+}
+
+# Esoteric Masquerade
+empire_name_parts_list = {
+	key = "esoteric_masquerade"
+	parts = {
+		"Coalition" = 1
+		"Assembly" = 1
+		"Privy Council" = 5
+		"Council" = 3
+		"State" = 1
+		"Nation" = 1
+		"Sovereignty" = 1
+		"Concordat" = 2
+		"Accord" = 2
+		"Administration" = 1
+		"Masquerade" = 7
+		"Façade" = 5
+		"Dissimulation" = 5
+		"Accord" = 1
+		"Chosen" = 1
+	}
+}
+
+# Ascendancy of the Old Ones Descriptive
+empire_name_parts_list = {
+	key = "old_ones_ascendancy_desc"
+	parts = {
+		"Interstellar" = 2
+		"Galactic" = 2
+		"United" = 1
+		"Great" = 3
+		"Glorious" = 5
+		"Illuminated" = 5
+		"Concealed" = 3
+		"Hidden" = 2
+		"Secret" = 1
+		"Secretive" = 1
+	}
+}
+
+# Concealed Overlordship Descriptive
+empire_name_parts_list = {
+	key = "concealed_overlordship_desc"
+	parts = {
+		"Interstellar" = 1
+		"Galactic" = 2
+		"United" = 3
+		"Great" = 3
+		"Concealed" = 5
+		"Hidden" = 2
+		"Secret" = 1
+		"Secretive" = 1
+		"Esoteric" = 2
+		"Enigmatic" = 3
+		"Inscrutable" = 2
+		"Cryptic" = 4
+		"Arcane" = 4
+		"Sovereign" = 2
+	}
+}
+
+# Secret World Order Descriptive
+empire_name_parts_list = {
+	key = "secret_world_order_desc"
+	parts = {
+		"Interstellar" = 1
+		"Galactic" = 2
+		"Sovereign" = 1
+		"Concealed" = 3
+		"Hidden" = 2
+		"Secret" = 2
+		"Secretive" = 1
+		"Esoteric" = 2
+		"Enigmatic" = 4
+		"Inscrutable" = 4
+		"Cryptic" = 2
+		"Arcane" = 3
+		"Sovereign" = 2
+	}
+}
+
+# Esoteric Masquerade Descriptive
+empire_name_parts_list = {
+	key = "esoteric_masquerade_desc"
+	parts = {
+		"Interstellar" = 1
+		"Galactic" = 1
+		"United" = 3
+		"Concealed" = 3
+		"Hidden" = 2
+		"Secret" = 1
+		"Secretive" = 1
+		"Esoteric" = 4
+		"Enigmatic" = 3
+		"Inscrutable" = 3
+		"Cryptic" = 2
+		"Arcane" = 2
+		"Sovereign" = 2
+	}
+}
+
+# Ascendancy of the Old Ones Middle Descriptive
+# Concealed Overlordship Middle Descriptive
+# Secret World Order Middle Descriptive
+# Esoteric Masquerade Middle Descriptive
+empire_name_parts_list = {
+	key = "shadow_evolution_mid_desc"
+	parts = {
+		"Star" = 2
+		"Stellar" = 1
+		"New" = 3
+		"Old" = 3
+		"Ancient" = 2
+		"Illusory" = 2
+	}
+}
+
+# Ascendancy of Sol
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = gov_oldones_ascendancy
+			is_pirate = no
+			is_primitive = no
+			NOR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+	format = format.old_ones_ascendancy.1
+	noun = "[This.Capital.System.GetName]"
+	prefix_format = "[This.Capital.System.GetName] <old_ones_ascendancy>"
+}
+
+# Ascendancy of Earth
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = gov_oldones_ascendancy
+			is_pirate = no
+			is_primitive = no
+			NOR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+	format = format.old_ones_ascendancy.2
+	noun = "[This.Capital.GetName]"
+	prefix_format = "[This.Capital.GetName] <old_ones_ascendancy>"
+}
+
+# Elder Ascendancy
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 5
+			has_government = gov_oldones_ascendancy
+			is_pirate = no
+			is_primitive = no
+			NOR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+	format = format.old_ones_ascendancy.3
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <old_ones_ascendancy>"
+}
+
+# Illuminated Elder Ascendancy
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 2
+			has_government = gov_oldones_ascendancy
+			is_pirate = no
+			is_primitive = no
+			NOR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+	format = format.old_ones_ascendancy.4
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <old_ones_ascendancy>"
+}
+
+# Elder Star Ascendancy
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 2
+			has_government = gov_oldones_ascendancy
+			is_pirate = no
+			is_primitive = no
+			NOR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+	format = format.old_ones_ascendancy.5
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <old_ones_ascendancy>"
+}
+
+# Overlordship of Sol
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = gov_concealed_overlordship
+			is_pirate = no
+			is_primitive = no
+			NOR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+	format = format.concealed_overlordship.1
+	noun = "[This.Capital.System.GetName]"
+	prefix_format = "[This.Capital.System.GetName] <concealed_overlordship>"
+}
+
+# Overlordship of Earth
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = gov_concealed_overlordship
+			is_pirate = no
+			is_primitive = no
+			NOR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+	format = format.concealed_overlordship.2
+	noun = "[This.Capital.GetName]"
+	prefix_format = "[This.Capital.GetName] <concealed_overlordship>"
+}
+
+# Elder Overlordship
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 5
+			has_government = gov_concealed_overlordship
+			is_pirate = no
+			is_primitive = no
+			NOR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+	format = format.concealed_overlordship.3
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <concealed_overlordship>"
+}
+
+# Concealed Elder Overlordship
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 2
+			has_government = gov_concealed_overlordship
+			is_pirate = no
+			is_primitive = no
+			NOR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+	format = format.concealed_overlordship.4
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <concealed_overlordship>"
+}
+
+# Elder Stellar Overlordship
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 2
+			has_government = gov_concealed_overlordship
+			is_pirate = no
+			is_primitive = no
+			NOR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+	format = format.concealed_overlordship.5
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <concealed_overlordship>"
+}
+
+# World Order of Sol
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = gov_secretworld_order
+			is_pirate = no
+			is_primitive = no
+			NOR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+	format = format.secret_world_order.1
+	noun = "[This.Capital.System.GetName]"
+	prefix_format = "[This.Capital.System.GetName] <secret_world_order>"
+}
+
+# World Order of Earth
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = gov_secretworld_order
+			is_pirate = no
+			is_primitive = no
+			NOR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+	format = format.secret_world_order.2
+	noun = "[This.Capital.GetName]"
+	prefix_format = "[This.Capital.GetName] <secret_world_order>"
+}
+
+# Elder World Order
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 5
+			has_government = gov_secretworld_order
+			is_pirate = no
+			is_primitive = no
+			NOR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+	format = format.secret_world_order.3
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <secret_world_order>"
+}
+
+# Inscrutable Elder World Order
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 2
+			has_government = gov_secretworld_order
+			is_pirate = no
+			is_primitive = no
+			NOR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+	format = format.secret_world_order.4
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <secret_world_order>"
+}
+
+# Elder New World Order
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 2
+			has_government = gov_secretworld_order
+			is_pirate = no
+			is_primitive = no
+			NOR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+	format = format.secret_world_order.5
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <secret_world_order>"
+}
+
+# Masquerade of Sol
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = gov_esoteric_masquerade
+			is_pirate = no
+			is_primitive = no
+			NOR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+	format = format.esoteric_masquerade.1
+	noun = "[This.Capital.System.GetName]"
+	prefix_format = "[This.Capital.System.GetName] <esoteric_masquerade>"
+}
+
+# Masquerade of Earth
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = gov_esoteric_masquerade
+			is_pirate = no
+			is_primitive = no
+			NOR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+	format = format.esoteric_masquerade.2
+	noun = "[This.Capital.GetName]"
+	prefix_format = "[This.Capital.GetName] <esoteric_masquerade>"
+}
+
+# Elder Masquerade
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 5
+			has_government = gov_esoteric_masquerade
+			is_pirate = no
+			is_primitive = no
+			NOR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+	format = format.esoteric_masquerade.3
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <esoteric_masquerade>"
+}
+
+# Esoteric Elder Masquerade
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 2
+			has_government = gov_esoteric_masquerade
+			is_pirate = no
+			is_primitive = no
+			NOR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+	format = format.esoteric_masquerade.4
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <esoteric_masquerade>"
+}
+
+# Elder Illusory Masquerade
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 2
+			has_government = gov_esoteric_masquerade
+			is_pirate = no
+			is_primitive = no
+			NOR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+	format = format.esoteric_masquerade.5
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <esoteric_masquerade>"
+}

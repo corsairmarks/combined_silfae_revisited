@@ -1,0 +1,45 @@
+origin_shadowy_evolution = {
+	is_origin = yes
+	icon = gfx/interface/icons/origins/origins_shadowy_evolution.dds
+	picture = GFX_origin_shadowy_evolution
+	playable = { has_utopia = yes }
+	ai_playable = { has_utopia = yes }
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_fanatic_purifiers
+				value = civic_agrarian_idyll
+			}
+		}
+		ethics = {
+			OR = {
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+		modifier = {
+			factor = 0
+		}
+	}
+	description = origin_tooltip_shadowy_evolution_effects
+	has_secondary_species = {
+		title = origin_shadowy_evolution_secondary_species
+	}
+}
+
+civic_geneticists = {
+	modification = no
+	playable = { has_utopia = yes }
+	ai_playable = { has_utopia = yes }
+	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	random_weight = {
+		base = 0
+		modifier = {
+			factor = 0
+		}
+	}
+}

@@ -1,0 +1,198 @@
+﻿# sourced primarily from https://www.fantasynamegenerators.com/ with fleet and army names by Nick Butcher
+SLRPTLN1 = {
+	category = "Sleek Reptilian"
+	ship_names = {
+		generic = {
+			Ozot Ona Ane Kele Appal Krildo Qamog Krueqwy Sar Xanqy Jertan Krin Qonqwi Danlam Yuarull Ebe Plokall Diak Yan
+			Olbul Gildull Golkac Pluzlim So Barott Wolke Tudu Qiag Jire Kriratt Yozed Ne Ett Qeqwym Wuedak Buenqul Jiamuk
+			Uezum Quappa Xipyt Kred Izlal Plezleg Elde Giatt Qazar Di Tuaqwo Krinqwuc Kinlet Sor Ye Uonqal Ora Sirdlak Ik
+		}
+
+		corvette = { }
+		
+		destroyer = { }
+		
+		cruiser = { }
+		
+		battleship = { }
+
+		titan = { }
+
+		colossus = { }
+		
+		science = { }
+		
+		colonizer = { }
+		
+		constructor = { }
+
+		transport = { }
+	
+		military_station_small = { }
+
+		ion_cannon = { }
+	}
+
+	ship_class_names = {
+		generic = {
+			Zotszas Aktluh Akliss Nalsi Sshiktlei Nutstlih Hihsolei Uklozhias Ostizu Etsoya Szashu Seniash Suilu Uitzu Ehtla
+			Zsuhi Zikohliash Ssehtloli Sikazhee Aksotull Molkih Shoka Ssitlall Hasie Askiul Huzsui Emehi Uihtliyui Yaztehlia Sziltsushla
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+			"Hidden Agenda" "Secret-Keepers" "Controlling Interest" "Concealed Motives" "Disguised Intentions"
+		}
+		sequential_name = "%O% Puppetmasters"
+	}
+	
+	army_names = {
+		machine_defense = {
+			sequential_name = "%O% Synthetic Sentinels"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "%O% Synthetic Legion"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "%O% Synthetic Legion"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "%O% Synthetic Legion"
+		}
+		
+		defense_army = {
+			sequential_name = "%O% Sentinels"
+		}
+			
+		assault_army = {
+			sequential_name = "%O% Hidden Legion"
+		}
+		
+		slave_army = {
+			sequential_name = "%O% Fanatic Auxiliary"
+		}
+		
+		clone_army = { 
+			sequential_name = "%O% Replicant Legion"
+		}
+		
+		undead_army = {
+			sequential_name = "%O% Reanimated Legion"
+		}
+
+		robotic_army = {
+			sequential_name = "%O% Robotic Legion"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "%O% Robotic Sentinels"
+		}
+		
+		psionic_army = { 
+			sequential_name = "%O% Shrouded Legion"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "%O% Inevitable Truth"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "%O% Perfected Legion"
+		}
+
+		occupation_army = {
+			sequential_name = "%O% Garrison"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% Robotic Garrison"
+		}
+
+		machine_occupation_army = {
+			sequential_name = "%O% Synthetic Garrison"
+		}
+
+		primitive_army = {
+			sequential_name = "Primitive Army %C%"
+		}
+
+		industrial_army = {
+			sequential_name = "Industrial Army %C%"
+		}
+
+		postatomic_army = {
+			sequential_name = "Post-Atomic Army %C%"
+		}
+	}
+	planet_names = {
+		generic = {
+			names = {
+				Grasz Qusz Oursazk Trarluashk Thuuthu Brikugri Aujaco Chanjuakkuuk Kruz Shih Krox Hiazdass Zichiez Radreh
+				Eqagnaz Aredis Ursacoh Elzosuh Chuxl Yus Zoz Shrothaz Theknisk Duttesk Uqukkex Ocutlosk Chukoxi Otiqa
+			}
+		}
+		
+		pc_desert = {
+			names = { }
+		}
+		
+		pc_tropical = {
+			names = { }
+		}
+		
+		pc_arid = {
+			names = { }
+		}
+		
+		pc_continental = {
+			names = { }
+		}
+		
+		pc_ocean = {
+			names = { }
+		}
+		
+		pc_tundra = {
+			names = { }
+		}
+		
+		pc_arctic = {
+			names = { }
+		}
+
+		pc_savannah = {
+			names = { }
+		}
+
+		pc_alpine = {
+			names = { }
+		}
+	}
+	character_names = {
+		default = {
+			full_names = {
+				Nind Udry Nultea Medath Trarhtusk Kargux Thugarruth Shurkegich Urtekhy Urth Delrond Ighes Dullass Jhorgaot
+				Shashrev Daltitu Irkacat Daggugov Tuss Thuterk Thuri Kolich Raltucird Kalthokran Verikyrth Esj Trarthaert
+				Geltorth Jhilla Dathant Gushys Troggetrarth Gatrogat Veragerk Althen Atua Tautre Jholto Nathruv Mighissov
+				Neghicir Ketathass Orgyk Baellex Ashrit Trothrert Irtaesro Gudrureth Digausia
+			}
+			
+			# Always combined with a regnal second name
+			regnal_first_names = {
+				Nind Udry Nultea Medath Trarhtusk Kargux Thugarruth Shurkegich Urtekhy Urth Delrond Ighes Dullass Jhorgaot
+				Shashrev Daltitu Irkacat Daggugov Tuss Thuterk Thuri Kolich Raltucird Kalthokran Verikyrth Esj Trarthaert
+				Geltorth Jhilla Dathant Gushys Troggetrarth Gatrogat Veragerk Althen Atua Tautre Jholto Nathruv Mighissov
+				Neghicir Ketathass Orgyk Baellex Ashrit Trothrert Irtaesro Gudrureth Digausia
+			}
+
+			# Always combined with a regnal first name
+			regnal_second_names = {
+				Bithaess Rhazao Kaothroux Baturia Iqouknex Areqou Ukocax
+			}
+		}
+	}
+}

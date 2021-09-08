@@ -1,0 +1,96 @@
+# Governments triggered by Shadowy Evolution origin, one for each non-gestalt authority.
+
+# Old Ones' Ascendancy
+gov_oldones_ascendancy = {
+	ruler_title = RT_ELDER_KING
+	ruler_title_female = RT_ELDER_QUEEN
+	heir_title = HT_SLEEPING_PRINCE
+	heir_title_female = HT_SLEEPING_PRINCESS
+	use_regnal_names = yes
+	dynastic_last_names = yes
+	possible = {
+		has_authority = auth_imperial
+		has_origin = origin_shadowy_evolution
+	}
+	weight = {
+		base = 900
+	}
+}
+
+# Concealed Overlordship
+gov_concealed_overlordship = {
+	ruler_title = RT_AWAKENED_GRAND_MASTER
+	ruler_title_female = RT_AWAKENED_GRAND_MISTRESS
+	election_candidates = {
+		modifier = {
+			add = 100
+			leader_class = ruler
+		}
+		modifier = {
+			add = 10
+			leader_class = scientist
+		}
+	}
+	possible = {
+		has_authority = auth_dictatorial
+		has_origin = origin_shadowy_evolution
+	}
+	weight = {
+		base = 900
+	}
+}
+
+# Secret World Order
+gov_secretworld_order = {
+	ruler_title = RT_ILLUMINATED_MASTER
+	ruler_title_female = RT_ILLUMINATED_MISTRESS
+	election_candidates = {
+		modifier = {
+			add = 100
+			leader_class = ruler
+		}
+		modifier = {
+			add = 10
+			leader_class = governor
+		}
+		modifier = {
+			add = -1000
+			NOT = { leader_class = governor }
+		}
+	}
+	possible = {
+		has_authority = auth_oligarchic
+		has_origin = origin_shadowy_evolution
+	}
+	weight = {
+		base = 900
+	}
+}
+
+# Esoteric Masquerade
+gov_esoteric_masquerade = {
+	ruler_title = RT_SHADOW_MINISTER
+	ruler_title_female = RT_SHADOW_MINISTER
+
+	election_candidates = {
+		modifier = {
+			add = 50
+			leader_class = ruler
+		}
+		modifier = {
+			add = 10
+			leader_class = governor
+		}
+		modifier = {
+			add = 10
+			leader_class = scientist
+		}
+	}
+	possible = {
+		has_authority = auth_democratic
+		has_origin = origin_shadowy_evolution
+	}
+	weight = {
+		base = 900
+	}
+}
