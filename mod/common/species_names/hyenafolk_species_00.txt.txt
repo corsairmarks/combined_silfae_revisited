@@ -1,9 +1,9 @@
 HYNFLK = {
 	hyenafolk = {
-		name = Viverrokan
-		plural = Viverrokans
+		name = "Viverrokan"
+		plural = "Viverrokans"
 		home_planet = "Kortomaton"
 		home_system = "Dry Suns"
-		name_list = "HYNFLK1"
+		name_list = HYNFLK1
 	}
 }
