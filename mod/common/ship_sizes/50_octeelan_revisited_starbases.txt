@@ -71,6 +71,9 @@ starbase_faux_outpost = {
 	formation_priority = @starbase_formation_priority
 	icon_frame = 1
 	text_icon = military_size_station
+	potential_construction = {
+		owner = { has_technology = tech_faux_starbase_1 }
+	}
 }
 
 # duplicate of starbase_starport
@@ -140,6 +143,9 @@ starbase_faux_starport = {
 	formation_priority = @starbase_formation_priority
 	icon_frame = 2
 	text_icon = military_size_1
+	# potential_construction = {
+	# 	owner = { has_technology = tech_faux_starbase_2 }
+	# }
 }
 
 # # duplicate of starbase_starhold
@@ -209,6 +215,9 @@ starbase_faux_starport = {
 # 	formation_priority = @starbase_formation_priority
 # 	icon_frame = 3
 # 	text_icon = military_size_2
+#	potential_construction = {
+#		owner = { has_technology = tech_faux_starbase_3 }
+#	}
 # }
 
 # # duplicate of starbase_starfortress
@@ -280,6 +289,9 @@ starbase_faux_starport = {
 # 	formation_priority = @starbase_formation_priority
 # 	icon_frame = 4
 # 	text_icon = military_size_4
+#	potential_construction = {
+#		owner = { has_technology = tech_faux_starbase_4 }
+#	}
 # }
 
 # # duplicate of starbase_starcitadel
@@ -352,4 +364,7 @@ starbase_faux_starport = {
 # 	formation_priority = @starbase_formation_priority
 # 	icon_frame = 5
 # 	text_icon = military_size_8
+#	potential_construction = {
+#		owner = { has_technology = tech_faux_starbase_5 }
+#	}
 # }
