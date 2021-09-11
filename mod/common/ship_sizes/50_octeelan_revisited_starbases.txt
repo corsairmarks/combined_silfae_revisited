@@ -143,9 +143,9 @@ starbase_faux_starport = {
 	formation_priority = @starbase_formation_priority
 	icon_frame = 2
 	text_icon = military_size_1
-	# potential_construction = {
-	# 	owner = { has_technology = tech_faux_starbase_2 }
-	# }
+	potential_construction = {
+		owner = { has_technology = tech_faux_starbase_2 }
+	}
 }
 
 # # duplicate of starbase_starhold
