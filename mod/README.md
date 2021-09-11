@@ -80,6 +80,7 @@ This mod preempts the event `action.85` and overrides the deposit `d_alien_pets_
     * Start with a special starbase that orbits their homeworld but is functionally equivalent to a regular starbase (plus three defense platforms)
     * Can build ships with their starbase - they don't like you, so be very wary of their naval buildup
     * Initializer description calls out that it is challenging
+* 1.1.1 Fix critical bug so all outposts are not `starbase_faux_outpost`
 
 ## Source Code
 
