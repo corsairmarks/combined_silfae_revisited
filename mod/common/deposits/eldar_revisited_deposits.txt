@@ -2,7 +2,7 @@
 d_massive_crevice_eldar_system = {
 	time = 270
 	icon = d_massive_crevice
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_rare_blocker	
 	potential = { always = no }
 	use_weights_for_blocker_swap_types = no
@@ -17,7 +17,7 @@ d_massive_crevice_eldar_system = {
 
 # duplicate of d_ancient_reactor_pits nut only provides +3 generator districts
 d_ancient_reactor_pits_eldar_system = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	icon = d_reactor
 	potential = { always = no }
 	planet_modifier = { 
@@ -29,7 +29,7 @@ d_ancient_reactor_pits_eldar_system = {
 d_ruined_arcology_eldar_system = {
 	time = 365
 	icon = d_city_ruins
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_blockers
 	potential = { always = no }
 	resources = {
@@ -66,7 +66,7 @@ d_ruined_arcology_eldar_system = {
 # new deposit to block 6 out of 8 scientist jobs from d_central_spire
 d_dense_ruins_eldar_system = {
 	icon = d_ruins_small
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	time = 120
 	category = deposit_cat_rare_blocker
 	potential = { always = no }
@@ -107,7 +107,7 @@ d_dense_ruins_eldar_system = {
 
 # requires Federations
 d_arcane_replicator_eldar_system = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	icon = d_station_reactor
 	category = deposit_cat_rare
 	potential = { always = no }
@@ -122,7 +122,7 @@ d_arcane_replicator_eldar_system = {
 
 # requires Federations
 d_arcane_replicator_eldar_system_gestalt = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	icon = d_station_reactor
 	category = deposit_cat_rare
 	potential = { always = no }
