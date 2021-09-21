@@ -6,7 +6,7 @@ There are lots of other mods which contain these portraits, so why should you ch
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.0.*, the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.1.*, the latest version when this was written.  Updates include:
 
 * Enhance clothing selectors to be influenced by Pop job
 * Update the namelist to account for all built-in army types, remove obsolete entries
@@ -14,12 +14,12 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     * This trait makes their leaders begin at an older age (previously this effect was from species class itself)
     * Add bonus lifespan to compensate for their older starting age
     * Automatically given to any species designed with the Eldar portraits
-* Update prescripted empire for 3.0
+* Update prescripted empire
     * Now has Origin: Remnants (requires Ancient Relics)
     * Can randomly spawn
     * Gains Psionic Theory for free
     * Ulthwé names and colors are a somewhat more lore-friendly
-* Rebuilt challenge-start custom solar system initializer for 3.0:
+* Rebuilt challenge-start custom solar system initializer
     * Setup to work correctly for all origins/civics in unmodded Stellaris that do not restrict the starting system initializers (i.e. Origin: Shattered Ring or Origin: Void Dwellers)
     * Rebuild district and building creation and Pop generation
     * Any empire using this initializer gains Hydroponics Farming (`tech_hydroponics`) and Weather Control Systems (`tech_housing_1`) for free
@@ -36,7 +36,7 @@ May conflict with other mods that need to alter how relic worlds are upgraded.
 
 The Launcher will tell you that some mods are outdated - that is because the dependency is out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mod.
 
-Not compatible with achievements.
+Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.
 
 ### Dependencies
 
@@ -61,6 +61,10 @@ This mod preempts one event from the base game related to restoring relic worlds
 * 1.0.0 Initial version
 * 1.0.1 More clothing selector improvement, don't allow other species to pick the free Eldar trait
 * 1.0.2 Namelist tweaks
+* 2.0.0 Mark as compatible with Stellaris version 3.1.* "Lem"
+    * Add new localisation keys introduced in 3.1
+    * Update Eye of Terror planet class with new ison syntax
+    * Fix changed field name in custom deposits
 
 ## Source Code
 

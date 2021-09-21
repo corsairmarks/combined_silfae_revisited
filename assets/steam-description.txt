@@ -6,7 +6,7 @@ There are lots of other mods which contain these portraits, so why should you ch
 
 [h1]Changes[/h1]
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.0.*, the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.1.*, the latest version when this was written.  Updates include:
 
 [list]
 [*]Enhance clothing selectors to be influenced by Pop job
@@ -17,14 +17,14 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     [*]Add bonus lifespan to compensate for their older starting age
     [*]Automatically given to any species designed with the Eldar portraits
     [/list]
-[*]Update prescripted empire for 3.0
+[*]Update prescripted empire
     [list]
     [*]Now has Origin: Remnants (requires Ancient Relics)
     [*]Can randomly spawn
     [*]Gains Psionic Theory for free
     [*]Ulthwé names and colors are a somewhat more lore-friendly
     [/list]
-[*]Rebuilt challenge-start custom solar system initializer for 3.0:
+[*]Rebuilt challenge-start custom solar system initializer
     [list]
     [*]Setup to work correctly for all origins/civics in unmodded Stellaris that do not restrict the starting system initializers (i.e. Origin: Shattered Ring or Origin: Void Dwellers)
     [*]Rebuild district and building creation and Pop generation
@@ -44,7 +44,7 @@ May conflict with other mods that need to alter how relic worlds are upgraded.
 
 The Launcher will tell you that some mods are outdated - that is because the dependency is out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mod.
 
-Not compatible with achievements.
+Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.
 
 [h3]Dependencies[/h3]
 
