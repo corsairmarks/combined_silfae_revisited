@@ -6,12 +6,12 @@ There are lots of other mods which contain these portraits, so why should you ch
 
 [h1]Changes[/h1]
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.0.*, the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.1.*, the latest version when this was written.  Updates include:
 
 [list]
 [*]Fix the broken portrait clothing selector for male rulers
 [*]Update the namelist to account for all built-in army types, remove obsolete entries
-[*]Update the custom starting system initializer for 3.0
+[*]Update the custom starting system initializer
 [*]Custom starting initializer now supports a variety of civics and origin starts (all the built-in ones)
 [*]Add an extra species trait (Communal) to the prescripted empire, because Repugnant is now -2 points
 [*]Update portrait and clothing selection for Pops - your Pops will wear clothing based on their jobs
