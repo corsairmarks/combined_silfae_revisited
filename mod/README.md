@@ -21,7 +21,7 @@ Compatible with any mod that does not add the same portraits, species class, or 
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Not compatible with achievements.
+Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.
 
 ### Dependencies
 
@@ -49,6 +49,8 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 * 1.0.2 Adjust system initializer description
 * 1.0.3 Fix a different clothing selector that I broke, allow portrait randomization
 * 1.0.4 Ensure correct `graphical_culture`
+* 1.1.0 Mark as compatible with Stellaris version 3.1.* "Lem"
+    * Add new localisation keys introduced in 3.1
 
 ## Source Code
 
