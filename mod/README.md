@@ -65,6 +65,7 @@ This mod preempts one event from the base game related to restoring relic worlds
     * Add new localisation keys introduced in 3.1
     * Update Eye of Terror planet class with new ison syntax
     * Fix changed field name in custom deposits
+    * Update homeworld setup to account for new changes in 3.1 (e.g. Reanimators, Clone Army, Pleasure Seekers, etc.)
 
 ## Source Code
 

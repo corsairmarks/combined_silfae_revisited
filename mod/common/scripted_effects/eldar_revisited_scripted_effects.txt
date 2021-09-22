@@ -1,3 +1,24 @@
+# THIS = country
+flag_subspecies_type = {
+	if = {
+		limit = { last_created_species = { NOT = { is_exact_same_species = PREV.owner_main_species } } }
+		if = {
+			limit = { last_created_species = { is_lithoid = yes } }
+			set_country_flag = lithoid_subspecies
+		}
+		else = {
+			set_country_flag = non_lithoid_subspecies
+		}
+	}
+	if = {
+		limit = {
+			has_origin = origin_tree_of_life
+			is_lithoid_empire = yes
+		}
+		set_country_flag = non_lithoid_subspecies
+	}
+}
+
 # THIS = planet, capital
 # FROM = species, founder
 generate_eldar_system_start_deposits_and_blockers = {
@@ -187,8 +208,8 @@ generate_eldar_system_start_buildings_and_districts = {
 		add_building = building_uplink_node
 		if = {
 			limit = { owner = { has_valid_civic = civic_machine_servitor } }
-			add_building = building_organic_sanctuary
 			add_district = district_nexus
+			add_building = building_organic_sanctuary
 		}
 		else_if = {
 			limit = { owner = { has_origin = origin_machine } }
@@ -205,11 +226,37 @@ generate_eldar_system_start_buildings_and_districts = {
 	else_if = {
 		limit = { owner = { is_hive_empire = yes } }
 		add_building = building_hive_capital
-		add_building = building_spawning_pool
-		add_building = building_hive_node
+		if = { # This building is very useless for Devouring Swarm Necrophages
+			limit = {
+				owner = {
+					NAND = {
+						has_origin = origin_necrophage
+						has_valid_civic = civic_hive_devouring_swarm
+					}
+				}
+			}
+			add_building = building_spawning_pool
+		}
 		while = {
-			count = 3
+			count = 2
 			add_district = district_hive
+		}
+		if = {
+			limit = { owner = { has_origin = origin_tree_of_life } }
+			add_district = district_farming
+		}
+		else = {
+			add_district = district_hive
+		}
+		add_building = building_hive_node
+		if = {
+			limit = {
+				owner = {
+					has_origin = origin_necrophage
+					NOT = { has_valid_civic = civic_hive_devouring_swarm }
+				}
+			}
+			add_building = building_necrophage_elevation_chamber
 		}
 	}
 	else = {
@@ -227,7 +274,6 @@ generate_eldar_system_start_buildings_and_districts = {
 			}
 			add_building = building_necrophage_elevation_chamber
 		}
-		add_building = building_bureaucratic_1
 		while = {
 			count = 2
 			add_district = district_city
@@ -235,6 +281,7 @@ generate_eldar_system_start_buildings_and_districts = {
 		if = {
 			limit = {
 				owner = { 
+					NOT = { has_origin = origin_clone_army }
 					OR = {
 						has_origin = origin_remnants
 						AND = {
@@ -244,7 +291,7 @@ generate_eldar_system_start_buildings_and_districts = {
 									has_origin = origin_syncretic_evolution
 									has_origin = origin_necrophage
 								}
-								last_created_species = { is_lithoid = yes }
+								has_country_flag = lithoid_subspecies
 							}
 						}
 					}
@@ -255,23 +302,46 @@ generate_eldar_system_start_buildings_and_districts = {
 		else = {
 			add_district = district_city
 		}
+		add_building = building_bureaucratic_1
+		if = {
+			limit = { owner = { has_origin = origin_clone_army } }
+			add_building = building_clone_army_clone_vat
+			add_building = building_clone_army_clone_vat
+		}
 		if = {
 			limit = {
 				owner = {
 					OR = {
-						is_spiritualist = no
-						is_megacorp = yes
+						has_valid_civic = civic_death_cult
+						has_valid_civic = civic_death_cult_corporate
+					}
+				}
+			}
+			add_building = building_sacrificial_temple_1
+		}
+		else_if = {
+			limit = {
+				owner = {
+					is_spiritualist = yes
+					is_megacorp = no
+				}
+			}
+			add_building = building_temple
+		}
+		else_if = {
+			limit = { owner = { has_valid_civic = civic_pleasure_seekers } }
+			add_building = building_holo_theatres
+		}
+		else_if = {
+			limit = {
+				owner = {
+					NAND = {
+						is_regular_empire = yes
+						has_origin = origin_necrophage
 					}
 				}
 			}
 			add_building = building_commercial_zone
-		}
-		else_if = {
-			limit = { owner = { has_valid_civic = civic_death_cult } }
-			add_building = building_sacrificial_temple_1
-		}
-		else = {
-			add_building = building_temple
 		}
 	}
 	if = {
@@ -285,12 +355,19 @@ generate_eldar_system_start_buildings_and_districts = {
 		}
 	}
 	else_if = {
-		limit = { owner = { has_origin = origin_mechanists } }
-		add_district = district_generator
+		limit = { owner = { has_origin = origin_clone_army } }
+		add_district = district_city
 	}
 	else_if = {
-		limit = { owner = { is_hive_empire = yes } }
-		add_district = district_hive
+		limit = {
+			owner = {
+				OR = {
+					has_origin = origin_mechanists
+					is_hive_empire = yes
+				}
+			}
+		}
+		add_district = district_generator
 	}
 	else = {
 		add_district = district_industrial
@@ -305,30 +382,108 @@ generate_eldar_system_start_buildings_and_districts = {
 		add_district = district_mining_uncapped
 	}
 	else = {
-		while = {
-			count = 2
+		if = {
+			limit = { owner = { is_catalytic_empire = yes } }
+			if = {
+				limit = { owner = { is_machine_empire = yes } }
+				add_district = district_nexus
+			}
+			else_if = {
+				limit = { owner = { is_hive_empire = yes } }
+				if = {
+					limit = { owner = { has_origin = origin_tree_of_life } }
+					add_district = district_farming
+				}
+				else = {
+					add_district = district_hive
+				}
+			}
+			else = {
+				add_district = district_city
+			}
+			while = {
+				count = 2
+				add_building = building_hydroponics_farm
+			}
+		}
+		else_if = {
+			limit = { owner = { has_origin = origin_tree_of_life } }
+			add_district = district_farming
+		}
+		else_if = {
+			limit = {
+				owner = {
+					is_hive_empire = yes
+					NOT = { has_origin = origin_necrophage }
+				}
+			}
+			add_district = district_hive
+		}
+		else_if = {
+			limit = { owner = { has_origin = origin_clone_army } }
+			add_district = district_city
+		}
+		else = {
 			add_district = district_mining
 		}
+		add_district = district_mining
 		add_district = district_generator
 	}
 	if = {
 		limit = { owner = { NOT = { has_origin = origin_remnants } } }
-		add_building = building_research_lab_1
+		if = {
+			limit = { owner = { has_valid_civic = civic_reanimated_armies } }
+			add_building = building_dread_encampment
+			# Necromancers do not give engineering, so make sure there's some readily-accessible engineering
+			orbit = {
+				clear_deposits = yes
+				add_deposit = d_engineering_6
+				set_planet_flag = ignore_startup_effect
+				set_planet_flag = starting_deposit
+				set_planet_flag = starting_research_target
+			}
+		}
+		else = {
+			add_building = building_research_lab_1
+		}
 	}
 	if = {
 		limit = {
 			owner = {
-				OR = {
-					is_machine_empire = no
-					has_valid_civic = civic_machine_assimilator
-					has_valid_civic = civic_machine_servitor
+				is_regular_empire = yes
+				is_catalytic_empire = no
+				is_lithoid_empire = yes
+				NOT = { has_country_flag = non_lithoid_subspecies }
+			}
+		}
+		add_building = building_commercial_zone
+	}
+	else_if = {
+		limit = {
+			owner = {
+				NAND = {
+					is_catalytic_empire = yes
+					has_origin = origin_clone_army
 				}
 				OR = {
+					is_catalytic_empire = yes
 					AND = {
-						is_lithoid_empire = no
-						last_created_species = { is_lithoid = no }
+						OR = {
+							is_regular_empire = yes
+							is_hive_empire = yes
+						}
+						OR = {
+							is_lithoid_empire = no
+							has_country_flag = non_lithoid_subspecies
+						}
 					}
-					has_origin = origin_tree_of_life
+					AND = {
+						OR = {
+							has_valid_civic = civic_machine_assimilator
+							has_valid_civic = civic_machine_servitor
+						}
+						has_country_flag = non_lithoid_subspecies
+					}
 				}
 			}
 		}
@@ -336,82 +491,26 @@ generate_eldar_system_start_buildings_and_districts = {
 		if = {
 			limit = {
 				owner = {
+					is_catalytic_empire = no
 					NOR = {
 						has_valid_civic = civic_machine_assimilator
 						has_valid_civic = civic_machine_servitor
+						has_origin = origin_tree_of_life
 						has_origin = origin_necrophage
 						has_origin = origin_mechanists
+						AND = {
+							has_origin = origin_syncretic_evolution
+							has_country_flag = lithoid_subspecies
+						}
 					}
 				}
 			}
 			add_building = building_hydroponics_farm
 		}
-		if = {
-			limit = { owner = { is_hive_empire = yes } }
-			add_building = building_hydroponics_farm
-		}
-	}
-	else_if = {
-		limit = { owner = { is_regular_empire = yes } }
-		add_building = building_commercial_zone
 	}
 }
 
-# additional resources based on empire type and possible subspecies
-# THIS = planet, capital
-# FROM = species, founder
-generate_eldar_system_starting_resources = {
-	# logically the same as the last section of common/scripted_effects/01_start_of_game_effects.txt - generate_start_buildings_and_districts
-	owner = {
-		if = {
-			limit = { has_authority = auth_machine_intelligence }
-			add_resource = { energy = 100 }
-			if = {
-				limit = {
-					OR = {
-						has_valid_civic = civic_machine_servitor
-						has_valid_civic = civic_machine_assimilator
-					}
-				}
-				if = {
-					limit = { last_created_species = { is_lithoid = yes } }
-					add_resource = { minerals = 100	}
-				}
-				else = {
-					add_resource = { food = 100	}
-				}
-			}
-			else = {
-				add_resource = { energy = 100 }
-			}
-		}
-		else = {
-			if = {
-				limit = { is_lithoid_empire = no }
-				add_resource = { food = 100	}
-				if = {
-					limit = { last_created_species = { is_lithoid = yes } }
-					add_resource = { minerals = 100 }
-				}
-				else = {
-					add_resource = { food = 100 }
-				}
-			}
-			else = {
-				add_resource = { minerals = 100 }
-				if = {
-					limit = { last_created_species = { is_lithoid = no } }
-					add_resource = { food = 100	}
-				}
-				else = {
-					add_resource = { minerals = 100 }
-				}
-			}
-		}
-	}
-}
-
-# same as vanilla, adjust while testing - I expect to end with fewer pops
+# same as vanilla, but doesn't adjust planet size or add buildings/districts
 # THIS = planet, capital
 # FROM = species, founder
 generate_eldar_system_start_pops = {
@@ -473,6 +572,23 @@ generate_eldar_system_start_pops = {
 		set_variable = {
 			which = main_species_pops
 			value = 33
+		}
+		if = {
+			limit = { owner = { has_origin = origin_necrophage } }
+			last_created_species = { set_species_flag = syncretic_species@PREV.owner }
+			if = {
+				limit = { owner = { has_valid_civic = civic_hive_devouring_swarm } }
+				set_variable = {
+					which = secondary_species_pops
+					value = 6
+				}
+			}
+			else = {
+				set_variable = {
+					which = secondary_species_pops
+					value = 9
+				}
+			}
 		}
 	}
 	else = {
@@ -561,6 +677,21 @@ generate_eldar_system_start_pops = {
 		}
 	}
 	if = {
+		limit = { # homicidal necrophages lose 1/4 of their necrophytes to fleeing
+			owner = {
+				has_origin = origin_necrophage
+				is_homicidal = yes
+			}
+		}
+		while = {
+			count = 2
+			create_pop = {
+				species = owner_main_species
+				ethos = random
+			}
+		}
+	}
+	if = {
 		limit = { owner = { has_origin = origin_default } }
 		while = {
 			count = 4
@@ -588,8 +719,19 @@ generate_eldar_system_final_pass = {
 		add_modifier = { modifier = colonial_spirit_mod }
 	}
 	else_if = {
+		limit = { owner = { has_origin = origin_clone_army } }
+		planet_event = {
+			id = clones.10
+			days = 1095
+			random = 730
+		}
+	}
+	else_if = {
 		limit = { owner = { has_origin = origin_default } }
-		add_modifier = { modifier = prosp_uni_mod days = 7200 }
+		add_modifier = {
+			modifier = prosp_uni_mod
+			days = 7200
+		}
 		change_planet_size = 2
 		add_district = district_generator
 		add_district = district_mining
