@@ -3,7 +3,7 @@
 d_octeelan_xeno_preserve = {
 	icon = d_tribal_settlement
 	time = 120
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_blockers
 	potential = { always = no }
 	planet_modifier = { planet_max_districts_add = -1 }
