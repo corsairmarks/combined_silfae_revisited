@@ -38,3 +38,7 @@
  eldar_evt.6.desc: "The weakened boundary between realspace and the Shroud in [This.Solar_System.GetName] has been temporarily torn asunder! Tears and portals have been sighted across the surface of [This.GetName] - our military forces are already deploying to contain the grotesque Shroud entities."
  eldar_evt.7.title: "Shroud Entities Manifest in [This.GetName]"
  eldar_evt.7.desc: "For terrifying microseconds in [This.GetName], massive breaches in the fabric of realspace were ripped open! Shroud entities larger than battleships manifested their true forms and have already engaged our space defenses. Local fleet assets are rallying and a general distress call has been dispatched to the entire navy."
+ eldar_evt.9.title: "[This.GetName] Ravaged"
+ eldar_evt.9.desc: "Our main forces on [From.From.GetName] have been completely eradicated by the horrors of the Shroud! The twisted, malevolent entities are devouring our people with gluttonous abandon. Some hardened structures have yet to be breached, but without military resistance it is only a matter of time for the civilians within.\n\nFragmented reports from those still trapped mention swirling, violet tendrils of mist..."
+ eldar_evt.10.title: "[This.GetName] Enshrouded"
+ eldar_evt.10.desc: "We have failed. The Shroud has completely engulfed [This.GetName] - a fate worse than death for any sapients left alive."

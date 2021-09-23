@@ -39,3 +39,41 @@ on_terraforming_complete = {
 		eldar_evt.5
 	}
 }
+
+# fires for the defender upon defeat
+# THIS = country, planet owner
+# FROM = country, attack leader
+# FROMFROM = planet
+on_planet_defenders_lose = {
+	events = {
+		eldar_evt.9
+	}
+}
+
+# fired when a pop has finished purging
+# THIS = planet
+# FROM = country, purger
+# FROMFROM = pop
+on_pop_purged = {
+	events = {
+		eldar_evt.10
+	}
+}
+
+# fired when a planet has reached 0 pops from orbital bombardment
+# THIS = planet
+# FROM = country, bombarder
+on_planet_zero_pops = {
+	events = {
+		eldar_evt.10
+	}
+}
+
+# fired when a planet has reached 0 pops from collateral damage 
+# THIS = planet
+# FROM = country, army owner
+on_planet_zero_pops_ground_combat = {
+	events = {
+		eldar_evt.10
+	}
+}
