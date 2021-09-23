@@ -82,6 +82,7 @@ In game terms, the fourth color of Phenotype 9 is the same as the third color.
 * 2.0.0 Mark as compatible with Stellaris version 3.1.* "Lem"
     * Add new localisation keys introduced in 3.1
     * Update minor code improvements from the base game (icons, spelling changes)
+    * Get rid of janky `switch` cases and use new trigger exporting (code is more better now)
 
 ## Source Code
 
