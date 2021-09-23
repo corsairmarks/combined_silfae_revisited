@@ -6,7 +6,7 @@ There are other mods which contain these portraits, so why should you choose thi
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.0.*, the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.1.*, the latest version when this was written.  Updates include:
 
 * Fix the included Prethoryn-swap shipset `horrorworm_01`
     * Ensure the ship entities are blank for ship sections and instead use the ship hull as the attachment point for the modified Prethoryn graphics
@@ -14,20 +14,20 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     * Remove duplication
     * Fallback for titans, juggernauts, and colossi is molluscoid
 * Fix the included custom ship type (Dimensional Horrorworm with an XL slot) - note that Leviathans is required for the ship model
-    * Fix the ship class, section, and default design to work in 3.0
+    * Fix the ship class, section, and default design to work
     * Fix portrait selectors to offer fewer phenotypes with the correct multiple color options - the graphics have been there the whole time, just needed some tweaking for presentation
     * Add components for the Dimensional Horrorworm ship type (reactors, computers, and thrusters) of all types included in regular Stellaris
 * Adjust Eltryrad portraits based on Pop type - lore-wise they have a caste system
 * Add a custom deposit for the Hollow starting world ancient ruins - the previous deposit type was removed from the base game
 * Update the namelist to account for all built-in army types, remove obsolete entries
-* Update the custom starting system initializer for 3.0
+* Update the custom starting system initializer
     * Starting planet intentionally tiny and filled with ancient ruins blockers
     * Can have guaranteed habitable worlds nearby (based on game settings)
     * Less complex that some of Silfae's other starting systems, so it already works with newer civics and origins
 * Update the AI personality to account for new game features
 * Update the custom empire the Hollow Rift
     * Now uses Origin: Survivor (requires DLC: Apocalypse) to represent the Hollow's explosive arrival in this dimension
-    * Update the custom trait Astral Horror to use modifiers available in Stellaris 3.0
+    * Update the custom trait Astral Horror to use modifiers available in current Stellaris
     * Add Repugnant trait to the Hollow - the effects of the old Repugnant trait were built-in to Astral Horror, but the new effects require the Repugnant trait to be active
 * You can use the Hollow portraits and/or custom initializer for your own empire without any DLC requirements
 
@@ -37,7 +37,7 @@ Compatible with any mod that does not add the same portraits, species class, shi
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Not compatible with achievements.  The shipset does not have NSC classes.
+Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.  The shipset does not have NSC classes.
 
 ### Dependencies
 
@@ -79,6 +79,9 @@ In game terms, the fourth color of Phenotype 9 is the same as the third color.
 * 1.0.0 Initial version
 * 1.0.1 Require Apocalypse for prescripted empire, extra names for randomisation, allow portraits as secondary species and to be randomized
 * 1.0.2 Fix `on_game_start` on_action to fire correctly, ensure correct `graphical_culture`
+* 2.0.0 Mark as compatible with Stellaris version 3.1.* "Lem"
+    * Add new localisation keys introduced in 3.1
+    * Update minor code improvements from the base game (icons, spelling changes)
 
 ## Source Code
 
