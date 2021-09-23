@@ -6,7 +6,7 @@ There are other mods which contain the same portraits, so why should you choose 
 
 [h1]Changes[/h1]
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.0.*, the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.1.*, the latest version when this was written.  Updates include:
 
 [list]
 [*]Remove duplication in room selector
@@ -24,13 +24,13 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     [/list]
 [*]Add gestalt version of the Alien Zoo (both a building and technology) which is available to non-genocidal gestalt empires
 [*]Override Isolated Valley ([b]d_alien_pets_deposit[/b]) to support new zoo building
-[*]Update prescripted empire for 3.0:
+[*]Update prescripted empire:
     [list]
     [*]Octee-lan species: remove Communal to bring trait point total back to up 0 - this is because Charismatic is now 2 points now
     [*]Now has Origin: Syncretic Evolution (the Quoi-chi are the secondary species; requires Utopia)
     [*]Can randomly spawn
     [/list]
-[*]Update custom starting initializer (Tsukimi Pool) for 3.0:
+[*]Update custom starting initializer (Tsukimi Pool):
     [list]
     [*]Now supports a variety of civics and origin starts (all the built-in ones)
     [*]Muubul species: add Quick Learners because they had an extra point
@@ -52,7 +52,7 @@ Compatible with any other mod that does not add the same portraits, species clas
 
 The Launcher will tell you that some mods are outdated - that is because the dependency is out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mod.
 
-Not compatible with achievements.
+Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.
 
 [h3]Event Preemption[/h3]
 
