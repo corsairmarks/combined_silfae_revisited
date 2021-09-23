@@ -6,17 +6,17 @@ There are lots of other mods which contain the same or similar portraits, so why
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.0.*, the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.1.*, the latest version when this was written.  Updates include:
 
 * Fix invalid texture reference in `quarian_female_01_portrait.mesh` (caused lots of error logs)
 * Improve Quarian clothing selectors to be influenced by Pop job
 * Update the namelist to account for all built-in army types, remove obsolete entries; Army names more lore-friendly
-* Update custom starting initializer for 3.0:
+* Update custom starting initializer
     * Original version with a habitable planet
     * New version that works with the Void Dwellers origin (available for any Void Dwellers)
 * Add custom trait "Wanderers" that is a higher-powered version of Nomadic: +30% growth from immigration, -50% resettlement cost, +50% pop automatic resettlement chance
 * Replace original "Quarian" trait with "Immunocompromised" that gives +5% engineering research, -5% habitability (0 points) - available for any species (AI will not use it)
-* Update prescripted empire for 3.0
+* Update prescripted empire
     * Now has oligarchic authority to reflect Quarian government style
     * Now has Origin: Void Dwellers (requires Federations)
     * Species traits altered: Void Dwellers, Wanderers, Intelligent, Immunocompromised, Nonadaptive, Deviants (selected based on the effects of Silfae's original design)
@@ -32,7 +32,7 @@ Compatible with any other mod that does not add the same portraits, species clas
 
 The Launcher will tell you that some mods are outdated - that is because the dependency is out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mod.
 
-Not compatible with achievements.
+Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.
 
 ### Dependencies
 
@@ -63,6 +63,9 @@ This mod overrides `origin_void_dwellers` in order to add its new initializer to
 * 1.0.0 Initial version
 * 1.0.1 Add second set of random species names, ensure original file is overwritten
 * 1.0.2 Tweak namelist
+* 2.0.0 Mark as compatible with Stellaris version 3.1.* "Lem"
+    * Add new localisation keys introduced in 3.1
+    * Update override of `origin_void_dwellers` to reflect additional base game restrictions
 
 ## Source Code
 
