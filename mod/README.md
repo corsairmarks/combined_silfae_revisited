@@ -64,7 +64,7 @@ This mod preempts one event from the base game related to restoring relic worlds
 * 1.0.2 Namelist tweaks
 * 2.0.0 Mark as compatible with Stellaris version 3.1.* "Lem"
     * Add new localisation keys introduced in 3.1
-    * Update Eye of Terror planet class with new ison syntax
+    * Update Eye of Terror planet class with new icon syntax
     * Fix changed field name in custom deposits
     * Update homeworld setup to account for new changes in 3.1 (e.g. Reanimators, Clone Army, Pleasure Seekers, etc.)
 
