@@ -737,3 +737,42 @@ generate_eldar_system_final_pass = {
 		add_district = district_mining
 	}
 }
+
+# duplicates the base game's Shroud creation code - which is unfortuantely duplicated/near-duplicated multiple times but none of them in an reusable effect
+# THIS = any
+silfae_eldar_ensure_global_shroud_country = {
+	if = {
+		limit = { NOT = { exists = event_target:shroud_country } }
+		create_country = {
+			name = "NAME_Creatures_of_the_Shroud"
+			type = shroud_spirits
+			flag = {
+				icon = {
+					category = "special"
+					file = "the_shroud.dds"
+				}
+				background= {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors = {
+					"dark_purple"
+					"black"
+					"null"
+					"null"
+				}
+			}
+			effect = { save_global_event_target_as = shroud_country }
+		}
+	}
+}
+
+# ensures the Shroud exists and that the scoped country (silently) has communications with it
+# THIS = country
+silfae_eldar_ensure_communications_global_shroud_country = {
+	silfae_eldar_ensure_global_shroud_country = yes
+	if = {
+		limit = { NOT = { has_communications = event_target:shroud_country } }
+		establish_communications_no_message = event_target:shroud_country
+	}
+}

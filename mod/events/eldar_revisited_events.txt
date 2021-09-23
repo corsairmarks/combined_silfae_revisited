@@ -122,3 +122,283 @@ planet_event = {
 		}
 	}
 }
+
+planet_event = {
+	id = eldar_evt.6
+	mean_time_to_happen = {
+		days = 600
+		scaled_modifier = {
+			scope = THIS
+			add = -30
+			calc = pop_count
+		}
+	}
+	title = eldar_evt.6.title
+	desc = eldar_evt.6.desc
+	picture = GFX_evt_eldar_craftworld
+	show_sound = event_ground_battle
+	location = ROOT
+	pre_triggers = {
+		has_owner = yes
+		has_ground_combat = no
+	}
+	trigger = {
+		years_passed > 10
+		has_planet_flag = is_silfae_eldar_craftworld
+		solar_system = { has_star_flag = is_silfae_eye_of_terror }
+		num_pops > 0
+	}
+	immediate = {
+		owner = { silfae_eldar_ensure_communications_global_shroud_country = yes }
+		set_variable = {
+			which = years_passed_scaled_armies
+			value = trigger:years_passed
+		}
+		divide_variable = {
+			which = years_passed_scaled_armies
+			value = 20
+		}
+		floor_variable = years_passed_scaled_armies
+		change_variable = {
+			which = years_passed_scaled_armies
+			value = 1
+		}
+		while = {
+			count = years_passed_scaled_armies
+			random_list = {
+				8 = {
+					modifier = {
+						factor = 0.5
+						mid_game_years_passed > 0
+					}
+					modifier = {
+						factor = 0.5
+						end_game_years_passed > 0
+					}
+					create_army = {
+						name = NAME_shroud_undead_army
+						owner = event_target:shroud_country
+						type = undead_army
+					}
+				}
+				4 = {
+					modifier = {
+						factor = 0.5
+						end_game_years_passed > 0
+					}
+					create_army = {
+						name = NAME_shroud_mutant_army
+						owner = event_target:shroud_country
+						type = mutant_army
+					}
+				}
+				2 = {
+					modifier = {
+						factor = 2
+						end_game_years_passed > 0
+					}
+					create_army = {
+						name = NAME_shroud_psionic_army
+						owner = event_target:shroud_country
+						type = psionic_army
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						years_passed < 60
+					}
+					modifier = {
+						factor = 2
+						end_game_years_passed > 30
+					}
+					modifier = {
+						factor = 2
+						end_game_years_passed > 60
+					}
+					create_army = {
+						name = NAME_shroud_xenomorph_army
+						owner = event_target:shroud_country
+						type = xenomorph_army
+					}
+				}
+			}
+		}
+		multiply_variable = {
+			which = years_passed_scaled_armies
+			value = 3
+		}
+		change_variable = {
+			which = years_passed_scaled_armies
+			value = 10
+		}
+		set_variable = {
+			which = available_devastation
+			value = 100
+		}
+		floor_variable = available_devastation
+		subtract_variable = {
+			which = available_devastation
+			value = trigger:planet_devastation
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = years_passed_scaled_armies
+					value > available_devastation
+				}
+			}
+			set_variable = {
+				which = years_passed_scaled_armies
+				value = available_devastation
+			}
+		}
+		add_planet_devastation = years_passed_scaled_armies
+		clear_variable = years_passed_scaled_armies
+		if = {
+			limit = { mid_game_years_passed > 0 }
+			set_variable = {
+				which = midgame_years_passed_scaled_armies
+				value = trigger:mid_game_years_passed
+			}
+			divide_variable = {
+				which = midgame_years_passed_scaled_armies
+				value = 30
+			}
+			floor_variable = midgame_years_passed_scaled_armies
+			change_variable = {
+				which = midgame_years_passed_scaled_armies
+				value = 1
+			}
+			while = {
+				count = midgame_years_passed_scaled_armies
+				create_army = {
+					name = NAME_shroud_shroud_army
+					owner = event_target:shroud_country
+					type = shroud_army
+				}
+			}
+			clear_variable = midgame_years_passed_scaled_armies
+		}
+	}
+	option = {
+		name = BATTLESTATIONS
+	}
+}
+
+system_event = {
+	id = eldar_evt.7
+	is_triggered_only = yes
+	title = eldar_evt.7.title
+	desc = eldar_evt.7.desc
+	picture = GFX_evt_eldar_craftworld
+	show_sound = event_space_battle
+	location = ROOT
+	immediate = {
+		if = {
+			limit = { has_owner = yes }
+			owner = { silfae_eldar_ensure_communications_global_shroud_country = yes }
+		}
+		every_fleet_in_system = {
+			owner = { silfae_eldar_ensure_communications_global_shroud_country = yes }
+		}
+		set_variable = {
+			which = midgame_years_passed_scaled_entities
+			value = trigger:mid_game_years_passed
+		}
+		divide_variable = {
+			which = midgame_years_passed_scaled_entities
+			value = 20
+		}
+		floor_variable = midgame_years_passed_scaled_entities
+		change_variable = {
+			which = midgame_years_passed_scaled_entities
+			value = 1
+		}
+		create_fleet = {
+			name = NAME_shroud_psionic_manifestations
+			settings = {
+				spawn_debris = no
+				is_boss = yes
+			}
+			effect = {
+				set_owner = event_target:shroud_country
+				while = {
+					count = PREV.midgame_years_passed_scaled_entities
+					random_list = {
+						4 = {
+							create_ship = { # 30000
+								name = NAME_shroud_lesser_psionic_entity
+								design = NAME_Shroud_Avatar
+							}
+						}
+						2 = {
+							create_ship = { # 50000
+								name = NAME_shroud_psionic_entity
+								design = NAME_Shroud_Manifestation
+							}
+						}
+						1 = {
+							create_ship = { # 60000
+								name = NAME_shroud_greater_psionic_entity
+								design = NAME_Corrupted_Avatar
+							}
+						}
+					}
+				}
+				set_location = {
+					target = PREV.star
+					distance = 300
+					angle = random
+				}
+				set_fleet_stance = aggressive
+				set_fleet_bombardment_stance = armageddon
+				set_aggro_range_measure_from = return_point
+				set_aggro_range = 3000
+				set_formation_scale = 5
+			}
+		}
+		clear_variable = midgame_years_passed_scaled_entities
+	}
+	option = {
+		name = BATTLESTATIONS
+	}
+}
+
+planet_event = {
+	id = eldar_evt.8
+	hide_window = yes
+	mean_time_to_happen = {
+		days = 600
+		scaled_modifier = {
+			scope = THIS
+			add = -30
+			calc = pop_count
+		}
+	}
+	trigger = {
+		mid_game_years_passed > 40
+		has_planet_flag = is_silfae_eldar_craftworld
+		solar_system = {
+			has_star_flag = is_silfae_eye_of_terror
+			NOT = {
+				any_fleet_in_system = {
+					OR = {
+						is_in_combat = yes
+						AND = {
+							exists = event_target:shroud_country
+							is_owned_by = event_target:shroud_country
+						}
+					}
+				}
+			}
+		}
+	}
+	immediate = {
+		solar_system = {
+			system_event = {
+				id = eldar_evt.7
+			}
+		}
+	}
+}

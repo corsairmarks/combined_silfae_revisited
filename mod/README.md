@@ -25,8 +25,9 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     * Any empire using this initializer gains Hydroponics Farming (`tech_hydroponics`) and Weather Control Systems (`tech_housing_1`) for free
     * Add modified Origin: Remnants starting capital deposits for use with this initializer
     * The Eye of Terror is its own graphics entity with a Stellaris-flavored description and adds the negative effects of _both_ black holes and pulsars
+    * Expect Shroud entities to become progressively more successful in their attempts to manifest in the system
 * You can use the Eldar portraits and/or custom initializer for your own empire without any DLC requirements
-* Fix the file type on the incuded event image - it was a `.png` with the `.dds` extension - it is now distributed in the correct `.dds` format for Stellaris (not in use... yet)
+* Fix the file type on the incuded event image - it was a `.png` with the `.dds` extension - it is now distributed in the correct `.dds` format for Stellaris
 
 ## Compatibility
 
