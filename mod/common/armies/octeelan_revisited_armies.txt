@@ -7,7 +7,7 @@ machine_defense_peepboop = {
 	collateral_damage = 0.0
 	war_exhaustion = 0.0 # No WE from defense armies
 	has_morale = no
-	icon_frame = 12
+	icon = GFX_army_type_machine_defensive
 	has_species = yes
 	time = 90
 
