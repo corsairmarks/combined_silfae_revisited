@@ -422,7 +422,6 @@ setup_peepboop_homeworld = {
 			give_technology = { tech = tech_adaptive_combat_algorithms	message = no }
 			give_technology = { tech = tech_planetary_unification		message = no }
 			give_technology = { tech = tech_planetary_infrastructure_1	message = no }
-			give_technology = { tech = tech_planetary_infrastructure_2	message = no }
 			give_technology = { tech = tech_corvette_hull_1				message = no }
 			give_technology = { tech = tech_corvette_build_speed		message = no }
 			give_technology = { tech = tech_faux_starbase_1				message = no }
@@ -451,6 +450,10 @@ setup_peepboop_homeworld = {
 		add_deposit = d_arid_highlands
 		add_deposit = d_searing_desert
 	}
+	while = {
+		count = 4
+		add_district = district_nexus
+	}
 	add_deposit = d_veiny_cliffs
 	add_deposit = d_ore_rich_caverns
 	add_deposit = d_rich_mountain
@@ -463,10 +466,6 @@ setup_peepboop_homeworld = {
 	add_building = building_class_4_singularity
 	add_building = building_nano_forge
 	add_building = building_dimensional_fabricator
-	while = {
-		count = 4
-		add_district = district_nexus
-	}
 	while = {
 		count = 2
 		add_deposit = d_alien_pets_deposit
