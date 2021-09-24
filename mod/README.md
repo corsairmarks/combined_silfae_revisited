@@ -49,7 +49,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 * 1.0.1 Adjust system initializer description
 * 1.0.2 Enhanced portrait and clothing selectors, allow portraits to be randomized
 * 1.0.3 Ensure correct `graphical_culture`
-* 2.0.0 Mark as compatible with Stellaris version 3.1.* "Lem"
+* 1.1.0 Mark as compatible with Stellaris version 3.1.* "Lem"
     * Add new localisation keys introduced in 3.1
     * Add all 4 avian insult words to the `ROEAGLE` species class
     * Refine star entities to be more inline with Silfae's original (which were stacked to create a sort of "special effect")
