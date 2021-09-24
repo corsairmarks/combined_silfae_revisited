@@ -49,6 +49,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 * 1.0.2 Ensure correct `graphical_culture`
 * 1.1.0 Mark as compatible with Stellaris version 3.1.* "Lem"
     * Add new localisation keys introduced in 3.1
+    * Volatile motes had to be moved to different planets to avoid mining stations improperly collecting them at game start (reported by Kaiser Nikolaus I)
 
 ## Source Code
 
