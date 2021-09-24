@@ -6,7 +6,7 @@ There are lots of other mods which contain these portraits, so why should you ch
 
 [h1]Changes[/h1]
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.0.*, the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.1.*, the latest version when this was written.  Updates include:
 
 [list]
 [*]Clothing selector enhancements
@@ -17,9 +17,9 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     [/list]
 [*]Simplify hairstyle selectors - it's clear that species/Pop/leader/ruler categories for each body phenotype were intended to have the same lists of styles, so a lot of repeated code could be removed
 [*]Update the namelist to account for all built-in army types, remove obsolete entries
-[*]Update the custom starting system initializer for 3.0
+[*]Update the custom starting system initializer
     [list]
-    [*]Starting planet size correct for 3.0
+    [*]Starting planet size correct
     [*]Can have guaranteed habitable worlds nearby (based on game settings)
     [*]Less complex that some of Silfae's other starting systems, so it already works with newer civics and origins
     [/list]
@@ -33,7 +33,7 @@ Compatible with any mod that does not add the same portraits, species class, or 
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Not compatible with achievements.
+Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.
 
 [h3]Dependencies[/h3]
 

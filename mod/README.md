@@ -6,7 +6,7 @@ There are lots of other mods which contain these portraits, so why should you ch
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.0.*, the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.1.*, the latest version when this was written.  Updates include:
 
 * Clothing selector enhancements
     * Fixed a broken clothing selector for male rulers
@@ -14,8 +14,8 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     * Keeping with the theme of Xirmians loving a chaotic aesthetic, job-specific clothing is a random choice rather than a rule
 * Simplify hairstyle selectors - it's clear that species/Pop/leader/ruler categories for each body phenotype were intended to have the same lists of styles, so a lot of repeated code could be removed
 * Update the namelist to account for all built-in army types, remove obsolete entries
-* Update the custom starting system initializer for 3.0
-    * Starting planet size correct for 3.0
+* Update the custom starting system initializer
+    * Starting planet size correct
     * Can have guaranteed habitable worlds nearby (based on game settings)
     * Less complex that some of Silfae's other starting systems, so it already works with newer civics and origins
 * Update the AI personality to account for new game features
@@ -27,7 +27,7 @@ Compatible with any mod that does not add the same portraits, species class, or 
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Not compatible with achievements.
+Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.
 
 ### Dependencies
 
@@ -53,6 +53,8 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 * 1.0.0 Initial version
 * 1.0.1 Minor clothing fixes, prevent awakened empire from using personality, allow portrait randomization
 * 1.0.2 Ensure correct `graphical_culture`
+* 1.1.0 Mark as compatible with Stellaris version 3.1.* "Lem"
+    * Add new localisation keys introduced in 3.1
 
 ## Source Code
 
