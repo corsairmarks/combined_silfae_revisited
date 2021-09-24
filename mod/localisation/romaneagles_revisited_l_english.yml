@@ -17,3 +17,7 @@
  ROEAGLE_fossil_plural: "$AVI_fossil_plural$"
  ROEAGLE_remnant: "$AVI_remnant$"
  ROEAGLE_remnant_plural: "$AVI_remnant_plural$"
+ pc_silfae_supergiant: "Red Supergiant"
+ pc_silfae_supergiant_desc: "Red supergiants are the largest stars in the universe in terms of volume, although they are not the most massive or luminous."
+ pc_silfae_collapsed_k: "Collapsed Class K Star"
+ pc_silfae_collapsed_k_desc: "Class K stars are normally stable on the main-sequence for up to 30 billion years, but this example seems to have inexplicably collapsed in on itself and devastated the massive ringworld that encircles it."
