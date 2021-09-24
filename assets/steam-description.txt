@@ -6,12 +6,12 @@ There are lots of other mods which contain these portraits, so why should you ch
 
 [h1]Changes[/h1]
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.0.*, the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.1.*, the latest version when this was written.  Updates include:
 
 [list]
 [*]Enhance portrait selectors to specialize some Pops with appropriate clothing (because the clothing is built in to each portrait file, I can't change to clothing selectors instead of phenotypes)
 [*]Update the namelist to account for all built-in army types, remove obsolete entries
-[*]Update the custom starting system initializer for 3.0, including the primitive civilization and its extra armies to make conquering them more difficult
+[*]Update the custom starting system initializer, including the primitive civilization and its extra armies to make conquering them more difficult
 [*]All seven custom neighboring systems updated, and eliminated chance for one of them to double-spawn
 [*]Custom starting initializer now supports a variety of civics and origin starts (all the built-in ones)
 [*]Update the AI personality to account for new game features
@@ -23,7 +23,7 @@ Compatible with any mod that does not add the same portraits, species class, or 
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Not compatible with achievements.
+Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.
 
 [h3]Dependencies[/h3]
 
