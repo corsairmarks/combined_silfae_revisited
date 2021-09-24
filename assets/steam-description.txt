@@ -6,7 +6,7 @@ There are other mods which contain these portraits, so why should you choose thi
 
 [h1]Changes[/h1]
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.0.*, the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.1.*, the latest version when this was written.  Updates include:
 
 [list]
 [*]Renamed species class to "Sleek Reptilian" so there isn't confusion with the built-in Reptilian species class
@@ -24,13 +24,13 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     [*]Convert "Parasitic Evolution" into an origin instead of a civic (including graphics for the selection screen and icon)
     [*]As with the original civic, Origin: Parasitic Evolution is not available for the AI
     [/list]
-[*]Update all custom negative traits to work with Stellaris 3.0
+[*]Update all custom negative traits to work with modern Stellaris
     [list]
     [*]Traits use up-to-date-modifiers
     [*]Most of the [b]BIOLOGICAL[/b] traits are now available to use on [b]LITHOID[/b]s too
     [*]These traits were originally designed as advanced traits, which means you must have Evolutionary Mastery to use them
     [/list]
-[*]Update prescripted empire for 3.0:
+[*]Update prescripted empire
     [list]
     [*]Now uses the new Origin: Parasitic Evolution (requires Utopia)
     [*]Now has Civic: Shadow Council to replace the civic which became the origin
@@ -45,7 +45,7 @@ Compatible with any mod that does not add the same portraits, species class, or 
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Not compatible with achievements.
+Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.
 
 [h3]Dependencies[/h3]
 
