@@ -6,13 +6,13 @@ There are lots of other mods which contain these portraits, so why should you ch
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.0.*, the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.1.*, the latest version when this was written.  Updates include:
 
 * Fix the broken portrait clothing selector for male rulers
 * Update the namelist to account for all built-in army types, remove obsolete entries
 * Update portrait selection for Pops - higher-strata Pops (rulers, complex drones, bio-trophies, and precursors) may use laurel wreaths
 * Update clothing selection for Pops - your Pops will wear clothing based on their jobs
-* Update the custom starting system initializer and special neighbors for 3.0
+* Update the custom starting system initializer and special neighbors
 * Custom starting initializer now supports a variety of civics and origin starts (all the built-in ones)
 * Remove a species trait (Resilient) from the prescripted empire, because Charismatic is now 2 points
 
@@ -22,7 +22,7 @@ Compatible with any mod that does not add the same portraits, species class, or 
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Not compatible with achievements.
+Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.
 
 ### Dependencies
 
@@ -49,6 +49,10 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 * 1.0.1 Adjust system initializer description
 * 1.0.2 Enhanced portrait and clothing selectors, allow portraits to be randomized
 * 1.0.3 Ensure correct `graphical_culture`
+* 2.0.0 Mark as compatible with Stellaris version 3.1.* "Lem"
+    * Add new localisation keys introduced in 3.1
+    * Add all 4 avian insult words to the `ROEAGLE` species class
+    * Refine star entities to be more inline with Silfae's original (which were stacked to create a sort of "special effect")
 
 ## Source Code
 
