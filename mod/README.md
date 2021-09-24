@@ -6,7 +6,7 @@ There are other mods which contain these portraits, so why should you choose thi
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.0.*, the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.1.*, the latest version when this was written.  Updates include:
 
 * Update Holofrixit shipset (reuse of Unbidden) to work with current Stellaris - starbases, titans, juggernauts, and colossi fall back to molluscoid (the fallback for the Unbidden)
 * Enhance Holofrixit portrait usage:
@@ -40,11 +40,11 @@ This mod is much less compatible than the other Silfae's Revisited series mods. 
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Not compatible with achievements.
+Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.
 
 ### File Overwrites
 
-This mod overwrites most of the Pop jobs definitions to account for the special Holofixit caste traits.  It also overwrites all the Pop strata to implement Holofrixit energy-based Pop upkeep (instead of food).  It's likely to break any time Stellaris makes changes to the underlying Pop strata, such as the anticipated changes for the upcoming 3.1 'Lem' minor release.  These files are completely overwritten:
+This mod overwrites most of the Pop jobs definitions to account for the special Holofixit caste traits.  It also overwrites all the Pop strata to implement Holofrixit energy-based Pop upkeep (instead of food).  It's likely to break any time Stellaris makes changes to the underlying Pop strata.  These files are completely overwritten:
 
 * `common/pop_categories/00_social_classes.txt`
 * `common/pop_categories/01_gestalt_drones.txt`
@@ -110,6 +110,10 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Fix incorrect random name reference
     * Allow Xechiros to procreate
     * Ensure correct `graphical_culture`
+* 2.0.0 Mark as compatible with Stellaris version 3.1.1 "Lem"
+    * Add new localisation keys introduced in 3.1
+    * Update Pop strata (categories) with updates from base game - adding Budding and Phototropic/Radiotropic
+    * Update with code improvements from the base game
 
 ## Source Code
 
