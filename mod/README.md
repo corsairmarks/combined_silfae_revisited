@@ -8,20 +8,20 @@ Individual mods update first, then changes are merged here.
 
 This is a bundle of mods to make it a little easier to sub and ensure cross-compatibility with each-other.  Please check each individual mod for the effects and any known issues.  The large hex strings are the commit hashes - that is mostly for my own record-keeping to know what revision of the other source code is contained here.
 
-* [Animated Asari Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2581752619) ([Source](https://github.com/corsairmarks/asari_portraits_revisited) ede7e83760c484f791a62ffdecd97a41c578624d)
-* [Animated Aquilese Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2576769521) ([Source](https://github.com/corsairmarks/romaneagles_portraits_revisited) 0f53196e0c167612451d03bac957a663fbf954bb)
+* [Animated Aquilese Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2576769521) ([Source](https://github.com/corsairmarks/romaneagles_portraits_revisited) 6059635e8818668c6213aece7a16f778cf841748)
+* [Animated Asari Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2581752619) ([Source](https://github.com/corsairmarks/asari_portraits_revisited) b3951ffd7d325c704a9a1b21088fd96a01b630d3)
 * [Animated Eldar Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2581388205) ([Source](https://github.com/corsairmarks/eldar_portraits_revisited) 171c79ee115a6214f9e86f20239ef3c5992ac797)
-* [Animated Hidden Eye Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2585946800) ([Source](https://github.com/corsairmarks/slreptilian_portraits_revisited) a1d63331e1bd2e1d5f094507f23af9b972b1b56d)
-* [Animated Hollow Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2578037235) ([Source](https://github.com/corsairmarks/horrorworm_portraits_revisited) eb81b8b47c4e0f5c2fdecf4526fc646c148ccfee)
-* [Animated Holosphere Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2592592503) ([Source](https://github.com/corsairmarks/holosphere_rising_revisited) bbe45fd482e793c80c7dbca146f42f1f95ed3793)
-* [Animated Hyena Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2576290763) ([Source](https://github.com/corsairmarks/hyenafolk_portraits_revisited) a4bcbdea5b7f2919cf2e3c69a2965df1e837b6f5)
-* [Animated Octee-lan Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2584680339) ([Source](https://github.com/corsairmarks/octeelan_portraits_revisited) 71e6e528742f3e5fc90f2d2c146264c7d0ecccd5)
-* [Animated Quarian Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2583358569) ([Source](https://github.com/corsairmarks/quarian_portraits_revisited) c0af7d1eccfd8243c5911be9718cc5b634431c79)
-* [Animated Raptor Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2577216891) ([Source](https://github.com/corsairmarks/saurischian_portraits_revisited) cc25708b88e17e2ea1a4c15322bc4579702ec0aa)
-* [Animated Serpentoid Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2577093634) ([Source](https://github.com/corsairmarks/serpentoid_portraits_revisited) f68157f050ceb17e82686e00a82097d89de713f3)
-* [Animated Shark Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2585030748) ([Source](https://github.com/corsairmarks/sharkanian_portraits_revisited) 6e658e0039525f33c820cadcadb9566900026191)
-* [Animated Silicoid Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2579736379) ([Source](https://github.com/corsairmarks/silicoid_portraits_revisited) e8b5fbf13a4ce03734147c918a6e65dd3601ebb9)
-* [Animated Xirmian Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2577789863) ([Source](https://github.com/corsairmarks/xirmian_portraits_revisited) d29769aba674fd104b53fc81434383610078172b)
+* [Animated Hidden Eye Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2585946800) ([Source](https://github.com/corsairmarks/slreptilian_portraits_revisited) da633b5a76d7215aa898583f6b30bdf7b1438a73)
+* [Animated Hollow Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2578037235) ([Source](https://github.com/corsairmarks/horrorworm_portraits_revisited) 0a0755042a68a5c55e04326d3a05368389e2e3f8)
+* [Animated Holosphere Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2592592503) ([Source](https://github.com/corsairmarks/holosphere_rising_revisited) c022abece292d70460dd04573b4859a199c98431)
+* [Animated Hyena Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2576290763) ([Source](https://github.com/corsairmarks/hyenafolk_portraits_revisited) bd0fe14c1bdbbb4c567f5bef97ff2b8ee4cefe85)
+* [Animated Octee-lan Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2584680339) ([Source](https://github.com/corsairmarks/octeelan_portraits_revisited) e007808f72529a7fe09a72beb2658c955103d583)
+* [Animated Quarian Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2583358569) ([Source](https://github.com/corsairmarks/quarian_portraits_revisited) 6cb3eb9e05fd8f2cb0fb095d0962909ea6b35fc7)
+* [Animated Raptor Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2577216891) ([Source](https://github.com/corsairmarks/saurischian_portraits_revisited) a8831699c1b3e197f21b48aca48ebed40aea55f5)
+* [Animated Serpentoid Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2577093634) ([Source](https://github.com/corsairmarks/serpentoid_portraits_revisited) da9a4b6fc9acb5a207e83014e93a0bf5994398b1)
+* [Animated Shark Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2585030748) ([Source](https://github.com/corsairmarks/sharkanian_portraits_revisited) 2cc36020616deb6c32617a9839ca6e2e6d71d911)
+* [Animated Silicoid Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2579736379) ([Source](https://github.com/corsairmarks/silicoid_portraits_revisited) bbe6faa673f769006d40199049786a57ddb02415)
+* [Animated Xirmian Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2577789863) ([Source](https://github.com/corsairmarks/xirmian_portraits_revisited) 13f46369087a4b07e0c6e1f895dc8656e98d7960)
 
 ## Source Code
 
@@ -44,16 +44,16 @@ Each of the source repositories above is added as a remote to this repository on
 
 # Compatibility
 
-Requires Stellaris 3.0.* and disables achievements.
+Requires Stellaris 3.1.1 "Lem" and disables achievements.
 
-Check each of the contained mods for an explicit list of incompatibility notes.
+Check each of the contained mods for an explicit list of incompatibility notes.  Notably almost all Pop jobs and all Pop strata are overwritten (primarily for the Holosphere but also Silicoids), making this mod incompatible with other mods that make changes to Pop jobs or strata.
 
 ## Dependencies
 
 In order for this mod to function, you **must** install these mods (and load them _before_ this one):
 
-* [Animated Asari Portraits - Mass Effect](https://steamcommunity.com/sharedfiles/filedetails/?id=707779361) by Silfae
 * [Animated Aquilese Portraits](https://steamcommunity.com/sharedfiles/filedetails/?id=910576007) by Silfae
+* [Animated Asari Portraits - Mass Effect](https://steamcommunity.com/sharedfiles/filedetails/?id=707779361) by Silfae
 * [Animated Eldar Portraits - Warhammer 40K](https://steamcommunity.com/sharedfiles/filedetails/?id=707415339) by Silfae
 * [Animated Portraits - The Hidden Eye](https://steamcommunity.com/sharedfiles/filedetails/?id=1168459329) by Silfae
 * [Animated Hollow Portraits](https://steamcommunity.com/sharedfiles/filedetails/?id=902526212) by Silfae
@@ -79,3 +79,4 @@ You should only add this mod before starting a new game, or remove it before sta
 
 * 1.0.0 Initial version
 * 1.0.1 Update Octee-lan portraits - resolves critical bug where starbases were the wrong type
+* 2.0.0 All merged mods updated for Stellaris 3.1 "Lem"
