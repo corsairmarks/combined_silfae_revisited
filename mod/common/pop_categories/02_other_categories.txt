@@ -535,7 +535,6 @@ bio_trophy = {
 			food = @living_standard_food_normal_silicoid
 			consumer_goods = @living_standard_luxuries_very_high
 		}
-
 		upkeep = {
 			trigger = {
 				is_silicoid_species = yes
@@ -545,7 +544,6 @@ bio_trophy = {
 			food = @living_standard_food_normal_silicoid
 			consumer_goods = @living_standard_luxuries_very_high
 		}
-
 		upkeep = {
 			trigger = { is_holofrixit = yes }
 			energy = @living_standard_energy_normal
@@ -793,7 +791,7 @@ criminal = {
 		# Lithoid Upkeep
 		upkeep = {
 			trigger = {
-				is_lithoid = yes
+				is_lithoid_species = yes
 				has_shared_burden_living_standard_type = yes
 			}
 			minerals = @living_standard_food_normal
@@ -888,8 +886,6 @@ criminal = {
 		}
 		upkeep = {
 			trigger = {
-				is_lithoid = yes
-				has_stratified_living_standard_type = yes
 				is_silicoid_species = yes
 				NOT = { has_trait = trait_electroid }
 				OR = {
@@ -946,7 +942,7 @@ criminal = {
 			trigger = {
 				is_lithoid_species = yes
 				has_low_living_standard_type = yes
-				}
+			}
 			minerals = @living_standard_food_normal
 			consumer_goods = @living_standard_luxuries_very_low
 			}
@@ -1473,7 +1469,7 @@ deviant_drone = {
 			trigger = {
 				is_lithoid_species = yes
 				has_low_living_standard_type = yes
-				}
+			}
 			minerals = @living_standard_food_normal
 			consumer_goods = @living_standard_luxuries_very_low
 		}
@@ -1972,7 +1968,7 @@ corrupt_drone = {
 			trigger = {
 				is_lithoid_species = yes
 				has_low_living_standard_type = yes
-				}
+			}
 			minerals = @living_standard_food_normal
 			consumer_goods = @living_standard_luxuries_very_low
 			}
@@ -2195,7 +2191,7 @@ precursor = {
 				}
 			}
 			food = @living_standard_food_normal
-			consumer_goods = 1.0
+			consumer_goods = @living_standard_luxuries_very_high
 		}
 
 		# Lithoid Upkeep
@@ -2246,7 +2242,7 @@ precursor = {
 				}
 			}
 			minerals = @living_standard_food_normal
-			consumer_goods = 1.0
+			consumer_goods = @living_standard_luxuries_very_high
 		}
 		upkeep = {
 			trigger = {
@@ -2259,7 +2255,7 @@ precursor = {
 			}
 			minerals = @living_standard_minerals_normal_silicoid
 			food = @living_standard_food_normal_silicoid
-			consumer_goods = 1.0
+			consumer_goods = @living_standard_luxuries_very_high
 		}
 		upkeep = {
 			trigger = {
@@ -2272,7 +2268,7 @@ precursor = {
 			}
 			energy = @living_standard_energy_normal_electroid
 			food = @living_standard_food_normal_silicoid
-			consumer_goods = 1.0
+			consumer_goods = @living_standard_luxuries_very_high
 		}
 
 		# Holofrixit Upkeep
@@ -2297,7 +2293,7 @@ precursor = {
 				}
 			}
 			energy = @living_standard_energy_normal
-			consumer_goods = 1.0
+			consumer_goods = @living_standard_luxuries_very_high
 		}
 
 		# Robotic Upkeep
@@ -2355,7 +2351,7 @@ xeno_ward = {
 
 		# Lithoid Upkeep
 		upkeep = {
-			trigger = { is_lithoid = yes }
+			trigger = { is_lithoid_species = yes }
 			minerals = @living_standard_food_normal
 			consumer_goods = @living_standard_luxuries_very_high
 		}
