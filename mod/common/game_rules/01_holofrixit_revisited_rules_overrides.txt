@@ -22,9 +22,13 @@ can_generate_leader_from_pop = {
 				}
 			}
 		}
-		ROOT = { has_technology = tech_synthetic_leaders }
-		ROOT = { has_authority = auth_machine_intelligence }
-		ROOT = { is_mechanical_empire = yes }
+		ROOT = {
+			OR = {
+				has_technology = tech_synthetic_leaders
+				has_authority = auth_machine_intelligence
+				is_mechanical_empire = yes
+			}
+		}
 	}
 	OR = {
 		is_same_species = ROOT
@@ -44,18 +48,21 @@ can_generate_military_leader_from_pop = {
 	OR = {
 		is_robot_pop = no
 		ROOT = {
-			has_origin = origin_holofrixit
-			PREV.species = {
-				OR = {
-					NOT = { has_trait = trait_holofrixit }
-					has_trait = trait_holowarrior
-					has_trait = trait_holowarrior_2
+			OR = {
+				AND = {
+					has_origin = origin_holofrixit
+					PREV.species = {
+						OR = {
+							has_trait = trait_holowarrior
+							has_trait = trait_holowarrior_2
+						}
+					}
 				}
+				has_technology = tech_synthetic_leaders
+				has_authority = auth_machine_intelligence
+				is_mechanical_empire = yes
 			}
 		}
-		ROOT = { has_technology = tech_synthetic_leaders }
-		ROOT = { has_authority = auth_machine_intelligence }
-		ROOT = { is_mechanical_empire = yes }
 	}
 	OR = {
 		is_same_species = ROOT
@@ -89,6 +96,7 @@ can_species_procreate = {
 		NOT = {
 			ROOT = {
 				any_owned_species = {
+					has_population_control = { country = ROOT.owner value = no }
 					species_can_be_necrophaged = yes
 				}
 			}
@@ -114,11 +122,38 @@ can_species_be_assembled = {
 		}
 		AND = {
 			is_organic_species = yes
-			ROOT = {
-				check_modifier_value = {
-					modifier = planet_pop_assembly_organic_add
-					value > 0
+			if = {
+				limit = {
+					ROOT.owner = { is_hive_empire = yes }
 				}
+				has_trait = trait_hive_mind
+			}
+			else_if = {
+				limit = { has_trait = trait_plantoid_budding }
+				ROOT = {
+					any_owned_species = { is_exact_same_species = PREVPREV }
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_trait = trait_clone_soldier_infertile
+						has_trait = trait_clone_soldier_infertile_full_potential
+					}
+				}
+				ROOT = {
+					# Event 'clones.3' should cover this, but extra safety check.
+					has_building = building_clone_army_clone_vat
+					NOT = {
+						check_variable = {
+							which = clone_pops_missing
+							value = 0
+						}
+					}
+				}
+			}
+			else = {
+				ROOT = { has_building = building_clone_vats }
 			}
 		}
 	}

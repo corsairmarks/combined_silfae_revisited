@@ -93,9 +93,9 @@ complex_specialist_job_check_trigger = {
 		}
 		OR = {
 			NOT = { has_trait = trait_mechanical }
-			AND = {
-				owner = { has_technology = tech_droid_workers }
-				owner = { NOT = { has_policy_flag = ai_outlawed } }
+			owner = {
+				has_technology = tech_droid_workers
+				NOT = { has_policy_flag = ai_outlawed }
 			}
 		}
 	}
@@ -121,8 +121,7 @@ is_organic_species = {
 is_robotic_species = {
 	species = {
 		OR = {
-			is_archetype = ROBOT
-			is_archetype = MACHINE
+			is_robotic = yes
 			AND = {
 				is_archetype = HOLOARCH
 				OR = {

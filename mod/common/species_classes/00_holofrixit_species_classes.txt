@@ -12,7 +12,6 @@ HLFRXT = {
 	randomized = no
 	playable = { always = yes }
 	possible_secondary = { always = yes }
-	robotic = yes
 	portraits = {
 		"holofrixit"
 	}

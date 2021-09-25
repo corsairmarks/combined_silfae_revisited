@@ -1,6 +1,6 @@
 # Holofrixit Hive-network
 auth_holofrixit = {
-	potential = { species = { value = HOLOARCH } }
+	potential = { species_archetype = { value = HOLOARCH } }
 	possible = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 		origin = { value = origin_holofrixit }

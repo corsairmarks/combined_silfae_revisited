@@ -124,16 +124,34 @@ slave = {
 		energy = 50
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			can_assemble_budding_pop = yes
+		}
+		planet_pop_assembly_organic_add = @plantoid_budding_rate
+	}
+
 	resources = {
 		category = pop_category_slave
 
 		# Organic Upkeep
 		upkeep = {
 			trigger = {
+				has_phototrophic_energy_upkeep = yes
+			}
+			energy = @living_standard_phototrophic_normal
+		}
+
+		upkeep = {
+			trigger = {
 				is_organic_species = yes
+				is_phototrophic = no
 				is_lithoid = no
 				is_holofrixit = no
-				has_very_high_living_standard_type = yes
+				OR = {
+					has_very_high_living_standard_type = yes
+					has_high_living_standard_type = yes
+				}
 			}
 			food = @living_standard_food_normal
 			consumer_goods = @living_standard_luxuries_low
@@ -143,14 +161,29 @@ slave = {
 				is_organic_species = yes
 				is_lithoid = no
 				is_holofrixit = no
-				has_high_living_standard_type = yes
+				OR = {
+					has_very_high_living_standard_type = yes
+					has_high_living_standard_type = yes
+				}
 			}
 			food = @living_standard_food_normal
 			consumer_goods = @living_standard_luxuries_low
 		}
 		upkeep = {
 			trigger = {
+				is_phototrophic = yes
+				OR = {
+					has_very_high_living_standard_type = yes
+					has_high_living_standard_type = yes
+				}
+			}
+			food = @living_standard_phototrophic_normal
+			consumer_goods = @living_standard_luxuries_low
+		}
+		upkeep = {
+			trigger = {
 				is_organic_species = yes
+				is_phototrophic = no
 				is_lithoid = no
 				is_holofrixit = no
 				OR = {
@@ -163,7 +196,19 @@ slave = {
 		}
 		upkeep = {
 			trigger = {
+				is_phototrophic = yes
+				OR = {
+					has_normal_living_standard_type = yes
+					has_academic_living_standard_type = yes
+				}
+			}
+			food = @living_standard_phototrophic_normal
+			consumer_goods = @living_standard_luxuries_very_low
+		}
+		upkeep = {
+			trigger = {
 				is_organic_species = yes
+				is_phototrophic = no
 				is_lithoid = no
 				is_holofrixit = no
 				OR = {
@@ -172,6 +217,16 @@ slave = {
 				}
 			}
 			food = @living_standard_food_normal
+		}
+		upkeep = {
+			trigger = {
+				is_phototrophic = yes
+				OR = {
+					has_low_living_standard_type = yes
+					has_stratified_living_standard_type = yes
+				}
+			}
+			food = @living_standard_phototrophic_normal
 		}
 
 		# Lithoid Upkeep
@@ -431,6 +486,11 @@ bio_trophy = {
 		influence = 10
 	}
 
+	triggered_planet_modifier = {
+		potential = { can_assemble_budding_pop = yes }
+		planet_pop_assembly_organic_add = @plantoid_budding_rate
+	}
+
 	pop_modifier = {
 		pop_political_power = 10
 		pop_housing_usage_base = 1
@@ -439,21 +499,33 @@ bio_trophy = {
 	resources = {
 		category = pop_category_bio_trophy
 		upkeep = {
+			trigger = { has_phototrophic_energy_upkeep = yes }
+			energy = @living_standard_phototrophic_normal
+		}
+		upkeep = {
 			trigger = {
 				is_organic_species = yes
+				is_phototrophic = no
 				is_lithoid = no
 				is_holofrixit = no
 			}
 			food = @living_standard_food_normal
 			consumer_goods = @living_standard_luxuries_very_high
 		}
-
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				is_lithoid = no
+				is_phototrophic = yes
+			}
+			food = @living_standard_phototrophic_normal
+			consumer_goods = @living_standard_luxuries_very_high
+		}
 		upkeep = {
 			trigger = { is_lithoid_species = yes }
 			minerals = @living_standard_food_normal
 			consumer_goods = @living_standard_luxuries_very_high
 		}
-
 		upkeep = {
 			trigger = {
 				is_silicoid_species = yes
@@ -479,7 +551,6 @@ bio_trophy = {
 			energy = @living_standard_energy_normal
 			consumer_goods = @living_standard_luxuries_very_high
 		}
-
 		produces = {
 			trigger = {
 				is_lithoid = yes
@@ -487,7 +558,6 @@ bio_trophy = {
 			}
 			rare_crystals = @lithoid_trait_resource_production
 		}
-
 		produces = {
 			trigger = {
 				is_lithoid = yes
@@ -495,7 +565,6 @@ bio_trophy = {
 			}
 			exotic_gases = @lithoid_trait_resource_production
 		}
-
 		produces = {
 			trigger = {
 				is_lithoid = yes
@@ -610,8 +679,13 @@ criminal = {
 
 		# Organic Upkeep
 		upkeep = {
+			trigger = { has_phototrophic_energy_upkeep = yes }
+			energy = @living_standard_phototrophic_normal
+		}
+		upkeep = {
 			trigger = {
 				is_organic_species = yes
+				is_phototrophic = no
 				is_lithoid = no
 				is_holofrixit = no
 				has_shared_burden_living_standard_type = yes
@@ -621,27 +695,41 @@ criminal = {
 		}
 		upkeep = {
 			trigger = {
+				is_phototrophic = yes
+				has_shared_burden_living_standard_type = yes
+			}
+			food = @living_standard_phototrophic_normal
+			consumer_goods = @living_standard_luxuries_shared_burden
+		}
+		upkeep = {
+			trigger = {
 				is_organic_species = yes
+				is_phototrophic = no
 				is_lithoid = no
 				is_holofrixit = no
-				has_very_high_living_standard_type = yes
+				OR = {
+					has_very_high_living_standard_type = yes
+					has_high_living_standard_type = yes
+				}
 			}
 			food = @living_standard_food_normal
 			consumer_goods = @living_standard_luxuries_very_high
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
-				is_lithoid = no
-				is_holofrixit = no
-				has_high_living_standard_type = yes
+				is_phototrophic = yes
+				OR = {
+					has_very_high_living_standard_type = yes
+					has_high_living_standard_type = yes
+				}
 			}
-			food = @living_standard_food_normal
-			consumer_goods = @living_standard_luxuries_high
+			food = @living_standard_phototrophic_normal
+			consumer_goods = @living_standard_luxuries_very_high
 		}
 		upkeep = {
 			trigger = {
 				is_organic_species = yes
+				is_phototrophic = no
 				is_lithoid = no
 				is_holofrixit = no
 				OR = {
@@ -654,7 +742,19 @@ criminal = {
 		}
 		upkeep = {
 			trigger = {
+				is_phototrophic = yes
+				OR = {
+					has_normal_living_standard_type = yes
+					has_academic_living_standard_type = yes
+				}
+			}
+			food = @living_standard_phototrophic_normal
+			consumer_goods = @living_standard_luxuries_normal
+		}
+		upkeep = {
+			trigger = {
 				is_organic_species = yes
+				is_phototrophic = no
 				is_lithoid = no
 				is_holofrixit = no
 				has_stratified_living_standard_type = yes
@@ -664,12 +764,29 @@ criminal = {
 		}
 		upkeep = {
 			trigger = {
+				is_phototrophic = yes
+				has_stratified_living_standard_type = yes
+			}
+			food = @living_standard_phototrophic_normal
+			consumer_goods = @living_standard_luxuries_low
+		}
+		upkeep = {
+			trigger = {
 				is_organic_species = yes
+				is_phototrophic = no
 				is_lithoid = no
 				is_holofrixit = no
 				has_low_living_standard_type = yes
 			}
 			food = @living_standard_food_normal
+			consumer_goods = @living_standard_luxuries_very_low
+		}
+		upkeep = {
+			trigger = {
+				is_phototrophic = yes
+				has_low_living_standard_type = yes
+			}
+			food = @living_standard_phototrophic_normal
 			consumer_goods = @living_standard_luxuries_very_low
 		}
 
@@ -1077,8 +1194,13 @@ deviant_drone = {
 
 		# Organic Upkeep
 		upkeep = {
+			trigger = { has_phototrophic_energy_upkeep = yes }
+			energy = @living_standard_phototrophic_normal
+		}
+		upkeep = {
 			trigger = {
 				is_organic_species = yes
+				is_phototrophic = no
 				is_lithoid = no
 				is_holofrixit = no
 				has_shared_burden_living_standard_type = yes
@@ -1089,6 +1211,7 @@ deviant_drone = {
 		upkeep = {
 			trigger = {
 				is_organic_species = yes
+				is_phototrophic = no
 				is_lithoid = no
 				is_holofrixit = no
 				has_very_high_living_standard_type = yes
@@ -1099,6 +1222,7 @@ deviant_drone = {
 		upkeep = {
 			trigger = {
 				is_organic_species = yes
+				is_phototrophic = no
 				is_lithoid = no
 				is_holofrixit = no
 				has_high_living_standard_type = yes
@@ -1109,6 +1233,7 @@ deviant_drone = {
 		upkeep = {
 			trigger = {
 				is_organic_species = yes
+				is_phototrophic = no
 				is_lithoid = no
 				is_holofrixit = no
 				OR = {
@@ -1122,6 +1247,7 @@ deviant_drone = {
 		upkeep = {
 			trigger = {
 				is_organic_species = yes
+				is_phototrophic = no
 				is_lithoid = no
 				is_holofrixit = no
 				has_stratified_living_standard_type = yes
@@ -1132,11 +1258,64 @@ deviant_drone = {
 		upkeep = {
 			trigger = {
 				is_organic_species = yes
+				is_phototrophic = no
 				is_lithoid = no
 				is_holofrixit = no
 				has_low_living_standard_type = yes
 			}
 			food = @living_standard_food_normal
+			consumer_goods = @living_standard_luxuries_very_low
+		}
+
+		upkeep = {
+			trigger = {
+				is_phototrophic = yes
+				has_shared_burden_living_standard_type = yes
+			}
+			food = @living_standard_phototrophic_normal
+			consumer_goods = @living_standard_luxuries_shared_burden
+		}
+		upkeep = {
+			trigger = {
+				is_phototrophic = yes
+				has_very_high_living_standard_type = yes
+			}
+			food = @living_standard_phototrophic_normal
+			consumer_goods = @living_standard_luxuries_very_high
+		}
+		upkeep = {
+			trigger = {
+				is_phototrophic = yes
+				has_high_living_standard_type = yes
+			}
+			food = @living_standard_phototrophic_normal
+			consumer_goods = @living_standard_luxuries_high
+		}
+		upkeep = {
+			trigger = {
+				is_phototrophic = yes
+				OR = {
+					has_normal_living_standard_type = yes
+					has_academic_living_standard_type = yes
+				}
+			}
+			food = @living_standard_phototrophic_normal
+			consumer_goods = @living_standard_luxuries_normal
+		}
+		upkeep = {
+			trigger = {
+				is_phototrophic = yes
+				has_stratified_living_standard_type = yes
+			}
+			food = @living_standard_phototrophic_normal
+			consumer_goods = @living_standard_luxuries_low
+		}
+		upkeep = {
+			trigger = {
+				is_phototrophic = yes
+				has_low_living_standard_type = yes
+			}
+			food = @living_standard_phototrophic_normal
 			consumer_goods = @living_standard_luxuries_very_low
 		}
 
@@ -1513,8 +1692,13 @@ corrupt_drone = {
 
 		# Organic Upkeep
 		upkeep = {
+			trigger = { has_phototrophic_energy_upkeep = yes }
+			energy = @living_standard_phototrophic_normal
+		}
+		upkeep = {
 			trigger = {
 				is_organic_species = yes
+				is_phototrophic = no
 				is_lithoid = no
 				is_holofrixit = no
 				has_shared_burden_living_standard_type = yes
@@ -1525,6 +1709,7 @@ corrupt_drone = {
 		upkeep = {
 			trigger = {
 				is_organic_species = yes
+				is_phototrophic = no
 				is_lithoid = no
 				is_holofrixit = no
 				has_very_high_living_standard_type = yes
@@ -1535,6 +1720,7 @@ corrupt_drone = {
 		upkeep = {
 			trigger = {
 				is_organic_species = yes
+				is_phototrophic = no
 				is_lithoid = no
 				is_holofrixit = no
 				has_high_living_standard_type = yes
@@ -1545,6 +1731,7 @@ corrupt_drone = {
 		upkeep = {
 			trigger = {
 				is_organic_species = yes
+				is_phototrophic = no
 				is_lithoid = no
 				is_holofrixit = no
 				OR = {
@@ -1558,6 +1745,7 @@ corrupt_drone = {
 		upkeep = {
 			trigger = {
 				is_organic_species = yes
+				is_phototrophic = no
 				is_lithoid = no
 				is_holofrixit = no
 				has_stratified_living_standard_type = yes
@@ -1568,11 +1756,65 @@ corrupt_drone = {
 		upkeep = {
 			trigger = {
 				is_organic_species = yes
+				is_phototrophic = no
 				is_lithoid = no
 				is_holofrixit = no
 				has_low_living_standard_type = yes
 			}
 			food = @living_standard_food_normal
+			consumer_goods = @living_standard_luxuries_very_low
+		}
+
+		# Photo
+		upkeep = {
+			trigger = {
+				is_phototrophic = yes
+				has_shared_burden_living_standard_type = yes
+			}
+			food = @living_standard_phototrophic_normal
+			consumer_goods = @living_standard_luxuries_shared_burden
+		}
+		upkeep = {
+			trigger = {
+				is_phototrophic = yes
+				has_very_high_living_standard_type = yes
+			}
+			food = @living_standard_phototrophic_normal
+			consumer_goods = @living_standard_luxuries_very_high
+		}
+		upkeep = {
+			trigger = {
+				is_phototrophic = yes
+				has_high_living_standard_type = yes
+			}
+			food = @living_standard_phototrophic_normal
+			consumer_goods = @living_standard_luxuries_high
+		}
+		upkeep = {
+			trigger = {
+				is_phototrophic = yes
+				OR = {
+					has_normal_living_standard_type = yes
+					has_academic_living_standard_type = yes
+				}
+			}
+			food = @living_standard_phototrophic_normal
+			consumer_goods = @living_standard_luxuries_normal
+		}
+		upkeep = {
+			trigger = {
+				is_phototrophic = yes
+				has_stratified_living_standard_type = yes
+			}
+			food = @living_standard_phototrophic_normal
+			consumer_goods = @living_standard_luxuries_low
+		}
+		upkeep = {
+			trigger = {
+				is_phototrophic = yes
+				has_low_living_standard_type = yes
+			}
+			food = @living_standard_phototrophic_normal
 			consumer_goods = @living_standard_luxuries_very_low
 		}
 
@@ -2092,10 +2334,22 @@ xeno_ward = {
 		upkeep = {
 			trigger = {
 				is_organic_species = yes
+				is_phototrophic = no
 				is_lithoid = no
 				is_holofrixit = no
 			}
 			food = @living_standard_food_normal
+			consumer_goods = @living_standard_luxuries_very_high
+		}
+
+		# Phototrophic Upkeep
+		upkeep = {
+			trigger = { has_phototrophic_energy_upkeep = yes }
+			energy = @living_standard_phototrophic_normal
+		}
+		upkeep = {
+			trigger = { is_phototrophic = yes }
+			food = @living_standard_phototrophic_normal
 			consumer_goods = @living_standard_luxuries_very_high
 		}
 

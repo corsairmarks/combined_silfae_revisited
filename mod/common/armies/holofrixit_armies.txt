@@ -6,7 +6,7 @@ holowarriors_army = {
 	collateral_damage = 1
 	war_exhaustion = 1
 	time = 90
-	icon_frame = 2
+	icon = GFX_army_type_assault
 	has_species = yes
 	resources = {
 		category = armies
@@ -19,10 +19,9 @@ holowarriors_army = {
 	}
 	potential = {
 		owner = { has_authority = auth_holofrixit }
-	}
-	allow = {
 		FROM = { has_trait = trait_holowarrior }
 	}
+	use_armynames_from = assault_army
 	show_tech_unlock_if = { has_authority = auth_holofrixit }
 	prerequisites = { tech_assault_armies }
 }
@@ -35,7 +34,7 @@ geneholowarriors_army = {
 	collateral_damage = 0.75
 	war_exhaustion = 2
 	time = 180
-	icon_frame = 8
+	icon = GFX_army_type_xenomorph
 	has_species = yes
 	resources = {
 		category = armies
@@ -48,10 +47,9 @@ geneholowarriors_army = {
 	}
 	potential = {
 		owner = { has_authority = auth_holofrixit }
-	}
-	allow = {
 		FROM = { has_trait = trait_holowarrior_2 }
 	}
+	use_armynames_from = gene_warrior_army
 	show_tech_unlock_if = { has_authority = auth_holofrixit }
 	prerequisites = { tech_epigenetic_triggers }
 }
