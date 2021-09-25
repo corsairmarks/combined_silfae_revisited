@@ -133,7 +133,7 @@ serpentoid_system = {
 						20 = {
 							set_country_flag = steam_age 
 							set_primitive_age = steam_age
-							PREV = { create_serpentoid_system_primitive_armies = { COUNT = 17 NAME = "NAME_Industrial_Army" TYPE = "industrial_army" } }
+							PREV = { create_serpentoid_system_primitive_armies = { COUNT = 17 TYPE = "industrial_additional_army" } }
 						}
 					}
 				}
@@ -225,7 +225,7 @@ serpentoid_system = {
 						35 = {
 							set_country_flag = steam_age 
 							set_primitive_age = steam_age
-							PREV = { create_serpentoid_system_primitive_armies = { COUNT = 15 NAME = "NAME_Industrial_Army" TYPE = "industrial_army" } }
+							PREV = { create_serpentoid_system_primitive_armies = { COUNT = 15 TYPE = "industrial_additional_army" } }
 						}
 					}
 				}
@@ -458,7 +458,7 @@ serpentoid_system = {
 				set_country_flag = atomic_age
 				set_primitive_age = atomic_age
 			}
-			create_serpentoid_system_primitive_armies = { COUNT = 40 NAME = "NAME_Post-Atomic_Army" TYPE = "postatomic_army" }
+			create_serpentoid_system_primitive_armies = { COUNT = 40 TYPE = "postatomic_additional_army" }
 			setup_primitive_planet = yes
 		}
 	}

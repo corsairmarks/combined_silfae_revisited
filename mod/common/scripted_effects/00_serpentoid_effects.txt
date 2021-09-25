@@ -4,14 +4,13 @@
 
 # create extra armies for the primitives - they are intentionally much harder than normal to conquer
 create_serpentoid_system_primitive_armies = {
-	log = "create_serpentoid_system_primitive_armies $COUNT$ armies of type $TYPE$ named $NAME$"
+	log = "create_serpentoid_system_primitive_armies $COUNT$ armies of type $TYPE$"
 	while = {
 		count = $COUNT|1$
 		create_army = {
-			name = $NAME|NAME_Primitive_Army$
 			owner = last_created_country
 			species = last_created_species
-			type = $TYPE|primitive_army$
+			type = $TYPE|primitive_additional_army$
 		}
 	}
 }

@@ -16,17 +16,11 @@ building_space_pyramid = {
 	}
 	allow = {
 		custom_tooltip = {
-		text = building_grand_mausoleum_allowed_tooltip
+			text = building_grand_mausoleum_allowed_tooltip
 			exists = ruler
 			ruler = { NOT = { has_leader_flag = built_space_pyramid } }
 			owner = { NOT = { has_country_flag = constructing_space_pyramid } }
-			planet = {
-				OR = {
-					has_building = "building_capital"
-					has_building = "building_major_capital"
-					has_building = "building_system_capital"
-				}
-			}
+			planet = { has_upgraded_capital = yes }
 		}
 		custom_tooltip = {
 			text = "requires_being_serpentoids"
