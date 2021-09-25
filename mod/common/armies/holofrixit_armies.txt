@@ -21,6 +21,7 @@ holowarriors_army = {
 		owner = { has_authority = auth_holofrixit }
 		FROM = { has_trait = trait_holowarrior }
 	}
+	use_armynames_from = assault_army
 	show_tech_unlock_if = { has_authority = auth_holofrixit }
 	prerequisites = { tech_assault_armies }
 }
@@ -48,6 +49,7 @@ geneholowarriors_army = {
 		owner = { has_authority = auth_holofrixit }
 		FROM = { has_trait = trait_holowarrior_2 }
 	}
+	use_armynames_from = gene_warrior_army
 	show_tech_unlock_if = { has_authority = auth_holofrixit }
 	prerequisites = { tech_epigenetic_triggers }
 }
