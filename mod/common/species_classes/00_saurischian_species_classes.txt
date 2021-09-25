@@ -4,7 +4,6 @@ SRSCN = {
 	portraits = {
 		"saurischian"
 	}
-	# These should not be used for randomly generated species
 	graphical_culture = saurischian_01
 	move_pop_sound_effect = "moving_pop_confirmation"
 }

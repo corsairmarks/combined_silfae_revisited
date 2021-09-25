@@ -24,7 +24,7 @@ saurischian_system = {
 		size = { min = 20 max = 35 }
 		orbit_distance = 20
 		orbit_angle = { min = 90 max = 270 }
-		flags = { ignore_startup_effect starting_deposit starting_mining_target }
+		flags = { starting_deposit starting_mining_target }
 		init_effect = {
 			change_pc = pc_k_star # ensure it is set to the intended type
 			clear_deposits = yes
@@ -38,7 +38,7 @@ saurischian_system = {
 		size = { min = 10 max = 15 }
 		orbit_distance = 10
 		orbit_angle = 180
-		flags = { ignore_startup_effect starting_deposit starting_mining_target }
+		flags = { starting_deposit starting_mining_target }
 		init_effect = {
 			change_pc = pc_k_star # ensure it is set to the intended type
 			clear_deposits = yes
@@ -47,13 +47,13 @@ saurischian_system = {
 		}
 	}
 	planet = {
-		class = pc_molten 
+		class = pc_molten
 		name = "Exiptla"
 		orbit_distance = 50
 		orbit_angle = 15
 		size = 15
 		has_ring = no
-		flags = { ignore_startup_effect starting_deposit starting_mining_target }
+		flags = { starting_deposit starting_mining_target }
 		init_effect = {
 			clear_deposits = yes
 			prevent_anomaly = yes
@@ -67,7 +67,7 @@ saurischian_system = {
 		orbit_angle = 125
 		size = 25
 		has_ring = yes
-		flags = { ignore_startup_effect starting_deposit }
+		flags = { starting_deposit }
 		init_effect = {
 			clear_deposits = yes
 			prevent_anomaly = yes
@@ -79,9 +79,11 @@ saurischian_system = {
 			class = pc_barren
 			orbit_angle = 0
 			size = 5
+			flags = { starting_deposit }
 			init_effect = {
 				prevent_anomaly = yes
 				clear_deposits = yes
+				add_deposit = d_volatile_motes_2
 			}
 		}
 		moon = {
@@ -90,9 +92,11 @@ saurischian_system = {
 			class = pc_barren
 			orbit_angle = 0
 			size = 2
+			flags = { starting_deposit }
 			init_effect = {
 				prevent_anomaly = yes
 				clear_deposits = yes
+				add_deposit = d_volatile_motes_1
 			}
 		}
 	}
@@ -118,12 +122,11 @@ saurischian_system = {
 			class = pc_asteroid
 			orbit_angle = -40
 			size = 1
-			flags = { ignore_startup_effect starting_deposit starting_mining_target }
+			flags = { starting_deposit starting_mining_target }
 			init_effect = {
 				prevent_anomaly = yes
 				clear_deposits = yes
 				add_deposit = d_minerals_3
-				add_deposit = d_volatile_motes_1
 			}
 		}
 		moon = {
@@ -132,12 +135,11 @@ saurischian_system = {
 			class = pc_asteroid
 			orbit_angle = 240
 			size = 2
-			flags = { ignore_startup_effect starting_deposit starting_mining_target }
+			flags = { starting_deposit starting_mining_target }
 			init_effect = {
 				prevent_anomaly = yes
 				clear_deposits = yes
 				add_deposit = d_minerals_2
-				add_deposit = d_volatile_motes_1
 			}
 		}
 		moon = {
@@ -146,12 +148,11 @@ saurischian_system = {
 			class = pc_asteroid
 			orbit_angle = 70
 			size = 1
-			flags = { ignore_startup_effect starting_deposit starting_mining_target }
+			flags = { starting_deposit starting_mining_target }
 			init_effect = {
 				prevent_anomaly = yes
 				clear_deposits = yes
 				add_deposit = d_minerals_2
-				add_deposit = d_volatile_motes_1
 			}
 		}
 		moon = {
@@ -160,11 +161,11 @@ saurischian_system = {
 			class = pc_asteroid
 			orbit_angle = 0
 			size = 1
-			flags = { ignore_startup_effect starting_deposit starting_mining_target }
+			flags = { starting_deposit }
 			init_effect = {
 				prevent_anomaly = yes
 				clear_deposits = yes
-				add_deposit = d_minerals_2 
+				add_deposit = d_minerals_2
 				add_deposit = d_volatile_motes_1
 			}
 		}
@@ -174,7 +175,7 @@ saurischian_system = {
 			class = pc_molten
 			orbit_angle = -60
 			size = 3
-			flags = { ignore_startup_effect starting_deposit }
+			flags = { starting_deposit starting_mining_target }
 			init_effect = {
 				prevent_anomaly = yes
 				clear_deposits = yes
@@ -184,12 +185,13 @@ saurischian_system = {
 	}
 	planet = {
 		name = "Liatipoca"
-		class = pc_toxic 
+		class = pc_toxic
 		orbit_distance = 40
 		orbit_angle = 60
 		size = 25
 		has_ring = no
-		init_effect = {
+			flags = { starting_deposit }
+			init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			add_deposit = d_society_2
@@ -226,7 +228,7 @@ saurischian_system = {
 					ethos = {
 						ethic = "ethic_pacifist"
 						ethic = "ethic_xenophobe"
-						ethic = "ethic_spiritualist"			
+						ethic = "ethic_spiritualist"
 					}
 					flag = {
 						icon = {
@@ -249,7 +251,7 @@ saurischian_system = {
 				}
 				last_created_country = {
 					set_graphical_culture = preindustrial_01
-					set_country_flag = bronze_age 
+					set_country_flag = bronze_age
 					set_primitive_age = bronze_age
 				}
 				while = {
@@ -272,7 +274,7 @@ saurischian_system = {
 		orbit_angle = -160
 		size = 30
 		has_ring = no
-		flags = { ignore_startup_effect starting_deposit starting_research_target }
+		flags = { starting_deposit starting_research_target }
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
@@ -280,13 +282,13 @@ saurischian_system = {
 		}
 	}
 	planet = {
-		class = pc_gas_giant 
+		class = pc_gas_giant
 		name = "Uhalictanon"
 		orbit_distance = 90
 		orbit_angle = -195
 		size = 30
 		has_ring = yes
-		flags = { ignore_startup_effect starting_deposit }
+		flags = { starting_deposit }
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
@@ -329,7 +331,7 @@ saurischian_neighbor_t1 = {
 		has_ring = no
 		init_effect = {
 			clear_deposits = yes
-			add_deposit = d_dark_matter_deposit_1 
+			add_deposit = d_dark_matter_deposit_1
 		}
 	}
 	neighbor_system = {
@@ -402,7 +404,7 @@ saurischian_neighbor_t102 = {
 }
 
 # Neighbor Tier 1 First Colony
-saurischian_neighbor_t1_first_colony = {	
+saurischian_neighbor_t1_first_colony = {
 	name = "Elisinatica"
 	class = sc_m
 	flags = { neighbor_t1_first_colony empire_cluster }
@@ -442,18 +444,18 @@ saurischian_neighbor_t1_first_colony = {
 		count = { min = 2 max = 5 }
 		orbit_distance = 25
 		change_orbit = 15
-		moon = {			
+		moon = {
 			count = { min = 0 max = 1 }
 			orbit_distance = 5
 		}
 	}
 	neighbor_system = {
 		trigger = { num_guaranteed_colonies >= 2 }
-		hyperlane_jumps = { min = 1 max = 2 }	
+		hyperlane_jumps = { min = 1 max = 2 }
 		initializer = "saurischian_neighbor_t3_second_colony"
 	}
 	neighbor_system = {
-		hyperlane_jumps = { min = 1 max = 2 }	
+		hyperlane_jumps = { min = 1 max = 2 }
 		initializer = "saurischian_neighbor_t2"
 	}
 }
@@ -497,7 +499,7 @@ saurischian_neighbor_t2 = {
 		count = { min = 2 max = 5 }
 		orbit_distance = 25
 		change_orbit = 9
-		moon = {		
+		moon = {
 			count = { min = 0 max = 10 }
 			orbit_distance = 5
 		}
