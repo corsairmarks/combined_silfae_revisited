@@ -112,8 +112,8 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Ensure correct `graphical_culture`
 * 2.0.0 Mark as compatible with Stellaris version 3.1.1 "Lem"
     * Add new localisation keys introduced in 3.1
-    * Update Pop strata (categories) with updates from the base game - adding Budding and Phototropic/Radiotropic
-    * Update Pop jobs with updates from from the base game - Catalytic Processing jobs, new event jobs, and Scrap Miners
+    * Update Pop strata (categories) with updates from the base game - adding Budding, Phototropic/Radiotropic, etc.
+    * Update Pop jobs with updates from from the base game - Catalytic Processing jobs, new event jobs, Scrap Miners, etc.
     * Update with code improvements from the base game
 
 ## Source Code
