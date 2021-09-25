@@ -1,4 +1,4 @@
-# overrideen to add my custom Void Dwellers system to the list of allowable ones
+# overridden to add my custom Void Dwellers system to the list of allowable ones
 origin_void_dwellers = {
 	is_origin = yes
 	icon = "gfx/interface/icons/origins/origin_void_dwellers.dds"
@@ -16,7 +16,15 @@ origin_void_dwellers = {
 
 	possible = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		civics = { NOT = { value = civic_agrarian_idyll } }
+		civics = { NOT = {	value = civic_agrarian_idyll } }
+		civics = {
+			NOR = {
+				text = civic_tooltip_not_idyllic_bloom
+				value = civic_idyllic_bloom
+				value = civic_hive_idyllic_bloom
+			}
+		}
+
 	}
 
 	description = "origin_tooltip_void_dwellers_effects"
