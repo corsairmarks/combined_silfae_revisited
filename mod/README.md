@@ -32,7 +32,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 * You can use Silfae's Holofrixit portraits for your own empires without any DLC requirements
     * Using the main Holofrixit species class will consume energy instead of food
     * Added a second species class (Holofrixit Alt.) that is a `BIOLOGICAL` archetype, so you can choose to play without the requirement for energy upkeep
-* Disable the "Holocrisis" - a duplicate of original AI rebellion - at least until I can spend more time updating it to work with the current game version **postponed until after 3.1 'Lem'**
+* Disable the "Holocrisis" - a duplicate of original AI rebellion - at least until I can spend more time updating it to work with the current game version **postponed until all of my mods updated for 3.1 "Lem"**
 
 ## Compatibility
 
@@ -112,7 +112,8 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Ensure correct `graphical_culture`
 * 2.0.0 Mark as compatible with Stellaris version 3.1.1 "Lem"
     * Add new localisation keys introduced in 3.1
-    * Update Pop strata (categories) with updates from base game - adding Budding and Phototropic/Radiotropic
+    * Update Pop strata (categories) with updates from the base game - adding Budding and Phototropic/Radiotropic
+    * Update Pop jobs with updates from from the base game - Catalytic Processing jobs, new event jobs, and Scrap Miners
     * Update with code improvements from the base game
 
 ## Source Code

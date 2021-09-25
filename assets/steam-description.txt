@@ -39,7 +39,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 	[*]Main Holofrixit species class consumes energy instead of food
 	[*]Added second species class (Holofrixit Alt.) that is [b]BIOLOGICAL[/b] archetype, so you can play without the requirement for energy upkeep
 	[/list]
-[*]Disable the "Holocrisis" until updated [b]postponed until after 3.1 'Lem'[/b]
+[*]Disable the "Holocrisis" until updated [b]postponed until all of my mods updated for 3.1 "Lem"[/b]
 [/list]
 
 [h2]Compatibility[/h2]
