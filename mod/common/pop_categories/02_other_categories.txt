@@ -158,19 +158,6 @@ slave = {
 		}
 		upkeep = {
 			trigger = {
-				is_organic_species = yes
-				is_lithoid = no
-				is_holofrixit = no
-				OR = {
-					has_very_high_living_standard_type = yes
-					has_high_living_standard_type = yes
-				}
-			}
-			food = @living_standard_food_normal
-			consumer_goods = @living_standard_luxuries_low
-		}
-		upkeep = {
-			trigger = {
 				is_phototrophic = yes
 				OR = {
 					has_very_high_living_standard_type = yes
