@@ -1,7 +1,7 @@
 @mid_rare = 0.25
 
 d_alien_pets_deposit = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_rare
 
 	potential = {

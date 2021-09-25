@@ -13,67 +13,21 @@ event = {
 	}
 }
 
-# triggered by on_leader_spawned
-# THIS = country
-# FROM = leader
-country_event = {
-	id = octeelan_evt.1
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		exists = FROM
-		FROM = {
-			gender = male
-			species = { species_portrait = octeelan }
-		}
-	}
-	immediate = {
-		FROM = { set_is_female = yes }
-	}
-}
-
-# triggered by on_election_started
-country_event = {
-	id = octeelan_evt.2
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		any_owned_leader = {
-			has_leader_flag = temp_election_leader
-			gender = male
-			species = { species_portrait = octeelan }
-		}
-	}
-	immediate = {
-		every_owned_leader = {
-			limit = {
-				has_leader_flag = temp_election_leader
-				gender = male
-				species = { species_portrait = octeelan }
-			}
-			set_is_female = yes
-		}
-	}
-}
-
 # triggered by on_game_start_country
 country_event = {
 	id = octeelan_evt.3
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		any_owned_leader = {
-			gender = male
-			species = { species_portrait = octeelan }
-		}
+		any_owned_pop_species = { species_portrait = octeelan }
 	}
 	immediate = {
-		every_owned_leader = {
-			limit = {
-				gender = male
-				species = { species_portrait = octeelan }
+		every_owned_pop_species = {
+			limit = { species_portrait = octeelan }
+			change_species_characteristics = {
+				gender = female
+				can_change_leader = yes
 			}
-			set_is_female = yes
 		}
 	}
 }

@@ -21,23 +21,6 @@ on_single_player_save_game_load = {
 	}
 }
 
-# fired when a new leader is generated for an empire, to be available for recruitment
-# THIS = country
-# FROM = leader
-on_leader_spawned = {
-	events = {
-		octeelan_evt.1
-	}
-}
-
-# fired when an election starts
-# THIS = country
-on_election_started = {
-	events = {
-		octeelan_evt.1
-	}
-}
-
 # fired during empire initialization when starting a new game
 # THIS = planet, capital
 # FROM = species, founder
