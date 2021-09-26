@@ -73,6 +73,7 @@ This mod preempts one event from the base game related to restoring relic worlds
     * Fix changed field name in custom deposits
     * Update homeworld setup to account for new changes in 3.1 (e.g. Reanimators, Clone Army, Pleasure Seekers, etc.)
     * The creatures of the Shroud want to devour your homeworld if you start with the initializer `eldar_system`
+* 2.0.1 Fix Eye of Terror description highlighting
 
 ## Source Code
 
