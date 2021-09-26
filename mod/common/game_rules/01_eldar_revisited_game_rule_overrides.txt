@@ -69,7 +69,7 @@ can_orbital_bombard = {
 		}
 		AND = {
 			root.owner = { is_country_type = shroud_spirits }
-			from = { has_planet_flag = is_shroud_bombard_target }
+			from = { has_planet_flag = is_shroud_attack_planet_target }
 		}
 	}
 }

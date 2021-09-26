@@ -313,7 +313,7 @@ system_event = {
 		floor_variable = midgame_years_passed_scaled_entities
 		change_variable = {
 			which = midgame_years_passed_scaled_entities
-			value = 1
+			value = 10
 		}
 		create_fleet = {
 			name = NAME_shroud_psionic_manifestations
@@ -355,7 +355,7 @@ system_event = {
 				set_fleet_stance = aggressive
 				set_fleet_bombardment_stance = armageddon
 				set_aggro_range_measure_from = self
-				set_aggro_range = 10000
+				set_aggro_range = 3000
 				set_formation_scale = 10
 			}
 		}
@@ -414,7 +414,7 @@ country_event = {
 	show_sound = event_ghost_town
 	trigger = {
 		FROM = { is_country_type = shroud_spirits }
-		FROMFROM = { has_planet_flag = is_silfae_eldar_craftworld }
+		FROMFROM = { has_planet_flag = is_shroud_attack_planet_target }
 	}
 	immediate = {
 		FROMFROM = {
@@ -440,7 +440,7 @@ planet_event = {
 	picture = GFX_evt_shrouded_planet
 	show_sound = pc_shroud_eaten
 	trigger = {
-		has_planet_flag = is_silfae_eldar_craftworld
+		has_planet_flag = is_shroud_attack_planet_target
 		FROM = { is_country_type = shroud_spirits }
 	}
 	immediate = {
@@ -453,5 +453,106 @@ planet_event = {
 	}
 	option = {
 		name = DOTDOTDOT
+	}
+}
+
+# fired by on_space_battle_won
+# ROOT = owner of fleet 1 (winner)
+# FROM = owner of fleet 2 (loser)
+# FROMFROM = fleet, winner
+# FROMFROMFROM = fleet, loser
+country_event = {
+	id = eldar_evt.11
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		exists = FROMFROM
+		FROMFROM = {
+			has_fleet_flag = is_shroud_bombard_fleet
+			solar_system = {
+				any_system_planet = {
+					has_planet_flag = is_shroud_attack_planet_target
+					NOT = { is_planet_class = pc_shrouded }
+				}
+			}
+		}
+	}
+	immediate = {
+		FROMFROM = {
+			fleet_event = {
+				id = eldar_evt.14
+			}
+		}
+	}
+}
+
+# triggerd by on_planet_zero_pops and on_planet_zero_pops_ground_combat
+# ROOT = planet
+# FROM = country, doer of bad things (bombard, collateral damager)
+planet_event = {
+	id = eldar_evt.12
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_planet_flag = is_shroud_attack_planet_target
+		FROM = { is_country_type = shroud_spirits }
+	}
+	immediate = {
+		solar_system = {
+			every_fleet_in_system = {
+				limit = { has_fleet_flag = is_shroud_bombard_fleet }
+				fleet_event = {
+					id = eldar_evt.14
+				}
+			}
+		}
+	}
+}
+
+# fired by eldar_evt.11 and eldar_evt.12
+# ROOT = fleet
+fleet_event = {
+	id = eldar_evt.14
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_fleet_flag = is_shroud_bombard_fleet
+		solar_system = {
+			any_system_planet = {
+				has_planet_flag = is_shroud_attack_planet_target
+				NOT = { is_planet_class = pc_shrouded }
+			}
+		}
+	}
+	immediate = {
+		solar_system = {
+			ordered_system_planet = {
+				limit = {
+					has_planet_flag = is_shroud_attack_planet_target
+					NOT = { is_planet_class = pc_shrouded }
+				}
+				position = 0
+				order_by = trigger:planet_devastation
+				save_event_target_as = shroud_bombard_planet
+			}
+		}
+		if = {
+			limit = { exists = event_target:shroud_bombard_planet }
+			clear_orders = yes
+			clear_fleet_actions = THIS
+			set_fleet_bombardment_stance = armageddon
+			queue_actions = {
+				find_random_planet = {
+					trigger = {
+						id = "shroud_bombard_planet_trigger_1"
+						is_planet = event_target:shroud_bombard_planet
+					}
+					found_planet = {
+						move_to = THIS
+						orbit_planet = THIS
+					}
+				}
+			}
+		}
 	}
 }
