@@ -33,11 +33,15 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 
 Compatible with any mod that does not add the same portraits, species class, or art assets.
 
-May conflict with other mods that need to alter how relic worlds are upgraded.
+May conflict with other mods that need to alter how relic worlds are upgraded or make changes to Armageddon Bombardment.
 
 The Launcher will tell you that some mods are outdated - that is because the dependency is out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mod.
 
 Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.
+
+### Partial Overrides
+
+This mod also allows the Creatures of the Shroud country to bombard your homeworld if you start in the Eye of Terror system initializer.  And they will use the Armageddon bombardment stance to do so.  To make this work, this mod overrides one game rule `can_orbital_bombard` and one bombardment stance `armageddon`.
 
 ### Dependencies
 
@@ -51,10 +55,11 @@ This mod should be added before the game has started.  If you remove it from a g
 
 ## Known Issues
 
-This mod preempts one event from the base game related to restoring relic worlds to ecumenopoleis (`mega.200`).  Expect to see one line in error.log like this:
+This mod preempts one event from the base game related to restoring relic worlds to ecumenopoleis (`mega.200`) and a bombardment stance (`armageddon`).  Expect to see two lines in error.log like this:
 
 ```
-[16:33:48][eventmanager.cpp:355]: an event with id [mega.201] already exists!  file: events/megacorp_events.txt line: 190
+[00:09:28][game_singleobjectdatabase.h:147]: Object with key: armageddon already exists
+[00:09:29][eventmanager.cpp:355]: an event with id [mega.201] already exists!  file: events/megacorp_events.txt line: 190
 ```
 
 ## Changelog
@@ -67,6 +72,7 @@ This mod preempts one event from the base game related to restoring relic worlds
     * Update Eye of Terror planet class with new icon syntax
     * Fix changed field name in custom deposits
     * Update homeworld setup to account for new changes in 3.1 (e.g. Reanimators, Clone Army, Pleasure Seekers, etc.)
+    * The creatures of the Shroud want to devour your homeworld if you start with the initializer `eldar_system`
 
 ## Source Code
 
