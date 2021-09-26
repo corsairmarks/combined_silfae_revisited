@@ -123,6 +123,7 @@ planet_event = {
 	}
 }
 
+# random ground invasion for craftworld
 planet_event = {
 	id = eldar_evt.6
 	mean_time_to_happen = {
@@ -286,6 +287,7 @@ planet_event = {
 	}
 }
 
+# triggered by eldar_evt.8
 system_event = {
 	id = eldar_evt.7
 	is_triggered_only = yes
@@ -366,6 +368,7 @@ system_event = {
 	}
 }
 
+# random space invasion for craftworld
 planet_event = {
 	id = eldar_evt.8
 	hide_window = yes
@@ -401,68 +404,13 @@ planet_event = {
 	}
 }
 
-# triggered by on_planet_defenders_lose
-# ROOT = country, planet owner
-# FROM = country, attack leader
-# FROMFROM = planet
-country_event = {
-	id = eldar_evt.9
-	is_triggered_only = yes
-	title = eldar_evt.9.title
-	desc = eldar_evt.9.desc
-	picture = GFX_evt_burning_settlement
-	show_sound = event_ghost_town
-	trigger = {
-		FROM = { is_country_type = shroud_spirits }
-		FROMFROM = { has_planet_flag = is_shroud_attack_planet_target }
-	}
-	immediate = {
-		FROMFROM = {
-			every_owned_pop = {
-				set_pop_flag = event_purge
-				unemploy_pop = yes
-			}
-		}
-	}
-	option = {
-		name = TERRIBLE
-	}
-}
-
-# triggerd by on_pop_purged, on_planet_zero_pops, and on_planet_zero_pops_ground_combat
-# ROOT = planet
-# FROM = country, doer of bad things (purge, bombard, collateral damager)
-planet_event = {
-	id = eldar_evt.10
-	is_triggered_only = yes
-	title = eldar_evt.10.title
-	desc = eldar_evt.10.desc
-	picture = GFX_evt_shrouded_planet
-	show_sound = pc_shroud_eaten
-	trigger = {
-		has_planet_flag = is_shroud_attack_planet_target
-		FROM = { is_country_type = shroud_spirits }
-	}
-	immediate = {
-		remove_all_armies = yes
-		remove_all_districts = yes
-		remove_all_buildings = yes
-		clear_deposits = yes
-		clear_planet_modifiers = yes
-		change_pc = pc_shrouded
-	}
-	option = {
-		name = DOTDOTDOT
-	}
-}
-
-# fired by on_space_battle_won
+# triggered by on_space_battle_won
 # ROOT = owner of fleet 1 (winner)
 # FROM = owner of fleet 2 (loser)
 # FROMFROM = fleet, winner
 # FROMFROMFROM = fleet, loser
 country_event = {
-	id = eldar_evt.11
+	id = eldar_evt.9
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
@@ -480,17 +428,17 @@ country_event = {
 	immediate = {
 		FROMFROM = {
 			fleet_event = {
-				id = eldar_evt.14
+				id = eldar_evt.11
 			}
 		}
 	}
 }
 
-# triggerd by on_planet_zero_pops and on_planet_zero_pops_ground_combat
+# triggered by on_planet_zero_pops and on_planet_zero_pops_ground_combat
 # ROOT = planet
 # FROM = country, doer of bad things (bombard, collateral damager)
 planet_event = {
-	id = eldar_evt.12
+	id = eldar_evt.10
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
@@ -502,17 +450,17 @@ planet_event = {
 			every_fleet_in_system = {
 				limit = { has_fleet_flag = is_shroud_bombard_fleet }
 				fleet_event = {
-					id = eldar_evt.14
+					id = eldar_evt.11
 				}
 			}
 		}
 	}
 }
 
-# fired by eldar_evt.11 and eldar_evt.12
+# fired by eldar_evt.9 and eldar_evt.10
 # ROOT = fleet
 fleet_event = {
-	id = eldar_evt.14
+	id = eldar_evt.11
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
@@ -554,5 +502,161 @@ fleet_event = {
 				}
 			}
 		}
+	}
+}
+
+# triggered by on_planet_defenders_lose
+# ROOT = country, planet owner
+# FROM = country, attack leader
+# FROMFROM = planet
+country_event = {
+	id = eldar_evt.14
+	is_triggered_only = yes
+	title = eldar_evt.9.title
+	desc = eldar_evt.9.desc
+	picture = GFX_evt_burning_settlement
+	show_sound = event_ghost_town
+	location = FROMFROM
+	trigger = {
+		FROM = { is_country_type = shroud_spirits }
+		FROMFROM = { has_planet_flag = is_shroud_attack_planet_target }
+	}
+	immediate = {
+		FROMFROM = {
+			every_owned_pop = {
+				set_pop_flag = event_purge
+				unemploy_pop = yes
+			}
+		}
+	}
+	option = {
+		name = TERRIBLE
+	}
+}
+
+# triggered by on_planet_attackers_win
+# ROOT = country, attack leader
+# FROM = country, planet owner
+# FROMFROM = planet
+country_event = {
+	id = eldar_evt.15
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		FROMFROM = {
+			has_planet_flag = is_shroud_attack_planet_target
+			any_owned_pop = { has_pop_flag = event_purge }
+			controller = { is_country_type = shroud_spirits }
+		}
+	}
+	immediate = {
+		FROMFROM = {
+			set_owner = ROOT
+			every_owned_pop = {
+				remove_pop_flag = event_purge
+				unemploy_pop = yes
+				remove_modifier = pop_recently_conquered
+				add_modifier = {
+					modifier = pop_liberation_fever
+					years = 10
+				}
+			}
+		}
+	}
+}
+
+# triggerd by on_pop_purged
+# ROOT = planet
+# FROM = country, planet owner
+# FROMFROM = pop, purged
+planet_event = {
+	id = eldar_evt.16
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_planet_flag = is_shroud_attack_planet_target
+		num_pops = 1 # last Pop is still alive when on_pop_purged is fired
+		controller = { is_country_type = shroud_spirits }
+		FROMFROM = { has_pop_flag = event_purge }
+	}
+	immediate = {
+		planet_event = {
+			id = eldar_evt.19
+		}
+	}
+}
+
+# triggerd on_planet_zero_pops
+# ROOT = planet
+# FROM = country, bombarder
+planet_event = {
+	id = eldar_evt.17
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_planet_flag = is_shroud_attack_planet_target
+		FROM = { is_country_type = shroud_spirits }
+	}
+	immediate = {
+		planet_event = {
+			id = eldar_evt.19
+		}
+	}
+}
+
+# triggerd on_planet_zero_pops_ground_combat
+# ROOT = planet
+# FROM = country, army owner
+planet_event = {
+	id = eldar_evt.18
+	is_triggered_only = yes
+	hide_window = yes
+	pre_triggers = {
+		has_ground_combat = yes
+	}
+	trigger = {
+		has_planet_flag = is_shroud_attack_planet_target
+		any_planet_army = { owner = { is_country_type = shroud_spirits } }
+	}
+	immediate = {
+		planet_event = {
+			id = eldar_evt.19
+		}
+	}
+}
+
+# triggerd by eldar_evt.16, eldar_evt.17, and eldar_evt.18
+# ROOT = planet
+planet_event = {
+	id = eldar_evt.19
+	is_triggered_only = yes
+	title = eldar_evt.10.title
+	desc = eldar_evt.10.desc
+	picture = GFX_evt_shrouded_planet
+	show_sound = pc_shroud_eaten
+	location = ROOT
+	trigger = {
+		has_planet_flag = is_shroud_attack_planet_target
+	}
+	immediate = {
+		set_variable = {
+			which = current_devastation
+			value = trigger:planet_devastation
+		}
+		multiply_variable = {
+			which = current_devastation
+			value = -1
+		}
+		remove_all_armies = yes
+		remove_all_districts = yes
+		remove_all_buildings = yes
+		clear_deposits = yes
+		clear_planet_modifiers = yes
+		add_planet_devastation = current_devastation
+		change_pc = pc_shrouded
+		clear_variable = current_devastation
+	}
+	option = {
+		name = DOTDOTDOT
 	}
 }

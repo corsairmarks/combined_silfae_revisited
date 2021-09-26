@@ -40,23 +40,37 @@ on_terraforming_complete = {
 	}
 }
 
+# fired for the attacker upon victory (before controller is switched)
+# THIS = country, attack leader
+# FROM = country, planet owner
+# FROMFROM = planet
+# IDENTITIES: attacker is the side that "IsHostile" to
+# the planet controller; e.g. spawned monster armies
+# are attackers, but if they win and the player attempts
+# to retake the planet, the player is the attacker
+on_planet_attackers_win = {
+	events = {
+		eldar_evt.15
+	}
+}
+
 # fires for the defender upon defeat
 # THIS = country, planet owner
 # FROM = country, attack leader
 # FROMFROM = planet
 on_planet_defenders_lose = {
 	events = {
-		eldar_evt.9
+		eldar_evt.14
 	}
 }
 
 # fired when a pop has finished purging
 # THIS = planet
-# FROM = country, purger
+# FROM = country, planet owner
 # FROMFROM = pop
 on_pop_purged = {
 	events = {
-		eldar_evt.10
+		eldar_evt.16
 	}
 }
 
@@ -66,7 +80,7 @@ on_pop_purged = {
 on_planet_zero_pops = {
 	events = {
 		eldar_evt.10
-		eldar_evt.12
+		eldar_evt.17
 	}
 }
 
@@ -75,7 +89,7 @@ on_planet_zero_pops = {
 # FROM = country, army owner
 on_planet_zero_pops_ground_combat = {
 	events = {
-		eldar_evt.10
+		eldar_evt.18
 	}
 }
 
@@ -85,6 +99,6 @@ on_planet_zero_pops_ground_combat = {
 # FROMFROMFROM = fleet, loser
 on_space_battle_won = {
 	events = {
-		eldar_evt.11
+		eldar_evt.9
 	}
 }
