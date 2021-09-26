@@ -2,7 +2,7 @@
 pc_silfae_eye_of_terror = {
 	entity = "silfae_eye_of_terror"
 	entity_scale = 20.0
-	icon_frame = 30
+	icon = GFX_planet_type_pulsar
 	picture = pc_shrouded
 
 	# black hole
