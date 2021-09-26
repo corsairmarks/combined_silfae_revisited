@@ -1,0 +1,46 @@
+armageddon = {
+	trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				OR = {
+					has_policy_flag = orbital_bombardment_armageddon
+					is_crisis_faction = yes
+					has_menace_perk = menp_death_from_above		# Menace Perk: Death From Above
+				}
+			}
+			AND = {
+				root = { has_fleet_flag = is_shroud_bombard_fleet }
+				owner = { is_country_type = shroud_spirits }
+			}
+		}
+	}
+
+	default = no
+
+	stop_when_armies_dead = no
+	abduct_pops = no
+
+	planet_damage = 1.5
+	army_damage = 2.0
+
+	kill_pop_chance = {
+		base = 1.0
+	}
+	min_pops_to_kill_pop = 0
+
+	# root = fleet
+	# from = planet
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0.01
+			exists = from
+			from = {
+				owner = { NOT = { is_hostile = root.owner } }
+			}
+			exists = owner
+			owner = { is_crisis_faction = no }
+		}
+	}
+}

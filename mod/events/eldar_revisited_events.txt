@@ -323,6 +323,7 @@ system_event = {
 			}
 			effect = {
 				set_owner = event_target:shroud_country
+				set_fleet_flag = is_shroud_bombard_fleet
 				while = {
 					count = PREV.midgame_years_passed_scaled_entities
 					random_list = {
@@ -353,9 +354,9 @@ system_event = {
 				}
 				set_fleet_stance = aggressive
 				set_fleet_bombardment_stance = armageddon
-				set_aggro_range_measure_from = return_point
-				set_aggro_range = 3000
-				set_formation_scale = 5
+				set_aggro_range_measure_from = self
+				set_aggro_range = 10000
+				set_formation_scale = 10
 			}
 		}
 		clear_variable = midgame_years_passed_scaled_entities
