@@ -575,7 +575,7 @@ planet_event = {
 	hide_window = yes
 	trigger = {
 		has_planet_flag = is_shroud_attack_planet_target
-		num_pops = 1 # last Pop is still alive when on_pop_purged is fired
+		num_pops <= 1 # last Pop is still alive when on_pop_purged is fired
 		controller = { is_country_type = shroud_spirits }
 		FROMFROM = { has_pop_flag = event_purge }
 	}
