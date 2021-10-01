@@ -14,14 +14,14 @@ This is a bundle of mods to make it a little easier to sub and ensure cross-comp
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2581388205]Animated Eldar Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/eldar_portraits_revisited]Source[/url] 43f475865b096f3df747b2f8c5db0349ee44a502)
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2585946800]Animated Hidden Eye Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/slreptilian_portraits_revisited]Source[/url] da633b5a76d7215aa898583f6b30bdf7b1438a73)
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2578037235]Animated Hollow Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/horrorworm_portraits_revisited]Source[/url] 0a0755042a68a5c55e04326d3a05368389e2e3f8)
-[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2592592503]Animated Holosphere Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/holosphere_rising_revisited]Source[/url] c022abece292d70460dd04573b4859a199c98431)
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2592592503]Animated Holosphere Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/holosphere_rising_revisited]Source[/url] 4f2b63a36e15bd8fb4229d44751ee00c0a4e2c25)
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2576290763]Animated Hyena Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/hyenafolk_portraits_revisited]Source[/url] bd0fe14c1bdbbb4c567f5bef97ff2b8ee4cefe85)
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2584680339]Animated Octee-lan Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/octeelan_portraits_revisited]Source[/url] e007808f72529a7fe09a72beb2658c955103d583)
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2583358569]Animated Quarian Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/quarian_portraits_revisited]Source[/url] 6cb3eb9e05fd8f2cb0fb095d0962909ea6b35fc7)
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2577216891]Animated Raptor Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/saurischian_portraits_revisited]Source[/url] a8831699c1b3e197f21b48aca48ebed40aea55f5)
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2577093634]Animated Serpentoid Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/serpentoid_portraits_revisited]Source[/url] da9a4b6fc9acb5a207e83014e93a0bf5994398b1)
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2585030748]Animated Shark Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/sharkanian_portraits_revisited]Source[/url] 2cc36020616deb6c32617a9839ca6e2e6d71d911)
-[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2579736379]Animated Silicoid Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/silicoid_portraits_revisited]Source[/url] bbe6faa673f769006d40199049786a57ddb02415)
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2579736379]Animated Silicoid Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/silicoid_portraits_revisited]Source[/url] 5e3a085cd6fce25c938a3443a54464c51bc15c1f)
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2577789863]Animated Xirmian Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/xirmian_portraits_revisited]Source[/url] 13f46369087a4b07e0c6e1f895dc8656e98d7960)
 [/list]
 
@@ -31,7 +31,7 @@ Hosted on [url=https://github.com/corsairmarks/combined_silfae_revisited]Github[
 
 [h1]Compatibility[/h1]
 
-Requires Stellaris 3.1.1 "Lem" and disables achievements.
+Requires Stellaris 3.1.2 "Lem" and disables achievements.
 
 Check each of the contained mods for an explicit list of incompatibility notes.  Check each of the contained mods for an explicit list of incompatibility notes.  Notably almost all Pop jobs and all Pop strata are overwritten (primarily for the Holosphere but also Silicoids), making this mod incompatible with other mods that make changes to Pop jobs or strata.
 

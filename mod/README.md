@@ -13,14 +13,14 @@ This is a bundle of mods to make it a little easier to sub and ensure cross-comp
 * [Animated Eldar Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2581388205) ([Source](https://github.com/corsairmarks/eldar_portraits_revisited) 43f475865b096f3df747b2f8c5db0349ee44a502)
 * [Animated Hidden Eye Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2585946800) ([Source](https://github.com/corsairmarks/slreptilian_portraits_revisited) da633b5a76d7215aa898583f6b30bdf7b1438a73)
 * [Animated Hollow Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2578037235) ([Source](https://github.com/corsairmarks/horrorworm_portraits_revisited) 0a0755042a68a5c55e04326d3a05368389e2e3f8)
-* [Animated Holosphere Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2592592503) ([Source](https://github.com/corsairmarks/holosphere_rising_revisited) c022abece292d70460dd04573b4859a199c98431)
+* [Animated Holosphere Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2592592503) ([Source](https://github.com/corsairmarks/holosphere_rising_revisited) 4f2b63a36e15bd8fb4229d44751ee00c0a4e2c25)
 * [Animated Hyena Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2576290763) ([Source](https://github.com/corsairmarks/hyenafolk_portraits_revisited) bd0fe14c1bdbbb4c567f5bef97ff2b8ee4cefe85)
 * [Animated Octee-lan Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2584680339) ([Source](https://github.com/corsairmarks/octeelan_portraits_revisited) e007808f72529a7fe09a72beb2658c955103d583)
 * [Animated Quarian Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2583358569) ([Source](https://github.com/corsairmarks/quarian_portraits_revisited) 6cb3eb9e05fd8f2cb0fb095d0962909ea6b35fc7)
 * [Animated Raptor Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2577216891) ([Source](https://github.com/corsairmarks/saurischian_portraits_revisited) a8831699c1b3e197f21b48aca48ebed40aea55f5)
 * [Animated Serpentoid Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2577093634) ([Source](https://github.com/corsairmarks/serpentoid_portraits_revisited) da9a4b6fc9acb5a207e83014e93a0bf5994398b1)
 * [Animated Shark Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2585030748) ([Source](https://github.com/corsairmarks/sharkanian_portraits_revisited) 2cc36020616deb6c32617a9839ca6e2e6d71d911)
-* [Animated Silicoid Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2579736379) ([Source](https://github.com/corsairmarks/silicoid_portraits_revisited) bbe6faa673f769006d40199049786a57ddb02415)
+* [Animated Silicoid Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2579736379) ([Source](https://github.com/corsairmarks/silicoid_portraits_revisited) 5e3a085cd6fce25c938a3443a54464c51bc15c1f)
 * [Animated Xirmian Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2577789863) ([Source](https://github.com/corsairmarks/xirmian_portraits_revisited) 13f46369087a4b07e0c6e1f895dc8656e98d7960)
 
 ## Source Code
@@ -44,7 +44,7 @@ Each of the source repositories above is added as a remote to this repository on
 
 # Compatibility
 
-Requires Stellaris 3.1.1 "Lem" and disables achievements.
+Requires Stellaris 3.1.2 "Lem" and disables achievements.
 
 Check each of the contained mods for an explicit list of incompatibility notes.  Notably almost all Pop jobs and all Pop strata are overwritten (primarily for the Holosphere but also Silicoids), making this mod incompatible with other mods that make changes to Pop jobs or strata.
 
@@ -79,4 +79,7 @@ You should only add this mod before starting a new game, or remove it before sta
 
 * 1.0.0 Initial version
 * 1.0.1 Update Octee-lan portraits - resolves critical bug where starbases were the wrong type
-* 2.0.0 All merged mods updated for Stellaris 3.1 "Lem"
+* 2.0.0 All merged mods updated for Stellaris version 3.1 "Lem"
+* 2.0.1 Update merged mods for Stellaris version 3.1.2
+    * Updated: Animated Holosphere Portraits: Revisited at 2.0.1
+    * Updated: Animated Silicoid Portraits: Revisited at 2.0.2
