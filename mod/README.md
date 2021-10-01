@@ -115,6 +115,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Update Pop strata (categories) with updates from the base game - adding Budding, Phototropic/Radiotropic, etc.
     * Update Pop jobs with updates from from the base game - Catalytic Processing jobs, new event jobs, Scrap Miners, etc.
     * Update with code improvements from the base game
+* 2.0.1 Update Pop jobs with deficit changes for Catalytic Tech/Drone in Stellaris 3.1.2
 
 ## Source Code
 
