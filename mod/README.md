@@ -6,7 +6,7 @@ There are other mods which contain these portraits, so why should you choose thi
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.1.*, the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.1.2, the latest version when this was written.  Updates include:
 
 * Update Holofrixit shipset (reuse of Unbidden) to work with current Stellaris - starbases, titans, juggernauts, and colossi fall back to molluscoid (the fallback for the Unbidden)
 * Enhance Holofrixit portrait usage:
@@ -40,7 +40,7 @@ This mod is much less compatible than the other Silfae's Revisited series mods. 
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.
+Built for Stellaris version 3.1.2 "Lem."  Not compatible with achievements.
 
 ### File Overwrites
 
