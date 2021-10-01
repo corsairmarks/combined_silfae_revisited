@@ -2701,7 +2701,16 @@ catalytic_technician = {
 		produces = {
 			alloys = 3
 		}
-
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_deficit = food
+					is_ai = no
+				}
+			}
+			alloys = -1.5
+		}
 		upkeep = {
 			food = 9
 		}
@@ -2892,7 +2901,7 @@ artificer = {
 			can_take_servant_job = no
 		}
 		modifier = {
-			factor = 5	
+			factor = 5
 			has_job = artificer
 		}
 		modifier = {
