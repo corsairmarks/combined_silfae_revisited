@@ -55,14 +55,14 @@ Built for Stellaris version 3.1.2 "Lem."  Not compatible with achievements.
 This mod overwrites most of the Pop jobs definitions to account for the special Holofixit caste traits. It also overwrites all the Pop strata to implement Holofrixit energy-based Pop upkeep (instead of food). It's likely to break any time Stellaris makes changes to the underlying Pop strata. These files are completely overwritten:
 
 [list]
-[*][b]common/pop_categories/00_social_classes.txt[/b]
-[*][b]common/pop_categories/01_gestalt_drones.txt[/b]
-[*][b]common/pop_categories/02_other_categories.txt[/b]
-[*][b]common/pop_jobs/01_ruler_jobs.txt[/b]
-[*][b]common/pop_jobs/02_specialist_jobs.txt[/b]
-[*][b]common/pop_jobs/03_worker_jobs.txt[/b]
-[*][b]common/pop_jobs/04_gestalt_jobs.txt[/b]
-[*][b]common/pop_jobs/06_event_jobs.txt[/b]
+[*]common/pop_categories/00_social_classes.txt
+[*]common/pop_categories/01_gestalt_drones.txt
+[*]common/pop_categories/02_other_categories.txt
+[*]common/pop_jobs/01_ruler_jobs.txt
+[*]common/pop_jobs/02_specialist_jobs.txt
+[*]common/pop_jobs/03_worker_jobs.txt ([b]NOT[/b] compatible with my mod [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2484702578]Technician Job Priority[/url] but includes the same fix)
+[*]common/pop_jobs/04_gestalt_jobs.txt
+[*]common/pop_jobs/06_event_jobs.txt
 [/list]
 
 [h3]Partial Overrides[/h3]
@@ -72,19 +72,19 @@ This mod alters the requirements for ruler-stratum jobs and some "complex" speci
 Job-related triggers overridden:
 
 [list]
-[*][b]ruler_job_check_trigger[/b]
-[*][b]complex_specialist_job_check_trigger[/b]
-[*][b]is_organic_species[/b] most Holofrixits qualify as organic
-[*][b]is_robotic_species[/b] Holofrixigrams are entirely mechanical
+[*]ruler_job_check_trigger - enslaved hologanglions can be Head Researchers
+[*]complex_specialist_job_check_trigger - holodrones can't do complex work
+[*]is_organic_species - most Holofrixits qualify as organic
+[*]is_robotic_species - Holofrixigrams are entirely mechanical
 [/list]
 
 Furthermore, this mod alters some core game rules in [b]common/game_rules/00_rules.txt[/b] to implement some of the Pop reproduction/assembly requirements and special rules for Holofrixit leaders. In particular, these rules:
 
 [list]
-[*][b]can_generate_leader_from_pop[/b]
-[*][b]can_generate_military_leader_from_pop[/b]
-[*][b]can_species_procreate[/b]
-[*][b]can_species_be_assembled[/b]
+[*]can_generate_leader_from_pop
+[*]can_generate_military_leader_from_pop
+[*]can_species_procreate
+[*]can_species_be_assembled
 [/list]
 
 [h3]Dependencies[/h3]
@@ -123,8 +123,6 @@ Hosted on [url=https://github.com/corsairmarks/holosphere_rising_revisited]GitHu
 
 [h1]Special Thanks[/h1]
 
-I was inspired to extend the original mod when I saw Endugu's expansion of Silfae's Animated Xirmian Portraits. Modular mods that require downloading the original mod(s) help give credit where credit is due.
-
-An extra special thanks to Silfae for creating and sharing so many detailed, animated portraits for the community.
+The Silfae's Revisited series of mods were inspired by Endugu's approach of requiring the original mod for graphics and then adding or altering code for compatibility.  This helps the original modder get credit.  Thanks to both Endugu and Silfae!
 
 [url=https://discord.gg/bHVez2C][img]https://i.imgur.com/4Und3QN.png[/img][/url]

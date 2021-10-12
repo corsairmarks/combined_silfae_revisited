@@ -51,7 +51,7 @@ This mod overwrites most of the Pop jobs definitions to account for the special 
 * `common/pop_categories/02_other_categories.txt`
 * `common/pop_jobs/01_ruler_jobs.txt`
 * `common/pop_jobs/02_specialist_jobs.txt`
-* `common/pop_jobs/03_worker_jobs.txt`
+* `common/pop_jobs/03_worker_jobs.txt` (**NOT** compatible with my mod [Technician Job Priority](https://steamcommunity.com/sharedfiles/filedetails/?id=2484702578) but includes the same fix)
 * `common/pop_jobs/04_gestalt_jobs.txt`
 * `common/pop_jobs/06_event_jobs.txt`
 
@@ -116,6 +116,10 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Update Pop jobs with updates from from the base game - Catalytic Processing jobs, new event jobs, Scrap Miners, etc.
     * Update with code improvements from the base game
 * 2.0.1 Update Pop jobs with deficit changes for Catalytic Tech/Drone in Stellaris 3.1.2
+* 2.0.2 Pop Job fixes:
+    * Fix slave technician job weight (same as [Enslaved Technician Job Priority Fix](https://steamcommunity.com/sharedfiles/filedetails/?id=2484702578))
+    * Fix gestalt gas extractors (from Feral Overload) improperly allowing enslaved species
+    * Fix gestalt cave miners (from Feral Overload) improperly allowing enslaved species
 
 ## Source Code
 
