@@ -20,6 +20,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     * Less complex that some of Silfae's other starting systems, so it already works with newer civics and origins
 * Update the AI personality to account for new game features
 * Remove a species trait (Communal) from the prescripted empire, because Charismatic is now 2 points
+* Support being able to choose a single-gender species (new in Stellaris 3.2)
 
 ## Compatibility
 
@@ -27,7 +28,7 @@ Compatible with any mod that does not add the same portraits, species class, or 
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.
+Built for Stellaris version 3.2.* "Herbert."  Not compatible with achievements.
 
 ### Dependencies
 
@@ -53,8 +54,10 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 * 1.0.0 Initial version
 * 1.0.1 Minor clothing fixes, prevent awakened empire from using personality, allow portrait randomization
 * 1.0.2 Ensure correct `graphical_culture`
-* 1.1.0 Mark as compatible with Stellaris version 3.1.* "Lem"
+* 1.1.0 Update for compatibility with Stellaris version 3.1 "Lem"
     * Add new localisation keys introduced in 3.1
+* 2.0.0 Update for compatibility with Stellaris version 3.2 "Herbert"
+    * Apply new mono-gender portrait rules
 
 ## Source Code
 
