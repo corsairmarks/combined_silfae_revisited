@@ -1,0 +1,159 @@
+portrait_groups = {
+	xirmian = {
+		default = xirmian_male_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					xirmian_male_01
+					xirmian_male_02
+					xirmian_male_03
+					xirmian_male_04
+					xirmian_male_05
+				}
+			}
+			add = {
+				trigger = {
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					xirmian_female_01
+					xirmian_female_02
+					xirmian_female_03
+					xirmian_female_04
+					xirmian_female_05
+				}
+			}
+
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = { NOT = { species_gender = female } }
+				portraits = {
+					xirmian_male_01
+					xirmian_male_02
+					xirmian_male_03
+					xirmian_male_04
+					xirmian_male_05
+				}
+			}
+			add = {
+				trigger = { NOT = { species_gender = male } }
+				portraits = {
+					xirmian_female_01
+					xirmian_female_02
+					xirmian_female_03
+					xirmian_female_04
+					xirmian_female_05
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = { species = { NOT = { species_gender = female } } }
+				portraits = {
+					xirmian_male_01
+					xirmian_male_02
+					xirmian_male_03
+					xirmian_male_04
+					xirmian_male_05
+				}
+			}
+			add = {
+				trigger = { species = { NOT = { species_gender = male } } }
+				portraits = {
+					xirmian_female_01
+					xirmian_female_02
+					xirmian_female_03
+					xirmian_female_04
+					xirmian_female_05
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governors, envoys
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					xirmian_female_01
+					xirmian_female_02
+					xirmian_female_03
+					xirmian_female_04
+					xirmian_female_05
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					xirmian_male_01
+					xirmian_male_02
+					xirmian_male_03
+					xirmian_male_04
+					xirmian_male_05
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					xirmian_female_01
+					xirmian_female_02
+					xirmian_female_03
+					xirmian_female_04
+					xirmian_female_05
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					xirmian_male_01
+					xirmian_male_02
+					xirmian_male_03
+					xirmian_male_04
+					xirmian_male_05
+				}
+			}
+		}
+	}
+}
