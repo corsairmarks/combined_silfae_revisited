@@ -6,7 +6,7 @@ There are lots of other mods which contain these portraits, so why should you ch
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.1.*, the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.2 "Herbert," the latest version when this was written.  Updates include:
 
 * Enhance portrait selectors to specialize some Pops with appropriate clothing (because the clothing is built in to each portrait file, I can't change to clothing selectors instead of phenotypes)
 * Update the namelist to account for all built-in army types, remove obsolete entries
@@ -21,7 +21,7 @@ Compatible with any mod that does not add the same portraits, species class, or 
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.
+Built for Stellaris version 3.2.* "Herbert."  Not compatible with achievements.
 
 ### Dependencies
 
@@ -47,9 +47,12 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 * 1.0.0 Initial version
 * 1.0.1 Allow portrait randomization, slight tweaks to portrait selectors
 * 1.0.2 Ensure correct `graphical_culture`
-* 1.1.0 Mark as compatible with Stellaris version 3.1.* "Lem"
+* 1.1.0 Mark as compatible with Stellaris version 3.1 "Lem"
     * Add new localisation keys introduced in 3.1
     * Volatile motes had to be moved to different planets to avoid mining stations improperly collecting them at game start (reported by Kaiser Nikolaus I)
+* 2.0.0 Update for compatibility with Stellaris version 3.2 "Herbert"
+    * Apply new mono-gender portrait rules
+    * More portrait selector refinements (these portraits don't have a separate clothing layer - it is built-in the the portrait)
 
 ## Source Code
 
