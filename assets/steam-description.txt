@@ -6,7 +6,7 @@ There are lots of other mods which contain the same or similar portraits, so why
 
 [h1]Changes[/h1]
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.1.*, the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.2 "Herbert," the latest version when this was written.  Updates include:
 
 [list]
 [*]Fix invalid texture reference in [b]quarian_female_01_portrait.mesh[/b] (caused lots of error logs)
@@ -28,6 +28,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     [*]Can randomly spawn
     [/list]
 [*]You can use the Quarian portraits for your own empire without any DLC requirements
+[*]Support being able to choose a single-gender species (new in Stellaris 3.2)
 [/list]
 
 [h2]Compatibility[/h2]
@@ -38,7 +39,7 @@ Compatible with any other mod that does not add the same portraits, species clas
 
 The Launcher will tell you that some mods are outdated - that is because the dependency is out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mod.
 
-Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.
+Built for Stellaris version 3.2.* "Herbert."  Not compatible with achievements.
 
 [h3]Dependencies[/h3]
 

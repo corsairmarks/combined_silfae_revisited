@@ -23,6 +23,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     * Starting leader begins with three traits: Home in the Sky, Space Miner, and Fleet Organizer
     * Can randomly spawn
 * You can use the Quarian portraits for your own empire without any DLC requirements
+* Support being able to choose a single-gender species (new in Stellaris 3.2)
 
 ## Compatibility
 
@@ -63,9 +64,13 @@ This mod overrides `origin_void_dwellers` in order to add its new initializer to
 * 1.0.0 Initial version
 * 1.0.1 Add second set of random species names, ensure original file is overwritten
 * 1.0.2 Tweak namelist
-* 2.0.0 Mark as compatible with Stellaris version 3.1.* "Lem"
+* 2.0.0 Update for compatibility with Stellaris version 3.1 "Lem"
     * Add new localisation keys introduced in 3.1
-    * Update override of `origin_void_dwellers` to reflect additional base game restrictions
+    * Update override of `origin_void_dwellers` to reflect additional base game restrictions (no Idyllic Bloom)
+* 3.0.0 Update for compatibility with Stellaris version 3.2 "Herbert"
+    * Apply new mono-gender portrait rules
+    * More Pop clothing selector refinements
+    * Update override of `origin_void_dwellers` to reflect additional base game restrictions (no Anglers)
 
 ## Source Code
 
