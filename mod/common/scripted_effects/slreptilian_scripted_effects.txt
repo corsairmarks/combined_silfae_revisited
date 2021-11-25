@@ -2,7 +2,6 @@
 @enslaved_percentage_medium = 0.5
 @enslaved_percentage_low = 0.25
 @enslaved_percentage_critical = 0.1
-@enslaved_pop_modifier_duration_days = 120
 
 # THIS = country
 calculate_shadowyrep_morale = {
