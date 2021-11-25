@@ -14,6 +14,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 * All seven custom neighboring systems updated, and eliminated chance for one of them to double-spawn
 * Custom starting initializer now supports a variety of civics and origin starts (all the built-in ones)
 * Update the AI personality to account for new game features
+* Support being able to choose a single-gender species (new in Stellaris 3.2)
 
 ## Compatibility
 
