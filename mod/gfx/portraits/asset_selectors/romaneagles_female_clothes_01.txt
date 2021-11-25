@@ -40,27 +40,38 @@ romaneagles_female_clothes_01 = {
 					# admins
 					has_job = bureaucrat
 					has_job = primitive_bureaucrat
+					has_job = synapse_drone
+					has_job = coordinator
 					has_job = manager
+					has_job = underground_trade_worker
+					has_job = underground_contact_drone
 					has_job = colonist
 					has_job = priest
 					has_job = death_priest
 					has_job = primitive_priest
 					has_job = primitive_priest_2
 					has_job = preacher
+					has_job = necro_apprentice
+					has_job = mortal_initiate
 				}
 				NOR = {
 					# scientist
 					has_job = head_researcher
 					has_job = brain_drone
 					has_job = calculator
+					has_job = dimensional_portal_researcher
 					has_job = dimensional_portal_researcher_gestalt
+					has_job = death_chronicler
 					has_job = chronicle_drone
 					has_job = fe_archivist
+					has_job = healthcare
 					# military
 					has_job = titan_hunter
 					has_job = patrol_drone
 					has_job = warrior_drone
 					has_job = fe_protector
+					# peasant
+					has_job = fe_xeno_ward
 				}
 			}
 			list = {
@@ -81,6 +92,7 @@ romaneagles_female_clothes_01 = {
 				has_job = fe_archivist
 				has_job = primitive_researcher
 				has_job = primitive_researcher_2
+				has_job = healthcare
 			}
 		}
 		random = {
@@ -117,12 +129,14 @@ romaneagles_female_clothes_01 = {
 					has_job = death_priest
 					has_job = primitive_priest
 					has_job = primitive_priest_2
+					has_job = necro_apprentice
 					# scientists
 					has_job = researcher
 					has_job = dimensional_portal_researcher
 					has_job = death_chronicler
 					has_job = primitive_researcher
 					has_job = primitive_researcher_2
+					has_job = healthcare
 					# military
 					has_job = duelist
 					has_job = enforcer
