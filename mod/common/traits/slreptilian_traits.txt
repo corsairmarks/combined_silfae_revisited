@@ -27,6 +27,21 @@ trait_unedible = {
 	}
 }
 
+trait_unedible_lithoid = {
+	cost = -1
+	potential_crossbreeding_chance = 0.5
+	initial = no
+	randomized = no
+	advanced_trait = yes
+	allowed_archetypes = { LITHOID }
+	modifier = {
+		planet_livestock_minerals_produces_add = -2
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
 trait_neutered = {
 	cost = -2
 	potential_crossbreeding_chance = 0.5
@@ -197,8 +212,8 @@ trait_logic_loop_virus = {
 	randomized = no
 	allowed_archetypes = { ROBOT MACHINE }
 	species_potential_add = {
-		exists = FROM
-		FROM = {
+		exists = from
+		from = {
 			OR = {
 				has_authority = auth_machine_intelligence
 				AND = {
@@ -224,8 +239,8 @@ trait_scrambling_matrix = {
 	randomized = no
 	allowed_archetypes = { ROBOT MACHINE }
 	species_potential_add = {
-		exists = FROM
-		FROM = {
+		exists = from
+		from = {
 			is_regular_empire = yes
 			has_technology = tech_droid_workers
 		}
