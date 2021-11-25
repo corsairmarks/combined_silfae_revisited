@@ -6,7 +6,7 @@ There are lots of other mods which contain these portraits, so why should you ch
 
 [h1]Changes[/h1]
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.2, the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.2 "Herbert," the latest version when this was written.  Updates include:
 
 [list]
 [*]Clothing selector enhancements

@@ -6,7 +6,7 @@ There are lots of other mods which contain these portraits, so why should you ch
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.1.*, the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.2 "Herbert," the latest version when this was written.  Updates include:
 
 * Clothing selector enhancements
     * Fixed a broken clothing selector for male rulers
@@ -58,6 +58,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Add new localisation keys introduced in 3.1
 * 2.0.0 Update for compatibility with Stellaris version 3.2 "Herbert"
     * Apply new mono-gender portrait rules
+    * More Pop clothing selector refinements
 
 ## Source Code
 
