@@ -26,35 +26,20 @@ quarian_female_clothes_01 = {
 	pop = { #for a specific pop
 		default = "gfx/models/portraits/quarian/quarian_female_clothes_ruler.dds"
 		"gfx/models/portraits/quarian/quarian_female_clothes_ruler.dds" = {
+			OR = {
+				is_pop_category = ruler
+				is_pop_category = precursor
+				has_job = evaluator
+				has_job = synapse_drone
+			}
 			NOR = {
 				# scientist
 				has_job = head_researcher
-				has_job = researcher
-				has_job = brain_drone
-				has_job = calculator
-				has_job = dimensional_portal_researcher
-				has_job = dimensional_portal_researcher_gestalt
 				has_job = fe_archivist
-				has_job = spawning_drone
-				has_job = replicator
-				has_job = roboticist
-				has_job = evaluator
-				has_job = death_chronicler
-				has_job = chronicle_drone
-				has_job = primitive_researcher
-				has_job = primitive_researcher_2
 				# military
-				has_job = duelist
-				has_job = enforcer
-				has_job = telepath
-				has_job = necromancer
-				has_job = soldier
-				has_job = titan_hunter
-				has_job = patrol_drone
-				has_job = warrior_drone
 				has_job = fe_protector
-				has_job = primitive_warrior
-				has_job = primitive_warrior_2
+				# peasant
+				has_job = fe_xeno_ward
 			}
 		}
 		"gfx/models/portraits/quarian/quarian_female_clothes_admiral.dds" = {
@@ -86,9 +71,61 @@ quarian_female_clothes_01 = {
 				has_job = spawning_drone
 				has_job = replicator
 				has_job = roboticist
-				has_job = evaluator
 				has_job = primitive_researcher
 				has_job = primitive_researcher_2
+				has_job = healthcare
+			}
+		}
+		random = {
+			trigger = {
+				OR = {
+					is_pop_category = specialist
+					is_pop_category = complex_drone
+					is_pop_category = corrupt_drone
+					is_pop_category = criminal
+					is_pop_category = deviant_drone
+					is_pop_category = simple_drone
+					is_pop_category = worker
+					is_pop_category = slave
+					is_pop_category = xeno_ward
+					is_pop_category = pre_sapients
+					is_pop_category = purge
+				}
+				NOR = {
+					# rulers
+					has_job = evaluator
+					has_job = synapse_drone
+					# scientist
+					has_job = researcher
+					has_job = brain_drone
+					has_job = calculator
+					has_job = dimensional_portal_researcher
+					has_job = dimensional_portal_researcher_gestalt
+					has_job = death_chronicler
+					has_job = chronicle_drone
+					has_job = spawning_drone
+					has_job = replicator
+					has_job = roboticist
+					has_job = primitive_researcher
+					has_job = primitive_researcher_2
+					has_job = healthcare
+					# military
+					has_job = duelist
+					has_job = enforcer
+					has_job = telepath
+					has_job = necromancer
+					has_job = soldier
+					has_job = titan_hunter
+					has_job = patrol_drone
+					has_job = warrior_drone
+					has_job = primitive_warrior
+					has_job = primitive_warrior_2
+				}
+			}
+			list = {
+				"gfx/models/portraits/quarian/quarian_female_clothes_ruler.dds"
+				"gfx/models/portraits/quarian/quarian_female_clothes_admiral.dds"
+				"gfx/models/portraits/quarian/quarian_female_clothes_scientist.dds"
 			}
 		}
 	}
