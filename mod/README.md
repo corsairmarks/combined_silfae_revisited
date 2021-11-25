@@ -6,7 +6,7 @@ There are other mods which contain these portraits, so why should you choose thi
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.1.*, the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.2, the latest version when this was written.  Updates include:
 
 * Renamed species class to "Sleek Reptilian" so there isn't confusion with the built-in Reptilian species class
 * Remove duplication in room selector, allow it to always be chosen
@@ -30,6 +30,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     * Now has Civic: Shadow Council to replace the civic which became the origin
     * Can randomly spawn
 * You can use Silfae's custom Sleek Reptilian portraits (mixed, just Reptilians, or just "Humans") for your own empires without any DLC requirements
+* Support being able to choose a single-gender species (new in Stellaris 3.2)
 
 ## Compatibility
 
@@ -37,7 +38,7 @@ Compatible with any mod that does not add the same portraits, species class, or 
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.
+Built for Stellaris version 3.2.* "Herbert."  Not compatible with achievements.
 
 ### Dependencies
 
@@ -62,8 +63,12 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 
 * 1.0.0 Initial version
 * 1.1.0 Add missing fleet names, add government random names, fix missing localisation
-* 1.2.0 Mark as compatible with Stellaris version 3.1.* "Lem"
+* 1.2.0 Update for compatibility with Stellaris version 3.1 "Lem"
     * Add new localisation keys introduced in 3.1
+* 2.0.0 Update for compatibility with Stellaris version 3.2 "Herbert"
+    * Apply new mono-gender portrait rules
+    * More Pop clothing selector refinements
+    * New "Mineral Deficient" negative trait for lithoids
 
 ## Source Code
 
