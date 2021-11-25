@@ -83,12 +83,13 @@ xirmian_female_clothes_01 = {
 		random = {
 			trigger = {
 				OR = {
-					has_job = manager
 					is_pop_category = ruler
 					is_pop_category = precursor
+					has_job = manager
+					has_job = synapse_drone
+					has_job = coordinator
 				}
 				NOR = {
-					has_job = fe_xeno_ward
 					has_job = head_researcher
 					has_job = fe_protector
 					has_job = fe_archivist
@@ -108,10 +109,14 @@ xirmian_female_clothes_01 = {
 				OR = {
 					is_pop_category = specialist
 					is_pop_category = complex_drone
+					has_job = mortal_initiate
+					has_job = preacher
 				}
 				NOR = {
-					# admin
+					# ruler
 					has_job = manager
+					has_job = synapse_drone
+					has_job = coordinator
 					# scientist
 					has_job = researcher
 					has_job = brain_drone
@@ -148,9 +153,20 @@ xirmian_female_clothes_01 = {
 					is_pop_category = simple_drone
 					is_pop_category = worker
 					is_pop_category = slave
+					is_pop_category = xeno_ward
 					is_pop_category = pre_sapients
 					is_pop_category = purge
-					has_job = fe_xeno_ward
+				}
+				NOR = {
+					# admin
+					has_job = mortal_initiate
+					has_job = preacher
+					# military
+					has_job = soldier
+					has_job = titan_hunter
+					has_job = warrior_drone
+					has_job = primitive_warrior
+					has_job = primitive_warrior_2
 				}
 			}
 			list = {
@@ -161,7 +177,7 @@ xirmian_female_clothes_01 = {
 		default = "gfx/models/portraits/xirmian/xirmian_female_outfit_peasant_01.dds"
 	}
 	#leader scope
-	leader = { #scientists, generals, admirals, governor
+	leader = { #scientists, generals, admirals, governors, envoys
 		"gfx/models/portraits/xirmian/xirmian_female_outfit_scientist.dds" = { leader_class = scientist }
 		"gfx/models/portraits/xirmian/xirmian_female_outfit_general.dds" = { leader_class = general }
 		"gfx/models/portraits/xirmian/xirmian_female_outfit_admiral.dds" = { leader_class = admiral }
