@@ -45,14 +45,14 @@ portrait_groups = {
 		default = slreptilian_male_01
 		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
 			add = {
-				trigger = { ruler = { gender = male } }
+				trigger = { ruler = { NOT = { gender = female } } }
 				portraits = {
 					slreptilian_male_02
 					slreptilian_male_01
 				}
 			}
 			add = {
-				trigger = { ruler = { gender = female } }
+				trigger = { ruler = { NOT = { gender = male } } }
 				portraits = {
 					slreptilian_female_02
 					slreptilian_female_01
@@ -62,8 +62,14 @@ portrait_groups = {
 		#species scope
 		species = { #generic portrait for a species
 			add = {
+				trigger = { NOT = { species_gender = female } }
 				portraits = {
 					slreptilian_male_01
+				}
+			}
+			add = {
+				trigger = { NOT = { species_gender = male } }
+				portrait = {
 					slreptilian_female_01
 				}
 			}
@@ -71,31 +77,37 @@ portrait_groups = {
 		#pop scope
 		pop = { #for a specific pop
 			add = {
+				trigger = { species = { NOT = { species_gender = female } } }
 				portraits = {
 					slreptilian_male_02
 					slreptilian_male_01
+				}
+			}
+			add = {
+				trigger = { species = { NOT = { species_gender = male } } }
+				portraits = {
 					slreptilian_female_02
 					slreptilian_female_01
 				}
 			}
 		}
 		#leader scope
-		leader = { #scientists, generals, admirals, governor, envoy
+		leader = { #scientists, generals, admirals, governor, envoys
 			add = {
-				trigger = { gender = female }
+				trigger = { NOT = { gender = male } }
 				portraits = {
 					slreptilian_female_02
 				}
 			}
 			add = {
-				trigger = { gender = male }
+				trigger = { NOT = { gender = female } }
 				portraits = {
 					slreptilian_male_02
 				}
 			}
 			add = {
 				trigger = {
-					gender = female
+					NOT = { gender = male }
 					OR = {
 						leader_class = scientist
 						leader_class = general
@@ -108,7 +120,7 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
-					gender = male
+					NOT = { gender = female }
 					OR = {
 						leader_class = scientist
 						leader_class = general
@@ -123,13 +135,13 @@ portrait_groups = {
 		#leader scope
 		ruler = {
 			add = {
-				trigger = { gender = female }
+				trigger = { NOT = { gender = male } }
 				portraits = {
 					slreptilian_female_02
 				}
 			}
 			add = {
-				trigger = { gender = male }
+				trigger = { NOT = { gender = female } }
 				portraits = {
 					slreptilian_male_02
 				}
@@ -140,13 +152,13 @@ portrait_groups = {
 		default = slreptilian_male_01
 		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
 		add = {
-			trigger = { ruler = { gender = male } }
+			trigger = { ruler = { NOT = { gender = female } } }
 			portraits = {
 				slreptilian_male_01
 			}
 		}
 		add = {
-			trigger = { ruler = { gender = female } }
+			trigger = { ruler = { NOT = { gender = male } } }
 			portraits = {
 				slreptilian_female_01
 			}
@@ -155,8 +167,14 @@ portrait_groups = {
 		#species scope
 		species = { #generic portrait for a species
 			add = {
+				trigger = { NOT = { species_gender = female } }
 				portraits = {
 					slreptilian_male_01
+				}
+			}
+			add = {
+				trigger = { NOT = { species_gender = male } }
+				portraits = {
 					slreptilian_female_01
 				}
 			}
@@ -164,22 +182,28 @@ portrait_groups = {
 		#pop scope
 		pop = { #for a specific pop
 			add = {
+				trigger = { species = { NOT = { species_gender = female } } }
 				portraits = {
 					slreptilian_male_01
+				}
+			}
+			add = {
+				trigger = { species = { NOT = { species_gender = male } } }
+				portraits = {
 					slreptilian_female_01
 				}
 			}
 		}
 		#leader scope
-		leader = { #scientists, generals, admirals, governor
+		leader = { #scientists, generals, admirals, governors, envoys
 			add = {
-				trigger = { gender = female }
+				trigger = { NOT = { gender = male } }
 				portraits = {
 					slreptilian_female_01
 				}
 			}
 			add = {
-				trigger = { gender = male }
+				trigger = { NOT = { gender = female } }
 				portraits = {
 					slreptilian_male_01
 				}
@@ -188,13 +212,13 @@ portrait_groups = {
 		#leader scope
 		ruler = {
 			add = {
-				trigger = { gender = female }
+				trigger = { NOT = { gender = male } }
 				portraits = {
 					slreptilian_female_01
 				}
 			}
 			add = {
-				trigger = { gender = male }
+				trigger = { NOT = { gender = female } }
 				portraits = {
 					slreptilian_male_01
 				}
@@ -205,13 +229,13 @@ portrait_groups = {
 		default = slreptilian_male_02
 		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
 			add = {
-				trigger = { ruler = { gender = male } }
+				trigger = { ruler = { NOT = { gender = female } } }
 				portraits = {
 					slreptilian_male_02
 				}
 			}
 			add = {
-				trigger = { ruler = { gender = female } }
+				trigger = { ruler = { NOT = { gender = male } } }
 				portraits = {
 					slreptilian_female_02
 				}
@@ -220,8 +244,14 @@ portrait_groups = {
 		#species scope
 		species = { #generic portrait for a species
 			add = {
+				trigger = { NOT = { species_gender = female } }
 				portraits = {
 					slreptilian_male_02
+				}
+			}
+			add = {
+				trigger = { NOT = { species_gender = male } }
+				portraits = {
 					slreptilian_female_02
 				}
 			}
@@ -229,22 +259,28 @@ portrait_groups = {
 		#pop scope
 		pop = { #for a specific pop
 			add = {
+				trigger = { species = { NOT = { species_gender = female } } }
 				portraits = {
 					slreptilian_male_02
+				}
+			}
+			add = {
+				trigger = { species = { NOT = { species_gender = male } } }
+				portraits = {
 					slreptilian_female_02
 				}
 			}
 		}
 		#leader scope
-		leader = { #scientists, generals, admirals, governor
+		leader = { #scientists, generals, admirals, governors, envoys
 			add = {
-				trigger = { gender = female }
+				trigger = { NOT = { gender = male } }
 				portraits = {
 					slreptilian_female_02
 				}
 			}
 			add = {
-				trigger = { gender = male }
+				trigger = { NOT = { gender = female } }
 				portraits = {
 					slreptilian_male_02
 				}
@@ -253,13 +289,13 @@ portrait_groups = {
 		#leader scope
 		ruler = {
 			add = {
-				trigger = { gender = female }
+				trigger = { NOT = { gender = male } }
 				portraits = {
 					slreptilian_female_02
 				}
 			}
 			add = {
-				trigger = { gender = male }
+				trigger = { NOT = { gender = female } }
 				portraits = {
 					slreptilian_male_02
 				}
