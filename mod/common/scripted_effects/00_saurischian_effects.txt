@@ -146,6 +146,18 @@ generate_saurischian_system_capital_blockers = {
 				}
 			}
 			else_if = {
+				limit = {
+					OR = {
+						is_planet_class = pc_ocean
+						owner = { has_origin = origin_ocean_paradise }
+					}
+				}
+				while = {
+					count = local_feature_blockers
+					add_deposit = d_toxic_kelp
+				}
+			}
+			else_if = {
 				limit = { is_wet = yes }
 				while = {
 					count = local_feature_blockers
