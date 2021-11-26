@@ -52,7 +52,7 @@ generate_saurischian_system_capital_blockers = {
 			limit = {
 				owner = {
 					NAND = {
-						has_authority = auth_machine_intelligence
+						is_machine_empire = yes
 						NOT = { has_valid_civic = civic_machine_servitor }
 					}
 				}
@@ -78,7 +78,7 @@ generate_saurischian_system_capital_blockers = {
 			if = {
 				limit = {
 					owner = {
-						has_authority = auth_machine_intelligence
+						is_machine_empire = yes
 						NOT = { has_valid_civic = civic_machine_servitor }
 					}
 				}
