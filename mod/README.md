@@ -54,6 +54,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 * 2.0.0 Update for compatibility with Stellaris version 3.2 "Herbert"
     * Apply new mono-gender portrait rules
     * More portrait selector refinements (these portraits don't have a separate clothing layer - it is built-in the the portrait)
+* 2.0.1 Use kelp blockers for ocean planets in the custom system initializer
 
 ## Source Code
 
