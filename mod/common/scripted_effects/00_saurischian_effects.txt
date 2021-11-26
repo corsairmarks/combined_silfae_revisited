@@ -31,7 +31,7 @@ generate_saurischian_system_capital_blockers = {
 					NOR = {
 						has_origin = origin_post_apocalyptic
 						has_origin = origin_remnants
-						has_civic = civic_machine_terminator
+						has_valid_civic = civic_machine_terminator
 					}
 				}
 			}
@@ -53,7 +53,7 @@ generate_saurischian_system_capital_blockers = {
 				owner = {
 					NAND = {
 						has_authority = auth_machine_intelligence
-						NOT = { has_civic = civic_machine_servitor }
+						NOT = { has_valid_civic = civic_machine_servitor }
 					}
 				}
 			}
@@ -79,17 +79,17 @@ generate_saurischian_system_capital_blockers = {
 				limit = {
 					owner = {
 						has_authority = auth_machine_intelligence
-						NOT = { has_civic = civic_machine_servitor }
+						NOT = { has_valid_civic = civic_machine_servitor }
 					}
 				}
 				# Add an extra special blocker for assimilators and non-exterminators - 
 				# exterminators already have 2 special blockers by default
 				if = {
-					limit = { owner = { has_civic = civic_machine_assimilator } }
+					limit = { owner = { has_valid_civic = civic_machine_assimilator } }
 					add_deposit = d_assimilators_ruins
 				}
 				else_if = {
-					limit = { owner = { NOT = { has_civic = civic_machine_terminator } } }
+					limit = { owner = { NOT = { has_valid_civic = civic_machine_terminator } } }
 					add_deposit = d_machine_empire_ruins
 				}
 			}
@@ -181,7 +181,7 @@ saurischian_system_primitives_final_pass = {
 		remove_all_armies = yes
 		remove_all_buildings = yes
 		if = {
-			limit = { solar_system.owner = { has_civic = civic_machine_assimilator } }
+			limit = { solar_system.owner = { has_valid_civic = civic_machine_assimilator } }
 			add_deposit = d_organic_slurry
 		}
 		set_planet_flag = nuked_planet_anomalies_disabled
