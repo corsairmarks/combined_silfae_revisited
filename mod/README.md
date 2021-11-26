@@ -6,7 +6,7 @@ There are lots of other mods which contain these portraits, so why should you ch
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.1.*, the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.2 "Herbert," the latest version when this was written.  Updates include:
 
 * Fix the broken portrait clothing selector for male rulers
 * Update the namelist to account for all built-in army types, remove obsolete entries
@@ -14,6 +14,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 * Custom starting initializer now supports a variety of civics and origin starts (all the built-in ones)
 * Add an extra species trait (Communal) to the prescripted empire, because Repugnant is now -2 points
 * Update portrait and clothing selection for Pops - your Pops will wear clothing based on their jobs
+* Support being able to choose a single-gender species (new in Stellaris 3.2)
 
 ## Compatibility
 
@@ -21,7 +22,7 @@ Compatible with any mod that does not add the same portraits, species class, or 
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.
+Built for Stellaris version 3.2.* "Herbert."  Not compatible with achievements.
 
 ### Dependencies
 
@@ -49,8 +50,12 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 * 1.0.2 Adjust system initializer description
 * 1.0.3 Fix a different clothing selector that I broke, allow portrait randomization
 * 1.0.4 Ensure correct `graphical_culture`
-* 1.1.0 Mark as compatible with Stellaris version 3.1.* "Lem"
+* 1.1.0 Update for compatibility with Stellaris version 3.1 "Lem"
     * Add new localisation keys introduced in 3.1
+* 2.0.0 Update for compatibility with Stellaris version 3.2 "Herbert"
+    * Apply new mono-gender portrait rules
+    * More Pop clothing selector refinements
+    * Use kelp blockers for ocean planets in the custom system initializer
 
 ## Source Code
 
