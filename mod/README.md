@@ -56,6 +56,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Apply new mono-gender portrait rules
     * More Pop clothing selector refinements
     * Use kelp blockers for ocean planets in the custom system initializer
+* 2.1.0 Add slightly recolored female governor clothing
 
 ## Source Code
 
