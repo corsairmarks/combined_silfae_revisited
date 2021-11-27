@@ -69,6 +69,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Apply new mono-gender portrait rules
     * More Pop clothing selector refinements
     * New "Mineral Deficient" negative trait for lithoids
+* 2.0.1 Fix improper species-level portrait selector syntax for non-male "human" portraits
 
 ## Source Code
 
