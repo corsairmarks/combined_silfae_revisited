@@ -13,25 +13,6 @@ event = {
 	}
 }
 
-# triggered by on_game_start_country
-country_event = {
-	id = octeelan_evt.3
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		any_owned_pop_species = { species_portrait = octeelan }
-	}
-	immediate = {
-		every_owned_pop_species = {
-			limit = { species_portrait = octeelan }
-			change_species_characteristics = {
-				gender = female
-				can_change_leader = yes
-			}
-		}
-	}
-}
-
 # triggered by empire_init_capital_planet
 # ROOT = planet, capital
 # FROM = species, founder
