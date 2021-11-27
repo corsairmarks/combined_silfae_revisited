@@ -4,7 +4,7 @@
  OCTEE_desc: "Cephalopod class."
  OCTEE_spawn: "paralarva"
  OCTEE_spawn_plural: "paralarvae"
- OCTEE_organ: "$MOL_organ$"
+ OCTEE_organ: "$AQUATIC_organ$"
  OCTEE_mouth: "beak"
  name_list_octeelannames: "Cephalopod 1"
  name_list_OCTEE1: "$name_list_octeelannames$"
