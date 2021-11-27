@@ -33,32 +33,32 @@ eldar_female_clothes_01 = {
 					# scientist
 					has_job = head_researcher
 					has_job = researcher
-					has_job = dimensional_portal_researcher
 					has_job = brain_drone
 					has_job = calculator
+					has_job = dimensional_portal_researcher
 					has_job = dimensional_portal_researcher_gestalt
-					has_job = fe_archivist
 					has_job = death_chronicler
+					has_job = chronicle_drone
 					has_job = spawning_drone
 					has_job = replicator
 					has_job = roboticist
 					has_job = evaluator
-					has_job = primitive_warrior
-					has_job = chronicle_drone
 					has_job = primitive_researcher
 					has_job = primitive_researcher_2
+					has_job = healthcare
+					has_job = fe_archivist
 					# military
+					has_job = necromancer
 					has_job = duelist
 					has_job = enforcer
 					has_job = telepath
-					has_job = necromancer
-					has_job = soldier
-					has_job = titan_hunter
 					has_job = patrol_drone
 					has_job = warrior_drone
-					has_job = fe_protector
+					has_job = soldier
 					has_job = primitive_warrior
 					has_job = primitive_warrior_2
+					has_job = titan_hunter
+					has_job = fe_protector
 				}
 			}
 			list = {
@@ -69,17 +69,17 @@ eldar_female_clothes_01 = {
 		random = {
 			trigger = {
 				OR = {
+					has_job = necromancer
 					has_job = duelist
 					has_job = enforcer
 					has_job = telepath
-					has_job = necromancer
-					has_job = soldier
-					has_job = titan_hunter
 					has_job = patrol_drone
 					has_job = warrior_drone
-					has_job = fe_protector
+					has_job = soldier
 					has_job = primitive_warrior
 					has_job = primitive_warrior_2
+					has_job = titan_hunter
+					has_job = fe_protector
 				}
 			}
 			list = {
@@ -96,15 +96,16 @@ eldar_female_clothes_01 = {
 					has_job = calculator
 					has_job = dimensional_portal_researcher
 					has_job = dimensional_portal_researcher_gestalt
-					has_job = fe_archivist
+					has_job = death_chronicler
+					has_job = chronicle_drone
 					has_job = spawning_drone
 					has_job = replicator
 					has_job = roboticist
 					has_job = evaluator
-					has_job = death_chronicler
-					has_job = chronicle_drone
 					has_job = primitive_researcher
 					has_job = primitive_researcher_2
+					has_job = healthcare
+					has_job = fe_archivist
 				}
 			}
 			list = {
@@ -114,11 +115,9 @@ eldar_female_clothes_01 = {
 		}
 	}
 	#leader scope
-	leader = { #scientists, generals, admirals, governor
+	leader = { #scientists, generals, admirals, governors, envoys
 		random = {
-			trigger = {
-				leader_class = scientist
-			}
+			trigger = { leader_class = scientist }
 			list = {
 				"gfx/models/portraits/eldar/eldar_female_clothes_scientist.dds"
 				"gfx/models/portraits/eldar/eldar_female_clothes2.dds"
