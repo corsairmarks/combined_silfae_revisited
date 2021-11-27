@@ -6,7 +6,7 @@ There are lots of other mods which contain these portraits, so why should you ch
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.1.*, the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.2 "Herbert," the latest version when this was written.  Updates include:
 
 * Enhance clothing selectors to be influenced by Pop job
 * Update the namelist to account for all built-in army types, remove obsolete entries
@@ -28,6 +28,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     * Expect Shroud entities to become progressively more successful in their attempts to manifest in the system
 * You can use the Eldar portraits and/or custom initializer for your own empire without any DLC requirements
 * Fix the file type on the incuded event image - it was a `.png` with the `.dds` extension - it is now distributed in the correct `.dds` format for Stellaris
+* Support being able to choose a single-gender species (new in Stellaris 3.2)
 
 ## Compatibility
 
@@ -37,7 +38,7 @@ May conflict with other mods that need to alter how relic worlds are upgraded or
 
 The Launcher will tell you that some mods are outdated - that is because the dependency is out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mod.
 
-Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.
+Built for Stellaris version 3.2.* "Herbert."  Not compatible with achievements.
 
 ### Partial Overrides
 
@@ -67,13 +68,18 @@ This mod preempts one event from the base game related to restoring relic worlds
 * 1.0.0 Initial version
 * 1.0.1 More clothing selector improvement, don't allow other species to pick the free Eldar trait
 * 1.0.2 Namelist tweaks
-* 2.0.0 Mark as compatible with Stellaris version 3.1.* "Lem"
+* 2.0.0 Update for compatibility with Stellaris version 3.1 "Lem"
     * Add new localisation keys introduced in 3.1
     * Update Eye of Terror planet class with new icon syntax
     * Fix changed field name in custom deposits
     * Update homeworld setup to account for new changes in 3.1 (e.g. Reanimators, Clone Army, Pleasure Seekers, etc.)
     * The creatures of the Shroud want to devour your homeworld if you start with the initializer `eldar_system`
 * 2.0.1 Fix Eye of Terror description highlighting
+* 3.0.0 Update for compatibility with Stellaris version 3.2 "Herbert"
+    * Apply new mono-gender portrait rules
+    * More Pop clothing selector refinements
+    * Update custom starting system to handle the changes in the base game (mostly for Anglers)
+    * Add new tech for special Aquaponics farm - needed more food for Anglers starting in the Eye of Terror
 
 ## Source Code
 

@@ -6,7 +6,7 @@ There are lots of other mods which contain these portraits, so why should you ch
 
 [h1]Changes[/h1]
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.1.*, the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.2 "Herbert," the latest version when this was written.  Updates include:
 
 [list]
 [*]Enhance clothing selectors to be influenced by Pop job
@@ -35,6 +35,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     [/list]
 [*]You can use the Eldar portraits and/or custom initializer for your own empire without any DLC requirements
 [*]Fix the file type on the incuded event image - it was a [b].png[/b] with the [b].dds[/b] extension - it is now distributed in the correct [b].dds[/b] format for Stellaris
+[*]Support being able to choose a single-gender species (new in Stellaris 3.2)
 [/list]
 
 [h2]Compatibility[/h2]
@@ -45,7 +46,7 @@ May conflict with other mods that need to alter how relic worlds are upgraded or
 
 The Launcher will tell you that some mods are outdated - that is because the dependency is out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mod.
 
-Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.
+Built for Stellaris version 3.2.* "Herbert."  Not compatible with achievements.
 
 [h3]Partial Overrides[/h3]
 
