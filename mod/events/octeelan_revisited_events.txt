@@ -122,39 +122,7 @@ planet_event = {
 			limit = { owner = { is_homicidal = no } }
 			add_building = building_xeno_zoo_gestalt
 		}
-		if = {
-			limit = { owner = { has_valid_civic = civic_machine_assimilator } }
-			create_additional_xenos_cyborg = yes
-		}
-		else_if = {
-			limit = { owner = { is_hive_empire = yes } }
-			create_additional_xenos_hive = yes
-		}
-		else = {
-			create_additional_xenos_regular = yes
-			if = {
-				limit = {
-					owner = {
-						is_machine_empire = yes
-						NOR = {
-							has_valid_civic = civic_machine_servitor
-							has_valid_civic = civic_machine_terminator
-						}
-					}
-				}
-				every_owned_species = {
-					limit = { NOT = { is_species = PREV.owner.owner_species } }
-					set_citizenship_type = {
-						type = citizenship_slavery
-						country = PREV.owner
-					}
-					set_slavery_type = {
-						type = slavery_matrix
-						country = PREV.owner
-					}
-				}
-			}
-		}
+		generate_additional_xenos_pops = yes
 	}
 }
 
