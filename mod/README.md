@@ -106,5 +106,3 @@ It is best to clone this repository into `<Stellaris User's Directory>/Paradox I
 I was inspired to extend the original mod when I saw [Endugu](https://steamcommunity.com/profiles/76561198037630876/myworkshopfiles/)'s [expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=1584824947) of [Silfae](https://steamcommunity.com/profiles/76561198021525667/myworkshopfiles/)'s [Animated Xirmian Portraits](https://steamcommunity.com/workshop/filedetails/?id=881118424).  Modular mods that require downloading the original mod(s) help give credit where credit is due.
 
 An extra special thanks to Silfae for creating and sharing so many detailed, animated portraits for the community.
-
-TODO Steam desc
