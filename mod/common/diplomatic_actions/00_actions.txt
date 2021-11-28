@@ -339,17 +339,20 @@ action_make_rival = {
 		hidden_trigger = {
 			is_fallen_machine_empire = no
 			from = { is_fallen_machine_empire = no }
-			# TODO verify
-			# NOR = {
-			# 	AND = {
-			# 		has_country_flag = abandoned_peepboops@from
-			# 		from = { has_country_flag = is_peepboops@prev }
-			# 	}
-			# 	AND = {
-			# 		has_country_flag = is_peepboops@from
-			# 		from = { has_country_flag = abandoned_peepboops@prev }
-			# 	}
-			# }
+		}
+		if = {
+			limit = { has_country_flag = abandoned_peepboops@from }
+			custom_tooltip = {
+				fail_text = requires_recipient_not_peepboops_make_rival
+				from = { NOT = { has_country_flag = is_peepboops@prev } }
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = is_peepboops@from }
+			custom_tooltip = {
+				fail_text = requires_actor_not_peepboops_make_rival
+				from = { NOT = { has_country_flag = abandoned_peepboops@prev } }
+			}
 		}
 		custom_tooltip = grants_humiliation_cb_originator
 	}
@@ -2095,20 +2098,20 @@ action_close_borders = {
 
 	possible = {
 		can_control_access_for = from
-		# if = {
-		# 	limit = { has_country_flag = abandoned_peepboops@from }
-		# 	custom_tooltip = {
-		# 		fail_text = requires_recipient_not_peepboops
-		# 		from = { NOT = { has_country_flag = is_peepboops@prev } }
-		# 	}
-		# }
-		# else_if = {
-		# 	limit = { has_country_flag = is_peepboops@from }
-		# 	custom_tooltip = {
-		# 		fail_text = requires_actor_not_peepboops
-		# 		from = { NOT = { has_country_flag = abandoned_peepboops@prev } }
-		# 	}
-		# }
+		if = {
+			limit = { has_country_flag = abandoned_peepboops@from }
+			custom_tooltip = {
+				fail_text = requires_recipient_not_peepboops_close_borders
+				from = { NOT = { has_country_flag = is_peepboops@prev } }
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = is_peepboops@from }
+			custom_tooltip = {
+				fail_text = requires_actor_not_peepboops_close_borders
+				from = { NOT = { has_country_flag = abandoned_peepboops@prev } }
+			}
+		}
 		if = {
 			limit = { from = { has_valid_civic = civic_pompous_purists } }
 			if = {
