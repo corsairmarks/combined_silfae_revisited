@@ -34,3 +34,4 @@
  DIMENSIONAL_HORRORWORM_THRUSTER_4_DESC: "$SHIP_THRUSTER_4_DESC$"
  DIMENSIONAL_HORRORWORM_THRUSTER_5: "$SHIP_THRUSTER_5$"
  DIMENSIONAL_HORRORWORM_THRUSTER_5_DESC: "$SHIP_THRUSTER_5_DESC$"
+ SHIP_GRAPHICS_DIMENSIONAL_HORRORWORM_DESC: "A fledgling horror that can be summoned to realspace exclusively by the $HRWRM_plural$. They have immense offensive power, but their anchor to this dimension is fragile."
