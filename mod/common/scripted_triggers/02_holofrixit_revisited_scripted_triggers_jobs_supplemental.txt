@@ -1,4 +1,4 @@
-head_researcher_job_check_trigger = {
+head_researcher_job_check_trigger_holosphere_revisited = {
 	if = {
 		limit = {
 			exists = owner
@@ -41,9 +41,6 @@ head_researcher_job_check_trigger = {
 				}
 			}
 		}
-	}
-	else = {
-		ruler_job_check_trigger = yes
 	}
 }
 
