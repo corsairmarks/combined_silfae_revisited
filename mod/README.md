@@ -34,6 +34,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     * Your former overlords, the Beep Boops, will spawn if the Synthetic Dawn DLC is active
     * Beep-Boop species: removed High Maintenance, add Efficient Processors so that all points are spent
     * Beep-Boop empire: now a regular empire, with a special exception allowing them to have a colony in the same system (in order to fight you)
+    * You cannot close your borders to the Beep-Boops, nor can they close theirs to you
     * Beep-Boops will hate you for rejecting them
 * You can use the Octee-lan portraits for your own empires without any DLC requirements
 * You can use the Beep-Boop portrait (there is only one) for your own machine empires if you have Synthetic Dawn
@@ -42,7 +43,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 
 In order to make the Alien Zoo available to gestalts (needed for the Beep-Boops), it is necessary to override `d_alien_pets_deposit`.  That means this mod is incompatible with other mods that modify that planetary deposit - although I doubt many do.
 
-Compatible with any other mod that does not add the same portraits, species class, or art assets.
+New for Stellaris 3.2, this mod now overrides all diplomatic actions in order to prevent players beginning in Tsukimi Pool from closing their borders to the Beep-Boop (which would otherwise their fleets stuck permanently MIA).  Diplomatic actions require a full-file overwrite, and thus this mod is not compatible with others that seek to edit built-in diplomatic actions (does not conflict with mods that add extra diplomatic message text).  Otherwise compatible with any other mod that does not add the same portraits, species class, or art assets.
 
 The Launcher will tell you that some mods are outdated - that is because the dependency is out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mod.
 
