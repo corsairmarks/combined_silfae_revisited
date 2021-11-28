@@ -28,6 +28,7 @@ octeelan1 = {
 		name_list = AVI1
 		gender = not_set
 		trait = trait_syncretic_proles
+		trait = trait_aquatic
 		trait = trait_very_strong
 		# swapped trait_industrious for trait_aquatic to maintain net 0 points
 		# trait = trait_industrious
