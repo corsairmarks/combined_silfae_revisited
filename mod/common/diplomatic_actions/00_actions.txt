@@ -340,20 +340,6 @@ action_make_rival = {
 			is_fallen_machine_empire = no
 			from = { is_fallen_machine_empire = no }
 		}
-		if = {
-			limit = { has_country_flag = abandoned_peepboops@from }
-			custom_tooltip = {
-				fail_text = requires_recipient_not_peepboops_make_rival
-				from = { NOT = { has_country_flag = is_peepboops@prev } }
-			}
-		}
-		else_if = {
-			limit = { has_country_flag = is_peepboops@from }
-			custom_tooltip = {
-				fail_text = requires_actor_not_peepboops_make_rival
-				from = { NOT = { has_country_flag = abandoned_peepboops@prev } }
-			}
-		}
 		custom_tooltip = grants_humiliation_cb_originator
 	}
 
@@ -406,6 +392,20 @@ action_make_rival = {
 					from = { is_fallen_empire = yes }
 				}
 				from = { is_rival = prev }
+			}
+		}
+		if = {
+			limit = { has_country_flag = abandoned_peepboops@from }
+			custom_tooltip = {
+				fail_text = requires_recipient_not_peepboops_make_rival
+				from = { NOT = { has_country_flag = is_peepboops@prev } }
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = is_peepboops@from }
+			custom_tooltip = {
+				fail_text = requires_actor_not_peepboops_make_rival
+				from = { NOT = { has_country_flag = abandoned_peepboops@prev } }
 			}
 		}
 	}
@@ -2099,20 +2099,6 @@ action_close_borders = {
 	possible = {
 		can_control_access_for = from
 		if = {
-			limit = { has_country_flag = abandoned_peepboops@from }
-			custom_tooltip = {
-				fail_text = requires_recipient_not_peepboops_close_borders
-				from = { NOT = { has_country_flag = is_peepboops@prev } }
-			}
-		}
-		else_if = {
-			limit = { has_country_flag = is_peepboops@from }
-			custom_tooltip = {
-				fail_text = requires_actor_not_peepboops_close_borders
-				from = { NOT = { has_country_flag = abandoned_peepboops@prev } }
-			}
-		}
-		if = {
 			limit = { from = { has_valid_civic = civic_pompous_purists } }
 			if = {
 				limit = {
@@ -2131,6 +2117,20 @@ action_close_borders = {
 					fail_text = diplo_action_no_low_intel
 					always = no
 				}
+			}
+		}
+		if = {
+			limit = { has_country_flag = abandoned_peepboops@from }
+			custom_tooltip = {
+				fail_text = requires_recipient_not_peepboops_close_borders
+				from = { NOT = { has_country_flag = is_peepboops@prev } }
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = is_peepboops@from }
+			custom_tooltip = {
+				fail_text = requires_actor_not_peepboops_close_borders
+				from = { NOT = { has_country_flag = abandoned_peepboops@prev } }
 			}
 		}
 	}
