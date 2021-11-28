@@ -6,17 +6,17 @@ There are other mods which contain these portraits, so why should you choose thi
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.1.*, the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.2 "Herbert," the latest version when this was written.  Updates include:
 
 * Fix the included Prethoryn-swap shipset `horrorworm_01`
     * Ensure the ship entities are blank for ship sections and instead use the ship hull as the attachment point for the modified Prethoryn graphics
     * Add missing entities and weapon locators
     * Remove duplication
     * Fallback for titans, juggernauts, and colossi is molluscoid
-* Fix the included custom ship type (Dimensional Horrorworm with an XL slot) - note that Leviathans is required for the ship model
+* Fix the included custom ship type (Hollow Form with an XL slot) - note that Leviathans is required for the ship model
     * Fix the ship class, section, and default design to work
     * Fix portrait selectors to offer fewer phenotypes with the correct multiple color options - the graphics have been there the whole time, just needed some tweaking for presentation
-    * Add components for the Dimensional Horrorworm ship type (reactors, computers, and thrusters) of all types included in regular Stellaris
+    * Add components for the Hollow Form ship type (reactors, computers, and thrusters) of all types included in regular Stellaris
 * Adjust Eltryrad portraits based on Pop type - lore-wise they have a caste system
 * Add a custom deposit for the Hollow starting world ancient ruins - the previous deposit type was removed from the base game
 * Update the namelist to account for all built-in army types, remove obsolete entries
@@ -37,7 +37,7 @@ Compatible with any mod that does not add the same portraits, species class, shi
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.  The shipset does not have NSC classes.
+Built for Stellaris version 3.2.* "Herbert."  Not compatible with achievements.  The shipset does not have NSC classes.
 
 ### Dependencies
 
@@ -79,11 +79,15 @@ In game terms, the fourth color of Phenotype 9 is the same as the third color.
 * 1.0.0 Initial version
 * 1.0.1 Require Apocalypse for prescripted empire, extra names for randomisation, allow portraits as secondary species and to be randomized
 * 1.0.2 Fix `on_game_start` on_action to fire correctly, ensure correct `graphical_culture`
-* 2.0.0 Mark as compatible with Stellaris version 3.1.* "Lem"
+* 2.0.0 Update for compatibility with Stellaris version 3.1 "Lem"
     * Add new localisation keys introduced in 3.1
     * Update minor code improvements from the base game (icons, spelling changes)
     * Get rid of janky `switch` cases and use new trigger exporting (code is more better now)
 * 2.1.0 Use new feature to restrict Astral Horror trait to the Eltryrad species class
+* 3.0.0 Update for compatibility with Stellaris version 3.2 "Herbert"
+    * More Pop clothing selector refinements
+    * Update special Dimensional Tearing technology to be unavailable for non-Horrorworm empires
+    * Do not show the special Hollow Form ship in the previewer for non-Horrorworm empires
 
 ## Source Code
 
