@@ -25,7 +25,7 @@ can_generate_leader_from_pop = {
 		ROOT = {
 			OR = {
 				has_technology = tech_synthetic_leaders
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 				is_mechanical_empire = yes
 			}
 		}
@@ -59,7 +59,7 @@ can_generate_military_leader_from_pop = {
 					}
 				}
 				has_technology = tech_synthetic_leaders
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 				is_mechanical_empire = yes
 			}
 		}
