@@ -527,7 +527,7 @@ dimensional_portal_researcher_gestalt = {
 	}
 
 	possible_precalc = can_fill_drone_job
-	possible = { NOT = { has_trait = trait_nerve_stapled } }
+	possible = { complex_drone_job_check_trigger = yes }
 
 	triggered_planet_modifier = {
 		potential = {
@@ -816,7 +816,7 @@ gas_plant_engineer_gestalt = {
 	}
 
 	possible_precalc = can_fill_worker_job
-	possible = { NOT = { has_trait = trait_nerve_stapled } }
+	possible = { complex_drone_job_check_trigger = yes }
 
 	triggered_planet_modifier = {
 		potential = {

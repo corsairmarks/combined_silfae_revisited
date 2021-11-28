@@ -45,16 +45,8 @@ head_researcher_job_check_trigger_holosphere_revisited = {
 }
 
 complex_drone_job_check_trigger = {
-	custom_tooltip = DRONE_JOB_TRIGGER
-	hidden_trigger = {
-		exists = owner
-		owner = { is_gestalt = yes }
-		is_being_purged = no
-		is_enslaved = no
-		is_being_assimilated = no
-		NOR = {
-			has_trait = trait_holodrone
-			has_citizenship_type = { type = citizenship_organic_trophy }
-		}
+	NOR = {
+		has_trait = trait_nerve_stapled
+		has_trait = trait_holodrone
 	}
 }
