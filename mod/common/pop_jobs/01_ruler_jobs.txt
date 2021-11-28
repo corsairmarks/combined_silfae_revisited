@@ -16,10 +16,6 @@ head_researcher = {
 	}
 
 	possible_precalc = can_fill_ruler_job
-	possible = {
-		head_researcher_job_check_trigger_holosphere_revisited = yes
-	}
-
 	resources = {
 		category = planet_researchers
 		produces = {
