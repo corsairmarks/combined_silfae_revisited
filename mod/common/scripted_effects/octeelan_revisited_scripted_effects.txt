@@ -335,33 +335,45 @@ generate_additional_xenos_pops = {
 			}
 		}
 	}
-	while = {
-		count = @octeelan_system_AVI_pops
-		if = {
-			limit = { owner = { is_homicidal = no } }
-			if = {
-				limit = { owner = { is_gestalt = no } }
-				random_owned_pop = {
-					limit = {
-						has_job = miner
-						NOT = { is_species = event_target:octeelan_system_AVI_species }
-					}
-					unemploy_pop = yes
-				}
-			}
-			else = {
-				random_owned_pop = {
-					limit = {
-						has_job = mining_drone
-						NOT = { is_species = event_target:octeelan_system_AVI_species }
-					}
-					unemploy_pop = yes
+	# only add a Pop of the first bonus species if the country doesn't have a secondary species
+	if = {
+		limit = {
+			owner = {
+				NOR = {
+					has_origin = origin_syncretic_evolution
+					has_origin = origin_necrophage
+					has_valid_civic = civic_machine_assimilator
 				}
 			}
 		}
-		create_pop = {
-			species = event_target:octeelan_system_AVI_species
-			ethos = random
+		while = {
+			count = @octeelan_system_AVI_pops
+			if = {
+				limit = { owner = { is_homicidal = no } }
+				if = {
+					limit = { owner = { is_gestalt = no } }
+					random_owned_pop = {
+						limit = {
+							has_job = miner
+							NOT = { is_species = event_target:octeelan_system_AVI_species }
+						}
+						unemploy_pop = yes
+					}
+				}
+				else = {
+					random_owned_pop = {
+						limit = {
+							has_job = mining_drone
+							NOT = { is_species = event_target:octeelan_system_AVI_species }
+						}
+						unemploy_pop = yes
+					}
+				}
+			}
+			create_pop = {
+				species = event_target:octeelan_system_AVI_species
+				ethos = random
+			}
 		}
 	}
 	while = {
