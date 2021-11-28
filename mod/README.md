@@ -91,6 +91,10 @@ This mod preempts the event `action.85` and overrides the deposit `d_alien_pets_
     * Remove event to force the Octee-lan portraits to be female (the game can do this now)
     * Octee-lans, Muubul, and Yuibitts are now Aquatic
     * Improve spawn code for bonus Tsukimi Pool system species
+* 3.1.0 Implement special mechanic so you and the Beep-Boops can **fight** (total war) and no closing of borders
+    * New Containment _casus belli_ that can be used by only the Beep-Boops and the player empire that started in their system
+    * Wargoals for each side of the special Containment
+    * Diplomacy action block you from closing borders or declaring a rivalry with the Beep-Boops and vice versa
 
 ## Source Code
 
