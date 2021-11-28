@@ -43,7 +43,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 
 In order to make the Alien Zoo available to gestalts (needed for the Beep-Boops), it is necessary to override `d_alien_pets_deposit`.  That means this mod is incompatible with other mods that modify that planetary deposit - although I doubt many do.
 
-New for Stellaris 3.2, this mod now overrides all diplomatic actions in order to prevent players beginning in Tsukimi Pool from closing their borders to the Beep-Boop (which would otherwise their fleets stuck permanently MIA).  Diplomatic actions require a full-file overwrite, and thus this mod is not compatible with others that seek to edit built-in diplomatic actions (does not conflict with mods that add extra diplomatic message text).  Otherwise compatible with any other mod that does not add the same portraits, species class, or art assets.
+New for Stellaris 3.2, this mod now overrides two diplomatic actions (Close Borders and Declare Rivalry) in order to prevent players beginning in Tsukimi Pool from closing their borders to the Beep-Boop (which would otherwise their fleets stuck permanently MIA).  Thus this mod is now not compatible with others that make changes to the same diplomatic actions (does not conflict with mods that add extra diplomatic message text).  Otherwise compatible with any other mod that does not add the same portraits, species class, or art assets.
 
 The Launcher will tell you that some mods are outdated - that is because the dependency is out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mod.
 
@@ -65,9 +65,11 @@ This mod should be added before the game has started.  If you remove it from a g
 
 ## Known Issues
 
-This mod preempts the event `action.85` and overrides the deposit `d_alien_pets_deposit` which generates two lines in the error log like this:
+This mod preempts one event and overrides a deposit and two diplomatic actions, which generates four lines in the error log like this:
 
 ```
+[02:34:24][game_singleobjectdatabase.h:147]: Object with key: action_make_rival already exists
+[02:34:24][game_singleobjectdatabase.h:147]: Object with key: action_close_borders already exists
 [02:34:24][eventmanager.cpp:355]: an event with id [action.85] already exists!  file: events/on_action_events.txt line: 8811
 [02:34:24][game_singleobjectdatabase.h:147]: Object with key: d_alien_pets_deposit already exists
 ```
