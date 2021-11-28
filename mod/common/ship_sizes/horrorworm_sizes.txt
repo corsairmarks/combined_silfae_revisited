@@ -25,6 +25,9 @@ dimensional_horrorworm = {
 	icon_frame = 5
 	base_buildtime = 50
 	can_have_federation_design = no
+	enable_default_design = yes
+	enable_3dview_in_ship_browser = yes
+	selectable = { has_leviathans = yes }
 	prerequisites = { tech_hollowrift }
 	combat_disengage_chance = 1.00
 	class = shipclass_military
@@ -34,7 +37,6 @@ dimensional_horrorworm = {
 	required_component_set = "thruster_components"
 	required_component_set = "sensor_components"
 	is_designable = yes
-	enable_default_design = yes
 	default_behavior = line
 	construction_type = starbase_shipyard
 	resources = {
