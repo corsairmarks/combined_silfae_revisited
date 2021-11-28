@@ -151,14 +151,15 @@ portrait_groups = {
 						is_pop_category = bio_trophy
 						is_pop_category = precursor
 						has_job = bureaucrat
+						has_job = primitive_bureaucrat
 						has_job = synapse_drone
 						has_job = coordinator
-						has_job = primitive_bureaucrat
 					}
 					NOR = {
 						has_job = head_researcher
 						has_job = fe_archivist
 						has_job = fe_protector
+						has_job = fe_xeno_ward
 					}
 				}
 				portraits = {
@@ -172,19 +173,20 @@ portrait_groups = {
 					OR = {
 						has_job = head_researcher
 						has_job = researcher
-						has_job = dimensional_portal_researcher
 						has_job = brain_drone
 						has_job = calculator
+						has_job = dimensional_portal_researcher
 						has_job = dimensional_portal_researcher_gestalt
-						has_job = fe_archivist
 						has_job = death_chronicler
+						has_job = chronicle_drone
 						has_job = spawning_drone
 						has_job = replicator
 						has_job = roboticist
-						has_job = evaluator
-						has_job = chronicle_drone
 						has_job = primitive_researcher
 						has_job = primitive_researcher_2
+						has_job = healthcare
+						has_job = evaluator
+						has_job = fe_archivist
 					}
 				}
 				portraits = {
@@ -196,17 +198,17 @@ portrait_groups = {
 			add = {
 				trigger = {
 					OR = {
+						has_job = necromancer
 						has_job = duelist
 						has_job = enforcer
-						has_job = necromancer
-						has_job = soldier
-						has_job = titan_hunter
+						has_job = telepath
 						has_job = patrol_drone
 						has_job = warrior_drone
-						has_job = fe_protector
-						has_job = telepath
+						has_job = soldier
 						has_job = primitive_warrior
 						has_job = primitive_warrior_2
+						has_job = titan_hunter
+						has_job = fe_protector
 					}
 				}
 				portraits = {
@@ -222,39 +224,42 @@ portrait_groups = {
 						# high
 						is_pop_category = ruler
 						is_pop_category = bio_trophy
-						is_pop_category = precursor
+						AND = {
+							is_pop_category = precursor
+							NOT = { has_job = fe_xeno_ward }
+						}
 						has_job = bureaucrat
+						has_job = primitive_bureaucrat
 						has_job = synapse_drone
 						has_job = coordinator
-						has_job = primitive_bureaucrat
 						# wise
-						has_job = head_researcher
 						has_job = researcher
-						has_job = dimensional_portal_researcher
 						has_job = brain_drone
 						has_job = calculator
+						has_job = dimensional_portal_researcher
 						has_job = dimensional_portal_researcher_gestalt
-						has_job = fe_archivist
 						has_job = death_chronicler
+						has_job = chronicle_drone
 						has_job = spawning_drone
 						has_job = replicator
 						has_job = roboticist
-						has_job = evaluator
-						has_job = chronicle_drone
 						has_job = primitive_researcher
 						has_job = primitive_researcher_2
+						has_job = healthcare
+						has_job = evaluator
+						has_job = fe_archivist
 						# warrior
+						has_job = necromancer
 						has_job = duelist
 						has_job = enforcer
-						has_job = necromancer
-						has_job = soldier
-						has_job = titan_hunter
+						has_job = telepath
 						has_job = patrol_drone
 						has_job = warrior_drone
-						has_job = fe_protector
-						has_job = telepath
+						has_job = soldier
 						has_job = primitive_warrior
 						has_job = primitive_warrior_2
+						has_job = titan_hunter
+						has_job = fe_protector
 					}
 				}
 				portraits = {
