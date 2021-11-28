@@ -30,7 +30,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     * Now supports a variety of civics and origin starts (all the built-in ones)
     * Muubul species: add Aquatic because they had an extra point
     * Yuibitt species: add Aquatic because they had an extra point
-    * Xueench species: remove Solitary because this species had a point remaining but couldn't spend it
+    * Xueench species: add Aquatic (which allows the species to have 0 points but -1 picks)
     * Your former overlords, the Beep Boops, will spawn if the Synthetic Dawn DLC is active
     * Beep-Boop species: removed High Maintenance, add Efficient Processors so that all points are spent
     * Beep-Boop empire: now a regular empire, with a special exception allowing them to have a colony in the same system (in order to fight you)
