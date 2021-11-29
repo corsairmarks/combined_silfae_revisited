@@ -8,6 +8,7 @@ holofrixit1 = {
 		plural = PRESCRIPTED_caste_xechiro_plural
 		adjective = PRESCRIPTED_caste_xechiro_adjective
 		name_list = ART1
+		gender = not_set
 		trait = trait_holofrixit
 		trait = trait_holooverseer
 	}

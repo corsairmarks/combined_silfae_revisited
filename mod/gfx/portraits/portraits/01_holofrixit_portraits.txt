@@ -198,7 +198,7 @@ portrait_groups = {
 		default = holofrixit_male_01
 		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
 			add = {
-				trigger = { ruler = { gender = male } }
+				trigger = { ruler = { NOT = { gender = female } } }
 				portraits = {
 					holofrixit_male_01
 					holofrixit_male_02
@@ -216,7 +216,7 @@ portrait_groups = {
 				}
 			}
 			add = {
-				trigger = { ruler = { gender = female } }
+				trigger = { ruler = { NOT = { gender = male } } }
 				portraits = {
 					holofrixit_female_01
 					holofrixit_female_02
@@ -238,11 +238,17 @@ portrait_groups = {
 		#species scope
 		species = { #generic portrait for a species
 			add = {
+				trigger = { NOT = { species_gender = female } }
 				portraits = {
 					holofrixit_male_11
 					holofrixit_male_12
 					holofrixit_male_13
 					holofrixit_male_14
+				}
+			}
+			add = {
+				trigger = { NOT = { species_gender = male } }
+				portraits = {
 					holofrixit_female_11
 					holofrixit_female_12
 					holofrixit_female_13
@@ -255,6 +261,12 @@ portrait_groups = {
 		pop = { #for a specific pop
 			add = {
 				trigger = {
+					NOR = {
+						species = { species_gender = female }
+						has_job = head_researcher
+						has_job = fe_archivist
+						has_job = fe_protector
+					}
 					OR = {
 						is_pop_category = ruler
 						is_pop_category = bio_trophy
@@ -264,17 +276,33 @@ portrait_groups = {
 						has_job = coordinator
 						has_job = primitive_bureaucrat
 					}
-					NOR = {
-						has_job = head_researcher
-						has_job = fe_archivist
-						has_job = fe_protector
-					}
 				}
 				portraits = {
 					holofrixit_male_11
 					holofrixit_male_12
 					holofrixit_male_13
 					holofrixit_male_14
+				}
+			}
+			add = {
+				trigger = {
+					NOR = {
+						species = { species_gender = male }
+						has_job = head_researcher
+						has_job = fe_archivist
+						has_job = fe_protector
+					}
+					OR = {
+						is_pop_category = ruler
+						is_pop_category = bio_trophy
+						is_pop_category = precursor
+						has_job = bureaucrat
+						has_job = synapse_drone
+						has_job = coordinator
+						has_job = primitive_bureaucrat
+					}
+				}
+				portraits = {
 					holofrixit_female_11
 					holofrixit_female_12
 					holofrixit_female_13
@@ -306,7 +334,7 @@ portrait_groups = {
 						has_job = evaluator
 						has_job = primitive_researcher
 						has_job = primitive_researcher_2
-						has_job = telepath
+						has_job = healthcare
 					}
 				}
 				portraits = {
@@ -318,6 +346,7 @@ portrait_groups = {
 					OR = {
 						has_job = duelist
 						has_job = enforcer
+						has_job = telepath
 						has_job = necromancer
 						has_job = soldier
 						has_job = titan_hunter
@@ -334,10 +363,12 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
+					exists = owner
 					owner = { has_technology = tech_epigenetic_triggers }
 					OR = {
 						has_job = duelist
 						has_job = enforcer
+						has_job = telepath
 						has_job = necromancer
 						has_job = soldier
 						has_job = titan_hunter
@@ -349,7 +380,6 @@ portrait_groups = {
 					}
 				}
 				portraits = {
-					holofrixit_warrior_01
 					holofrixit_warrior_02
 				}
 			}
@@ -382,10 +412,11 @@ portrait_groups = {
 						has_job = evaluator
 						has_job = primitive_researcher
 						has_job = primitive_researcher_2
-						has_job = telepath
+						has_job = healthcare
 						# holowarrior
 						has_job = duelist
 						has_job = enforcer
+						has_job = telepath
 						has_job = necromancer
 						has_job = soldier
 						has_job = titan_hunter
@@ -403,11 +434,11 @@ portrait_groups = {
 		}
 
 		#leader scope
-		leader = { #scientists, generals, admirals, governor, envoy
+		leader = { #scientists, generals, admirals, governors, envoys
 			add = {
 				trigger = {
-					gender = male
 					NOR = {
+						gender = female
 						leader_class = scientist
 						leader_class = general
 						leader_class = admiral
@@ -422,8 +453,8 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
-					gender = female
 					NOR = {
+						gender = male
 						leader_class = scientist
 						leader_class = general
 						leader_class = admiral
@@ -453,12 +484,22 @@ portrait_groups = {
 					holofrixit_warrior_01
 				}
 			}
+			add = {
+				trigger = {
+					leader_class = general
+					exists = owner
+					owner = { has_technology = tech_epigenetic_triggers }
+				}
+				portraits = {
+					holofrixit_warrior_02
+				}
+			}
 		}
 
 		#leader scope
 		ruler = {
 			add = {
-				trigger = { gender = female }
+				trigger = { NOT = { gender = male } }
 				portraits = {
 					holofrixit_female_01
 					holofrixit_female_02
@@ -471,7 +512,7 @@ portrait_groups = {
 				}
 			}
 			add = {
-				trigger = { gender = male }
+				trigger = { NOT = { gender = female } }
 				portraits = {
 					holofrixit_male_01
 					holofrixit_male_02
@@ -490,7 +531,7 @@ portrait_groups = {
 		default = holofrixit_male_01
 		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
 			add = {
-				trigger = { ruler = { gender = male } }
+				trigger = { ruler = { NOT = { gender = female } } }
 				portraits = {
 					holofrixit_male_01
 					holofrixit_male_02
@@ -503,7 +544,7 @@ portrait_groups = {
 				}
 			}
 			add = {
-				trigger = { ruler = { gender = female } }
+				trigger = { ruler = { NOT = { gender = male } } }
 				portraits = {
 					holofrixit_female_01
 					holofrixit_female_02
@@ -520,11 +561,17 @@ portrait_groups = {
 		#species scope
 		species = { #generic portrait for a species
 			add = {
+				trigger = { NOT = { species_gender = female } }
 				portraits = {
 					holofrixit_male_11
 					holofrixit_male_12
 					holofrixit_male_13
 					holofrixit_male_14
+				}
+			}
+			add = {
+				trigger = { NOT = { species_gender = male } }
+				portraits = {
 					holofrixit_female_11
 					holofrixit_female_12
 					holofrixit_female_13
@@ -536,11 +583,17 @@ portrait_groups = {
 		#pop scope
 		pop = { #for a specific pop
 			add = {
+				trigger = { species = { NOT = { species_gender = female } } }
 				portraits = {
 					holofrixit_male_11
 					holofrixit_male_12
 					holofrixit_male_13
 					holofrixit_male_14
+				}
+			}
+			add = {
+				trigger = { species = { NOT = { species_gender = male } } }
+				portraits = {
 					holofrixit_female_11
 					holofrixit_female_12
 					holofrixit_female_13
@@ -550,11 +603,11 @@ portrait_groups = {
 		}
 
 		#leader scope
-		leader = { #scientists, generals, admirals, governor, envoy
+		leader = { #scientists, generals, admirals, governors, envoys
 			add = {
 				trigger = {
-					gender = male
 					NOR = {
+						gender = female
 						leader_class = scientist
 						leader_class = general
 						leader_class = admiral
@@ -569,8 +622,8 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
-					gender = female
 					NOR = {
+						gender = male
 						leader_class = scientist
 						leader_class = general
 						leader_class = admiral
@@ -600,12 +653,22 @@ portrait_groups = {
 					holofrixit_warrior_01
 				}
 			}
+			add = {
+				trigger = {
+					leader_class = general
+					exists = owner
+					owner = { has_technology = tech_epigenetic_triggers }
+				}
+				portraits = {
+					holofrixit_warrior_02
+				}
+			}
 		}
 
 		#leader scope
 		ruler = {
 			add = {
-				trigger = { gender = female }
+				trigger = { NOT = { gender = male } }
 				portraits = {
 					holofrixit_female_01
 					holofrixit_female_02
@@ -618,7 +681,7 @@ portrait_groups = {
 				}
 			}
 			add = {
-				trigger = { gender = male }
+				trigger = { NOT = { gender = female } }
 				portraits = {
 					holofrixit_male_01
 					holofrixit_male_02
@@ -674,7 +737,10 @@ portrait_groups = {
 				}
 			}
 			add = {
-				trigger = { owner = { has_technology = tech_epigenetic_triggers } }
+				trigger = {
+					exists = owner
+					owner = { has_technology = tech_epigenetic_triggers }
+				}
 				portraits = {
 					holofrixit_warrior_02
 				}
@@ -682,14 +748,17 @@ portrait_groups = {
 		}
 
 		#leader scope
-		leader = { #scientists, generals, admirals, governor, envoy
+		leader = { #scientists, generals, admirals, governors, envoys
 			add = {
 				portraits = {
 					holofrixit_warrior_01
 				}
 			}
 			add = {
-				trigger = { owner = { has_technology = tech_epigenetic_triggers } }
+				trigger = {
+					exists = owner
+					owner = { has_technology = tech_epigenetic_triggers }
+				}
 				portraits = {
 					holofrixit_warrior_02
 				}
@@ -704,7 +773,10 @@ portrait_groups = {
 				}
 			}
 			add = {
-				trigger = { owner = { has_technology = tech_epigenetic_triggers } }
+				trigger = {
+					exists = owner
+					owner = { has_technology = tech_epigenetic_triggers }
+				}
 				portraits = {
 					holofrixit_warrior_02
 				}
@@ -762,13 +834,19 @@ portrait_groups = {
 				}
 			}
 			add = {
-				trigger = { owner = { has_technology = tech_droid_workers } }
+				trigger = {
+					exists = owner
+					owner = { has_technology = tech_droid_workers }
+				}
 				portraits = {
 					holofrixit_gram_02
 				}
 			}
 			add = {
-				trigger = { owner = { has_technology = tech_synthetic_workers } }
+				trigger = {
+					exists = owner
+					owner = { has_technology = tech_synthetic_workers }
+				}
 				portraits = {
 					holofrixit_gram_03
 				}
@@ -776,20 +854,26 @@ portrait_groups = {
 		}
 
 		#leader scope
-		leader = { #scientists, generals, admirals, governor, envoy
+		leader = { #scientists, generals, admirals, governors, envoys
 			add = {
 				portraits = {
 					holofrixit_gram_01
 				}
 			}
 			add = {
-				trigger = { owner = { has_technology = tech_droid_workers } }
+				trigger = {
+					exists = owner
+					owner = { has_technology = tech_droid_workers }
+				}
 				portraits = {
 					holofrixit_gram_02
 				}
 			}
 			add = {
-				trigger = { owner = { has_technology = tech_synthetic_workers } }
+				trigger = {
+					exists = owner
+					owner = { has_technology = tech_synthetic_workers }
+				}
 				portraits = {
 					holofrixit_gram_03
 				}
@@ -805,14 +889,20 @@ portrait_groups = {
 				}
 			}
 			add = {
-				trigger = { owner = { has_technology = tech_droid_workers } }
+				trigger = {
+					exists = owner
+					owner = { has_technology = tech_droid_workers }
+				}
 				portraits = {
 					holofrixit_gram_02
 					holofrixit_gram_05
 				}
 			}
 			add = {
-				trigger = { owner = { has_technology = tech_synthetic_workers } }
+				trigger = {
+					exists = owner
+					owner = { has_technology = tech_synthetic_workers }
+				}
 				portraits = {
 					holofrixit_gram_03
 					holofrixit_gram_06

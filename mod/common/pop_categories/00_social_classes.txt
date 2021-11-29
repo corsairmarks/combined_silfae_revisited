@@ -1011,6 +1011,7 @@ specialist = {
 		upkeep = {
 			trigger = {
 				is_robotic_species = yes
+				is_holofrixit = no
 				OR = {
 					has_high_living_standard_type = yes
 					has_normal_living_standard_type = yes

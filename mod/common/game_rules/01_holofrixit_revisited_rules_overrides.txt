@@ -1,7 +1,22 @@
-#Checks whether any leaders (scientists etc) can be formed from this pop
-# ROOT = country
-# THIS = pop
+# Checks whether any leaders (scientists etc) can be formed from this pop
+# root = country
+# this = pop
 can_generate_leader_from_pop = {
+	OR = {
+		NOT = { owner = { has_authority = auth_holofrixit } }
+		owner = {
+			has_origin = origin_holofrixit
+			prev.species = {
+				OR = {
+					NOT = { has_trait = trait_holofrixit }
+					has_trait = trait_holooverseer
+					has_trait = trait_hologanglion
+					has_trait = trait_holowarrior
+					has_trait = trait_holowarrior_2
+				}
+			}
+		}
+	}
 	has_citizenship_rights = yes
 	NOR = {
 		has_trait = trait_syncretic_proles
@@ -10,29 +25,17 @@ can_generate_leader_from_pop = {
 	}
 	OR = {
 		is_robot_pop = no
-		ROOT = {
-			has_origin = origin_holofrixit
-			PREV.species = {
-				OR = {
-					NOT = { has_trait = trait_holofrixit }
-					has_trait = trait_holooverseer
-					has_trait = trait_hologanglion
-					# has_trait = trait_holowarrior
-					# has_trait = trait_holowarrior_2
-				}
-			}
-		}
-		ROOT = {
+		owner = {
 			OR = {
 				has_technology = tech_synthetic_leaders
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 				is_mechanical_empire = yes
 			}
 		}
 	}
 	OR = {
-		is_same_species = ROOT
-		ROOT = {
+		is_same_species = owner
+		owner = {
 			NAND = {
 				has_origin = origin_necrophage
 				has_trait = trait_necrophage
@@ -41,32 +44,37 @@ can_generate_leader_from_pop = {
 	}
 }
 
-# ROOT = country
-# THIS = pop
+# root = country
+# this = pop
 can_generate_military_leader_from_pop = {
 	can_be_military_leader = yes
 	OR = {
 		is_robot_pop = no
-		ROOT = {
+		owner = {
 			OR = {
-				AND = {
-					has_origin = origin_holofrixit
-					PREV.species = {
-						OR = {
-							has_trait = trait_holowarrior
-							has_trait = trait_holowarrior_2
-						}
-					}
-				}
 				has_technology = tech_synthetic_leaders
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 				is_mechanical_empire = yes
+				AND = {
+					has_authority = auth_holofrixit
+					prev.species = { has_trait = trait_holofrixit }
+				}
 			}
 		}
 	}
 	OR = {
-		is_same_species = ROOT
-		ROOT = {
+		owner = { NOT = { has_authority = auth_holofrixit } }
+		species = {
+			OR = {
+				NOT = { has_trait = trait_holofrixit }
+				has_trait = trait_holowarrior
+				has_trait = trait_holowarrior_2
+			}
+		}
+	}
+	OR = {
+		is_same_species = owner
+		owner = {
 			NAND = {
 				has_origin = origin_necrophage
 				has_trait = trait_necrophage
@@ -76,8 +84,8 @@ can_generate_military_leader_from_pop = {
 }
 
 # Checks if a pop can procreate
-# THIS = Species
-# ROOT = Planet
+# this = Species
+# root = Planet
 can_species_procreate = {
 	is_sapient = yes
 	NOR = {
@@ -86,34 +94,33 @@ can_species_procreate = {
 		has_trait = trait_hologanglion
 	}
 	NAND = {
-		ROOT = { has_modifier = slave_colony }
-		NOT = { has_citizenship_type = { type = citizenship_slavery country = ROOT.owner } }
+		root = { has_modifier = slave_colony }
+		NOT = { has_citizenship_type = { type = citizenship_slavery country = root.owner } }
 	}
 	if = {
-		limit = {
-			has_trait = trait_necrophage
-		}
+		limit = { has_trait = trait_necrophage }
 		NOT = {
-			ROOT = {
+			root = {
 				any_owned_species = {
-					has_population_control = { country = ROOT.owner value = no }
+					has_population_control = { country = root.owner value = no }
 					species_can_be_necrophaged = yes
 				}
 			}
 		}
 	}
+	NOT = { has_species_flag = nivlac_no_procreation }
 }
 
 # Checks if a pop can be assembled
-# THIS = species
-# ROOT = planet
+# this = species
+# root = planet
 can_species_be_assembled = {
 	is_sapient = yes
 	NOT = { has_trait = trait_holodrone }
 	OR = {
 		AND = {
 			is_robotic = yes
-			ROOT = {
+			root = {
 				check_modifier_value = {
 					modifier = planet_pop_assembly_add
 					value > 0
@@ -124,14 +131,14 @@ can_species_be_assembled = {
 			is_organic_species = yes
 			if = {
 				limit = {
-					ROOT.owner = { is_hive_empire = yes }
+					root.owner = { is_hive_empire = yes }
 				}
 				has_trait = trait_hive_mind
 			}
 			else_if = {
 				limit = { has_trait = trait_plantoid_budding }
-				ROOT = {
-					any_owned_species = { is_exact_same_species = PREVPREV }
+				root = {
+					any_owned_species = { is_exact_same_species = prevprev }
 				}
 			}
 			else_if = {
@@ -141,7 +148,7 @@ can_species_be_assembled = {
 						has_trait = trait_clone_soldier_infertile_full_potential
 					}
 				}
-				ROOT = {
+				root = {
 					# Event 'clones.3' should cover this, but extra safety check.
 					has_building = building_clone_army_clone_vat
 					NOT = {
@@ -153,12 +160,70 @@ can_species_be_assembled = {
 				}
 			}
 			else = {
-				ROOT = { has_building = building_clone_vats }
+				root = { has_building = building_clone_vats }
 			}
 		}
 	}
 	has_population_control = {
 		value = no
-		country = ROOT.owner
+		country = root.owner
+	}
+}
+
+#this = pop
+#checked if job's possible_precalc = can_fill_ruler_job
+can_fill_ruler_job = {
+	if = {
+		limit = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				has_origin = origin_necrophage
+				has_trait = trait_necrophage
+			}
+		}
+		custom_tooltip = {
+			text = RULER_JOB_NECROPHAGE_TRIGGER
+			has_trait = trait_necrophage
+			is_enslaved = no
+			is_being_purged = no
+			is_being_assimilated = no
+		}
+	}
+	else_if = {
+		limit = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				has_origin = origin_holofrixit
+				has_trait = trait_holooverseer
+			}
+		}
+		can_fill_holosphere_ruler_job = yes
+	}
+	else = {
+		custom_tooltip = RULER_JOB_TRIGGER
+		hidden_trigger = {
+			is_gestalt = no
+			is_enslaved = no
+			is_being_purged = no
+			is_being_assimilated = no
+			NOR = {
+				has_trait = trait_syncretic_proles
+				has_trait = trait_nerve_stapled
+				has_citizenship_type = { type = citizenship_organic_trophy }
+			}
+			OR = {
+				NOT = { has_trait = trait_mechanical }
+				owner = {
+					has_technology = tech_synthetic_workers
+					has_policy_flag = ai_full_rights
+				}
+			}
+			if = {
+				limit = { divinity_right_to_work_job_check_trigger_exempt = no }
+				divinity_right_to_work_job_check_trigger_ruler = yes
+			}
+		}
 	}
 }
