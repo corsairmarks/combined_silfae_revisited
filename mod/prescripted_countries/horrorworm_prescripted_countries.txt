@@ -11,6 +11,7 @@ horrorworm1 = {
 		plural = "Hollow"
 		adjective = "Hollow"
 		name_list = HRWRM1
+		gender = indeterminable
 		trait = trait_hive_mind
 		trait = trait_survivor
 		trait = trait_horrorworm
@@ -46,7 +47,7 @@ horrorworm1 = {
 		}
 	}
 	ruler = {
-		gender = male
+		gender = indeterminable
 		name = "Krr'tryzahat"
 		portrait = horrorworm_main_swarm_01
 		texture = 0
