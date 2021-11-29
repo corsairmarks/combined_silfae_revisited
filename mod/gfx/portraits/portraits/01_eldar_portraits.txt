@@ -1,0 +1,142 @@
+portraits = {
+	eldar_female_01 = { entity = "portrait_eldar_female_01_entity" clothes_selector = "eldar_female_clothes_01" hair_selector = "eldar_female_hair_01" greeting_sound = "human_female_greetings_03"
+		character_textures = {
+			"gfx/models/portraits/eldar/eldar_female_body_01a.dds"
+			"gfx/models/portraits/eldar/eldar_female_body_01b.dds"
+		}
+	}
+ eldar_female_02 = { entity = "portrait_eldar_female_02_entity" clothes_selector = "eldar_female_clothes_01" hair_selector = "eldar_female_hair_01" greeting_sound = "human_female_greetings_01"
+		character_textures = {
+			"gfx/models/portraits/eldar/eldar_female_body_02a.dds"
+			"gfx/models/portraits/eldar/eldar_female_body_02b.dds"
+		}
+	}
+	eldar_female_03 = { entity = "portrait_eldar_female_02_entity" clothes_selector = "eldar_female_clothes_01" hair_selector = "eldar_female_hair_01" greeting_sound = "human_female_greetings_01"
+		character_textures = {
+			"gfx/models/portraits/eldar/eldar_female_body_03a.dds"
+			"gfx/models/portraits/eldar/eldar_female_body_03b.dds"
+		}
+	}
+	eldar_male_01 = { entity = "portrait_eldar_male_01_entity" clothes_selector = "eldar_male_clothes_01" hair_selector = "eldar_male_hair_01" greeting_sound = "human_male_greetings_03"
+		character_textures = {
+			"gfx/models/portraits/eldar/eldar_male_body_01a.dds"
+			"gfx/models/portraits/eldar/eldar_male_body_01b.dds"
+		}
+	}
+	eldar_male_02 = { entity = "portrait_eldar_male_02_entity" clothes_selector = "eldar_male_clothes_01"  hair_selector = "eldar_male_hair_01"	greeting_sound = "human_male_greetings_01"
+		character_textures = {
+			"gfx/models/portraits/eldar/eldar_male_body_02a.dds"
+			"gfx/models/portraits/eldar/eldar_male_body_02b.dds"
+		}
+	}
+	eldar_male_03 = { entity = "portrait_eldar_male_02_entity" clothes_selector = "eldar_male_clothes_01"  hair_selector = "eldar_male_hair_01"	greeting_sound = "human_male_greetings_01"
+		character_textures = {
+			"gfx/models/portraits/eldar/eldar_male_body_03a.dds"
+			"gfx/models/portraits/eldar/eldar_male_body_03b.dds"
+		}
+	}
+}
+
+portrait_groups = {
+	eldar = {
+		default = eldar_female_02
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = { ruler = { NOT = { gender = female } } }
+				portraits = {
+					eldar_male_01
+					eldar_male_02
+					eldar_male_03
+				}
+			}
+			add = {
+				trigger = { ruler = { NOT = { gender = male } } }
+				portraits = {
+					eldar_female_01
+					eldar_female_02
+					eldar_female_03
+				}
+			}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = { NOT = { species_gender = male } }
+				portraits = {
+					eldar_female_01
+					eldar_female_02
+					eldar_female_03
+				}
+			}
+			add = {
+				trigger = { NOT = { species_gender = female } }
+				portraits = {
+					eldar_male_01
+					eldar_male_02
+					eldar_male_03
+				}
+			}
+		}
+
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = { species = { NOT = { species_gender = male } } }
+				portraits = {
+					eldar_female_01
+					eldar_female_02
+					eldar_female_03
+				}
+			}
+			add = {
+				trigger = { species = { NOT = { species_gender = female } } }
+				portraits = {
+					eldar_male_01
+					eldar_male_02
+					eldar_male_03
+				}
+			}
+		}
+
+		#leader scope
+		leader = { #scientists, generals, admirals, governors, envoys
+			add = {
+				trigger = { NOT = { gender = male } }
+				portraits = {
+					eldar_female_01
+					eldar_female_02
+					eldar_female_03
+				}
+			}
+			add = {
+				trigger = { NOT = { gender = female } }
+				portraits = {
+					eldar_male_01
+					eldar_male_02
+					eldar_male_03
+				}
+			}
+		}
+
+		#leader scope
+		ruler = {
+			add = {
+				trigger = { NOT = { gender = male } }
+				portraits = {
+					eldar_female_01
+					eldar_female_02
+					eldar_female_03
+				}
+			}
+			add = {
+				trigger = { NOT = { gender = female } }
+				portraits = {
+					eldar_male_01
+					eldar_male_02
+					eldar_male_03
+				}
+			}
+		}
+	}
+}

@@ -1,7 +1,7 @@
-# THIS = country
+# this = country
 flag_subspecies_type = {
 	if = {
-		limit = { last_created_species = { NOT = { is_exact_same_species = PREV.owner_main_species } } }
+		limit = { last_created_species = { NOT = { is_exact_same_species = prev.owner_main_species } } }
 		if = {
 			limit = { last_created_species = { is_lithoid = yes } }
 			set_country_flag = lithoid_subspecies
@@ -19,8 +19,8 @@ flag_subspecies_type = {
 	}
 }
 
-# THIS = planet, capital
-# FROM = species, founder
+# this = planet, capital
+# from = species, founder
 generate_eldar_system_start_deposits_and_blockers = {
 	clear_deposits = yes
 	# no blockers except special lithoid blockers, which don't reduce districts
@@ -198,8 +198,8 @@ generate_eldar_system_start_deposits_and_blockers = {
 }
 
 # set up the buildings for the custom initializer
-# THIS = planet, capital
-# FROM = species, founder
+# this = planet, capital
+# from = species, founder
 generate_eldar_system_start_buildings_and_districts = {
 	if = {
 		limit = { owner = { is_machine_empire = yes } }
@@ -211,12 +211,8 @@ generate_eldar_system_start_buildings_and_districts = {
 			add_district = district_nexus
 			add_building = building_organic_sanctuary
 		}
-		else_if = {
-			limit = { owner = { has_origin = origin_machine } }
-			add_district = district_generator_uncapped
-		}
 		else = {
-			add_district = district_generator
+			add_planet_appropriate_generator_district_aepr = yes
 		}
 		while = {
 			count = 2
@@ -243,7 +239,7 @@ generate_eldar_system_start_buildings_and_districts = {
 		}
 		if = {
 			limit = { owner = { has_origin = origin_tree_of_life } }
-			add_district = district_farming
+			add_planet_appropriate_farming_district_aepr = yes
 		}
 		else = {
 			add_district = district_hive
@@ -297,7 +293,7 @@ generate_eldar_system_start_buildings_and_districts = {
 					}
 				}
 			}
-			add_district = district_generator
+			add_planet_appropriate_generator_district_aepr = yes
 		}
 		else = {
 			add_district = district_city
@@ -346,13 +342,7 @@ generate_eldar_system_start_buildings_and_districts = {
 	}
 	if = {
 		limit = { owner = { is_machine_empire = yes } }
-		if = {
-			limit = { owner = { has_origin = origin_machine } }
-			add_district = district_generator_uncapped
-		}
-		else = {
-			add_district = district_generator
-		}
+		add_planet_appropriate_generator_district_aepr = yes
 	}
 	else_if = {
 		limit = { owner = { has_origin = origin_clone_army } }
@@ -367,7 +357,14 @@ generate_eldar_system_start_buildings_and_districts = {
 				}
 			}
 		}
-		add_district = district_generator
+		add_planet_appropriate_generator_district_aepr = yes
+	}
+	else_if = {
+		limit = {
+			is_planet_class = pc_ocean
+			owner = { is_anglers_empire = yes }
+		}
+		add_planet_appropriate_farming_district_aepr = yes
 	}
 	else = {
 		add_district = district_industrial
@@ -377,9 +374,9 @@ generate_eldar_system_start_buildings_and_districts = {
 		limit = { owner = { has_origin = origin_machine } }
 		while = {
 			count = 2
-			add_district = district_generator_uncapped
+			add_planet_appropriate_generator_district_aepr = yes
 		}
-		add_district = district_mining_uncapped
+		add_planet_appropriate_mining_district_aepr = yes
 	}
 	else = {
 		if = {
@@ -392,7 +389,7 @@ generate_eldar_system_start_buildings_and_districts = {
 				limit = { owner = { is_hive_empire = yes } }
 				if = {
 					limit = { owner = { has_origin = origin_tree_of_life } }
-					add_district = district_farming
+					add_planet_appropriate_farming_district_aepr = yes
 				}
 				else = {
 					add_district = district_hive
@@ -408,7 +405,7 @@ generate_eldar_system_start_buildings_and_districts = {
 		}
 		else_if = {
 			limit = { owner = { has_origin = origin_tree_of_life } }
-			add_district = district_farming
+			add_planet_appropriate_farming_district_aepr = yes
 		}
 		else_if = {
 			limit = {
@@ -423,11 +420,30 @@ generate_eldar_system_start_buildings_and_districts = {
 			limit = { owner = { has_origin = origin_clone_army } }
 			add_district = district_city
 		}
-		else = {
-			add_district = district_mining
+		else_if = {
+			limit = {
+				is_planet_class = pc_ocean
+				owner = { is_anglers_empire = yes }
+			}
+			add_planet_appropriate_farming_district_aepr = yes
 		}
-		add_district = district_mining
-		add_district = district_generator
+		else = {
+			add_planet_appropriate_mining_district_aepr = yes
+		}
+		if = {
+			limit = {
+				is_planet_class = pc_ocean
+				owner = {
+					is_catalytic_empire = yes
+					is_anglers_empire = yes
+				}
+			}
+			add_planet_appropriate_farming_district_aepr = yes
+		}
+		else = {
+			add_planet_appropriate_mining_district_aepr = yes
+		}
+		add_planet_appropriate_generator_district_aepr = yes
 	}
 	if = {
 		limit = { owner = { NOT = { has_origin = origin_remnants } } }
@@ -487,7 +503,13 @@ generate_eldar_system_start_buildings_and_districts = {
 				}
 			}
 		}
-		add_building = building_hydroponics_farm
+		if = {
+			limit = { owner = { is_anglers_empire = no } }
+			add_building = building_hydroponics_farm
+		}
+		else = {
+			add_building = building_aquaponics_farm_eldar_revisited
+		}
 		if = {
 			limit = {
 				owner = {
@@ -505,17 +527,27 @@ generate_eldar_system_start_buildings_and_districts = {
 					}
 				}
 			}
-			add_building = building_hydroponics_farm
+			if = {
+				limit = { owner = { is_anglers_empire = no } }
+				add_building = building_hydroponics_farm
+			}
+			else_if = {
+				limit = { is_wet = yes }
+				add_building = building_commercial_zone
+			}
+			else = {
+				add_building = building_aquaponics_farm_eldar_revisited
+			}
 		}
 	}
 }
 
 # same as vanilla, but doesn't adjust planet size or add buildings/districts
-# THIS = planet, capital
-# FROM = species, founder
+# this = planet, capital
+# from = species, founder
 generate_eldar_system_start_pops = {
 	set_variable = {
-		which = main_species_pops
+		which = total_starting_pops
 		value = 0
 	}
 	set_variable = {
@@ -525,7 +557,7 @@ generate_eldar_system_start_pops = {
 	if = {
 		limit = { owner = { is_machine_empire = yes } }
 		set_variable = {
-			which = main_species_pops
+			which = total_starting_pops
 			value = 29
 		}
 		if = {
@@ -536,11 +568,11 @@ generate_eldar_system_start_pops = {
 			}
 			last_created_species = {
 				set_citizenship_type = {
-					country = PREV.owner
+					country = prev.owner
 					type = citizenship_full_machine
 				}
 				set_living_standard = {
-					country = PREV.owner
+					country = prev.owner
 					type = living_standard_hive_mind
 				}
 			}
@@ -548,7 +580,7 @@ generate_eldar_system_start_pops = {
 		else_if = {
 			limit = { owner = { has_valid_civic = civic_machine_servitor } }
 			set_variable = {
-				which = main_species_pops
+				which = total_starting_pops
 				value = 33
 			}
 			set_variable = {
@@ -557,11 +589,11 @@ generate_eldar_system_start_pops = {
 			}
 			last_created_species = {
 				set_citizenship_type = {
-					country = PREV.owner
+					country = prev.owner
 					type = citizenship_limited
 				}
 				set_living_standard = {
-					country = PREV.owner
+					country = prev.owner
 					type = living_standard_organic_trophy
 				}
 			}
@@ -570,78 +602,74 @@ generate_eldar_system_start_pops = {
 	else_if = {
 		limit = { owner = { is_hive_empire = yes } }
 		set_variable = {
-			which = main_species_pops
+			which = total_starting_pops
 			value = 33
-		}
-		if = {
-			limit = { owner = { has_origin = origin_necrophage } }
-			last_created_species = { set_species_flag = syncretic_species@PREV.owner }
-			if = {
-				limit = { owner = { has_valid_civic = civic_hive_devouring_swarm } }
-				set_variable = {
-					which = secondary_species_pops
-					value = 6
-				}
-			}
-			else = {
-				set_variable = {
-					which = secondary_species_pops
-					value = 9
-				}
-			}
 		}
 	}
 	else = {
 		# regular empire/fallback
 		set_variable = {
-			which = main_species_pops
+			which = total_starting_pops
 			value = 28
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				OR = {
+					has_origin = origin_syncretic_evolution
+					has_origin = origin_necrophage
+				}
+			}
+		}
+		last_created_species = {
+			set_species_flag = syncretic_species@prev.owner
+			if = {
+				limit = { prev.owner = { has_origin = origin_syncretic_evolution } }
+				set_citizenship_type = {
+					country = prev.owner
+					type = citizenship_slavery
+				}
+			}
 		}
 		if = {
 			limit = {
 				owner = {
-					OR = {
-						has_origin = origin_syncretic_evolution
-						has_origin = origin_necrophage
-					}
+					has_origin = origin_necrophage
+					is_homicidal = yes
+					is_gestalt = yes
 				}
 			}
-			last_created_species = {
-				set_species_flag = syncretic_species@PREV.owner
-				if = {
-					limit = { PREV.owner = { has_origin = origin_syncretic_evolution } }
-					set_citizenship_type = {
-						country = PREV.owner
-						type = citizenship_slavery
-					}
-				}
-			}
-			if = {
-				limit = {
-					owner = {
-						has_origin = origin_necrophage
-						has_valid_civic = civic_fanatic_purifiers
-					}
-				}
-				set_variable = {
-					which = secondary_species_pops
-					value = 9
-				}
-			}
-			else = {
-				set_variable = {
-					which = secondary_species_pops
-					value = 12
-				}
+			set_variable = {
+				which = secondary_species_pops
+				value = 6
 			}
 		}
 		else_if = {
-			limit = { owner = { has_origin = origin_mechanists } }
-			owner = { create_built_robot_species = yes }
+			limit = {
+				owner = {
+					has_origin = origin_necrophage
+					is_gestalt = yes
+				}
+			}
 			set_variable = {
 				which = secondary_species_pops
-				value = 8
+				value = 9
 			}
+		}
+		else = {
+			set_variable = {
+				which = secondary_species_pops
+				value = 12
+			}
+		}
+	}
+	else_if = {
+		limit = { owner = { has_origin = origin_mechanists } }
+		owner = { create_built_robot_species = yes }
+		set_variable = {
+			which = secondary_species_pops
+			value = 8
 		}
 	}
 	if = {
@@ -652,7 +680,7 @@ generate_eldar_system_start_pops = {
 			}
 		}
 		subtract_variable = {
-			which = main_species_pops
+			which = total_starting_pops
 			value = secondary_species_pops
 		}
 		while = {
@@ -669,13 +697,6 @@ generate_eldar_system_start_pops = {
 			}
 		}
 	}
-	while = {
-		count = main_species_pops
-		create_pop = {
-			species = owner_main_species
-			ethos = random
-		}
-	}
 	if = {
 		limit = { # homicidal necrophages lose 1/4 of their necrophytes to fleeing
 			owner = {
@@ -683,31 +704,32 @@ generate_eldar_system_start_pops = {
 				is_homicidal = yes
 			}
 		}
-		while = {
-			count = 2
-			create_pop = {
-				species = owner_main_species
-				ethos = random
-			}
+		change_variable = {
+			which = total_starting_pops
+			value = 2
 		}
 	}
-	if = {
+	else_if = {
 		limit = { owner = { has_origin = origin_default } }
-		while = {
-			count = 4
-			create_pop = {
-				species = owner_main_species
-				ethos = random
-			}
+		change_variable = {
+			which = total_starting_pops
+			value = 4
 		}
 		add_modifier = { modifier = mastery_of_nature }
 	}
-	clear_variable = main_species_pops
+	while = {
+		count = total_starting_pops
+		create_pop = {
+			species = owner_main_species
+			ethos = random
+		}
+	}
+	clear_variable = total_starting_pops
 	clear_variable = secondary_species_pops
 }
 
-# THIS = planet, capital
-# FROM = species, founder
+# this = planet, capital
+# from = species, founder
 generate_eldar_system_final_pass = {
 	# origin-related modifiers
 	if = {
@@ -728,18 +750,27 @@ generate_eldar_system_final_pass = {
 	}
 	else_if = {
 		limit = { owner = { has_origin = origin_default } }
-		add_modifier = {
-			modifier = prosp_uni_mod
-			days = 7200
+		if = {
+			limit = { owner = { is_gestalt = no } }
+			add_modifier = {
+				modifier = prosp_uni_mod
+				days = 7200
+			}
+		}
+		else = {
+			add_modifier = {
+				modifier = prosp_uni_mod_gestalt
+				days = 7200
+			}
 		}
 		change_planet_size = 2
-		add_district = district_generator
-		add_district = district_mining
+		add_planet_appropriate_generator_district_aepr = yes
+		add_planet_appropriate_mining_district_aepr = yes
 	}
 }
 
 # duplicates the base game's Shroud creation code - which is unfortuantely duplicated/near-duplicated multiple times but none of them in an reusable effect
-# THIS = any
+# this = any
 silfae_eldar_ensure_global_shroud_country = {
 	if = {
 		limit = { NOT = { exists = event_target:shroud_country } }
@@ -768,11 +799,69 @@ silfae_eldar_ensure_global_shroud_country = {
 }
 
 # ensures the Shroud exists and that the scoped country (silently) has communications with it
-# THIS = country
+# this = country
 silfae_eldar_ensure_communications_global_shroud_country = {
 	silfae_eldar_ensure_global_shroud_country = yes
 	if = {
 		limit = { NOT = { has_communications = event_target:shroud_country } }
 		establish_communications_no_message = event_target:shroud_country
+	}
+}
+
+# this = planet
+add_planet_appropriate_mining_district_aepr = {
+	if = {
+		limit = {
+			OR = {
+				is_planet_class = pc_hive
+				is_planet_class = pc_machine
+				is_planet_class = pc_shattered_ring_habitable
+			}
+		}
+		add_district = district_mining_uncapped
+	}
+	else = {
+		add_district = district_mining
+	}
+}
+
+
+# this = planet
+add_planet_appropriate_generator_district_aepr = {
+	if = {
+		limit = {
+			OR = {
+				is_planet_class = pc_hive
+				is_planet_class = pc_machine
+			}
+		}
+		add_district = district_generator_uncapped
+	}
+	else_if = {
+		limit = { is_planet_class = pc_shattered_ring_habitable }
+		add_district = district_srw_commercial
+	}
+	else = {
+		add_district = district_generator
+	}
+}
+
+# this = planet
+add_planet_appropriate_farming_district_aepr = {
+	if = {
+		limit = {
+			OR = {
+				is_planet_class = pc_hive
+				AND = {
+					is_planet_class = pc_ocean
+					owner = { is_anglers_empire = yes }
+				}
+				is_planet_class = pc_shattered_ring_habitable
+			}
+		}
+		add_district = district_farming_uncapped
+	}
+	else = {
+		add_district = district_farming
 	}
 }
