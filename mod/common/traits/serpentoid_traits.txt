@@ -10,6 +10,7 @@ trait_serpentoid_acumen = {
 	species_potential_add = { always = no }
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_inspired.dds"
 	allowed_archetypes = { BIOLOGICAL }
+	species_class = { SRPT REP }
 	modifier = {
 		planet_jobs_society_research_produces_mult = 0.06
 		planet_jobs_physics_research_produces_mult = 0.03
@@ -26,6 +27,7 @@ trait_serpentoid_cunning = {
 	species_potential_add = { always = no }
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_enclave_trader.dds"
 	allowed_archetypes = { BIOLOGICAL }
+	species_class = { SRPT REP }
 	modifier = {
 		planet_jobs_energy_produces_mult = 0.05
 		pop_happiness = 0.01
@@ -44,6 +46,7 @@ trait_serpentoid_indolence = {
 	species_potential_add = { always = no }
 	icon = "gfx/interface/icons/traits/trait_serpentoid.dds"
 	allowed_archetypes = { BIOLOGICAL }
+	species_class = { SRPT REP }
 	modifier = {
 		planet_jobs_food_produces_mult = -0.05
 		pop_ethics_shift_speed_mult = -0.05
