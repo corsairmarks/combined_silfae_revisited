@@ -6,7 +6,7 @@ There are other mods which contain these portraits, so why should you choose thi
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.1.2, the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.2.2, the latest version when this was written.  Updates include:
 
 * Update Holofrixit shipset (reuse of Unbidden) to work with current Stellaris - starbases, titans, juggernauts, and colossi fall back to molluscoid (the fallback for the Unbidden)
 * Enhance Holofrixit portrait usage:
@@ -25,14 +25,15 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     * Start with Pops from each of the five castes, but overall fewer than normal empires
     * Holofrixit government is now divided into the Xechiros Protocol government and Hive-network authority, available only with the Holofrixit origin
     * Add random names for the Holofrixit government
-    * Only Xechiros may be rulers or Governors, only Ganglions may be Scientists, and only Holowarriors may be Admirals and Generals - Holofrixigrams can be leaders with `tech_synthetic_leaders`, Drones can never be leaders, and other non-holofrixit species may produce leaders normally
+    * Only Xechiros may be rulers or Governors, only Ganglions may be Scientists, and Holowarriors or Xechiros may be Admirals and Generals - Holofrixigrams can be leaders with `tech_synthetic_leaders`, Drones can never be leaders, and other non-holofrixit species may produce leaders normally
 * Remove unnecessary old army overrides
 * Adjust Holowarrior and Hologenotype armies
 * Update Polarizing Nexus energy storage building
 * You can use Silfae's Holofrixit portraits for your own empires without any DLC requirements
     * Using the main Holofrixit species class will consume energy instead of food
     * Added a second species class (Holofrixit Alt.) that is a `BIOLOGICAL` archetype, so you can choose to play without the requirement for energy upkeep
-* Disable the "Holocrisis" - a duplicate of original AI rebellion - at least until I can spend more time updating it to work with the current game version **postponed until all of my mods updated for 3.1 "Lem"**
+* Disable the "Holocrisis" - a duplicate of original AI rebellion - at least until I can spend more time updating it to work with the current game version **postponed indefinitely**
+* Support being able to choose a single-gender species (new in Stellaris 3.2)
 
 ## Compatibility
 
@@ -40,7 +41,7 @@ This mod is much less compatible than the other Silfae's Revisited series mods. 
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Built for Stellaris version 3.1.2 "Lem."  Not compatible with achievements.
+Built for Stellaris version 3.2.2 "Herbert."  Not compatible with achievements.
 
 ### File Overwrites
 
@@ -61,8 +62,7 @@ This mod also lightly alters the requirements for ruler-stratum jobs and some "c
 
 Job-related triggers overridden:
 
-* `ruler_job_check_trigger`
-* `complex_specialist_job_check_trigger`
+* `complex_specialist_job_check_trigger` holodrones can't do complex work
 * `is_organic_species` most Holofrixits qualify as organic
 * `is_robotic_species` Holofrixigrams are entirely mechanical
 
@@ -72,6 +72,7 @@ Furthermore, this mod alters some core game rules in `common/game_rules/00_rules
 * `can_generate_military_leader_from_pop`
 * `can_species_procreate`
 * `can_species_be_assembled`
+* `can_fill_ruler_job`
 
 ### Dependencies
 
@@ -87,11 +88,10 @@ This mod should be added before the game has started.  If you remove it from a g
 
 ## Known Issues
 
-This mod overwrites the corresponding species class added by "Silfae's city sets updated" so that it will not be available for use.  Instead, the original species class from Silfae (with localisation) is used.  Also, it replaces four triggers from the base game.  Expect to see five lines in error.log like this:
+This mod overwrites the corresponding species class added by "Silfae's city sets updated" so that it will not be available for use.  Instead, the original species class from Silfae (with localisation) is used.  Also, it replaces three triggers from the base game.  Expect to see four lines in error.log like this:
 
 ```
 [13:16:18][game_singleobjectdatabase.h:147]: Object with key: Silfae-Holofrixit already exists
-[13:16:19][game_singleobjectdatabase.h:147]: Object with key: ruler_job_check_trigger already exists
 [13:16:19][game_singleobjectdatabase.h:147]: Object with key: complex_specialist_job_check_trigger already exists
 [13:16:19][game_singleobjectdatabase.h:147]: Object with key: is_organic_species already exists
 [13:16:19][game_singleobjectdatabase.h:147]: Object with key: is_robotic_species already exists
@@ -110,7 +110,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Fix incorrect random name reference
     * Allow Xechiros to procreate
     * Ensure correct `graphical_culture`
-* 2.0.0 Mark as compatible with Stellaris version 3.1.1 "Lem"
+* 2.0.0 Update for compatibility with Stellaris version 3.1.1 "Lem"
     * Add new localisation keys introduced in 3.1
     * Update Pop strata (categories) with updates from the base game - adding Budding, Phototropic/Radiotropic, etc.
     * Update Pop jobs with updates from from the base game - Catalytic Processing jobs, new event jobs, Scrap Miners, etc.
@@ -120,6 +120,15 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Fix slave technician job weight (same as [Enslaved Technician Job Priority Fix](https://steamcommunity.com/sharedfiles/filedetails/?id=2484702578))
     * Fix gestalt gas extractors (from Feral Overload) improperly allowing enslaved species
     * Fix gestalt cave miners (from Feral Overload) improperly allowing enslaved species
+* 3.0.0 Update for compatibility with Stellaris version 3.2.2 "Herbert"
+    * Apply new mono-gender portrait rules
+    * Ganglions are alway male, as their description indicates
+    * Holofrixigams are genderless (role-play wise they are mini-gestalts)
+    * More Pop clothing selector refinements
+    * Apply base game rule changes (precalc for jobs)
+    * Convert from a trigger to a game rule override for the special rule to allow enslaved Ganglions as Head Researchers
+    * Apply base game job changes (performance gains!)
+    * Apply base game pop strata changes
 
 ## Source Code
 
