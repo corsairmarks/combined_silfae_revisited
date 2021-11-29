@@ -21,6 +21,7 @@ slreptilian_01_clothes_01 = {
 				has_job = synapse_drone
 				has_job = coordinator
 				has_job = fe_sky_cardinal
+				has_job = fe_overseer
 			}
 		}
 		"gfx/models/portraits/slreptilian/slreptilian_01_clothes_governor.dds" = {
@@ -38,6 +39,9 @@ slreptilian_01_clothes_01 = {
 				has_job = primitive_priest
 				has_job = primitive_priest_2
 				has_job = preacher
+				has_job = necro_apprentice
+				has_job = mortal_initiate
+				has_job = fe_augur
 			}
 			NOR = {
 				# rulers
@@ -47,20 +51,22 @@ slreptilian_01_clothes_01 = {
 				has_job = noble
 				has_job = primitive_noble
 				has_job = fe_sky_cardinal
+				has_job = fe_overseer
 				# scientist
 				has_job = head_researcher
 				has_job = brain_drone
 				has_job = calculator
+				has_job = dimensional_portal_researcher
 				has_job = dimensional_portal_researcher_gestalt
+				has_job = death_chronicler
 				has_job = chronicle_drone
 				has_job = fe_archivist
 				# military
 				has_job = titan_hunter
 				has_job = patrol_drone
-				has_job = warrior_drone
 				has_job = fe_protector
 				# peasant
-				has_job = fe_xeno_ward
+				is_pop_category = xeno_ward
 			}
 		}
 		random = {
@@ -97,6 +103,7 @@ slreptilian_01_clothes_01 = {
 				has_job = fe_archivist
 				has_job = primitive_researcher
 				has_job = primitive_researcher_2
+				has_job = healthcare
 			}
 		}
 		"gfx/models/portraits/slreptilian/slreptilian_01_clothes_governor.dds" = {
@@ -111,12 +118,14 @@ slreptilian_01_clothes_01 = {
 				has_job = death_priest
 				has_job = primitive_priest
 				has_job = primitive_priest_2
+				has_job = necro_apprentice
 				# scientists
 				has_job = researcher
 				has_job = dimensional_portal_researcher
 				has_job = death_chronicler
 				has_job = primitive_researcher
 				has_job = primitive_researcher_2
+				has_job = healthcare
 				# military
 				has_job = duelist
 				has_job = enforcer
@@ -131,10 +140,34 @@ slreptilian_01_clothes_01 = {
 				"gfx/models/portraits/slreptilian/slreptilian_01_clothes_peasant_01.dds"
 			}
 		}
+		"gfx/models/portraits/slreptilian/slreptilian_01_clothes_peasant_01.dds" = {
+			OR = {
+				is_pop_category = corrupt_drone
+				is_pop_category = criminal
+				is_pop_category = deviant_drone
+				is_pop_category = simple_drone
+				is_pop_category = worker
+				is_pop_category = slave
+				is_pop_category = xeno_ward
+				is_pop_category = pre_sapients
+				is_pop_category = purge
+			}
+			NOR = {
+				# admin
+				has_job = mortal_initiate
+				has_job = preacher
+				# military
+				has_job = soldier
+				has_job = titan_hunter
+				has_job = warrior_drone
+				has_job = primitive_warrior
+				has_job = primitive_warrior_2
+			}
+		}
 		default = "gfx/models/portraits/slreptilian/slreptilian_01_clothes_peasant_01.dds"
 	}
 	#leader scope
-	leader = { #scientists, generals, admirals, governor, envoy
+	leader = { #scientists, generals, admirals, governors, envoys
 		"gfx/models/portraits/slreptilian/slreptilian_01_clothes_scientist.dds" = { leader_class = scientist }
 		"gfx/models/portraits/slreptilian/slreptilian_01_clothes_general.dds" = { leader_class = general }
 		"gfx/models/portraits/slreptilian/slreptilian_01_clothes_admiral.dds" = { leader_class = admiral }
