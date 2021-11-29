@@ -11,20 +11,24 @@ origin_void_dwellers = {
 	preferred_planet_class_neighbor = no
 
 	playable = {
-		host_has_dlc = Federations
+		has_federations_dlc = yes
 	}
 
 	possible = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		civics = { NOT = {	value = civic_agrarian_idyll } }
 		civics = {
 			NOR = {
 				text = civic_tooltip_not_idyllic_bloom
 				value = civic_idyllic_bloom
 				value = civic_hive_idyllic_bloom
 			}
+			NOT = { value = civic_agrarian_idyll }
+			NOR = {
+				text = civic_tooltip_not_anglers
+				value = civic_anglers
+				value = civic_corporate_anglers
+			}
 		}
-
 	}
 
 	description = "origin_tooltip_void_dwellers_effects"
