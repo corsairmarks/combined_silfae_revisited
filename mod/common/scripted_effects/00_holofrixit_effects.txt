@@ -1,6 +1,6 @@
 # generate initial xechiros Pops
 # generate specialized holofrixit castes and initial Pops for each
-# THIS = planet
+# this = planet
 generate_holofrixit_start_pops = {
 	# founders are the xechiros
 	owner_species = {
@@ -24,28 +24,22 @@ generate_holofrixit_start_pops = {
 			name = PRESCRIPTED_caste_ganglion
 			plural = PRESCRIPTED_caste_ganglion_plural
 			adjective = PRESCRIPTED_caste_ganglion_adjective
-			namelist = THIS
-			class = THIS
-			homeworld = THIS
-			traits = THIS
+			namelist = this
+			class = this
+			homeworld = this
+			traits = this
 			pops_can_be_colonizers = no
 			pops_can_reproduce = no
 			effect = {
-				change_species_portrait = hologanglion
+				change_species_characteristics = {
+					portrait = hologanglion
+					remove_trait = trait_holooverseer
+					add_trait = trait_hologanglion
+				}
+				set_species_flag = holofrixit_caste@prevprev.owner
+				set_species_flag = hologanglion_species@prevprev.owner
 				save_event_target_as = hologanglion_species
 			}
-		}
-	}
-	modify_species = {
-		base = none
-		species = event_target:hologanglion_species
-		change_scoped_species = yes
-		remove_trait = trait_holooverseer
-		add_trait = trait_hologanglion
-		effect = {
-			set_species_flag = holofrixit_caste@PREV.owner
-			set_species_flag = hologanglion_species@PREV.owner
-			save_event_target_as = hologanglion_species
 		}
 	}
 	while = {
@@ -53,6 +47,12 @@ generate_holofrixit_start_pops = {
 		create_pop = {
 			species = event_target:hologanglion_species
 			ethos = owner
+		}
+	}
+	event_target:hologanglion_species = {
+		change_species_characteristics = {
+			gender = male
+			can_change_leader = yes
 		}
 	}
 
@@ -63,29 +63,23 @@ generate_holofrixit_start_pops = {
 			name = PRESCRIPTED_caste_holowarrior
 			plural = PRESCRIPTED_caste_holowarrior_plural
 			adjective = PRESCRIPTED_caste_holowarrior_adjective
-			namelist = THIS
-			class = THIS
-			homeworld = THIS
-			traits = THIS
+			namelist = this
+			class = this
+			homeworld = this
+			traits = this
 			pops_can_be_colonizers = no
 			pops_can_join_factions = no
 			effect = {
-				change_species_portrait = holowarrior
+				change_species_characteristics = {
+					portrait = holowarrior
+					remove_trait = trait_holooverseer
+					add_trait = trait_holowarrior
+				}
+				set_species_flag = holofrixit_caste@prevprev.owner
+				set_species_flag = holowarrior_species@prevprev.owner
+				set_species_flag = allow_military_leaders_honored_protectors@prevprev.owner
 				save_event_target_as = holowarrior_species
 			}
-		}
-	}
-	modify_species = {
-		base = none
-		species = event_target:holowarrior_species
-		change_scoped_species = yes
-		remove_trait = trait_holooverseer
-		add_trait = trait_holowarrior
-		effect = {
-			set_species_flag = holofrixit_caste@PREV.owner
-			set_species_flag = holowarrior_species@PREV.owner
-			set_species_flag = allow_military_leaders_honored_protectors@PREV.owner
-			save_event_target_as = holowarrior_species
 		}
 	}
 	create_pop = {
@@ -100,27 +94,22 @@ generate_holofrixit_start_pops = {
 			name = PRESCRIPTED_caste_drone
 			plural = PRESCRIPTED_caste_drone_plural
 			adjective = PRESCRIPTED_caste_drone_adjective
-			namelist = THIS
-			class = THIS
-			homeworld = THIS
-			traits = THIS
+			namelist = this
+			class = this
+			homeworld = this
+			traits = this
 			can_generate_leaders = no
 			pops_can_join_factions = no
 			effect = {
-				change_species_portrait = holodrone
+				change_species_characteristics = {
+					portrait = holodrone
+					remove_trait = trait_holooverseer
+					add_trait = trait_holodrone
+				}
+				set_species_flag = holofrixit_caste@prevprev.owner
+				set_species_flag = holodrone_species@prevprev.owner
 				save_event_target_as = holodrone_species
 			}
-		}
-	}
-	modify_species = {
-		species = event_target:holodrone_species
-		change_scoped_species = yes
-		remove_trait = trait_holooverseer
-		add_trait = trait_holodrone
-		effect = {
-			set_species_flag = holofrixit_caste@PREV.owner
-			set_species_flag = holodrone_species@PREV.owner
-			save_event_target_as = holodrone_species
 		}
 	}
 	while = {
@@ -138,28 +127,23 @@ generate_holofrixit_start_pops = {
 			name = PRESCRIPTED_caste_holofrixigram
 			plural = PRESCRIPTED_caste_holofrixigram_plural
 			adjective = PRESCRIPTED_caste_holofrixigram_adjective
-			namelist = THIS
-			class = THIS
-			homeworld = THIS
-			traits = THIS
+			namelist = this
+			class = this
+			homeworld = this
+			traits = this
 			traits = {
 				trait = trait_mechanical # needed for robot servitude
 			}
 			effect = {
-				change_species_portrait = holofrixigram
+				change_species_characteristics = {
+					portrait = holofrixigram
+					remove_trait = trait_holooverseer
+					add_trait = trait_holofrixigram
+				}
+				set_species_flag = holofrixit_caste@prevprev.owner
+				set_species_flag = holofrixigram_species@prevprev.owner
 				save_event_target_as = holofrixigram_species
 			}
-		}
-	}
-	modify_species = {
-		species = event_target:holofrixigram_species
-		change_scoped_species = yes
-		remove_trait = trait_holooverseer
-		add_trait = trait_holofrixigram
-		effect = {
-			set_species_flag = holofrixit_caste@PREV.owner
-			set_species_flag = holofrixigram_species@PREV.owner
-			save_event_target_as = holofrixigram_species
 		}
 	}
 	while = {
@@ -169,11 +153,16 @@ generate_holofrixit_start_pops = {
 			ethos = random
 		}
 	}
+	event_target:holofrixigram_species = {
+		change_species_characteristics = {
+			gender = indeterminable
+		}
+	}
 	owner = { set_built_species = event_target:holofrixigram_species }
 }
 
 # refer to 01_planetary_deposits.txt for the potential for each deposit
-# THIS = planet
+# this = planet
 add_random_3_generator_district_deposit = {
 	if = {
 		limit = {
@@ -224,7 +213,7 @@ add_random_3_generator_district_deposit = {
 }
 
 # refer to 01_planetary_deposits.txt for the potential for each deposit
-# THIS = planet
+# this = planet
 add_random_2_generator_district_deposit = {
 	if = {
 		limit = { is_wet = yes }
@@ -261,7 +250,7 @@ add_random_2_generator_district_deposit = {
 }
 
 # refer to 01_planetary_deposits.txt for the potential for each deposit
-# THIS = planet
+# this = planet
 add_random_1_generator_district_deposit = {
 	if = {
 		limit = { is_dry = yes }
@@ -286,38 +275,68 @@ add_random_1_generator_district_deposit = {
 	}
 }
 
-# THIS = leader
+# this = leader
 # $TRAIT$ = the species trait to validate the leader, or find a random species with the trait for altering the leader
 ensure_leader_species_correct_holofrixit_caste = {
 	if = {
 		limit = {
 			species = {
+				has_trait = trait_holofrixit
 				NOR = {
 					has_trait = $TRAIT$
 					AND = {
-						PREV.owner = { has_technology = tech_synthetic_leaders }
 						OR = {
 							has_trait = trait_holofrixigram
 							has_trait = trait_holofrixigram_2
 							has_trait = trait_holofrixigram_3
 						}
+						prev.owner = { has_technology = tech_synthetic_leaders }
 					}
 				}
 			}
 		}
 		owner = {
-			if = {
-				limit = { days_passed > 0 }
-				random_owned_pop_species = {
-					limit = { has_trait = $TRAIT$ }
-					PREVPREV = { change_species = PREV }
+			# randomizing over all Pops weights which species the leader will become based on Pop %
+			random_owned_pop = {
+				limit = { species = { has_trait = $TRAIT$ } }
+				log = "chosen Pop \\[This.GetName]"
+				prevprev = {
+					log = "this (preprev) \\[This.GetName]"
+					change_species = prev
 				}
 			}
+		}
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						gender = indeterminable
+						species = { NOT = { species_gender = indeterminable } }
+					}
+					AND = {
+						gender = female
+						species = { species_gender = male }
+					}
+					AND = {
+						gender = male
+						species = { species_gender = female }
+					}
+					# changing to indeterminable currently requires cloning, which I am not implementing for this mod
+				}
+			}
+			if = {
+				limit = { species = { species_gender = female } }
+				set_is_female = yes
+			}
+			else_if = {
+				limit = { species = { species_gender = male } }
+				set_is_female = no
+			}
 			else = {
-				# since random_owned_pop_species doesn't work at game start...
-				random_owned_pop = {
-					limit = { species = { has_trait = $TRAIT$ } }
-					PREVPREV = { change_species = PREV.species }
+				# not_set or other unhandled genders
+				random_list = {
+					50 = { set_is_female = yes }
+					50 = { set_is_female = no }
 				}
 			}
 		}

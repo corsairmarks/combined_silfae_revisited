@@ -14,8 +14,8 @@ event = {
 }
 
 # triggered by empire_init_capital_planet
-# ROOT = planet, capital
-# FROM = species, founder
+# root = planet, capital
+# from = species, founder
 planet_event = {
 	id = holofrixit_evt.1
 	hide_window = yes
@@ -35,8 +35,8 @@ planet_event = {
 }
 
 # triggered by empire_init_capital_planet
-# ROOT = planet, capital
-# FROM = species, founder
+# root = planet, capital
+# from = species, founder
 planet_event = {
 	id = holofrixit_evt.2
 	hide_window = yes
@@ -82,7 +82,7 @@ planet_event = {
 						is_deposit_type = d_fungal_forest
 					}
 				}
-				PREV = { add_random_3_generator_district_deposit = yes }
+				prev = { add_random_3_generator_district_deposit = yes }
 				remove_deposit = yes
 			}
 			else_if = {
@@ -94,7 +94,7 @@ planet_event = {
 						is_deposit_type = d_great_river
 					}
 				}
-				PREV = { add_random_2_generator_district_deposit = yes }
+				prev = { add_random_2_generator_district_deposit = yes }
 				remove_deposit = yes
 			}
 			else_if = {
@@ -110,7 +110,7 @@ planet_event = {
 						is_deposit_type = d_natural_farmland
 					}
 				}
-				PREV = { add_random_1_generator_district_deposit = yes }
+				prev = { add_random_1_generator_district_deposit = yes }
 				remove_deposit = yes
 			}
 			else = {
@@ -134,7 +134,7 @@ planet_event = {
 }
 
 # triggered by empire_init_add_technologies
-# ROOT = country
+# root = country
 country_event = {
 	id = holofrixit_evt.3
 	hide_window = yes
@@ -151,7 +151,7 @@ country_event = {
 }
 
 # triggered by on_game_start_country
-# ROOT = country
+# root = country
 country_event = {
 	id = holofrixit_evt.4
 	hide_window = yes
@@ -164,113 +164,113 @@ country_event = {
 		every_galaxy_species = {
 			limit = {
 				has_trait = trait_holofrixit
-				has_species_flag = holofrixit_caste@PREV
+				has_species_flag = holofrixit_caste@prev
 				NOT = { has_trait = trait_holooverseer }
 			}
 			if = {
-				limit = { has_species_flag = hologanglion_species@PREV }
+				limit = { has_species_flag = hologanglion_species@prev }
 				set_citizenship_type = {
 					type = citizenship_slavery
-					country = PREV
+					country = prev
 					cooldown = no
 				}
 				set_slavery_type = {
 					type = slavery_indentured
-					country = PREV
+					country = prev
 					cooldown = no
 				}
 				set_military_service_type = {
 					type = military_service_none
-					country = PREV
+					country = prev
 					cooldown = no
 				}
 				set_living_standard = {
 					type = living_standard_normal
-					country = PREV
+					country = prev
 					cooldown = no
 				}
 				set_colonization_controls = {
 					type = colonization_control_no
-					country = PREV
+					country = prev
 					cooldown = no
 				}
 			}
 			else_if = {
-				limit = { has_species_flag = holowarrior_species@PREV }
+				limit = { has_species_flag = holowarrior_species@prev }
 				set_citizenship_type = {
 					type = citizenship_slavery
-					country = PREV
+					country = prev
 					cooldown = no
 				}
 				set_slavery_type = {
 					type = slavery_military
-					country = PREV
+					country = prev
 					cooldown = no
 				}
 				set_military_service_type = {
 					type = military_service_full
-					country = PREV
+					country = prev
 					cooldown = no
 				}
 				set_living_standard = {
 					type = living_standard_normal
-					country = PREV
+					country = prev
 					cooldown = no
 				}
 				set_colonization_controls = {
 					type = colonization_control_no
-					country = PREV
+					country = prev
 					cooldown = no
 				}
 			}
 			else_if = {
-				limit = { has_species_flag = holodrone_species@PREV }
+				limit = { has_species_flag = holodrone_species@prev }
 				set_citizenship_type = {
 					type = citizenship_slavery
-					country = PREV
+					country = prev
 					cooldown = no
 				}
 				set_slavery_type = {
 					type = slavery_indentured
-					country = PREV
+					country = prev
 					cooldown = no
 				}
 				set_military_service_type = {
 					type = military_service_none
-					country = PREV
+					country = prev
 					cooldown = no
 				}
 				set_living_standard = {
 					type = living_standard_subsistence
-					country = PREV
+					country = prev
 					cooldown = no
 				}
 				set_colonization_controls = {
 					type = colonization_control_yes
-					country = PREV
+					country = prev
 					cooldown = no
 				}
 			}
 			else_if = {
-				limit = { has_species_flag = holofrixigram_species@PREV }
+				limit = { has_species_flag = holofrixigram_species@prev }
 				set_citizenship_type = {
 					type = citizenship_robot_servitude
-					country = PREV
+					country = prev
 					cooldown = no
 				}
 				set_military_service_type = {
 					type = military_service_none
-					country = PREV
+					country = prev
 					cooldown = no
 				}
 				set_living_standard = {
 					type = living_standard_servitude
-					country = PREV
+					country = prev
 					cooldown = no
 				}
 				set_colonization_controls = {
 					type = colonization_control_no
-					country = PREV
+					country = prev
 					cooldown = no
 				}
 			}
@@ -279,13 +279,14 @@ country_event = {
 }
 
 # triggered by on_tech_increased
-# ROOT = country
+# root = country
 country_event = {
 	id = holofrixit_evt.5
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		has_origin = origin_holofrixit
+		has_authority = auth_holofrixit
+		has_trait = trait_holooverseer
 		OR = {
 			last_increased_tech = tech_epigenetic_triggers
 			last_increased_tech = tech_droid_workers
@@ -297,9 +298,9 @@ country_event = {
 			limit = { last_increased_tech = tech_epigenetic_triggers }
 			every_owned_pop_species = {
 				limit = { has_trait = trait_holowarrior }
-				PREV = {
+				prev = {
 					modify_species = {
-						species = PREV
+						species = prev
 						remove_trait = trait_holowarrior
 						add_trait = trait_holowarrior_2
 						change_scoped_species = yes
@@ -311,9 +312,9 @@ country_event = {
 			limit = { last_increased_tech = tech_droid_workers }
 			every_owned_pop_species = {
 				limit = { has_trait = trait_holofrixigram }
-				PREV = {
+				prev = {
 					modify_species = {
-						species = PREV
+						species = prev
 						remove_trait = trait_holofrixigram
 						add_trait = trait_holofrixigram_2
 						change_scoped_species = yes
@@ -325,9 +326,9 @@ country_event = {
 			limit = { last_increased_tech = tech_synthetic_workers }
 			every_owned_pop_species = {
 				limit = { has_trait = trait_holofrixigram_2 }
-				PREV = {
+				prev = {
 					modify_species = {
-						species = PREV
+						species = prev
 						remove_trait = trait_holofrixigram_2
 						add_trait = trait_holofrixigram_3
 						change_scoped_species = yes
@@ -339,65 +340,47 @@ country_event = {
 }
 
 # triggered by holofrixit_evt.7 and holofrixit_evt.8
-# ROOT = leader
+# root = leader
 leader_event = {
 	id = holofrixit_evt.6
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
+		OR = {
+			leader_class = ruler
+			leader_class = envoy
+			leader_class = governor
+			leader_class = scientist
+		}
+		exists = owner
+		owner = { has_authority = auth_holofrixit }
 		species = { has_trait = trait_holofrixit }
 	}
 	immediate = {
 		switch = {
 			trigger = leader_class
-			governor = {
-				ensure_leader_species_correct_holofrixit_caste = { TRAIT = trait_holooverseer }
-			}
-			scientist = {
-				ensure_leader_species_correct_holofrixit_caste = { TRAIT = trait_hologanglion }
-			}
-			admiral = {
-				if = {
-					limit = { owner = { has_technology = tech_epigenetic_triggers } }
-					ensure_leader_species_correct_holofrixit_caste = { TRAIT = trait_holowarrior_2 }
-				}
-				else = {
-					ensure_leader_species_correct_holofrixit_caste = { TRAIT = trait_holowarrior }
-				}
-			}
-			general = {
-				if = {
-					limit = { owner = { has_technology = tech_epigenetic_triggers } }
-					ensure_leader_species_correct_holofrixit_caste = { TRAIT = trait_holowarrior_2 }
-				}
-				else = {
-					ensure_leader_species_correct_holofrixit_caste = { TRAIT = trait_holowarrior }
-				}
-			}
-			envoy = {
-				ensure_leader_species_correct_holofrixit_caste = { TRAIT = trait_holooverseer }
-			}
-			ruler = {
-				ensure_leader_species_correct_holofrixit_caste = { TRAIT = trait_holooverseer }
-			}
+			ruler = { ensure_leader_species_correct_holofrixit_caste = { TRAIT = trait_holooverseer } }
+			envoy = { ensure_leader_species_correct_holofrixit_caste = { TRAIT = trait_holooverseer } }
+			governor = { ensure_leader_species_correct_holofrixit_caste = { TRAIT = trait_holooverseer } }
+			scientist = { ensure_leader_species_correct_holofrixit_caste = { TRAIT = trait_hologanglion } }
 		}
 	}
 }
 
 # triggered by on_leader_spawned
-# ROOT = country
-# FROM = leader
+# root = country
+# from = leader
 country_event = {
 	id = holofrixit_evt.7
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		has_origin = origin_holofrixit
-		exists = FROM
-		FROM.species = { has_trait = trait_holofrixit }
+		has_authority = auth_holofrixit
+		exists = from
+		from.species = { has_trait = trait_holofrixit }
 	}
 	immediate = {
-		FROM = {
+		from = {
 			leader_event = {
 				id = holofrixit_evt.6
 			}
@@ -406,22 +389,17 @@ country_event = {
 }
 
 # triggered by on_game_start_country
-# ROOT = country
+# initial 4 leaders spawn before there are Pops
+# root = country
 country_event = {
 	id = holofrixit_evt.8
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		has_origin = origin_holofrixit
+		has_authority = auth_holofrixit
 	}
 	immediate = {
 		every_owned_leader = {
-			limit = { species = { has_trait = trait_holofrixit } }
-			leader_event = {
-				id = holofrixit_evt.6
-			}
-		}
-		every_pool_leader = {
 			limit = { species = { has_trait = trait_holofrixit } }
 			leader_event = {
 				id = holofrixit_evt.6
