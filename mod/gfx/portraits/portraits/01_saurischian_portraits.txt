@@ -102,7 +102,7 @@ portrait_groups = {
 		default = saurischian_male_01
 		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
 			add = {
-				trigger = { ruler = { gender = male } }
+				trigger = { ruler = { NOT = { gender = female } } }
 				portraits = {
 					saurischian_male_01
 					saurischian_male_02
@@ -113,7 +113,7 @@ portrait_groups = {
 				}
 			}
 			add = {
-				trigger = { ruler = { gender = female } }
+				trigger = { ruler = { NOT = { gender = male } } }
 				portraits = {
 					saurischian_female_01
 					saurischian_female_02
@@ -128,6 +128,7 @@ portrait_groups = {
 		#species scope
 		species = { #generic portrait for a species
 			add = {
+				trigger = { NOT = { species_gender = female } }
 				portraits = {
 					saurischian_male_01
 					saurischian_male_02
@@ -135,6 +136,11 @@ portrait_groups = {
 					saurischian_male_04
 					saurischian_male_05
 					saurischian_male_06
+				}
+			}
+			add = {
+				trigger = { NOT = { species_gender = male } }
+				portraits = {
 					saurischian_female_01
 					saurischian_female_02
 					saurischian_female_03
@@ -149,87 +155,153 @@ portrait_groups = {
 		pop = { #for a specific pop
 			add = {
 				trigger = {
-					NOR = {
-						is_pop_category = ruler
-						has_job = head_researcher
-						has_job = researcher
-						has_job = dimensional_portal_researcher
-						has_job = brain_drone
-						has_job = calculator
-						has_job = dimensional_portal_researcher_gestalt
-						has_job = fe_archivist
-						has_job = primitive_researcher
-						has_job = primitive_researcher_2
-						has_job = duelist
-						has_job = enforcer
-						has_job = telepath
-						has_job = necromancer
-						has_job = soldier
-						has_job = titan_hunter
-						has_job = patrol_drone
-						has_job = warrior_drone
-						has_job = fe_protector
+					species = { NOT = { species_gender = female } }
+					OR = {
+						is_pop_category = xeno_ward
+						NOR = {
+							is_pop_category = ruler
+							is_pop_category = specialist
+							is_pop_category = complex_drone
+							is_pop_category = bio_trophy
+							has_job = soldier
+							has_job = titan_hunter
+							has_job = warrior_drone
+							has_job = primitive_warrior
+							has_job = primitive_warrior_2
+						}
 					}
 				}
 				portraits = {
 					saurischian_male_01
+				}
+			}
+			add = {
+				trigger = {
+					species = { NOT = { species_gender = male } }
+					OR = {
+						is_pop_category = xeno_ward
+						NOR = {
+							is_pop_category = ruler
+							is_pop_category = specialist
+							is_pop_category = complex_drone
+							is_pop_category = bio_trophy
+							has_job = soldier
+							has_job = titan_hunter
+							has_job = warrior_drone
+							has_job = primitive_warrior
+							has_job = primitive_warrior_2
+						}
+					}
+				}
+				portraits = {
 					saurischian_female_01
 				}
 			}
 			add = {
 				trigger = {
+					species = { NOT = { species_gender = female } }
 					OR = {
 						is_pop_category = specialist
 						is_pop_category = complex_drone
 						is_pop_category = bio_trophy
 					}
 					NOR = {
-						has_job = head_researcher
 						has_job = researcher
-						has_job = dimensional_portal_researcher
 						has_job = brain_drone
 						has_job = calculator
+						has_job = dimensional_portal_researcher
 						has_job = dimensional_portal_researcher_gestalt
-						has_job = fe_archivist
 						has_job = primitive_researcher
 						has_job = primitive_researcher_2
 						has_job = duelist
 						has_job = enforcer
 						has_job = telepath
 						has_job = necromancer
-						has_job = fe_protector
 						has_job = death_chronicler
 						has_job = chronicle_drone
+						has_job = healthcare
 					}
 				}
 				portraits = {
 					saurischian_male_02
+				}
+			}
+			add = {
+				trigger = {
+					species = { NOT = { species_gender = male } }
+					OR = {
+						is_pop_category = specialist
+						is_pop_category = complex_drone
+						is_pop_category = bio_trophy
+					}
+					NOR = {
+						has_job = researcher
+						has_job = brain_drone
+						has_job = calculator
+						has_job = dimensional_portal_researcher
+						has_job = dimensional_portal_researcher_gestalt
+						has_job = primitive_researcher
+						has_job = primitive_researcher_2
+						has_job = duelist
+						has_job = enforcer
+						has_job = telepath
+						has_job = necromancer
+						has_job = death_chronicler
+						has_job = chronicle_drone
+						has_job = healthcare
+					}
+				}
+				portraits = {
 					saurischian_female_02
 				}
 			}
 			add = {
 				trigger = {
+					species = { NOT = { species_gender = female } }
 					OR = {
 						has_job = head_researcher
 						has_job = researcher
-						has_job = dimensional_portal_researcher
 						has_job = brain_drone
 						has_job = calculator
+						has_job = dimensional_portal_researcher
 						has_job = dimensional_portal_researcher_gestalt
 						has_job = fe_archivist
 						has_job = primitive_researcher
 						has_job = primitive_researcher_2
 						has_job = death_chronicler
 						has_job = chronicle_drone
+						has_job = healthcare
 					}
 				}
 				portraits = {
 					saurischian_male_06
+				}
+			}
+			add = {
+				trigger = {
+					species = { NOT = { species_gender = male } }
+					OR = {
+						has_job = head_researcher
+						has_job = researcher
+						has_job = brain_drone
+						has_job = calculator
+						has_job = dimensional_portal_researcher
+						has_job = dimensional_portal_researcher_gestalt
+						has_job = fe_archivist
+						has_job = primitive_researcher
+						has_job = primitive_researcher_2
+						has_job = death_chronicler
+						has_job = chronicle_drone
+						has_job = healthcare
+					}
+				}
+				portraits = {
 					saurischian_female_06
 				}
 			}
 			add = {
 				trigger = {
+					species = { NOT = { species_gender = female } }
 					OR = {
 						has_job = duelist
 						has_job = enforcer
@@ -239,24 +311,48 @@ portrait_groups = {
 						has_job = titan_hunter
 						has_job = patrol_drone
 						has_job = warrior_drone
+						has_job = primitive_warrior
+						has_job = primitive_warrior_2
 						has_job = fe_protector
 					}
 				}
 				portraits = {
 					saurischian_male_04
 					saurischian_male_05
+				}
+			}
+			add = {
+				trigger = {
+					species = { NOT = { species_gender = male } }
+					OR = {
+						has_job = duelist
+						has_job = enforcer
+						has_job = telepath
+						has_job = necromancer
+						has_job = soldier
+						has_job = titan_hunter
+						has_job = patrol_drone
+						has_job = warrior_drone
+						has_job = primitive_warrior
+						has_job = primitive_warrior_2
+						has_job = fe_protector
+					}
+				}
+				portraits = {
 					saurischian_female_04
 					saurischian_female_05
 				}
 			}
 			add = {
 				trigger = {
+					species = { NOT = { species_gender = female } }
 					OR = {
 						is_pop_category = ruler
 						is_pop_category = precursor
 					}
 					NOR = {
 						has_job = head_researcher
+						has_job = fe_xeno_ward
 						has_job = fe_protector
 						has_job = fe_archivist
 					}
@@ -264,6 +360,23 @@ portrait_groups = {
 				portraits = {
 					saurischian_male_02
 					saurischian_male_03
+				}
+			}
+			add = {
+				trigger = {
+					species = { NOT = { species_gender = male } }
+					OR = {
+						is_pop_category = ruler
+						is_pop_category = precursor
+					}
+					NOR = {
+						has_job = head_researcher
+						has_job = fe_xeno_ward
+						has_job = fe_protector
+						has_job = fe_archivist
+					}
+				}
+				portraits = {
 					saurischian_female_02
 					saurischian_female_03
 				}
@@ -271,10 +384,10 @@ portrait_groups = {
 		}
 		
 		#leader scope
-		leader = { #scientists, generals, admirals, governor
+		leader = { #scientists, generals, admirals, governors, envoys
 			add = {
 				trigger = {
-					gender = female
+					NOT = { gender = male }
 					leader_class = scientist
 				}
 				portraits = {
@@ -283,7 +396,7 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
-					gender = male
+					NOT = { gender = female }
 					leader_class = scientist
 				}
 				portraits = {
@@ -292,7 +405,7 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
-					gender = female
+					NOT = { gender = male }
 					leader_class = general
 				}
 				portraits = {
@@ -301,7 +414,7 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
-					gender = male
+					NOT = { gender = female }
 					leader_class = general
 				}
 				portraits = {
@@ -310,7 +423,7 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
-					gender = female
+					NOT = { gender = male }
 					leader_class = admiral
 				}
 				portraits = {
@@ -319,7 +432,7 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
-					gender = male
+					NOT = { gender = female }
 					leader_class = admiral
 				}
 				portraits = {
@@ -328,7 +441,7 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
-					gender = female
+					NOT = { gender = male }
 					OR = {
 						leader_class = governor
 						leader_class = envoy
@@ -341,7 +454,7 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
-					gender = male
+					NOT = { gender = female }
 					OR = {
 						leader_class = governor
 						leader_class = envoy
@@ -357,14 +470,14 @@ portrait_groups = {
 		#leader scope 
 		ruler = {
 			add = {
-				trigger = { gender = female }
+				trigger = { NOT = { gender = male } }
 				portraits = {
 					saurischian_female_02
 					saurischian_female_03
 				}
 			}
 			add = {
-				trigger = { gender = male }
+				trigger = { NOT = { gender = female } }
 				portraits = {
 					saurischian_male_02
 					saurischian_male_03
