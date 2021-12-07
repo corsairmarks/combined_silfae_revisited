@@ -1100,6 +1100,10 @@ robot_caretaker = {
 	}
 
 	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+
 	resources = {
 		category = planet_culture_workers
 		produces = {
