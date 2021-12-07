@@ -129,6 +129,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Convert from a trigger to a game rule override for the special rule to allow enslaved Ganglions as Head Researchers
     * Apply base game job changes (performance gains!)
     * Apply base game pop strata changes
+* 3.0.1 Update `mortal_initiate` and `robot_caretaker` job triggers
 
 ## Source Code
 
