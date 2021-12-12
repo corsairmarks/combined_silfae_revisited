@@ -98,6 +98,7 @@ This mod preempts one event and overrides a deposit and two diplomatic actions, 
     * New Containment _casus belli_ that can be used by only the Beep-Boops and the player empire that started in their system
     * Wargoals for each side of the special Containment
     * Diplomacy action block you from closing borders or declaring a rivalry with the Beep-Boops and vice versa
+* 3.1.1 Don't break the base game diplomacy rooms - fix is to name the new file to load _before_ the built-in file
 
 ## Source Code
 
