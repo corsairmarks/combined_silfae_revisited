@@ -125,7 +125,21 @@ can_species_be_assembled = {
 		}
 		AND = {
 			is_organic_species = yes
+			root = {
+				check_modifier_value = {
+					modifier = planet_pop_assembly_organic_add
+					value > 0
+				}
+			}
 			if = {
+				limit = { root.owner = { is_hive_empire = yes } }
+				has_trait = trait_hive_mind
+			}
+			else_if = {
+				limit = { has_trait = trait_plantoid_budding }
+				root = { any_owned_species = { is_exact_same_species = prevprev } }
+			}
+			else_if = {
 				limit = {
 					OR = {
 						has_trait = trait_clone_soldier_infertile
@@ -144,20 +158,7 @@ can_species_be_assembled = {
 				}
 			}
 			else = {
-				root = {
-					check_modifier_value = {
-						modifier = planet_pop_assembly_organic_add
-						value > 0
-					}
-				}
-				if = {
-					limit = { root.owner = { is_hive_empire = yes } }
-					has_trait = trait_hive_mind
-				}
-				else_if = {
-					limit = { has_trait = trait_plantoid_budding }
-					root = { any_owned_species = { is_exact_same_species = prevprev } }
-				}
+				root = { has_building = building_clone_vats }
 			}
 		}
 	}
