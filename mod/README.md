@@ -88,6 +88,7 @@ In game terms, the fourth color of Phenotype 9 is the same as the third color.
     * More Pop clothing selector refinements
     * Update special Dimensional Tearing technology to be unavailable for non-Horrorworm empires
     * Do not show the special Hollow Form ship in the previewer for non-Horrorworm empires
+* 3.0.1 Don't break the base game diplomacy rooms - fix is to name the new file to load _before_ the built-in file
 
 ## Source Code
 
