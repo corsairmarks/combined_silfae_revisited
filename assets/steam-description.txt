@@ -95,7 +95,7 @@ In order for this mod to function, you [b]must[/b] install these three mods and 
 [list]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=868965217]Holosphere Rising[/url] by Silfae
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2247427791]Silfae's city sets updated[/url] by Nozeminer
-[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2496357447]Full Military Service for Battle Thralls[/url] by me
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2496357447]Special Leadership Privileges for Battle Thralls and Bio-Trophies[/url] by me
 [/list]
 
 [h3]When to Install[/h3]

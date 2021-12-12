@@ -80,7 +80,7 @@ In order for this mod to function, you **must** install these three mods and loa
 
 * [Holosphere Rising](https://steamcommunity.com/sharedfiles/filedetails/?id=868965217) by Silfae
 * [Silfae's city sets updated](https://steamcommunity.com/sharedfiles/filedetails/?id=2247427791) by Nozeminer
-* [Full Military Service for Battle Thralls](https://steamcommunity.com/sharedfiles/filedetails/?id=2496357447) by me
+* [Special Leadership Privileges for Battle Thralls and Bio-Trophies](https://steamcommunity.com/sharedfiles/filedetails/?id=2496357447) by me
 
 ### When to Install
 
@@ -130,6 +130,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Apply base game job changes (performance gains!)
     * Apply base game pop strata changes
 * 3.0.1 Update `mortal_initiate` and `robot_caretaker` job triggers
+* 3.0.2 Update for full compatibility with a dependency (Special Leadership Privileges for Battle Thralls and Bio-Trophies)
 
 ## Source Code
 
