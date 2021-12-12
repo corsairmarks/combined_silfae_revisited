@@ -1,4 +1,20 @@
-# THIS = something with species (country/species/pop)
+# this = something with species (country/species/pop)
 is_holofrixit = {
 	species = { is_archetype = HOLOARCH }
+}
+
+# this = species
+ahpr_is_species_smart_enough_for_leadership = {
+	is_sapient = yes
+	NOR = {
+		has_trait = trait_syncretic_proles
+		has_trait = trait_nerve_stapled
+		has_trait = trait_holodrone # added for holofrixit
+	}
+}
+
+# this = country
+ahpr_is_necrophage_empire = {
+	has_origin = origin_necrophage
+	has_trait = trait_necrophage
 }
