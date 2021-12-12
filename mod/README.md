@@ -71,6 +71,7 @@ This mod overrides `origin_void_dwellers` in order to add its new initializer to
     * Apply new mono-gender portrait rules
     * More Pop clothing selector refinements
     * Update override of `origin_void_dwellers` to reflect additional base game restrictions (no Anglers)
+* 3.0.1 Don't break the base game diplomacy rooms - fix is to name the new file to load _before_ the built-in file
 
 ## Source Code
 
