@@ -70,6 +70,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * More Pop clothing selector refinements
     * New "Mineral Deficient" negative trait for lithoids
 * 2.0.1 Fix improper species-level portrait selector syntax for non-male "human" portraits
+* 2.0.2 Don't break the base game diplomacy rooms - fix is to name the new file to load _before_ the built-in file
 
 ## Source Code
 
