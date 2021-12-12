@@ -1,7 +1,19 @@
 # Checks whether any leaders (scientists etc) can be formed from this pop
+# NOTE: Includes change form battle_thrall_military_leaders becaue this mod requires that one
 # root = country
 # this = pop
 can_generate_leader_from_pop = {
+	OR = {
+		has_citizenship_rights = yes
+		species = {
+			has_species_flag = allow_leaders_organic_advisors@prev.owner
+			has_citizenship_type = {
+				type = citizenship_organic_trophy
+				country = prev.owner
+			}
+		}
+	}
+	ahpr_is_species_smart_enough_for_leadership = yes
 	OR = {
 		NOT = { owner = { has_authority = auth_holofrixit } }
 		owner = {
@@ -17,12 +29,6 @@ can_generate_leader_from_pop = {
 			}
 		}
 	}
-	has_citizenship_rights = yes
-	NOR = {
-		has_trait = trait_syncretic_proles
-		has_trait = trait_nerve_stapled
-		has_trait = trait_holodrone
-	}
 	OR = {
 		is_robot_pop = no
 		owner = {
@@ -35,12 +41,7 @@ can_generate_leader_from_pop = {
 	}
 	OR = {
 		is_same_species = owner
-		owner = {
-			NAND = {
-				has_origin = origin_necrophage
-				has_trait = trait_necrophage
-			}
-		}
+		owner = { ahpr_is_necrophage_empire = no }
 	}
 }
 
@@ -74,12 +75,7 @@ can_generate_military_leader_from_pop = {
 	}
 	OR = {
 		is_same_species = owner
-		owner = {
-			NAND = {
-				has_origin = origin_necrophage
-				has_trait = trait_necrophage
-			}
-		}
+		owner = { ahpr_is_necrophage_empire = no }
 	}
 }
 
@@ -130,16 +126,12 @@ can_species_be_assembled = {
 		AND = {
 			is_organic_species = yes
 			if = {
-				limit = {
-					root.owner = { is_hive_empire = yes }
-				}
+				limit = { root.owner = { is_hive_empire = yes } }
 				has_trait = trait_hive_mind
 			}
 			else_if = {
 				limit = { has_trait = trait_plantoid_budding }
-				root = {
-					any_owned_species = { is_exact_same_species = prevprev }
-				}
+				root = { any_owned_species = { is_exact_same_species = prevprev } }
 			}
 			else_if = {
 				limit = {
