@@ -13,7 +13,7 @@ This is a bundle of mods to make it a little easier to sub and ensure cross-comp
 * [Animated Eldar Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2581388205) ([Source](https://github.com/corsairmarks/eldar_portraits_revisited) f1dd150f80ff47b99fee42d934eb061476d4fd9e)
 * [Animated Hidden Eye Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2585946800) ([Source](https://github.com/corsairmarks/slreptilian_portraits_revisited) b9701925aa6c83d0e9a852b573e35125b70904cc)
 * [Animated Hollow Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2578037235) ([Source](https://github.com/corsairmarks/horrorworm_portraits_revisited) 4e179313ffd7e96b797938219ec948db1bef74ee)
-* [Animated Holosphere Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2592592503) ([Source](https://github.com/corsairmarks/holosphere_rising_revisited) ebdbc692a09fa8e5f5f8ca82b56d4da6c4f85c2f)
+* [Animated Holosphere Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2592592503) ([Source](https://github.com/corsairmarks/holosphere_rising_revisited) 0f2eed998704743fdba13682023645e8da21188f)
 * [Animated Hyena Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2576290763) ([Source](https://github.com/corsairmarks/hyenafolk_portraits_revisited) 5e0c29ee2642a522e95b553655c79e415aa0ca01)
 * [Animated Octee-lan Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2584680339) ([Source](https://github.com/corsairmarks/octeelan_portraits_revisited) 15efdcfdb7769ad8a1b5c3fbd6ec5e3e2a543f17)
 * [Animated Quarian Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2583358569) ([Source](https://github.com/corsairmarks/quarian_portraits_revisited) 7cab66b6687ece28f76d0020c7a7363522660053)
@@ -95,3 +95,4 @@ You should only add this mod before starting a new game, or remove it before sta
     * Animated Octee-lan Portraits: Revisited at 3.1.1
     * Animated Quarian Portraits: Revisited at 3.0.1
     * Animated Shark Portraits: Revisited at 2.0.1
+* 3.0.3 Update merged mod Animated Holosphere Portraits: Revisited at 3.0.2
