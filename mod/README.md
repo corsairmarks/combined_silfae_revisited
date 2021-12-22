@@ -63,7 +63,7 @@ In order for this mod to function, you **must** install these mods (and load the
 * [Animated Quarian Portraits - Mass Effect](https://steamcommunity.com/sharedfiles/filedetails/?id=708669421) by Silfae
 * [Animated Raptor Portraits](https://steamcommunity.com/sharedfiles/filedetails/?id=872596925) by Silfae
 * [Animated Serpentoid Portraits](https://steamcommunity.com/sharedfiles/filedetails/?id=861800679) by Silfae
-* [Animated Shark Portraits](https://steamcommunity.com/sharedfiles/filedetails/?id=2585030748) by Silfae
+* [Animated Shark Portraits](url=https://steamcommunity.com/sharedfiles/filedetails/?id=1098915405) by Silfae
 * [Animated Silicoid Portraits](https://steamcommunity.com/sharedfiles/filedetails/?id=1160316076) by Silfae
 * [Animated Xirmian Portraits](https://steamcommunity.com/sharedfiles/filedetails/?id=881118424) by Silfae
 * [Silfae's city sets updated](https://steamcommunity.com/sharedfiles/filedetails/?id=2247427791) by Nozeminer (devastated cities and ecumenopolis-level cities)
