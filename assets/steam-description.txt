@@ -7,7 +7,6 @@ There are other mods which contain these portraits, so why should you choose thi
 [h1]Changes[/h1]
 
 All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.2 "Herbert," the latest version when this was written.  Updates include:
-
 [list]
 [*]Fix the included Prethoryn-swap shipset [b]horrorworm_01[/b]
     [list]
@@ -39,7 +38,6 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     [*]Add Repugnant trait to the Hollow - the effects of the old Repugnant trait were built-in to Astral Horror, but the new effects require the Repugnant trait to be active
     [/list]
 [/list]
-
 [h2]Compatibility[/h2]
 
 Compatible with any mod that does not add the same portraits, species class, ship, ship components, or art assets.
@@ -51,12 +49,10 @@ Built for Stellaris version 3.2.* "Herbert."  Not compatible with achievements. 
 [h3]Dependencies[/h3]
 
 In order for this mod to function, you [b]must[/b] install these two mods and load them before this one:
-
 [list]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=902526212]Animated Hollow Portraits[/url] by Silfae
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2247427791]Silfae's city sets updated[/url] by Nozeminer
 [/list]
-
 [h3]When to Install[/h3]
 
 This mod should be added before the game has started.  If you remove it from a game in progress, your game may have graphical problems if any species was using the custom portraits or city graphics.
