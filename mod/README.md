@@ -29,6 +29,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 * Remove unnecessary old army overrides
 * Adjust Holowarrior and Hologenotype armies
 * Update Polarizing Nexus energy storage building
+* Pop portraits influenced by job stratum
 * You can use Silfae's Holofrixit portraits for your own empires without any DLC requirements
     * Using the main Holofrixit species class will consume energy instead of food
     * Added a second species class (Holofrixit Alt.) that is a `BIOLOGICAL` archetype, so you can choose to play without the requirement for energy upkeep
@@ -45,7 +46,7 @@ Built for Stellaris version 3.2.2 "Herbert."  Not compatible with achievements.
 
 ### File Overwrites
 
-This mod overwrites most of the Pop jobs definitions to account for the special Holofixit caste traits.  It also overwrites all the Pop strata to implement Holofrixit energy-based Pop upkeep (instead of food).  It's likely to break any time Stellaris makes changes to the underlying Pop strata.  These files are completely overwritten:
+This mod overwrites most of the Pop jobs definitions to account for the special Holofixit caste traits.  It also overwrites all the Pop strata to implement Holofrixit energy-based Pop upkeep (instead of food).  It's likely to break any time Stellaris makes changes to the underlying Pop stratum.  These files are completely overwritten:
 
 * `common/pop_categories/00_social_classes.txt`
 * `common/pop_categories/01_gestalt_drones.txt`
@@ -58,7 +59,7 @@ This mod overwrites most of the Pop jobs definitions to account for the special 
 
 ### Partial Overrides
 
-This mod also lightly alters the requirements for ruler-stratum jobs and some "complex" specialist/complex drone-strata jobs.  Only Xechiros can work the majority of ruler jobs (Ganglions can be Head Researchers), and Drones cannot work any "complex" jobs.  This _also_ means that this mod will need to be explicitly updated any time Paradox makes changes to jobs.
+This mod also lightly alters the requirements for ruler-stratum jobs and some "complex" specialist/complex drone-stratum jobs.  Only Xechiros can work the majority of ruler jobs (Ganglions can be Head Researchers), and Drones cannot work any "complex" jobs.  This _also_ means that this mod will need to be explicitly updated any time Paradox makes changes to jobs.
 
 Job-related triggers overridden:
 
@@ -131,6 +132,9 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Apply base game pop strata changes
 * 3.0.1 Update `mortal_initiate` and `robot_caretaker` job triggers
 * 3.0.2 Update for full compatibility with a dependency (Special Leadership Privileges for Battle Thralls and Bio-Trophies)
+* 3.0.3 Update portrait selectors and job rules
+    * Portrait selectors based on job category, not pop category - my goal is for the Pop portraits to be based on the job, not the Pop's stratum
+    * Don't restrict the ability to work the Angler job to Anglers empires (allows other empires to employ Anglers should they somehow get access to the job)
 
 ## Source Code
 

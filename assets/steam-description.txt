@@ -7,7 +7,6 @@ There are other mods which contain these portraits, so why should you choose thi
 [h1]Changes[/h1]
 
 All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.2.2 "Herbert," the latest version when this was written. Updates include:
-
 [list]
 [*]Update Holofrixit shipset (Unbidden) - fallback to molluscoid (the fallback for the Unbidden)
 [*]Enhance Holofrixit portrait usage:
@@ -34,6 +33,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 [*]Remove unnecessary old army overrides
 [*]Adjust Holowarrior and Hologenotype armies
 [*]Update Polarizing Nexus energy storage building
+[*]Pop portraits influenced by job stratum
 [*]You can use Silfae's Holofrixit portraits for your own empires without any DLC requirements
 	[list]
 	[*]Main Holofrixit species class consumes energy instead of food
@@ -42,7 +42,6 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 [*]Disable the "Holocrisis" until updated [b]postponed indefinitely[/b]
 [*]Support being able to choose a single-gender species (new in Stellaris 3.2)
 [/list]
-
 [h2]Compatibility[/h2]
 
 Much less compatible than the other Silfae's Revisited series mods because this mod makes significantly more gameplay changes. It is explicitly incompatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2579736379]Animated Silicoid Portraits: Revisited[/url] unless you use the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2596642632]compatibility patch[/url].
@@ -54,7 +53,6 @@ Built for Stellaris version 3.2.2 "Herbert."  Not compatible with achievements.
 [h3]File Overwrites[/h3]
 
 This mod overwrites most of the Pop jobs definitions to account for the special Holofixit caste traits. It also overwrites all the Pop strata to implement Holofrixit energy-based Pop upkeep (instead of food). It's likely to break any time Stellaris makes changes to the underlying Pop strata. These files are completely overwritten:
-
 [list]
 [*]common/pop_categories/00_social_classes.txt
 [*]common/pop_categories/01_gestalt_drones.txt
@@ -65,21 +63,17 @@ This mod overwrites most of the Pop jobs definitions to account for the special 
 [*]common/pop_jobs/04_gestalt_jobs.txt
 [*]common/pop_jobs/06_event_jobs.txt
 [/list]
-
 [h3]Partial Overrides[/h3]
 
-This mod alters the requirements for ruler-stratum jobs and some "complex" specialist/complex drone-strata jobs. Only Xechiros can work the majority of ruler jobs (Ganglions can be Head Researchers), and Drones cannot work any "complex" jobs. This [i]also[/i] means that this mod will need to be explicitly updated any time Paradox makes changes to jobs.
+This mod alters the requirements for ruler-stratum jobs and some "complex" specialist/complex drone-stratum jobs. Only Xechiros can work the majority of ruler jobs (Ganglions can be Head Researchers), and Drones cannot work any "complex" jobs. This [i]also[/i] means that this mod will need to be explicitly updated any time Paradox makes changes to jobs.
 
 Job-related triggers overridden:
-
 [list]
 [*]complex_specialist_job_check_trigger - holodrones can't do complex work
 [*]is_organic_species - most Holofrixits qualify as organic
 [*]is_robotic_species - Holofrixigrams are entirely mechanical
 [/list]
-
 Furthermore, this mod alters some core game rules in [b]common/game_rules/00_rules.txt[/b] to implement some of the Pop reproduction/assembly requirements and special rules for Holofrixit leaders. In particular, these rules:
-
 [list]
 [*]can_generate_leader_from_pop
 [*]can_generate_military_leader_from_pop
@@ -87,17 +81,14 @@ Furthermore, this mod alters some core game rules in [b]common/game_rules/00_rul
 [*]can_species_be_assembled
 [*]can_fill_ruler_job
 [/list]
-
 [h3]Dependencies[/h3]
 
 In order for this mod to function, you [b]must[/b] install these three mods and load them before this one:
-
 [list]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=868965217]Holosphere Rising[/url] by Silfae
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2247427791]Silfae's city sets updated[/url] by Nozeminer
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2496357447]Special Leadership Privileges for Battle Thralls and Bio-Trophies[/url] by me
 [/list]
-
 [h3]When to Install[/h3]
 
 This mod should be added before the game has started. If you remove it from a game in progress, your game may have graphical problems if any species was using the custom portraits or city graphics.
