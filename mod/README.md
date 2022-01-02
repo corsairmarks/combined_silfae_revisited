@@ -80,6 +80,7 @@ This mod preempts one event from the base game related to restoring relic worlds
     * More Pop clothing selector refinements
     * Update custom starting system to handle the changes in the base game (mostly for Anglers)
     * Add new tech for special Aquaponics farm - needed more food for Anglers starting in the Eye of Terror
+* 3.0.1 Restrict the Aquaponics tech to Angler empires, unless a mod is detected that allows normal empires to work Angler jobs
 
 ## Source Code
 
