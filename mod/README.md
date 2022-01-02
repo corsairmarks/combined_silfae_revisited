@@ -72,6 +72,7 @@ This mod overrides `origin_void_dwellers` in order to add its new initializer to
     * More Pop clothing selector refinements
     * Update override of `origin_void_dwellers` to reflect additional base game restrictions (no Anglers)
 * 3.0.1 Don't break the base game diplomacy rooms - fix is to name the new file to load _before_ the built-in file
+* 3.0.2 Portrait selectors based on job category, not pop category - my goal is for the Pop portraits to be based on the job, not the Pop's stratum
 
 ## Source Code
 

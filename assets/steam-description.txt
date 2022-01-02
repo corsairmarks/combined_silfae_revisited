@@ -7,7 +7,6 @@ There are lots of other mods which contain the same or similar portraits, so why
 [h1]Changes[/h1]
 
 All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.2 "Herbert," the latest version when this was written.  Updates include:
-
 [list]
 [*]Fix invalid texture reference in [b]quarian_female_01_portrait.mesh[/b] (caused lots of error logs)
 [*]Improve Quarian clothing selectors to be influenced by Pop job
@@ -30,7 +29,6 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 [*]You can use the Quarian portraits for your own empire without any DLC requirements
 [*]Support being able to choose a single-gender species (new in Stellaris 3.2)
 [/list]
-
 [h2]Compatibility[/h2]
 
 In order to add a new solar system initializer that is compatible with Void Dwellers, it is necessary to override [b]origin_void_dwellers[/b] add it to the list of allowed initializers.  That means this mod is incompatible with other mods that modify that origin definition, such as other mods that add new initializers for Void Dwellers.
