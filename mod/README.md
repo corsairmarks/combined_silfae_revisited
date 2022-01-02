@@ -17,7 +17,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     * Fix the ship class, section, and default design to work
     * Fix portrait selectors to offer fewer phenotypes with the correct multiple color options - the graphics have been there the whole time, just needed some tweaking for presentation
     * Add components for the Hollow Form ship type (reactors, computers, and thrusters) of all types included in regular Stellaris
-* Adjust Eltryrad portraits based on Pop type - lore-wise they have a caste system
+* Adjust Eltryrad portraits based on a Pop job type - lore-wise they have a caste system
 * Add a custom deposit for the Hollow starting world ancient ruins - the previous deposit type was removed from the base game
 * Update the namelist to account for all built-in army types, remove obsolete entries
 * Update the custom starting system initializer
@@ -89,6 +89,7 @@ In game terms, the fourth color of Phenotype 9 is the same as the third color.
     * Update special Dimensional Tearing technology to be unavailable for non-Horrorworm empires
     * Do not show the special Hollow Form ship in the previewer for non-Horrorworm empires
 * 3.0.1 Don't break the base game diplomacy rooms - fix is to name the new file to load _before_ the built-in file
+* 3.0.2 Portrait selectors based on job category, not pop category - my goal is for the Pop portraits to be based on the job, not the Pop's stratum
 
 ## Source Code
 
