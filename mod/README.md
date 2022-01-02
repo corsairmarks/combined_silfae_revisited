@@ -57,6 +57,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * More Pop clothing selector refinements
     * Use kelp blockers for ocean planets in the custom system initializer
 * 2.1.0 Add slightly recolored female governor clothing
+* 2.1.1 Portrait selectors based on job category, not pop category - my goal is for the Pop portraits to be based on the job, not the Pop's stratum
 
 ## Source Code
 
