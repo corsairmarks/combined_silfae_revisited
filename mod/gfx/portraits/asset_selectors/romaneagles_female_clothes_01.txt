@@ -34,9 +34,9 @@ romaneagles_female_clothes_01 = {
 		random = {
 			trigger = {
 				OR = {
-					is_pop_category = ruler
-					is_pop_category = complex_drone
-					is_pop_category = precursor
+					has_job_category = ruler
+					has_job_category = complex_drone
+					has_job_category = precursor
 					# admins
 					has_job = bureaucrat
 					has_job = primitive_bureaucrat
@@ -118,7 +118,7 @@ romaneagles_female_clothes_01 = {
 		}
 		random = {
 			trigger = {
-				is_pop_category = specialist
+				has_job_category = specialist
 				NOR = {
 					# admins
 					has_job = bureaucrat
@@ -150,7 +150,7 @@ romaneagles_female_clothes_01 = {
 			}
 		}
 		random = {
-			trigger = { is_pop_category = bio_trophy }
+			trigger = { has_job_category = bio_trophy }
 			list = {
 				"gfx/models/portraits/romaneagles/romaneagles_female_outfit_ruler.dds"
 				"gfx/models/portraits/romaneagles/romaneagles_female_outfit_governor.dds"
