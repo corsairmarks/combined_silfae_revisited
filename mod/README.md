@@ -56,6 +56,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * More portrait selector refinements (these portraits don't have a separate clothing layer - it is built-in the the portrait)
 * 2.0.1 Use kelp blockers for ocean planets in the custom system initializer
 * 2.0.2 Portrait selectors based on job category, not pop category - my goal is for the Pop portraits to be based on the job, not the Pop's stratum
+* 2.0.3 No longer ignore portrait duplication for the pre-scripted empire
 
 ## Source Code
 
