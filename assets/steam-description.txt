@@ -58,11 +58,9 @@ This mod should be added before the game has started.  If you remove it from a g
 Silfae's original mod does not include graphics for ecumenopoleis, so they will fall back to the Mammalian graphical culture. If anyone knows of a mod that provides said stage-6 city picture, I would be happy to investigate getting permission to reuse the graphics, or add it as a dependency to this one.
 
 This mod overrides [b]origin_void_dwellers[/b] in order to add its new initializer to the allowed list, which generates an error like this:
-
 [code]
 [17:48:15][game_singleobjectdatabase.h:147]: Object with key: origin_void_dwellers already exists
 [/code]
-
 [h2]Changelog[/h2]
 
 See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2583358569]Change Notes[/url]
