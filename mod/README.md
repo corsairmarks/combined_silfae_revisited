@@ -134,6 +134,8 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 * 3.0.2 Update for full compatibility with a dependency (Special Leadership Privileges for Battle Thralls and Bio-Trophies)
 * 3.0.3 Update portrait selectors and job rules
     * Portrait selectors based on job category, not pop category - my goal is for the Pop portraits to be based on the job, not the Pop's stratum
+    * No longer ignore portrait duplication for the pre-scripted empire
+    * Biological Holofrixit alternate species class is not randomized
     * Don't restrict the ability to work the Angler job to Anglers empires (allows other empires to employ Anglers should they somehow get access to the job)
 
 ## Source Code

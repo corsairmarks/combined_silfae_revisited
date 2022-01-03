@@ -1,11 +1,9 @@
 [h1]Overview[/h1]
-
 Have you seen the azure, chitinous portraits from Silfae's "Holosphere Rising" mod? Do you want to manage techno-arthropoid hives with up-to-date gameplay elements and play the Holosphere as originally designed? Then this mod is for you!
 
 There are other mods which contain these portraits, so why should you choose this one? None of the others update special holofrixit caste-based gameplay, but this one does! Please enjoy my adaptation of Silfae's custom empire into modern Stellaris.
 
 [h1]Changes[/h1]
-
 All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.2.2 "Herbert," the latest version when this was written. Updates include:
 [list]
 [*]Update Holofrixit shipset (Unbidden) - fallback to molluscoid (the fallback for the Unbidden)
@@ -43,7 +41,6 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 [*]Support being able to choose a single-gender species (new in Stellaris 3.2)
 [/list]
 [h2]Compatibility[/h2]
-
 Much less compatible than the other Silfae's Revisited series mods because this mod makes significantly more gameplay changes. It is explicitly incompatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2579736379]Animated Silicoid Portraits: Revisited[/url] unless you use the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2596642632]compatibility patch[/url].
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number. This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed. You can safely ignore the out-of-date warning for the dependency mods.
@@ -51,7 +48,6 @@ The Launcher will tell you that some mods are outdated - that is because the dep
 Built for Stellaris version 3.2.2 "Herbert."  Not compatible with achievements.
 
 [h3]File Overwrites[/h3]
-
 This mod overwrites most of the Pop jobs definitions to account for the special Holofixit caste traits. It also overwrites all the Pop strata to implement Holofrixit energy-based Pop upkeep (instead of food). It's likely to break any time Stellaris makes changes to the underlying Pop strata. These files are completely overwritten:
 [list]
 [*]common/pop_categories/00_social_classes.txt
@@ -64,7 +60,6 @@ This mod overwrites most of the Pop jobs definitions to account for the special 
 [*]common/pop_jobs/06_event_jobs.txt
 [/list]
 [h3]Partial Overrides[/h3]
-
 This mod alters the requirements for ruler-stratum jobs and some "complex" specialist/complex drone-stratum jobs. Only Xechiros can work the majority of ruler jobs (Ganglions can be Head Researchers), and Drones cannot work any "complex" jobs. This [i]also[/i] means that this mod will need to be explicitly updated any time Paradox makes changes to jobs.
 
 Job-related triggers overridden:
@@ -82,7 +77,6 @@ Furthermore, this mod alters some core game rules in [b]common/game_rules/00_rul
 [*]can_fill_ruler_job
 [/list]
 [h3]Dependencies[/h3]
-
 In order for this mod to function, you [b]must[/b] install these three mods and load them before this one:
 [list]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=868965217]Holosphere Rising[/url] by Silfae
@@ -90,11 +84,9 @@ In order for this mod to function, you [b]must[/b] install these three mods and 
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2496357447]Special Leadership Privileges for Battle Thralls and Bio-Trophies[/url] by me
 [/list]
 [h3]When to Install[/h3]
-
 This mod should be added before the game has started. If you remove it from a game in progress, your game may have graphical problems if any species was using the custom portraits or city graphics.
 
 [h2]Known Issues[/h2]
-
 This mod overwrites the corresponding species class added by "Silfae's city sets updated" so that it will not be available for use. Instead, the original species class from Silfae (with localisation) is used. Also, it replaces three triggers from the base game. Expect to see four lines in error.log like this:
 [code]
 [13:16:18][game_singleobjectdatabase.h:147]: Object with key: Silfae-Holofrixit already exists
@@ -103,15 +95,12 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 [13:16:19][game_singleobjectdatabase.h:147]: Object with key: is_robotic_species already exists
 [/code]
 [h2]Changelog[/h2]
-
 See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2592592503]Change Notes[/url]
 
 [h2]Source Code[/h2]
-
 Hosted on [url=https://github.com/corsairmarks/holosphere_rising_revisited]GitHub[/url].
 
 [h1]Special Thanks[/h1]
-
 The Silfae's Revisited series of mods were inspired by Endugu's approach of requiring the original mod for graphics and then adding or altering code for compatibility.  This helps the original modder get credit.  Thanks to both Endugu and Silfae!
 
 [url=https://discord.gg/bHVez2C][img]https://i.imgur.com/4Und3QN.png[/img][/url]
