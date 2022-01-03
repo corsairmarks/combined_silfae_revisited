@@ -7,7 +7,6 @@ There are other mods which contain the same portraits, so why should you choose 
 [h1]Changes[/h1]
 
 All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.2 "Herbert," the latest version when this was written.  Updates include:
-
 [list]
 [*]Remove duplication in room selector
 [*]Remove alternate (blank) city graphics - mostly they were to try and get a static diplomacy backdrop but only worked for colonies with city size 4; set the [b]graphical_culture[/b] to not define a cityset
@@ -48,7 +47,6 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 [*]You can use the Octee-lan portraits for your own empires without any DLC requirements
 [*]You can use the Beep-Boop portrait (there is only one) for your own machine empires if you have Synthetic Dawn
 [/list]
-
 [h2]Compatibility[/h2]
 
 In order to make the Alien Zoo available to gestalts (needed for the Beep-Boops), it is necessary to override [b]d_alien_pets_deposit[/b].  That means this mod is incompatible with other mods that modify that planetary deposit - although I doubt many do.
@@ -76,14 +74,12 @@ This mod should be added before the game has started.  If you remove it from a g
 [h2]Known Issues[/h2]
 
 This mod preempts one event and overrides a deposit and two diplomatic actions, which generates four lines in the error log like this:
-
 [code]
 [02:34:24][game_singleobjectdatabase.h:147]: Object with key: action_make_rival already exists
 [02:34:24][game_singleobjectdatabase.h:147]: Object with key: action_close_borders already exists
 [02:34:24][eventmanager.cpp:355]: an event with id [action.85] already exists!  file: events/on_action_events.txt line: 8811
 [02:34:24][game_singleobjectdatabase.h:147]: Object with key: d_alien_pets_deposit already exists
 [/code]
-
 [h2]Changelog[/h2]
 
 See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2584680339]Change Notes[/url]
