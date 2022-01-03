@@ -7,7 +7,6 @@ There are lots of other mods which contain these portraits, so why should you ch
 [h1]Changes[/h1]
 
 All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.2 "Herbert," the latest version when this was written.  Updates include:
-
 [list]
 [*]Clothing selector enhancements
     [list]
@@ -27,7 +26,6 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 [*]Remove a species trait (Communal) from the prescripted empire, because Charismatic is now 2 points
 [*]Support being able to choose a single-gender species (new in Stellaris 3.2)
 [/list]
-
 [h2]Compatibility[/h2]
 
 Compatible with any mod that does not add the same portraits, species class, or art assets.
@@ -39,12 +37,10 @@ Built for Stellaris version 3.2.* "Herbert."  Not compatible with achievements.
 [h3]Dependencies[/h3]
 
 In order for this mod to function, you [b]must[/b] install these two mods and load them before this one:
-
 [list]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=881118424]Animated Xirmian Portraits[/url] by Silfae
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2247427791]Silfae's city sets updated[/url] by Nozeminer
 [/list]
-
 [h3]When to Install[/h3]
 
 This mod should be added before the game has started.  If you remove it from a game in progress, your game may have graphical problems if any species was using the custom portraits or city graphics.
@@ -52,11 +48,9 @@ This mod should be added before the game has started.  If you remove it from a g
 [h2]Known Issues[/h2]
 
 This mod overwrites the corresponding species class added by "Silfae's city sets updated" so that it will not be available for use.  Instead, the original species class from Silfae (with localisation) is used.  Expect to see one line in error.log like this:
-
 [code]
 [14:12:14][game_singleobjectdatabase.h:147]: Object with key: Silfae-Xirmian already exists
 [/code]
-
 [h2]Changelog[/h2]
 
 See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2577789863]Change Notes[/url]

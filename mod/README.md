@@ -59,6 +59,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 * 2.0.0 Update for compatibility with Stellaris version 3.2 "Herbert"
     * Apply new mono-gender portrait rules
     * More Pop clothing selector refinements
+* 2.0.1 Portrait selectors based on job category, not pop category - my goal is for the Pop portraits to be based on the job, not the Pop's stratum
 
 ## Source Code
 
