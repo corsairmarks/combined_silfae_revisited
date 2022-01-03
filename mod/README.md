@@ -59,7 +59,9 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Apply new mono-gender portrait rules
     * More Pop clothing selector refinements
     * Allow portraits to be randomized
-* 2.0.1 Portrait selectors based on job category, not pop category - my goal is for the Pop portraits to be based on the job, not the Pop's stratum
+* 2.0.1 Minor tweaks
+    * Portrait selectors based on job category, not pop category - my goal is for the Pop portraits to be based on the job, not the Pop's stratum
+    * No longer ignore portrait duplication for the pre-scripted empire
 
 ## Source Code
 
