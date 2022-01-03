@@ -1,13 +1,10 @@
 [h1]Overview[/h1]
-
 This mod is a compilation of my adaptations of Silfae's portrait mods.  Please see the description of each individual mod for what the effects are.
 
 Individual mods update first, then changes are merged here.
 
 [h1]Bundled Mods[/h1]
-
 This is a bundle of mods to make it a little easier to sub and ensure cross-compatibility with each-other.  Please check each individual mod for the effects and any known issues.  The large hex strings are the commit hashes - that is mostly for my own record-keeping to know what revision of the other source code is contained here.
-
 [list]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2576769521]Animated Aquilese Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/romaneagles_portraits_revisited]Source[/url] cf01f590202fbaf8964d01889c23224fe11e40fd)
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2581752619]Animated Asari Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/asari_portraits_revisited]Source[/url] d22fee473138d0a118d789e9fa5aa0b285dcd0b5)
@@ -24,21 +21,16 @@ This is a bundle of mods to make it a little easier to sub and ensure cross-comp
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2579736379]Animated Silicoid Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/silicoid_portraits_revisited]Source[/url] f2e2db2ffc574c73d15b9e231287abe0b73b2182)
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2577789863]Animated Xirmian Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/xirmian_portraits_revisited]Source[/url] da565db76d5fb418f7120f7857b07ec40a1adbeb)
 [/list]
-
 [h2]Source Code[/h2]
-
 Hosted on [url=https://github.com/corsairmarks/combined_silfae_revisited]Github[/url]
 
 [h1]Compatibility[/h1]
-
 Requires Stellaris 3.2.2 "Herbert" and disables achievements.
 
 Check each of the contained mods for an explicit list of incompatibility notes.  Check each of the contained mods for an explicit list of incompatibility notes.  Notably almost all Pop jobs and all Pop strata are overwritten (primarily for the Holosphere but also Silicoids), making this mod incompatible with other mods that make changes to Pop jobs or strata.
 
 [h2]Dependencies[/h2]
-
 In order for this mod to function, you [b]must[/b] install these mods (and load them [i]before[/i] this one):
-
 [list]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=910576007]Animated Aquilese Portraits[/url] by Silfae
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=707779361]Animated Asari Portraits - Mass Effect[/url] by Silfae
@@ -57,15 +49,12 @@ In order for this mod to function, you [b]must[/b] install these mods (and load 
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2247427791]Silfae's city sets updated[/url] by Nozeminer (devastated cities and ecumenopolis-level cities)
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2496357447]Full Military Service for Battle Thralls[/url] by me (for Holosphere's enslaved leaders)
 [/list]
-
 These mods are not included as part of this mod so that the original authors get credit via mod subscriptions.
 
 [h2]When to Install[/h2]
-
 You should only add this mod before starting a new game, or remove it before starting a new game.  It should [b]not[/b] be added to or removed from an in-progress game.
 
 [h2]Changelog[/h2]
-
 See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2596417938]Change Notes[/url].
 
 [url=https://discord.gg/bHVez2C][img]https://i.imgur.com/4Und3QN.png[/img][/url]
