@@ -23,7 +23,7 @@ serpentoid_clothes_01 = {
 		random = {
 			trigger = {
 				OR = {
-					is_pop_category = ruler
+					has_job_category = ruler
 					has_job = synapse_drone
 					has_job = coordinator
 					has_job = fe_overseer
@@ -92,7 +92,7 @@ serpentoid_clothes_01 = {
 		}
 		random = {
 			trigger = {
-				is_pop_category = specialist
+				has_job_category = specialist
 				NOR = {
 					# admin
 					has_job = bureaucrat
@@ -128,9 +128,9 @@ serpentoid_clothes_01 = {
 		random = {
 			trigger = {
 				OR = {
-					is_pop_category = complex_drone
-					is_pop_category = precursor
-					is_pop_category = bio_trophy
+					has_job_category = complex_drone
+					has_job_category = precursor
+					has_job_category = bio_trophy
 				}
 				NOR = {
 					# rulers
@@ -165,15 +165,15 @@ serpentoid_clothes_01 = {
 		random = {
 			trigger = {
 				OR = {
-					is_pop_category = worker
-					is_pop_category = corrupt_drone
-					is_pop_category = criminal
-					is_pop_category = deviant_drone
-					is_pop_category = assimilation
-					is_pop_category = purge
-					is_pop_category = simple_drone
-					is_pop_category = slave
-					is_pop_category = xeno_ward
+					has_job_category = worker
+					has_job_category = corrupt_drone
+					has_job_category = criminal
+					has_job_category = deviant_drone
+					has_job_category = assimilation
+					has_job_category = purge
+					has_job_category = simple_drone
+					has_job_category = slave
+					has_job_category = xeno_ward
 				}
 				NOR = {
 					# admin
