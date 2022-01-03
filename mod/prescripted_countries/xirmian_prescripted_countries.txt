@@ -7,12 +7,12 @@ xirmian1 = {
 		plural = "Xirmians"
 		adjective = "Xirmian"
 		name_list = XIRM1
-		 trait = trait_weak
-		 trait = trait_charismatic
-		 trait = trait_deviants
-		 trait = trait_intelligent
-		 # due to trait cost changes, communal had to be omitted to bring the total to >= 0
-		 # trait = trait_communal
+		trait = trait_weak
+		trait = trait_charismatic
+		trait = trait_deviants
+		trait = trait_intelligent
+		# due to trait cost changes, communal had to be omitted to bring the total to >= 0
+		# trait = trait_communal
 	}
 	name = "Xirmian Astral Concordate"
 	adjective = "Xactic"
@@ -58,7 +58,7 @@ xirmian1 = {
 	}
 	flags = { is_xirmians }
 	spawn_enabled = yes
-	ignore_portrait_duplication = yes
+	ignore_portrait_duplication = no
 	ethic = ethic_xenophile
 	ethic = ethic_egalitarian
 	ethic = ethic_materialist
