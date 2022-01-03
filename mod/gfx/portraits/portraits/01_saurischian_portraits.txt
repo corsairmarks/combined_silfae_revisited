@@ -157,12 +157,12 @@ portrait_groups = {
 				trigger = {
 					species = { NOT = { species_gender = female } }
 					OR = {
-						is_pop_category = xeno_ward
+						has_job_category = xeno_ward
 						NOR = {
-							is_pop_category = ruler
-							is_pop_category = specialist
-							is_pop_category = complex_drone
-							is_pop_category = bio_trophy
+							has_job_category = ruler
+							has_job_category = specialist
+							has_job_category = complex_drone
+							has_job_category = bio_trophy
 							has_job = soldier
 							has_job = titan_hunter
 							has_job = warrior_drone
@@ -179,12 +179,12 @@ portrait_groups = {
 				trigger = {
 					species = { NOT = { species_gender = male } }
 					OR = {
-						is_pop_category = xeno_ward
+						has_job_category = xeno_ward
 						NOR = {
-							is_pop_category = ruler
-							is_pop_category = specialist
-							is_pop_category = complex_drone
-							is_pop_category = bio_trophy
+							has_job_category = ruler
+							has_job_category = specialist
+							has_job_category = complex_drone
+							has_job_category = bio_trophy
 							has_job = soldier
 							has_job = titan_hunter
 							has_job = warrior_drone
@@ -201,9 +201,9 @@ portrait_groups = {
 				trigger = {
 					species = { NOT = { species_gender = female } }
 					OR = {
-						is_pop_category = specialist
-						is_pop_category = complex_drone
-						is_pop_category = bio_trophy
+						has_job_category = specialist
+						has_job_category = complex_drone
+						has_job_category = bio_trophy
 					}
 					NOR = {
 						has_job = researcher
@@ -230,9 +230,9 @@ portrait_groups = {
 				trigger = {
 					species = { NOT = { species_gender = male } }
 					OR = {
-						is_pop_category = specialist
-						is_pop_category = complex_drone
-						is_pop_category = bio_trophy
+						has_job_category = specialist
+						has_job_category = complex_drone
+						has_job_category = bio_trophy
 					}
 					NOR = {
 						has_job = researcher
@@ -347,8 +347,8 @@ portrait_groups = {
 				trigger = {
 					species = { NOT = { species_gender = female } }
 					OR = {
-						is_pop_category = ruler
-						is_pop_category = precursor
+						has_job_category = ruler
+						has_job_category = precursor
 					}
 					NOR = {
 						has_job = head_researcher
@@ -366,8 +366,8 @@ portrait_groups = {
 				trigger = {
 					species = { NOT = { species_gender = male } }
 					OR = {
-						is_pop_category = ruler
-						is_pop_category = precursor
+						has_job_category = ruler
+						has_job_category = precursor
 					}
 					NOR = {
 						has_job = head_researcher
