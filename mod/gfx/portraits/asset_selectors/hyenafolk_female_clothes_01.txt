@@ -41,8 +41,8 @@ hyenafolk_female_clothes_01 = {
 		random = {
 			trigger = {
 				OR = {
-					is_pop_category = specialist
-					is_pop_category = complex_drone
+					has_job_category = specialist
+					has_job_category = complex_drone
 				}
 				NOR = {
 					# admin
@@ -80,8 +80,8 @@ hyenafolk_female_clothes_01 = {
 		random = {
 			trigger = {
 				OR = {
-					is_pop_category = ruler
-					is_pop_category = precursor
+					has_job_category = ruler
+					has_job_category = precursor
 				}
 				NOR = {
 					# ruler

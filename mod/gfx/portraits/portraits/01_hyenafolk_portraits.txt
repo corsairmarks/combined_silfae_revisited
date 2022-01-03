@@ -118,7 +118,7 @@ portrait_groups = {
 						# ruler
 						has_job_category = ruler
 						AND = {
-							is_pop_category = precursor
+							has_job_category = precursor
 							NOT = { has_job = fe_xeno_ward }
 						}
 						has_job = manager
@@ -165,16 +165,16 @@ portrait_groups = {
 						NOT = { species_gender = male }
 					}
 					NOR = {
-						is_pop_category = worker
-						is_pop_category = simple_drone
-						is_pop_category = slave
-						is_pop_category = xeno_ward
-						is_pop_category = assimilation
-						is_pop_category = criminal
-						is_pop_category = corrupt_drone
-						is_pop_category = deviant_drone
-						is_pop_category = pre_sapients
-						is_pop_category = purge
+						has_job_category = worker
+						has_job_category = simple_drone
+						has_job_category = slave
+						has_job_category = xeno_ward
+						has_job_category = assimilation
+						has_job_category = criminal
+						has_job_category = corrupt_drone
+						has_job_category = deviant_drone
+						has_job_category = pre_sapients
+						has_job_category = purge
 					}
 				}
 				portraits = {
