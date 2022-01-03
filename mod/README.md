@@ -10,7 +10,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 
 * Fix the broken portrait clothing selector for male rulers
 * Update the namelist to account for all built-in army types, remove obsolete entries
-* Update portrait selection for Pops - higher-strata Pops (rulers, complex drones, bio-trophies, and most precursors) may use laurel wreaths
+* Update portrait selection for Pops - higher-stratum Pops (rulers, complex drones, bio-trophies, and most precursors) may use laurel wreaths
 * Update clothing selection for Pops - your Pops will wear clothing based on their jobs
 * Update the custom starting system initializer and special neighbors
 * Custom starting initializer now supports a variety of civics and origin starts (all the built-in ones)
@@ -59,6 +59,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Apply new mono-gender portrait rules
     * More Pop clothing selector refinements
     * Allow portraits to be randomized
+* 2.0.1 Portrait selectors based on job category, not pop category - my goal is for the Pop portraits to be based on the job, not the Pop's stratum
 
 ## Source Code
 
