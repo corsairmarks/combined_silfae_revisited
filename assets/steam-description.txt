@@ -1,11 +1,9 @@
 [h1]Overview[/h1]
-
 Do you like space-elves? Perhaps even from a certain grimdark IP? Silfae's "Animated Eldar Portraits" mod fits the bill, but unfortunately the custom empire and starting system are no longer functional due to changes in Stellaris.  With this mod, now you can play as Ulthwé Craftworld using the special Eye of Terror system initializer as Silfae designed it (portraits and starting system available for use with custom empires).
 
 There are lots of other mods which contain these portraits, so why should you choose this one?  None of the others update the custom solar system initializer or address the "Eldar leaders die quickly" issue, but this one does!  Please enjoy my translation of Silfae's custom empire into modern Stellaris.
 
 [h1]Changes[/h1]
-
 All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.2 "Herbert," the latest version when this was written.  Updates include:
 [list]
 [*]Enhance clothing selectors to be influenced by Pop job
@@ -16,7 +14,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     [*]Add bonus lifespan to compensate for their older starting age
     [*]Automatically given to any species designed with the Eldar portraits
     [/list]
-[*]Update prescripted empire
+[*]Update pre-scripted empire
     [list]
     [*]Now has Origin: Remnants (requires Ancient Relics)
     [*]Can randomly spawn
@@ -37,7 +35,6 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 [*]Support being able to choose a single-gender species (new in Stellaris 3.2)
 [/list]
 [h2]Compatibility[/h2]
-
 Compatible with any mod that does not add the same portraits, species class, or art assets.
 
 May conflict with other mods that need to alter how relic worlds are upgraded or make changes to Armageddon Bombardment.
@@ -47,36 +44,29 @@ The Launcher will tell you that some mods are outdated - that is because the dep
 Built for Stellaris version 3.2.* "Herbert."  Not compatible with achievements.
 
 [h3]Partial Overrides[/h3]
-
 This mod also allows the Creatures of the Shroud country to bombard your homeworld if you start in the Eye of Terror system initializer.  And they will use the Armageddon bombardment stance to do so.  To make this work, this mod overrides one game rule [b]can_orbital_bombard[/b] and one bombardment stance [b]armageddon[/b].
 
 [h3]Dependencies[/h3]
-
 In order for this mod to function, you [b]must[/b] install the following mod and load it before this one:
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=707415339]Animated Eldar Portraits[/url] by Silfae
 
 [h3]When to Install[/h3]
-
 This mod should be added before the game has started.  If you remove it from a game in progress, your game may have graphical problems if any species was using the custom portraits.
 
 [h2]Known Issues[/h2]
-
 This mod preempts one event from the base game related to restoring relic worlds to ecumenopoleis ([b]mega.200[/b]) and a bombardment stance ([b]armageddon[/b]).  Expect to see two lines in error.log like this:
 [code]
 [00:09:28][game_singleobjectdatabase.h:147]: Object with key: armageddon already exists
 [00:09:29][eventmanager.cpp:355]: an event with id [mega.201] already exists!  file: events/megacorp_events.txt line: 190
 [/code]
 [h2]Changelog[/h2]
-
 See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2581388205]Change Notes[/url]
 
 [h2]Source Code[/h2]
-
 Hosted on [url=https://github.com/corsairmarks/eldar_portraits_revisited]GitHub[/url]
 
 [h1]Special Thanks[/h1]
-
 I was inspired to extend the original mod when I saw [url=https://steamcommunity.com/profiles/76561198037630876/myworkshopfiles/]Endugu[/url]'s [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1584824947]expansion[/url] of [url=https://steamcommunity.com/profiles/76561198021525667/myworkshopfiles/]Silfae[/url]'s [url=https://steamcommunity.com/workshop/filedetails/?id=881118424]Animated Xirmian Portraits[/url].  Modular mods that require downloading the original mod(s) help give credit where credit is due.
 
 An extra special thanks to Silfae for creating and sharing so many detailed, animated portraits for the community.
