@@ -147,9 +147,9 @@ portrait_groups = {
 			add = {
 				trigger = {
 					OR = {
-						is_pop_category = ruler
-						is_pop_category = bio_trophy
-						is_pop_category = precursor
+						has_job_category = ruler
+						has_job_category = bio_trophy
+						has_job_category = precursor
 						has_job = bureaucrat
 						has_job = primitive_bureaucrat
 						has_job = synapse_drone
@@ -222,10 +222,10 @@ portrait_groups = {
 				trigger = {
 					NOR = {
 						# high
-						is_pop_category = ruler
-						is_pop_category = bio_trophy
+						has_job_category = ruler
+						has_job_category = bio_trophy
 						AND = {
-							is_pop_category = precursor
+							has_job_category = precursor
 							NOT = { has_job = fe_xeno_ward }
 						}
 						has_job = bureaucrat
