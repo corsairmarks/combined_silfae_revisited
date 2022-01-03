@@ -77,7 +77,7 @@ In game terms, the fourth color of Phenotype 9 is the same as the third color.
 ## Changelog
 
 * 1.0.0 Initial version
-* 1.0.1 Require Apocalypse for prescripted empire, extra names for randomisation, allow portraits as secondary species and to be randomized
+* 1.0.1 Require Apocalypse for pre-scripted empire, extra names for randomisation, allow portraits as secondary species and to be randomized
 * 1.0.2 Fix `on_game_start` on_action to fire correctly, ensure correct `graphical_culture`
 * 2.0.0 Update for compatibility with Stellaris version 3.1 "Lem"
     * Add new localisation keys introduced in 3.1
@@ -89,7 +89,9 @@ In game terms, the fourth color of Phenotype 9 is the same as the third color.
     * Update special Dimensional Tearing technology to be unavailable for non-Horrorworm empires
     * Do not show the special Hollow Form ship in the previewer for non-Horrorworm empires
 * 3.0.1 Don't break the base game diplomacy rooms - fix is to name the new file to load _before_ the built-in file
-* 3.0.2 Portrait selectors based on job category, not pop category - my goal is for the Pop portraits to be based on the job, not the Pop's stratum
+* 3.0.2 Minor tweaks
+    * Portrait selectors based on job category, not pop category - my goal is for the Pop portraits to be based on the job, not the Pop's stratum
+    * No longer ignore portrait duplication for the pre-scripted empire
 
 ## Source Code
 
