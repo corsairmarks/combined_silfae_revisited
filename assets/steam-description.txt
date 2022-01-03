@@ -1,11 +1,9 @@
 [h1]Overview[/h1]
-
 Do you love Silfae's pixie-punk "Animated Xirmian Portraits" mod?  Do you wish that the gameplay elements were up-to-date so that you can play the Xirmian Astral Concordate as originally designed?  Then this mod is for you!
 
 There are lots of other mods which contain these portraits, so why should you choose this one?  None of the others update the custom solar system initializer or AI personality but this one does!  Please enjoy my translation of Silfae's custom empire into modern Stellaris.
 
 [h1]Changes[/h1]
-
 All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.2 "Herbert," the latest version when this was written.  Updates include:
 [list]
 [*]Clothing selector enhancements
@@ -27,7 +25,6 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 [*]Support being able to choose a single-gender species (new in Stellaris 3.2)
 [/list]
 [h2]Compatibility[/h2]
-
 Compatible with any mod that does not add the same portraits, species class, or art assets.
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
@@ -35,7 +32,6 @@ The Launcher will tell you that some mods are outdated - that is because the dep
 Built for Stellaris version 3.2.* "Herbert."  Not compatible with achievements.
 
 [h3]Dependencies[/h3]
-
 In order for this mod to function, you [b]must[/b] install these two mods and load them before this one:
 [list]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=881118424]Animated Xirmian Portraits[/url] by Silfae
@@ -46,7 +42,6 @@ In order for this mod to function, you [b]must[/b] install these two mods and lo
 This mod should be added before the game has started.  If you remove it from a game in progress, your game may have graphical problems if any species was using the custom portraits or city graphics.
 
 [h2]Known Issues[/h2]
-
 This mod overwrites the corresponding species class added by "Silfae's city sets updated" so that it will not be available for use.  Instead, the original species class from Silfae (with localisation) is used.  Expect to see one line in error.log like this:
 [code]
 [14:12:14][game_singleobjectdatabase.h:147]: Object with key: Silfae-Xirmian already exists
@@ -56,11 +51,9 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2577789863]Change Notes[/url]
 
 [h2]Source Code[/h2]
-
 Hosted on [url=https://github.com/corsairmarks/xirmian_portraits_revisited]GitHub[/url].
 
 [h1]Special Thanks[/h1]
-
 I was inspired to extend the original mod when I saw [url=https://steamcommunity.com/profiles/76561198037630876/myworkshopfiles/]Endugu[/url]'s [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1584824947]expansion[/url] of [url=https://steamcommunity.com/profiles/76561198021525667/myworkshopfiles/]Silfae[/url]'s [url=https://steamcommunity.com/workshop/filedetails/?id=881118424]Animated Xirmian Portraits[/url].  Modular mods that require downloading the original mod(s) help give credit where credit is due.
 
 An extra special thanks to Silfae for creating and sharing so many detailed, animated portraits for the community.
