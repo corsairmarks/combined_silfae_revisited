@@ -19,7 +19,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     * This is now implemented through the feature introduced in Stellaris 3.2 to specify a mono-gender species during empire creation
 * Add gestalt version of the Alien Zoo (both a building and technology) which is available to non-genocidal gestalt empires
 * Override Isolated Valley (`d_alien_pets_deposit`) to support new zoo building
-* Update prescripted empire (Kuri-octa-Xibi):
+* Update pre-scripted empire (Kuri-octa-Xibi):
     * Octee-lan species:
         * Remove Communal to bring trait point total back to up 0 - this is because Charismatic is now 2 points now
         * Remove Wasteful and add Unruly in order to add Aquatic (requires the Aquatic Species Pack)
@@ -90,7 +90,7 @@ This mod preempts one event and overrides a deposit and two diplomatic actions, 
     * Set Octee-lans as female-only using new features (start a new game or run `event octeelan_evt.3` to update an existing game)
     * Integrate base game changes (field name changes, icons)
 * 3.0.0 Update for compatibility with Stellaris version 3.2 "Herbert"
-    * Use new "mono-gender" species choice to set the prescripted empire to `gender = female`
+    * Use new "mono-gender" species choice to set the pre-scripted empire to `gender = female`
     * Remove event to force the Octee-lan portraits to be female (the game can do this now)
     * Octee-lans, Muubul, and Yuibitts are now Aquatic
     * Improve spawn code for bonus Tsukimi Pool system species
@@ -99,6 +99,7 @@ This mod preempts one event and overrides a deposit and two diplomatic actions, 
     * Wargoals for each side of the special Containment
     * Diplomacy action block you from closing borders or declaring a rivalry with the Beep-Boops and vice versa
 * 3.1.1 Don't break the base game diplomacy rooms - fix is to name the new file to load _before_ the built-in file
+* 3.1.2 No longer ignore portrait duplication for the pre-scripted empire
 
 ## Source Code
 

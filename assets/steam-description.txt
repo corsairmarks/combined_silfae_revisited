@@ -1,11 +1,9 @@
 [h1]Overview[/h1]
-
 Have you experienced the sleek, tentacled allure of Silfae's "Animated Octee-lan Portraits" mod?  Do you wish that the gameplay elements were up-to-date so that you can play the Kuri-octa-Xibi and rebel against the Beep-Boops?  Then this mod is for you!
 
 There are other mods which contain the same portraits, so why should you choose this one?  This mod fixes the old code so that the special starting system (containing your former machine overlords) is playable and ensures all the assets are usable by players.  Please enjoy my adaptation of Silfae's custom empire into modern Stellaris.
 
 [h1]Changes[/h1]
-
 All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.2 "Herbert," the latest version when this was written.  Updates include:
 [list]
 [*]Remove duplication in room selector
@@ -21,7 +19,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     [/list]
 [*]Add gestalt version of the Alien Zoo (both a building and technology) which is available to non-genocidal gestalt empires
 [*]Override Isolated Valley ([b]d_alien_pets_deposit[/b]) to support new zoo building
-[*]Update prescripted empire (Kuri-octa-Xibi):
+[*]Update pre-scripted empire (Kuri-octa-Xibi):
     [list]
     [*]Octee-lan species
         [list]
@@ -48,7 +46,6 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 [*]You can use the Beep-Boop portrait (there is only one) for your own machine empires if you have Synthetic Dawn
 [/list]
 [h2]Compatibility[/h2]
-
 In order to make the Alien Zoo available to gestalts (needed for the Beep-Boops), it is necessary to override [b]d_alien_pets_deposit[/b].  That means this mod is incompatible with other mods that modify that planetary deposit - although I doubt many do.
 
 New for Stellaris 3.2, this mod now overrides two diplomatic actions (Close Borders and Declare Rivalry) in order to prevent players beginning in Tsukimi Pool from closing their borders to the Beep-Boop (which would otherwise their fleets stuck permanently MIA).  Thus this mod is now not compatible with others that make changes to the same diplomatic actions (does not conflict with mods that add extra diplomatic message text).  Otherwise compatible with any other mod that does not add the same portraits, species class, or art assets.
@@ -58,21 +55,17 @@ The Launcher will tell you that some mods are outdated - that is because the dep
 Built for Stellaris version 3.2.* "Herbert."  Not compatible with achievements.
 
 [h3]Event Preemption[/h3]
-
 In order to allow the Beep-Boops to have a planet in the same system as the player, this mod replaces the event [b]action.85[/b] that is responsible for (on a monthly basis) transferring control of any colonies not owned by the system's starbase's owner to the starbase owner. The Beep-Boops have a special exception, otherwise this event continues to function as normal.
 
 [h3]Dependencies[/h3]
-
 In order for this mod to function, you [b]must[/b] install the following mod and load it before this one:
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=929140455]Animated Octee-lan Portraits[/url] by Silfae
 
 [h3]When to Install[/h3]
-
 This mod should be added before the game has started.  If you remove it from a game in progress, your game may have graphical problems if any species was using the custom portraits.
 
 [h2]Known Issues[/h2]
-
 This mod preempts one event and overrides a deposit and two diplomatic actions, which generates four lines in the error log like this:
 [code]
 [02:34:24][game_singleobjectdatabase.h:147]: Object with key: action_make_rival already exists
@@ -81,15 +74,12 @@ This mod preempts one event and overrides a deposit and two diplomatic actions, 
 [02:34:24][game_singleobjectdatabase.h:147]: Object with key: d_alien_pets_deposit already exists
 [/code]
 [h2]Changelog[/h2]
-
 See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2584680339]Change Notes[/url]
 
 [h2]Source Code[/h2]
-
 Hosted on [url=https://github.com/corsairmarks/octeelan_portraits_revisited]GitHub[/url]
 
 [h1]Special Thanks[/h1]
-
 I was inspired to extend the original mod when I saw [url=https://steamcommunity.com/profiles/76561198037630876/myworkshopfiles/]Endugu[/url]'s [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1584824947]expansion[/url] of [url=https://steamcommunity.com/profiles/76561198021525667/myworkshopfiles/]Silfae[/url]'s [url=https://steamcommunity.com/workshop/filedetails/?id=881118424]Animated Xirmian Portraits[/url].  Modular mods that require downloading the original mod(s) help give credit where credit is due.
 
 An extra special thanks to Silfae for creating and sharing so many detailed, animated portraits for the community.
