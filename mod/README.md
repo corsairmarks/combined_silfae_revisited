@@ -58,6 +58,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Use kelp blockers for ocean planets in the custom system initializer
 * 2.1.0 Add slightly recolored female governor clothing
 * 2.1.1 Portrait selectors based on job category, not pop category - my goal is for the Pop portraits to be based on the job, not the Pop's stratum
+* 2.1.2 No longer ignore portrait duplication for the pre-scripted empire
 
 ## Source Code
 
