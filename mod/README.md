@@ -71,7 +71,10 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * New "Mineral Deficient" negative trait for lithoids
 * 2.0.1 Fix improper species-level portrait selector syntax for non-male "human" portraits
 * 2.0.2 Don't break the base game diplomacy rooms - fix is to name the new file to load _before_ the built-in file
-* 2.0.3 Portrait selectors based on job category, not pop category - my goal is for the Pop portraits to be based on the job, not the Pop's stratum
+* 2.0.3 Minor tweaks
+    * Portrait selectors based on job category, not pop category - my goal is for the Pop portraits to be based on the job, not the Pop's stratum
+    * No longer ignore portrait duplication for the pre-scripted empire
+    * Don't randomize the all-Reptilian or all-"Human" portrait groups
 
 ## Source Code
 
