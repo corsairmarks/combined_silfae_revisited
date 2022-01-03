@@ -16,7 +16,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     * New version that works with the Void Dwellers origin (available for any Void Dwellers)
 * Add custom trait "Wanderers" that is a higher-powered version of Nomadic: +30% growth from immigration, -50% resettlement cost, +50% pop automatic resettlement chance
 * Replace original "Quarian" trait with "Immunocompromised" that gives +5% engineering research, -5% habitability (0 points) - available for any species (AI will not use it)
-* Update prescripted empire
+* Update pre-scripted empire
     * Now has oligarchic authority to reflect Quarian government style
     * Now has Origin: Void Dwellers (requires Federations)
     * Species traits altered: Void Dwellers, Wanderers, Intelligent, Immunocompromised, Nonadaptive, Deviants (selected based on the effects of Silfae's original design)
@@ -72,7 +72,9 @@ This mod overrides `origin_void_dwellers` in order to add its new initializer to
     * More Pop clothing selector refinements
     * Update override of `origin_void_dwellers` to reflect additional base game restrictions (no Anglers)
 * 3.0.1 Don't break the base game diplomacy rooms - fix is to name the new file to load _before_ the built-in file
-* 3.0.2 Portrait selectors based on job category, not pop category - my goal is for the Pop portraits to be based on the job, not the Pop's stratum
+* 3.0.2 Minor tweaks
+    * Portrait selectors based on job category, not pop category - my goal is for the Pop portraits to be based on the job, not the Pop's stratum
+    * No longer ignore portrait duplication for the pre-scripted empire
 
 ## Source Code
 
