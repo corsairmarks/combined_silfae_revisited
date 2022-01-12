@@ -25,7 +25,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     * Traits use up-to-date-modifiers
     * Most of the `BIOLOGICAL` traits are now available to use on `LITHOID`s too
     * These traits were originally designed as advanced traits, which means you must have Evolutionary Mastery to use them
-* Update prescripted empire
+* Update pre-scripted empire
     * Now uses the new Origin: Parasitic Evolution (requires Utopia)
     * Now has Civic: Shadow Council to replace the civic which became the origin
     * Can randomly spawn
@@ -75,6 +75,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Portrait selectors based on job category, not pop category - my goal is for the Pop portraits to be based on the job, not the Pop's stratum
     * No longer ignore portrait duplication for the pre-scripted empire
     * Don't randomize the all-Reptilian or all-"Human" portrait groups
+* 2.0.4 Allow players to pick the all-Reptilian or all-"Human" portrait groups - it is intended only that the AI cannot randomly choose those two groups
 
 ## Source Code
 
