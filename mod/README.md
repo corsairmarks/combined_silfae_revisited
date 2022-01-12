@@ -11,7 +11,7 @@ This is a bundle of mods to make it a little easier to sub and ensure cross-comp
 * [Animated Aquilese Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2576769521) ([Source](https://github.com/corsairmarks/romaneagles_portraits_revisited) cf01f590202fbaf8964d01889c23224fe11e40fd)
 * [Animated Asari Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2581752619) ([Source](https://github.com/corsairmarks/asari_portraits_revisited) d22fee473138d0a118d789e9fa5aa0b285dcd0b5)
 * [Animated Eldar Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2581388205) ([Source](https://github.com/corsairmarks/eldar_portraits_revisited) fb8c8bae0ea1404a60e6418a003be15ef58b54bd)
-* [Animated Hidden Eye Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2585946800) ([Source](https://github.com/corsairmarks/slreptilian_portraits_revisited) eb9b4706f73700b1c13f16c6dfcf48b16682187a)
+* [Animated Hidden Eye Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2585946800) ([Source](https://github.com/corsairmarks/slreptilian_portraits_revisited) 8cb89f6d69acd37f8c80f2606690e87abd442802)
 * [Animated Hollow Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2578037235) ([Source](https://github.com/corsairmarks/horrorworm_portraits_revisited) a1e0aaa345e9bef9c81fe41ac0ca59cbad42bf6f)
 * [Animated Holosphere Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2592592503) ([Source](https://github.com/corsairmarks/holosphere_rising_revisited) 4d2b24f57deb234a7ca504cf3dd5103c43e49abc)
 * [Animated Hyena Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2576290763) ([Source](https://github.com/corsairmarks/hyenafolk_portraits_revisited) 1322f3669dd0525041f5275c684f32bf17bc56d4)
@@ -97,3 +97,4 @@ You should only add this mod before starting a new game, or remove it before sta
     * Animated Shark Portraits: Revisited at 2.0.1
 * 3.0.3 Update merged mod Animated Holosphere Portraits: Revisited at 3.0.2
 * 3.0.4 Update all merged mods
+* 3.0.5 Update merged mod Animated Hidden Eye Portraits: Revisited at 2.0.4
