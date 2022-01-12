@@ -23,6 +23,6 @@ tags={
 	"Graphics"
 	"Species"
 }
-version="3.0.4"
+version="3.0.5"
 supported_version="3.2.2"
 remote_file_id="2596417938"
