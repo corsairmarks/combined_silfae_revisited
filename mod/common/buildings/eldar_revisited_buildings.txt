@@ -121,9 +121,4 @@ building_aquaponics_farm_eldar_revisited = {
 	prerequisites = {
 		"tech_aquaponics_eldar_revisited"
 	}
-
-	ai_resource_production = {
-		food = 1
-		trigger = { always = yes }
-	}
 }
