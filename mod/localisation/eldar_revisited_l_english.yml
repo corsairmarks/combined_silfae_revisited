@@ -32,7 +32,7 @@
  sc_silfae_eye_of_terror: "$pc_silfae_eye_of_terror$"
  sc_silfae_eye_of_terror_desc: "$pc_silfae_eye_of_terror_desc$"
  pc_silfae_eye_of_terror: "Eye of Terror"
- pc_silfae_eye_of_terror_desc: "A massive tear through space-time inside which any separation between realspace and the Shroud has been erased. It pulls fiercly at its own edges, prising more of realspace into itself with the inexorable grasp of a black hole. Within it, objects absorbed from realspace are continuously twisted and reshaped by the malevolent, fickle whims of whichever Shroud entity currently dominates the region. Others gather to attempt forcing their true forms through into realspace. None have fully succeeded... yet."
+ pc_silfae_eye_of_terror_desc: "A massive tear through space-time inside which any separation between realspace and the Shroud has been erased. It pulls fiercely at its own edges, prising more of realspace into itself with the inexorable grasp of a black hole. Within it, objects absorbed from realspace are continuously twisted and reshaped by the malevolent, fickle whims of whichever Shroud entity currently dominates the region. Others gather to attempt forcing their true forms through into realspace. None have fully succeeded... yet."
  # Eye of Terror Shroud Incursions
  eldar_evt.6.title: "Shroud Entities Manifest on [This.GetName]"
  eldar_evt.6.desc: "The weakened boundary between realspace and the Shroud in [This.Solar_System.GetName] has been temporarily torn asunder! Tears and portals have been sighted across the surface of [This.GetName] - our military forces are already deploying to contain the grotesque Shroud entities."
