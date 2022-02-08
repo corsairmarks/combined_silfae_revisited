@@ -16,7 +16,6 @@ tech_aquaponics_eldar_revisited = {
 			# purpose of this Aquaponics tech is to make Anglers work with this mod, but no
 			# reason to keep it locked from other empires if it can be of use to them.
 			has_global_flag = holofrixit_revisited_installed
-			has_global_flag = agrarian_idyll_lithoid_installed
 		}
 	}
 
@@ -79,7 +78,7 @@ tech_aquaponics_eldar_revisited = {
 			}
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = society
 				has_trait = "leader_trait_expertise_biology"
