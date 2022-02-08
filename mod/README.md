@@ -6,7 +6,7 @@ There are lots of other mods which contain these portraits, so why should you ch
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.2 "Herbert," the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.3 "Libra," the latest version when this was written.  Updates include:
 
 * Enhance clothing selectors to be influenced by Pop job
 * Update the namelist to account for all built-in army types, remove obsolete entries
@@ -38,11 +38,11 @@ May conflict with other mods that need to alter how relic worlds are upgraded or
 
 The Launcher will tell you that some mods are outdated - that is because the dependency is out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mod.
 
-Built for Stellaris version 3.2.* "Herbert."  Not compatible with achievements.
+Built for Stellaris version 3.3 "Libra."  Not compatible with achievements.
 
 ### Partial Overrides
 
-This mod also allows the Creatures of the Shroud country to bombard your homeworld if you start in the Eye of Terror system initializer.  And they will use the Armageddon bombardment stance to do so.  To make this work, this mod overrides one game rule `can_orbital_bombard` and one bombardment stance `armageddon`.
+This mod also allows the Creatures of the Shroud country to bombard your homeworld if you start in the Eye of Terror system initializer.  And they will use the Armageddon bombardment stance to do so.  To make this work, this mod overrides one game rule (`can_orbital_bombard`) and one bombardment stance (`armageddon`).
 
 ### Dependencies
 
@@ -56,7 +56,7 @@ This mod should be added before the game has started.  If you remove it from a g
 
 ## Known Issues
 
-This mod preempts one event from the base game related to restoring relic worlds to ecumenopoleis (`mega.200`) and a bombardment stance (`armageddon`).  Expect to see two lines in error.log like this:
+This mod preempts one event from the base game related to restoring relic worlds to ecumenopoleis (`mega.200`) and a bombardment stance (`armageddon`).  Expect to see two lines in error.log like these:
 
 ```
 [00:09:28][game_singleobjectdatabase.h:147]: Object with key: armageddon already exists
@@ -83,6 +83,10 @@ This mod preempts one event from the base game related to restoring relic worlds
 * 3.0.1 Small adjustments
     * Restrict the Aquaponics tech to Angler empires, unless a mod is detected that allows normal empires to work Angler jobs
     * No longer ignore portrait duplication for the pre-scripted empire
+* 4.0.0 Update for compatibility with Stellaris version 3.3 "Libra"
+    * Eldar traits use the new properties that replaced `modification`
+    * Special Craftworld setup supports unity building changes
+    * Special Craftworld setup supports Posthumous Employment
 
 ## Source Code
 
