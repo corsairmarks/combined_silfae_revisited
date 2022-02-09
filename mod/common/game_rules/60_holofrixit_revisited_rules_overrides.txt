@@ -157,6 +157,10 @@ can_species_be_assembled = {
 					}
 				}
 			}
+			else_if = {
+				limit = { root.owner = { has_valid_civic = civic_permanent_employment } }
+				root = { has_building = building_posthumous_employment_center }
+			}
 			else = {
 				root = { has_building = building_clone_vats }
 			}
@@ -202,15 +206,13 @@ can_fill_ruler_job = {
 	else = {
 		custom_tooltip = RULER_JOB_TRIGGER
 		hidden_trigger = {
-			is_gestalt = no
+			exists = owner
+			owner = { is_gestalt = no }
 			is_enslaved = no
 			is_being_purged = no
 			is_being_assimilated = no
-			NOR = {
-				has_trait = trait_syncretic_proles
-				has_trait = trait_nerve_stapled
-				has_citizenship_type = { type = citizenship_organic_trophy }
-			}
+			ahpr_is_species_smart_enough_for_leadership = yes
+			NOR = { has_citizenship_type = { type = citizenship_organic_trophy } }
 			OR = {
 				NOT = { has_trait = trait_mechanical }
 				owner = {
