@@ -15,9 +15,7 @@ researcher = {
 	}
 
 	possible_precalc = can_fill_specialist_job
-	possible = {
-		complex_specialist_job_check_trigger = yes
-	}
+	possible = { complex_specialist_job_check_trigger = yes }
 
 	resources = {
 		category = planet_researchers
@@ -156,10 +154,7 @@ enforcer = {
 		is_sapient = yes
 	}
 
-	possible = {
-		battle_thrall_job_check_trigger = yes
-	}
-
+	possible = { battle_thrall_job_check_trigger = yes }
 	resources = {
 		category = planet_enforcers
 		produces = {
@@ -344,9 +339,7 @@ duelist = {
 		is_sapient = yes
 	}
 
-	possible = {
-		battle_thrall_job_check_trigger = yes
-	}
+	possible = { battle_thrall_job_check_trigger = yes }
 
 	resources = {
 		category = planet_entertainers
