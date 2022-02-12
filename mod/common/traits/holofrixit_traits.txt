@@ -10,10 +10,10 @@ trait_holofrixit = {
 	potential_crossbreeding_chance = 0
 	species_potential_add = { always = no }
 	species_possible_remove = { always = no }
+	species_possible_merge_add = { always = no }
 	sorting_priority = 25
 	initial = no
 	randomized = no
-	modification = no
 	modifier = {
 		armies_cost_mult = -0.5
 		armies_upkeep_mult = -0.25
@@ -56,10 +56,10 @@ trait_holooverseer = {
 	potential_crossbreeding_chance = 0
 	species_potential_add = { always = no }
 	species_possible_remove = { always = no }
+	species_possible_merge_add = { always = no }
 	sorting_priority = 22
 	initial = no
 	randomized = no
-	modification = no
 	opposites = {
 		trait_holodrone
 		trait_hologanglion
@@ -84,10 +84,10 @@ trait_holodrone = {
 	potential_crossbreeding_chance = 0
 	species_potential_add = { always = no }
 	species_possible_remove = { always = no }
+	species_possible_merge_add = { always = no }
 	sorting_priority = 22
 	initial = no
 	randomized = no
-	modification = no
 	opposites = {
 		trait_holooverseer
 		trait_hologanglion
@@ -115,10 +115,10 @@ trait_hologanglion = {
 	potential_crossbreeding_chance = 0
 	species_potential_add = { always = no }
 	species_possible_remove = { always = no }
+	species_possible_merge_add = { always = no }
 	sorting_priority = 22
 	initial = no
 	randomized = no
-	modification = no
 	opposites = {
 		trait_holooverseer
 		trait_holodrone
@@ -145,10 +145,10 @@ trait_holowarrior = {
 	potential_crossbreeding_chance = 0
 	species_potential_add = { always = no }
 	species_possible_remove = { always = no }
+	species_possible_merge_add = { always = no }
 	sorting_priority = 22
 	initial = no
 	randomized = no
-	modification = no
 	opposites = {
 		trait_holooverseer
 		trait_holodrone
@@ -185,10 +185,10 @@ trait_holowarrior_2 = {
 	potential_crossbreeding_chance = 0
 	species_potential_add = { always = no }
 	species_possible_remove = { always = no }
+	species_possible_merge_add = { always = no }
 	sorting_priority = 22
 	initial = no
 	randomized = no
-	modification = no
 	opposites = {
 		trait_holooverseer
 		trait_holodrone
@@ -225,10 +225,10 @@ trait_holofrixigram = {
 	potential_crossbreeding_chance = 0
 	species_potential_add = { always = no }
 	species_possible_remove = { always = no }
+	species_possible_merge_add = { always = no }
 	sorting_priority = 22
 	initial = no
 	randomized = no
-	modification = no
 	opposites = {
 		trait_holooverseer
 		trait_holodrone
@@ -253,10 +253,10 @@ trait_holofrixigram_2 = {
 	potential_crossbreeding_chance = 0
 	species_potential_add = { always = no }
 	species_possible_remove = { always = no }
+	species_possible_merge_add = { always = no }
 	sorting_priority = 22
 	initial = no
 	randomized = no
-	modification = no
 	opposites = {
 		trait_holooverseer
 		trait_holodrone
@@ -281,10 +281,10 @@ trait_holofrixigram_3 = {
 	potential_crossbreeding_chance = 0
 	species_potential_add = { always = no }
 	species_possible_remove = { always = no }
+	species_possible_merge_add = { always = no }
 	sorting_priority = 22
 	initial = no
 	randomized = no
-	modification = no
 	opposites = {
 		trait_holooverseer
 		trait_holodrone
