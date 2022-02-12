@@ -9,14 +9,8 @@ tech_aquaponics_eldar_revisited = {
 	weight = @tier1weight1
 	potential = {
 		has_aquatics = yes
-		OR = {
-			is_anglers_empire = yes # Anglers can always work Angler jobs, so allow
-			# Other empire types can't work Angler job without editing the job description,
-			# therefor only allow when other, known mods have done that work for us.  The main
-			# purpose of this Aquaponics tech is to make Anglers work with this mod, but no
-			# reason to keep it locked from other empires if it can be of use to them.
-			has_global_flag = holofrixit_revisited_installed
-		}
+		is_anglers_empire = yes
+		# my other mods no longer need to override the job, so this is now locked to Anglers
 	}
 
 	# unlock aquaponics building
