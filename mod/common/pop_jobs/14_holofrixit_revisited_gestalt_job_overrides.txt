@@ -57,6 +57,10 @@ coordinator = {
 			owner = { has_valid_civic = civic_machine_assimilator }
 			has_trait = trait_cybernetic
 		}
+		modifier = {
+			factor = 2
+			has_trait = trait_holooverseer
+		}
 	}
 }
 
@@ -97,6 +101,10 @@ evaluator = {
 		modifier = {
 			factor = 1.5
 			has_trait = trait_necrophage
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_holooverseer
 		}
 	}
 }
@@ -169,6 +177,10 @@ synapse_drone = {
 		modifier = {
 			factor = 1.5
 			has_trait = trait_necrophage
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_holooverseer
 		}
 	}
 }
@@ -760,6 +772,10 @@ chronicle_drone = {
 					is_country_type = ai_empire
 				}
 			}
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_holooverseer
 		}
 	}
 }
