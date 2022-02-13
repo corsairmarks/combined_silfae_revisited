@@ -236,7 +236,7 @@ country_event = {
 					cooldown = no
 				}
 				set_military_service_type = {
-					type = military_service_none
+					type = military_service_limited
 					country = prev
 					cooldown = no
 				}
