@@ -243,10 +243,13 @@ brain_drone = {
 		}
 		modifier = {
 			factor = 0.5
-			has_trait = trait_holofrixigram_2
+			OR = {
+				has_trait = trait_holooverseer
+				has_trait = trait_holofrixigram_2
+			}
 		}
 		modifier = {
-			factor = 2
+			factor = 5
 			has_trait = trait_hologanglion
 		}
 		modifier = {
@@ -330,10 +333,13 @@ calculator = {
 		}
 		modifier = {
 			factor = 0.5
-			has_trait = trait_holofrixigram_2
+			OR = {
+				has_trait = trait_holooverseer
+				has_trait = trait_holofrixigram_2
+			}
 		}
 		modifier = {
-			factor = 2
+			factor = 5
 			has_trait = trait_hologanglion
 		}
 		modifier = {

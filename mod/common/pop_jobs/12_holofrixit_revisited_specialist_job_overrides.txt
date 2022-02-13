@@ -34,7 +34,10 @@ researcher = {
 		modifier = {
 			factor = 0.2
 			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
+			NOR = {
+				has_trait = trait_mechanical
+				has_trait = trait_hologanglion
+			}
 		}
 		modifier = {
 			factor = 2
@@ -132,7 +135,10 @@ researcher = {
 			}
 		modifier = {
 			factor = 0.5
-			has_trait = trait_holofrixigram_2
+			OR = {
+				has_trait = trait_holooverseer
+				has_trait = trait_holofrixigram_2
+			}
 		}
 		modifier = {
 			factor = 5
@@ -315,7 +321,7 @@ priest = {
 			has_trait = trait_necrophage
 		}
 		modifier = {
-			factor = 2
+			factor = 5
 			has_trait = trait_holooverseer
 		}
 	}
@@ -493,7 +499,7 @@ death_priest = {
 			has_trait = trait_necrophage
 		}
 		modifier = {
-			factor = 2
+			factor = 5
 			has_trait = trait_holooverseer
 		}
 	}
@@ -1131,7 +1137,7 @@ culture_worker = {
 			has_trait = trait_necrophage
 		}
 		modifier = {
-			factor = 2
+			factor = 3
 			OR = {
 				has_trait = trait_holooverseer
 				has_trait = trait_hologanglion
@@ -1229,7 +1235,7 @@ bureaucrat = {
 			has_trait = trait_enigmatic_intelligence_failed
 		}
 		modifier = {
-			factor = 2
+			factor = 5
 			has_trait = trait_holooverseer
 		}
 	}
@@ -1399,7 +1405,7 @@ manager = {
 			has_trait = trait_necrophage
 		}
 		modifier = {
-			factor = 2
+			factor = 5
 			has_trait = trait_holooverseer
 		}
 	}
@@ -1555,14 +1561,14 @@ necromancer = {
 		}
 		modifier = {
 			factor = 0.5
-			has_trait = trait_holofrixit
 			OR = {
+				has_trait = trait_holooverseer
 				has_trait = trait_holowarrior
 				has_trait = trait_holowarrior_2
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 5
 			has_trait = trait_hologanglion
 		}
 	}
@@ -1702,11 +1708,12 @@ death_chronicler = {
 			has_trait = trait_necrophage
 		}
 		modifier = {
+			factor = 3
+			has_trait = trait_holooverseer
+		}
+		modifier = {
 			factor = 2
-			OR = {
-				has_trait = trait_holooverseer
-				has_trait = trait_hologanglion
-			}
+			has_trait = trait_hologanglion
 		}
 	}
 }

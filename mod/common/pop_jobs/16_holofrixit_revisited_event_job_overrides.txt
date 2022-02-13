@@ -122,7 +122,10 @@ dimensional_portal_researcher = {
 		modifier = {
 			factor = 0.2
 			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
+			NOR = {
+				has_trait = trait_mechanical
+				has_trait = trait_hologanglion
+			}
 		}
 		modifier = {
 			factor = 2
@@ -177,7 +180,10 @@ dimensional_portal_researcher = {
 		}
 		modifier = {
 			factor = 0.5
-			has_trait = trait_holofrixigram_2
+			OR = {
+				has_trait = trait_holooverseer
+				has_trait = trait_holofrixigram_2
+			}
 		}
 		modifier = {
 			factor = 5
@@ -416,7 +422,10 @@ dimensional_portal_researcher_gestalt = {
 		}
 		modifier = {
 			factor = 0.5
-			has_trait = trait_holofrixigram_2
+			OR = {
+				has_trait = trait_holooverseer
+				has_trait = trait_holofrixigram_2
+			}
 		}
 		modifier = {
 			factor = 5
@@ -469,7 +478,10 @@ space_time_anomaly_researcher = {
 		modifier = {
 			factor = 0.2
 			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
+			NOR = {
+				has_trait = trait_mechanical
+				has_trait = trait_hologanglion
+			}
 		}
 		modifier = {
 			factor = 2
@@ -515,7 +527,10 @@ space_time_anomaly_researcher = {
 		}
 		modifier = {
 			factor = 0.5
-			has_trait = trait_holofrixigram_2
+			OR = {
+				has_trait = trait_holooverseer
+				has_trait = trait_holofrixigram_2
+			}
 		}
 		modifier = {
 			factor = 5

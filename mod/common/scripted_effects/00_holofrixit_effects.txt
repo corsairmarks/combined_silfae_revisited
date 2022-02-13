@@ -183,6 +183,13 @@ generate_holofrixit_start_pops = {
 	owner = { set_built_species = event_target:holofrixigram_species }
 	clear_variable = holoovereseers
 	clear_variable = hologanglions
+
+	every_owned_pop = {
+		unemploy_pop = yes
+		clear_pop_category = yes
+	}
+
+	check_planet_employment = yes
 }
 
 # refer to 01_planetary_deposits.txt for the potential for each deposit
