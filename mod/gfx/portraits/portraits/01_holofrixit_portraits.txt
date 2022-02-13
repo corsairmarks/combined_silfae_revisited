@@ -364,7 +364,7 @@ portrait_groups = {
 			add = {
 				trigger = {
 					exists = owner
-					owner = { has_technology = tech_epigenetic_triggers }
+					owner = { has_hologenotype_prerequisites = yes }
 					OR = {
 						has_job = duelist
 						has_job = enforcer
@@ -488,7 +488,7 @@ portrait_groups = {
 				trigger = {
 					leader_class = general
 					exists = owner
-					owner = { has_technology = tech_epigenetic_triggers }
+					owner = { has_hologenotype_prerequisites = yes }
 				}
 				portraits = {
 					holofrixit_warrior_02
@@ -657,7 +657,7 @@ portrait_groups = {
 				trigger = {
 					leader_class = general
 					exists = owner
-					owner = { has_technology = tech_epigenetic_triggers }
+					owner = { has_hologenotype_prerequisites = yes }
 				}
 				portraits = {
 					holofrixit_warrior_02
@@ -721,7 +721,7 @@ portrait_groups = {
 			add = {
 				trigger = {
 					exists = owner
-					owner = { has_technology = tech_epigenetic_triggers }
+					owner = { has_hologenotype_prerequisites = yes }
 				}
 				portraits = {
 					holofrixit_warrior_02
@@ -739,7 +739,7 @@ portrait_groups = {
 			add = {
 				trigger = {
 					exists = owner
-					owner = { has_technology = tech_epigenetic_triggers }
+					owner = { has_hologenotype_prerequisites = yes }
 				}
 				portraits = {
 					holofrixit_warrior_02
@@ -757,7 +757,7 @@ portrait_groups = {
 			add = {
 				trigger = {
 					exists = owner
-					owner = { has_technology = tech_epigenetic_triggers }
+					owner = { has_hologenotype_prerequisites = yes }
 				}
 				portraits = {
 					holofrixit_warrior_02
@@ -775,7 +775,7 @@ portrait_groups = {
 			add = {
 				trigger = {
 					exists = owner
-					owner = { has_technology = tech_epigenetic_triggers }
+					owner = { has_hologenotype_prerequisites = yes }
 				}
 				portraits = {
 					holofrixit_warrior_02
@@ -809,7 +809,7 @@ portrait_groups = {
 			add = {
 				trigger = {
 					exists = owner
-					owner = { has_technology = tech_droid_workers }
+					owner = { has_advanced_holofrixigram_prerequisites = yes }
 				}
 				portraits = {
 					holofrixit_gram_02
@@ -818,7 +818,7 @@ portrait_groups = {
 			add = {
 				trigger = {
 					exists = owner
-					owner = { has_technology = tech_synthetic_workers }
+					owner = { has_hyperfrixigram_prerequisites = yes }
 				}
 				portraits = {
 					holofrixit_gram_03
@@ -836,7 +836,7 @@ portrait_groups = {
 			add = {
 				trigger = {
 					exists = owner
-					owner = { has_technology = tech_droid_workers }
+					owner = { has_advanced_holofrixigram_prerequisites = yes }
 				}
 				portraits = {
 					holofrixit_gram_02
@@ -845,7 +845,7 @@ portrait_groups = {
 			add = {
 				trigger = {
 					exists = owner
-					owner = { has_technology = tech_synthetic_workers }
+					owner = { has_advanced_holofrixigram_prerequisites = yes }
 				}
 				portraits = {
 					holofrixit_gram_03
@@ -863,7 +863,7 @@ portrait_groups = {
 			add = {
 				trigger = {
 					exists = owner
-					owner = { has_technology = tech_droid_workers }
+					owner = { has_advanced_holofrixigram_prerequisites = yes }
 				}
 				portraits = {
 					holofrixit_gram_02
@@ -872,7 +872,7 @@ portrait_groups = {
 			add = {
 				trigger = {
 					exists = owner
-					owner = { has_technology = tech_synthetic_workers }
+					owner = { has_hyperfrixigram_prerequisites = yes }
 				}
 				portraits = {
 					holofrixit_gram_03
@@ -891,7 +891,7 @@ portrait_groups = {
 			add = {
 				trigger = {
 					exists = owner
-					owner = { has_technology = tech_droid_workers }
+					owner = { has_advanced_holofrixigram_prerequisites = yes }
 				}
 				portraits = {
 					holofrixit_gram_02
@@ -901,7 +901,7 @@ portrait_groups = {
 			add = {
 				trigger = {
 					exists = owner
-					owner = { has_technology = tech_synthetic_workers }
+					owner = { has_hyperfrixigram_prerequisites = yes }
 				}
 				portraits = {
 					holofrixit_gram_03

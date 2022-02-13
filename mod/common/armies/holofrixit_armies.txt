@@ -18,8 +18,8 @@ holowarriors_army = {
 		}
 	}
 	potential = {
-		owner = { has_authority = auth_holofrixit }
-		FROM = { has_trait = trait_holowarrior }
+		exists = from
+		from = { has_trait = trait_holowarrior }
 	}
 	use_armynames_from = assault_army
 	show_tech_unlock_if = { has_authority = auth_holofrixit }
@@ -46,8 +46,8 @@ geneholowarriors_army = {
 		}
 	}
 	potential = {
-		owner = { has_authority = auth_holofrixit }
-		FROM = { has_trait = trait_holowarrior_2 }
+		exists = from
+		from = { has_trait = trait_holowarrior_2 }
 	}
 	use_armynames_from = gene_warrior_army
 	show_tech_unlock_if = { has_authority = auth_holofrixit }
