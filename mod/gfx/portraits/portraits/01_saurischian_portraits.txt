@@ -155,6 +155,7 @@ portrait_groups = {
 		pop = { #for a specific pop
 			add = {
 				trigger = {
+					exists = species
 					species = { NOT = { species_gender = female } }
 					OR = {
 						has_job_category = xeno_ward
@@ -177,6 +178,7 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
+					exists = species
 					species = { NOT = { species_gender = male } }
 					OR = {
 						has_job_category = xeno_ward
@@ -199,6 +201,7 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
+					exists = species
 					species = { NOT = { species_gender = female } }
 					OR = {
 						has_job_category = specialist
@@ -228,6 +231,7 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
+					exists = species
 					species = { NOT = { species_gender = male } }
 					OR = {
 						has_job_category = specialist
@@ -257,6 +261,7 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
+					exists = species
 					species = { NOT = { species_gender = female } }
 					OR = {
 						has_job = head_researcher
@@ -279,6 +284,7 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
+					exists = species
 					species = { NOT = { species_gender = male } }
 					OR = {
 						has_job = head_researcher
@@ -301,6 +307,7 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
+					exists = species
 					species = { NOT = { species_gender = female } }
 					OR = {
 						has_job = duelist
@@ -323,6 +330,7 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
+					exists = species
 					species = { NOT = { species_gender = male } }
 					OR = {
 						has_job = duelist
@@ -345,6 +353,7 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
+					exists = species
 					species = { NOT = { species_gender = female } }
 					OR = {
 						has_job_category = ruler
@@ -364,6 +373,7 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
+					exists = species
 					species = { NOT = { species_gender = male } }
 					OR = {
 						has_job_category = ruler
