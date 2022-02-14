@@ -6,7 +6,7 @@ There are other mods which contain these portraits, so why should you choose thi
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.2, the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.3 "Libra," the latest version when this was written.  Updates include:
 
 * Renamed species class to "Sleek Reptilian" so there isn't confusion with the built-in Reptilian species class
 * Remove duplication in room selector, allow it to always be chosen
@@ -38,7 +38,7 @@ Compatible with any mod that does not add the same portraits, species class, or 
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Built for Stellaris version 3.2.* "Herbert."  Not compatible with achievements.
+Built for Stellaris version 3.3 "Libra."  Not compatible with achievements.
 
 ### Dependencies
 
@@ -76,6 +76,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * No longer ignore portrait duplication for the pre-scripted empire
     * Don't randomize the all-Reptilian or all-"Human" portrait groups
 * 2.0.4 Allow players to pick the all-Reptilian or all-"Human" portrait groups - it is intended only that the AI cannot randomly choose those two groups
+* 3.0.0 Update for compatibility with Stellaris version 3.3 "Libra"
 
 ## Source Code
 
