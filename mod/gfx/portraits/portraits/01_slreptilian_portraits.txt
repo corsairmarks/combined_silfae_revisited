@@ -77,14 +77,20 @@ portrait_groups = {
 		#pop scope
 		pop = { #for a specific pop
 			add = {
-				trigger = { species = { NOT = { species_gender = female } } }
+				trigger = {
+					exists = species
+					species = { NOT = { species_gender = female } }
+				}
 				portraits = {
 					slreptilian_male_02
 					slreptilian_male_01
 				}
 			}
 			add = {
-				trigger = { species = { NOT = { species_gender = male } } }
+				trigger = {
+					exists = species
+					species = { NOT = { species_gender = male } }
+				}
 				portraits = {
 					slreptilian_female_02
 					slreptilian_female_01
@@ -182,13 +188,19 @@ portrait_groups = {
 		#pop scope
 		pop = { #for a specific pop
 			add = {
-				trigger = { species = { NOT = { species_gender = female } } }
+				trigger = {
+					exists = species
+					species = { NOT = { species_gender = female } }
+				}
 				portraits = {
 					slreptilian_male_01
 				}
 			}
 			add = {
-				trigger = { species = { NOT = { species_gender = male } } }
+				trigger = {
+					exists = species
+					species = { NOT = { species_gender = male } }
+				}
 				portraits = {
 					slreptilian_female_01
 				}
@@ -259,13 +271,19 @@ portrait_groups = {
 		#pop scope
 		pop = { #for a specific pop
 			add = {
-				trigger = { species = { NOT = { species_gender = female } } }
+				trigger = {
+					exists = species
+					species = { NOT = { species_gender = female } }
+				}
 				portraits = {
 					slreptilian_male_02
 				}
 			}
 			add = {
-				trigger = { species = { NOT = { species_gender = male } } }
+				trigger = {
+					exists = species
+					species = { NOT = { species_gender = male } }
+				}
 				portraits = {
 					slreptilian_female_02
 				}
