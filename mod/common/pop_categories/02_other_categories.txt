@@ -817,6 +817,12 @@ xeno_ward = {
 	resources = {
 		category = pop_category_xeno_ward
 
+		# Consumer Goods Upkeep
+		upkeep = {
+			trigger = { is_robotic_species = no }
+			consumer_goods = @living_standard_luxuries_very_high
+		}
+
 		# Biological Upkeep
 		upkeep = {
 			trigger = {
@@ -826,7 +832,6 @@ xeno_ward = {
 				is_holofrixit = no
 			}
 			food = @living_standard_food_normal
-			consumer_goods = @living_standard_luxuries_very_high
 		}
 
 		# Phototrophic Upkeep
@@ -837,28 +842,21 @@ xeno_ward = {
 		upkeep = {
 			trigger = { is_phototrophic = yes }
 			food = @living_standard_phototrophic_normal
-			consumer_goods = @living_standard_luxuries_very_high
 		}
 
 		# Lithoid Upkeep
 		upkeep = {
 			trigger = { is_lithoid = yes }
 			minerals = @living_standard_food_normal
-			consumer_goods = @living_standard_luxuries_very_high
 		}
 
-		# Holofrixit Upkeep
-		upkeep = {
-			trigger = { is_holofrixit = yes }
-			energy = @living_standard_energy_normal
-			consumer_goods = @living_standard_luxuries_very_high
-		}
-
-		# Robotic Upkeep
+		# Robotic and Holofrixit Upkeep
 		upkeep = {
 			trigger = {
-				is_robotic_species = yes
-				is_holofrixit = no
+				OR = {
+					is_robotic_species = yes
+					is_holofrixit = yes
+				}
 			}
 			energy = @living_standard_energy_normal
 		}
