@@ -729,7 +729,7 @@ precursor = {
 			consumer_goods = @living_standard_luxuries_very_high
 		}
 
-		# Organic Upkeep
+		# Biological Upkeep
 		upkeep = {
 			trigger = {
 				is_organic_species = yes
