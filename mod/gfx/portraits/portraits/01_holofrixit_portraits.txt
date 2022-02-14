@@ -261,6 +261,7 @@ portrait_groups = {
 		pop = { #for a specific pop
 			add = {
 				trigger = {
+					exists = species
 					NOR = {
 						species = { species_gender = female }
 						has_job = head_researcher
@@ -286,6 +287,7 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
+					exists = species
 					NOR = {
 						species = { species_gender = male }
 						has_job = head_researcher
@@ -583,7 +585,10 @@ portrait_groups = {
 		#pop scope
 		pop = { #for a specific pop
 			add = {
-				trigger = { species = { NOT = { species_gender = female } } }
+				trigger = {
+					exists = species
+					species = { NOT = { species_gender = female } }
+				}
 				portraits = {
 					holofrixit_male_11
 					holofrixit_male_12
@@ -592,7 +597,10 @@ portrait_groups = {
 				}
 			}
 			add = {
-				trigger = { species = { NOT = { species_gender = male } } }
+				trigger = {
+					exists = species
+					species = { NOT = { species_gender = male } }
+				}
 				portraits = {
 					holofrixit_female_11
 					holofrixit_female_12
