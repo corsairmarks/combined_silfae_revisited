@@ -6,7 +6,7 @@ There are other mods which contain these portraits, so why should you choose thi
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.2.2, the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.3 "Libra," the latest version when this was written.  Updates include:
 
 * Update Holofrixit shipset (reuse of Unbidden) to work with current Stellaris - starbases, titans, juggernauts, and colossi fall back to molluscoid (the fallback for the Unbidden)
 * Enhance Holofrixit portrait usage:
@@ -42,28 +42,31 @@ This mod is much less compatible than the other Silfae's Revisited series mods. 
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Built for Stellaris version 3.2.2 "Herbert."  Not compatible with achievements.
+Built for Stellaris version 3.3 "Libra."  Not compatible with achievements.
 
 ### File Overwrites
 
-This mod overwrites most of the Pop jobs definitions to account for the special Holofixit caste traits.  It also overwrites all the Pop strata to implement Holofrixit energy-based Pop upkeep (instead of food).  It's likely to break any time Stellaris makes changes to the underlying Pop stratum.  These files are completely overwritten:
+This mod overwrites all of the Pop strata to implement Holofrixit energy-based Pop upkeep (instead of food).  It's likely to break any time Stellaris makes changes to the underlying Pop stratum.  These files are completely overwritten:
 
 * `common/pop_categories/00_social_classes.txt`
 * `common/pop_categories/01_gestalt_drones.txt`
 * `common/pop_categories/02_other_categories.txt`
-* `common/pop_jobs/01_ruler_jobs.txt`
-* `common/pop_jobs/02_specialist_jobs.txt`
-* `common/pop_jobs/03_worker_jobs.txt` (**NOT** compatible with my mod [Technician Job Priority](https://steamcommunity.com/sharedfiles/filedetails/?id=2484702578) but includes the same fix)
-* `common/pop_jobs/04_gestalt_jobs.txt`
-* `common/pop_jobs/06_event_jobs.txt`
 
 ### Partial Overrides
 
-This mod also lightly alters the requirements for ruler-stratum jobs and some "complex" specialist/complex drone-stratum jobs.  Only Xechiros can work the majority of ruler jobs (Ganglions can be Head Researchers), and Drones cannot work any "complex" jobs.  This _also_ means that this mod will need to be explicitly updated any time Paradox makes changes to jobs.
+This mod also alters the requirements for ruler-stratum jobs and some "complex" specialist/complex drone-stratum jobs.  Only Xechiros can work the majority of ruler jobs (Ganglions can be Head Researchers), and Drones cannot work any "complex" jobs.  Jobs have also been re-weighted so the Holowarriors prefer military jobs and Holofrixigrams avoid mining and favor technician jobs.  These overrides _also_ mean that this mod will need to be explicitly updated any time Paradox makes changes to jobs.
+
+Job overrides:
+
+* Ruler: `head_researcher`, `politician`, `noble`
+* Specialist: `researcher`, `enforcer`, `duelist`
+* Worker: `technician`, `miner`, `soldier`, `scrap_miner` (**NOT** compatible with my mod [Enslaved Technician Job Priority Fix](https://steamcommunity.com/sharedfiles/filedetails/?id=2484702578) but includes the same fix)
+* Gestalt: `coordinator`, `evaluator`, `synapse_drone`, `brain_drone`, `calculator`, `patrol_drone`, `mining_drone`, `technician_drone`, `warrior_drone`, `chronicle_drone`, `scrap_miner_drone`
+* Event-related: `dimensional_portal_researcher`, `dimensional_portal_researcher_gestalt`, `space_time_anomaly_researcher`, `space_time_anomaly_researcher_gestalt`, `cave_cleaner`, `cave_cleaner_gestalt`, `turtle_miner`, `turtle_miner_gestalt`
 
 Job-related triggers overridden:
 
-* `complex_specialist_job_check_trigger` holodrones can't do complex work
+* `complex_specialist_job_check_trigger` Holodrones can't do complex work
 * `is_organic_species` most Holofrixits qualify as organic
 * `is_robotic_species` Holofrixigrams are entirely mechanical
 
@@ -89,13 +92,42 @@ This mod should be added before the game has started.  If you remove it from a g
 
 ## Known Issues
 
-This mod overwrites the corresponding species class added by "Silfae's city sets updated" so that it will not be available for use.  Instead, the original species class from Silfae (with localisation) is used.  Also, it replaces three triggers from the base game.  Expect to see four lines in error.log like this:
+This mod overwrites the corresponding species class added by "Silfae's city sets updated." Instead, the original species class from Silfae (with localisation) is used.  Also, it overwrites 3 triggers and 29 jobs from the base game; expect to see 33 lines in error.log similar to these:
 
 ```
-[13:16:18][game_singleobjectdatabase.h:147]: Object with key: Silfae-Holofrixit already exists
-[13:16:19][game_singleobjectdatabase.h:147]: Object with key: complex_specialist_job_check_trigger already exists
-[13:16:19][game_singleobjectdatabase.h:147]: Object with key: is_organic_species already exists
-[13:16:19][game_singleobjectdatabase.h:147]: Object with key: is_robotic_species already exists
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: head_researcher already exists, using the one at  file: common/pop_jobs/11_holofrixit_revisited_ruler_job_overrides.txt line: 4
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: politician already exists, using the one at  file: common/pop_jobs/11_holofrixit_revisited_ruler_job_overrides.txt line: 178
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: noble already exists, using the one at  file: common/pop_jobs/11_holofrixit_revisited_ruler_job_overrides.txt line: 306
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: researcher already exists, using the one at  file: common/pop_jobs/12_holofrixit_revisited_specialist_job_overrides.txt line: 4
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: enforcer already exists, using the one at  file: common/pop_jobs/12_holofrixit_revisited_specialist_job_overrides.txt line: 158
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: duelist already exists, using the one at  file: common/pop_jobs/12_holofrixit_revisited_specialist_job_overrides.txt line: 336
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: technician already exists, using the one at  file: common/pop_jobs/13_holofrixit_revisited_worker_job_overrides.txt line: 5
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: miner already exists, using the one at  file: common/pop_jobs/13_holofrixit_revisited_worker_job_overrides.txt line: 190
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: soldier already exists, using the one at  file: common/pop_jobs/13_holofrixit_revisited_worker_job_overrides.txt line: 356
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: scrap_miner already exists, using the one at  file: common/pop_jobs/13_holofrixit_revisited_worker_job_overrides.txt line: 521
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: coordinator already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 4
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: evaluator already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 63
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: synapse_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 104
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: brain_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 176
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: calculator already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 281
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: patrol_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 378
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: mining_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 464
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: technician_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 526
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: warrior_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 597
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: chronicle_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 710
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: scrap_miner_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 775
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: dimensional_portal_researcher already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 5
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: dimensional_portal_researcher_gestalt already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 203
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: space_time_anomaly_researcher already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 456
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: space_time_anomaly_researcher_gestalt already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 569
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: cave_cleaner already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 680
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: cave_cleaner_gestalt already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 729
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: turtle_miner already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 777
+[22:45:14][game_singleobjectdatabase.h:147]: Object with key: turtle_miner_gestalt already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 917
+[22:45:15][game_singleobjectdatabase.h:147]: Object with key: Silfae-Holofrixit already exists, using the one at  file: common/species_classes/zz_silfae_cities_holofrixit_exclude.txt line: 2
+[22:45:16][game_singleobjectdatabase.h:147]: Object with key: complex_specialist_job_check_trigger already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 1
+[22:45:16][game_singleobjectdatabase.h:147]: Object with key: is_organic_species already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 18
+[22:45:16][game_singleobjectdatabase.h:147]: Object with key: is_robotic_species already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 31
 ```
 
 ## Changelog
@@ -137,6 +169,16 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * No longer ignore portrait duplication for the pre-scripted empire
     * Biological Holofrixit alternate species class is not randomized
     * Don't restrict the ability to work the Angler job to Anglers empires (allows other empires to employ Anglers should they somehow get access to the job)
+* 4.0.0 Update for compatibility with Stellaris version 3.3 "Libra"
+    * Integrate underlying game changes
+    * Jobs are no longer full-file overwrites!
+    * Only the relevant jobs are overridden (which adjust weights based on Holofrixit castes)
+    * Significant simplification of `pop_categories`
+    * Holofrixit traits use the new properties that replaced `modification`
+    * Remove the Hologenotype, Advanced Holofrixigram, and Hyperfrixigram traits - the base traits now dynamically scale their bonuses based on whether you satisfy the prerequisites; as a bonus, they also can detect Machine Empire-related technologies as alternate to the regular techs
+    * Add Holowarrior and Hologenotype defensive armies
+    * Adjust the Holowarrior trait to grant bonus defensive armies when it upgrades (it is not possible to apply army stat bonuses via a triggered modifier from a trait)
+    * Holowarriors no longer want to be Necromancers (the job produces research) but instead attracts Hologanglions
 
 ## Source Code
 
