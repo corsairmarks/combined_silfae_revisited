@@ -424,6 +424,7 @@ worker = {
 				has_high_living_standard_type = yes
 				has_shared_burden_living_standard_type = yes
 			}
+			exists = owner
 			owner = { is_galactic_community_member = yes }
 		}
 
