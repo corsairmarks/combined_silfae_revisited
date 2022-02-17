@@ -6,7 +6,7 @@ There are other mods which contain the same portraits, so why should you choose 
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.2 "Herbert," the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.3 "Libra," the latest version when this was written.  Updates include:
 
 * Remove duplication in room selector
 * Remove alternate (blank) city graphics - mostly they were to try and get a static diplomacy backdrop but only worked for colonies with city size 4; set the `graphical_culture` to not define a cityset
@@ -43,11 +43,11 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 
 In order to make the Alien Zoo available to gestalts (needed for the Beep-Boops), it is necessary to override `d_alien_pets_deposit`.  That means this mod is incompatible with other mods that modify that planetary deposit - although I doubt many do.
 
-New for Stellaris 3.2, this mod now overrides two diplomatic actions (Close Borders and Declare Rivalry) in order to prevent players beginning in Tsukimi Pool from closing their borders to the Beep-Boop (which would otherwise their fleets stuck permanently MIA).  Thus this mod is now not compatible with others that make changes to the same diplomatic actions (does not conflict with mods that add extra diplomatic message text).  Otherwise compatible with any other mod that does not add the same portraits, species class, or art assets.
+This mod now overrides two diplomatic actions (Close Borders and Declare Rivalry) in order to prevent players beginning in Tsukimi Pool from closing their borders to the Beep-Boops (which would otherwise their fleets stuck permanently MIA).  That means this mod is not compatible with others that make changes to the same diplomatic actions (but does not conflict with mods that add extra diplomatic message text).  Otherwise compatible with any other mod that does not add the same portraits, species class, or art assets.
 
 The Launcher will tell you that some mods are outdated - that is because the dependency is out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mod.
 
-Built for Stellaris version 3.2.* "Herbert."  Not compatible with achievements.
+Built for Stellaris version 3.3 "Libra."  Not compatible with achievements.
 
 ### Event Preemption
 
@@ -100,6 +100,7 @@ This mod preempts one event and overrides a deposit and two diplomatic actions, 
     * Diplomacy action block you from closing borders or declaring a rivalry with the Beep-Boops and vice versa
 * 3.1.1 Don't break the base game diplomacy rooms - fix is to name the new file to load _before_ the built-in file
 * 3.1.2 No longer ignore portrait duplication for the pre-scripted empire
+* 4.0.0 Update for compatibility with Stellaris version 3.3 "Libra"
 
 ## Source Code
 
