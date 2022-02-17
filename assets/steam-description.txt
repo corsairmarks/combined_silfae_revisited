@@ -68,10 +68,10 @@ This mod should be added before the game has started.  If you remove it from a g
 [h2]Known Issues[/h2]
 This mod preempts one event and overrides a deposit and two diplomatic actions, which generates four lines in the error log like this:
 [code]
-[02:34:24][game_singleobjectdatabase.h:147]: Object with key: action_make_rival already exists
-[02:34:24][game_singleobjectdatabase.h:147]: Object with key: action_close_borders already exists
-[02:34:24][eventmanager.cpp:355]: an event with id [action.85] already exists!  file: events/on_action_events.txt line: 8811
-[02:34:24][game_singleobjectdatabase.h:147]: Object with key: d_alien_pets_deposit already exists
+[23:27:06][game_singleobjectdatabase.h:147]: Object with key: action_make_rival already exists, using the one at  file: common/diplomatic_actions/10_octeelan_revisited_diplomatic_action_overrides.txt line: 2
+[23:27:06][game_singleobjectdatabase.h:147]: Object with key: action_close_borders already exists, using the one at  file: common/diplomatic_actions/10_octeelan_revisited_diplomatic_action_overrides.txt line: 92
+[23:27:10][eventmanager.cpp:361]: an event with id [action.85] already exists!  file: events/on_action_events_1.txt line: 8824
+[23:27:11][game_singleobjectdatabase.h:147]: Object with key: d_alien_pets_deposit already exists, using the one at  file: common/deposits/02_octeelan_revisited_planetary_deposits_overrides.txt line: 3
 [/code]
 [h2]Changelog[/h2]
 See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2584680339]Change Notes[/url]
