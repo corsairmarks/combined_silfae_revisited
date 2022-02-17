@@ -23,7 +23,7 @@ tech_alien_life_studies_gestalt = {
 			has_valid_civic = civic_machine_servitor
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = society
 				has_trait = leader_trait_expertise_biology
@@ -39,6 +39,7 @@ tech_alien_life_studies_gestalt = {
 		}
 	}
 	ai_weight = {
+		factor = @society_research_ai_factor
 		modifier = {
 			factor = 0.75
 			has_valid_civic = civic_machine_assimilator
