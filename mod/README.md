@@ -59,10 +59,10 @@ This mod also alters the requirements for ruler-stratum jobs and some "complex" 
 Job overrides:
 
 * Ruler: `head_researcher`, `politician`, `noble`
-* Specialist: `researcher`, `enforcer`, `duelist`
+* Specialist: `researcher`, `priest`, `death_priest`, `enforcer`, `telepath`, `duelist`, `culture_worker`, `bureaucrat`, `manager`, `necromancer`, `death_chronicler`
 * Worker: `technician`, `miner`, `soldier`, `scrap_miner` (**NOT** compatible with my mod [Enslaved Technician Job Priority Fix](https://steamcommunity.com/sharedfiles/filedetails/?id=2484702578) but includes the same fix)
 * Gestalt: `coordinator`, `evaluator`, `synapse_drone`, `brain_drone`, `calculator`, `patrol_drone`, `mining_drone`, `technician_drone`, `warrior_drone`, `chronicle_drone`, `scrap_miner_drone`
-* Event-related: `dimensional_portal_researcher`, `dimensional_portal_researcher_gestalt`, `space_time_anomaly_researcher`, `space_time_anomaly_researcher_gestalt`, `cave_cleaner`, `cave_cleaner_gestalt`, `turtle_miner`, `turtle_miner_gestalt`
+* Event-related: `dimensional_portal_researcher`, `dimensional_portal_researcher_gestalt`, `space_time_anomaly_researcher`, `space_time_anomaly_researcher_gestalt`, `cave_cleaner`, `cave_cleaner_gestalt`, `robot_caretaker`, `turtle_miner`, `turtle_miner_gestalt`
 
 Job-related triggers overridden:
 
@@ -92,42 +92,51 @@ This mod should be added before the game has started.  If you remove it from a g
 
 ## Known Issues
 
-This mod overwrites the corresponding species class added by "Silfae's city sets updated." Instead, the original species class from Silfae (with localisation) is used.  Also, it overwrites 3 triggers and 29 jobs from the base game; expect to see 33 lines in error.log similar to these:
+This mod overwrites the corresponding species class added by "Silfae's city sets updated." Instead, the original species class from Silfae (with localisation) is used.  It overwrites a total of 3 triggers, 1 species class, and 38 jobs from the base game; expect to see 42 lines in error.log similar to these:
 
 ```
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: head_researcher already exists, using the one at  file: common/pop_jobs/11_holofrixit_revisited_ruler_job_overrides.txt line: 4
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: politician already exists, using the one at  file: common/pop_jobs/11_holofrixit_revisited_ruler_job_overrides.txt line: 178
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: noble already exists, using the one at  file: common/pop_jobs/11_holofrixit_revisited_ruler_job_overrides.txt line: 306
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: researcher already exists, using the one at  file: common/pop_jobs/12_holofrixit_revisited_specialist_job_overrides.txt line: 4
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: enforcer already exists, using the one at  file: common/pop_jobs/12_holofrixit_revisited_specialist_job_overrides.txt line: 158
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: duelist already exists, using the one at  file: common/pop_jobs/12_holofrixit_revisited_specialist_job_overrides.txt line: 336
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: technician already exists, using the one at  file: common/pop_jobs/13_holofrixit_revisited_worker_job_overrides.txt line: 5
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: miner already exists, using the one at  file: common/pop_jobs/13_holofrixit_revisited_worker_job_overrides.txt line: 190
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: soldier already exists, using the one at  file: common/pop_jobs/13_holofrixit_revisited_worker_job_overrides.txt line: 356
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: scrap_miner already exists, using the one at  file: common/pop_jobs/13_holofrixit_revisited_worker_job_overrides.txt line: 521
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: coordinator already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 4
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: evaluator already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 63
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: synapse_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 104
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: brain_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 176
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: calculator already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 281
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: patrol_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 378
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: mining_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 464
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: technician_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 526
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: warrior_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 597
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: chronicle_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 710
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: scrap_miner_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 775
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: dimensional_portal_researcher already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 5
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: dimensional_portal_researcher_gestalt already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 203
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: space_time_anomaly_researcher already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 456
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: space_time_anomaly_researcher_gestalt already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 569
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: cave_cleaner already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 680
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: cave_cleaner_gestalt already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 729
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: turtle_miner already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 777
-[22:45:14][game_singleobjectdatabase.h:147]: Object with key: turtle_miner_gestalt already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 917
-[22:45:15][game_singleobjectdatabase.h:147]: Object with key: Silfae-Holofrixit already exists, using the one at  file: common/species_classes/zz_silfae_cities_holofrixit_exclude.txt line: 2
-[22:45:16][game_singleobjectdatabase.h:147]: Object with key: complex_specialist_job_check_trigger already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 1
-[22:45:16][game_singleobjectdatabase.h:147]: Object with key: is_organic_species already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 18
-[22:45:16][game_singleobjectdatabase.h:147]: Object with key: is_robotic_species already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 31
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: head_researcher already exists, using the one at  file: common/pop_jobs/11_holofrixit_revisited_ruler_job_overrides.txt line: 4
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: politician already exists, using the one at  file: common/pop_jobs/11_holofrixit_revisited_ruler_job_overrides.txt line: 176
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: noble already exists, using the one at  file: common/pop_jobs/11_holofrixit_revisited_ruler_job_overrides.txt line: 304
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: researcher already exists, using the one at  file: common/pop_jobs/12_holofrixit_revisited_specialist_job_overrides.txt line: 4
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: priest already exists, using the one at  file: common/pop_jobs/12_holofrixit_revisited_specialist_job_overrides.txt line: 150
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: death_priest already exists, using the one at  file: common/pop_jobs/12_holofrixit_revisited_specialist_job_overrides.txt line: 330
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: enforcer already exists, using the one at  file: common/pop_jobs/12_holofrixit_revisited_specialist_job_overrides.txt line: 508
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: telepath already exists, using the one at  file: common/pop_jobs/12_holofrixit_revisited_specialist_job_overrides.txt line: 686
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: duelist already exists, using the one at  file: common/pop_jobs/12_holofrixit_revisited_specialist_job_overrides.txt line: 853
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: culture_worker already exists, using the one at  file: common/pop_jobs/12_holofrixit_revisited_specialist_job_overrides.txt line: 1007
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: bureaucrat already exists, using the one at  file: common/pop_jobs/12_holofrixit_revisited_specialist_job_overrides.txt line: 1149
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: manager already exists, using the one at  file: common/pop_jobs/12_holofrixit_revisited_specialist_job_overrides.txt line: 1244
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: necromancer already exists, using the one at  file: common/pop_jobs/12_holofrixit_revisited_specialist_job_overrides.txt line: 1414
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: death_chronicler already exists, using the one at  file: common/pop_jobs/12_holofrixit_revisited_specialist_job_overrides.txt line: 1577
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: technician already exists, using the one at  file: common/pop_jobs/13_holofrixit_revisited_worker_job_overrides.txt line: 5
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: miner already exists, using the one at  file: common/pop_jobs/13_holofrixit_revisited_worker_job_overrides.txt line: 198
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: soldier already exists, using the one at  file: common/pop_jobs/13_holofrixit_revisited_worker_job_overrides.txt line: 350
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: scrap_miner already exists, using the one at  file: common/pop_jobs/13_holofrixit_revisited_worker_job_overrides.txt line: 521
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: coordinator already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 4
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: evaluator already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 67
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: synapse_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 112
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: brain_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 188
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: calculator already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 282
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: patrol_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 368
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: mining_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 460
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: technician_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 526
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: warrior_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 601
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: chronicle_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 720
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: scrap_miner_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 789
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: dimensional_portal_researcher already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 5
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: dimensional_portal_researcher_gestalt already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 195
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: space_time_anomaly_researcher already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 437
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: space_time_anomaly_researcher_gestalt already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 542
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: cave_cleaner already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 639
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: cave_cleaner_gestalt already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 692
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: robot_caretaker already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 744
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: turtle_miner already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 828
+[23:26:54][game_singleobjectdatabase.h:147]: Object with key: turtle_miner_gestalt already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 972
+[23:27:00][game_singleobjectdatabase.h:147]: Object with key: Silfae-Holofrixit already exists, using the one at  file: common/species_classes/zz_silfae_cities_holofrixit_exclude.txt line: 2
+[23:27:08][game_singleobjectdatabase.h:147]: Object with key: complex_specialist_job_check_trigger already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 1
+[23:27:08][game_singleobjectdatabase.h:147]: Object with key: is_organic_species already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 19
+[23:27:08][game_singleobjectdatabase.h:147]: Object with key: is_robotic_species already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 36
 ```
 
 ## Changelog
