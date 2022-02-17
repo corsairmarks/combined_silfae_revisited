@@ -56,7 +56,7 @@ Silfae's original mod does not include graphics for ecumenopoleis, so they will 
 This mod overrides `origin_void_dwellers` in order to add its new initializer to the allowed list, which generates an error like this:
 
 ```
-[17:48:15][game_singleobjectdatabase.h:147]: Object with key: origin_void_dwellers already exists
+[23:27:16][game_singleobjectdatabase.h:147]: Object with key: origin_void_dwellers already exists, using the one at  file: common/governments/civics/05_quarian_revisited_origin_overrides.txt line: 2
 ```
 
 ## Changelog
