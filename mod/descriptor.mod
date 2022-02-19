@@ -1,6 +1,7 @@
 name="Animated Eldar Portraits: Revisited"
 dependencies={
 	"Animated Eldar Portraits - Warhammer 40K"
+	"Building: Aquaponics Farm"
 }
 replace_path="Animated Eldar Portraits - Warhammer 40K"
 tags={

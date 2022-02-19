@@ -46,9 +46,10 @@ This mod also allows the Creatures of the Shroud country to bombard your homewor
 
 ### Dependencies
 
-In order for this mod to function, you **must** install the following mod and load it before this one:
+In order for this mod to function, you **must** install both of the following mods and load them before this one:
 
-[Animated Eldar Portraits](https://steamcommunity.com/sharedfiles/filedetails/?id=707415339) by Silfae
+* [Animated Eldar Portraits](https://steamcommunity.com/sharedfiles/filedetails/?id=707415339) by Silfae
+* [Building: Aquaponics Farm](https://steamcommunity.com/sharedfiles/filedetails/?id=) by me
 
 ### When to Install
 
@@ -87,6 +88,7 @@ This mod preempts one event from the base game related to restoring relic worlds
     * Eldar traits use the new properties that replaced `modification`
     * Special Craftworld setup supports unity building changes
     * Special Craftworld setup supports Posthumous Employment
+    * Aquaponics is now its own mod and is a dependency for this mod
 
 ## Source Code
 

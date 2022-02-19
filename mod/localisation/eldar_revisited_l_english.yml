@@ -42,7 +42,3 @@
  eldar_evt.9.desc: "Our main forces on [From.From.GetName] have been completely eradicated by the horrors of the Shroud! The twisted, malevolent entities are devouring our people with gluttonous abandon. Some hardened structures have yet to be breached, but without military resistance it is only a matter of time for the civilians within.\n\nFragmented reports from those still trapped mention swirling, violet tendrils of mist..."
  eldar_evt.10.title: "[This.GetName] Enshrouded"
  eldar_evt.10.desc: "We have failed. The Shroud has completely engulfed [This.GetName] - a fate worse than death for any sapients left alive."
- tech_aquaponics_eldar_revisited: "Aquaponics Farming"
- tech_aquaponics_eldar_revisited_desc: "Aquaponics is the fusion of onshore aquaculture and hydroponic farming where the water from aquaculture is also used as the media in which plants are grown hydroponically."
- building_aquaponics_farm_eldar_revisited: "Aquaponics Farm"
- building_aquaponics_farm_eldar_revisited_desc: "Aquaponics Farms produce nutrient-rich fish and vegetable matter tailored for consumption by local Pops."
