@@ -636,7 +636,7 @@ scrap_miner = {
 			#}
 			exists = planet
 			planet = {
-				has_available_jobs = "miner"
+				has_available_jobs = "scrap_miner"
 			}
 			exists = owner
 			owner = {
