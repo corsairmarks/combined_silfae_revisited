@@ -520,7 +520,7 @@ generate_eldar_system_start_buildings_and_districts = {
 			add_building = building_hydroponics_farm
 		}
 		else = {
-			add_building = building_aquaponics_farm_eldar_revisited
+			add_building = building_aquaponics_farm
 		}
 		if = {
 			limit = {
@@ -548,7 +548,7 @@ generate_eldar_system_start_buildings_and_districts = {
 				add_building = building_commercial_zone
 			}
 			else = {
-				add_building = building_aquaponics_farm_eldar_revisited
+				add_building = building_aquaponics_farm
 			}
 		}
 	}

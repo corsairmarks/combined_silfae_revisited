@@ -69,7 +69,7 @@ country_event = {
 		if = {
 			limit = { is_anglers_empire = yes }
 			give_technology = {
-				tech = tech_aquaponics_eldar_revisited
+				tech = tech_aquaponics
 				message = no
 			}
 		}
