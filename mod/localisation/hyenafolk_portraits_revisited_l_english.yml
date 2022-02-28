@@ -10,3 +10,6 @@
  HYNFLK_fossil_plural: "$MAM_fossil_plural$"
  HYNFLK_remnant: "$MAM_remnant$"
  HYNFLK_remnant_plural: "$MAM_remnant_plural$"
+ PRE_HYNFLK: "$HYNFLK$"
+ PRE_HYNFLK_desc: "$HYNFLK_desc$"
+ PRE_HYNFLK_plural: "$HYNFLK_plural$"
