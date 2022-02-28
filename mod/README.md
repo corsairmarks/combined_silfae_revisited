@@ -75,7 +75,9 @@ This mod overrides `origin_void_dwellers` in order to add its new initializer to
 * 3.0.2 Minor tweaks
     * Portrait selectors based on job category, not pop category - my goal is for the Pop portraits to be based on the job, not the Pop's stratum
     * No longer ignore portrait duplication for the pre-scripted empire
-* 3.1.0 Update for compatibility with Stellaris version 3.3 "Libra"
+* 4.0.0 Update for compatibility with Stellaris version 3.3 "Libra"
+    * Integrate base game script changes
+    * Use a shared set of triggers for job-based clothing
 
 ## Source Code
 
