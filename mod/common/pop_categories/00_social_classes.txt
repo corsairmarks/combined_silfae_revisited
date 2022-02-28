@@ -114,6 +114,7 @@ ruler = {
 				is_organic_species = yes
 				is_phototrophic = no
 				is_lithoid = no
+				is_holofrixit = no
 			}
 			food = @living_standard_food_normal
 		}
@@ -150,9 +151,14 @@ ruler = {
 			food = @living_standard_food_normal_silicoid
 		}
 
-		# Robotic Upkeep
+		# Robotic and Holofrixit Upkeep
 		upkeep = {
-			trigger = { is_robotic_species = yes }
+			trigger = {
+				OR = {
+					is_robotic_species = yes
+					is_holofrixit = yes
+				}
+			}
 			energy = @living_standard_energy_normal
 		}
 
@@ -296,6 +302,7 @@ specialist = {
 				is_organic_species = yes
 				is_phototrophic = no
 				is_lithoid = no
+				is_holofrixit = no
 			}
 			food = @living_standard_food_normal
 		}
@@ -332,12 +339,17 @@ specialist = {
 			food = @living_standard_food_normal_silicoid
 		}
 
-		# Robotic Upkeep
+		# Robotic and Holofrixit Upkeep
 		upkeep = {
-			trigger = { is_robotic_species = yes }
+			trigger = {
+				OR = {
+					is_robotic_species = yes
+					is_holofrixit = yes
+				}
+			}
 			energy = @living_standard_energy_normal
 		}
-
+		
 		# Resource Production
 		produces = {
 			trigger = { has_trait = trait_lithoid_scintillating }
@@ -492,6 +504,7 @@ worker = {
 				is_organic_species = yes
 				is_phototrophic = no
 				is_lithoid = no
+				is_holofrixit = no
 			}
 			food = @living_standard_food_normal
 		}
@@ -528,9 +541,14 @@ worker = {
 			food = @living_standard_food_normal_silicoid
 		}
 
-		# Robotic Upkeep
+		# Robotic and Holofrixit Upkeep
 		upkeep = {
-			trigger = { is_robotic_species = yes }
+			trigger = {
+				OR = {
+					is_robotic_species = yes
+					is_holofrixit = yes
+				}
+			}
 			energy = @living_standard_energy_normal
 		}
 
