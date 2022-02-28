@@ -61,13 +61,29 @@ portrait_groups = {
 				trigger = { NOT = { species_gender = female } }
 				portraits = {
 					romaneagles_male_01
-					romaneagles_male_02
 				}
 			}
 			add = {
 				trigger = { NOT = { species_gender = male } }
 				portraits = {
 					romaneagles_female_01
+				}
+			}
+			add = {
+				trigger = {
+					is_sapient = yes
+					NOT = { species_gender = female }
+				}
+				portraits = {
+					romaneagles_male_02
+				}
+			}
+			add = {
+				trigger = {
+					is_sapient = yes
+					NOT = { species_gender = male }
+				}
+				portraits = {
 					romaneagles_female_02
 				}
 			}
@@ -76,6 +92,7 @@ portrait_groups = {
 		pop = { #for a specific pop
 			add = {
 				trigger = {
+					exists = species
 					species = { NOT = { species_gender = female } }
 					NOT = { has_job_category = ruler }
 				}
@@ -85,6 +102,7 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
+					exists = species
 					species = { NOT = { species_gender = male } }
 					NOT = { has_job_category = ruler }
 				}
@@ -94,7 +112,11 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
-					species = { NOT = { species_gender = female } }
+					exists = species
+					species = {
+						is_sapient = yes
+						NOT = { species_gender = female }
+					}
 					OR = {
 						has_job_category = ruler
 						has_job_category = complex_drone
@@ -111,7 +133,11 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
-					species = { NOT = { species_gender = male } }
+					exists = species
+					species = {
+						is_sapient = yes
+						NOT = { species_gender = male }
+					}
 					OR = {
 						has_job_category = ruler
 						has_job_category = complex_drone

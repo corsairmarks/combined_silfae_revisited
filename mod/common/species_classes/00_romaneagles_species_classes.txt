@@ -8,3 +8,18 @@ ROEAGLE = {
 	graphical_culture = romaneagles_01
 	move_pop_sound_effect = "moving_pop_confirmation"
 }
+
+PRE_ROEAGLE = {
+	archetype = PRESAPIENT
+	playable = { always = no }
+	randomized = no
+	portraits = {
+		"romaneagles"
+	}
+	graphical_culture = romaneagles_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+	uplifted_into = ROEAGLE
+	uplifted_portraits = {
+		"romaneagles"
+	}
+}
