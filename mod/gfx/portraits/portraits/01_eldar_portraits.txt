@@ -82,7 +82,10 @@ portrait_groups = {
 		#pop scope
 		pop = { #for a specific pop
 			add = {
-				trigger = { species = { NOT = { species_gender = male } } }
+				trigger = {
+					exists = species
+					species = { NOT = { species_gender = male } }
+				}
 				portraits = {
 					eldar_female_01
 					eldar_female_02
@@ -90,7 +93,10 @@ portrait_groups = {
 				}
 			}
 			add = {
-				trigger = { species = { NOT = { species_gender = female } } }
+				trigger = {
+					exists = species
+					species = { NOT = { species_gender = female } }
+				}
 				portraits = {
 					eldar_male_01
 					eldar_male_02

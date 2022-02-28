@@ -270,6 +270,10 @@ generate_eldar_system_start_buildings_and_districts = {
 			}
 			add_building = building_necrophage_elevation_chamber
 		}
+		if = {
+			limit = { owner = { has_valid_civic = civic_permanent_employment } }
+			add_building = building_posthumous_employment_center
+		}
 		while = {
 			count = 2
 			add_district = district_city
@@ -298,7 +302,19 @@ generate_eldar_system_start_buildings_and_districts = {
 		else = {
 			add_district = district_city
 		}
-		add_building = building_bureaucratic_1
+		if = {
+			limit = { owner = { is_spiritualist = yes } }
+			if = {
+				limit = { owner = { is_death_cult_empire = yes } }
+				add_building = building_sacrificial_temple_1
+			}
+			else = {
+				add_building = building_temple
+			}
+		}
+		else ={
+			add_building = building_bureaucratic_1
+		}
 		if = {
 			limit = { owner = { has_origin = origin_clone_army } }
 			add_building = building_clone_army_clone_vat
@@ -307,22 +323,17 @@ generate_eldar_system_start_buildings_and_districts = {
 		if = {
 			limit = {
 				owner = {
-					OR = {
-						has_valid_civic = civic_death_cult
-						has_valid_civic = civic_death_cult_corporate
-					}
-				}
-			}
-			add_building = building_sacrificial_temple_1
-		}
-		else_if = {
-			limit = {
-				owner = {
 					is_spiritualist = yes
 					is_megacorp = no
 				}
 			}
-			add_building = building_temple
+			if = {
+				limit = { owner = { is_death_cult_empire = yes } }
+				add_building = building_sacrificial_temple_1
+			}
+			else = {
+				add_building = building_temple
+			}
 		}
 		else_if = {
 			limit = { owner = { has_valid_civic = civic_pleasure_seekers } }
@@ -335,6 +346,7 @@ generate_eldar_system_start_buildings_and_districts = {
 						is_regular_empire = yes
 						has_origin = origin_necrophage
 					}
+					NOT = { has_valid_civic = civic_permanent_employment }
 				}
 			}
 			add_building = building_commercial_zone
@@ -508,7 +520,7 @@ generate_eldar_system_start_buildings_and_districts = {
 			add_building = building_hydroponics_farm
 		}
 		else = {
-			add_building = building_aquaponics_farm_eldar_revisited
+			add_building = building_aquaponics_farm
 		}
 		if = {
 			limit = {
@@ -536,7 +548,7 @@ generate_eldar_system_start_buildings_and_districts = {
 				add_building = building_commercial_zone
 			}
 			else = {
-				add_building = building_aquaponics_farm_eldar_revisited
+				add_building = building_aquaponics_farm
 			}
 		}
 	}

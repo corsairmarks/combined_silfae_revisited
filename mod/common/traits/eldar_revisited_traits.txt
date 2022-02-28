@@ -4,7 +4,9 @@ trait_eldar_age = {
 	sorting_priority = 20
 	initial = no
 	randomized = no
-	modification = no
+	species_potential_add = { always = no }
+	species_possible_remove = { always = no }
+	species_possible_merge_add = { always = no }
 	forced_happiness = no
 	immortal_leaders = no
 	leader_age_min = 60
