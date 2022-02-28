@@ -77,6 +77,8 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Don't randomize the all-Reptilian or all-"Human" portrait groups
 * 2.0.4 Allow players to pick the all-Reptilian or all-"Human" portrait groups - it is intended only that the AI cannot randomly choose those two groups
 * 3.0.0 Update for compatibility with Stellaris version 3.3 "Libra"
+    * Integrate base game script changes
+    * Use a shared set of triggers for job-based clothing
 
 ## Source Code
 
