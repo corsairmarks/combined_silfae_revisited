@@ -89,6 +89,7 @@ This mod preempts one event from the base game related to restoring relic worlds
     * Special Craftworld setup supports unity building changes
     * Special Craftworld setup supports Posthumous Employment
     * Aquaponics is now its own mod and is a dependency for this mod
+    * Use a shared set of triggers for job-based clothing
 
 ## Source Code
 
