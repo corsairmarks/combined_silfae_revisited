@@ -13,7 +13,7 @@ can_generate_leader_from_pop = {
 			}
 		}
 	}
-	ahpr_is_species_smart_enough_for_leadership = yes
+	cm_shared_is_smart_enough_for_leadership = yes
 	OR = {
 		NOT = { owner = { has_authority = auth_holofrixit } }
 		owner = {
@@ -41,7 +41,7 @@ can_generate_leader_from_pop = {
 	}
 	OR = {
 		is_same_species = owner
-		owner = { ahpr_is_necrophage_empire = no }
+		owner = { cm_shared_is_necrophage_empire = no }
 	}
 }
 
@@ -75,7 +75,7 @@ can_generate_military_leader_from_pop = {
 	}
 	OR = {
 		is_same_species = owner
-		owner = { ahpr_is_necrophage_empire = no }
+		owner = { cm_shared_is_necrophage_empire = no }
 	}
 }
 
@@ -211,7 +211,7 @@ can_fill_ruler_job = {
 			is_enslaved = no
 			is_being_purged = no
 			is_being_assimilated = no
-			ahpr_is_species_smart_enough_for_leadership = yes
+			cm_shared_is_smart_enough_for_leadership = yes
 			NOR = { has_citizenship_type = { type = citizenship_organic_trophy } }
 			OR = {
 				NOT = { has_trait = trait_mechanical }

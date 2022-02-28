@@ -262,20 +262,10 @@ portrait_groups = {
 			add = {
 				trigger = {
 					exists = species
-					NOR = {
-						species = { species_gender = female }
-						has_job = head_researcher
-						has_job = fe_archivist
-						has_job = fe_protector
-					}
+					NOT = { species = { species_gender = female } }
 					OR = {
-						has_job_category = ruler
-						has_job_category = bio_trophy
-						has_job_category = precursor
-						has_job = bureaucrat
-						has_job = synapse_drone
-						has_job = coordinator
-						has_job = primitive_bureaucrat
+						cm_shared_pop_is_ruler_type = yes
+						cm_shared_pop_is_unity_type = yes
 					}
 				}
 				portraits = {
@@ -288,20 +278,10 @@ portrait_groups = {
 			add = {
 				trigger = {
 					exists = species
-					NOR = {
-						species = { species_gender = male }
-						has_job = head_researcher
-						has_job = fe_archivist
-						has_job = fe_protector
-					}
+					NOT = { species = { species_gender = male } }
 					OR = {
-						has_job_category = ruler
-						has_job_category = bio_trophy
-						has_job_category = precursor
-						has_job = bureaucrat
-						has_job = synapse_drone
-						has_job = coordinator
-						has_job = primitive_bureaucrat
+						cm_shared_pop_is_ruler_type = yes
+						cm_shared_pop_is_unity_type = yes
 					}
 				}
 				portraits = {
@@ -312,53 +292,19 @@ portrait_groups = {
 				}
 			}
 			add = {
-				trigger = {
-					has_job = roboticist
-					has_job = replicator
-					has_job = spawning_drone
-				}
+				trigger = { cm_shared_pop_is_assembly_type = yes }
 				portraits = {
 					holofrixit_gram_11
 				}
 			}
 			add = {
-				trigger = {
-					OR = {
-						has_job = head_researcher
-						has_job = researcher
-						has_job = brain_drone
-						has_job = calculator
-						has_job = dimensional_portal_researcher
-						has_job = dimensional_portal_researcher_gestalt
-						has_job = fe_archivist
-						has_job = death_chronicler
-						has_job = chronicle_drone
-						has_job = evaluator
-						has_job = primitive_researcher
-						has_job = primitive_researcher_2
-						has_job = healthcare
-					}
-				}
+				trigger = { cm_shared_pop_is_science_type = yes }
 				portraits = {
 					holofrixit_scientist_01
 				}
 			}
 			add = {
-				trigger = {
-					OR = {
-						has_job = duelist
-						has_job = enforcer
-						has_job = telepath
-						has_job = necromancer
-						has_job = soldier
-						has_job = titan_hunter
-						has_job = patrol_drone
-						has_job = warrior_drone
-						has_job = fe_protector
-						has_job = primitive_warrior
-						has_job = primitive_warrior_2
-					}
-				}
+				trigger = { cm_shared_pop_is_military_type = yes }
 				portraits = {
 					holofrixit_warrior_01
 				}
@@ -367,19 +313,7 @@ portrait_groups = {
 				trigger = {
 					exists = owner
 					owner = { has_hologenotype_prerequisites = yes }
-					OR = {
-						has_job = duelist
-						has_job = enforcer
-						has_job = telepath
-						has_job = necromancer
-						has_job = soldier
-						has_job = titan_hunter
-						has_job = patrol_drone
-						has_job = warrior_drone
-						has_job = fe_protector
-						has_job = primitive_warrior
-						has_job = primitive_warrior_2
-					}
+					cm_shared_pop_is_military_type = yes
 				}
 				portraits = {
 					holofrixit_warrior_02
@@ -388,46 +322,11 @@ portrait_groups = {
 			# otherwise, they are drones
 			add = {
 				trigger = {
-					NOR = {
-						# holofrixit
-						has_job_category = ruler
-						has_job_category = bio_trophy
-						has_job_category = precursor
-						has_job = bureaucrat
-						has_job = synapse_drone
-						has_job = coordinator
-						has_job = primitive_bureaucrat
-						# holofrixigram
-						has_job = spawning_drone
-						has_job = replicator
-						has_job = roboticist
-						# ganglion
-						has_job = head_researcher
-						has_job = researcher
-						has_job = brain_drone
-						has_job = calculator
-						has_job = dimensional_portal_researcher
-						has_job = dimensional_portal_researcher_gestalt
-						has_job = fe_archivist
-						has_job = death_chronicler
-						has_job = chronicle_drone
-						has_job = evaluator
-						has_job = primitive_researcher
-						has_job = primitive_researcher_2
-						has_job = healthcare
-						# holowarrior
-						has_job = duelist
-						has_job = enforcer
-						has_job = telepath
-						has_job = necromancer
-						has_job = soldier
-						has_job = titan_hunter
-						has_job = patrol_drone
-						has_job = warrior_drone
-						has_job = fe_protector
-						has_job = primitive_warrior
-						has_job = primitive_warrior_2
-					}
+					cm_shared_pop_is_ruler_type = no
+					cm_shared_pop_is_assembly_type = no
+					cm_shared_pop_is_military_type = no
+					cm_shared_pop_is_science_type = no
+					cm_shared_pop_is_unity_type = no
 				}
 				portraits = {
 					holofrixit_drone_01
