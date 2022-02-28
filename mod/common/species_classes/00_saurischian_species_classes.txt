@@ -5,5 +5,20 @@ SRSCN = {
 		"saurischian"
 	}
 	graphical_culture = saurischian_01
-	move_pop_sound_effect = "moving_pop_confirmation"
+	move_pop_sound_effect = "reptilian_pops_move"
+}
+
+PRE_SRSCN = {
+	archetype = PRESAPIENT
+	playable = { always = no }
+	randomized = no
+	portraits = {
+		"saurischian"
+	}
+	graphical_culture = saurischian_01
+	move_pop_sound_effect = "reptilian_pops_move"
+	uplifted_into = SRSCN
+	uplifted_portraits = {
+		"saurischian"
+	}
 }
