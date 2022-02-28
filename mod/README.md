@@ -44,12 +44,12 @@ Built for Stellaris version 3.3 "Libra."  Not compatible with achievements.
 
 This mod also allows the Creatures of the Shroud country to bombard your homeworld if you start in the Eye of Terror system initializer.  And they will use the Armageddon bombardment stance to do so.  To make this work, this mod overrides one game rule (`can_orbital_bombard`) and one bombardment stance (`armageddon`).
 
-### Dependencies
+### Required Dependency Mods
 
 In order for this mod to function, you **must** install both of the following mods and load them before this one:
 
 * [Animated Eldar Portraits](https://steamcommunity.com/sharedfiles/filedetails/?id=707415339) by Silfae
-* [Building: Aquaponics Farm](https://steamcommunity.com/sharedfiles/filedetails/?id=) by me
+* [Building: Aquaponics Farm](https://steamcommunity.com/sharedfiles/filedetails/?id=2768297949) by me
 
 ### When to Install
 
