@@ -5,9 +5,6 @@ trait_serpentoid_acumen = {
 	cost = 1
 	potential_crossbreeding_chance = 1.0
 	randomized = no
-	modification = yes
-	advanced_trait = yes
-	species_potential_add = { always = no }
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_inspired.dds"
 	allowed_archetypes = { BIOLOGICAL }
 	species_class = { SRPT REP }
@@ -18,13 +15,11 @@ trait_serpentoid_acumen = {
 	}
 	opposites = { "trait_natural_engineers" "trait_natural_physicists" "trait_natural_sociologists" "trait_nerve_stapled" }
 }
+
 trait_serpentoid_cunning = {
 	cost = 3
 	potential_crossbreeding_chance = 1.0
 	randomized = no
-	modification = yes
-	advanced_trait = yes
-	species_potential_add = { always = no }
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_enclave_trader.dds"
 	allowed_archetypes = { BIOLOGICAL }
 	species_class = { SRPT REP }
@@ -37,13 +32,11 @@ trait_serpentoid_cunning = {
 	}
 	opposites = { "trait_ingenious" "trait_rapid_breeders" "trait_slow_breeders" "trait_fertile" "trait_quick_learners" "trait_slow_learners" "trait_venerable" "trait_enduring" "trait_fleeting" }
 }
+
 trait_serpentoid_indolence = {
 	cost = -1
 	potential_crossbreeding_chance = 1.0
 	randomized = no
-	modification = yes
-	advanced_trait = yes
-	species_potential_add = { always = no }
 	icon = "gfx/interface/icons/traits/trait_serpentoid.dds"
 	allowed_archetypes = { BIOLOGICAL }
 	species_class = { SRPT REP }

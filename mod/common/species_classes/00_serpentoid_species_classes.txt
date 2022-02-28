@@ -7,3 +7,18 @@ SRPT = {
 	graphical_culture = serpentoid_01
 	move_pop_sound_effect = "reptilian_pops_move"
 }
+
+PRE_SRPT = {
+	archetype = PRESAPIENT
+	playable = { always = no }
+	randomized = no
+	portraits = {
+		"serpentoid"
+	}
+	graphical_culture = serpentoid_01
+	move_pop_sound_effect = "reptilian_pops_move"
+	uplifted_into = SRPT
+	uplifted_portraits = {
+		"serpentoid"
+	}
+}

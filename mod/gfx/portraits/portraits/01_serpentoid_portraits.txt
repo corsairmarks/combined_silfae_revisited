@@ -88,15 +88,39 @@ portrait_groups = {
 		#species scope
 		species = { #generic portrait for a species
 			add = {
-				trigger = { NOT = { species_gender = female } }
+				trigger = {
+					is_sapient = yes
+					NOT = { species_gender = female }
+				}
 				portraits = {
 					serpentoid_male_01
 				}
 			}
 			add = {
-				trigger = { NOT = { species_gender = male } }
+				trigger = {
+					is_sapient = no
+					NOT = { species_gender = female }
+				}
+				portraits = {
+					serpentoid_maleslave_02
+				}
+			}
+			add = {
+				trigger = {
+					is_sapient = yes
+					NOT = { species_gender = male }
+				}
 				portraits = {
 					serpentoid_female_01
+				}
+			}
+			add = {
+				trigger = {
+					is_sapient = no
+					NOT = { species_gender = male }
+				}
+				portraits = {
+					serpentoid_femaleslave_02
 				}
 			}
 		}
@@ -105,8 +129,9 @@ portrait_groups = {
 		pop = { #for a specific pop
 			add = {
 				trigger = {
+					exists = species
 					species = { NOT = { species_gender = male } }
-					NOT = { has_job_category = ruler }
+					cm_shared_pop_is_ruler_type = no
 				}
 				portraits = {
 					serpentoid_femaleslave_01
@@ -115,17 +140,9 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
+					exists = species
 					species = { NOT = { species_gender = male } }
-					NOR = {
-						has_job_category = xeno_ward
-						has_job_category = pre_sapients
-						has_job_category = simple_drone
-						has_job_category = slave
-						has_job_category = worker
-						has_job_category = corrupt_drone
-						has_job_category = criminal
-						has_job_category = deviant_drone
-					}
+					cm_shared_pop_is_menial_type = no
 				}
 				portraits = {
 					serpentoid_female_01
@@ -133,8 +150,9 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
+					exists = species
 					species = { NOT = { species_gender = female } }
-					NOT = { has_job_category = ruler }
+					cm_shared_pop_is_ruler_type = no
 				}
 				portraits = {
 					serpentoid_maleslave_01
@@ -143,17 +161,9 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
+					exists = species
 					species = { NOT = { species_gender = female } }
-					NOR = {
-						has_job_category = xeno_ward
-						has_job_category = pre_sapients
-						has_job_category = simple_drone
-						has_job_category = slave
-						has_job_category = worker
-						has_job_category = corrupt_drone
-						has_job_category = criminal
-						has_job_category = deviant_drone
-					}
+					cm_shared_pop_is_menial_type = no
 				}
 				portraits = {
 					serpentoid_male_01
