@@ -93,6 +93,8 @@ In game terms, the fourth color of Phenotype 9 is the same as the third color.
     * Portrait selectors based on job category, not pop category - my goal is for the Pop portraits to be based on the job, not the Pop's stratum
     * No longer ignore portrait duplication for the pre-scripted empire
 * 4.0.0 Update for compatibility with Stellaris version 3.3 "Libra"
+    * Integrate base game script changes
+    * Use a shared set of triggers for job-based portraits
 
 ## Source Code
 
