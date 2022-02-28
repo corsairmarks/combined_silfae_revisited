@@ -62,7 +62,9 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 * 2.0.1 Minor tweaks
     * Portrait selectors based on job category, not Pop category - my goal is for the Pop portraits to be based on the job, not the Pop's stratum
     * No longer ignore portrait duplication for the pre-scripted empire
-* 2.1.0 Update for compatibility with Stellaris version 3.3 "Libra"
+* 3.0.0 Update for compatibility with Stellaris version 3.3 "Libra"
+    * Integrate base game script changes
+    * Use a shared set of triggers for job-based clothing
 
 ## Source Code
 
