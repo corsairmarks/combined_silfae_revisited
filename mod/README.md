@@ -59,7 +59,10 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 * 2.1.0 Add slightly recolored female governor clothing
 * 2.1.1 Portrait selectors based on job category, not pop category - my goal is for the Pop portraits to be based on the job, not the Pop's stratum
 * 2.1.2 No longer ignore portrait duplication for the pre-scripted empire
-* 2.2.0 Update for compatibility with Stellaris version 3.3 "Libra"
+* 3.0.0 Update for compatibility with Stellaris version 3.3 "Libra"
+    * Integrate base game script changes
+    * Use a shared set of triggers for job-based clothing
+    * Add pre-sapient viverrokan species class
 
 ## Source Code
 
