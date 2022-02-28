@@ -1,7 +1,7 @@
 name="Animated Eldar Portraits: Revisited"
 dependencies={
 	"Animated Eldar Portraits - Warhammer 40K"
-	"Building: Aquaponics Farm"
+	"Building: Aquaponics Farms"
 }
 replace_path="Animated Eldar Portraits - Warhammer 40K"
 tags={
@@ -10,7 +10,7 @@ tags={
 	"Graphics"
 	"Species"
 }
-version="4.0.0"
+version="4.0.1"
 picture="thumbnail.png"
 supported_version="3.3.*"
 remote_file_id="2581388205"
