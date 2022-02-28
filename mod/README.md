@@ -49,7 +49,7 @@ This mod also allows the Creatures of the Shroud country to bombard your homewor
 In order for this mod to function, you **must** install both of the following mods and load them before this one:
 
 * [Animated Eldar Portraits](https://steamcommunity.com/sharedfiles/filedetails/?id=707415339) by Silfae
-* [Building: Aquaponics Farm](https://steamcommunity.com/sharedfiles/filedetails/?id=2768297949) by me
+* [Building: Aquaponics Farms](https://steamcommunity.com/sharedfiles/filedetails/?id=2768297949) by me
 
 ### When to Install
 
@@ -80,7 +80,7 @@ This mod preempts one event from the base game related to restoring relic worlds
     * Apply new mono-gender portrait rules
     * More Pop clothing selector refinements
     * Update custom starting system to handle the changes in the base game (mostly for Anglers)
-    * Add new tech for special Aquaponics farm - needed more food for Anglers starting in the Eye of Terror
+    * Add new tech for special Aquaponics Farms - needed more food for Anglers starting in the Eye of Terror
 * 3.0.1 Small adjustments
     * Restrict the Aquaponics tech to Angler empires, unless a mod is detected that allows normal empires to work Angler jobs
     * No longer ignore portrait duplication for the pre-scripted empire

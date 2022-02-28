@@ -50,7 +50,7 @@ This mod also allows the Creatures of the Shroud country to bombard your homewor
 In order for this mod to function, you [b]must[/b] install both of the following mods and load them before this one:
 [list]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=707415339]Animated Eldar Portraits[/url] by Silfae
-[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2768297949]Building: Aquaponics Farm[/url] by me
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2768297949]Building: Aquaponics Farms[/url] by me
 [/list]
 [h3]When to Install[/h3]
 This mod should be added before the game has started.  If you remove it from a game in progress, your game may have graphical problems if any species was using the custom portraits.
