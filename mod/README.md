@@ -6,7 +6,7 @@ Individual mods update first, then changes are merged here.
 
 # Bundled Mods
 
-This is a bundle of mods to make it a little easier to sub and ensure cross-compatibility with each-other.  Please check each individual mod for the effects and any known issues.  The large hex strings are the commit hashes - that is mostly for my own record-keeping to know what revision of the other source code is contained here.
+This is a bundle of mods to make it a little easier to sub and ensure cross-compatibility with each-other.  Please check each individual mod for the effects and any known issues.  The numbers indicate which version of a particular mod is contained in this mod (which also corresponds to the version tag in its `git` repository).
 
 * [Animated Aquilese Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2576769521) ([Source](https://github.com/corsairmarks/romaneagles_portraits_revisited) 3.0.0)
 * [Animated Asari Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2581752619) ([Source](https://github.com/corsairmarks/asari_portraits_revisited) 4.0.1)
