@@ -61,7 +61,7 @@ Job overrides:
 [list]
 [*]Ruler: head_researcher, politician, noble
 [*]Specialist: researcher, priest, death_priest, enforcer, telepath, duelist, culture_worker, bureaucrat, manager, necromancer, death_chronicler
-[*]Worker: technician, miner, soldier, scrap_miner (**NOT** compatible with my mod [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2484702578]Enslaved Technician Job Priority Fix[/url] but includes the same fix)
+[*]Worker: technician, miner, soldier, scrap_miner
 [*]Gestalt: coordinator, evaluator, synapse_drone, brain_drone, calculator, patrol_drone, mining_drone, technician_drone, warrior_drone, chronicle_drone, scrap_miner_drone
 [*]Event-related: dimensional_portal_researcher, dimensional_portal_researcher_gestalt, space_time_anomaly_researcher, space_time_anomaly_researcher_gestalt, cave_cleaner, cave_cleaner_gestalt, robot_caretaker, turtle_miner, turtle_miner_gestalt
 [/list]

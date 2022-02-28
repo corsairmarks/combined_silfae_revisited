@@ -60,7 +60,7 @@ Job overrides:
 
 * Ruler: `head_researcher`, `politician`, `noble`
 * Specialist: `researcher`, `priest`, `death_priest`, `enforcer`, `telepath`, `duelist`, `culture_worker`, `bureaucrat`, `manager`, `necromancer`, `death_chronicler`
-* Worker: `technician`, `miner`, `soldier`, `scrap_miner` (**NOT** compatible with my mod [Enslaved Technician Job Priority Fix](https://steamcommunity.com/sharedfiles/filedetails/?id=2484702578) but includes the same fix)
+* Worker: `technician`, `miner`, `soldier`, `scrap_miner`
 * Gestalt: `coordinator`, `evaluator`, `synapse_drone`, `brain_drone`, `calculator`, `patrol_drone`, `mining_drone`, `technician_drone`, `warrior_drone`, `chronicle_drone`, `scrap_miner_drone`
 * Event-related: `dimensional_portal_researcher`, `dimensional_portal_researcher_gestalt`, `space_time_anomaly_researcher`, `space_time_anomaly_researcher_gestalt`, `cave_cleaner`, `cave_cleaner_gestalt`, `robot_caretaker`, `turtle_miner`, `turtle_miner_gestalt`
 
@@ -179,7 +179,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Biological Holofrixit alternate species class is not randomized
     * Don't restrict the ability to work the Angler job to Anglers empires (allows other empires to employ Anglers should they somehow get access to the job)
 * 4.0.0 Update for compatibility with Stellaris version 3.3 "Libra"
-    * Integrate underlying game changes
+    * Integrate base game script changes
     * Jobs are no longer full-file overwrites!
     * Only the relevant jobs are overridden (which adjust weights based on Holofrixit castes)
     * Significant simplification of `pop_categories`
