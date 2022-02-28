@@ -7,3 +7,18 @@ HYNFLK = {
 	graphical_culture = hyenafolk_01
 	move_pop_sound_effect = "moving_pop_confirmation"
 }
+
+PRE_HYNFLK = {
+	archetype = PRESAPIENT
+	playable = { always = no }
+	randomized = no
+	portraits = {
+		"hyenafolk"
+	}
+	graphical_culture = hyenafolk_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+	uplifted_into = HYNFLK
+	uplifted_portraits = {
+		"hyenafolk"
+	}
+}
