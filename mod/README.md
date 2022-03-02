@@ -13,14 +13,14 @@ This is a bundle of mods to make it a little easier to sub and ensure cross-comp
 * [Animated Eldar Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2581388205) ([Source](https://github.com/corsairmarks/eldar_portraits_revisited) 4.0.1)
 * [Animated Hidden Eye Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2585946800) ([Source](https://github.com/corsairmarks/slreptilian_portraits_revisited) 3.0.0)
 * [Animated Hollow Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2578037235) ([Source](https://github.com/corsairmarks/horrorworm_portraits_revisited) 4.0.0)
-* [Animated Holosphere Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2592592503) ([Source](https://github.com/corsairmarks/holosphere_rising_revisited) 4.0.0)
+* [Animated Holosphere Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2592592503) ([Source](https://github.com/corsairmarks/holosphere_rising_revisited) 4.0.1)
 * [Animated Hyena Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2576290763) ([Source](https://github.com/corsairmarks/hyenafolk_portraits_revisited) 3.0.0)
 * [Animated Octee-lan Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2584680339) ([Source](https://github.com/corsairmarks/octeelan_portraits_revisited) 4.0.0)
 * [Animated Quarian Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2583358569) ([Source](https://github.com/corsairmarks/quarian_portraits_revisited) 4.0.0)
 * [Animated Raptor Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2577216891) ([Source](https://github.com/corsairmarks/saurischian_portraits_revisited) 3.0.0)
 * [Animated Serpentoid Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2577093634) ([Source](https://github.com/corsairmarks/serpentoid_portraits_revisited) 3.0.0)
 * [Animated Shark Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2585030748) ([Source](https://github.com/corsairmarks/sharkanian_portraits_revisited) 2.1.0)
-* [Animated Silicoid Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2579736379) ([Source](https://github.com/corsairmarks/silicoid_portraits_revisited) 4.0.0)
+* [Animated Silicoid Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2579736379) ([Source](https://github.com/corsairmarks/silicoid_portraits_revisited) 4.0.1)
 * [Animated Xirmian Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2577789863) ([Source](https://github.com/corsairmarks/xirmian_portraits_revisited) 3.0.0)
 
 ## Source Code
@@ -102,3 +102,6 @@ You should only add this mod before starting a new game, or remove it before sta
 * 3.0.4 Update all merged mods
 * 3.0.5 Update merged mod Animated Hidden Eye Portraits: Revisited at 2.0.4
 * 4.0.0 Update all merged mods for Stellaris version 3.3 "Libra"
+* 4.0.1 Update merged mods for Stellaris version 3.1.2
+    * Updated: Animated Holosphere Portraits: Revisited at 4.0.1
+    * Updated: Animated Silicoid Portraits: Revisited at 4.0.1
