@@ -189,6 +189,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Adjust the Holowarrior trait to grant bonus defensive armies when it upgrades (it is not possible to apply army stat bonuses via a triggered modifier from a trait)
     * Holowarriors no longer want to be Necromancers (the job produces research) but instead attracts Hologanglions
     * Use a shared set of triggers for job-based portraits
+* 4.0.1 Remove holowarrior occupation armies - the game does not allow for using alternative occupation armies
 
 ## Source Code
 
