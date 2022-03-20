@@ -102,6 +102,8 @@ You should only add this mod before starting a new game, or remove it before sta
 * 3.0.4 Update all merged mods
 * 3.0.5 Update merged mod Animated Hidden Eye Portraits: Revisited at 2.0.4
 * 4.0.0 Update all merged mods for Stellaris version 3.3 "Libra"
-* 4.0.1 Update merged mods for Stellaris version 3.1.2
+* 4.0.1 Update merged mods for Stellaris version 3.3.1
     * Updated: Animated Holosphere Portraits: Revisited at 4.0.1
     * Updated: Animated Silicoid Portraits: Revisited at 4.0.1
+* 4.0.2 Update merged mods for Stellaris version 3.3.4
+    * Updated: Animated Holosphere Portraits: Revisited at 4.0.2
