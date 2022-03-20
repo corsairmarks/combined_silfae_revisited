@@ -346,6 +346,13 @@ death_priest = {
 			unity = 3
 			society_research = 1
 		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_sacrificial_edict = yes }
+			}
+			unity = 3
+		}
 		upkeep = {
 			consumer_goods = 2
 		}
@@ -1613,8 +1620,8 @@ death_chronicler = {
 	}
 
 	planet_modifier = {
-		planet_amenities_add = 2
 		planet_stability_add = 2
+		planet_amenities_add = 2
 	}
 
 	triggered_planet_modifier = {
@@ -1622,6 +1629,7 @@ death_chronicler = {
 			OR = {
 				has_trait = trait_robot_domestic_protocols
 				has_trait = trait_charismatic
+				has_trait = trait_robot_emotion_emulators
 			}
 		}
 		modifier = {
@@ -1629,7 +1637,12 @@ death_chronicler = {
 		}
 	}
 	triggered_planet_modifier = {
-		potential = { has_trait = trait_repugnant }
+		potential = {
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
+		}
 		modifier = {
 			planet_amenities_add = -0.4
 		}
@@ -1637,6 +1650,26 @@ death_chronicler = {
 
 	weight = {
 		weight = @specialist_job_weight
+		modifier = {
+			factor = 1.25
+			has_trait = trait_robot_domestic_protocols
+		}
+		modifier = {
+			factor = 1.25
+			has_trait = trait_charismatic
+		}
+		modifier = {
+			factor = 1.25
+			has_trait = trait_robot_emotion_emulators
+		}
+		modifier = {
+			factor = 0.8
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			factor = 0.8
+			has_trait = trait_robot_uncanny
+		}
 		modifier = {
 			factor = 0.2
 			OR = {
@@ -1656,6 +1689,7 @@ death_chronicler = {
 				has_trait = trait_natural_sociologists
 				has_job = death_chronicler
 				has_trait = trait_intelligent
+				has_trait = trait_robot_logic_engines
 				has_trait = trait_psionic
 			}
 		}
@@ -1669,6 +1703,7 @@ death_chronicler = {
 		modifier = {
 			factor = 1.4
 			OR = {
+				has_trait = trait_intelligent
 				has_trait = trait_robot_logic_engines
 				has_trait = trait_latent_psionic
 			}
