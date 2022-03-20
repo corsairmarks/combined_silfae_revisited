@@ -190,6 +190,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Holowarriors no longer want to be Necromancers (the job produces research) but instead attracts Hologanglions
     * Use a shared set of triggers for job-based portraits
 * 4.0.1 Remove holowarrior occupation armies - the game does not allow for using alternative occupation armies
+* 4.0.2 Updates for 3.3.3 job updates (Death Priest, Death Chronicler, Chronicle Drone)
 
 ## Source Code
 
