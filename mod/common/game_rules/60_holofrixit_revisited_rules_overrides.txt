@@ -203,7 +203,7 @@ can_fill_ruler_job = {
 			owner = {
 				is_gestalt = no
 				has_origin = origin_holofrixit
-				has_trait = trait_holooverseer
+				has_trait = trait_holofrixit
 			}
 		}
 		can_fill_holosphere_ruler_job = yes
@@ -217,7 +217,6 @@ can_fill_ruler_job = {
 			is_being_purged = no
 			is_being_assimilated = no
 			cm_shared_is_smart_enough_for_leadership = yes
-			NOR = { has_citizenship_type = { type = citizenship_organic_trophy } }
 			OR = {
 				NOT = { has_trait = trait_mechanical }
 				owner = {
@@ -225,6 +224,7 @@ can_fill_ruler_job = {
 					has_policy_flag = ai_full_rights
 				}
 			}
+			NOT = { has_citizenship_type = { type = citizenship_organic_trophy } }
 			if = {
 				limit = { divinity_right_to_work_job_check_trigger_exempt = no }
 				divinity_right_to_work_job_check_trigger_ruler = yes

@@ -18,6 +18,15 @@ head_researcher = {
 	}
 
 	possible_precalc = can_fill_ruler_job
+	possible = {
+		OR = {
+			is_enslaved = no
+			AND = {
+				has_trait = trait_hologanglion
+				owner = { has_origin = origin_holofrixit }
+			}
+		}
+	}
 	resources = {
 		category = planet_researchers
 		produces = {
@@ -68,16 +77,8 @@ head_researcher = {
 			}
 		}
 		modifier = {
-			factor = 0.5
-			has_trait = trait_holooverseer
-		}
-		modifier = {
 			factor = 5
 			has_trait = trait_hologanglion
-		}
-		modifier = {
-			factor = 2
-			has_trait = trait_holofrixigram_3
 		}
 	}
 }
