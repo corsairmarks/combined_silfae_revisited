@@ -147,7 +147,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Fix incorrect scoping for initial leader checks (scientists will be Ganglions)
     * Fix accidental food usage (side-effect of identifying the species as organic)
     * Add namelist for `HLFXT` and `HLFXTALT` (duplicates of `ART1`)
-    * Reweight Ganglion and Drone jobs - *frixigrams should always prefer technician jobs and weight lower than Ganglions for science
+    * Re-weight Ganglion and Drone jobs - *frixigrams should always prefer technician jobs and weight lower than Ganglions for science
 * 1.0.2 More bugfixes
     * Fix incorrect random name reference
     * Allow Xechiros to procreate
@@ -165,7 +165,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 * 3.0.0 Update for compatibility with Stellaris version 3.2.2 "Herbert"
     * Apply new mono-gender portrait rules
     * Ganglions are alway male, as their description indicates
-    * Holofrixigams are genderless (role-play wise they are mini-gestalts)
+    * Holofrixigrams are genderless (role-play wise they are mini-gestalts)
     * More Pop clothing selector refinements
     * Apply base game rule changes (precalc for jobs)
     * Convert from a trigger to a game rule override for the special rule to allow enslaved Ganglions as Head Researchers
