@@ -91,7 +91,7 @@ In order for this mod to function, you [b]must[/b] install these three mods and 
 This mod should be added before the game has started. If you remove it from a game in progress, your game may have graphical problems if any species was using the custom portraits or city graphics.
 
 [h2]Known Issues[/h2]
-This mod overwrites the corresponding species class added by "Silfae's city sets updated." Instead, the original species class from Silfae (with localisation) is used. It overwrites a total of 3 triggers, 1 species class, and 38 jobs from the base game; expect the error.log to have 42 lines from these overrides.
+This mod overwrites the corresponding species class added by "Silfae's city sets updated." Instead, the original species class from Silfae (with localisation) is used. It also overwrites a total of 4 triggers and 5 jobs from the base game; expect the error.log to have 10 lines from these overrides.
 
 [h2]Changelog[/h2]
 See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2592592503]Change Notes[/url]
