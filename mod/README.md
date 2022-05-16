@@ -1,3 +1,5 @@
+**_Important Update for Stellaris 3.4. "Cepheus":_** This mod is now even more compatible, thanks to the updated Pop job weighting system that accurately takes into account what resources a particular Pop is god/bad at producing.  Only the Research Director (`head_researcher`) job and 4 defense-army-spawning jobs need to be overwritten now.  Thanks Paradox!
+
 # Overview
 
 Have you seen the azure, chitinous portraits from Silfae's "Holosphere Rising" mod?  Do you want to manage techno-arthropoid hives with up-to-date gameplay elements and play the Holosphere as originally designed?  Then this mod is for you!
@@ -10,7 +12,6 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 
 * Update Holofrixit shipset (reuse of Unbidden) to work with current Stellaris - starbases, titans, juggernauts, and colossi fall back to molluscoid (the fallback for the Unbidden)
 * Enhance Holofrixit portrait usage:
-    * Allow portraits to be randomly selected
     * Fix portrait selector and mesh errors (lead to error logs)
     * Set all the main Holofrixit portraits to have a version with and without the Unbidden sparkles
     * Adjust portrait grouping so that all Holofrixit portraits can be selected by the player when creating a custom empire
@@ -54,19 +55,19 @@ This mod overwrites all of the Pop strata to implement Holofrixit energy-based P
 
 ### Partial Overrides
 
-This mod also alters the requirements for ruler-stratum jobs and some "complex" specialist/complex drone-stratum jobs.  Only Xechiros can work the majority of ruler jobs (Ganglions can be Head Researchers), and Drones cannot work any "complex" jobs.  Jobs have also been re-weighted so the Holowarriors prefer military jobs and Holofrixigrams avoid mining and favor technician jobs.  These overrides _also_ mean that this mod will need to be explicitly updated any time Paradox makes changes to jobs.
+This mod also alters the requirements for ruler-stratum jobs and some "complex" specialist/complex drone-stratum jobs.  Only Xechiros can work the majority of ruler jobs (Ganglions can be Head Researchers), and Drones cannot work any jobs that require "thinking" (similar to syncretic proles or zombies).  Jobs have also been re-weighted so the Holowarriors prefer military jobs.  These overrides _also_ mean that this mod will need to be explicitly updated any time Paradox makes changes to the overridden jobs.
 
 Job overrides:
 
-* Ruler: `head_researcher`, `politician`, `noble`
-* Specialist: `researcher`, `priest`, `death_priest`, `enforcer`, `telepath`, `duelist`, `culture_worker`, `bureaucrat`, `manager`, `necromancer`, `death_chronicler`
-* Worker: `technician`, `miner`, `soldier`, `scrap_miner`
-* Gestalt: `coordinator`, `evaluator`, `synapse_drone`, `brain_drone`, `calculator`, `patrol_drone`, `mining_drone`, `technician_drone`, `warrior_drone`, `chronicle_drone`, `scrap_miner_drone`
-* Event-related: `dimensional_portal_researcher`, `dimensional_portal_researcher_gestalt`, `space_time_anomaly_researcher`, `space_time_anomaly_researcher_gestalt`, `cave_cleaner`, `cave_cleaner_gestalt`, `robot_caretaker`, `turtle_miner`, `turtle_miner_gestalt`
+* Ruler: `head_researcher`
+* Specialist: `enforcer`
+* Worker:`soldier`
+* Gestalt: `patrol_drone`, `warrior_drone`
 
 Job-related triggers overridden:
 
 * `complex_specialist_job_check_trigger` Holodrones can't do complex work
+* `can_think` Holodrones aren't very smart
 * `is_organic_species` most Holofrixits qualify as organic
 * `is_robotic_species` Holofrixigrams are entirely mechanical
 
@@ -191,6 +192,19 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Use a shared set of triggers for job-based portraits
 * 4.0.1 Remove holowarrior occupation armies - the game does not allow for using alternative occupation armies
 * 4.0.2 Updates for 3.3.3/3.3.4 job updates (Death Priest, Death Chronicler, Chronicle Drone)
+* 5.0.0 Update for Stellaris version 3.4 "Cepheus"
+    * Use memory optimization feature for effects and triggers
+    * Update some job overrides with underlying changes
+        * `head_researcher` - still need to be overwritten so enslaved Hologanglions can work it
+        * `enforcer` - Holowarriors and Hologenotypes want to work this job
+        * `soldier` - Holowarriors and Hologenotypes want to work this job
+        * `patrol_drone` - Holowarriors and Hologenotypes want to work this job
+        * `warrior_drone` - Holowarriors and Hologenotypes want to work this job
+    * Remove all other job overwrites!
+    * Add `ai_weight` to custom assault armies, add "Resistance is Frugal" bonus unity to custom defensive armies
+    * Polarizing Nexus buildings can store even more energy, and double in capacity when Global Production Strategy is researched (the base game updated Resource Silos this way)
+    * Pop categories (social strata) updated with underlying trade multiplier changes
+    * All static text moved to localisation
 
 ## Source Code
 

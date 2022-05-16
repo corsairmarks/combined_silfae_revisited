@@ -1,15 +1,16 @@
+[b][u]Important Update for Stellaris 3.4. "Cepheus":[/u][/b] This mod is now even more compatible, thanks to the updated Pop job weighting system that accurately takes into account what resources a particular Pop is god/bad at producing.  Only the Research Director (`head_researcher`) job and 4 defense-army-spawning jobs need to be overwritten now.  Thanks Paradox!
+
 [h1]Overview[/h1]
 Have you seen the azure, chitinous portraits from Silfae's "Holosphere Rising" mod? Do you want to manage techno-arthropoid hives with up-to-date gameplay elements and play the Holosphere as originally designed? Then this mod is for you!
 
 There are other mods which contain these portraits, so why should you choose this one? None of the others update special holofrixit caste-based gameplay, but this one does! Please enjoy my adaptation of Silfae's custom empire into modern Stellaris.
 
 [h1]Changes[/h1]
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.3 "Libra," the latest version when this was written. Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.4 "Cepheus," the latest version when this was written. Updates include:
 [list]
 [*]Update Holofrixit shipset (Unbidden) - fallback to molluscoid (the fallback for the Unbidden)
 [*]Enhance Holofrixit portrait usage:
 	[list]
-	[*]Allow portraits to be randomly selected
 	[*]Fix portrait selector and mesh errors (lead to error logs)
 	[*]Set all the main Holofrixit portraits to have a version with and without the Unbidden sparkles
 	[*]Adjust portrait grouping so that all Holofrixit portraits can be selected when creating a custom empire
@@ -45,7 +46,7 @@ Much less compatible than the other Silfae's Revisited series mods because this 
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number. This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed. You can safely ignore the out-of-date warning for the dependency mods.
 
-Built for Stellaris version 3.3 "Libra." Not compatible with achievements.
+Built for Stellaris version 3.4 "Libra." Not compatible with achievements.
 
 [h3]File Overwrites[/h3]
 This mod overwrites all of the Pop strata to implement Holofrixit energy-based Pop upkeep (instead of food). It's likely to break any time Stellaris makes changes to the underlying Pop stratum. These files are completely overwritten:
@@ -55,19 +56,19 @@ This mod overwrites all of the Pop strata to implement Holofrixit energy-based P
 [*]common/pop_categories/02_other_categories.txt
 [/list]
 [h3]Partial Overrides[/h3]
-This mod alters the requirements for ruler-stratum jobs and some "complex" specialist/complex drone-stratum jobs. Only Xechiros can work the majority of ruler jobs (Ganglions can be Head Researchers), and Drones cannot work any "complex" jobs. This [i]also[/i] means that this mod will need to be explicitly updated any time Paradox makes changes to jobs.
+This mod also alters the requirements for ruler-stratum jobs and some "complex" specialist/complex drone-stratum jobs.  Only Xechiros can work the majority of ruler jobs (Ganglions can be Head Researchers), and Drones cannot work any jobs that require "thinking" (similar to syncretic proles or zombies).  Jobs have also been re-weighted so the Holowarriors prefer military jobs.  These overrides [i]also[/i] mean that this mod will need to be explicitly updated any time Paradox makes changes to the overridden jobs.
 
 Job overrides:
 [list]
-[*]Ruler: head_researcher, politician, noble
-[*]Specialist: researcher, priest, death_priest, enforcer, telepath, duelist, culture_worker, bureaucrat, manager, necromancer, death_chronicler
+[*]Ruler: head_researcher
+[*]Specialist: enforcer
 [*]Worker: technician, miner, soldier, scrap_miner
-[*]Gestalt: coordinator, evaluator, synapse_drone, brain_drone, calculator, patrol_drone, mining_drone, technician_drone, warrior_drone, chronicle_drone, scrap_miner_drone
-[*]Event-related: dimensional_portal_researcher, dimensional_portal_researcher_gestalt, space_time_anomaly_researcher, space_time_anomaly_researcher_gestalt, cave_cleaner, cave_cleaner_gestalt, robot_caretaker, turtle_miner, turtle_miner_gestalt
+[*]Gestalt: patrol_drone, warrior_drone
 [/list]
 Job-related triggers overridden:
 [list]
 [*]complex_specialist_job_check_trigger - Holodrones can't do complex work
+[*]can_think - Holodrones aren't very smart
 [*]is_organic_species - most Holofrixits qualify as organic
 [*]is_robotic_species - Holofrixigrams are entirely mechanical
 [/list]
