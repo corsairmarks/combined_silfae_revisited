@@ -21,9 +21,6 @@ origin_holofrixit = {
 	}
 	random_weight = {
 		base = 0
-		modifier = {
-			factor = 0
-		}
 	}
 	description = origin_tooltip_holofrixit_effects
 	traits = {
