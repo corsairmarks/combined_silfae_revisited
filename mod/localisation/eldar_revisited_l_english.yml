@@ -1,5 +1,5 @@
 ﻿l_english:
- name_list_ELDR1: "Eldar"
+ name_list_ELDR1: "$name_list_eldarnames$"
  trait_eldar_age: "Ældari Longevity"
  trait_eldar_age_desc: "§LThis species matures more slowly than the most species, but their overall lifespans are longer.§!\n"
  TRAIT_ELDAR_AGE_EFFECT: "Leaders begin between §Y60§! and §Y90§! years of age but live about §G+40§! years longer."
@@ -14,6 +14,29 @@
  ELDR_fossil_plural: "$HUM_fossil_plural$"
  ELDR_remnant: "$HUM_remnant$"
  ELDR_remnant_plural: "$HUM_remnant_plural$"
+ # prescripted empire
+ EMPIRE_DESIGN_eldarcraft1: "Ulthwé Craftworld"
+ EMPIRE_DESIGN_eldarcraft1_desc: "The Eldar are an ancient alien race whose vast empire once expanded the width and breadth of the known galaxy. Their empire was without equal, and they counted themselves masters of the stars. But millennia ago, their overweening pride and their fall into hedonistic practices led to a cataclysm that all but eradicated their kind and led to the birth of the Chaos God Slaanesh. Despite their boundless power, the heart of their civilisation was torn out by this catastrophe of their own making, forcing the surviving Eldar to flee upon gigantic starships called Craftworlds. Now they cling to survival by a thread, fighting the horrors of the galaxy with ritualised discipline and consummate skill. Though highly advanced and feared across the galaxy, the Eldar are a dying race - a shadow of their former glory - their race teeters on the brink of annihilation."
+ PRESCRIPTED_ship_prefix_eldarcraft1: "$BLANK_STRING$"
+ PRESCRIPTED_adjective_eldarcraft1: "Ulthwé"
+ PRESCRIPTED_species_name_eldarcraft1: "Eldar"
+ PRESCRIPTED_species_plural_eldarcraft1: "Eldar"
+ PRESCRIPTED_species_adjective_eldarcraft1: "Eldar"
+ PRESCRIPTED_planet_name_eldarcraft1: "Ulthanash Shelwé"
+ PRESCRIPTED_system_name_eldarcraft1: "Eye of Terror"
+ PRESCRIPTED_ruler_name_eldarcraft1: "Eldrad Ulthran"
+ SPEC_ELDR_eldar1: "$PRESCRIPTED_species_name_eldarcraft1$"
+ SPEC_ELDR_eldar1_plural: "$PRESCRIPTED_species_plural_eldarcraft1$"
+ SPEC_ELDR_eldar1_planet: "Xant"
+ SPEC_ELDR_eldar1_system: "Xanta"
+ SPEC_ELDR_eldar2: "$PRESCRIPTED_species_name_eldarcraft1$"
+ SPEC_ELDR_eldar2_plural: "$PRESCRIPTED_species_plural_eldarcraft1$"
+ SPEC_ELDR_eldar2_planet: "$PRESCRIPTED_planet_name_eldarcraft1$"
+ SPEC_ELDR_eldar2_system: "$PRESCRIPTED_planet_name_eldarcraft1$"
+ RT_ELDAR_Farseer: "Farseer"
+ HT_ELDAR_Seer: "Seer"
+ NAME_eldar_system_planet_1: "Laxytnoch"
+ # name_list
 
  # Duplicate localisation for modified deposits
  d_massive_crevice_eldar_system: "$d_massive_crevice$"
@@ -42,7 +65,6 @@
  eldar_evt.9.desc: "Our main forces on [From.From.GetName] have been completely eradicated by the horrors of the Shroud! The twisted, malevolent entities are devouring our people with gluttonous abandon. Some hardened structures have yet to be breached, but without military resistance it is only a matter of time for the civilians within.\n\nFragmented reports from those still trapped mention swirling, violet tendrils of mist..."
  eldar_evt.10.title: "[This.GetName] Enshrouded"
  eldar_evt.10.desc: "We have failed. The Shroud has completely engulfed [This.GetName] - a fate worse than death for any sapients left alive."
-
  # Shroud armies
  NAME_shroud_undead_army: "Unliving Shroud-spawn"
  NAME_shroud_psionic_army: "Psionic Horrors"

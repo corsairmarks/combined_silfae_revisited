@@ -1,16 +1,16 @@
 ELDR = {
 	eldar1 = {
-		name = "Eldar"
-		plural = "Eldar"
-		home_planet = "Xant"
-		home_system = "Xanta"
+		name = SPEC_ELDR_eldar1
+		plural = SPEC_ELDR_eldar1_plural
+		home_planet = SPEC_ELDR_eldar1_planet
+		home_system = SPEC_ELDR_eldar1_system
 		name_list = ELDR1
 	}
 	eldar2 = {
-		name = "Eldar"
-		plural = "Eldar"
-		home_planet = "Ulthanash Shelwé"
-		home_system = "Eye of Terror"
+		name = SPEC_ELDR_eldar2
+		plural = SPEC_ELDR_eldar2_plural
+		home_planet = SPEC_ELDR_eldar2_planet
+		home_system = SPEC_ELDR_eldar2_system
 		name_list = ELDR1
 	}
 }

@@ -1,13 +1,12 @@
 eldarcraft1 = {
 	playable = has_ancrel
-	ship_prefix = ""
+	ship_prefix = PRESCRIPTED_ship_prefix_eldarcraft1
 	species = {
 		class = ELDR
 		portrait = eldar
-		name = "Eldar"
-		plural = "Eldar"
-		adjective = "Eldar"
-		species_bio = "The Eldar are an ancient alien race whose vast empire once expanded the width and breadth of the known galaxy. Their empire was without equal, and they counted themselves masters of the stars. But millennia ago, their overweening pride and their fall into hedonistic practices led to a cataclysm that all but eradicated their kind and led to the birth of the Chaos God Slaanesh. Despite their boundless power, the heart of their civilisation was torn out by this catastrophe of their own making, forcing the surviving Eldar to flee upon gigantic starships called Craftworlds. Now they cling to survival by a thread, fighting the horrors of the galaxy with ritualised discipline and consummate skill. Though highly advanced and feared across the galaxy, the Eldar are a dying race - a shadow of their former glory - their race teeters on the brink of annihilation."
+		name = PRESCRIPTED_species_name_eldarcraft1
+		plural = PRESCRIPTED_species_plural_eldarcraft1
+		adjective = PRESCRIPTED_species_adjective_eldarcraft1
 		name_list = ELDR1
 		trait = trait_eldar_age
 		trait = trait_venerable
@@ -17,11 +16,11 @@ eldarcraft1 = {
 		# trait = trait_slow_learners
 		# removed slow learners because the points were already balanced without it
 	}
-	name = "Ulthwé Craftworld"
-	adjective = "Ulthwé"
-	planet_name = "Ulthanash Shelwé"
+	name = EMPIRE_DESIGN_eldarcraft1
+	adjective = PRESCRIPTED_adjective_eldarcraft1
+	planet_name = PRESCRIPTED_planet_name_eldarcraft1
 	planet_class = pc_arid
-	system_name = "Eye of Terror"
+	system_name = PRESCRIPTED_system_name_eldarcraft1
 	initializer = eldar_system
 	graphical_culture = avian_01
 	city_graphical_culture = avian_01
@@ -54,15 +53,15 @@ eldarcraft1 = {
 	ruler = {
 		leader_class = ruler
 		gender = male
-		name = "Eldrad Ulthran"
+		name = PRESCRIPTED_ruler_name_eldarcraft1
 		portrait = eldar_male_01
 		texture = 1
 		hair = 5
 		clothes = 0
-		ruler_title = "Farseer"
-		ruler_title_female = "Farseer"
-		heir_title = "Seer"
-		heir_title_female = "Seer"
+		ruler_title = RT_ELDAR_Farseer
+		ruler_title_female = RT_ELDAR_Farseer
+		heir_title = HT_ELDAR_Seer
+		heir_title_female = HT_ELDAR_Seer
 	}
 	flags = { is_silfae_eldar }
 }
