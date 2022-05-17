@@ -42,3 +42,14 @@
  eldar_evt.9.desc: "Our main forces on [From.From.GetName] have been completely eradicated by the horrors of the Shroud! The twisted, malevolent entities are devouring our people with gluttonous abandon. Some hardened structures have yet to be breached, but without military resistance it is only a matter of time for the civilians within.\n\nFragmented reports from those still trapped mention swirling, violet tendrils of mist..."
  eldar_evt.10.title: "[This.GetName] Enshrouded"
  eldar_evt.10.desc: "We have failed. The Shroud has completely engulfed [This.GetName] - a fate worse than death for any sapients left alive."
+
+ # Shroud armies
+ NAME_shroud_undead_army: "Unliving Shroud-spawn"
+ NAME_shroud_psionic_army: "Psionic Horrors"
+ NAME_shroud_xenomorph_army: "Shroud-twisted Abominations"
+ NAME_shroud_mutant_army: "Minor Shroud-spawn"
+ NAME_shroud_shroud_army: "Greater Shroud-spawn"
+ NAME_shroud_psionic_manifestations: "Psionic Manifestations"
+ NAME_shroud_lesser_psionic_entity: "Lesser Psionic Entity"
+ NAME_shroud_psionic_entity: "Psionic Entity"
+ NAME_shroud_greater_psionic_entity: "Greater Psionic Entity"
