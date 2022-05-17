@@ -1,4 +1,4 @@
-**_Important Update for Stellaris 3.4. "Cepheus":_** This mod is now even more compatible, thanks to the updated Pop job weighting system that accurately takes into account what resources a particular Pop is god/bad at producing.  Only the Research Director (`head_researcher`) job and 4 defense-army-spawning jobs need to be overwritten now.  Thanks Paradox!
+**_Important Update for Stellaris 3.4. "Cepheus":_** This mod is now even more compatible, thanks to the updated Pop job weighting system that accurately takes into account what resources a particular Pop is god/bad at producing.  Only the Research Director (`head_researcher`) job, 4 defense-army-spawning jobs, and 8 "complicated" drone jobs need to be overwritten now (13 versus the previous 38).  Thanks Paradox!
 
 # Overview
 
@@ -8,7 +8,7 @@ There are other mods which contain these portraits, so why should you choose thi
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.3 "Libra," the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.4 "Cepheus," the latest version when this was written.  Updates include:
 
 * Update Holofrixit shipset (reuse of Unbidden) to work with current Stellaris - starbases, titans, juggernauts, and colossi fall back to molluscoid (the fallback for the Unbidden)
 * Enhance Holofrixit portrait usage:
@@ -43,7 +43,7 @@ This mod is much less compatible than the other Silfae's Revisited series mods. 
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Built for Stellaris version 3.3 "Libra."  Not compatible with achievements.
+Built for Stellaris version 3.4 "Cepheus."  Not compatible with achievements.
 
 ### File Overwrites
 
@@ -55,19 +55,19 @@ This mod overwrites all of the Pop strata to implement Holofrixit energy-based P
 
 ### Partial Overrides
 
-This mod also alters the requirements for ruler-stratum jobs and some "complex" specialist/complex drone-stratum jobs.  Only Xechiros can work the majority of ruler jobs (Ganglions can be Head Researchers), and Drones cannot work any jobs that require "thinking" (similar to syncretic proles or zombies).  Jobs have also been re-weighted so the Holowarriors prefer military jobs.  These overrides _also_ mean that this mod will need to be explicitly updated any time Paradox makes changes to the overridden jobs.
+This mod also alters the requirements for ruler-stratum jobs and some "complicated" specialist/complex drone-stratum jobs.  Only Xechiros can work the majority of ruler jobs (Ganglions can be Head Researchers), and Drones cannot work any jobs that require "thinking" (similar to syncretic proles or zombies).  Jobs have also been re-weighted so the Holowarriors prefer military jobs.  These overrides _also_ mean that this mod will need to be explicitly updated any time Paradox makes changes to the overridden jobs.
 
 Job overrides:
 
 * Ruler: `head_researcher`
 * Specialist: `enforcer`
 * Worker:`soldier`
-* Gestalt: `patrol_drone`, `warrior_drone`
+* Gestalt: `coordinator`, `evaluator`, `synapse_drone`, `brain_drone`, `calculator`, `patrol_drone`, `warrior_drone`, `chronicle_drone`
+* Event-related: `dimensional_portal_researcher_gestalt`, `space_time_anomaly_researcher_gestalt`
 
 Job-related triggers overridden:
 
-* `complex_specialist_job_check_trigger` Holodrones can't do complex work
-* `can_think` Holodrones aren't very smart
+* `complex_specialist_job_check_trigger` Holodrones and Holowarriors can't do complicated work but they are smart enough for non-complicated specialist/drone jobs
 * `is_organic_species` most Holofrixits qualify as organic
 * `is_robotic_species` Holofrixigrams are entirely mechanical
 
@@ -93,18 +93,26 @@ This mod should be added before the game has started.  If you remove it from a g
 
 ## Known Issues
 
-This mod overwrites the corresponding species class added by "Silfae's city sets updated."  Instead, the original species class from Silfae (with localisation) is used.  It also overwrites a total of 4 triggers and 5 jobs from the base game; expect to see 10 lines in error.log similar to these:
+This mod overwrites the corresponding species class added by "Silfae's city sets updated."  Instead, the original species class from Silfae (with localisation) is used.  It also overwrites a total of 3 triggers and 13 jobs from the base game; expect to see 17 lines in error.log similar to these:
 
 ```
-[05:04:38][game_singleobjectdatabase.h:148]: Object with key: head_researcher already exists, using the one at  file: common/pop_jobs/11_holofrixit_revisited_ruler_job_overrides.txt line: 6
-[05:04:38][game_singleobjectdatabase.h:148]: Object with key: enforcer already exists, using the one at  file: common/pop_jobs/12_holofrixit_revisited_specialist_job_overrides.txt line: 7
-[05:04:38][game_singleobjectdatabase.h:148]: Object with key: soldier already exists, using the one at  file: common/pop_jobs/13_holofrixit_revisited_worker_job_overrides.txt line: 6
-[05:04:38][game_singleobjectdatabase.h:148]: Object with key: patrol_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 7
-[05:04:38][game_singleobjectdatabase.h:148]: Object with key: warrior_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 99
-[05:04:39][game_singleobjectdatabase.h:148]: Object with key: Silfae-Holofrixit already exists, using the one at  file: common/species_classes/zz_silfae_cities_holofrixit_exclude.txt line: 2
-[05:04:40][game_singleobjectdatabase.h:148]: Object with key: complex_specialist_job_check_trigger already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 1
-[05:04:40][game_singleobjectdatabase.h:148]: Object with key: is_organic_species already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 20
-[05:04:40][game_singleobjectdatabase.h:148]: Object with key: is_robotic_species already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 38
+[01:49:48][game_singleobjectdatabase.h:148]: Object with key: head_researcher already exists, using the one at  file: common/pop_jobs/11_holofrixit_revisited_ruler_job_overrides.txt line: 6
+[01:49:48][game_singleobjectdatabase.h:148]: Object with key: enforcer already exists, using the one at  file: common/pop_jobs/12_holofrixit_revisited_specialist_job_overrides.txt line: 7
+[01:49:48][game_singleobjectdatabase.h:148]: Object with key: soldier already exists, using the one at  file: common/pop_jobs/13_holofrixit_revisited_worker_job_overrides.txt line: 6
+[01:49:48][game_singleobjectdatabase.h:148]: Object with key: coordinator already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 6
+[01:49:48][game_singleobjectdatabase.h:148]: Object with key: evaluator already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 68
+[01:49:48][game_singleobjectdatabase.h:148]: Object with key: synapse_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 101
+[01:49:48][game_singleobjectdatabase.h:148]: Object with key: brain_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 179
+[01:49:48][game_singleobjectdatabase.h:148]: Object with key: calculator already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 221
+[01:49:48][game_singleobjectdatabase.h:148]: Object with key: patrol_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 264
+[01:49:48][game_singleobjectdatabase.h:148]: Object with key: warrior_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 356
+[01:49:48][game_singleobjectdatabase.h:148]: Object with key: chronicle_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 478
+[01:49:48][game_singleobjectdatabase.h:148]: Object with key: dimensional_portal_researcher_gestalt already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 6
+[01:49:48][game_singleobjectdatabase.h:148]: Object with key: space_time_anomaly_researcher_gestalt already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 237
+[01:49:49][game_singleobjectdatabase.h:148]: Object with key: Silfae-Holofrixit already exists, using the one at  file: common/species_classes/zz_silfae_cities_holofrixit_exclude.txt line: 2
+[01:49:51][game_singleobjectdatabase.h:148]: Object with key: complex_specialist_job_check_trigger already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 1
+[01:49:51][game_singleobjectdatabase.h:148]: Object with key: is_organic_species already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 20
+[01:49:51][game_singleobjectdatabase.h:148]: Object with key: is_robotic_species already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 38
 ```
 
 ## Changelog
@@ -161,13 +169,8 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 * 4.0.2 Updates for 3.3.3/3.3.4 job updates (Death Priest, Death Chronicler, Chronicle Drone)
 * 5.0.0 Update for Stellaris version 3.4 "Cepheus"
     * Use memory optimization feature for effects and triggers
-    * Update some job overrides with underlying changes
-        * `head_researcher` - still need to be overwritten so enslaved Hologanglions can work it
-        * `enforcer` - Holowarriors and Hologenotypes want to work this job
-        * `soldier` - Holowarriors and Hologenotypes want to work this job
-        * `patrol_drone` - Holowarriors and Hologenotypes want to work this job
-        * `warrior_drone` - Holowarriors and Hologenotypes want to work this job
-    * Remove all other job overwrites!
+    * Remove now-unnecessary job overrides
+    * Update remaining job overrides with underlying changes
     * Add `ai_weight` to custom assault armies, add "Resistance is Frugal" bonus unity to custom defensive armies
     * Polarizing Nexus buildings can store even more energy, and double in capacity when Global Production Strategy is researched (the base game updated Resource Silos this way)
     * Pop categories (social strata) updated with underlying trade multiplier changes

@@ -1,4 +1,4 @@
-[b][u]Important Update for Stellaris 3.4. "Cepheus":[/u][/b] This mod is now even more compatible, thanks to the updated Pop job weighting system that accurately takes into account what resources a particular Pop is god/bad at producing.  Only the Research Director (`head_researcher`) job and 4 defense-army-spawning jobs need to be overwritten now.  Thanks Paradox!
+[b][u]Important Update for Stellaris 3.4. "Cepheus":[/u][/b] This mod is now even more compatible, thanks to the updated Pop job weighting system that accurately takes into account what resources a particular Pop is god/bad at producing. Only the Research Director (`head_researcher`) job, 4 defense-army-spawning jobs, and 8 "complicated" drone jobs need to be overwritten now (13 versus the previous 38). Thanks Paradox!
 
 [h1]Overview[/h1]
 Have you seen the azure, chitinous portraits from Silfae's "Holosphere Rising" mod? Do you want to manage techno-arthropoid hives with up-to-date gameplay elements and play the Holosphere as originally designed? Then this mod is for you!
@@ -56,19 +56,19 @@ This mod overwrites all of the Pop strata to implement Holofrixit energy-based P
 [*]common/pop_categories/02_other_categories.txt
 [/list]
 [h3]Partial Overrides[/h3]
-This mod also alters the requirements for ruler-stratum jobs and some "complex" specialist/complex drone-stratum jobs.  Only Xechiros can work the majority of ruler jobs (Ganglions can be Head Researchers), and Drones cannot work any jobs that require "thinking" (similar to syncretic proles or zombies).  Jobs have also been re-weighted so the Holowarriors prefer military jobs.  These overrides [i]also[/i] mean that this mod will need to be explicitly updated any time Paradox makes changes to the overridden jobs.
+This mod also alters the requirements for ruler-stratum jobs and some "complicated" specialist/complex drone-stratum jobs. Only Xechiros can work the majority of ruler jobs (Ganglions can be Head Researchers), and Drones cannot work any jobs that require "thinking" (similar to syncretic proles or zombies). Jobs have also been re-weighted so the Holowarriors prefer military jobs. These overrides [i]also[/i] mean that this mod will need to be explicitly updated any time Paradox makes changes to the overridden jobs.
 
 Job overrides:
 [list]
 [*]Ruler: head_researcher
 [*]Specialist: enforcer
 [*]Worker: technician, miner, soldier, scrap_miner
-[*]Gestalt: patrol_drone, warrior_drone
+[*]Gestalt: coordinator, evaluator, synapse_drone, brain_drone, calculator, patrol_drone, warrior_drone, chronicle_drone
+[*]Event-related: dimensional_portal_researcher_gestalt, space_time_anomaly_researcher_gestalt
 [/list]
 Job-related triggers overridden:
 [list]
-[*]complex_specialist_job_check_trigger - Holodrones can't do complex work
-[*]can_think - Holodrones aren't very smart
+[*]complex_specialist_job_check_trigger - Holodrones and Holowarriors can't do complicated work but they are smart enough for non-complicated specialist/drone jobs
 [*]is_organic_species - most Holofrixits qualify as organic
 [*]is_robotic_species - Holofrixigrams are entirely mechanical
 [/list]
@@ -91,7 +91,7 @@ In order for this mod to function, you [b]must[/b] install these three mods and 
 This mod should be added before the game has started. If you remove it from a game in progress, your game may have graphical problems if any species was using the custom portraits or city graphics.
 
 [h2]Known Issues[/h2]
-This mod overwrites the corresponding species class added by "Silfae's city sets updated." Instead, the original species class from Silfae (with localisation) is used. It also overwrites a total of 4 triggers and 5 jobs from the base game; expect the error.log to have 10 lines from these overrides.
+This mod overwrites the corresponding species class added by "Silfae's city sets updated." Instead, the original species class from Silfae (with localisation) is used. It also overwrites a total of 3 triggers and 13 jobs from the base game; expect the error.log to have 17 lines from these overrides.
 
 [h2]Changelog[/h2]
 See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2592592503]Change Notes[/url]
