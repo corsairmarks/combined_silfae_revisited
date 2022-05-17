@@ -10,6 +10,17 @@ armageddon = {
 				}
 			}
 			AND = {
+				owner = { is_country_type = enclave_mercenary }
+				exists = controller
+				controller = {
+					OR = {
+						has_policy_flag = orbital_bombardment_armageddon
+						is_crisis_faction = yes
+						has_menace_perk = menp_death_from_above		# Menace Perk: Death From Above
+					}
+				}
+			}
+			AND = {
 				root = { has_fleet_flag = is_shroud_bombard_fleet }
 				owner = { is_country_type = shroud_spirits }
 			}
