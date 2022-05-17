@@ -80,6 +80,10 @@ generate_eldar_system_start_deposits_and_blockers = {
 			add_deposit = d_ruined_arcology_eldar_system
 		}
 	}
+	else_if = {
+		limit = { owner = { has_origin = origin_progenitor_hive } }
+		add_deposit = d_progenitor
+	}
 
 	# craftworld gets special deposit that duplicates the habitat arcane replicator, but only if Federations DLC is available
 	if = {
@@ -207,6 +211,10 @@ generate_eldar_system_start_buildings_and_districts = {
 	if = {
 		limit = { owner = { is_machine_empire = yes } }
 		add_building = building_machine_capital
+		while = {
+			count = 2
+			add_district = district_nexus
+		}
 		add_building = building_machine_assembly_plant
 		add_building = building_uplink_node
 		if = {
@@ -217,14 +225,14 @@ generate_eldar_system_start_buildings_and_districts = {
 		else = {
 			aepr_add_planet_appropriate_generator_district = yes
 		}
-		while = {
-			count = 2
-			add_district = district_nexus
-		}
 	}
 	else_if = {
 		limit = { owner = { is_hive_empire = yes } }
 		add_building = building_hive_capital
+		while = {
+			count = 2
+			add_district = district_hive
+		}
 		if = { # This building is very useless for Devouring Swarm Necrophages
 			limit = {
 				owner = {
@@ -234,11 +242,13 @@ generate_eldar_system_start_buildings_and_districts = {
 					}
 				}
 			}
-			add_building = building_spawning_pool
-		}
-		while = {
-			count = 2
-			add_district = district_hive
+			if = {
+				limit = { owner = { has_origin = origin_progenitor_hive } }
+				add_building = building_offspring_nest
+			}
+			else = {
+				add_building = building_spawning_pool
+			}
 		}
 		if = {
 			limit = { owner = { has_origin = origin_tree_of_life } }
@@ -260,6 +270,10 @@ generate_eldar_system_start_buildings_and_districts = {
 	}
 	else = {
 		add_building = building_capital
+		while = {
+			count = 2
+			add_district = district_city
+		}
 		if = {
 			limit = { owner = { has_origin = origin_mechanists } }
 			add_building = building_robot_assembly_plant
@@ -276,10 +290,6 @@ generate_eldar_system_start_buildings_and_districts = {
 		if = {
 			limit = { owner = { has_valid_civic = civic_permanent_employment } }
 			add_building = building_posthumous_employment_center
-		}
-		while = {
-			count = 2
-			add_district = district_city
 		}
 		if = {
 			limit = {
@@ -463,7 +473,10 @@ generate_eldar_system_start_buildings_and_districts = {
 	if = {
 		limit = { owner = { NOT = { has_origin = origin_remnants } } }
 		if = {
-			limit = { owner = { has_valid_civic = civic_reanimated_armies } }
+			limit = { owner = { NOT = { has_valid_civic = civic_reanimated_armies } } }
+			add_building = building_research_lab_1
+		}
+		else = {
 			add_building = building_dread_encampment
 			# Necromancers do not give engineering, so make sure there's some readily-accessible engineering
 			orbit = {
@@ -473,9 +486,6 @@ generate_eldar_system_start_buildings_and_districts = {
 				set_planet_flag = starting_deposit
 				set_planet_flag = starting_research_target
 			}
-		}
-		else = {
-			add_building = building_research_lab_1
 		}
 	}
 	if = {
@@ -554,6 +564,20 @@ generate_eldar_system_start_buildings_and_districts = {
 				add_building = building_aquaponics_farm
 			}
 		}
+	}
+	# Give Idyllic Bloom a Gaiaseeder to start with if they have room
+	if = {
+		limit = {
+			free_building_slots > 0
+			owner = {
+				OR = {
+					has_valid_civic = civic_idyllic_bloom
+					has_valid_civic = civic_hive_idyllic_bloom
+				}
+				NOT = { has_origin = origin_life_seeded }
+			}
+		}
+		add_building = building_gaiaseeders_1
 	}
 }
 
