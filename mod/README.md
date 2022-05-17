@@ -105,7 +105,6 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 [05:04:40][game_singleobjectdatabase.h:148]: Object with key: complex_specialist_job_check_trigger already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 1
 [05:04:40][game_singleobjectdatabase.h:148]: Object with key: is_organic_species already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 20
 [05:04:40][game_singleobjectdatabase.h:148]: Object with key: is_robotic_species already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 38
-[05:04:40][game_singleobjectdatabase.h:148]: Object with key: can_think already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 57
 ```
 
 ## Changelog

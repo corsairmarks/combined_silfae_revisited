@@ -51,14 +51,3 @@ is_robotic_species = {
 		}
 	}
 }
-
-# this trigger actually from 00_scripted_triggers.txt
-# Modified: Holodrones are dumb, memory is optimized
-can_think = {
-	optimize_memory
-	NOR = {
-		has_trait = trait_nerve_stapled
-		has_trait = trait_zombie
-		has_trait = trait_holodrone
-	}
-}
