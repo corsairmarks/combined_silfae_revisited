@@ -12,7 +12,7 @@ holofrixit1 = {
 		trait = trait_holofrixit
 		trait = trait_holooverseer
 	}
-	name = EMPIRE_DESIGN_holofrixit
+	name = EMPIRE_DESIGN_holofrixit1
 	adjective = PRESCRIPTED_adjective_holofrixit
 	planet_name = PRESCRIPTED_planet_name_holofrixit
 	planet_class = pc_arctic
