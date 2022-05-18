@@ -175,6 +175,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Polarizing Nexus buildings can store even more energy, and double in capacity when Global Production Strategy is researched (the base game updated Resource Silos this way)
     * Pop categories (social strata) updated with underlying trade multiplier changes
     * All static text moved to localisation
+* 5.1.0 Further enhancements for Stellaris version 3.4 "Cepheus" - add slave cost adjustments for the custom traits
 
 ## Source Code
 
