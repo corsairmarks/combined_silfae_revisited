@@ -35,7 +35,7 @@ slreptilian_illusion_30 = {
 	pop_government_ethic_attraction = -0.15
 	pop_cat_slave_happiness = 0.25
 	pop_citizen_happiness = 0.05
-	country_influence_produces_add = 0.5
+	country_base_influence_produces_add = 0.5
 	icon = "gfx/interface/icons/modifiers/slreptilian_illusion_30.dds"
 }
 
@@ -44,6 +44,6 @@ slreptilian_illusion_40 = {
 	pop_government_ethic_attraction = -0.3
 	pop_cat_slave_happiness = 0.5
 	pop_citizen_happiness = 0.15
-	country_influence_produces_add = 1
+	country_base_influence_produces_add = 1
 	icon = "gfx/interface/icons/modifiers/slreptilian_illusion_40.dds"
 }
