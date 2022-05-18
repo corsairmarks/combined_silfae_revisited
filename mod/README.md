@@ -6,7 +6,7 @@ There are lots of other mods which contain these portraits, so why should you ch
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.3 "Libra," the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.4 "Cepheus," the latest version when this was written.  Updates include:
 
 * Enhance clothing selectors to be influenced by Pop job
 * Update the namelist to account for all built-in army types, remove obsolete entries
@@ -27,18 +27,16 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     * The Eye of Terror is its own graphics entity with a Stellaris-flavored description and adds the negative effects of _both_ black holes and pulsars
     * Expect Shroud entities to become progressively more successful in their attempts to manifest in the system
 * You can use the Eldar portraits and/or custom initializer for your own empire without any DLC requirements
-* Fix the file type on the incuded event image - it was a `.png` with the `.dds` extension - it is now distributed in the correct `.dds` format for Stellaris
+* Fix the file type on the included event image - it was a `.png` with the `.dds` extension - it is now distributed in the correct `.dds` format for Stellaris
 * Support being able to choose a single-gender species (new in Stellaris 3.2)
 
 ## Compatibility
 
-Compatible with any mod that does not add the same portraits, species class, or art assets.
-
-May conflict with other mods that need to alter how relic worlds are upgraded or make changes to Armageddon Bombardment.
+Compatible with most mods that do not add the same portraits, species class, or art assets.  May conflict with other mods that need to alter how relic worlds are upgraded or make changes to Armageddon Bombardment.
 
 The Launcher will tell you that some mods are outdated - that is because the dependency is out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mod.
 
-Built for Stellaris version 3.3 "Libra."  Not compatible with achievements.
+Built for Stellaris version 3.4 "Cepheus."  Not compatible with achievements.
 
 ### Partial Overrides
 
@@ -91,6 +89,12 @@ This mod preempts one event from the base game related to restoring relic worlds
     * Aquaponics is now its own mod and is a dependency for this mod
     * Use a shared set of triggers for job-based clothing
 * 4.0.1 Update dependency name
+* 5.0.0 Update for Stellaris version 3.4 "Cepheus"
+    * Update shared triggers
+    * Update Armageddon Bombardment override to understand mercenary fleets being contracted by empires that allow it
+    * Update `can_orbital_bombard` game rule with 3.4 changes
+    * Update homeworld setup to account for new changes in 3.4 (e.g. Progenitor Hive)
+    * All static text moved to localisation (random names, name lists, prescripted empire)
 
 ## Source Code
 
