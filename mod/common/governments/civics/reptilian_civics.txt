@@ -21,9 +21,6 @@ origin_shadowy_evolution = {
 	}
 	random_weight = {
 		base = 0
-		modifier = {
-			factor = 0
-		}
 	}
 	description = origin_tooltip_shadowy_evolution_effects
 	has_secondary_species = {
@@ -38,8 +35,5 @@ civic_geneticists = {
 	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
 	random_weight = {
 		base = 0
-		modifier = {
-			factor = 0
-		}
 	}
 }
