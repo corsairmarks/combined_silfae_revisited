@@ -33,6 +33,7 @@ civic_geneticists = {
 	playable = { has_utopia = yes }
 	ai_playable = { has_utopia = yes }
 	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
+	description = civic_tooltip_geneticists_effects
 	random_weight = {
 		base = 0
 	}
