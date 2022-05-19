@@ -61,7 +61,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Integrate base game script changes
     * Use a shared set of triggers for job-based portraits
     * Add pre-sapient saurischian species class
-4.0.0 Update for Stellaris version 3.4 "Cepheus"
+* 4.0.0 Update for Stellaris version 3.4 "Cepheus"
     * Update shared triggers
     * All static text moved to localisation (name lists, species random names, prescripted empire, custom starting system)
 
