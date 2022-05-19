@@ -14,3 +14,69 @@
  PRE_SRSCN: "$SRSCN$"
  PRE_SRSCN_desc: "$SRSCN_desc$"
  PRE_SRSCN_plural: "$SRSCN_plural$"
+ # prescripted empire
+ PRESCRIPTED_ship_prefix_saurischian1: "ZAKA"
+ PRESCRIPTED_adjective_saurischian1: "Quarkian"
+ PRESCRIPTED_species_name_saurischian1: "Astroraptor"
+ PRESCRIPTED_species_plural_saurischian1: "Astroraptors"
+ PRESCRIPTED_species_adjective_saurischian1: "Saurischian"
+ PRESCRIPTED_planet_name_saurischian1: "Cratzipec"
+ PRESCRIPTED_system_name_saurischian1: "Twin Quarks"
+ PRESCRIPTED_ruler_name_saurischian1: "Clarikoni"
+ SPEC_SRSCN_saurischian: "$PRESCRIPTED_species_name_saurischian1$"
+ SPEC_SRSCN_saurischian_plural: "$PRESCRIPTED_species_plural_saurischian1$"
+ SPEC_SRSCN_saurischian_planet: "$PRESCRIPTED_planet_name_saurischian1$"
+ SPEC_SRSCN_saurischian_system: "$PRESCRIPTED_ruler_name_saurischian1$"
+ NAME_saurischian_system_star_1: "Quark I"
+ NAME_saurischian_system_star_2: "Quark II"
+ NAME_saurischian_system_planet_1: "Exiptla"
+ NAME_saurischian_system_planet_2: "Draulhakatl"
+ NAME_saurischian_system_planet_2_moon_1: "Dzertl"
+ NAME_saurischian_system_planet_2_moon_2: "Hoalkan"
+ NAME_saurischian_system_planet_3_moon_1: "XP-1101"
+ NAME_saurischian_system_planet_3_moon_2: "XP-1193"
+ NAME_saurischian_system_planet_3_moon_3: "XP-1236"
+ NAME_saurischian_system_planet_3_moon_4: "XP-1413"
+ NAME_saurischian_system_planet_3_moon_5: "Emptatl"
+ NAME_saurischian_system_planet_4: "Liatipoca"
+ NAME_saurischian_system_planet_4_moon_1: "Mahatl"
+ NAME_saurischian_system_planet_5: "Tlaserat"
+ NAME_saurischian_system_planet_6: "Uhalictanon"
+ NAME_saurischian_system_planet_4_moon_1_species_name: "Zedrim"
+ NAME_saurischian_system_planet_4_moon_1_country_name: "Zedrimanian Great Herd"
+ NAME_saurischian_system_planet_4_moon_1_army_name: "Savage Herd"
+ NAME_saurischian_neighbor_t1_system_name: "Warping Lash"
+ NAME_saurischian_neighbor_t101_system_name: "Quirvlica"
+ NAME_saurischian_neighbor_t102_system_name: "Nurphipla"
+ NAME_saurischian_neighbor_t1_first_colony_system_name: "Elisinatica"
+ NAME_saurischian_neighbor_t1_first_colony_star_1: "Xoticapa"
+ NAME_saurischian_neighbor_t2_system_name: "Prozarria"
+ NAME_saurischian_neighbor_t2_second_colony_system_name: "Ticlapatrentik"
+ NAME_saurischian_neighbor_t2_second_colony_star_1: "Hylipari"
+ NAME_saurischian_neighbor_t3_second_colony_system_name: "Ticla"
+ NAME_saurischian_neighbor_t3_second_colony_star_1: "Sirika"
+ RT_ALPHA: "Alpha"
+ RT_ALPHA_FEMALE: "$RT_ALPHA$"
+ # name list
+
+
+
+ NAME_FLEET_LISTKEY_ORD: 
+ NAME_MACHINE_ARMY_DEFENSE_LISTKEY_ORD: 
+ NAME_MACHINE_ARMY_ASSAULT_LISTKEY_ORD: 
+ NAME_MACHINE_ARMY_OCCUPATION_LISTKEY_ORD: 
+ NAME_ARMY_DEFENSE_LISTKEY_ORD: 
+ NAME_ARMY_ASSAULT_LISTKEY_ORD: 
+ NAME_ARMY_OCCUPATION_LISTKEY_ORD: 
+ NAME_ARMY_SLAVE_LISTKEY_ORD: 
+ NAME_ARMY_CLONE_LISTKEY_ORD: 
+ NAME_ARMY_ROBOTIC_LISTKEY_ORD: 
+ NAME_ARMY_ROBOTIC_DEFENSE_LISTKEY_ORD: 
+ NAME_ARMY_ROBOTIC_OCCUPATION_LISTKEY_ORD: 
+ NAME_ARMY_UNDEAD_LISTKEY_ORD: 
+ NAME_ARMY_PSIONIC_LISTKEY_ORD: 
+ NAME_ARMY_XENOMORPH_LISTKEY_ORD: 
+ NAME_ARMY_GENE_WARRIOR_LISTKEY_ORD: 
+ NAME_ARMY_PRIMITIVE_LISTKEY_SEQ: "Primitive Army $C$"
+ NAME_ARMY_INDUSTRIAL_LISTKEY_SEQ: "Industrial Army $C$"
+ NAME_ARMY_POSTATOMIC_LISTKEY_SEQ: "Post-Atomic Army $C$"
