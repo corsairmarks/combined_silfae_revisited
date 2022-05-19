@@ -259,7 +259,7 @@ saurischian_system = {
 						name = NAME_saurischian_system_planet_4_moon_1_army_name
 						owner = last_created_country
 						species = last_created_species
-						type = primitive_army
+						type = primitive_additional_army
 					}
 				}
 				setup_primitive_planet = yes
