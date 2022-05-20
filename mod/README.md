@@ -69,6 +69,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Ensure that pre-sapient aquilesi can't have laurels
 * 4.0.0 Update for Stellaris version 3.4 "Cepheus"
     * Update shared triggers
+    * Use memory optimization feature for an effect
     * All static text moved to localisation (name lists, species random names, prescripted empire, custom starting system)
 
 ## Source Code
