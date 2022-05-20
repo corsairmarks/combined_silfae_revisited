@@ -147,7 +147,7 @@ romaneagles_system = {
 	}
 	planet = {
 		name = NAME_romaneagles_system_planet_7
-		orbit_distance = 100
+		orbit_distance = 120
 		class = pc_barren_cold
 		orbit_angle = 120
 		has_ring = yes
@@ -161,7 +161,7 @@ romaneagles_system = {
 	}
 	planet = {
 		name = NAME_romaneagles_system_planet_8
-		orbit_distance = 30
+		orbit_distance = 40
 		class = pc_asteroid
 		orbit_angle = 20
 		has_ring = yes
@@ -270,7 +270,7 @@ romaneagles_neighbor_t1 = {
 					set_owner = last_created_country
 					create_ship = {
 						name = NAME_Space_Station
-						design = "Space Station"
+						design = NAME_Space_Station
 					}
 					set_location = prev
 				}
