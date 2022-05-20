@@ -1,16 +1,16 @@
 HRWRM = {
 	horrorworm1 = {
-		name = "Wrlmncth"
-		plural = "Wrlmncths"
-		home_planet = "Xnth Dimension"
-		home_system = "Q'wrl'nt"
+		name = SPEC_HRWRM_horrorworm1
+		plural = SPEC_HRWRM_horrorworm1_plural
+		home_planet = SPEC_HRWRM_horrorworm1_planet
+		home_system = SPEC_HRWRM_horrorworm1_system
 		name_list = HRWRM1
 	}
 	horrorworm2 = {
-		name = "Hollow"
-		plural = "Hollow"
-		home_planet = "Zyyrtl"
-		home_system = "Hollow Rift"
+		name = SPEC_HRWRM_horrorworm2
+		plural = SPEC_HRWRM_horrorworm2_plural
+		home_planet = SPEC_HRWRM_horrorworm2_planet
+		home_system = SPEC_HRWRM_horrorworm2_system
 		name_list = HRWRM1
 	}
 }

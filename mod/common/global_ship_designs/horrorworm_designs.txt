@@ -1,6 +1,6 @@
 # Dimensional Horror
 ship_design = {
-	name = "Dimensional Horrorworm"
+	name = DESIGN_Dimensional_Horrorworm
 	ship_size = dimensional_horrorworm
 	section = {
 		template = "DIMENSIONAL_HORRORWORM_KEY"
