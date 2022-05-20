@@ -51,6 +51,23 @@ planet_event = {
 	}
 }
 
+# triggered by empire_init_add_technologies
+country_event = {
+	id = horrorworm_evt.5
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = is_horrorworms
+		has_technology = tech_hollowrift
+	}
+	immediate = {
+			create_ship_design = {
+				design = DESIGN_Dimensional_Horrorworm
+			}
+			add_ship_design = last_created_design
+	}
+}
+
 # triggered by on_game_start
 event = {
 	id = horrorworm_evt.13

@@ -112,7 +112,7 @@ utility_component_template = {
 	}
 	ai_weight = {
 		weight = 5
-		# compied from the default sapient computer - helps the AI
+		# copied from the default sapient computer - helps the AI
 		# deal with the Contingency debuff.
 		modifier = {
 			factor = 0
