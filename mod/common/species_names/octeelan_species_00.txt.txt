@@ -1,19 +1,19 @@
 OCTEE = {
 	octeelan = {
-		name = "Octee-lan"
-		plural = "Octee-lans"
-		home_planet = "Nyumiri-tee"
-		home_system = "Tsukimi Pool"
+		name = SPEC_OCTEE_octeelan
+		plural = SPEC_OCTEE_octeelan_plural
+		home_planet = SPEC_OCTEE_octeelan_planet
+		home_system = SPEC_OCTEE_octeelan_system
 		name_list = OCTEE1
 	}
 }
 
 PEEBOOP = {
 	peepboop = {
-		name = "Beep-Boop"
-		plural = "Beep-Boops"
-		home_planet = "Oichi-kee"
-		home_system = "Tsukimi Pool"
+		name = SPEC_PEEBOOP_peepboop
+		plural = SPEC_PEEBOOP_peepboop_plural
+		home_planet = SPEC_PEEBOOP_peepboop_planet
+		home_system = SPEC_PEEBOOP_peepboop_system
 		name_list = AI
 	}
 }

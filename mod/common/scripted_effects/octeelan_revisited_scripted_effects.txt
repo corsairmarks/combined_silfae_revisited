@@ -10,6 +10,7 @@
 # * octeelan_system_FUN_species - long-lived, reclusive fungoid species
 # this = planet
 create_additional_xenos_species = {
+	optimize_memory
 	if = {
 		limit = {
 			owner = {
@@ -27,9 +28,9 @@ create_additional_xenos_species = {
 			}
 			# this species is the syncretic species by default
 			create_species = {
-				name = octeelan_system_AVI_name
-				plural = octeelan_system_AVI_plural
-				adjective = octeelan_system_AVI_adjective
+				name = PRESCRIPTED_secondary_species_name_octeelan1
+				plural = PRESCRIPTED_secondary_species_plural_octeelan1
+				adjective = PRESCRIPTED_secondary_species_adjective_octeelan1
 				class = AVI
 				portrait = avi5
 				homeworld = this
@@ -51,9 +52,9 @@ create_additional_xenos_species = {
 		}
 		else = {
 			create_species = {
-				name = octeelan_system_AVI_name
-				plural = octeelan_system_AVI_plural
-				adjective = octeelan_system_AVI_adjective
+				name = PRESCRIPTED_secondary_species_name_octeelan1
+				plural = PRESCRIPTED_secondary_species_plural_octeelan1
+				adjective = PRESCRIPTED_secondary_species_adjective_octeelan1
 				class = AVI
 				portrait = avi5
 				homeworld = this
@@ -217,6 +218,7 @@ create_additional_xenos_species = {
 
 # this = planet
 modify_additional_xenos_hive = {
+	optimize_memory
 	every_owned_species = {
 		limit = {
 			has_species_flag = octeelan_bonus_species@prev.owner
@@ -241,6 +243,7 @@ modify_additional_xenos_hive = {
 
 # this = planet
 modify_additional_xenos_cyborg = {
+	optimize_memory
 	every_owned_species = {
 		limit = {
 			has_species_flag = octeelan_bonus_species@prev.owner
@@ -266,6 +269,7 @@ modify_additional_xenos_cyborg = {
 
 # this = planet
 generate_additional_xenos_pops = {
+	optimize_memory
 	create_additional_xenos_species = yes
 	if = {
 		limit = { owner = { is_homicidal = no } }if = {
@@ -466,10 +470,12 @@ generate_additional_xenos_pops = {
 # Set up the decadent synths
 # this = planet
 setup_peepboop_homeworld = {
+	optimize_memory
 	clear_deposits = yes
 	create_species = {
-		name = "Beep-Boop"
-		plural = "Beep-Boops"
+		name = PRESCRIPTED_species_name_peepboop1
+		plural = PRESCRIPTED_species_plural_peepboop1
+		adjective = PRESCRIPTED_species_adjective_peepboop1
 		name_list = AI
 		class = PEEBOOP
 		portrait = peepboop1
@@ -575,7 +581,7 @@ setup_peepboop_homeworld = {
 		species = event_target:peepboop_species
 		ethos = owner
 	}
-	set_name = "Oichi-kee"
+	set_name = PRESCRIPTED_planet_name_peepboop1
 	set_capital = yes
 	# 9 energy + 6 minerals + 8 farming
 	while = {
@@ -635,7 +641,7 @@ setup_peepboop_homeworld = {
 			surveyor = event_target:peepboop_country
 		}
 		create_fleet = {
-			name = NAME_peepboop_station_fleet
+			name = NAME_FLEET_peepboop_station_fleet
 			effect = {
 				set_owner = event_target:peepboop_country
 				set_location = {
@@ -644,23 +650,23 @@ setup_peepboop_homeworld = {
 					angle = random
 				}
 				create_ship = {
-					name = NAME_peepboop_station_ship
+					name = NAME_SHIP_peepboop_station_ship
 					design = NAME_starbase_faux_spaceport_peepboop
 					prefix = no
 				}
 				create_ship = {
 					name = random
-					design = NAME_military_station_small_point_defense_peepboop
+					design = DESIGN_military_station_small_point_defense_peepboop
 					prefix = no
 				}
 				create_ship = {
 					name = random
-					design = NAME_military_station_small_line_peepboop
+					design = DESIGN_military_station_small_line_peepboop
 					prefix = no
 				}
 				create_ship = {
 					name = random
-					design = NAME_military_station_small_strike_craft_peepboop
+					design = DESIGN_military_station_small_strike_craft_peepboop
 					prefix = no
 				}
 			}
