@@ -1,5 +1,5 @@
 horrorworm1 = {
-	playable = has_apocalypse_ahwpr
+	playable = ahwpr_has_apocalypse
 	ship_prefix = "Tk'"
 	spawn_enabled = yes
 	ignore_portrait_duplication = no

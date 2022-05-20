@@ -1,3 +1,4 @@
-has_apocalypse_ahwpr = {
+ahwpr_has_apocalypse = {
+	optimize_memory
 	host_has_dlc = "Apocalypse"
 }
