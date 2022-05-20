@@ -6,7 +6,7 @@ There are lots of other mods which contain the same or similar portraits, so why
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.3 "Libra," the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.4 "Cepheus," the latest version when this was written.  Updates include:
 
 * Fix invalid texture reference in `quarian_female_01_portrait.mesh` (caused lots of error logs)
 * Improve Quarian clothing selectors to be influenced by Pop job
@@ -33,7 +33,7 @@ Compatible with any other mod that does not add the same portraits, species clas
 
 The Launcher will tell you that some mods are outdated - that is because the dependency is out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mod.
 
-Built for Stellaris version 3.3 "Libra."  Not compatible with achievements.
+Built for Stellaris version 3.4 "Cepheus."  Not compatible with achievements.
 
 ### Dependencies
 
@@ -78,6 +78,10 @@ This mod overrides `origin_void_dwellers` in order to add its new initializer to
 * 4.0.0 Update for compatibility with Stellaris version 3.3 "Libra"
     * Integrate base game script changes
     * Use a shared set of triggers for job-based clothing
+* 5.0.0 Update for Stellaris version 3.4 "Cepheus"
+    * Update shared triggers
+    * Add slave cost to a custom trait
+    * All static text moved to localisation (name lists, species random names, prescripted empire)
 
 ## Source Code
 
