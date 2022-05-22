@@ -470,7 +470,7 @@ generate_additional_xenos_pops = {
 # Set up the decadent synths
 # this = planet
 setup_peepboop_homeworld = {
-	# optimize_memory
+	optimize_memory
 	save_event_target_as = peepboop_planet
 	clear_deposits = yes
 	create_species = {
