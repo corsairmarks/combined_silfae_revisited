@@ -1,9 +1,9 @@
 ROEAGLE = {
 	romaneagles = {
-		name = "Aquilese"
-		plural = "Aquilesi"
-		home_planet = "Enchiria Rotomaron"
-		home_system = "Chermergatus"
+		name = SPEC_ROEAGLE_romaneagles
+		plural = SPEC_ROEAGLE_romaneagles_plural
+		home_planet = SPEC_ROEAGLE_romaneagles_planet
+		home_system = SPEC_ROEAGLE_romaneagles_system
 		name_list = ROEAGLE1
 	}
 }
