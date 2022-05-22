@@ -10,6 +10,12 @@ machine_defense_peepboop = {
 	icon = GFX_army_type_machine_defensive
 	resources = {
 		category = armies
+		cost = {
+			minerals = 100
+		}
+		upkeep = {
+			energy = 1
+		}
 		produces = {
 			trigger = {
 				exists = owner
@@ -20,15 +26,6 @@ machine_defense_peepboop = {
 	}
 	has_species = yes
 	time = 90
-	resources = {
-		category = armies
-		cost = {
-			minerals = 100
-		}
-		upkeep = {
-			energy = 1
-		}
-	}
 	potential_country = {
 		has_country_flag = is_peepboops
 		is_machine_empire = yes
