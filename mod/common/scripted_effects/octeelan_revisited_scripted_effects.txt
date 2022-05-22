@@ -84,9 +84,9 @@ create_additional_xenos_species = {
 			has_aquatics = yes
 		}
 		create_species = {
-			name = octeelan_system_MOL1_name
-			plural = octeelan_system_MOL1_plural
-			adjective = octeelan_system_MOL1_adjective
+			name = NAME_octeelan_system_MOL1_species_name
+			plural = NAME_octeelan_system_MOL1_species_plural
+			adjective = NAME_octeelan_system_MOL1_species_adjective
 			class = MOL
 			portrait = mol12
 			homeworld = this
@@ -105,9 +105,9 @@ create_additional_xenos_species = {
 			}
 		}
 		create_species = {
-			name = octeelan_system_MOL2_name
-			plural = octeelan_system_MOL2_plural
-			adjective = octeelan_system_MOL2_adjective
+			name = NAME_octeelan_system_MOL2_species_name
+			plural = NAME_octeelan_system_MOL2_species_plural
+			adjective = NAME_octeelan_system_MOL2_species_adjective
 			class = MOL
 			portrait = mol4
 			homeworld = this
@@ -126,9 +126,9 @@ create_additional_xenos_species = {
 			}
 		}
 		create_species = {
-			name = octeelan_system_FUN_name
-			plural = octeelan_system_FUN_plural
-			adjective = octeelan_system_FUN_adjective
+			name = NAME_octeelan_system_FUN_species_name
+			plural = NAME_octeelan_system_FUN_species_plural
+			adjective = NAME_octeelan_system_FUN_species_adjective
 			class = FUN
 			portrait = fun1
 			homeworld = this
@@ -150,9 +150,9 @@ create_additional_xenos_species = {
 	}
 	else = {
 		create_species = {
-			name = octeelan_system_MOL1_name
-			plural = octeelan_system_MOL1_plural
-			adjective = octeelan_system_MOL1_adjective
+			name = NAME_octeelan_system_MOL1_species_name
+			plural = NAME_octeelan_system_MOL1_species_plural
+			adjective = NAME_octeelan_system_MOL1_species_adjective
 			class = MOL
 			portrait = mol12
 			homeworld = this
@@ -171,9 +171,9 @@ create_additional_xenos_species = {
 			}
 		}
 		create_species = {
-			name = octeelan_system_MOL2_name
-			plural = octeelan_system_MOL2_plural
-			adjective = octeelan_system_MOL2_adjective
+			name = NAME_octeelan_system_MOL2_species_name
+			plural = NAME_octeelan_system_MOL2_species_plural
+			adjective = NAME_octeelan_system_MOL2_species_adjective
 			class = MOL
 			portrait = mol4
 			homeworld = this
@@ -192,9 +192,9 @@ create_additional_xenos_species = {
 			}
 		}
 		create_species = {
-			name = octeelan_system_FUN_name
-			plural = octeelan_system_FUN_plural
-			adjective = octeelan_system_FUN_adjective
+			name = NAME_octeelan_system_FUN_species_name
+			plural = NAME_octeelan_system_FUN_species_plural
+			adjective = NAME_octeelan_system_FUN_species_adjective
 			class = FUN
 			portrait = fun1
 			homeworld = this
@@ -565,11 +565,11 @@ setup_peepboop_homeworld = {
 			give_technology = { tech = tech_corvette_build_speed		message = no }
 			give_technology = { tech = tech_faux_starbase_1				message = no }
 			give_technology = { tech = tech_faux_starbase_2				message = no }
-			create_ship_design = { design = NAME_military_station_small_point_defense_peepboop }
+			create_ship_design = { design = DESIGN_military_station_small_point_defense_peepboop }
 			add_ship_design = last_created_design
-			create_ship_design = { design = NAME_military_station_small_line_peepboop }
+			create_ship_design = { design = DESIGN_military_station_small_line_peepboop }
 			add_ship_design = last_created_design
-			create_ship_design = { design = NAME_military_station_small_strike_craft_peepboop }
+			create_ship_design = { design = DESIGN_military_station_small_strike_craft_peepboop }
 			add_ship_design = last_created_design
 			create_ship_design = { design = NAME_starbase_faux_spaceport_peepboop }
 			add_ship_design = last_created_design
