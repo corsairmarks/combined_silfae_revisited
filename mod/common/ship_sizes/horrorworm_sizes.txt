@@ -1,5 +1,4 @@
 #reloadable with 'reload stats'
-# This file is where you start when you want to configure something new, then go to sections
 
 # Dimensional Horror
 dimensional_horrorworm = {
@@ -23,10 +22,10 @@ dimensional_horrorworm = {
 	num_target_locators = 2
 	is_space_station = no
 	icon_frame = 5
-	base_buildtime = 50
+	base_buildtime = @corvette_build_time
 	can_have_federation_design = no
-	enable_default_design = yes
-	enable_3dview_in_ship_browser = yes
+	enable_default_design = no
+	enable_3dview_in_ship_browser = no
 	selectable = { has_leviathans = yes }
 	prerequisites = { tech_hollowrift }
 	combat_disengage_chance = 1.00
@@ -49,5 +48,17 @@ dimensional_horrorworm = {
 	min_upgrade_cost = {
 		alloys = 1
 	}
+	ai_ship_data = {
+		fraction = {
+			base = 0
+			modifier = {
+				add = 25
+				uses_standard_ship_sizes = yes
+			}
+			modifier = {
+				factor = 1.5
+				has_country_flag = is_horrorworms
+			}
+		}
+	}
 }
-

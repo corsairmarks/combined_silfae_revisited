@@ -10,6 +10,7 @@ on_game_start = {
 empire_init_add_technologies = {
 	events = {
 		horrorworm_evt.2
+		horrorworm_evt.5
 	}
 }
 
