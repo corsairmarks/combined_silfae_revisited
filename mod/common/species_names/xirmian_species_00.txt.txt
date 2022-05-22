@@ -1,16 +1,16 @@
 XIRM = {
 	xirmian1 = {
-		name = "Xirmian"
-		plural = "Xirmians"
-		home_planet = "Wurthe"
-		home_system = "Taxeema"
+		name = SPEC_XIRM_xirmian1
+		plural = SPEC_XIRM_xirmian1_plural
+		home_planet = SPEC_XIRM_xirmian1_planet
+		home_system = SPEC_XIRM_xirmian1_system
 		name_list = XIRM1
 	}
 	xirmian2 = {
-		name = "Xirmian"
-		plural = "Xirmians"
-		home_planet = "Iblr"
-		home_system = "Taxima"
+		name = SPEC_XIRM_xirmian2
+		plural = SPEC_XIRM_xirmian2_plural
+		home_planet = SPEC_XIRM_xirmian2_planet
+		home_system = SPEC_XIRM_xirmian2_system
 		name_list = XIRM1
 	}
 }
