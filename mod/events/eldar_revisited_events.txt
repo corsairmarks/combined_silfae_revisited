@@ -127,6 +127,14 @@ planet_event = {
 		else = {
 			add_deposit = d_arcane_replicator_eldar_system_gestalt
 		}
+		# temporary workaround to make sure the progentior doesn't get clobbered
+		if = {
+			limit = {
+				NOT = { has_deposit = d_progenitor }
+				owner = { has_origin = origin_progenitor_hive }
+			}
+			add_deposit = d_progenitor
+		}
 	}
 }
 

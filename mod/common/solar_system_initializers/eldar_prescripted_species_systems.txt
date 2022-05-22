@@ -19,7 +19,7 @@ eldar_system = {
 		}
 	}
 	planet = {
-		name = "Laxytnoch"
+		name = NAME_eldar_system_planet_1
 		class = pc_toxic
 		orbit_distance = 230
 		orbit_angle = -120

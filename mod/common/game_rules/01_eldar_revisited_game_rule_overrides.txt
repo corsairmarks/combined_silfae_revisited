@@ -1,45 +1,45 @@
 #This rule is a condition for bombarding planets
 #Root = fleet, potential attacker
 #From = planet, potential target
-can_orbital_bombard = {
-	exists = FROM.OWNER
+can_orbital_bombard = { # TODO: verify with base game
+	exists = from.owner
 	NOT = {
-		any_owned_ship = {
+		any_controlled_ship = {
 			is_ship_size = colossus
 		}
 	}
 	OR = {
 		AND = {
-			ROOT.OWNER = {
-				NOT = { has_communications = FROM.OWNER }
+			root.controller = {
+				NOT = { has_communications = from.owner }
 			}
-			FROM.OWNER = {
+			from.owner = {
 				NOT = { is_country_type = primitive }
 			}
 		}
 		AND = {
-			ROOT.OWNER = {
+			root.controller = {
 				NOR = {
 					has_policy_flag = interference_passive
 					has_policy_flag = interference_active
 				}
 			}
-			FROM.OWNER = { is_country_type = primitive }
+			from.owner = { is_country_type = primitive }
 		}
-		ROOT.OWNER = { is_at_war_with = FROM.CONTROLLER }
-		FROM = { is_planet_class = pc_infested }
-		FROM.CONTROLLER = {
+		root.controller = { is_at_war_with = from.controller }
+		from = { is_planet_class = pc_infested }
+		from.controller = {
 			OR = {
 				is_country_type = swarm
 				is_country_type = ai_empire
 				is_country_type = cybrex_empire
 				AND = {
 					is_country_type = awakened_marauders
-					ROOT.OWNER = { is_hostile = prev }
+					root.controller = { is_hostile = prev }
 				}
 			}
 		}
-		ROOT.OWNER = {
+		root.controller = {
 			OR = {
 				is_country_type = extradimensional
 				is_country_type = extradimensional_2
@@ -54,21 +54,21 @@ can_orbital_bombard = {
 				is_country_type = vol
 				AND = {
 					is_country_type = awakened_marauders
-					FROM.CONTROLLER = { is_hostile = prev }
+					from.controller = { is_hostile = prev }
 				}
 			}
 		}
 		AND = {
 			from.controller = {
 				is_country_type = faction
-				NOT = { is_same_value = root.owner }
+				NOT = { is_same_value = root.controller }
 			}
 			from.owner = {
-				is_same_value = root.owner
+				is_same_value = root.controller
 			}
 		}
 		AND = {
-			root.owner = { is_country_type = shroud_spirits }
+			root.controller = { is_country_type = shroud_spirits }
 			from = { has_planet_flag = is_shroud_attack_planet_target }
 		}
 	}

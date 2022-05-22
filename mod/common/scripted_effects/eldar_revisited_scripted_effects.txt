@@ -1,5 +1,6 @@
 # this = country
 flag_subspecies_type = {
+	optimize_memory
 	if = {
 		limit = { last_created_species = { NOT = { is_exact_same_species = prev.owner_main_species } } }
 		if = {
@@ -22,6 +23,7 @@ flag_subspecies_type = {
 # this = planet, capital
 # from = species, founder
 generate_eldar_system_start_deposits_and_blockers = {
+	optimize_memory
 	clear_deposits = yes
 	# no blockers except special lithoid blockers, which don't reduce districts
 	if = {
@@ -77,6 +79,10 @@ generate_eldar_system_start_deposits_and_blockers = {
 			count = 5
 			add_deposit = d_ruined_arcology_eldar_system
 		}
+	}
+	else_if = {
+		limit = { owner = { has_origin = origin_progenitor_hive } }
+		add_deposit = d_progenitor
 	}
 
 	# craftworld gets special deposit that duplicates the habitat arcane replicator, but only if Federations DLC is available
@@ -201,9 +207,14 @@ generate_eldar_system_start_deposits_and_blockers = {
 # this = planet, capital
 # from = species, founder
 generate_eldar_system_start_buildings_and_districts = {
+	optimize_memory
 	if = {
 		limit = { owner = { is_machine_empire = yes } }
 		add_building = building_machine_capital
+		while = {
+			count = 2
+			add_district = district_nexus
+		}
 		add_building = building_machine_assembly_plant
 		add_building = building_uplink_node
 		if = {
@@ -212,16 +223,16 @@ generate_eldar_system_start_buildings_and_districts = {
 			add_building = building_organic_sanctuary
 		}
 		else = {
-			add_planet_appropriate_generator_district_aepr = yes
-		}
-		while = {
-			count = 2
-			add_district = district_nexus
+			aepr_add_planet_appropriate_generator_district = yes
 		}
 	}
 	else_if = {
 		limit = { owner = { is_hive_empire = yes } }
 		add_building = building_hive_capital
+		while = {
+			count = 2
+			add_district = district_hive
+		}
 		if = { # This building is very useless for Devouring Swarm Necrophages
 			limit = {
 				owner = {
@@ -231,15 +242,17 @@ generate_eldar_system_start_buildings_and_districts = {
 					}
 				}
 			}
-			add_building = building_spawning_pool
-		}
-		while = {
-			count = 2
-			add_district = district_hive
+			if = {
+				limit = { owner = { has_origin = origin_progenitor_hive } }
+				add_building = building_offspring_nest
+			}
+			else = {
+				add_building = building_spawning_pool
+			}
 		}
 		if = {
 			limit = { owner = { has_origin = origin_tree_of_life } }
-			add_planet_appropriate_farming_district_aepr = yes
+			aepr_add_planet_appropriate_farming_district = yes
 		}
 		else = {
 			add_district = district_hive
@@ -257,6 +270,10 @@ generate_eldar_system_start_buildings_and_districts = {
 	}
 	else = {
 		add_building = building_capital
+		while = {
+			count = 2
+			add_district = district_city
+		}
 		if = {
 			limit = { owner = { has_origin = origin_mechanists } }
 			add_building = building_robot_assembly_plant
@@ -273,10 +290,6 @@ generate_eldar_system_start_buildings_and_districts = {
 		if = {
 			limit = { owner = { has_valid_civic = civic_permanent_employment } }
 			add_building = building_posthumous_employment_center
-		}
-		while = {
-			count = 2
-			add_district = district_city
 		}
 		if = {
 			limit = {
@@ -297,7 +310,7 @@ generate_eldar_system_start_buildings_and_districts = {
 					}
 				}
 			}
-			add_planet_appropriate_generator_district_aepr = yes
+			aepr_add_planet_appropriate_generator_district = yes
 		}
 		else = {
 			add_district = district_city
@@ -354,7 +367,7 @@ generate_eldar_system_start_buildings_and_districts = {
 	}
 	if = {
 		limit = { owner = { is_machine_empire = yes } }
-		add_planet_appropriate_generator_district_aepr = yes
+		aepr_add_planet_appropriate_generator_district = yes
 	}
 	else_if = {
 		limit = { owner = { has_origin = origin_clone_army } }
@@ -369,14 +382,14 @@ generate_eldar_system_start_buildings_and_districts = {
 				}
 			}
 		}
-		add_planet_appropriate_generator_district_aepr = yes
+		aepr_add_planet_appropriate_generator_district = yes
 	}
 	else_if = {
 		limit = {
 			is_planet_class = pc_ocean
 			owner = { is_anglers_empire = yes }
 		}
-		add_planet_appropriate_farming_district_aepr = yes
+		aepr_add_planet_appropriate_farming_district = yes
 	}
 	else = {
 		add_district = district_industrial
@@ -386,9 +399,9 @@ generate_eldar_system_start_buildings_and_districts = {
 		limit = { owner = { has_origin = origin_machine } }
 		while = {
 			count = 2
-			add_planet_appropriate_generator_district_aepr = yes
+			aepr_add_planet_appropriate_generator_district = yes
 		}
-		add_planet_appropriate_mining_district_aepr = yes
+		aepr_add_planet_appropriate_mining_district = yes
 	}
 	else = {
 		if = {
@@ -401,7 +414,7 @@ generate_eldar_system_start_buildings_and_districts = {
 				limit = { owner = { is_hive_empire = yes } }
 				if = {
 					limit = { owner = { has_origin = origin_tree_of_life } }
-					add_planet_appropriate_farming_district_aepr = yes
+					aepr_add_planet_appropriate_farming_district = yes
 				}
 				else = {
 					add_district = district_hive
@@ -417,7 +430,7 @@ generate_eldar_system_start_buildings_and_districts = {
 		}
 		else_if = {
 			limit = { owner = { has_origin = origin_tree_of_life } }
-			add_planet_appropriate_farming_district_aepr = yes
+			aepr_add_planet_appropriate_farming_district = yes
 		}
 		else_if = {
 			limit = {
@@ -437,10 +450,10 @@ generate_eldar_system_start_buildings_and_districts = {
 				is_planet_class = pc_ocean
 				owner = { is_anglers_empire = yes }
 			}
-			add_planet_appropriate_farming_district_aepr = yes
+			aepr_add_planet_appropriate_farming_district = yes
 		}
 		else = {
-			add_planet_appropriate_mining_district_aepr = yes
+			aepr_add_planet_appropriate_mining_district = yes
 		}
 		if = {
 			limit = {
@@ -450,17 +463,20 @@ generate_eldar_system_start_buildings_and_districts = {
 					is_anglers_empire = yes
 				}
 			}
-			add_planet_appropriate_farming_district_aepr = yes
+			aepr_add_planet_appropriate_farming_district = yes
 		}
 		else = {
-			add_planet_appropriate_mining_district_aepr = yes
+			aepr_add_planet_appropriate_mining_district = yes
 		}
-		add_planet_appropriate_generator_district_aepr = yes
+		aepr_add_planet_appropriate_generator_district = yes
 	}
 	if = {
 		limit = { owner = { NOT = { has_origin = origin_remnants } } }
 		if = {
-			limit = { owner = { has_valid_civic = civic_reanimated_armies } }
+			limit = { owner = { NOT = { has_valid_civic = civic_reanimated_armies } } }
+			add_building = building_research_lab_1
+		}
+		else = {
 			add_building = building_dread_encampment
 			# Necromancers do not give engineering, so make sure there's some readily-accessible engineering
 			orbit = {
@@ -470,9 +486,6 @@ generate_eldar_system_start_buildings_and_districts = {
 				set_planet_flag = starting_deposit
 				set_planet_flag = starting_research_target
 			}
-		}
-		else = {
-			add_building = building_research_lab_1
 		}
 	}
 	if = {
@@ -552,12 +565,27 @@ generate_eldar_system_start_buildings_and_districts = {
 			}
 		}
 	}
+	# Give Idyllic Bloom a Gaiaseeder to start with if they have room
+	if = {
+		limit = {
+			free_building_slots > 0
+			owner = {
+				OR = {
+					has_valid_civic = civic_idyllic_bloom
+					has_valid_civic = civic_hive_idyllic_bloom
+				}
+				NOT = { has_origin = origin_life_seeded }
+			}
+		}
+		add_building = building_gaiaseeders_1
+	}
 }
 
 # same as vanilla, but doesn't adjust planet size or add buildings/districts
 # this = planet, capital
 # from = species, founder
 generate_eldar_system_start_pops = {
+	optimize_memory
 	set_variable = {
 		which = total_starting_pops
 		value = 0
@@ -743,6 +771,7 @@ generate_eldar_system_start_pops = {
 # this = planet, capital
 # from = species, founder
 generate_eldar_system_final_pass = {
+	optimize_memory
 	# origin-related modifiers
 	if = {
 		limit = { owner = { has_origin = origin_lithoid } }
@@ -776,14 +805,15 @@ generate_eldar_system_final_pass = {
 			}
 		}
 		change_planet_size = 2
-		add_planet_appropriate_generator_district_aepr = yes
-		add_planet_appropriate_mining_district_aepr = yes
+		aepr_add_planet_appropriate_generator_district = yes
+		aepr_add_planet_appropriate_mining_district = yes
 	}
 }
 
 # duplicates the base game's Shroud creation code - which is unfortuantely duplicated/near-duplicated multiple times but none of them in an reusable effect
 # this = any
 silfae_eldar_ensure_global_shroud_country = {
+	optimize_memory
 	if = {
 		limit = { NOT = { exists = event_target:shroud_country } }
 		create_country = {
@@ -813,6 +843,7 @@ silfae_eldar_ensure_global_shroud_country = {
 # ensures the Shroud exists and that the scoped country (silently) has communications with it
 # this = country
 silfae_eldar_ensure_communications_global_shroud_country = {
+	optimize_memory
 	silfae_eldar_ensure_global_shroud_country = yes
 	if = {
 		limit = { NOT = { has_communications = event_target:shroud_country } }
@@ -821,13 +852,19 @@ silfae_eldar_ensure_communications_global_shroud_country = {
 }
 
 # this = planet
-add_planet_appropriate_mining_district_aepr = {
+aepr_add_planet_appropriate_mining_district = {
+	optimize_memory
 	if = {
 		limit = {
 			OR = {
-				is_planet_class = pc_hive
-				is_planet_class = pc_machine
-				is_planet_class = pc_shattered_ring_habitable
+				uses_district_set = hive_world
+				uses_district_set = machine_world
+				uses_district_set = shattered_ring_world
+				AND = {
+					uses_district_set = standard
+					exists = owner
+					owner = { is_subterranean_empire = yes }
+				}
 			}
 		}
 		add_district = district_mining_uncapped
@@ -839,19 +876,28 @@ add_planet_appropriate_mining_district_aepr = {
 
 
 # this = planet
-add_planet_appropriate_generator_district_aepr = {
+aepr_add_planet_appropriate_generator_district = {
+	optimize_memory
 	if = {
 		limit = {
+			uses_district_set = shattered_ring_world
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_fallen_empire = no
+			}
+		}
+		add_district = district_srw_commercial
+	}
+	else_if = {
+		limit = {
 			OR = {
-				is_planet_class = pc_hive
-				is_planet_class = pc_machine
+				uses_district_set = hive_world
+				uses_district_set = machine_world
+				uses_district_set = shattered_ring_world
 			}
 		}
 		add_district = district_generator_uncapped
-	}
-	else_if = {
-		limit = { is_planet_class = pc_shattered_ring_habitable }
-		add_district = district_srw_commercial
 	}
 	else = {
 		add_district = district_generator
@@ -859,16 +905,18 @@ add_planet_appropriate_generator_district_aepr = {
 }
 
 # this = planet
-add_planet_appropriate_farming_district_aepr = {
+aepr_add_planet_appropriate_farming_district = {
+	optimize_memory
 	if = {
 		limit = {
 			OR = {
-				is_planet_class = pc_hive
+				uses_district_set = hive_world
+				uses_district_set = shattered_ring_world
 				AND = {
 					is_planet_class = pc_ocean
+					exists = owner
 					owner = { is_anglers_empire = yes }
 				}
-				is_planet_class = pc_shattered_ring_habitable
 			}
 		}
 		add_district = district_farming_uncapped
