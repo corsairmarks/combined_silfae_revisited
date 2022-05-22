@@ -1,9 +1,9 @@
 SRPT = {
 	serpentoid = {
-		name = "She'ses"
-		plural = "She'sesi"
-		home_planet = "Eryktan"
-		home_system = "Kheshem"
+		name = SPEC_SRPT_serpentoid
+		plural = SPEC_SRPT_serpentoid_plural
+		home_planet = SPEC_SRPT_serpentoid_planet
+		home_system = SPEC_SRPT_serpentoid_system
 		name_list = SRPT1
 	}
 }

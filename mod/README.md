@@ -18,7 +18,7 @@ This is a bundle of mods to make it a little easier to sub and ensure cross-comp
 * [Animated Octee-lan Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2584680339) ([Source](https://github.com/corsairmarks/octeelan_portraits_revisited) 4.0.0)
 * [Animated Quarian Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2583358569) ([Source](https://github.com/corsairmarks/quarian_portraits_revisited) 4.0.0)
 * [Animated Raptor Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2577216891) ([Source](https://github.com/corsairmarks/saurischian_portraits_revisited) 3.0.0)
-* [Animated Serpentoid Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2577093634) ([Source](https://github.com/corsairmarks/serpentoid_portraits_revisited) 3.0.0)
+* [Animated Serpentoid Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2577093634) ([Source](https://github.com/corsairmarks/serpentoid_portraits_revisited) 4.0.0)
 * [Animated Shark Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2585030748) ([Source](https://github.com/corsairmarks/sharkanian_portraits_revisited) 3.0.0)
 * [Animated Silicoid Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2579736379) ([Source](https://github.com/corsairmarks/silicoid_portraits_revisited) 4.0.1)
 * [Animated Xirmian Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2577789863) ([Source](https://github.com/corsairmarks/xirmian_portraits_revisited) 4.0.0)

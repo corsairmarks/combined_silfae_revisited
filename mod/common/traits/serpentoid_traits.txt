@@ -14,6 +14,9 @@ trait_serpentoid_acumen = {
 		planet_jobs_engineering_research_produces_mult = 0.07
 	}
 	opposites = { "trait_natural_engineers" "trait_natural_physicists" "trait_natural_sociologists" "trait_nerve_stapled" }
+	slave_cost = {
+		energy = 500
+	}
 }
 
 trait_serpentoid_cunning = {
@@ -31,6 +34,9 @@ trait_serpentoid_cunning = {
 		leader_age = 10
 	}
 	opposites = { "trait_ingenious" "trait_rapid_breeders" "trait_slow_breeders" "trait_fertile" "trait_quick_learners" "trait_slow_learners" "trait_venerable" "trait_enduring" "trait_fleeting" }
+	slave_cost = {
+		energy = 1000
+	}
 }
 
 trait_serpentoid_indolence = {
@@ -48,4 +54,7 @@ trait_serpentoid_indolence = {
 		pop_resettlement_cost_mult = 0.1
 	}
 	opposites = { "trait_agrarian" "trait_nomadic" "trait_sedentary" "trait_resilient" }
+	slave_cost = {
+		energy = -200
+	}
 }

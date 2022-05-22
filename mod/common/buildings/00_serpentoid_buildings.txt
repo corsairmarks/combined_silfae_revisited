@@ -12,19 +12,22 @@ building_space_pyramid = {
 		}
 	}
 	potential = {
-		planet = { owner = { has_country_flag = is_ancient_technosethi } }
+		owner = { has_country_flag = is_ancient_technosethi }
 	}
 	allow = {
 		custom_tooltip = {
-			text = building_grand_mausoleum_allowed_tooltip
+			fail_text = ruler_not_already_built_space_pyramid
 			exists = ruler
 			ruler = { NOT = { has_leader_flag = built_space_pyramid } }
-			owner = { NOT = { has_country_flag = constructing_space_pyramid } }
-			planet = { has_upgraded_capital = yes }
 		}
 		custom_tooltip = {
-			text = "requires_being_serpentoids"
-			planet = { owner = { has_country_flag = is_ancient_technosethi } }
+			fail_text = not_already_constructing_space_pyramid
+			owner = { NOT = { has_country_flag = constructing_space_pyramid } }
+		}
+		has_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = requires_being_serpentoids
+			owner = { has_country_flag = is_ancient_technosethi }
 		}
 	}
 	planet_modifier = {
