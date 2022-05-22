@@ -13,7 +13,7 @@ This is a bundle of mods to make it a little easier to sub and ensure cross-comp
 [*][url=https://steamcommunity.com/workshop/filedetails/?id=2578037235]Animated Hollow Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/horrorworm_portraits_revisited]Source[/url] 5.0.0)
 [*][url=https://steamcommunity.com/workshop/filedetails/?id=2592592503]Animated Holosphere Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/holosphere_rising_revisited]Source[/url] 5.1.0)
 [*][url=https://steamcommunity.com/workshop/filedetails/?id=2576290763]Animated Hyena Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/hyenafolk_portraits_revisited]Source[/url] 4.0.0)
-[*][url=https://steamcommunity.com/workshop/filedetails/?id=2584680339]Animated Octee-lan Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/octeelan_portraits_revisited]Source[/url] 4.0.0)
+[*][url=https://steamcommunity.com/workshop/filedetails/?id=2584680339]Animated Octee-lan Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/octeelan_portraits_revisited]Source[/url] 5.0.0)
 [*][url=https://steamcommunity.com/workshop/filedetails/?id=2583358569]Animated Quarian Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/quarian_portraits_revisited]Source[/url] 5.0.0)
 [*][url=https://steamcommunity.com/workshop/filedetails/?id=2577216891]Animated Raptor Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/saurischian_portraits_revisited]Source[/url] 4.0.1)
 [*][url=https://steamcommunity.com/workshop/filedetails/?id=2577093634]Animated Serpentoid Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/serpentoid_portraits_revisited]Source[/url] 4.0.0)
