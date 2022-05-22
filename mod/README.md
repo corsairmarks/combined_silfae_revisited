@@ -44,9 +44,9 @@ Each of the source repositories above is added as a remote to this repository on
 
 # Compatibility
 
-Requires Stellaris 3.3 "Libra" and disables achievements.
+Requires Stellaris 3.4 "Cepheus" and disables achievements.
 
-Check each of the contained mods for an explicit list of incompatibility notes.  Notably many Pop jobs (about 40 for the Holofrixits) and all Pop strata are overwritten (Holofrixit and Silicoid alternate Pop upkeep), making this mod incompatible with other mods that make changes to Pop strata.
+Check each of the contained mods for an explicit list of incompatibility notes.  Notably some Pop jobs (13 for the Holofrixits) and all Pop strata are overwritten (Holofrixit and Silicoid alternate Pop upkeep), making this mod incompatible with other mods that make changes to Pop strata.
 
 The Pop strata (category) changes must be present for Holofrixit to consume energy instead of food and for Silicoids to properly consume mostly minerals with some food.  The job overrides help Pops with holofrixit caste traits be attracted to jobs for which they are well-suited.  If overridden by another mod, the job(s) in question will no longer attract holofrixits based on their caste role, which could lead to significant resource losses.  For example, Holofrixigrams might try to work miner jobs but have -100% miner output and thus produce nothing, or Hologanglions won't be attracted to research where they have significant bonuses.
 
@@ -107,3 +107,4 @@ You should only add this mod before starting a new game, or remove it before sta
     * Updated: Animated Silicoid Portraits: Revisited at 4.0.1
 * 4.0.2 Update merged mods for Stellaris version 3.3.4
     * Updated: Animated Holosphere Portraits: Revisited at 4.0.2
+* 5.0.0 Update all merged mods for Stellaris version 3.4 "Cepheus"
