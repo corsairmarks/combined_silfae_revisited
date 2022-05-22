@@ -15,32 +15,6 @@
 		cruiser = { Furuumukush Koko Aobou Kinugushu Myokuee Hakuru Esheeigaru Tokou Ottogu Chokelei }
 
 		battleship = { Hieirii Kogomo Kirisheemi Harunuu Iseie Kiiai }
-
-		titan = { }
-
-		juggernaut = { }
-
-		colossus = { }
-
-		science = { }
-
-		colonizer = { }
-
-		constructor = { }
-
-		mining_station = { }
-
-		research_station = { }
-
-		observation_station = { }
-
-		military_station_small = { }
-
-		military_station_medium = { }
-
-		military_station_large = { }
-
-		ion_cannon = { }
 	}
 	fleet_names = {
 		random_names = {
@@ -138,34 +112,6 @@
 				Kezulu Deisee Seimbukkiu Tsugurume Aoumuree Hiresiky Tuguneli Ichihuri Kitakyushe Chikishinee Daezeifiu Kugu-lee Mizuho-lee
 				Guje-lee Fujioky Fukulemee Seppuliry
 			}
-		}
-
-		pc_desert = {
-			names = { }
-		}
-
-		pc_tropical = {
-			names = { }
-		}
-
-		pc_arid = {
-			names = { }
-		}
-
-		pc_continental = {
-			names = { }
-		}
-
-		pc_ocean = {
-			names = { }
-		}
-
-		pc_tundra = {
-			names = { }
-		}
-
-		pc_arctic = {
-			names = { }
 		}
 	}
 	### CHARACTERS

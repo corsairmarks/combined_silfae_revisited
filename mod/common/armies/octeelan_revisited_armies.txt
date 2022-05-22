@@ -26,6 +26,7 @@ machine_defense_peepboop = {
 	}
 	has_species = yes
 	time = 90
+	use_armynames_from = machine_defense
 	potential_country = {
 		has_country_flag = is_peepboops
 		is_machine_empire = yes
