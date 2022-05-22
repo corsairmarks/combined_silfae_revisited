@@ -25,6 +25,9 @@ trait_unedible = {
 	ai_weight = {
 		weight = 0
 	}
+	slave_cost = {
+		energy = -500
+	}
 }
 
 trait_unedible_lithoid = {
@@ -39,6 +42,9 @@ trait_unedible_lithoid = {
 	}
 	ai_weight = {
 		weight = 0
+	}
+	slave_cost = {
+		energy = -500
 	}
 }
 
@@ -57,6 +63,9 @@ trait_neutered = {
 	ai_weight = {
 		weight = 0
 	}
+	slave_cost = {
+		energy = -2000
+	}
 }
 
 trait_indoctrinated = {
@@ -74,6 +83,9 @@ trait_indoctrinated = {
 		planet_jobs_society_research_produces_mult = -0.3
 		planet_jobs_engineering_research_produces_mult = -0.3
 	}
+	slave_cost = {
+		energy = -200
+	}
 }
 
 trait_genetic_degradation = {
@@ -89,6 +101,9 @@ trait_genetic_degradation = {
 	}
 	ai_weight = {
 		weight = 0
+	}
+	slave_cost = {
+		energy = -600
 	}
 }
 
@@ -106,6 +121,9 @@ trait_genetic_degradation_lithoid = {
 	}
 	ai_weight = {
 		weight = 0
+	}
+	slave_cost = {
+		energy = -600
 	}
 }
 
@@ -125,6 +143,9 @@ trait_brittle_bones = {
 	ai_weight = {
 		weight = 0
 	}
+	slave_cost = {
+		energy = -800
+	}
 }
 
 trait_chemical_dependency = {
@@ -141,6 +162,9 @@ trait_chemical_dependency = {
 	ai_weight = {
 		weight = 0
 	}
+	slave_cost = {
+		energy = -600
+	}
 }
 
 trait_accelerated_metabolism = {
@@ -155,6 +179,9 @@ trait_accelerated_metabolism = {
 	}
 	ai_weight = {
 		weight = 0
+	}
+	slave_cost = {
+		energy = -600
 	}
 }
 
@@ -172,6 +199,9 @@ trait_accelerated_metabolism_lithoid = {
 	ai_weight = {
 		weight = 0
 	}
+	slave_cost = {
+		energy = -600
+	}
 }
 
 trait_atrophied_limbs = {
@@ -188,6 +218,9 @@ trait_atrophied_limbs = {
 	ai_weight = {
 		weight = 0
 	}
+	slave_cost = {
+		energy = -1000
+	}
 }
 
 trait_anti_violence_protocols = {
@@ -203,6 +236,9 @@ trait_anti_violence_protocols = {
 	}
 	ai_weight = {
 		weight = 0
+	}
+	slave_cost = {
+		energy = -600
 	}
 }
 
@@ -231,6 +267,9 @@ trait_logic_loop_virus = {
 	ai_weight = {
 		weight = 0
 	}
+	slave_cost = {
+		energy = -200
+	}
 }
 
 trait_scrambling_matrix = {
@@ -250,5 +289,8 @@ trait_scrambling_matrix = {
 	}
 	ai_weight = {
 		weight = 0
+	}
+	slave_cost = {
+		energy = -800
 	}
 }

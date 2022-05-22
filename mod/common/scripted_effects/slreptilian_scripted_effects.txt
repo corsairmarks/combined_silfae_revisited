@@ -5,6 +5,7 @@
 
 # THIS = country
 calculate_shadowyrep_morale = {
+	optimize_memory
 	if = {
 		limit = {
 			pop_percentage = {
@@ -99,6 +100,7 @@ calculate_shadowyrep_morale = {
 # set up starting pops - called by slreptilians.1
 # THIS = planet, capital
 generate_shadowy_evolution_start_pops = {
+	optimize_memory
 	while = {
 		count = 6
 		create_pop = {
