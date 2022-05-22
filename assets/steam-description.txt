@@ -4,7 +4,7 @@ Have you experienced the sleek, tentacled allure of Silfae's "Animated Octee-lan
 There are other mods which contain the same portraits, so why should you choose this one?  This mod fixes the old code so that the special starting system (containing your former machine overlords) is playable and ensures all the assets are usable by players.  Please enjoy my adaptation of Silfae's custom empire into modern Stellaris.
 
 [h1]Changes[/h1]
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.3 "Libra," the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.4 "Cepheus," the latest version when this was written.  Updates include:
 [list]
 [*]Remove duplication in room selector
 [*]Remove alternate (blank) city graphics - mostly they were to try and get a static diplomacy backdrop but only worked for colonies with city size 4; set the [b]graphical_culture[/b] to not define a cityset
@@ -52,7 +52,7 @@ This mod now overrides two diplomatic actions (Close Borders and Declare Rivalry
 
 The Launcher will tell you that some mods are outdated - that is because the dependency is out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mod.
 
-Built for Stellaris version 3.3 "Libra."  Not compatible with achievements.
+Built for Stellaris version 3.4 "Cepheus."  Not compatible with achievements.
 
 [h3]Event Preemption[/h3]
 In order to allow the Beep-Boops to have a planet in the same system as the player, this mod replaces the event [b]action.85[/b] that is responsible for (on a monthly basis) transferring control of any colonies not owned by the system's starbase's owner to the starbase owner. The Beep-Boops have a special exception, otherwise this event continues to function as normal.

@@ -6,7 +6,7 @@ There are other mods which contain the same portraits, so why should you choose 
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.3 "Libra," the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.4 "Cepheus," the latest version when this was written.  Updates include:
 
 * Remove duplication in room selector
 * Remove alternate (blank) city graphics - mostly they were to try and get a static diplomacy backdrop but only worked for colonies with city size 4; set the `graphical_culture` to not define a cityset
@@ -47,7 +47,7 @@ This mod now overrides two diplomatic actions (Close Borders and Declare Rivalry
 
 The Launcher will tell you that some mods are outdated - that is because the dependency is out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mod.
 
-Built for Stellaris version 3.3 "Libra."  Not compatible with achievements.
+Built for Stellaris version 3.4 "Cepheus."  Not compatible with achievements.
 
 ### Event Preemption
 
@@ -101,6 +101,13 @@ This mod preempts one event and overrides a deposit and two diplomatic actions, 
 * 3.1.1 Don't break the base game diplomacy rooms - fix is to name the new file to load _before_ the built-in file
 * 3.1.2 No longer ignore portrait duplication for the pre-scripted empire
 * 4.0.0 Update for compatibility with Stellaris version 3.3 "Libra"
+* 5.0.0 Update for Stellaris version 3.4 "Cepheus"
+    * Use memory optimization feature for effects and a trigger
+    * Move deprecated `localisation_synced` into regular localisation
+    * Update Beep-Boop special extra defensive army
+    * Remove starbase code duplication - the Beep-Boops can just have a regular starbase now
+    * All static text moved to localisation (name lists, species random names, prescripted empire, custom starting system)
+    * Update overridden diplomatic actions to account for new Overlord systems
 
 ## Source Code
 
