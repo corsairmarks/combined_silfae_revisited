@@ -470,7 +470,8 @@ generate_additional_xenos_pops = {
 # Set up the decadent synths
 # this = planet
 setup_peepboop_homeworld = {
-	optimize_memory
+	# optimize_memory
+	save_event_target_as = peepboop_planet
 	clear_deposits = yes
 	create_species = {
 		name = PRESCRIPTED_species_name_peepboop1
@@ -501,7 +502,7 @@ setup_peepboop_homeworld = {
 		}
 		type = default
 		species = event_target:peepboop_species
-		name_list = AI
+		name_list = MACHINE1
 		flag = {
 			icon= {
 				category = "special"
@@ -563,15 +564,11 @@ setup_peepboop_homeworld = {
 			give_technology = { tech = tech_planetary_infrastructure_1	message = no }
 			give_technology = { tech = tech_corvette_hull_1				message = no }
 			give_technology = { tech = tech_corvette_build_speed		message = no }
-			give_technology = { tech = tech_faux_starbase_1				message = no }
-			give_technology = { tech = tech_faux_starbase_2				message = no }
 			create_ship_design = { design = DESIGN_military_station_small_point_defense_peepboop }
 			add_ship_design = last_created_design
 			create_ship_design = { design = DESIGN_military_station_small_line_peepboop }
 			add_ship_design = last_created_design
 			create_ship_design = { design = DESIGN_military_station_small_strike_craft_peepboop }
-			add_ship_design = last_created_design
-			create_ship_design = { design = NAME_starbase_faux_spaceport_peepboop }
 			add_ship_design = last_created_design
 			create_starting_leaders = yes
 		}
@@ -641,37 +638,6 @@ setup_peepboop_homeworld = {
 			surveyor = event_target:peepboop_country
 		}
 		create_fleet = {
-			name = NAME_FLEET_peepboop_station_fleet
-			effect = {
-				set_owner = event_target:peepboop_country
-				set_location = {
-					target = prevprev
-					distance = 10
-					angle = random
-				}
-				create_ship = {
-					name = NAME_SHIP_peepboop_station_ship
-					design = NAME_starbase_faux_spaceport_peepboop
-					prefix = no
-				}
-				create_ship = {
-					name = random
-					design = DESIGN_military_station_small_point_defense_peepboop
-					prefix = no
-				}
-				create_ship = {
-					name = random
-					design = DESIGN_military_station_small_line_peepboop
-					prefix = no
-				}
-				create_ship = {
-					name = random
-					design = DESIGN_military_station_small_strike_craft_peepboop
-					prefix = no
-				}
-			}
-		}
-		create_fleet = {
 			effect = {
 				set_owner = event_target:peepboop_country
 				create_ship = {
@@ -707,6 +673,33 @@ setup_peepboop_homeworld = {
 					target = prevprev
 					distance = 10
 					angle = random
+				}
+			}
+		}
+	}
+	event_target:peepboop_planet = {
+		create_starbase = {
+			size = starbase_starport
+			owner = event_target:peepboop_country
+			building = crew_quarters
+			module = shipyard
+			module = solar_panel_network
+			effect = {
+				set_starbase_flag = peepboop_country_starbase@event_target:peepboop_country
+				create_ship = {
+					name = random
+					design = DESIGN_military_station_small_point_defense_peepboop
+					prefix = no
+				}
+				create_ship = {
+					name = random
+					design = DESIGN_military_station_small_line_peepboop
+					prefix = no
+				}
+				create_ship = {
+					name = random
+					design = DESIGN_military_station_small_strike_craft_peepboop
+					prefix = no
 				}
 			}
 		}
