@@ -1,5 +1,5 @@
 horrorworm_01 = {
-	selectable = { has_necroids = no }
+	selectable = { always = yes }
 	fallback = molluscoid_01
 	ship_color = yes
 	ship_lighting = {
@@ -23,6 +23,7 @@ horrorworm_01 = {
 
 horrorworm_02 = {
 	selectable = { has_necroids = yes }
+	has_city_graphics = no
 	fallback = necroid_01
 	ship_color = yes
 	ship_lighting = {

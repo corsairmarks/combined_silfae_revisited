@@ -11,6 +11,14 @@ HRWRM = {
 	move_pop_sound_effect = "moving_pop_confirmation"
 }
 
+# just so this city-set appears
+HRWRM1 = {
+	playable = { has_necroids = yes }
+	archetype = BIOLOGICAL
+	graphical_culture = horrorworm_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+}
+
 HRWRM2 = {
 	playable = { has_necroids = yes }
 	archetype = BIOLOGICAL
