@@ -4,12 +4,12 @@ tech_hollowrift = {
 	category = { biology }
 	start_tech = yes
 	potential = {
-		owner_main_species = { is_species_class = HRWRM }
+		owner_main_species = { is_horrorworm_species_class = yes }
 	}
 	weight_modifier = {
 		modifier = {
 			factor = 0
-			NOT = { owner_main_species = { is_species_class = HRWRM } }
+			owner_main_species = { is_horrorworm_species_class = no }
 		}
 		modifier = {
 			factor = 0
