@@ -2,3 +2,15 @@ ahwpr_has_apocalypse = {
 	optimize_memory
 	host_has_dlc = "Apocalypse"
 }
+
+ahwpr_has_apocalypse_not_necroids = {
+	optimize_memory
+	ahwpr_has_apocalypse = yes
+	has_necroids = no
+}
+
+ahwpr_has_apocalypse_and_necroids = {
+	optimize_memory
+	ahwpr_has_apocalypse = yes
+	has_necroids = yes
+}
