@@ -100,6 +100,7 @@ In game terms, the fourth color of Phenotype 9 is the same as the third color.
     * Use memory optimization feature for effects and a trigger
     * All static text moved to localisation (name lists, species random names, prescripted empire, custom starting system)
     * Update the default Dimensional Horror ship design to be valid by default
+* 5.1.0 Add a second, optional Eltryrad shipset option that falls back to the Necroid ship appearance and requires the Necroids DLC to use
 
 ## Source Code
 
