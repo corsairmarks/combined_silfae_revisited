@@ -102,4 +102,4 @@ Hosted on [url=https://github.com/corsairmarks/holosphere_rising_revisited]GitHu
 [h1]Special Thanks[/h1]
 The Silfae's Revisited series of mods were inspired by Endugu's approach of requiring the original mod for graphics and then adding or altering code for compatibility. This helps the original modder get credit. Thanks to both Endugu and Silfae!
 
-[url=https://discord.gg/bHVez2C][img]https://i.imgur.com/4Und3QN.png[/img][/url]
+[url=https://discord.gg/2qjkAF8DY7][img]https://i.imgur.com/4Und3QN.png[/img][/url]
