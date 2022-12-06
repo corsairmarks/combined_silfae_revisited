@@ -30,7 +30,7 @@ building_polarizing_nexus_1 = {
 	triggered_country_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_technology = tech_global_production_strategy }
+			owner = { has_technology = tech_construction_templates }
 		}
 		country_resource_max_add = 5000
 	}
@@ -78,7 +78,7 @@ building_polarizing_nexus_2 = {
 	triggered_country_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_technology = tech_global_production_strategy }
+			owner = { has_technology = tech_construction_templates }
 		}
 		country_resource_max_add = 7500
 	}
@@ -126,7 +126,7 @@ building_polarizing_nexus_3 = {
 	triggered_country_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_technology = tech_global_production_strategy }
+			owner = { has_technology = tech_construction_templates }
 		}
 		country_resource_max_add = 10000
 	}
