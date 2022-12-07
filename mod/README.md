@@ -64,7 +64,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 * 4.0.0 Update for Stellaris version 3.4 "Cepheus"
     * Update shared triggers
     * All static text moved to localisation (name lists, species random names, prescripted empire, custom starting system)
-* 4.0.1 Fix incorrect localisation key for sequentially-names fleets in the Saurischian name list
+* 4.0.1 Fix incorrect localisation key for sequentially-named fleets in the Saurischian name list
 * 5.0.0 Update for Stellaris version 3.6 "Orion" (and changes from version 3.5 "Fornax")
     * Minor namelist updates
     * Update `hair` to `attachment`
