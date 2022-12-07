@@ -42,8 +42,6 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 [*]Support being able to choose a single-gender species (new in Stellaris 3.2)
 [/list]
 [h2]Compatibility[/h2]
-Much less compatible than the other Silfae's Revisited series mods because this mod makes significantly more gameplay changes. It is explicitly incompatible with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2579736379]Animated Silicoid Portraits: Revisited[/url] unless you use the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2596642632]compatibility patch[/url].
-
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number. This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed. You can safely ignore the out-of-date warning for the dependency mods.
 
 Built for Stellaris version 3.6 "Orion." Not compatible with achievements.

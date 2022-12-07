@@ -39,8 +39,6 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 
 ## Compatibility
 
-This mod is much less compatible than the other Silfae's Revisited series mods.  This is because this mod makes significantly more gameplay changes.  It is explicitly incompatible with [Animated Silicoid Portraits: Revisited](https://steamcommunity.com/sharedfiles/filedetails/?id=2579736379) unless you use the [compatibility patch](https://steamcommunity.com/sharedfiles/filedetails/?id=2596642632).
-
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
 Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.
