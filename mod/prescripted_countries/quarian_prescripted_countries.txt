@@ -1,6 +1,6 @@
 quarianfleet1 = {
 	playable = has_federations_dlc
-	ship_prefix = PRESCRIPTED_ship_prefix_quarianfleet1
+	ship_prefix = "" # 3.6 does not allow references to the BLANK_STRING key, but an empty string literal is ok
 	spawn_enabled = yes
 	ignore_portrait_duplication = no
 	species = {
