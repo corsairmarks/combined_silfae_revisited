@@ -99,7 +99,7 @@ This mod preempts one event from the base game related to restoring relic worlds
     * Minor namelist updates
     * Update `hair` to `attachment`
     * Craftworld Arcane Replicators account for species with Exotic Metabolism and conditionally produces Exotic Gas
-    * Environmentalists begin the game with a Ranger Lodge
+    * Environmentalists begin the game with a Ranger Lodge, if there is space
     * Relentlesss Industrialists begin the game with a Coordinated Fulfillment Center, if there is space
     * Mechanists will receive the correctly-specialized Robot Pops
 
