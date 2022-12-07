@@ -1,4 +1,4 @@
-**_Important Update for Stellaris 3.6 "Orion":_** This mod is now even, even more compatible, thanks to improved trigger usage for Pop upkeep.  This mod no longer overrides any Pop Strata.  Thanks Paradox!
+**_Important Update for Stellaris 3.6 "Orion":_** This mod is now even, even more compatible, thanks to improved trigger usage for Pop upkeep.  This mod no longer overrides any Pop strata.  Thanks Paradox!
 
 # Overview
 
