@@ -3,6 +3,7 @@ origin_holofrixit = {
 	icon = gfx/interface/icons/origins/origins_overtuned.dds
 	picture = GFX_origin_overtuned
 	playable = { always = yes }
+	max_once_global = yes
 	possible = {
 		authority = { value = auth_holofrixit }
 		ethics = {
