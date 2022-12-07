@@ -1,4 +1,4 @@
-**_Important Update for Stellaris 3.4. "Cepheus":_** This mod is now even more compatible, thanks to the updated Pop job weighting system that accurately takes into account what resources a particular Pop is god/bad at producing.  Only the Research Director (`head_researcher`) job, 4 defense-army-spawning jobs, and 8 "complicated" drone jobs need to be overwritten now (13 versus the previous 38).  Thanks Paradox!
+**_Important Update for Stellaris 3.6 "Orion":_** This mod is now even, even more compatible, thanks to improved trigger usage for Pop upkeep.  This mod no longer overrides any Pop Strata.  Thanks Paradox!
 
 # Overview
 
@@ -8,7 +8,7 @@ There are other mods which contain these portraits, so why should you choose thi
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.4 "Cepheus," the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.6 "Orion," the latest version when this was written.  Updates include:
 
 * Update Holofrixit shipset (reuse of Unbidden) to work with current Stellaris - starbases, titans, juggernauts, and colossi fall back to molluscoid (the fallback for the Unbidden)
 * Enhance Holofrixit portrait usage:
@@ -43,15 +43,7 @@ This mod is much less compatible than the other Silfae's Revisited series mods. 
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Built for Stellaris version 3.4 "Cepheus."  Not compatible with achievements.
-
-### File Overwrites
-
-This mod overwrites all of the Pop strata to implement Holofrixit energy-based Pop upkeep (instead of food).  It's likely to break any time Stellaris makes changes to the underlying Pop stratum.  These files are completely overwritten:
-
-* `common/pop_categories/00_social_classes.txt`
-* `common/pop_categories/01_gestalt_drones.txt`
-* `common/pop_categories/02_other_categories.txt`
+Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.
 
 ### Partial Overrides
 
@@ -93,26 +85,27 @@ This mod should be added before the game has started.  If you remove it from a g
 
 ## Known Issues
 
-This mod overwrites the corresponding species class added by "Silfae's city sets updated."  Instead, the original species class from Silfae (with localisation) is used.  It also overwrites a total of 3 triggers and 13 jobs from the base game; expect to see 17 lines in error.log similar to these:
+This mod overwrites the corresponding species class added by "Silfae's city sets updated."  Instead, the original species class from Silfae (with localisation) is used.  It also overwrites a total of 4 triggers and 13 jobs from the base game; expect to see 18 lines in error.log similar to these:
 
 ```
-[01:49:48][game_singleobjectdatabase.h:148]: Object with key: head_researcher already exists, using the one at  file: common/pop_jobs/11_holofrixit_revisited_ruler_job_overrides.txt line: 6
-[01:49:48][game_singleobjectdatabase.h:148]: Object with key: enforcer already exists, using the one at  file: common/pop_jobs/12_holofrixit_revisited_specialist_job_overrides.txt line: 7
-[01:49:48][game_singleobjectdatabase.h:148]: Object with key: soldier already exists, using the one at  file: common/pop_jobs/13_holofrixit_revisited_worker_job_overrides.txt line: 6
-[01:49:48][game_singleobjectdatabase.h:148]: Object with key: coordinator already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 6
-[01:49:48][game_singleobjectdatabase.h:148]: Object with key: evaluator already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 68
-[01:49:48][game_singleobjectdatabase.h:148]: Object with key: synapse_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 101
-[01:49:48][game_singleobjectdatabase.h:148]: Object with key: brain_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 179
-[01:49:48][game_singleobjectdatabase.h:148]: Object with key: calculator already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 221
-[01:49:48][game_singleobjectdatabase.h:148]: Object with key: patrol_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 264
-[01:49:48][game_singleobjectdatabase.h:148]: Object with key: warrior_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 356
-[01:49:48][game_singleobjectdatabase.h:148]: Object with key: chronicle_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 478
-[01:49:48][game_singleobjectdatabase.h:148]: Object with key: dimensional_portal_researcher_gestalt already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 6
-[01:49:48][game_singleobjectdatabase.h:148]: Object with key: space_time_anomaly_researcher_gestalt already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 237
-[01:49:49][game_singleobjectdatabase.h:148]: Object with key: Silfae-Holofrixit already exists, using the one at  file: common/species_classes/zz_silfae_cities_holofrixit_exclude.txt line: 2
-[01:49:51][game_singleobjectdatabase.h:148]: Object with key: complex_specialist_job_check_trigger already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 1
-[01:49:51][game_singleobjectdatabase.h:148]: Object with key: is_organic_species already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 20
-[01:49:51][game_singleobjectdatabase.h:148]: Object with key: is_robotic_species already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 38
+[04:11:29][game_singleobjectdatabase.h:165]: Object with key: Silfae-Holofrixit already exists, using the one at  file: common/species_classes/zz_silfae_cities_holofrixit_exclude.txt line: 2
+[04:11:31][game_singleobjectdatabase.h:165]: Object with key: has_energy_upkeep already exists, using the one at  file: common/scripted_triggers/01_holofrixit_revisited_scripted_trigger_overrides.txt line: 1
+[04:11:31][game_singleobjectdatabase.h:165]: Object with key: complex_specialist_job_check_trigger already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 1
+[04:11:31][game_singleobjectdatabase.h:165]: Object with key: is_organic_species already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 20
+[04:11:31][game_singleobjectdatabase.h:165]: Object with key: is_robotic_species already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 38
+[04:11:32][game_singleobjectdatabase.h:165]: Object with key: head_researcher already exists, using the one at  file: common/pop_jobs/11_holofrixit_revisited_ruler_job_overrides.txt line: 6
+[04:11:32][game_singleobjectdatabase.h:165]: Object with key: enforcer already exists, using the one at  file: common/pop_jobs/12_holofrixit_revisited_specialist_job_overrides.txt line: 7
+[04:11:32][game_singleobjectdatabase.h:165]: Object with key: soldier already exists, using the one at  file: common/pop_jobs/13_holofrixit_revisited_worker_job_overrides.txt line: 6
+[04:11:32][game_singleobjectdatabase.h:165]: Object with key: coordinator already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 6
+[04:11:32][game_singleobjectdatabase.h:165]: Object with key: evaluator already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 56
+[04:11:32][game_singleobjectdatabase.h:165]: Object with key: synapse_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 107
+[04:11:32][game_singleobjectdatabase.h:165]: Object with key: brain_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 171
+[04:11:32][game_singleobjectdatabase.h:165]: Object with key: calculator already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 213
+[04:11:32][game_singleobjectdatabase.h:165]: Object with key: patrol_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 256
+[04:11:32][game_singleobjectdatabase.h:165]: Object with key: warrior_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 348
+[04:11:32][game_singleobjectdatabase.h:165]: Object with key: chronicle_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 470
+[04:11:32][game_singleobjectdatabase.h:165]: Object with key: dimensional_portal_researcher_gestalt already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 6
+[04:11:32][game_singleobjectdatabase.h:165]: Object with key: space_time_anomaly_researcher_gestalt already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 237
 ```
 
 ## Changelog
@@ -176,6 +169,13 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Pop categories (social strata) updated with underlying trade multiplier changes
     * All static text moved to localisation
 * 5.1.0 Further enhancements for Stellaris version 3.4 "Cepheus" - add slave cost adjustments for the custom traits
+* 6.0.0 Update for Stellaris version 3.6 "Orion" (and changes from version 3.5 "Fornax")
+    * Minor namelist updates
+    * Update `hair` to `attachment`
+    * Use the updated file path for the origin icon
+    * Update game rule overrides with changes from the base game (affects pop assembly)
+    * Update Pop jobs with underlying game changes (only gestalt jobs required updating)
+    * Remove Pop category (social strata) overrides - no longer necessary
 
 ## Source Code
 
