@@ -58,8 +58,8 @@ This mod should be added before the game has started.  If you remove it from a g
 This mod preempts one event from the base game related to restoring relic worlds to ecumenopoleis (`mega.200`) and a bombardment stance (`armageddon`).  Expect to see two lines in error.log like these:
 
 ```
-[23:27:00][game_singleobjectdatabase.h:147]: Object with key: armageddon already exists, using the one at  file: common/bombardment_stances/01_eldar_revisited_bombardment_stance_overrides.txt line: 1
-[23:27:10][eventmanager.cpp:361]: an event with id [mega.201] already exists!  file: events/megacorp_events.txt line: 211
+[21:46:24][game_singleobjectdatabase.h:165]: Object with key: armageddon already exists, using the one at  file: common/bombardment_stances/01_eldar_revisited_bombardment_stance_overrides.txt line: 1
+[21:46:26][eventmanager.cpp:368]: an event with id [mega.201] already exists!  file: events/megacorp_events.txt line: 235
 ```
 
 ## Changelog
