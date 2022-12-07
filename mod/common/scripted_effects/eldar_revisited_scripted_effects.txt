@@ -808,6 +808,15 @@ generate_eldar_system_final_pass = {
 		aepr_add_planet_appropriate_generator_district = yes
 		aepr_add_planet_appropriate_mining_district = yes
 	}
+	# species-specific deposits
+	if = {
+		limit = {
+			NOT = { has_planet_class = pc_city }
+			is_ringworld = no
+			owner = { any_owned_pop = { has_trait = trait_exotic_metabolism } }
+		}
+		add_deposit = d_exotic_mountain
+	}
 }
 
 # duplicates the base game's Shroud creation code - which is unfortuantely duplicated/near-duplicated multiple times but none of them in an reusable effect
@@ -873,7 +882,6 @@ aepr_add_planet_appropriate_mining_district = {
 		add_district = district_mining
 	}
 }
-
 
 # this = planet
 aepr_add_planet_appropriate_generator_district = {
