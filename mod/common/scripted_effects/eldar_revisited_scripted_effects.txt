@@ -874,7 +874,7 @@ generate_eldar_system_final_pass = {
 	# species-specific deposits
 	if = {
 		limit = {
-			NOT = { has_planet_class = pc_city }
+			NOT = { is_planet_class = pc_city }
 			is_ringworld = no
 			owner = { any_owned_pop = { has_trait = trait_exotic_metabolism } }
 		}
