@@ -294,6 +294,14 @@ generate_eldar_system_start_buildings_and_districts = {
 		}
 		if = {
 			limit = {
+				# restriction match those on building_ranger_lodge
+				NOR = {
+					is_planet_class = pc_city
+					is_planet_class = pc_hive
+					is_planet_class = pc_machine
+					is_planet_class = pc_relic
+				}
+				is_artificial = no
 				owner = {
 					has_valid_civic = civic_environmentalist
 				}
@@ -874,7 +882,10 @@ generate_eldar_system_final_pass = {
 	# species-specific deposits
 	if = {
 		limit = {
-			NOT = { is_planet_class = pc_city }
+			NOR = {
+				is_planet_class = pc_city
+				is_planet_class = pc_relic
+			}
 			is_ringworld = no
 			owner = { any_owned_pop = { has_trait = trait_exotic_metabolism } }
 		}
