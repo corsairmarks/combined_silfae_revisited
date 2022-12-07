@@ -102,6 +102,7 @@ This mod preempts one event from the base game related to restoring relic worlds
     * Environmentalists begin the game with a Ranger Lodge, if there is space
     * Relentlesss Industrialists begin the game with a Coordinated Fulfillment Center, if there is space
     * Mechanists will receive the correctly-specialized Robot Pops
+* 6.0.1 Ensure Eldar attachments are named "Hairstyle"
 
 ## Source Code
 
