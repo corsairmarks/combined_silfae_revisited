@@ -71,6 +71,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 * 5.0.0 Update for Stellaris version 3.6 "Orion" (and changes from version 3.5 "Fornax")
     * Minor namelist updates
     * Update `hair` to `attachment`
+* 5.0.1 Ensure Xirmian attachments are named "Hairstyle"
 
 ## Source Code
 
