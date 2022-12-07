@@ -4,7 +4,7 @@ Have you seen the fantastic, animated portraits from Silfae's "Animated Hyena Po
 There are lots of other mods which contain these portraits, so why should you choose this one?  None of the others update the custom solar system initializer, but this one does!  Please enjoy my translation of Silfae's custom empire into modern Stellaris.
 
 [h1]Changes[/h1]
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.4 "Cepheus," the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.6 "Orion," the latest version when this was written.  Updates include:
 [list]
 [*]Fix the broken portrait clothing selector for male rulers
 [*]Update the namelist to account for all built-in army types, remove obsolete entries
@@ -19,7 +19,7 @@ Compatible with any mod that does not add the same portraits, species class, or 
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Built for Stellaris version 3.4 "Cepheus."  Not compatible with achievements.
+Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.
 
 [h3]Dependencies[/h3]
 In order for this mod to function, you [b]must[/b] install these two mods and load them before this one:
@@ -33,7 +33,7 @@ This mod should be added before the game has started.  If you remove it from a g
 [h2]Known Issues[/h2]
 This mod overwrites the corresponding species class added by "Silfae's city sets updated" so that it will not be available for use.  Instead, the original species class from Silfae (with localisation) is used.  Expect to see one line in error.log like this:
 [code]
-[23:27:00][game_singleobjectdatabase.h:147]: Object with key: Silfae-Hyena already exists, using the one at  file: common/species_classes/zz_silfae_cities_hyenafolk_exclude.txt line: 2
+[23:27:00][game_singleobjectdatabase.h:165]: Object with key: Silfae-Hyena already exists, using the one at  file: common/species_classes/zz_silfae_cities_hyenafolk_exclude.txt line: 2
 [/code]
 [h2]Changelog[/h2]
 See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2576290763]Change Notes[/url]
