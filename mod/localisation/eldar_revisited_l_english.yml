@@ -17,7 +17,6 @@
  # prescripted empire
  EMPIRE_DESIGN_eldarcraft1: "Ulthwé Craftworld"
  EMPIRE_DESIGN_eldarcraft1_desc: "The Eldar are an ancient alien race whose vast empire once expanded the width and breadth of the known galaxy. Their empire was without equal, and they counted themselves masters of the stars. But millennia ago, their overweening pride and their fall into hedonistic practices led to a cataclysm that all but eradicated their kind and led to the birth of the Chaos God Slaanesh. Despite their boundless power, the heart of their civilisation was torn out by this catastrophe of their own making, forcing the surviving Eldar to flee upon gigantic starships called Craftworlds. Now they cling to survival by a thread, fighting the horrors of the galaxy with ritualised discipline and consummate skill. Though highly advanced and feared across the galaxy, the Eldar are a dying race - a shadow of their former glory - their race teeters on the brink of annihilation."
- PRESCRIPTED_ship_prefix_eldarcraft1: "$BLANK_STRING$"
  PRESCRIPTED_adjective_eldarcraft1: "Ulthwé"
  PRESCRIPTED_species_name_eldarcraft1: "Eldar"
  PRESCRIPTED_species_plural_eldarcraft1: "Eldar"
