@@ -4,7 +4,7 @@ Have you seen the enviro-suited intensity of Silfae's "Animated Quarian Portrait
 There are lots of other mods which contain the same or similar portraits, so why should you choose this one? Silfae's art style meshes well with Stellaris, or maybe you want to play her version of the Migrant Fleet - content which this mod again makes playable.  Please enjoy my translation of Silfae's custom empire into modern Stellaris.
 
 [h1]Changes[/h1]
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.4 "Cepheus," the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.6 "Orion," the latest version when this was written.  Updates include:
 [list]
 [*]Fix invalid texture reference in [b]quarian_female_01_portrait.mesh[/b] (caused lots of error logs)
 [*]Improve Quarian clothing selectors to be influenced by Pop job
@@ -34,7 +34,7 @@ Compatible with any other mod that does not add the same portraits, species clas
 
 The Launcher will tell you that some mods are outdated - that is because the dependency is out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mod.
 
-Built for Stellaris version 3.4 "Cepheus."  Not compatible with achievements.
+Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.
 
 [h3]Dependencies[/h3]
 In order for this mod to function, you [b]must[/b] install the following mod and load it before this one:
@@ -52,7 +52,7 @@ Silfae's original mod does not include graphics for ecumenopoleis, so they will 
 
 This mod overrides [b]origin_void_dwellers[/b] in order to add its new initializer to the allowed list, which generates an error like this:
 [code]
-[23:27:16][game_singleobjectdatabase.h:147]: Object with key: origin_void_dwellers already exists, using the one at  file: common/governments/civics/05_quarian_revisited_origin_overrides.txt line: 2
+[23:27:16][game_singleobjectdatabase.h:165]: Object with key: origin_void_dwellers already exists, using the one at  file: common/governments/civics/05_quarian_revisited_origin_overrides.txt line: 2
 [/code]
 [h2]Changelog[/h2]
 See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2583358569]Change Notes[/url]
