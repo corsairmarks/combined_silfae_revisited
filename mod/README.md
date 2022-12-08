@@ -92,7 +92,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Update `hair` to `attachment`
     * Update custom traits to follow new gene-modding rules and also be weighted for assembly chance
     * Ensure Sleek Reptilian "humanoid" attachments are named "Hairstyle"
-* 5.0.1 Update empire random names based on changes from Stellaris version 3.6 "Orion"
+    * Update empire random names based on changes from Stellaris version 3.6 "Orion"
 
 ## Source Code
 
