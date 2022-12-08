@@ -11,12 +11,11 @@ octeelan1 = {
 		gender = female
 		trait = trait_aquatic
 		trait = trait_charismatic
-		# removed trait_rapid_breeders because trait_aquatic is now 2 points
+		# swap trait_rapid_breeders to trait_aquatic to reflect their undersea RP
 		# trait = trait_rapid_breeders
-		trait = trait_communal
-		# replaced trait_wasteful with trait_unruly in order to afford trait_aquatic
-		# trait = trait_wasteful
-		trait = trait_unruly
+		# remove trait_communal because because trait_charismatic is now 2 points
+		# trait = trait_communal
+		trait = trait_wasteful
 		trait = trait_decadent
 	}
 	secondary_species = {
