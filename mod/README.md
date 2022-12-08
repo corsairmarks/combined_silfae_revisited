@@ -106,6 +106,7 @@ In game terms, the fourth color of Phenotype 9 is the same as the third color.
     * Update `hair` to `attachment`
     * Add new roles to the Dimensional Horrorworm ship computers
     * Prevent AI from using dark matter reactors or thrusters on Dimensional Horrorworms (the game applied this change to the built-in dark matter reactors and thrusters)
+* 6.0.1 Duplicate the random names for the additional species classes
 
 ## Source Code
 
