@@ -1,5 +1,11 @@
 trait_fear_dampeners = {
 	cost = 1
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 0.5
 	initial = no
 	randomized = no
@@ -9,10 +15,21 @@ trait_fear_dampeners = {
 		army_morale = 0.2
 		army_defense_health_mult = -0.1
 	}
+	assembly_score = {
+		modifier = {
+			add = 0.75
+			from = {
+				has_fortress_designation = yes
+			}
+		}
+	}
 }
 
 trait_unedible = {
 	cost = -1
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
 	potential_crossbreeding_chance = 0.5
 	initial = no
 	randomized = no
@@ -32,6 +49,9 @@ trait_unedible = {
 
 trait_unedible_lithoid = {
 	cost = -1
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
 	potential_crossbreeding_chance = 0.5
 	initial = no
 	randomized = no
@@ -50,6 +70,9 @@ trait_unedible_lithoid = {
 
 trait_neutered = {
 	cost = -2
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
 	potential_crossbreeding_chance = 0.5
 	initial = no
 	randomized = no
@@ -70,6 +93,12 @@ trait_neutered = {
 
 trait_indoctrinated = {
 	cost = 2
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 0.5
 	initial = no
 	randomized = no
@@ -86,10 +115,23 @@ trait_indoctrinated = {
 	slave_cost = {
 		energy = -200
 	}
+	assembly_score = {
+		modifier = {
+			subtract = 0.5
+			from = { has_research_designation = yes }
+		}
+		modifier = {
+			subtract = 0.5
+			from = { has_building = building_order_keep }
+		}
+	}
 }
 
 trait_genetic_degradation = {
 	cost = -2
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
 	potential_crossbreeding_chance = 0.5
 	initial = no
 	randomized = no
@@ -110,6 +152,9 @@ trait_genetic_degradation = {
 trait_genetic_degradation_lithoid = {
 	icon = gfx/interface/icons/traits/trait_genetic_degradation.dds
 	cost = -2
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
 	potential_crossbreeding_chance = 0.5
 	initial = no
 	randomized = no
@@ -129,6 +174,9 @@ trait_genetic_degradation_lithoid = {
 
 trait_brittle_bones = {
 	cost = -2
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
 	potential_crossbreeding_chance = 0.5
 	initial = no
 	randomized = no
@@ -146,10 +194,30 @@ trait_brittle_bones = {
 	slave_cost = {
 		energy = -800
 	}
+	assembly_score = {
+		modifier = {
+			subtract = 1.0
+			from = {
+				OR = {
+					has_mining_designation = yes
+					has_rural_designation = yes
+				}
+			}
+		}
+		modifier = {
+			subtract = 1.5
+			from = {
+				has_fortress_designation = yes
+			}
+		}
+	}
 }
 
 trait_chemical_dependency = {
 	cost = -1
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
 	potential_crossbreeding_chance = 0.5
 	initial = no
 	randomized = no
@@ -169,6 +237,9 @@ trait_chemical_dependency = {
 
 trait_accelerated_metabolism = {
 	cost = -1
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
 	potential_crossbreeding_chance = 0.5
 	initial = no
 	randomized = no
@@ -187,6 +258,9 @@ trait_accelerated_metabolism = {
 
 trait_accelerated_metabolism_lithoid = {
 	cost = -1
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
 	icon = gfx/interface/icons/traits/trait_accelerated_metabolism.dds
 	potential_crossbreeding_chance = 0.5
 	initial = no
@@ -206,6 +280,9 @@ trait_accelerated_metabolism_lithoid = {
 
 trait_atrophied_limbs = {
 	cost = -2
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
 	potential_crossbreeding_chance = 0.5
 	initial = no
 	randomized = no
@@ -220,6 +297,19 @@ trait_atrophied_limbs = {
 	}
 	slave_cost = {
 		energy = -1000
+	}
+	assembly_score = {
+		modifier = {
+			subtract = 2.0
+			from = {
+				OR = {
+					has_farming_designation = yes
+					has_generator_designation = yes
+					has_mining_designation = yes
+					has_rural_designation = yes
+				}
+			}
+		}
 	}
 }
 
@@ -240,6 +330,14 @@ trait_anti_violence_protocols = {
 	slave_cost = {
 		energy = -600
 	}
+	assembly_score = {
+		modifier = {
+			subtract = 2.0
+			from = {
+				has_fortress_designation = yes
+			}
+		}
+	}
 }
 
 trait_logic_loop_virus = {
@@ -257,6 +355,7 @@ trait_logic_loop_virus = {
 					has_technology = tech_droid_workers
 				}
 			}
+			NOT = { has_policy_flag = ai_outlawed }
 		}
 	}
 	modifier = {
@@ -270,6 +369,16 @@ trait_logic_loop_virus = {
 	slave_cost = {
 		energy = -200
 	}
+	assembly_score = {
+		modifier = {
+			subtract = 1.5
+			from = { has_research_designation = yes }
+		}
+		modifier = {
+			subtract = 1.5
+			from = { has_building = building_order_keep }
+		}
+	}
 }
 
 trait_scrambling_matrix = {
@@ -282,6 +391,7 @@ trait_scrambling_matrix = {
 		from = {
 			is_regular_empire = yes
 			has_technology = tech_droid_workers
+			NOT = { has_policy_flag = ai_outlawed }
 		}
 	}
 	modifier = {
