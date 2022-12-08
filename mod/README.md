@@ -174,6 +174,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Update game rule overrides with changes from the base game (affects pop assembly)
     * Update Pop jobs with underlying game changes (only gestalt jobs required updating)
     * Remove Pop category (social strata) overrides - no longer necessary
+* 6.0.1 Limit the game to spawning at most one empire with the Hive-Network origin
 
 ## Source Code
 
