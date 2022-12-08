@@ -37,6 +37,7 @@ dimensional_horrorworm = {
 	required_component_set = "sensor_components"
 	is_designable = yes
 	default_behavior = line
+	ship_roles = { gunship artillery }
 	construction_type = starbase_shipyard
 	resources = {
 		category = ships
