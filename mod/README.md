@@ -6,7 +6,7 @@ There are other mods which contain these portraits, so why should you choose thi
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.4 "Cepheus," the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.6 "Orion," the latest version when this was written.  Updates include:
 
 * Fix the included Prethoryn-swap shipset `horrorworm_01`
     * Ensure the ship entities are blank for ship sections and instead use the ship hull as the attachment point for the modified Prethoryn graphics
@@ -37,7 +37,7 @@ Compatible with any mod that does not add the same portraits, species class, shi
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Built for Stellaris version 3.4 "Cepheus."  Not compatible with achievements.  The shipset does not have NSC classes.
+Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.  The shipset does not have NSC classes.
 
 ### Dependencies
 
@@ -59,7 +59,7 @@ The solar system initializer for Hollow Rift fills the planet with ancient ruins
 This mod overwrites the corresponding species class added by "Silfae's city sets updated" so that it will not be available for use.  Instead, the original species class from Silfae (with localisation) is used.  Expect to see one line in error.log like this:
 
 ```
-[23:27:00][game_singleobjectdatabase.h:147]: Object with key: Silfae-Horror already exists, using the one at  file: common/species_classes/zz_silfae_cities_horror_exclude.txt line: 2
+[23:27:00][game_singleobjectdatabase.h:165]: Object with key: Silfae-Horror already exists, using the one at  file: common/species_classes/zz_silfae_cities_horror_exclude.txt line: 2
 ```
 
 ### Stellaris Bugs
@@ -101,6 +101,11 @@ In game terms, the fourth color of Phenotype 9 is the same as the third color.
     * All static text moved to localisation (name lists, species random names, prescripted empire, custom starting system)
     * Update the default Dimensional Horror ship design to be valid by default
 * 5.1.0 Add a second, optional Eltryrad shipset option that falls back to the Necroid ship appearance and requires the Necroids DLC to use
+* 6.0.0 Update for Stellaris version 3.6 "Orion" (and changes from version 3.5 "Fornax")
+    * Minor namelist updates
+    * Update `hair` to `attachment`
+    * Add new roles to the Dimensional Horrorworm ship computers
+    * Prevent AI from using dark matter reactors or thrusters on Dimensional Horrorworms (the game applied this change to the built-in dark matter reactors and thrusters)
 
 ## Source Code
 
