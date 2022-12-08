@@ -175,6 +175,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Update Pop jobs with underlying game changes (only gestalt jobs required updating)
     * Remove Pop category (social strata) overrides - no longer necessary
 * 6.0.1 Limit the game to spawning at most one empire with the Hive-Network origin
+* 6.0.2 Update empire random names based on changes from Stellaris version 3.6 "Orion"
 
 ## Source Code
 
