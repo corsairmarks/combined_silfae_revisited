@@ -56,7 +56,7 @@ coordinator = {
 evaluator = {
 	category = complex_drone
 	condition_string = DRONE_JOB_TRIGGER
-	building_icon = building_simulation_1
+	building_icon = building_holo_theatres # building_simulation_1 uses building_holo_theatres as its icon - probably what was intended by the game designers when they wrote "building_simulation_1" here
 
 	possible_pre_triggers = {
 		has_owner = yes
