@@ -144,8 +144,11 @@ utility_component_template = {
 		weight = 5
 		modifier = {
 			factor = 0.0
-			is_country_type = default
-			has_monthly_income = { resource = sr_dark_matter value <= 0 }
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
 		}
 	}
 }
