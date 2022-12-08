@@ -4,7 +4,7 @@ Have you experienced the sleek, tentacled allure of Silfae's "Animated Octee-lan
 There are other mods which contain the same portraits, so why should you choose this one?  This mod fixes the old code so that the special starting system (containing your former machine overlords) is playable and ensures all the assets are usable by players.  Please enjoy my adaptation of Silfae's custom empire into modern Stellaris.
 
 [h1]Changes[/h1]
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.4 "Cepheus," the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.6 "Orion," the latest version when this was written.  Updates include:
 [list]
 [*]Remove duplication in room selector
 [*]Remove alternate (blank) city graphics - mostly they were to try and get a static diplomacy backdrop but only worked for colonies with city size 4; set the [b]graphical_culture[/b] to not define a cityset
@@ -23,8 +23,8 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     [list]
     [*]Octee-lan species
         [list]
-        [*]Remove Communal to bring trait point total back to up 0 - this is because Charismatic is now 2 points now
-        [*]Remove Wasteful and add Unruly in order to add Aquatic (requires the Aquatic Species Pack)
+        [*]Swap Rapid Breeders to Aquatic (requires the Aquatic Species Pack) to fit the role-play better
+        [*]Remove Communal because Charismatic is now 2 trait points now
         [/list]
     [*]Uses Origin: Syncretic Evolution (the Quoi-chi are the secondary species; requires Utopia)
     [*]Uses Aquatic cities and ships (requires the Aquatic Species Pack)
@@ -33,9 +33,9 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 [*]Update custom starting initializer (Tsukimi Pool):
     [list]
     [*]Now supports a variety of civics and origin starts (all the built-in ones)
-    [*]Muubul species: add Aquatic because they had an extra point
-    [*]Yuibitt species: add Aquatic because they had an extra point
-    [*]Xueench species: add Aquatic (which allows the species to have 0 points but -1 picks)
+    [*]Muubul species: add Natural Engineers because they had an extra trait point
+    [*]Yuibitt species: add Aquatic and Slow Learners to use all available trait points
+    [*]Xueench species: add Quick Learners because they had an extra trait point
     [*]Your former overlords, the Beep Boops, will spawn if the Synthetic Dawn DLC is active
     [*]Beep-Boop species: removed High Maintenance, add Efficient Processors so that all points are spent
     [*]Beep-Boop empire: now a regular empire, with a special exception allowing them to have a colony in the same system (in order to fight you)
@@ -52,7 +52,7 @@ This mod now overrides two diplomatic actions (Close Borders and Declare Rivalry
 
 The Launcher will tell you that some mods are outdated - that is because the dependency is out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mod.
 
-Built for Stellaris version 3.4 "Cepheus."  Not compatible with achievements.
+Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.
 
 [h3]Event Preemption[/h3]
 In order to allow the Beep-Boops to have a planet in the same system as the player, this mod replaces the event [b]action.85[/b] that is responsible for (on a monthly basis) transferring control of any colonies not owned by the system's starbase's owner to the starbase owner. The Beep-Boops have a special exception, otherwise this event continues to function as normal.
@@ -68,10 +68,10 @@ This mod should be added before the game has started.  If you remove it from a g
 [h2]Known Issues[/h2]
 This mod preempts one event and overrides a deposit and two diplomatic actions, which generates four lines in the error log like this:
 [code]
-[23:27:06][game_singleobjectdatabase.h:147]: Object with key: action_make_rival already exists, using the one at  file: common/diplomatic_actions/10_octeelan_revisited_diplomatic_action_overrides.txt line: 2
-[23:27:06][game_singleobjectdatabase.h:147]: Object with key: action_close_borders already exists, using the one at  file: common/diplomatic_actions/10_octeelan_revisited_diplomatic_action_overrides.txt line: 92
+[23:27:06][game_singleobjectdatabase.h:165]: Object with key: action_make_rival already exists, using the one at  file: common/diplomatic_actions/10_octeelan_revisited_diplomatic_action_overrides.txt line: 2
+[23:27:06][game_singleobjectdatabase.h:165]: Object with key: action_close_borders already exists, using the one at  file: common/diplomatic_actions/10_octeelan_revisited_diplomatic_action_overrides.txt line: 92
 [23:27:10][eventmanager.cpp:361]: an event with id [action.85] already exists!  file: events/on_action_events_1.txt line: 8824
-[23:27:11][game_singleobjectdatabase.h:147]: Object with key: d_alien_pets_deposit already exists, using the one at  file: common/deposits/02_octeelan_revisited_planetary_deposits_overrides.txt line: 3
+[23:27:11][game_singleobjectdatabase.h:165]: Object with key: d_alien_pets_deposit already exists, using the one at  file: common/deposits/02_octeelan_revisited_planetary_deposits_overrides.txt line: 3
 [/code]
 [h2]Changelog[/h2]
 See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2584680339]Change Notes[/url]

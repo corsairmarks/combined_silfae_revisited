@@ -6,7 +6,7 @@ There are other mods which contain the same portraits, so why should you choose 
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.4 "Cepheus," the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.6 "Orion," the latest version when this was written.  Updates include:
 
 * Remove duplication in room selector
 * Remove alternate (blank) city graphics - mostly they were to try and get a static diplomacy backdrop but only worked for colonies with city size 4; set the `graphical_culture` to not define a cityset
@@ -21,16 +21,16 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 * Override Isolated Valley (`d_alien_pets_deposit`) to support new zoo building
 * Update pre-scripted empire (Kuri-octa-Xibi):
     * Octee-lan species:
-        * Remove Communal to bring trait point total back to up 0 - this is because Charismatic is now 2 points now
-        * Remove Wasteful and add Unruly in order to add Aquatic (requires the Aquatic Species Pack)
+        * Swap Rapid Breeders to Aquatic (requires the Aquatic Species Pack) to fit the role-play better
+        * Remove Communal because Charismatic is now 2 trait points now
     * Uses Origin: Syncretic Evolution (the Quoi-chi are the secondary species; requires Utopia)
     * Uses Aquatic cities and ships (requires the Aquatic Species Pack)
     * Can randomly spawn
 * Update custom starting initializer (Tsukimi Pool):
     * Now supports a variety of civics and origin starts (all the built-in ones)
-    * Muubul species: add Aquatic because they had an extra point
-    * Yuibitt species: add Aquatic because they had an extra point
-    * Xueench species: add Aquatic (which allows the species to have 0 points but -1 picks)
+    * Muubul species: add Natural Engineers because they had an extra trait point
+    * Yuibitt species: add Aquatic and Slow Learners to use all available trait points
+    * Xueench species: add Quick Learners because they had an extra trait point
     * Your former overlords, the Beep Boops, will spawn if the Synthetic Dawn DLC is active
     * Beep-Boop species: removed High Maintenance, add Efficient Processors so that all points are spent
     * Beep-Boop empire: now a regular empire, with a special exception allowing them to have a colony in the same system (in order to fight you)
@@ -47,7 +47,7 @@ This mod now overrides two diplomatic actions (Close Borders and Declare Rivalry
 
 The Launcher will tell you that some mods are outdated - that is because the dependency is out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mod.
 
-Built for Stellaris version 3.4 "Cepheus."  Not compatible with achievements.
+Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.
 
 ### Event Preemption
 
@@ -68,10 +68,10 @@ This mod should be added before the game has started.  If you remove it from a g
 This mod preempts one event and overrides a deposit and two diplomatic actions, which generates four lines in the error log like this:
 
 ```
-[23:27:06][game_singleobjectdatabase.h:147]: Object with key: action_make_rival already exists, using the one at  file: common/diplomatic_actions/10_octeelan_revisited_diplomatic_action_overrides.txt line: 2
-[23:27:06][game_singleobjectdatabase.h:147]: Object with key: action_close_borders already exists, using the one at  file: common/diplomatic_actions/10_octeelan_revisited_diplomatic_action_overrides.txt line: 92
+[23:27:06][game_singleobjectdatabase.h:165]: Object with key: action_make_rival already exists, using the one at  file: common/diplomatic_actions/10_octeelan_revisited_diplomatic_action_overrides.txt line: 2
+[23:27:06][game_singleobjectdatabase.h:165]: Object with key: action_close_borders already exists, using the one at  file: common/diplomatic_actions/10_octeelan_revisited_diplomatic_action_overrides.txt line: 92
 [23:27:10][eventmanager.cpp:361]: an event with id [action.85] already exists!  file: events/on_action_events_1.txt line: 8824
-[23:27:11][game_singleobjectdatabase.h:147]: Object with key: d_alien_pets_deposit already exists, using the one at  file: common/deposits/02_octeelan_revisited_planetary_deposits_overrides.txt line: 3
+[23:27:11][game_singleobjectdatabase.h:165]: Object with key: d_alien_pets_deposit already exists, using the one at  file: common/deposits/02_octeelan_revisited_planetary_deposits_overrides.txt line: 3
 ```
 
 ## Changelog
@@ -108,6 +108,11 @@ This mod preempts one event and overrides a deposit and two diplomatic actions, 
     * Remove starbase code duplication - the Beep-Boops can just have a regular starbase now
     * All static text moved to localisation (name lists, species random names, prescripted empire, custom starting system)
     * Update overridden diplomatic actions to account for new Overlord systems
+* 6.0.0 Update for Stellaris version 3.6 "Orion" (and changes from version 3.5 "Fornax")
+    * Minor namelist updates
+    * Update `hair` to `attachment`
+    * You are more likely to draw the gestalt Xenology technology if you have the Javorian Pox Sample (same as the original version)
+    * Rebalance special 
 
 ## Source Code
 
