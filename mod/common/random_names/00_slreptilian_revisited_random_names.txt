@@ -223,9 +223,9 @@ empire_name_format = {
 			}
 		}
 	}
-	format = "{[This.GetSpeciesName] {<old_ones_ascendancy>}}"
+	format = "{[This.GetSpeciesAdj] {<old_ones_ascendancy>}}"
 	adjective = "{[This.GetSpeciesAdj]}"
-	prefix_format = "{[This.GetSpeciesName] {<old_ones_ascendancy>}}"
+	prefix_format = "{[This.GetSpeciesAdj] {<old_ones_ascendancy>}}"
 }
 
 # Illuminated Elder Ascendancy
@@ -243,9 +243,9 @@ empire_name_format = {
 			}
 		}
 	}
-	format = "{<old_ones_ascendancy_desc> {[This.GetSpeciesName] {<old_ones_ascendancy>}}}"
+	format = "{<old_ones_ascendancy_desc> {[This.GetSpeciesAdj] {<old_ones_ascendancy>}}}"
 	adjective = "{[This.GetSpeciesAdj]}"
-	prefix_format = "{[This.GetSpeciesName] {<old_ones_ascendancy>}}"
+	prefix_format = "{[This.GetSpeciesAdj] {<old_ones_ascendancy>}}"
 }
 
 # Elder Star Ascendancy
@@ -263,9 +263,9 @@ empire_name_format = {
 			}
 		}
 	}
-	format = "{[This.GetSpeciesName] {<shadow_evolution_mid_desc> {<old_ones_ascendancy>}}}"
+	format = "{[This.GetSpeciesAdj] {<shadow_evolution_mid_desc> {<old_ones_ascendancy>}}}"
 	adjective = "{[This.GetSpeciesAdj]}"
-	prefix_format = "{[This.GetSpeciesName] {<old_ones_ascendancy>}}"
+	prefix_format = "{[This.GetSpeciesAdj] {<old_ones_ascendancy>}}"
 }
 
 # Overlordship of Sol
@@ -323,9 +323,9 @@ empire_name_format = {
 			}
 		}
 	}
-	format = "{[This.GetSpeciesName] {<concealed_overlordship>}}"
+	format = "{[This.GetSpeciesAdj] {<concealed_overlordship>}}"
 	adjective = "{[This.GetSpeciesAdj]}"
-	prefix_format = "{[This.GetSpeciesName] {<concealed_overlordship>}}"
+	prefix_format = "{[This.GetSpeciesAdj] {<concealed_overlordship>}}"
 }
 
 # Concealed Elder Overlordship
@@ -343,9 +343,9 @@ empire_name_format = {
 			}
 		}
 	}
-	format = "{<concealed_overlordship_desc> {[This.GetSpeciesName] {<concealed_overlordship>}}}"
+	format = "{<concealed_overlordship_desc> {[This.GetSpeciesAdj] {<concealed_overlordship>}}}"
 	adjective = "{[This.GetSpeciesAdj]}"
-	prefix_format = "{[This.GetSpeciesName] {<concealed_overlordship>}}"
+	prefix_format = "{[This.GetSpeciesAdj] {<concealed_overlordship>}}"
 }
 
 # Elder Stellar Overlordship
@@ -363,9 +363,9 @@ empire_name_format = {
 			}
 		}
 	}
-	format = "{[This.GetSpeciesName] {<shadow_evolution_mid_desc> {<concealed_overlordship>}}}"
+	format = "{[This.GetSpeciesAdj] {<shadow_evolution_mid_desc> {<concealed_overlordship>}}}"
 	adjective = "{[This.GetSpeciesAdj]}"
-	prefix_format = "{[This.GetSpeciesName] {<concealed_overlordship>}}"
+	prefix_format = "{[This.GetSpeciesAdj] {<concealed_overlordship>}}"
 }
 
 # World Order of Sol
@@ -423,9 +423,9 @@ empire_name_format = {
 			}
 		}
 	}
-	format = "{[This.GetSpeciesName] {<secret_world_order>}}"
+	format = "{[This.GetSpeciesAdj] {<secret_world_order>}}"
 	adjective = "{[This.GetSpeciesAdj]}"
-	prefix_format = "{[This.GetSpeciesName] {<secret_world_order>}}"
+	prefix_format = "{[This.GetSpeciesAdj] {<secret_world_order>}}"
 }
 
 # Inscrutable Elder World Order
@@ -443,9 +443,9 @@ empire_name_format = {
 			}
 		}
 	}
-	format = "{<secret_world_order_desc> {[This.GetSpeciesName] {<secret_world_order>}}}"
+	format = "{<secret_world_order_desc> {[This.GetSpeciesAdj] {<secret_world_order>}}}"
 	adjective = "{[This.GetSpeciesAdj]}"
-	prefix_format = "{[This.GetSpeciesName] {<secret_world_order>}}"
+	prefix_format = "{[This.GetSpeciesAdj] {<secret_world_order>}}"
 }
 
 # Elder New World Order
@@ -463,9 +463,9 @@ empire_name_format = {
 			}
 		}
 	}
-	format = "{[This.GetSpeciesName] {<shadow_evolution_mid_desc> {<secret_world_order>}}}"
+	format = "{[This.GetSpeciesAdj] {<shadow_evolution_mid_desc> {<secret_world_order>}}}"
 	adjective = "{[This.GetSpeciesAdj]}"
-	prefix_format = "{[This.GetSpeciesName] {<secret_world_order>}}"
+	prefix_format = "{[This.GetSpeciesAdj] {<secret_world_order>}}"
 }
 
 # Masquerade of Sol
@@ -523,9 +523,9 @@ empire_name_format = {
 			}
 		}
 	}
-	format = "{[This.GetSpeciesName] {<esoteric_masquerade>}}"
+	format = "{[This.GetSpeciesAdj] {<esoteric_masquerade>}}"
 	adjective = "{[This.GetSpeciesAdj]}"
-	prefix_format = "{[This.GetSpeciesName] {<esoteric_masquerade>}}"
+	prefix_format = "{[This.GetSpeciesAdj] {<esoteric_masquerade>}}"
 }
 
 # Esoteric Elder Masquerade
@@ -543,9 +543,9 @@ empire_name_format = {
 			}
 		}
 	}
-	format = "{<esoteric_masquerade_desc> {[This.GetSpeciesName] {<esoteric_masquerade>}}}"
+	format = "{<esoteric_masquerade_desc> {[This.GetSpeciesAdj] {<esoteric_masquerade>}}}"
 	adjective = "{[This.GetSpeciesAdj]}"
-	prefix_format = "{[This.GetSpeciesName] {<esoteric_masquerade>}}"
+	prefix_format = "{[This.GetSpeciesAdj] {<esoteric_masquerade>}}"
 }
 
 # Elder Illusory Masquerade
@@ -563,7 +563,7 @@ empire_name_format = {
 			}
 		}
 	}
-	format = "{[This.GetSpeciesName] {<shadow_evolution_mid_desc> {<esoteric_masquerade>}}}"
+	format = "{[This.GetSpeciesAdj] {<shadow_evolution_mid_desc> {<esoteric_masquerade>}}}"
 	adjective = "{[This.GetSpeciesAdj]}"
-	prefix_format = "{[This.GetSpeciesName] {<esoteric_masquerade>}}"
+	prefix_format = "{[This.GetSpeciesAdj] {<esoteric_masquerade>}}"
 }
