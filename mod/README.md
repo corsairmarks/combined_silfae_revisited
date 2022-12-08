@@ -176,6 +176,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Remove Pop category (social strata) overrides - no longer necessary
 * 6.0.1 Limit the game to spawning at most one empire with the Hive-Network origin
 * 6.0.2 Update empire random names based on changes from Stellaris version 3.6 "Orion"
+* 6.0.3 Use the original image from "Overtuned" because it was changed in Stellaris version 3.5 "Fornax" for Toxoids
 
 ## Source Code
 

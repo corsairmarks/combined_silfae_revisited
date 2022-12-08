@@ -1,6 +1,6 @@
 origin_holofrixit = {
 	is_origin = yes
-	icon = gfx/interface/icons/origins/origins_overtuned.dds
+	icon = gfx/interface/icons/origins/origins_overtuned_old.dds
 	picture = GFX_origin_overtuned
 	playable = { always = yes }
 	max_once_global = yes
