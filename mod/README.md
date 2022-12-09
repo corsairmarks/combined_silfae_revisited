@@ -112,7 +112,7 @@ This mod preempts one event and overrides a deposit and two diplomatic actions, 
     * Minor namelist updates
     * Update `hair` to `attachment`
     * You are more likely to draw the gestalt Xenology technology if you have the Javorian Pox Sample (same as the original version)
-    * Rebalance special 
+    * Rebalance special starting system bonus species
 
 ## Source Code
 
