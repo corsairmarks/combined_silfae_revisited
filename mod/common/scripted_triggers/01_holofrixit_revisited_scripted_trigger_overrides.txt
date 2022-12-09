@@ -1,4 +1,5 @@
 has_energy_upkeep = {
+	optimize_memory
 	OR = {
 		is_robotic_or_voidspawn_species = yes
 		has_trait = trait_cyborg_power_intensive
