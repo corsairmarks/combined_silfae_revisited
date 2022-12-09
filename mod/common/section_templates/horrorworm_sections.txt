@@ -5,6 +5,7 @@ ship_section_template = {
 	fits_on_slot = mid
 	entity = "dimensional_horrorworm_hull_entity"
 	icon = "GFX_ship_part_core_mid"
+	ai_tags = { gunship artillery }
 	prerequisites = { tech_hollowrift }
 	component_slot = {
 		name = "PRIMARY_WEAPON_01"
