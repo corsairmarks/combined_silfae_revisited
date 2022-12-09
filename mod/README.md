@@ -9,7 +9,7 @@ Individual mods update first, then changes are merged here.
 This is a bundle of mods to make it a little easier to sub and ensure cross-compatibility with each-other.  Please check each individual mod for the effects and any known issues.  The numbers indicate which version of a particular mod is contained in this mod (which also corresponds to the version tag in its `git` repository).
 
 * [Animated Aquilese Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2576769521) ([Source](https://github.com/corsairmarks/romaneagles_portraits_revisited) 4.0.0)
-* [Animated Asari Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2581752619) ([Source](https://github.com/corsairmarks/asari_portraits_revisited) 5.1.1)
+* [Animated Asari Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2581752619) ([Source](https://github.com/corsairmarks/asari_portraits_revisited) 6.0.1)
 * [Animated Eldar Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2581388205) ([Source](https://github.com/corsairmarks/eldar_portraits_revisited) 5.0.0)
 * [Animated Hidden Eye Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2585946800) ([Source](https://github.com/corsairmarks/slreptilian_portraits_revisited) 4.1.0)
 * [Animated Hollow Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2578037235) ([Source](https://github.com/corsairmarks/horrorworm_portraits_revisited) 5.1.0)
@@ -44,11 +44,9 @@ Each of the source repositories above is added as a remote to this repository on
 
 # Compatibility
 
-Requires Stellaris 3.4 "Cepheus" and disables achievements.
+Requires Stellaris 3.6 "Orion" and disables achievements.
 
-Check each of the contained mods for an explicit list of incompatibility notes.  Notably some Pop jobs (13 for the Holofrixits) and all Pop strata are overwritten (Holofrixit and Silicoid alternate Pop upkeep), making this mod incompatible with other mods that make changes to Pop strata.
-
-The Pop strata (category) changes must be present for Holofrixit to consume energy instead of food and for Silicoids to properly consume mostly minerals with some food.  The job overrides help Pops with holofrixit caste traits be attracted to jobs for which they are well-suited.  If overridden by another mod, the job(s) in question will no longer attract holofrixits based on their caste role, which could lead to significant resource losses.  For example, Holofrixigrams might try to work miner jobs but have -100% miner output and thus produce nothing, or Hologanglions won't be attracted to research where they have significant bonuses.
+Check each of the contained mods for an explicit list of incompatibility notes.  Notably some Pop jobs (13 for the Holofrixits) are overridden.  These job overrides help Pops with Holofrixit caste traits be attracted to jobs for which they are well-suited.  If overridden by another mod, the job(s) in question will no longer attract Holofrixits based on their caste role, which could lead to some Pops working jobs they are less-suited for (primarily military-related jobs for normal empires, or "complex" drone jobs for gestalts).
 
 ## Dependencies
 
@@ -109,3 +107,4 @@ You should only add this mod before starting a new game, or remove it before sta
     * Updated: Animated Holosphere Portraits: Revisited at 4.0.2
 * 5.0.0 Update all merged mods for Stellaris version 3.4 "Cepheus"
 * 5.1.0 Update merged mod Animated Hollow Portraits: Revisited at 5.1.0
+* 6.0.0 Update all merged mods for Stellaris version 3.6 "Orion"
