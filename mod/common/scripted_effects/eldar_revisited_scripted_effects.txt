@@ -149,6 +149,7 @@ generate_eldar_system_start_deposits_and_blockers = {
 					add_deposit = d_arid_highlands
 					add_deposit = d_prosperous_mesa
 					add_deposit = d_mineral_fields
+					set_planet_flag = tasty_desert
 				}
 				pc_savannah = {
 					add_deposit = d_searing_desert
@@ -290,6 +291,23 @@ generate_eldar_system_start_buildings_and_districts = {
 		if = {
 			limit = { owner = { has_valid_civic = civic_permanent_employment } }
 			add_building = building_posthumous_employment_center
+		}
+		if = {
+			limit = {
+				# restriction match those on building_ranger_lodge
+				NOR = {
+					is_planet_class = pc_city
+					is_planet_class = pc_hive
+					is_planet_class = pc_machine
+					is_planet_class = pc_relic
+				}
+				is_artificial = no
+				owner = {
+					has_valid_civic = civic_environmentalist
+				}
+			}
+			add_building = building_ranger_lodge
+			add_blocker = { type = d_big_nature_preserve_blocker }
 		}
 		if = {
 			limit = {
@@ -579,6 +597,16 @@ generate_eldar_system_start_buildings_and_districts = {
 		}
 		add_building = building_gaiaseeders_1
 	}
+	# Give Relentless Industrialists a Coordinated Fulfillment Center to start with if they have room
+	if = {
+		limit = {
+			free_building_slots > 0
+			owner = {
+				is_relentless_industrialist_empire = yes
+			}
+		}
+		add_building = building_coordinated_fulfillment_center_1
+	}
 }
 
 # same as vanilla, but doesn't adjust planet size or add buildings/districts
@@ -736,6 +764,49 @@ generate_eldar_system_start_pops = {
 				}
 			}
 		}
+		if = {
+			limit = { owner = { has_origin = origin_mechanists } }
+			every_owned_pop = {
+				limit = {
+					is_robotic_species = yes
+				}
+				if = {
+					limit = { has_job = miner }
+					modify_species = {
+						species = this
+						add_trait = trait_robot_power_drills
+						add_trait = trait_robot_bulky
+						add_trait = trait_robot_high_maintenance
+						add_traits_at_start_of_list = yes
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							has_job = farmer
+							has_job = angler
+						}
+					}
+					modify_species = {
+						species = this
+						add_trait = trait_robot_harvesters
+						add_trait = trait_robot_bulky
+						add_trait = trait_robot_high_maintenance
+						add_traits_at_start_of_list = yes
+					}
+				}
+				else_if = {
+					limit = { has_job = technician }
+					modify_species = {
+						species = this
+						add_trait = trait_robot_superconductive
+						add_trait = trait_robot_bulky
+						add_trait = trait_robot_high_maintenance
+						add_traits_at_start_of_list = yes
+					}
+				}
+			}
+		}
 	}
 	if = {
 		limit = { # homicidal necrophages lose 1/4 of their necrophytes to fleeing
@@ -808,6 +879,18 @@ generate_eldar_system_final_pass = {
 		aepr_add_planet_appropriate_generator_district = yes
 		aepr_add_planet_appropriate_mining_district = yes
 	}
+	# species-specific deposits
+	if = {
+		limit = {
+			NOR = {
+				is_planet_class = pc_city
+				is_planet_class = pc_relic
+			}
+			is_ringworld = no
+			owner = { any_owned_pop = { has_trait = trait_exotic_metabolism } }
+		}
+		add_deposit = d_exotic_mountain
+	}
 }
 
 # duplicates the base game's Shroud creation code - which is unfortuantely duplicated/near-duplicated multiple times but none of them in an reusable effect
@@ -873,7 +956,6 @@ aepr_add_planet_appropriate_mining_district = {
 		add_district = district_mining
 	}
 }
-
 
 # this = planet
 aepr_add_planet_appropriate_generator_district = {

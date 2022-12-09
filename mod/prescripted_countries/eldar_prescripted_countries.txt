@@ -1,6 +1,6 @@
 eldarcraft1 = {
 	playable = has_ancrel
-	ship_prefix = PRESCRIPTED_ship_prefix_eldarcraft1
+	ship_prefix = "" # 3.6 does not allow references to the BLANK_STRING key, but an empty string literal is ok
 	species = {
 		class = ELDR
 		portrait = eldar
@@ -56,7 +56,7 @@ eldarcraft1 = {
 		name = PRESCRIPTED_ruler_name_eldarcraft1
 		portrait = eldar_male_01
 		texture = 1
-		hair = 5
+		attachment = 5
 		clothes = 0
 		ruler_title = RT_ELDAR_Farseer
 		ruler_title_female = RT_ELDAR_Farseer

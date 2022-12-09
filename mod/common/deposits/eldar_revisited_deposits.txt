@@ -117,6 +117,16 @@ d_arcane_replicator_eldar_system = {
 			alloys = 12
 			consumer_goods = 4
 		}
+		produces = {
+			trigger = {
+				owner = {
+					any_owned_pop = {
+						has_trait = trait_exotic_metabolism
+					}
+				}
+			}
+			exotic_gases = 4
+		}
 	}
 }
 
@@ -130,6 +140,16 @@ d_arcane_replicator_eldar_system_gestalt = {
 		category = planet_deposits
 		produces = {
 			alloys = 12
+		}
+		produces = {
+			trigger = {
+				owner = {
+					any_owned_pop = {
+						has_trait = trait_exotic_metabolism
+					}
+				}
+			}
+			exotic_gases = 4
 		}
 	}
 }

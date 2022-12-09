@@ -12,11 +12,12 @@ entity = {
 	attach = { "planet" = "black_hole_rings_entity" }
 	attach = { "planet" = "black_hole_grav_lens_entity" }
 	attach = { "planet" = "black_hole_grav_animation_entity" }
-	
+
 	game_data = {
 		size = 1.0
 		bloom_factor = 5
 	}
+	cull_radius = 700
 
 	# attach the pulsar to create the effect
 	locator = { name = "eot_puslar_attach" scale = 1.35 }

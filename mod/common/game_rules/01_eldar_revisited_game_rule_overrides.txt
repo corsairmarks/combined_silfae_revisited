@@ -1,7 +1,7 @@
 #This rule is a condition for bombarding planets
 #Root = fleet, potential attacker
 #From = planet, potential target
-can_orbital_bombard = { # TODO: verify with base game
+can_orbital_bombard = {
 	exists = from.owner
 	NOT = {
 		any_controlled_ship = {
