@@ -6,7 +6,7 @@ Individual mods update first, then changes are merged here.
 [h1]Bundled Mods[/h1]
 This is a bundle of mods to make it a little easier to sub and ensure cross-compatibility with each-other.  Please check each individual mod for the effects and any known issues.  The numbers indicate which version of a particular mod is contained in this mod (which also corresponds to the version tag in its [b]git[/b] repository).
 [list]
-[*][url=https://steamcommunity.com/workshop/filedetails/?id=2576769521]Animated Aquilese Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/romaneagles_portraits_revisited]Source[/url] 4.0.0)
+[*][url=https://steamcommunity.com/workshop/filedetails/?id=2576769521]Animated Aquilese Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/romaneagles_portraits_revisited]Source[/url] 5.0.0)
 [*][url=https://steamcommunity.com/workshop/filedetails/?id=2581752619]Animated Asari Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/asari_portraits_revisited]Source[/url] 6.0.1)
 [*][url=https://steamcommunity.com/workshop/filedetails/?id=2581388205]Animated Eldar Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/eldar_portraits_revisited]Source[/url] 6.0.1)
 [*][url=https://steamcommunity.com/workshop/filedetails/?id=2585946800]Animated Hidden Eye Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/slreptilian_portraits_revisited]Source[/url] 4.1.0)
