@@ -20,7 +20,7 @@ This is a bundle of mods to make it a little easier to sub and ensure cross-comp
 * [Animated Raptor Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2577216891) ([Source](https://github.com/corsairmarks/saurischian_portraits_revisited) 5.0.0)
 * [Animated Serpentoid Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2577093634) ([Source](https://github.com/corsairmarks/serpentoid_portraits_revisited) 5.0.0)
 * [Animated Shark Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2585030748) ([Source](https://github.com/corsairmarks/sharkanian_portraits_revisited) 4.0.0)
-* [Animated Silicoid Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2579736379) ([Source](https://github.com/corsairmarks/silicoid_portraits_revisited) 5.0.1)
+* [Animated Silicoid Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2579736379) ([Source](https://github.com/corsairmarks/silicoid_portraits_revisited) 6.0.0)
 * [Animated Xirmian Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2577789863) ([Source](https://github.com/corsairmarks/xirmian_portraits_revisited) 5.0.1)
 
 ## Source Code
