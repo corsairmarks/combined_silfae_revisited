@@ -183,10 +183,9 @@ empire_name_format = {
 			}
 		}
 	}
-	lookups = "[This.Capital.System.GetName] <old_ones_ascendancy>"
-	format = format.old_ones_ascendancy.1 # <old_ones_ascendancy> of [This.Capital.System.GetName]
-	noun = format.home_system # [This.Capital.System.GetName]
-	prefix_format = format_prefix.old_ones_ascendancy.1 # [This.Capital.System.GetName] <old_ones_ascendancy>
+	format = "{AofB{<old_ones_ascendancy> [This.Capital.System.GetName]}}"
+	noun = "{[This.Capital.System.GetName]}"
+	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <old_ones_ascendancy>}}"
 }
 
 # Ascendancy of Earth
@@ -204,10 +203,9 @@ empire_name_format = {
 			}
 		}
 	}
-	lookups = "[This.Capital.GetName] <old_ones_ascendancy>"
-	format = format.old_ones_ascendancy.2 # <old_ones_ascendancy> of [This.Capital.GetName]
-	noun = format.homeworld # [This.Capital.GetName]
-	prefix_format = format_prefix.old_ones_ascendancy.2 # [This.Capital.GetName] <old_ones_ascendancy>
+	format = "{AofB{<old_ones_ascendancy> [This.Capital.GetName]}}"
+	noun = "{[This.Capital.GetName]}"
+	prefix_format = "{AofBpfx{[This.Capital.GetName] <old_ones_ascendancy>}}"
 }
 
 # Elder Ascendancy
@@ -225,10 +223,9 @@ empire_name_format = {
 			}
 		}
 	}
-	lookups = "[This.GetSpeciesName] <old_ones_ascendancy>"
-	format = format.old_ones_ascendancy.3 # [This.GetSpeciesName] <old_ones_ascendancy>
-	noun = format.species # [This.GetSpeciesName]
-	prefix_format = format_prefix.old_ones_ascendancy.3 # [This.GetSpeciesName] <old_ones_ascendancy>
+	format = "{[This.GetSpeciesAdj] {<old_ones_ascendancy>}}"
+	adjective = "{[This.GetSpeciesAdj]}"
+	prefix_format = "{[This.GetSpeciesAdj] {<old_ones_ascendancy>}}"
 }
 
 # Illuminated Elder Ascendancy
@@ -246,10 +243,9 @@ empire_name_format = {
 			}
 		}
 	}
-	lookups = "<old_ones_ascendancy_desc> [This.GetSpeciesName] <old_ones_ascendancy>"
-	format = format.old_ones_ascendancy.4 # <old_ones_ascendancy_desc> [This.GetSpeciesName] <old_ones_ascendancy>
-	noun = format.species # [This.GetSpeciesName]
-	prefix_format = format_prefix.old_ones_ascendancy.3 # [This.GetSpeciesName] <old_ones_ascendancy>
+	format = "{<old_ones_ascendancy_desc> {[This.GetSpeciesAdj] {<old_ones_ascendancy>}}}"
+	adjective = "{[This.GetSpeciesAdj]}"
+	prefix_format = "{[This.GetSpeciesAdj] {<old_ones_ascendancy>}}"
 }
 
 # Elder Star Ascendancy
@@ -267,10 +263,9 @@ empire_name_format = {
 			}
 		}
 	}
-	lookups = "[This.GetSpeciesName] <shadow_evolution_mid_desc> <old_ones_ascendancy>"
-	format = format.old_ones_ascendancy.5 # [This.GetSpeciesName] <shadow_evolution_mid_desc> <old_ones_ascendancy>
-	noun = format.species # [This.GetSpeciesName]
-	prefix_format = format_prefix.old_ones_ascendancy.3 # [This.GetSpeciesName] <old_ones_ascendancy>
+	format = "{[This.GetSpeciesAdj] {<shadow_evolution_mid_desc> {<old_ones_ascendancy>}}}"
+	adjective = "{[This.GetSpeciesAdj]}"
+	prefix_format = "{[This.GetSpeciesAdj] {<old_ones_ascendancy>}}"
 }
 
 # Overlordship of Sol
@@ -288,10 +283,9 @@ empire_name_format = {
 			}
 		}
 	}
-	lookups = "[This.Capital.System.GetName] <concealed_overlordship>"
-	format = format.concealed_overlordship.1 # <concealed_overlordship> of [This.Capital.System.GetName]
-	noun = format.home_system # [This.Capital.System.GetName]
-	prefix_format = format_prefix.concealed_overlordship.1 # [This.Capital.System.GetName] <concealed_overlordship>
+	format = "{AofB{<concealed_overlordship> [This.Capital.System.GetName]}}"
+	noun = "{[This.Capital.System.GetName]}"
+	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <concealed_overlordship>}}"
 }
 
 # Overlordship of Earth
@@ -309,10 +303,9 @@ empire_name_format = {
 			}
 		}
 	}
-	lookups = "[This.Capital.GetName] <concealed_overlordship>"
-	format = format.concealed_overlordship.2 # <concealed_overlordship> of [This.Capital.GetName]
-	noun = format.homeworld # [This.Capital.GetName]
-	prefix_format = format_prefix.concealed_overlordship.2 # [This.Capital.GetName] <concealed_overlordship>
+	format = "{AofBpfx{[This.Capital.System.GetName] <concealed_overlordship>}}"
+	noun = "{[This.Capital.GetName]}"
+	prefix_format = "{AofBpfx{[This.Capital.GetName] <concealed_overlordship>}}"
 }
 
 # Elder Overlordship
@@ -330,10 +323,9 @@ empire_name_format = {
 			}
 		}
 	}
-	lookups = "[This.GetSpeciesName] <concealed_overlordship>"
-	format = format.concealed_overlordship.3 # [This.GetSpeciesName] <concealed_overlordship>
-	noun = format.species # [This.GetSpeciesName]
-	prefix_format = format_prefix.concealed_overlordship.3 # [This.GetSpeciesName] <concealed_overlordship>
+	format = "{[This.GetSpeciesAdj] {<concealed_overlordship>}}"
+	adjective = "{[This.GetSpeciesAdj]}"
+	prefix_format = "{[This.GetSpeciesAdj] {<concealed_overlordship>}}"
 }
 
 # Concealed Elder Overlordship
@@ -351,10 +343,9 @@ empire_name_format = {
 			}
 		}
 	}
-	lookups = "<concealed_overlordship_desc> [This.GetSpeciesName] <concealed_overlordship>"
-	format = format.concealed_overlordship.4 # <concealed_overlordship_desc> [This.GetSpeciesName] <concealed_overlordship>
-	noun = format.species # [This.GetSpeciesName]
-	prefix_format = format_prefix.concealed_overlordship.3 # [This.GetSpeciesName] <concealed_overlordship>
+	format = "{<concealed_overlordship_desc> {[This.GetSpeciesAdj] {<concealed_overlordship>}}}"
+	adjective = "{[This.GetSpeciesAdj]}"
+	prefix_format = "{[This.GetSpeciesAdj] {<concealed_overlordship>}}"
 }
 
 # Elder Stellar Overlordship
@@ -372,10 +363,9 @@ empire_name_format = {
 			}
 		}
 	}
-	lookups = "[This.GetSpeciesName] <shadow_evolution_mid_desc> <concealed_overlordship>"
-	format = format.concealed_overlordship.5 # [This.GetSpeciesName] <shadow_evolution_mid_desc> <concealed_overlordship>
-	noun = format.species # [This.GetSpeciesName]
-	prefix_format = format_prefix.concealed_overlordship.3 # [This.GetSpeciesName] <concealed_overlordship>
+	format = "{[This.GetSpeciesAdj] {<shadow_evolution_mid_desc> {<concealed_overlordship>}}}"
+	adjective = "{[This.GetSpeciesAdj]}"
+	prefix_format = "{[This.GetSpeciesAdj] {<concealed_overlordship>}}"
 }
 
 # World Order of Sol
@@ -393,10 +383,9 @@ empire_name_format = {
 			}
 		}
 	}
-	lookups = "[This.Capital.System.GetName] <secret_world_order>"
-	format = format.secret_world_order.1 # <secret_world_order> of [This.Capital.System.GetName]
-	noun = format.home_system # [This.Capital.System.GetName]
-	prefix_format = format_prefix.secret_world_order.1 # [This.Capital.System.GetName] <secret_world_order>
+	format = "{AofB{<secret_world_order> [This.Capital.System.GetName]}}"
+	noun = "{[This.Capital.System.GetName]}"
+	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <secret_world_order>}}"
 }
 
 # World Order of Earth
@@ -414,10 +403,9 @@ empire_name_format = {
 			}
 		}
 	}
-	lookups = "[This.Capital.GetName] <secret_world_order>"
-	format = format.secret_world_order.2 # <secret_world_order> of [This.Capital.GetName]
-	noun = format.homeworld # [This.Capital.GetName]
-	prefix_format = format_prefix.secret_world_order.2 # [This.Capital.GetName] <secret_world_order>
+	format = "{AofB{<secret_world_order> [This.Capital.GetName]}}"
+	noun = "{[This.Capital.GetName]}"
+	prefix_format = "{AofBpfx{[This.Capital.GetName] <secret_world_order>}}"
 }
 
 # Elder World Order
@@ -435,10 +423,9 @@ empire_name_format = {
 			}
 		}
 	}
-	lookups = "[This.GetSpeciesName] <secret_world_order>"
-	format = format.secret_world_order.3 # [This.GetSpeciesName] <secret_world_order>
-	noun = format.species # [This.GetSpeciesName]
-	prefix_format = format_prefix.secret_world_order.3 # [This.GetSpeciesName] <secret_world_order>
+	format = "{[This.GetSpeciesAdj] {<secret_world_order>}}"
+	adjective = "{[This.GetSpeciesAdj]}"
+	prefix_format = "{[This.GetSpeciesAdj] {<secret_world_order>}}"
 }
 
 # Inscrutable Elder World Order
@@ -456,10 +443,9 @@ empire_name_format = {
 			}
 		}
 	}
-	lookups = "<secret_world_order_desc> [This.GetSpeciesName] <secret_world_order>"
-	format = format.secret_world_order.4 # <secret_world_order_desc> [This.GetSpeciesName] <secret_world_order>
-	noun = format.species # [This.GetSpeciesName]
-	prefix_format = format_prefix.secret_world_order.2 # [This.GetSpeciesName] <secret_world_order>
+	format = "{<secret_world_order_desc> {[This.GetSpeciesAdj] {<secret_world_order>}}}"
+	adjective = "{[This.GetSpeciesAdj]}"
+	prefix_format = "{[This.GetSpeciesAdj] {<secret_world_order>}}"
 }
 
 # Elder New World Order
@@ -477,10 +463,9 @@ empire_name_format = {
 			}
 		}
 	}
-	lookups = "[This.GetSpeciesName] <shadow_evolution_mid_desc> <secret_world_order>"
-	format = format.secret_world_order.5 # [This.GetSpeciesName] <shadow_evolution_mid_desc> <secret_world_order>
-	noun = format.species # [This.GetSpeciesName]
-	prefix_format = format_prefix.secret_world_order.2 # [This.GetSpeciesName] <secret_world_order>
+	format = "{[This.GetSpeciesAdj] {<shadow_evolution_mid_desc> {<secret_world_order>}}}"
+	adjective = "{[This.GetSpeciesAdj]}"
+	prefix_format = "{[This.GetSpeciesAdj] {<secret_world_order>}}"
 }
 
 # Masquerade of Sol
@@ -498,10 +483,9 @@ empire_name_format = {
 			}
 		}
 	}
-	lookups = "[This.Capital.System.GetName] <esoteric_masquerade>"
-	format = format.esoteric_masquerade.1 # <esoteric_masquerade> of [This.Capital.System.GetName]
-	noun = format.home_system # [This.Capital.System.GetName]
-	prefix_format = format_prefix.esoteric_masquerade.1 # [This.Capital.System.GetName] <esoteric_masquerade>
+	format = "{AofB{<esoteric_masquerade> [This.Capital.System.GetName]}}"
+	noun = "{[This.Capital.System.GetName]}"
+	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <esoteric_masquerade>}}"
 }
 
 # Masquerade of Earth
@@ -519,10 +503,9 @@ empire_name_format = {
 			}
 		}
 	}
-	lookups = "[This.Capital.GetName] <esoteric_masquerade>"
-	format = format.esoteric_masquerade.2 # <esoteric_masquerade> of [This.Capital.GetName]
-	noun = format.homeworld # [This.Capital.GetName]
-	prefix_format = format_prefix.esoteric_masquerade.2 # [This.Capital.GetName] <esoteric_masquerade>
+	format = "{AofB{<esoteric_masquerade> [This.Capital.GetName]}}"
+	noun = "{[This.Capital.GetName]}"
+	prefix_format = "{AofBpfx{[This.Capital.GetName] <esoteric_masquerade>}}"
 }
 
 # Elder Masquerade
@@ -540,10 +523,9 @@ empire_name_format = {
 			}
 		}
 	}
-	lookups = "[This.GetSpeciesName] <esoteric_masquerade>"
-	format = format.esoteric_masquerade.3 # [This.GetSpeciesName] <esoteric_masquerade>
-	noun = format.species # [This.GetSpeciesName]
-	prefix_format = format_prefix.esoteric_masquerade.3 # [This.GetSpeciesName] <esoteric_masquerade>
+	format = "{[This.GetSpeciesAdj] {<esoteric_masquerade>}}"
+	adjective = "{[This.GetSpeciesAdj]}"
+	prefix_format = "{[This.GetSpeciesAdj] {<esoteric_masquerade>}}"
 }
 
 # Esoteric Elder Masquerade
@@ -561,10 +543,9 @@ empire_name_format = {
 			}
 		}
 	}
-	lookups = "<esoteric_masquerade_desc> [This.GetSpeciesName] <esoteric_masquerade>"
-	format = format.esoteric_masquerade.4 # <esoteric_masquerade_desc> [This.GetSpeciesName] <esoteric_masquerade>
-	noun = format.species # [This.GetSpeciesName]
-	prefix_format = format_prefix.esoteric_masquerade.3 # [This.GetSpeciesName] <esoteric_masquerade>
+	format = "{<esoteric_masquerade_desc> {[This.GetSpeciesAdj] {<esoteric_masquerade>}}}"
+	adjective = "{[This.GetSpeciesAdj]}"
+	prefix_format = "{[This.GetSpeciesAdj] {<esoteric_masquerade>}}"
 }
 
 # Elder Illusory Masquerade
@@ -582,8 +563,7 @@ empire_name_format = {
 			}
 		}
 	}
-	lookups = "[This.GetSpeciesName] <shadow_evolution_mid_desc> <esoteric_masquerade>"
-	format = format.esoteric_masquerade.5 # [This.GetSpeciesName] <shadow_evolution_mid_desc> <esoteric_masquerade>
-	noun = format.species # [This.GetSpeciesName]
-	prefix_format = format_prefix.esoteric_masquerade.3 # [This.GetSpeciesName] <esoteric_masquerade>
+	format = "{[This.GetSpeciesAdj] {<shadow_evolution_mid_desc> {<esoteric_masquerade>}}}"
+	adjective = "{[This.GetSpeciesAdj]}"
+	prefix_format = "{[This.GetSpeciesAdj] {<esoteric_masquerade>}}"
 }
