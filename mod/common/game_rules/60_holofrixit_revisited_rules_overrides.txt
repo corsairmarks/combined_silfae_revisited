@@ -1,5 +1,5 @@
 # Checks whether any leaders (scientists etc) can be formed from this pop
-# NOTE: Includes change form battle_thrall_military_leaders becaue this mod requires that one
+# NOTE: Includes change from battle_thrall_military_leaders becaue this mod requires that one
 # root = country
 # this = pop
 can_generate_leader_from_pop = {
@@ -98,7 +98,7 @@ can_species_procreate = {
 		NOT = {
 			root = {
 				any_owned_species = {
-					has_population_control = { country = root.owner value = no }
+					has_population_control = { country = root.owner type = no }
 					species_can_be_necrophaged = yes
 				}
 			}
@@ -136,8 +136,21 @@ can_species_be_assembled = {
 				has_trait = trait_hive_mind
 			}
 			else_if = {
-				limit = { has_trait = trait_plantoid_budding }
+				limit = { has_budding_trait = yes }
 				root = { any_owned_species = { is_exact_same_species = prevprev } }
+			}
+			else_if = {
+				limit = { has_trait = trait_tiyanki }
+				root = { any_owned_species = { is_exact_same_species = prevprev } }
+			}
+			else_if = {
+				limit = {
+					root.owner = {
+						has_tradition = tr_cybernetics_assembly_standards
+						has_policy_flag = roboticist_output_build_cyborgs
+					}
+				}
+				has_trait = trait_cybernetic
 			}
 			else_if = {
 				limit = {
@@ -166,13 +179,15 @@ can_species_be_assembled = {
 					OR = {
 						has_building = building_clone_vats
 						has_modifier = tiyanki_trophy
+						owner = { has_modifier = syamelles_curse }
+						has_planet_flag = can_organic_assemble_flag #for mod compatibility
 					}
 				}
 			}
 		}
 	}
 	has_population_control = {
-		value = no
+		type = no
 		country = root.owner
 	}
 }
