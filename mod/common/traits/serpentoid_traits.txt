@@ -3,6 +3,12 @@
 ##################
 trait_serpentoid_acumen = {
 	cost = 1
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_inspired.dds"
@@ -17,10 +23,26 @@ trait_serpentoid_acumen = {
 	slave_cost = {
 		energy = 500
 	}
+	assembly_score = {
+		modifier = {
+			add = 1
+			from = { has_research_designation = yes }
+		}
+		modifier = {
+			add = 1
+			from = { has_building = building_order_keep }
+		}
+	}
 }
 
 trait_serpentoid_cunning = {
 	cost = 3
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_enclave_trader.dds"
@@ -37,10 +59,23 @@ trait_serpentoid_cunning = {
 	slave_cost = {
 		energy = 1000
 	}
+	assembly_score = {
+		modifier = {
+			add = 0.5
+			from = { has_generator_designation = yes }
+		}
+		modifier = {
+			add = 0.125
+			from = { has_rural_designation = yes }
+		}
+	}
 }
 
 trait_serpentoid_indolence = {
 	cost = -1
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
 	potential_crossbreeding_chance = 1.0
 	randomized = no
 	icon = "gfx/interface/icons/traits/trait_serpentoid.dds"
@@ -56,5 +91,15 @@ trait_serpentoid_indolence = {
 	opposites = { "trait_agrarian" "trait_nomadic" "trait_sedentary" "trait_resilient" }
 	slave_cost = {
 		energy = -200
+	}
+	assembly_score = {
+		modifier = {
+			subtract = 0.5
+			from = { has_farming_designation = yes }
+		}
+		modifier = {
+			subtract = 0.125
+			from = { has_rural_designation = yes }
+		}
 	}
 }
