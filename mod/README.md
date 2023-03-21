@@ -6,7 +6,7 @@ There are lots of other mods which contain these portraits, so why should you ch
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.6 "Orion," the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.7 "Canis Minor," the latest version when this was written.  Updates include:
 
 * Clothing selector enhancements
     * Fixed a broken clothing selector for male rulers
@@ -28,7 +28,7 @@ Compatible with any mod that does not add the same portraits, species class, or 
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.
+Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements.
 
 ### Dependencies
 
@@ -72,6 +72,9 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Minor namelist updates
     * Update `hair` to `attachment`
 * 5.0.1 Ensure Xirmian attachments are named "Hairstyle"
+* 6.0.0 Update for Stellaris version 3.7 "Canis Minor"
+    * Update Xirmian personality with new features
+    * Update shared triggers for Pop portraits
 
 ## Source Code
 
