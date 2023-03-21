@@ -73,7 +73,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Update `hair` to `attachment`
 * 5.0.1 Ensure Xirmian attachments are named "Hairstyle"
 * 6.0.0 Update for Stellaris version 3.7 "Canis Minor"
-    * Update Xirmian personality with new features
+    * Update the Flamboyant Diplomats personality with new features
     * Update shared triggers for Pop portraits
     * Remove global flag
     * Add compatibility trigger `has_xirmian_portraits_revisited_active`
