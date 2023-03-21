@@ -75,6 +75,8 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 * 6.0.0 Update for Stellaris version 3.7 "Canis Minor"
     * Update Xirmian personality with new features
     * Update shared triggers for Pop portraits
+    * Remove global flag
+    * Add compatibility trigger `has_xirmian_portraits_revisited_active`
 
 ## Source Code
 
