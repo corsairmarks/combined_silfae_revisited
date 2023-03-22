@@ -19,9 +19,7 @@ origin_shadowy_evolution = {
 			}
 		}
 	}
-	random_weight = {
-		base = 0
-	}
+	random_weight = { base = 0 }
 	description = origin_tooltip_shadowy_evolution_effects
 	has_secondary_species = {
 		title = origin_shadowy_evolution_secondary_species
@@ -34,7 +32,5 @@ civic_geneticists = {
 	ai_playable = { has_utopia = yes }
 	potential = { ethics = { NOT = { value = ethic_gestalt_consciousness } } }
 	description = civic_tooltip_geneticists_effects
-	random_weight = {
-		base = 0
-	}
+	random_weight = { base = @civic_default_random_weight }
 }
