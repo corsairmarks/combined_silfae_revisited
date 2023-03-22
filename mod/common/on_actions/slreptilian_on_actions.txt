@@ -6,7 +6,7 @@ on_game_start = {
 }
 
 # fired during empire initialization when starting a new game
-# THIS = country
+# this = country
 empire_init_add_technologies = {
 	events = {
 		slreptilians.2001
@@ -22,9 +22,9 @@ on_monthly_pulse = {
 
 # fired during empire initialization when starting a new game
 # Called before empire_init_create_capital_pops.
-# THIS = planet, capital
-# FROM = species, founder
-# FROMFROM = species, secondary (if exists)
+# this = planet, capital
+# from = species, founder
+# fromfrom = species, secondary (if exists)
 empire_init_capital_planet = {
 	events = {
 		slreptilians.1

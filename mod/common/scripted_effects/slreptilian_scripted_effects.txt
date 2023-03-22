@@ -3,7 +3,7 @@
 @enslaved_percentage_low = 0.25
 @enslaved_percentage_critical = 0.1
 
-# THIS = country
+# this = country
 calculate_shadowyrep_morale = {
 	optimize_memory
 	if = {
@@ -98,7 +98,7 @@ calculate_shadowyrep_morale = {
 }
 
 # set up starting pops - called by slreptilians.1
-# THIS = planet, capital
+# this = planet, capital
 generate_shadowy_evolution_start_pops = {
 	optimize_memory
 	while = {
@@ -109,7 +109,7 @@ generate_shadowy_evolution_start_pops = {
 		}
 	}
 	last_created_species = {
-		set_species_flag = syncretic_species@PREV.owner
+		set_species_flag = syncretic_species@prev.owner
 		save_event_target_as = secondary_species
 	}
 	while = {
