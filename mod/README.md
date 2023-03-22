@@ -6,7 +6,7 @@ There are other mods which contain these portraits, so why should you choose thi
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.6 "Orion," the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.7 "Canis Minor," the latest version when this was written.  Updates include:
 
 * Renamed species class to "Sleek Reptilian" so there isn't confusion with the built-in Reptilian species class
 * Remove duplication in room selector, allow it to always be chosen
@@ -38,7 +38,7 @@ Compatible with any mod that does not add the same portraits, species class, or 
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.
+Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements.
 
 ### Dependencies
 
@@ -94,6 +94,10 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Ensure Sleek Reptilian "humanoid" attachments are named "Hairstyle"
     * Update empire random names based on changes from Stellaris version 3.6 "Orion"
 * 5.0.1 Further empire random name updates - primarily using species adjectives instead species singular nouns, matching changes in the base game
+* 6.0.0 Update for Stellaris version 3.7 "Canis Minor"
+    * Update shared triggers for Pop portraits
+    * Remove global flag
+    * Add compatibility trigger `has_slreptilian_portraits_revisited_active`
 
 ## Source Code
 
