@@ -92,6 +92,7 @@ This mod overrides `origin_void_dwellers` in order to add its new initializer to
     * Update shared triggers for Pop portraits
     * Remove global flag
     * Add compatibility trigger `has_quarian_portraits_revisited_active`
+* 7.0.1 Fix compatibility scripted trigger to have the right name
 
 ## Source Code
 
