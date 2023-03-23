@@ -77,6 +77,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Update shared triggers for Pop portraits
     * Remove global flag
     * Add compatibility trigger `has_xirmian_portraits_revisited_active`
+* 6.0.1 Add missing research pact acceptance to Flamboyant Diplomats
 
 ## Source Code
 
