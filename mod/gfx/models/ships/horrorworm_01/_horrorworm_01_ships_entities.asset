@@ -1256,6 +1256,172 @@ entity = {
 	locator = { name = "turret_muzzle_01" 	position = { 0 0 0 } }
 }
 
+# ##################
+# Critter Weapons
+# ##################
+
+# Amoeba Weapons
+
+entity = {
+	name = "horrorworm_01_small_space_amoeba_weapon_entity"
+	pdxmesh = "molluscoid_01_turret_projectile_small_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 0.85
+}
+
+entity = {
+	name = "horrorworm_01_medium_space_amoeba_weapon_entity"
+	pdxmesh = "molluscoid_01_turret_projectile_medium_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 0.85
+}
+
+entity = {
+	name = "horrorworm_01_large_space_amoeba_weapon_entity"
+	pdxmesh = "molluscoid_01_turret_projectile_large_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 1.0
+}
+
+# Space Cloud Weapons
+
+entity = {
+	name = "horrorworm_01_small_space_cloud_weapon_entity"
+	pdxmesh = "molluscoid_01_turret_projectile_small_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 0.85
+}
+
+entity = {
+	name = "horrorworm_01_large_space_cloud_weapon_entity"
+	pdxmesh = "molluscoid_01_turret_projectile_large_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 1.0
+}
+
+# Crystal Weapons
+
+entity = {
+	name = "horrorworm_01_small_crystal_ship_weapon_entity"
+	pdxmesh = "molluscoid_01_turret_projectile_small_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 0.85
+}
+
+entity = {
+	name = "horrorworm_01_medium_crystal_ship_weapon_entity"
+	pdxmesh = "molluscoid_01_turret_projectile_medium_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 0.85
+}
+
+entity = {
+	name = "horrorworm_01_large_crystal_ship_weapon_entity"
+	pdxmesh = "molluscoid_01_turret_projectile_large_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 1.0
+}
+
+# Mining Drone Weapons
+
+entity = {
+	name = "horrorworm_01_small_mining_drone_weapon_entity"
+	pdxmesh = "molluscoid_01_turret_projectile_small_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 0.85
+}
+
+entity = {
+	name = "horrorworm_01_medium_mining_drone_weapon_entity"
+	pdxmesh = "molluscoid_01_turret_projectile_medium_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 0.85
+}
+
+# Space Whale Weapons
+
+entity = {
+	name = "horrorworm_01_small_space_whale_weapon_entity"
+	pdxmesh = "molluscoid_01_turret_projectile_small_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 0.85
+}
+
+entity = {
+	name = "horrorworm_01_medium_space_whale_weapon_entity"
+	pdxmesh = "molluscoid_01_turret_projectile_medium_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 0.85
+}
+
+entity = {
+	name = "horrorworm_01_large_space_whale_weapon_entity"
+	pdxmesh = "molluscoid_01_turret_projectile_large_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 1.0
+}
+
+# Swarm Weapons
+
+entity = {
+	name = "horrorworm_01_small_scourge_projectile_weapon_entity"
+	pdxmesh = "molluscoid_01_turret_projectile_small_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 0.85
+}
+
+entity = {
+	name = "horrorworm_01_medium_scourge_projectile_weapon_entity"
+	pdxmesh = "molluscoid_01_turret_projectile_medium_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 0.85
+}
+
 ###################################################################################
 ###																				###
 ###									COMBAT SHIPS								###
@@ -1515,6 +1681,10 @@ entity = {
 	state = { name = "moving"		state_time = 9 }
 	state = { name = "death"		state_time = 9 }
 }
+
+entity = { name = "horrorworm_01_sponsored_colonizer_entity" clone = "horrorworm_01_colonizer_entity" }
+
+entity = { name = "horrorworm_01_colony_vessel_entity" clone = "horrorworm_01_colonizer_entity" }
 
 entity = {
 	name = "horrorworm_01_colony_ship_swarm_entity"
@@ -3243,6 +3413,172 @@ entity = {
 	locator = { name = "turret_muzzle_01" 	position = { 0 0 0 } }
 }
 
+# ##################
+# Critter Weapons
+# ##################
+
+# Amoeba Weapons
+
+entity = {
+	name = "horrorworm_02_small_space_amoeba_weapon_entity"
+	pdxmesh = "necroid_01_turret_projectile_small_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 0.85
+}
+
+entity = {
+	name = "horrorworm_02_medium_space_amoeba_weapon_entity"
+	pdxmesh = "necroid_01_turret_projectile_medium_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 0.85
+}
+
+entity = {
+	name = "horrorworm_02_large_space_amoeba_weapon_entity"
+	pdxmesh = "necroid_01_turret_projectile_large_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 1.0
+}
+
+# Space Cloud Weapons
+
+entity = {
+	name = "horrorworm_02_small_space_cloud_weapon_entity"
+	pdxmesh = "necroid_01_turret_projectile_small_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 0.85
+}
+
+entity = {
+	name = "horrorworm_02_large_space_cloud_weapon_entity"
+	pdxmesh = "necroid_01_turret_projectile_large_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 1.0
+}
+
+# Crystal Weapons
+
+entity = {
+	name = "horrorworm_02_small_crystal_ship_weapon_entity"
+	pdxmesh = "necroid_01_turret_projectile_small_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 0.85
+}
+
+entity = {
+	name = "horrorworm_02_medium_crystal_ship_weapon_entity"
+	pdxmesh = "necroid_01_turret_projectile_medium_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 0.85
+}
+
+entity = {
+	name = "horrorworm_02_large_crystal_ship_weapon_entity"
+	pdxmesh = "necroid_01_turret_projectile_large_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 1.0
+}
+
+# Mining Drone Weapons
+
+entity = {
+	name = "horrorworm_02_small_mining_drone_weapon_entity"
+	pdxmesh = "necroid_01_turret_projectile_small_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 0.85
+}
+
+entity = {
+	name = "horrorworm_02_medium_mining_drone_weapon_entity"
+	pdxmesh = "necroid_01_turret_projectile_medium_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 0.85
+}
+
+# Space Whale Weapons
+
+entity = {
+	name = "horrorworm_02_small_space_whale_weapon_entity"
+	pdxmesh = "necroid_01_turret_projectile_small_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 0.85
+}
+
+entity = {
+	name = "horrorworm_02_medium_space_whale_weapon_entity"
+	pdxmesh = "necroid_01_turret_projectile_medium_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 0.85
+}
+
+entity = {
+	name = "horrorworm_02_large_space_whale_weapon_entity"
+	pdxmesh = "necroid_01_turret_projectile_large_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 1.0
+}
+
+# Swarm Weapons
+
+entity = {
+	name = "horrorworm_02_small_scourge_projectile_weapon_entity"
+	pdxmesh = "necroid_01_turret_projectile_small_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 0.85
+}
+
+entity = {
+	name = "horrorworm_02_medium_scourge_projectile_weapon_entity"
+	pdxmesh = "necroid_01_turret_projectile_medium_mesh"
+
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 0.85
+}
+
 ###################################################################################
 ###																				###
 ###									COMBAT SHIPS								###
@@ -3502,6 +3838,10 @@ entity = {
 	state = { name = "moving"		state_time = 9 }
 	state = { name = "death"		state_time = 9 }
 }
+
+entity = { name = "horrorworm_02_sponsored_colonizer_entity" clone = "horrorworm_02_colonizer_entity" }
+
+entity = { name = "horrorworm_02_colony_vessel_entity" clone = "horrorworm_02_colonizer_entity" }
 
 entity = {
 	name = "horrorworm_02_colony_ship_swarm_entity"
