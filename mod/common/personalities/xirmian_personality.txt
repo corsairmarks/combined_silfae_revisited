@@ -10,6 +10,7 @@ xirmian_flamboyant_diplomats = {
 	federation_acceptance = 50
 	nap_acceptance = 5
 	commercial_pact_acceptance = 50
+	research_agreement_acceptance = 50
 	defensive_pact_acceptance = 50
 	migration_pact_acceptance = 20
 	loyalty_acceptance = 1.5
