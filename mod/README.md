@@ -6,7 +6,7 @@ There are other mods which contain these portraits, so why should you choose thi
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.6 "Orion," the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.7 "Canis Minor," the latest version when this was written.  Updates include:
 
 * Fix the included Prethoryn-swap shipset `horrorworm_01`
     * Ensure the ship entities are blank for ship sections and instead use the ship hull as the attachment point for the modified Prethoryn graphics
@@ -37,7 +37,7 @@ Compatible with any mod that does not add the same portraits, species class, shi
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.  The shipset does not have NSC classes.
+Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements.  The shipset does not have NSC classes.
 
 ### Dependencies
 
@@ -107,6 +107,13 @@ In game terms, the fourth color of Phenotype 9 is the same as the third color.
     * Add new roles to the Dimensional Horrorworm ship computers
     * Prevent AI from using dark matter reactors or thrusters on Dimensional Horrorworms (the game applied this change to the built-in dark matter reactors and thrusters)
 * 6.0.1 Duplicate random species names for the additional species classes
+* 7.0.0 Update for Stellaris version 3.7 "Canis Minor"
+    * Update Eldritch Devourers personality with new features
+    * Update shipset with missing critter weapons and colonizer entities
+    * Update Dimensional Horrorworm shipclas (etc.) to default to artillery behavior
+    * Update shared triggers for Pop portraits
+    * Remove global flag
+    * Add compatibility trigger `has_horrorworm_portraits_revisited_active`
 
 ## Source Code
 
