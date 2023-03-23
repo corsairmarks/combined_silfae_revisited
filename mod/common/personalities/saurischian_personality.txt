@@ -1,12 +1,12 @@
-saurischians_pretentious_conquerors = { 
+saurischians_pretentious_conquerors = {
 	aggressiveness = 15.0
 	trade_willingness = 1.75
 	bravery = 2.0
 	combat_bravery = 2.0
-	
+
 	military_spending = 1.25
 	colony_spending = 0.1
-	
+
 	federation_acceptance = -1000
 	nap_acceptance = -20
 	commercial_pact_acceptance = 0
@@ -14,9 +14,9 @@ saurischians_pretentious_conquerors = {
 	defensive_pact_acceptance = -100
 	migration_pact_acceptance = 0
 	loyalty_acceptance = 0.25
-	
+
 	advanced_start_chance = 100
-	
+
 	weapon_preferences = weapon_type_explosive
 	armor_ratio = 0.8
 	shields_ratio = 0.2
@@ -50,13 +50,13 @@ saurischians_pretentious_conquerors = {
 	ship_roles = {
 		frigate = explosive_stealth
 	}
-	
+
 	allow = {
 		is_fallen_empire = no
 		has_country_flag = is_astroraptors
 	}
-	
+
 	weight_modifier = {
-		weight = 1000	
+		weight = 1000
 	}
 }
