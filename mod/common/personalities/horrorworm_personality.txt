@@ -58,6 +58,6 @@ horrorworm_eldritch_devourers = {
 	}
 
 	weight_modifier = {
-		weight = 1000
+		weight = 1500
 	}
 }
