@@ -47,9 +47,9 @@ d_ruined_arcology_eldar_system = {
 			}
 			custom_tooltip = minor_artifacts_found
 			random_list = {
-				33 = { owner = { add_resource = { minor_artifacts = 1 } } }
-				33 = { owner = { add_resource = { minor_artifacts = 3 } } }
-				33 = { owner = { add_resource = { minor_artifacts = 5 } } }
+				33 = { owner = { add_resource = { minor_artifacts = 10 } } }
+				33 = { owner = { add_resource = { minor_artifacts = 30 } } }
+				33 = { owner = { add_resource = { minor_artifacts = 50 } } }
 			}
 		}
 		if = {
@@ -60,6 +60,9 @@ d_ruined_arcology_eldar_system = {
 			custom_tooltip = rediscover_tech
 			hidden_effect = { owner = { country_event = { id = origin.3100 } } }
 		}
+	}
+	ai_weight = {
+		weight = 2
 	}
 }
 
