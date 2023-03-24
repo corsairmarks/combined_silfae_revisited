@@ -6,7 +6,7 @@ There are other mods which contain the same portraits, so why should you choose 
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.6 "Orion," the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.7 "Canis Minor," the latest version when this was written.  Updates include:
 
 * Remove duplication in room selector
 * Remove alternate (blank) city graphics - mostly they were to try and get a static diplomacy backdrop but only worked for colonies with city size 4; set the `graphical_culture` to not define a cityset
@@ -18,7 +18,6 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 * Code now sets any leader using the Octee-lan portrait to have `gender = female`
     * This is now implemented through the feature introduced in Stellaris 3.2 to specify a mono-gender species during empire creation
 * Add gestalt version of the Alien Zoo (both a building and technology) which is available to non-genocidal gestalt empires
-* Override Isolated Valley (`d_alien_pets_deposit`) to support new zoo building
 * Update pre-scripted empire (Kuri-octa-Xibi):
     * Octee-lan species:
         * Swap Rapid Breeders to Aquatic (requires the Aquatic Species Pack) to fit the role-play better
@@ -47,7 +46,7 @@ This mod now overrides two diplomatic actions (Close Borders and Declare Rivalry
 
 The Launcher will tell you that some mods are outdated - that is because the dependency is out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mod.
 
-Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.
+Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements.
 
 ### Event Preemption
 
@@ -113,6 +112,14 @@ This mod preempts one event and overrides a deposit and two diplomatic actions, 
     * Update `hair` to `attachment`
     * You are more likely to draw the gestalt Xenology technology if you have the Javorian Pox Sample (same as the original version)
     * Rebalance special starting system bonus species
+* 7.0.0 Update for Stellaris version 3.7 "Canis Minor"
+    * Update Interstellar Pursuers personality with new features
+    * Update shared triggers for Pop portraits
+    * Remove no-longer-necessary override of the Isolated Valley deposit
+    * Update Xeno Zoo (gestalt) building based on changes to the base Xeno Zoo
+    * Add new jobs for the Xeno Zoo (gestalt) based on the new Zookeeper and Protected Fauna/Conserved Fauna jobs
+    * Remove global flag
+    * Add compatibility trigger `has_octeelan_portraits_revisited_active`
 
 ## Source Code
 
