@@ -7,10 +7,15 @@ planet_event = {
 	desc = mega.201.desc
 	picture = GFX_evt_city_planet
 	show_sound = event_cityscape
-	location = ROOT
+	location = root
 	is_triggered_only = yes
 	trigger = {
-		is_planet_class = pc_city
+		OR = {
+			is_planet_class = pc_city
+			is_pd_arcology = yes
+			is_pd_hive_arcology = yes
+			is_pd_robot_arcology = yes
+		}
 	}
 	immediate = {
 		planet_event = {

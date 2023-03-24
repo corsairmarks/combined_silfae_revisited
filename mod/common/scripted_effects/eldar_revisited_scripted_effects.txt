@@ -114,91 +114,155 @@ generate_eldar_system_start_deposits_and_blockers = {
 		}
 		else = {
 			# 3 generator + 3 mining for all habitable planet classes
-			switch = {
-				trigger = is_planet_class
-				pc_gaia = {
-					random_list = {
-						50 = { add_deposit = d_frozen_gas_lake }
-						50 = { add_deposit = d_searing_desert }
+			if = {
+				limit = {
+					OR = {
+						is_planet_class = pc_gaia
+						is_pd_gaia = yes
 					}
-					add_deposit = d_buzzing_plains
-					random_list = {
-						50 = { add_deposit = d_ore_rich_caverns }
-						50 = { add_deposit = d_prosperous_mesa }
+				}
+				random_list = {
+					50 = { add_deposit = d_frozen_gas_lake }
+					50 = { add_deposit = d_searing_desert }
+				}
+				add_deposit = d_buzzing_plains
+				random_list = {
+					50 = { add_deposit = d_ore_rich_caverns }
+					50 = { add_deposit = d_prosperous_mesa }
+				}
+				add_deposit = d_mineral_striations
+			}
+			else_if = {
+				limit = { is_planet_class = pc_relic }
+				add_deposit = d_central_spire
+				add_deposit = d_ancient_reactor_pits_eldar_system
+				add_deposit = d_relic_metal_boneyard
+				while = {
+					count = 3
+					add_deposit = d_dense_ruins_eldar_system
+				}
+				add_deposit = d_massive_crevice_eldar_system
+			}
+			else_if = {
+				limit = {
+					OR = {
+						is_planet_class = pc_arid
+						is_pd_arid = yes
 					}
-					add_deposit = d_mineral_striations
 				}
-				pc_relic = {
-					add_deposit = d_central_spire
-					add_deposit = d_ancient_reactor_pits_eldar_system
-					add_deposit = d_relic_metal_boneyard
-					while = {
-						count = 3
-						add_deposit = d_dense_ruins_eldar_system
+				add_deposit = d_searing_desert
+				add_deposit = d_arid_highlands
+				add_deposit = d_ore_rich_caverns
+				add_deposit = d_veiny_cliffs
+			}
+			else_if = {
+				limit = {
+					OR = {
+						is_planet_class = pc_desert
+						is_pd_desert = yes
 					}
-					add_deposit = d_massive_crevice_eldar_system
 				}
-				pc_arid = {
-					add_deposit = d_searing_desert
-					add_deposit = d_arid_highlands
-					add_deposit = d_ore_rich_caverns
-					add_deposit = d_veiny_cliffs
+				add_deposit = d_searing_desert
+				add_deposit = d_arid_highlands
+				add_deposit = d_prosperous_mesa
+				add_deposit = d_mineral_fields
+				set_planet_flag = tasty_desert
+			}
+			else_if = {
+				limit = {
+					OR = {
+						is_planet_class = pc_savannah
+						is_pd_savannah = yes
+					}
 				}
-				pc_desert = {
-					add_deposit = d_searing_desert
-					add_deposit = d_arid_highlands
-					add_deposit = d_prosperous_mesa
-					add_deposit = d_mineral_fields
-					set_planet_flag = tasty_desert
+				add_deposit = d_searing_desert
+				add_deposit = d_arid_highlands
+				add_deposit = d_prosperous_mesa
+				add_deposit = d_mineral_fields
+			}
+			else_if = {
+				limit = {
+					OR = {
+						is_planet_class = pc_continental
+						is_pd_continental = yes
+					}
 				}
-				pc_savannah = {
-					add_deposit = d_searing_desert
-					add_deposit = d_arid_highlands
-					add_deposit = d_prosperous_mesa
-					add_deposit = d_mineral_fields
+				add_deposit = d_rushing_waterfalls
+				add_deposit = d_hot_springs
+				add_deposit = d_prosperous_mesa
+				add_deposit = d_veiny_cliffs
+			}
+			else_if = {
+				limit = {
+					OR = {
+						is_planet_class = pc_ocean
+						is_pd_ocean = yes
+					}
 				}
-				pc_continental = {
-					add_deposit = d_rushing_waterfalls
-					add_deposit = d_hot_springs
-					add_deposit = d_prosperous_mesa
-					add_deposit = d_veiny_cliffs
+				add_deposit = d_rushing_waterfalls
+				add_deposit = d_hot_springs
+				add_deposit = d_ore_rich_caverns
+				add_deposit = d_mineral_fields
+			}
+			else_if = {
+				limit = {
+					OR = {
+						is_planet_class = pc_tropical
+						is_pd_tropical = yes
+					}
 				}
-				pc_ocean = {
-					add_deposit = d_rushing_waterfalls
-					add_deposit = d_hot_springs
-					add_deposit = d_ore_rich_caverns
-					add_deposit = d_mineral_fields
+				add_deposit = d_rushing_waterfalls
+				add_deposit = d_hot_springs
+				add_deposit = d_prosperous_mesa
+				add_deposit = d_mineral_fields
+			}
+			else_if = {
+				limit = {
+					OR = {
+						is_planet_class = pc_alpine
+						is_pd_alpine = yes
+					}
 				}
-				pc_tropical = {
-					add_deposit = d_rushing_waterfalls
-					add_deposit = d_hot_springs
-					add_deposit = d_prosperous_mesa
-					add_deposit = d_mineral_fields
+				add_deposit = d_frozen_gas_lake
+				add_deposit = d_hot_springs
+				add_deposit = d_ore_rich_caverns
+				add_deposit = d_veiny_cliffs
+			}
+			else_if = {
+				limit = {
+					OR = {
+						is_planet_class = pc_arctic
+						is_pd_alpine = yes
+					}
 				}
-				pc_alpine = {
-					add_deposit = d_frozen_gas_lake
-					add_deposit = d_hot_springs
-					add_deposit = d_ore_rich_caverns
-					add_deposit = d_veiny_cliffs
+				add_deposit = d_frozen_gas_lake
+				add_deposit = d_hot_springs
+				add_deposit = d_ore_rich_caverns
+				add_deposit = d_veiny_cliffs
+			}
+			else_if = {
+				limit = {
+					OR = {
+						is_planet_class = pc_tundra
+						is_pd_tundra = yes
+					}
 				}
-				pc_arctic = {
-					add_deposit = d_frozen_gas_lake
-					add_deposit = d_hot_springs
-					add_deposit = d_ore_rich_caverns
-					add_deposit = d_veiny_cliffs
+				add_deposit = d_frozen_gas_lake
+				add_deposit = d_hot_springs
+				add_deposit = d_ore_rich_caverns
+				add_deposit = d_mineral_fields
+			}
+			else_if = {
+				limit = {
+					OR = {
+						is_planet_class = pc_nuked
+						is_pd_nuked = yes
+					}
 				}
-				pc_tundra = {
-					add_deposit = d_frozen_gas_lake
-					add_deposit = d_hot_springs
-					add_deposit = d_ore_rich_caverns
-					add_deposit = d_mineral_fields
-				}
-				pc_nuked = {
-					add_deposit = d_searing_desert
-					add_deposit = d_hot_springs
-					add_deposit = d_ore_rich_caverns
-					add_deposit = d_veiny_cliffs
-				}
+				add_deposit = d_searing_desert
+				add_deposit = d_hot_springs
+				add_deposit = d_ore_rich_caverns
+				add_deposit = d_veiny_cliffs
 			}
 		}
 	}
@@ -224,7 +288,7 @@ generate_eldar_system_start_buildings_and_districts = {
 			add_building = building_organic_sanctuary
 		}
 		else = {
-			aepr_add_planet_appropriate_generator_district = yes
+			epr_add_planet_appropriate_generator_district = yes
 		}
 	}
 	else_if = {
@@ -253,7 +317,7 @@ generate_eldar_system_start_buildings_and_districts = {
 		}
 		if = {
 			limit = { owner = { has_origin = origin_tree_of_life } }
-			aepr_add_planet_appropriate_farming_district = yes
+			epr_add_planet_appropriate_farming_district = yes
 		}
 		else = {
 			add_district = district_hive
@@ -301,6 +365,11 @@ generate_eldar_system_start_buildings_and_districts = {
 					is_planet_class = pc_machine
 					is_planet_class = pc_relic
 				}
+				is_pd_arcology = no
+				is_pd_hive_world = no
+				is_pd_hive_arcology = no
+				is_pd_machine = no
+				is_pd_robot_arcology = no
 				is_artificial = no
 				owner = {
 					has_valid_civic = civic_environmentalist
@@ -328,7 +397,7 @@ generate_eldar_system_start_buildings_and_districts = {
 					}
 				}
 			}
-			aepr_add_planet_appropriate_generator_district = yes
+			epr_add_planet_appropriate_generator_district = yes
 		}
 		else = {
 			add_district = district_city
@@ -385,7 +454,7 @@ generate_eldar_system_start_buildings_and_districts = {
 	}
 	if = {
 		limit = { owner = { is_machine_empire = yes } }
-		aepr_add_planet_appropriate_generator_district = yes
+		epr_add_planet_appropriate_generator_district = yes
 	}
 	else_if = {
 		limit = { owner = { has_origin = origin_clone_army } }
@@ -400,14 +469,17 @@ generate_eldar_system_start_buildings_and_districts = {
 				}
 			}
 		}
-		aepr_add_planet_appropriate_generator_district = yes
+		epr_add_planet_appropriate_generator_district = yes
 	}
 	else_if = {
 		limit = {
-			is_planet_class = pc_ocean
+			OR = {
+				is_planet_class = pc_ocean
+				is_pd_planet_for_aqua_trait = yes
+			}
 			owner = { is_anglers_empire = yes }
 		}
-		aepr_add_planet_appropriate_farming_district = yes
+		epr_add_planet_appropriate_farming_district = yes
 	}
 	else = {
 		add_district = district_industrial
@@ -417,9 +489,9 @@ generate_eldar_system_start_buildings_and_districts = {
 		limit = { owner = { has_origin = origin_machine } }
 		while = {
 			count = 2
-			aepr_add_planet_appropriate_generator_district = yes
+			epr_add_planet_appropriate_generator_district = yes
 		}
-		aepr_add_planet_appropriate_mining_district = yes
+		epr_add_planet_appropriate_mining_district = yes
 	}
 	else = {
 		if = {
@@ -432,7 +504,7 @@ generate_eldar_system_start_buildings_and_districts = {
 				limit = { owner = { is_hive_empire = yes } }
 				if = {
 					limit = { owner = { has_origin = origin_tree_of_life } }
-					aepr_add_planet_appropriate_farming_district = yes
+					epr_add_planet_appropriate_farming_district = yes
 				}
 				else = {
 					add_district = district_hive
@@ -448,7 +520,7 @@ generate_eldar_system_start_buildings_and_districts = {
 		}
 		else_if = {
 			limit = { owner = { has_origin = origin_tree_of_life } }
-			aepr_add_planet_appropriate_farming_district = yes
+			epr_add_planet_appropriate_farming_district = yes
 		}
 		else_if = {
 			limit = {
@@ -465,28 +537,34 @@ generate_eldar_system_start_buildings_and_districts = {
 		}
 		else_if = {
 			limit = {
-				is_planet_class = pc_ocean
+				OR = {
+					is_planet_class = pc_ocean
+					is_pd_planet_for_aqua_trait = yes
+				}
 				owner = { is_anglers_empire = yes }
 			}
-			aepr_add_planet_appropriate_farming_district = yes
+			epr_add_planet_appropriate_farming_district = yes
 		}
 		else = {
-			aepr_add_planet_appropriate_mining_district = yes
+			epr_add_planet_appropriate_mining_district = yes
 		}
 		if = {
 			limit = {
-				is_planet_class = pc_ocean
+				OR = {
+					is_planet_class = pc_ocean
+					is_pd_planet_for_aqua_trait = yes
+				}
 				owner = {
 					is_catalytic_empire = yes
 					is_anglers_empire = yes
 				}
 			}
-			aepr_add_planet_appropriate_farming_district = yes
+			epr_add_planet_appropriate_farming_district = yes
 		}
 		else = {
-			aepr_add_planet_appropriate_mining_district = yes
+			epr_add_planet_appropriate_mining_district = yes
 		}
-		aepr_add_planet_appropriate_generator_district = yes
+		epr_add_planet_appropriate_generator_district = yes
 	}
 	if = {
 		limit = { owner = { NOT = { has_origin = origin_remnants } } }
@@ -876,8 +954,8 @@ generate_eldar_system_final_pass = {
 			}
 		}
 		change_planet_size = 2
-		aepr_add_planet_appropriate_generator_district = yes
-		aepr_add_planet_appropriate_mining_district = yes
+		epr_add_planet_appropriate_generator_district = yes
+		epr_add_planet_appropriate_mining_district = yes
 	}
 	# species-specific deposits
 	if = {
@@ -887,6 +965,9 @@ generate_eldar_system_final_pass = {
 				is_planet_class = pc_relic
 			}
 			is_ringworld = no
+			is_pd_arcology = no
+			is_pd_hive_arcology = no
+			is_pd_robot_arcology = no
 			owner = { any_owned_pop = { has_trait = trait_exotic_metabolism } }
 		}
 		add_deposit = d_exotic_mountain
@@ -935,7 +1016,7 @@ silfae_eldar_ensure_communications_global_shroud_country = {
 }
 
 # this = planet
-aepr_add_planet_appropriate_mining_district = {
+epr_add_planet_appropriate_mining_district = {
 	optimize_memory
 	if = {
 		limit = {
@@ -943,6 +1024,9 @@ aepr_add_planet_appropriate_mining_district = {
 				uses_district_set = hive_world
 				uses_district_set = machine_world
 				uses_district_set = shattered_ring_world
+				uses_district_set = pdnecroplanet
+				is_pd_wasteland = yes
+				is_pd_planetary_megaproject = yes
 				AND = {
 					uses_district_set = standard
 					exists = owner
@@ -958,7 +1042,7 @@ aepr_add_planet_appropriate_mining_district = {
 }
 
 # this = planet
-aepr_add_planet_appropriate_generator_district = {
+epr_add_planet_appropriate_generator_district = {
 	optimize_memory
 	if = {
 		limit = {
@@ -977,6 +1061,9 @@ aepr_add_planet_appropriate_generator_district = {
 				uses_district_set = hive_world
 				uses_district_set = machine_world
 				uses_district_set = shattered_ring_world
+				uses_district_set = pdnecroplanet
+				is_pd_wasteland = yes
+				is_pd_planetary_megaproject = yes
 			}
 		}
 		add_district = district_generator_uncapped
@@ -987,15 +1074,25 @@ aepr_add_planet_appropriate_generator_district = {
 }
 
 # this = planet
-aepr_add_planet_appropriate_farming_district = {
+epr_add_planet_appropriate_farming_district = {
 	optimize_memory
 	if = {
 		limit = {
 			OR = {
 				uses_district_set = hive_world
 				uses_district_set = shattered_ring_world
+				uses_district_set = pdnecroplanet
+				is_pd_wasteland = yes
+				is_pd_planetary_megaproject = yes
+				has_deposit = d_technocanal
+				has_deposit = d_technocanal_blocker
+				has_modifier = technoorganic
+				has_modifier = technoorganic2
 				AND = {
-					is_planet_class = pc_ocean
+					OR = {
+						is_planet_class = pc_ocean
+						is_pd_planet_for_aqua_trait = yes
+					}
 					exists = owner
 					owner = { is_anglers_empire = yes }
 				}
