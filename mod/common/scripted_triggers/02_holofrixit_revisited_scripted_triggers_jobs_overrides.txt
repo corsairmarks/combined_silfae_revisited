@@ -8,7 +8,7 @@ complex_specialist_job_check_trigger = {
 			has_trait = trait_holodrone
 		}
 		OR = {
-			NOT = { has_trait = trait_mechanical }
+			is_robotic_species = yes
 			owner = {
 				has_technology = tech_droid_workers
 				NOT = { has_policy_flag = ai_outlawed }
@@ -26,23 +26,6 @@ is_organic_species = {
 			AND = {
 				is_archetype = HOLOARCH
 				NOR = {
-					has_trait = trait_holofrixigram
-					has_trait = trait_holofrixigram_2
-					has_trait = trait_holofrixigram_3
-				}
-			}
-		}
-	}
-}
-
-is_robotic_species = {
-	optimize_memory
-	species = {
-		OR = {
-			is_robotic = yes
-			AND = {
-				is_archetype = HOLOARCH
-				OR = {
 					has_trait = trait_holofrixigram
 					has_trait = trait_holofrixigram_2
 					has_trait = trait_holofrixigram_3
