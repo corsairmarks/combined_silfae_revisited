@@ -4,7 +4,7 @@ Do you like space-elves? Perhaps even from a certain grimdark IP? Silfae's "Anim
 There are lots of other mods which contain these portraits, so why should you choose this one?  None of the others update the custom solar system initializer or address the "Eldar leaders die quickly" issue, but this one does!  Please enjoy my translation of Silfae's custom empire into modern Stellaris.
 
 [h1]Changes[/h1]
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.6 "Orion," the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.7 "Canis Minor," the latest version when this was written.  Updates include:
 [list]
 [*]Enhance clothing selectors to be influenced by Pop job
 [*]Update the namelist to account for all built-in army types, remove obsolete entries
@@ -39,7 +39,7 @@ Compatible with most mods that do not add the same portraits, species class, or 
 
 The Launcher will tell you that some mods are outdated - that is because the dependency is out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mod.
 
-Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.
+Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements.
 
 [h3]Partial Overrides[/h3]
 This mod also allows the Creatures of the Shroud country to bombard your homeworld if you start in the Eye of Terror system initializer.  And they will use the Armageddon bombardment stance to do so.  To make this work, this mod overrides one game rule ([b]can_orbital_bombard[/b]) and one bombardment stance ([b]armageddon[/b]).
