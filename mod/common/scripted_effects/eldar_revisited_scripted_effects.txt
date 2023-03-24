@@ -374,7 +374,7 @@ generate_eldar_system_start_buildings_and_districts = {
 		}
 		if = {
 			limit = {
-				owner = { 
+				owner = {
 					NOT = { has_origin = origin_clone_army }
 					OR = {
 						has_origin = origin_remnants
