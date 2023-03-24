@@ -1,30 +1,22 @@
-#This rule is a condition for bombarding planets
-#Root = fleet, potential attacker
-#From = planet, potential target
+# this rule is a condition for bombarding planets
+# root = fleet, potential attacker
+# from = planet, potential target
 can_orbital_bombard = {
 	exists = from.owner
-	NOT = {
-		any_controlled_ship = {
-			is_ship_size = colossus
-		}
-	}
+	NOT = { any_controlled_ship = { is_ship_size = colossus } }
 	OR = {
 		AND = {
-			root.controller = {
-				NOT = { has_communications = from.owner }
-			}
-			from.owner = {
-				NOT = { is_country_type = primitive }
-			}
+			root.controller = { NOT = { has_communications = from.owner } }
+			from.owner = { is_primitive = no }
 		}
 		AND = {
 			root.controller = {
 				NOR = {
-					has_policy_flag = interference_passive
-					has_policy_flag = interference_active
+					has_policy_flag = interference_not_allowed
+					has_policy_flag = interference_subtle
 				}
 			}
-			from.owner = { is_country_type = primitive }
+			from.owner = { is_primitive = yes }
 		}
 		root.controller = { is_at_war_with = from.controller }
 		from = { is_planet_class = pc_infested }
@@ -50,6 +42,7 @@ can_orbital_bombard = {
 				is_country_type = dormant_marauders
 				is_country_type = marauder_raiders
 				is_country_type = ruined_marauders
+				is_country_type = debt_collectors
 				is_country_type = gray_goo
 				is_country_type = vol
 				AND = {
@@ -63,13 +56,15 @@ can_orbital_bombard = {
 				is_country_type = faction
 				NOT = { is_same_value = root.controller }
 			}
-			from.owner = {
-				is_same_value = root.controller
-			}
+			from.owner = { is_same_value = root.controller }
 		}
 		AND = {
 			root.controller = { is_country_type = shroud_spirits }
-			from = { has_planet_flag = is_shroud_attack_planet_target }
+			from = {
+				has_planet_flag = is_shroud_attack_planet_target
+				NOT = { is_planet_class = pc_shrouded }
+				is_pd_shroud_world = no
+			}
 		}
 	}
 }
