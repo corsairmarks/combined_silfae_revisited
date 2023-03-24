@@ -58,6 +58,8 @@
  OCTEE_fossil_plural: "$AQUATIC_fossil_plural$"
  OCTEE_remnant: "$AQUATIC_remnant$"
  OCTEE_remnant_plural: "$AQUATIC_remnant_plural$"
+ # unlocalised description from the base game
+ sm_solar_panel_network_desc: "Massive armatures fitted with endless spurs of photovoltaic cells."
  # special building, blocker deposit, and technology for PEEBOOPs
  d_octeelan_xeno_preserve: "$d_xeno_preserve$"
  d_octeelan_xeno_preserve_desc: "$d_xeno_preserve_desc$"
