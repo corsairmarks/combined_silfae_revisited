@@ -15,7 +15,7 @@ d_massive_crevice_eldar_system = {
 	}
 }
 
-# duplicate of d_ancient_reactor_pits nut only provides +3 generator districts
+# duplicate of d_ancient_reactor_pits but only provides +3 generator districts
 d_ancient_reactor_pits_eldar_system = {
 	is_for_colonizable = yes
 	icon = d_reactor
