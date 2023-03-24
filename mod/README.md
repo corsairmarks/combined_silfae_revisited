@@ -114,7 +114,6 @@ This mod preempts one event and overrides a deposit and two diplomatic actions, 
     * Rebalance special starting system bonus species
 * 7.0.0 Update for Stellaris version 3.7 "Canis Minor"
     * Update Interstellar Pursuers personality with new features
-    * Update shared triggers for Pop portraits
     * Remove no-longer-necessary override of the Isolated Valley deposit
     * Update Xeno Zoo (gestalt) building based on changes to the base Xeno Zoo
     * Add new jobs for the Xeno Zoo (gestalt) based on the new Zookeeper and Protected Fauna/Conserved Fauna jobs
