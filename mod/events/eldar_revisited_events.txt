@@ -1,21 +1,8 @@
 namespace = eldar_evt
 
-# flag mod as active
-event = {
-	id = eldar_evt.13
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		NOT = { has_global_flag = eldar_revisited_installed }
-	}
-	immediate = {
-		set_global_flag = eldar_revisited_installed
-	}
-}
-
 # triggered by empire_init_capital_planet
-# ROOT = planet, capital
-# FROM = species, founder
+# root = planet, capital
+# from = species, founder
 planet_event = {
 	id = eldar_evt.1
 	hide_window = yes
