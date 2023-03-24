@@ -88,13 +88,7 @@ generate_eldar_system_start_deposits_and_blockers = {
 	# craftworld gets special deposit that duplicates the habitat arcane replicator, but only if Federations DLC is available
 	if = {
 		limit = { has_federations_dlc = yes }
-		if = {
-			limit = { owner = { country_uses_consumer_goods = yes } }
-			add_deposit = d_arcane_replicator_eldar_system
-		}
-		else = {
-			add_deposit = d_arcane_replicator_eldar_system_gestalt
-		}
+		add_deposit = d_arcane_replicator_eldar_system
 	}
 
 	if = {
