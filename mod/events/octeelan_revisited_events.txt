@@ -60,7 +60,12 @@ planet_event = {
 			}
 		}
 		else_if = {
-			limit = { is_planet_class = pc_nuked }
+			limit = {
+				OR = {
+					is_planet_class = pc_nuked
+					is_pd_nuked = yes
+				}
+			}
 			while = {
 				count = 2
 				add_deposit = d_tomb_world_wasteland
@@ -74,7 +79,12 @@ planet_event = {
 			}
 		}
 		else_if = {
-			limit = { is_planet_class = pc_gaia }
+			limit = {
+				OR = {
+					is_planet_class = pc_gaia
+					is_pd_gaia = yes
+				}
+			}
 			random_list = {
 				50 = { add_deposit = d_mountain_range }
 				50 = { add_deposit = d_active_volcano }
