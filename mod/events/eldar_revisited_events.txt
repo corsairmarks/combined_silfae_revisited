@@ -102,19 +102,10 @@ planet_event = {
 			is_pd_machine = yes
 			is_pd_robot_arcology = yes
 		}
-		NOR = {
-			has_deposit = d_arcane_replicator_eldar_system
-			has_deposit = d_arcane_replicator_eldar_system_gestalt
-		}
+		NOT = { has_deposit = d_arcane_replicator_eldar_system }
 	}
 	immediate = {
-		if = {
-			limit = { owner = { country_uses_consumer_goods = yes } }
-			add_deposit = d_arcane_replicator_eldar_system
-		}
-		else = {
-			add_deposit = d_arcane_replicator_eldar_system_gestalt
-		}
+		add_deposit = d_arcane_replicator_eldar_system
 		# temporary workaround to make sure the progenitor doesn't get clobbered
 		if = {
 			limit = {

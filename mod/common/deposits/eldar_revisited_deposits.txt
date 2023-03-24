@@ -118,39 +118,18 @@ d_arcane_replicator_eldar_system = {
 		category = planet_deposits
 		produces = {
 			alloys = 12
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { country_uses_consumer_goods = yes }
+			}
 			consumer_goods = 4
 		}
 		produces = {
 			trigger = {
-				owner = {
-					any_owned_pop = {
-						has_trait = trait_exotic_metabolism
-					}
-				}
-			}
-			exotic_gases = 4
-		}
-	}
-}
-
-# requires Federations
-d_arcane_replicator_eldar_system_gestalt = {
-	is_for_colonizable = yes
-	icon = d_station_reactor
-	category = deposit_cat_rare
-	potential = { always = no }
-	resources = {
-		category = planet_deposits
-		produces = {
-			alloys = 12
-		}
-		produces = {
-			trigger = {
-				owner = {
-					any_owned_pop = {
-						has_trait = trait_exotic_metabolism
-					}
-				}
+				exists = owner
+				owner = { any_owned_pop = { has_trait = trait_exotic_metabolism } }
 			}
 			exotic_gases = 4
 		}

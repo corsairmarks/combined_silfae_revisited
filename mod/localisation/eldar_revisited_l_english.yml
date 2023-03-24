@@ -1580,8 +1580,6 @@
  d_dense_ruins_eldar_system_desc: "Although the Archives contain knowledge most of our species has forgotten, damage to the infrastructure prevents researchers from fully plumbing their secrets."
  d_arcane_replicator_eldar_system: "$d_arcane_replicator$"
  d_arcane_replicator_eldar_system_desc: "This ancient machine is nestled deep within the craftworld's interior, built into its main reactor from where it also draws its power. A relic of when the craftworld was constructed, its matter replication technology has been lost to time."
- d_arcane_replicator_eldar_system_gestalt: "$d_arcane_replicator$"
- d_arcane_replicator_eldar_system_gestalt_desc: "$d_arcane_replicator_eldar_system_desc$"
  # Eye of Terror star/planet class
  sc_silfae_eye_of_terror: "$pc_silfae_eye_of_terror$"
  sc_silfae_eye_of_terror_desc: "$pc_silfae_eye_of_terror_desc$"
