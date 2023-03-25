@@ -114,10 +114,19 @@ planet_event = {
 		if = {
 			limit = { owner = { is_gestalt = no } }
 			add_building = building_xeno_zoo
+			add_building = building_holo_theatres
 		}
 		else_if = {
 			limit = { owner = { is_homicidal = no } }
 			add_building = building_xeno_zoo_gestalt
+			if = {
+				limit = { owner = { is_machine_empire = yes } }
+				add_building = building_uplink_node
+			}
+			else_if = {
+				limit = { owner = { is_hive_empire = yes } }
+				add_district = building_hive_node
+			}
 		}
 		generate_additional_xenos_pops = yes
 	}
