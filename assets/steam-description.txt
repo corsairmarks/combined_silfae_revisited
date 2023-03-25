@@ -45,11 +45,10 @@ Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements
 This mod also allows the Creatures of the Shroud country to bombard your homeworld if you start in the Eye of Terror system initializer.  And they will use the Armageddon bombardment stance to do so.  To make this work, this mod overrides one game rule ([b]can_orbital_bombard[/b]) and one bombardment stance ([b]armageddon[/b]).
 
 [h3]Required Dependency Mods[/h3]
-In order for this mod to function, you [b]must[/b] install both of the following mods and load them before this one:
-[list]
-[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=707415339]Animated Eldar Portraits[/url] by Silfae
-[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2768297949]Building: Aquaponics Farms[/url] by me
-[/list]
+In order for this mod to function, you [b]must[/b] install the following mod and load it before this one:
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=707415339]Animated Eldar Portraits[/url] by Silfae
+
 [h3]When to Install[/h3]
 This mod should be added before the game has started.  If you remove it from a game in progress, your game may have graphical problems if any species was using the custom portraits.
 

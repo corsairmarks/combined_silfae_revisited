@@ -44,10 +44,9 @@ This mod also allows the Creatures of the Shroud country to bombard your homewor
 
 ### Required Dependency Mods
 
-In order for this mod to function, you **must** install both of the following mods and load them before this one:
+In order for this mod to function, you **must** install the following mod and load it before this one:
 
-* [Animated Eldar Portraits](https://steamcommunity.com/sharedfiles/filedetails/?id=707415339) by Silfae
-* [Building: Aquaponics Farms](https://steamcommunity.com/sharedfiles/filedetails/?id=2768297949) by me
+[Animated Eldar Portraits](https://steamcommunity.com/sharedfiles/filedetails/?id=707415339) by Silfae
 
 ### When to Install
 
@@ -106,6 +105,8 @@ This mod preempts one event from the base game related to restoring relic worlds
 * 7.0.0 Update for Stellaris version 3.7 "Canis Minor"
     * Update shared triggers for Pop portraits
     * Add support for Planetary Diversity
+    * Improve special Craftworld capital setup code
+    * No longer requires [Building: Aquaponics Farms](url=https://steamcommunity.com/sharedfiles/filedetails/?id=2768297949)
     * Remove global flag
     * Add compatibility trigger `has_eldar_portraits_revisited_active`
     * Integrate underlying game changes, including for empire capital setup
