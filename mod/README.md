@@ -1,5 +1,3 @@
-**_Important Update for Stellaris 3.6 "Orion":_** This mod is now even, even more compatible, thanks to improved trigger usage for Pop upkeep.  This mod no longer overrides any Pop strata.  Thanks Paradox!
-
 # Overview
 
 Have you seen the azure, chitinous portraits from Silfae's "Holosphere Rising" mod?  Do you want to manage techno-arthropoid hives with up-to-date gameplay elements and play the Holosphere as originally designed?  Then this mod is for you!
@@ -8,7 +6,7 @@ There are other mods which contain these portraits, so why should you choose thi
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.6 "Orion," the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.7 "Canis Minor," the latest version when this was written.  Updates include:
 
 * Update Holofrixit shipset (reuse of Unbidden) to work with current Stellaris - starbases, titans, juggernauts, and colossi fall back to molluscoid (the fallback for the Unbidden)
 * Enhance Holofrixit portrait usage:
@@ -41,7 +39,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.
+Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements.
 
 ### Partial Overrides
 
@@ -177,6 +175,12 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 * 6.0.1 Limit the game to spawning at most one empire with the Hive-Network origin
 * 6.0.2 Update empire random names based on changes from Stellaris version 3.6 "Orion"
 * 6.0.3 Use the original image from "Overtuned" because it was changed in Stellaris version 3.5 "Fornax" for Toxoids
+* 7.0.0 Update for Stellaris version 3.7 "Canis Minor"
+    * Update shared triggers for Pop portraits
+    * Add assembly weight to Holofrixit traits - should help the AI assemble the appropriate Pops better
+    * Add compatibility with Planetary Diversity
+    * Remove global flag
+    * Add compatibility trigger `has_holosphere_portraits_revisited_active`
 
 ## Source Code
 

@@ -1,12 +1,10 @@
-[b][u]Important Update for Stellaris 3.6 "Orion":[/u][/b] This mod is now even, even more compatible, thanks to improved trigger usage for Pop upkeep.  This mod no longer overrides any Pop strata.  Thanks Paradox!
-
 [h1]Overview[/h1]
 Have you seen the azure, chitinous portraits from Silfae's "Holosphere Rising" mod? Do you want to manage techno-arthropoid hives with up-to-date gameplay elements and play the Holosphere as originally designed? Then this mod is for you!
 
 There are other mods which contain these portraits, so why should you choose this one? None of the others update special holofrixit caste-based gameplay, but this one does! Please enjoy my adaptation of Silfae's custom empire into modern Stellaris.
 
 [h1]Changes[/h1]
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.6 "Orion," the latest version when this was written. Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.7 "Canis Minor," the latest version when this was written. Updates include:
 [list]
 [*]Update Holofrixit shipset (Unbidden) - fallback to molluscoid (the fallback for the Unbidden)
 [*]Enhance Holofrixit portrait usage:
@@ -44,7 +42,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 [h2]Compatibility[/h2]
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number. This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed. You can safely ignore the out-of-date warning for the dependency mods.
 
-Built for Stellaris version 3.6 "Orion." Not compatible with achievements.
+Built for Stellaris version 3.7 "Canis Minor." Not compatible with achievements.
 
 [h3]Partial Overrides[/h3]
 This mod also alters the requirements for ruler-stratum jobs and some "complicated" specialist/complex drone-stratum jobs. Only Xechiros can work the majority of ruler jobs (Ganglions can be Head Researchers), and Drones cannot work any jobs that require "thinking" (similar to syncretic proles or zombies). Jobs have also been re-weighted so the Holowarriors prefer military jobs. These overrides [i]also[/i] mean that this mod will need to be explicitly updated any time Paradox makes changes to the overridden jobs.
