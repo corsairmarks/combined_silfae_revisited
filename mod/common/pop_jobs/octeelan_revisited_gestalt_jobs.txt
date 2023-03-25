@@ -1,7 +1,7 @@
 xeno_zoo_keeper_drone = {
 	category = complex_drone
 	condition_string = SPECIALIST_JOB_TRIGGER
-	icon = gfx/interface/icons/jobs/job_xeno_zoo_keeper.dds
+	icon = xeno_zoo_keeper
 	building_icon = building_xeno_zoo
 	clothes_texture_index = 3
 
@@ -42,7 +42,7 @@ xeno_zoo_keeper_drone = {
 xeno_zoo_animal_gestalt = {
 	category = pre_sapients
 	is_capped_by_modifier = no
-	icon = gfx/interface/icons/jobs/job_xeno_zoo_animal.dds
+	icon = xeno_zoo_animal
 	clothes_texture_index = 2
 	contributes_to_diplo_weight = no
 	possible_pre_triggers = { is_sapient = no }
@@ -74,7 +74,7 @@ xeno_zoo_animal_gestalt = {
 livestock_zoo_animal_gestalt = {
 	category = worker
 	is_capped_by_modifier = yes
-	icon = gfx/interface/icons/jobs/job_livestock_zoo_animal.dds
+	icon = livestock_zoo_animal
 	clothes_texture_index = 2
 	possible_pre_triggers = {
 		is_enslaved = yes
