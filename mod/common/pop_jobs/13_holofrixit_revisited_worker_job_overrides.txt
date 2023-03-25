@@ -12,6 +12,9 @@ soldier = {
 	country_modifier = {
 		country_naval_cap_add = 4
 	}
+	resources = {
+		category = planet_soldiers
+	}
 
 	triggered_country_modifier = {
 		potential = {
@@ -24,10 +27,6 @@ soldier = {
 		modifier = {
 			country_naval_cap_add = 2
 		}
-	}
-
-	resources = {
-		category = planet_soldiers
 	}
 
 	pop_modifier = {
@@ -51,6 +50,7 @@ soldier = {
 
 	possible = {
 		soldier_job_check_trigger = yes
+		exists = owner
 		owner = { is_gestalt = no }
 	}
 
@@ -80,12 +80,20 @@ soldier = {
 		modifier = {
 			factor = 0.1
 			is_enslaved = yes
-			NOT = { has_slavery_type = { type = slavery_military } }
+			NOT = {
+				has_slavery_type = {
+					type = slavery_military
+					country = owner
+				}
+			}
 		}
 		modifier = {
 			factor = 10
 			is_enslaved = yes
-			has_slavery_type = { type = slavery_military }
+			has_slavery_type = {
+				type = slavery_military
+				country = owner
+			}
 		}
 		modifier = {
 			factor = 0.1
@@ -114,6 +122,10 @@ soldier = {
 		modifier = {
 			factor = 2
 			has_trait = trait_lithoid
+		}
+		modifier = {
+			factor = 3
+			has_trait = trait_noxious
 		}
 		modifier = {
 			factor = 0.5

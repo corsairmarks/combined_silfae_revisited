@@ -78,7 +78,7 @@ enforcer = {
 		modifier = {
 			factor = 0.2
 			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
+			is_robot_pop = no
 		}
 		modifier = {
 			factor = 2
@@ -95,10 +95,13 @@ enforcer = {
 		modifier = {
 			factor = 10
 			is_enslaved = yes
-			has_slavery_type = { type = slavery_military }
+			has_slavery_type = {
+				type = slavery_military
+				country = owner
+			}
 		}
 		modifier = {
-			factor = 0.50
+			factor = 0.5
 			has_trait = trait_weak
 		}
 		modifier = {
@@ -129,6 +132,10 @@ enforcer = {
 		modifier = {
 			factor = 2
 			has_trait = trait_lithoid
+		}
+		modifier = {
+			factor = 3
+			has_trait = trait_noxious
 		}
 		modifier = {
 			factor = 0.5
