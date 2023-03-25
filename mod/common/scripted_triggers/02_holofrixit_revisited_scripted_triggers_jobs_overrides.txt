@@ -8,7 +8,7 @@ complex_specialist_job_check_trigger = {
 			has_trait = trait_holodrone
 		}
 		OR = {
-			is_robotic_species = yes
+			is_robotic_species = no
 			owner = {
 				has_technology = tech_droid_workers
 				NOT = { has_policy_flag = ai_outlawed }
