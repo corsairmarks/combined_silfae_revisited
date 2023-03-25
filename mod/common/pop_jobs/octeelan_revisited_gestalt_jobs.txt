@@ -19,7 +19,7 @@ xeno_zoo_keeper_drone = {
 			society_research = 10
 		}
 		upkeep = {
-			consumer_goods = 1
+			energy = 2
 		}
 	}
 
