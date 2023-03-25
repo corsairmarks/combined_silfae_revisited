@@ -429,9 +429,11 @@ generate_additional_xenos_pops = {
 			}
 			else_if = {
 				limit = {
-					OR = {
-						is_hive_empire = yes
-						has_valid_civic = civic_machine_assimilator
+					owner = {
+						OR = {
+							is_hive_empire = yes
+							has_valid_civic = civic_machine_assimilator
+						}
 					}
 				}
 				random_owned_pop = {
