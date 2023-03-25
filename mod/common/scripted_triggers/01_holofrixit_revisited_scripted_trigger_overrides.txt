@@ -1,3 +1,4 @@
+# Modified: holofrixit always have energy upkeep
 has_energy_upkeep = {
 	optimize_memory
 	OR = {
