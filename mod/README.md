@@ -106,7 +106,7 @@ This mod preempts one event from the base game related to restoring relic worlds
     * Update shared triggers for Pop portraits
     * Add support for Planetary Diversity
     * Improve special Craftworld capital setup code
-    * No longer requires [Building: Aquaponics Farms](url=https://steamcommunity.com/sharedfiles/filedetails/?id=2768297949)
+    * No longer requires [Building: Aquaponics Farms](https://steamcommunity.com/sharedfiles/filedetails/?id=2768297949)
     * Remove global flag
     * Add compatibility trigger `has_eldar_portraits_revisited_active`
     * Integrate underlying game changes, including for empire capital setup
