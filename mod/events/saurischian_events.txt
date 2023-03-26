@@ -13,26 +13,12 @@ planet_event = {
 		solar_system = {
 			every_system_planet = {
 				limit = {
-					has_planet_flag = saurischian_system_primitives
+					has_planet_flag = saurischian_system_pre_ftls
 					has_owner = yes
-					owner = { is_country_type = primitive }
+					owner = { is_primitive = yes }
 				}
-				saurischian_system_primitives_final_pass = yes
+				saurischian_system_pre_ftls_final_pass = yes
 			}
 		}
-	}
-}
-
-# triggered by on_game_start
-event = {
-	id = saurischian_evt.13
-	hide_window = yes
-	is_triggered_only = yes
-	fire_only_once = yes
-	trigger = {
-		NOT = { has_global_flag = saurischian_revisited_installed }
-	}
-	immediate = {
-		set_global_flag = saurischian_revisited_installed
 	}
 }

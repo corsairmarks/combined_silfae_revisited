@@ -99,14 +99,24 @@ generate_saurischian_system_capital_blockers = {
 				value = @feature_blockers
 			}
 			if = {
-				limit = { is_planet_class = pc_nuked }
+				limit = {
+					OR = {
+						is_planet_class = pc_nuked
+						is_pd_nuked = yes
+					}
+				}
 				while = {
 					count = local_feature_blockers
 					add_deposit = d_radioactive_wasteland
 				}
 			}
 			else_if = {
-				limit = { is_planet_class = pc_gaia }
+				limit = {
+					OR = {
+						is_planet_class = pc_gaia
+						is_pd_gaia = yes
+					}
+				}
 				# reduce the number of blockers by half because non-feature blockers use up more territory
 				divide_variable = {
 					which = local_feature_blockers
@@ -150,6 +160,7 @@ generate_saurischian_system_capital_blockers = {
 				limit = {
 					OR = {
 						is_planet_class = pc_ocean
+						is_pd_planet_for_aqua_trait = yes
 						owner = { has_origin = origin_ocean_paradise }
 					}
 				}
@@ -170,9 +181,9 @@ generate_saurischian_system_capital_blockers = {
 	}
 }
 
-# establish contact with primitives if not Resource Consolidation origin
+# establish contact with pre-FTLs if not Resource Consolidation origin
 # otherwise, nuke 'em! (this represents wrecking the biosphere while consolidating)
-saurischian_system_primitives_final_pass = {
+saurischian_system_pre_ftls_final_pass = {
 	optimize_memory
 	if = {
 		limit = { solar_system.owner = { has_origin = origin_machine } }
