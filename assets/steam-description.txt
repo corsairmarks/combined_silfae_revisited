@@ -47,7 +47,6 @@ In order for this mod to function, you [b]must[/b] install these mods (and load 
 [*][url=https://steamcommunity.com/workshop/filedetails/?id=1160316076]Animated Silicoid Portraits[/url] by Silfae
 [*][url=https://steamcommunity.com/workshop/filedetails/?id=881118424]Animated Xirmian Portraits[/url] by Silfae
 [*][url=https://steamcommunity.com/workshop/filedetails/?id=2247427791]Silfae's city sets updated[/url] by Nozeminer (devastated cities and ecumenopolis-level cities)
-[*][url=https://steamcommunity.com/workshop/filedetails/?id=2768297949]Building: Aquaponics Farms[/url] by me (for Anglers starting on the Eldar custom system)
 [*][url=https://steamcommunity.com/workshop/filedetails/?id=2496357447]Special Leadership Privileges for Battle Thralls and Bio-Trophies[/url] by me (for Holosphere's enslaved leaders)
 [/list]
 These mods are not included as part of this mod so that the original authors get credit via mod subscriptions.

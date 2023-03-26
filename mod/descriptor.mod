@@ -15,7 +15,6 @@ dependencies={
 	"Animated Xirmian Portraits"
 	"Holosphere Rising"
 	"Silfae's city sets updated"
-	"Building: Aquaponics Farms"
 	"Special Leadership Privileges for Battle Thralls and Bio-Trophies"
 }
 tags={
