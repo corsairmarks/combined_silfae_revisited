@@ -110,6 +110,7 @@ This mod preempts one event from the base game related to restoring relic worlds
     * Remove global flag
     * Add compatibility trigger `has_eldar_portraits_revisited_active`
     * Integrate underlying game changes, including for empire capital setup
+* 7.0.1 Remove obsolete grant of the technology for Aquaponics Farms
 
 ## Source Code
 
