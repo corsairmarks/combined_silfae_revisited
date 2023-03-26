@@ -51,13 +51,6 @@ country_event = {
 			tech = tech_hydroponics
 			message = no
 		}
-		if = {
-			limit = { is_anglers_empire = yes }
-			give_technology = {
-				tech = tech_aquaponics
-				message = no
-			}
-		}
 		give_technology = {
 			tech = tech_housing_1
 			message = no
