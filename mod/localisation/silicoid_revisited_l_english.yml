@@ -3,6 +3,8 @@
  mod_planet_pops_minerals_upkeep_mult: "$POP$ $minerals$ $UPKEEP$"
  mod_planet_pops_food_upkeep_mult: "$POP$ $food$ $UPKEEP$"
  civic_tooltip_terraformers_effects: "Begin with the §Y$tech_terrestrial_sculpting$§! technology researched."
+ TRAIT_MELTING_EFFECTS: "$gaiaseeders_dry$ $HABITABILITY$: §G+50%§!"
+ TRAIT_COLD_PULSE_EFFECTS: "$gaiaseeders_cold$ $HABITABILITY$: §G+50%§!"
  SLCOD_organ_plural: "dust"
  SLCOD_ear: "$LITHOID_ear$"
  SLCOD_ear_plural: "$LITHOID_ear_plural$"
@@ -280,3 +282,10 @@
  NAME_CHARACTER_SECOND_SLCOD1_30: "Bouldermight"
  NAME_CHARACTER_SECOND_SLCOD1_31: "Stoutquake"
  NAME_CHARACTER_SECOND_SLCOD1_32: "Redthorn"
+
+ # localisation to make the game happy with the conditional content
+ # matches localisation from Planetary Diversity so that it won't matter which mod loads first
+ d_technocanal: "Techno-Canal System"
+ d_technocanal_blocker: "$d_technocanal$"
+ technoorganic: "Techno-Organic Planet"
+ technoorganic2: "$technoorganic$"
