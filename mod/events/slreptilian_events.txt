@@ -1,8 +1,8 @@
 namespace = slreptilians
 
 # triggered by empire_init_capital_planet
-# ROOT = planet, capital
-# FROM = species, main
+# root = planet, capital
+# from = species, main
 planet_event = {
 	id = slreptilians.1
 	hide_window = yes
@@ -53,7 +53,7 @@ event = {
 
 # Geneticist bonus research
 # triggered by empire_init_add_technologies
-# ROOT = country
+# root = country
 country_event = { 
 	id = slreptilians.2001
 	hide_window = yes

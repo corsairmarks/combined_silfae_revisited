@@ -177,10 +177,7 @@ empire_name_format = {
 			has_government = gov_oldones_ascendancy
 			is_pirate = no
 			is_primitive = no
-			NOR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			is_fallen_empire = no
 		}
 	}
 	format = "{AofB{<old_ones_ascendancy> [This.Capital.System.GetName]}}"
@@ -197,10 +194,7 @@ empire_name_format = {
 			has_government = gov_oldones_ascendancy
 			is_pirate = no
 			is_primitive = no
-			NOR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			is_fallen_empire = no
 		}
 	}
 	format = "{AofB{<old_ones_ascendancy> [This.Capital.GetName]}}"
@@ -217,10 +211,7 @@ empire_name_format = {
 			has_government = gov_oldones_ascendancy
 			is_pirate = no
 			is_primitive = no
-			NOR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			is_fallen_empire = no
 		}
 	}
 	format = "{[This.GetSpeciesAdj] {<old_ones_ascendancy>}}"
@@ -237,10 +228,7 @@ empire_name_format = {
 			has_government = gov_oldones_ascendancy
 			is_pirate = no
 			is_primitive = no
-			NOR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			is_fallen_empire = no
 		}
 	}
 	format = "{<old_ones_ascendancy_desc> {[This.GetSpeciesAdj] {<old_ones_ascendancy>}}}"
@@ -257,10 +245,7 @@ empire_name_format = {
 			has_government = gov_oldones_ascendancy
 			is_pirate = no
 			is_primitive = no
-			NOR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			is_fallen_empire = no
 		}
 	}
 	format = "{[This.GetSpeciesAdj] {<shadow_evolution_mid_desc> {<old_ones_ascendancy>}}}"
@@ -277,10 +262,7 @@ empire_name_format = {
 			has_government = gov_concealed_overlordship
 			is_pirate = no
 			is_primitive = no
-			NOR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			is_fallen_empire = no
 		}
 	}
 	format = "{AofB{<concealed_overlordship> [This.Capital.System.GetName]}}"
@@ -297,10 +279,7 @@ empire_name_format = {
 			has_government = gov_concealed_overlordship
 			is_pirate = no
 			is_primitive = no
-			NOR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			is_fallen_empire = no
 		}
 	}
 	format = "{AofBpfx{[This.Capital.System.GetName] <concealed_overlordship>}}"
@@ -317,10 +296,7 @@ empire_name_format = {
 			has_government = gov_concealed_overlordship
 			is_pirate = no
 			is_primitive = no
-			NOR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			is_fallen_empire = no
 		}
 	}
 	format = "{[This.GetSpeciesAdj] {<concealed_overlordship>}}"
@@ -337,10 +313,7 @@ empire_name_format = {
 			has_government = gov_concealed_overlordship
 			is_pirate = no
 			is_primitive = no
-			NOR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			is_fallen_empire = no
 		}
 	}
 	format = "{<concealed_overlordship_desc> {[This.GetSpeciesAdj] {<concealed_overlordship>}}}"
@@ -357,10 +330,7 @@ empire_name_format = {
 			has_government = gov_concealed_overlordship
 			is_pirate = no
 			is_primitive = no
-			NOR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			is_fallen_empire = no
 		}
 	}
 	format = "{[This.GetSpeciesAdj] {<shadow_evolution_mid_desc> {<concealed_overlordship>}}}"
@@ -377,10 +347,7 @@ empire_name_format = {
 			has_government = gov_secretworld_order
 			is_pirate = no
 			is_primitive = no
-			NOR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			is_fallen_empire = no
 		}
 	}
 	format = "{AofB{<secret_world_order> [This.Capital.System.GetName]}}"
@@ -397,10 +364,7 @@ empire_name_format = {
 			has_government = gov_secretworld_order
 			is_pirate = no
 			is_primitive = no
-			NOR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			is_fallen_empire = no
 		}
 	}
 	format = "{AofB{<secret_world_order> [This.Capital.GetName]}}"
@@ -417,10 +381,7 @@ empire_name_format = {
 			has_government = gov_secretworld_order
 			is_pirate = no
 			is_primitive = no
-			NOR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			is_fallen_empire = no
 		}
 	}
 	format = "{[This.GetSpeciesAdj] {<secret_world_order>}}"
@@ -437,10 +398,7 @@ empire_name_format = {
 			has_government = gov_secretworld_order
 			is_pirate = no
 			is_primitive = no
-			NOR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			is_fallen_empire = no
 		}
 	}
 	format = "{<secret_world_order_desc> {[This.GetSpeciesAdj] {<secret_world_order>}}}"
@@ -457,10 +415,7 @@ empire_name_format = {
 			has_government = gov_secretworld_order
 			is_pirate = no
 			is_primitive = no
-			NOR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			is_fallen_empire = no
 		}
 	}
 	format = "{[This.GetSpeciesAdj] {<shadow_evolution_mid_desc> {<secret_world_order>}}}"
@@ -477,10 +432,7 @@ empire_name_format = {
 			has_government = gov_esoteric_masquerade
 			is_pirate = no
 			is_primitive = no
-			NOR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			is_fallen_empire = no
 		}
 	}
 	format = "{AofB{<esoteric_masquerade> [This.Capital.System.GetName]}}"
@@ -497,10 +449,7 @@ empire_name_format = {
 			has_government = gov_esoteric_masquerade
 			is_pirate = no
 			is_primitive = no
-			NOR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			is_fallen_empire = no
 		}
 	}
 	format = "{AofB{<esoteric_masquerade> [This.Capital.GetName]}}"
@@ -517,10 +466,7 @@ empire_name_format = {
 			has_government = gov_esoteric_masquerade
 			is_pirate = no
 			is_primitive = no
-			NOR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			is_fallen_empire = no
 		}
 	}
 	format = "{[This.GetSpeciesAdj] {<esoteric_masquerade>}}"
@@ -537,10 +483,7 @@ empire_name_format = {
 			has_government = gov_esoteric_masquerade
 			is_pirate = no
 			is_primitive = no
-			NOR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			is_fallen_empire = no
 		}
 	}
 	format = "{<esoteric_masquerade_desc> {[This.GetSpeciesAdj] {<esoteric_masquerade>}}}"
@@ -557,10 +500,7 @@ empire_name_format = {
 			has_government = gov_esoteric_masquerade
 			is_pirate = no
 			is_primitive = no
-			NOR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			is_fallen_empire = no
 		}
 	}
 	format = "{[This.GetSpeciesAdj] {<shadow_evolution_mid_desc> {<esoteric_masquerade>}}}"
