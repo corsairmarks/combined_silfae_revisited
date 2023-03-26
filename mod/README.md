@@ -75,6 +75,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Add support for Planetary Diversity
     * Remove global flag
     * Add compatibility trigger `has_hyenafolk_portraits_revisited_active`
+* 6.0.1 Rename file for correctness with this mod's name
 
 ## Source Code
 
