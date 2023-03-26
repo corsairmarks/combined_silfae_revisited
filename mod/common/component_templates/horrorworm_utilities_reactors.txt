@@ -137,6 +137,7 @@ utility_component_template = {
 		weight = 5
 	}
 }
+
 utility_component_template = {
 	key = "DIMENSIONAL_HORRORWORM_DARK_MATTER_REACTOR"
 	size = small

@@ -1,5 +1,6 @@
 HRWRM = {
 	playable = { has_necroids = no }
+	randomized =  { always = yes }
 	archetype = BIOLOGICAL
 	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
 	possible_secondary = { always = yes }
@@ -20,6 +21,7 @@ HRWRM1 = {
 }
 
 HRWRM2 = {
+	randomized = no
 	playable = { has_necroids = yes }
 	archetype = BIOLOGICAL
 	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }

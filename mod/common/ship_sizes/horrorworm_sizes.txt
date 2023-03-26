@@ -19,9 +19,10 @@ dimensional_horrorworm = {
 	section_slots = { 
 		"mid" = { locator = "part1" }
 	}
-	num_target_locators = 2
+	num_target_locators = 4
 	is_space_station = no
 	icon_frame = 5
+	icon = ship_size_space_monster
 	base_buildtime = @corvette_build_time
 	can_have_federation_design = no
 	enable_default_design = no
@@ -36,8 +37,14 @@ dimensional_horrorworm = {
 	required_component_set = "thruster_components"
 	required_component_set = "sensor_components"
 	is_designable = yes
-	default_behavior = line
-	ship_roles = { gunship artillery }
+	default_behavior = artillery
+	ship_roles = { artillery }
+	triggered_ship_roles = {
+		{
+			name = artillery_stealth
+			trigger = { has_technology = tech_cloaking_1 }
+		}
+	}
 	construction_type = starbase_shipyard
 	resources = {
 		category = ships
