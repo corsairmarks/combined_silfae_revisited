@@ -114,6 +114,7 @@ In game terms, the fourth color of Phenotype 9 is the same as the third color.
     * Update shared triggers for Pop portraits
     * Remove global flag
     * Add compatibility trigger `has_horrorworm_portraits_revisited_active`
+* 7.0.1 Do not randomize the second horrorworm portrait set - causes issue due to not having corresponding namelist(s)
 
 ## Source Code
 
