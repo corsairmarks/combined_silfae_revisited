@@ -179,7 +179,10 @@ can_species_be_assembled = {
 					OR = {
 						has_building = building_clone_vats
 						has_modifier = tiyanki_trophy
-						owner = { has_modifier = syamelles_curse }
+						owner = {
+							has_modifier = syamelles_curse
+							has_modifier = syamelles_curse_habitat
+						}
 						has_planet_flag = can_organic_assemble_flag #for mod compatibility
 					}
 				}
@@ -192,14 +195,13 @@ can_species_be_assembled = {
 	}
 }
 
-#this = pop
-#checked if job's possible_precalc = can_fill_ruler_job
+# this = pop
+# checked if job's possible_precalc = can_fill_ruler_job
 can_fill_ruler_job = {
 	if = {
 		limit = {
 			exists = owner
 			owner = {
-				is_gestalt = no
 				has_origin = origin_necrophage
 				has_trait = trait_necrophage
 			}
@@ -233,13 +235,18 @@ can_fill_ruler_job = {
 			is_being_assimilated = no
 			cm_shared_is_smart_enough_for_leadership = yes
 			OR = {
-				NOT = { has_trait = trait_mechanical }
+				is_robot_pop = no
 				owner = {
 					has_technology = tech_synthetic_workers
 					has_policy_flag = ai_full_rights
 				}
 			}
-			NOT = { has_citizenship_type = { type = citizenship_organic_trophy } }
+			NOT = {
+				has_citizenship_type = {
+					type = citizenship_organic_trophy
+					country = owner
+				}
+			}
 			if = {
 				limit = { divinity_right_to_work_job_check_trigger_exempt = no }
 				divinity_right_to_work_job_check_trigger_ruler = yes

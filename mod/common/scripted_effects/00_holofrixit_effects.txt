@@ -201,10 +201,15 @@ add_random_3_generator_district_deposit = {
 		limit = {
 			OR = {
 				is_planet_class = pc_arctic
+				is_pd_arctic = yes
 				is_planet_class = pc_tundra
+				is_pd_tundra = yes
 				is_planet_class = pc_savannah
+				is_pd_savannah = yes
 				is_planet_class = pc_desert
+				is_pd_desert = yes
 				is_planet_class = pc_arid
+				is_pd_arid = yes
 			}
 		}
 		add_deposit = d_geothermal_vent
@@ -213,7 +218,9 @@ add_random_3_generator_district_deposit = {
 		limit = {
 			OR = {
 				is_planet_class = pc_ocean
+				is_pd_ocean = yes
 				is_planet_class = pc_nuked
+				is_pd_nuked = yes
 			}
 		}
 		add_deposit = d_underwater_vent
@@ -222,8 +229,11 @@ add_random_3_generator_district_deposit = {
 		limit = {
 			OR = {
 				is_planet_class = pc_tropical
+				is_pd_tropical = yes
 				is_planet_class = pc_alpine
+				is_pd_alpine = yes
 				is_planet_class = pc_continental
+				is_pd_continental = yes
 			}
 		}
 		add_deposit = d_tempestous_mountain
@@ -232,6 +242,7 @@ add_random_3_generator_district_deposit = {
 		limit = {
 			OR = {
 				is_planet_class = pc_gaia
+				is_pd_gaia = yes
 				is_planet_class = pc_relic
 			}
 		}
@@ -258,6 +269,7 @@ add_random_2_generator_district_deposit = {
 			OR = {
 				is_dry = yes
 				is_planet_class = pc_nuked
+				is_pd_nuked = yes
 			}
 		}
 		add_deposit = d_searing_desert
@@ -270,6 +282,7 @@ add_random_2_generator_district_deposit = {
 		limit = {
 			OR = {
 				is_planet_class = pc_gaia
+				is_pd_gaia = yes
 				is_planet_class = pc_relic
 			}
 		}
@@ -297,12 +310,18 @@ add_random_1_generator_district_deposit = {
 				is_cold = yes
 				is_wet = yes
 				is_planet_class = pc_nuked
+				is_pd_nuked = yes
 			}
 		}
 		add_deposit = d_hot_springs
 	}
 	else_if = {
-		limit = { is_planet_class = pc_gaia }
+		limit = {
+			OR = {
+				is_planet_class = pc_gaia
+				is_pd_gaia = yes
+			}
+		}
 		add_deposit = d_buzzing_plains
 	}
 	else = {

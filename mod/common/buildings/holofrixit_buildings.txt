@@ -1,26 +1,23 @@
 # NOTE: initial build time and cost matches building_resource_silo
-@build_time_nexus = 100
+@build_time_nexus = 180
 @build_cost_nexus = 200
 
 building_polarizing_nexus_1 = {
 	base_buildtime = @build_time_nexus
+	category = research
 	base_cap_amount = 1
 	potential = {
+		is_special_colony_type = no
 		exists = owner
 		owner = { has_authority = auth_holofrixit }
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-			has_modifier = crucible_colony
-		}
 	}
 	destroy_trigger = {
-		exists = owner
 		OR = {
-			owner = { NOT = { has_authority = auth_holofrixit } }
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-			has_modifier = crucible_colony
+			is_special_colony_type = yes
+			AND = {
+				exists = owner 
+				owner = { NOT = { has_authority = auth_holofrixit } }
+			}
 		}
 	}
 	convert_to = { building_resource_silo }
@@ -52,24 +49,21 @@ building_polarizing_nexus_1 = {
 
 building_polarizing_nexus_2 = {
 	base_buildtime = @build_time_nexus
+	category = research
 	can_build = no
 	icon = building_polarizing_nexus_1
 	potential = {
+		is_special_colony_type = no
 		exists = owner
 		owner = { has_authority = auth_holofrixit }
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-			has_modifier = crucible_colony
-		}
 	}
 	destroy_trigger = {
-		exists = owner
 		OR = {
-			owner = { NOT = { has_authority = auth_holofrixit } }
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-			has_modifier = crucible_colony
+			is_special_colony_type = yes
+			AND = {
+				exists = owner 
+				owner = { NOT = { has_authority = auth_holofrixit } }
+			}
 		}
 	}
 	convert_to = { building_resource_silo }
@@ -102,24 +96,21 @@ building_polarizing_nexus_2 = {
 
 building_polarizing_nexus_3 = {
 	base_buildtime = @build_time_nexus
+	category = research
 	can_build = no
 	icon = "building_polarizing_nexus_2"
 	potential = {
+		is_special_colony_type = no
 		exists = owner
 		owner = { has_authority = auth_holofrixit }
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-			has_modifier = crucible_colony
-		}
 	}
 	destroy_trigger = {
-		exists = owner
 		OR = {
-			owner = { NOT = { has_authority = auth_holofrixit } }
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-			has_modifier = crucible_colony
+			is_special_colony_type = yes
+			AND = {
+				exists = owner 
+				owner = { NOT = { has_authority = auth_holofrixit } }
+			}
 		}
 	}
 	convert_to = { building_resource_silo }
