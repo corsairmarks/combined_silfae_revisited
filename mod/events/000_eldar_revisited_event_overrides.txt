@@ -1,16 +1,22 @@
 namespace = mega
+namespace = origin
 
-# Ecumenopolis complete (Relic World)
+# Modified: fires an event to ensure the Eye of Terror special deposit does not get clobbered
 planet_event = {
 	id = mega.201
 	title = mega.200.name
 	desc = mega.201.desc
 	picture = GFX_evt_city_planet
 	show_sound = event_cityscape
-	location = ROOT
+	location = root
 	is_triggered_only = yes
 	trigger = {
-		is_planet_class = pc_city
+		OR = {
+			is_planet_class = pc_city
+			is_pd_arcology = yes
+			is_pd_hive_arcology = yes
+			is_pd_robot_arcology = yes
+		}
 	}
 	immediate = {
 		planet_event = {
@@ -21,3 +27,28 @@ planet_event = {
 		name = mega.200.a
 	}
 }
+
+# Modified: does not fire for empires starting in the Eye of Terror
+# country_event = {
+# 	id = origin.5081
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		has_origin = origin_broken_shackles
+# 		exists = capital_scope
+# 		capital_scope.solar_system = { NOT = { has_star_flag = is_silfae_eye_of_terror } }
+# 	}
+# 	immediate = {
+# 		capital_scope = {
+# 			clear_blockers = yes
+# 			add_deposit = d_crashed_slaver_ship
+# 			add_deposit = random_blocker
+# 			add_deposit = random_blocker
+# 			add_deposit = random_blocker
+# 			while = {
+# 				count = 5
+# 				add_deposit = d_ship_debris_broken_shackles_blocker
+# 			}
+# 		}
+# 	}
+# }

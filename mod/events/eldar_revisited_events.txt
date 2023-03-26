@@ -1,21 +1,8 @@
 namespace = eldar_evt
 
-# flag mod as active
-event = {
-	id = eldar_evt.13
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		NOT = { has_global_flag = eldar_revisited_installed }
-	}
-	immediate = {
-		set_global_flag = eldar_revisited_installed
-	}
-}
-
 # triggered by empire_init_capital_planet
-# ROOT = planet, capital
-# FROM = species, founder
+# root = planet, capital
+# from = species, founder
 planet_event = {
 	id = eldar_evt.1
 	hide_window = yes
@@ -41,9 +28,7 @@ country_event = {
 	id = eldar_evt.2
 	hide_window = yes
 	is_triggered_only = yes
-	trigger = {
-		has_country_flag = is_silfae_eldar
-	}
+	trigger = { has_country_flag = is_silfae_eldar }
 	immediate = {
 		give_technology = {
 			tech = tech_psionic_theory
@@ -97,8 +82,8 @@ country_event = {
 
 # ensure that restoring/creating an ecu/machine/hive world on the craftworld retains the arcane replicator - for the original owner only
 # triggered by on_game_start_country and the mega.201 override
-# ROOT = planet
-# FROM = country - unclear whether the current owner, or the country that initiated terraforming
+# root = planet
+# from = country - unclear whether the current owner, or the country that initiated terraforming
 planet_event = {
 	id = eldar_evt.5
 	hide_window = yes
@@ -111,23 +96,17 @@ planet_event = {
 		has_planet_flag = is_silfae_eldar_craftworld
 		OR = {
 			is_planet_class = pc_city
-			is_planet_class = pc_machine
-			is_planet_class = pc_hive
+			is_pd_arcology = yes
+			is_pd_hive_world = yes
+			is_pd_hive_arcology = yes
+			is_pd_machine = yes
+			is_pd_robot_arcology = yes
 		}
-		NOR = {
-			has_deposit = d_arcane_replicator_eldar_system
-			has_deposit = d_arcane_replicator_eldar_system_gestalt
-		}
+		NOT = { has_deposit = d_arcane_replicator_eldar_system }
 	}
 	immediate = {
-		if = {
-			limit = { owner = { country_uses_consumer_goods = yes } }
-			add_deposit = d_arcane_replicator_eldar_system
-		}
-		else = {
-			add_deposit = d_arcane_replicator_eldar_system_gestalt
-		}
-		# temporary workaround to make sure the progentior doesn't get clobbered
+		add_deposit = d_arcane_replicator_eldar_system
+		# temporary workaround to make sure the progenitor doesn't get clobbered
 		if = {
 			limit = {
 				NOT = { has_deposit = d_progenitor }
@@ -144,7 +123,7 @@ planet_event = {
 	mean_time_to_happen = {
 		days = 600
 		scaled_modifier = {
-			scope = THIS
+			scope = this
 			add = -30
 			calc = pop_count
 		}
@@ -153,7 +132,7 @@ planet_event = {
 	desc = eldar_evt.6.desc
 	picture = GFX_evt_eldar_craftworld
 	show_sound = event_ground_battle
-	location = ROOT
+	location = root
 	pre_triggers = {
 		has_owner = yes
 		has_ground_combat = no
@@ -310,7 +289,7 @@ system_event = {
 	desc = eldar_evt.7.desc
 	picture = GFX_evt_eldar_craftworld
 	show_sound = event_space_battle
-	location = ROOT
+	location = root
 	immediate = {
 		if = {
 			limit = { has_owner = yes }
@@ -342,7 +321,7 @@ system_event = {
 				set_owner = event_target:shroud_country
 				set_fleet_flag = is_shroud_bombard_fleet
 				while = {
-					count = PREV.midgame_years_passed_scaled_entities
+					count = prev.midgame_years_passed_scaled_entities
 					random_list = {
 						4 = {
 							create_ship = { # 30000
@@ -365,7 +344,7 @@ system_event = {
 					}
 				}
 				set_location = {
-					target = PREV.star
+					target = prev.star
 					distance = 300
 					angle = random
 				}
@@ -390,7 +369,7 @@ planet_event = {
 	mean_time_to_happen = {
 		days = 600
 		scaled_modifier = {
-			scope = THIS
+			scope = this
 			add = -30
 			calc = pop_count
 		}
@@ -420,28 +399,29 @@ planet_event = {
 }
 
 # triggered by on_space_battle_won
-# ROOT = owner of fleet 1 (winner)
-# FROM = owner of fleet 2 (loser)
-# FROMFROM = fleet, winner
-# FROMFROMFROM = fleet, loser
+# root = owner of fleet 1 (winner)
+# from = owner of fleet 2 (loser)
+# fromfrom = fleet, winner
+# fromfromfrom = fleet, loser
 country_event = {
 	id = eldar_evt.9
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
-		exists = FROMFROM
-		FROMFROM = {
+		exists = fromfrom
+		fromfrom = {
 			has_fleet_flag = is_shroud_bombard_fleet
 			solar_system = {
 				any_system_planet = {
 					has_planet_flag = is_shroud_attack_planet_target
 					NOT = { is_planet_class = pc_shrouded }
+					is_pd_shroud_world = no
 				}
 			}
 		}
 	}
 	immediate = {
-		FROMFROM = {
+		fromfrom = {
 			fleet_event = {
 				id = eldar_evt.11
 			}
@@ -450,15 +430,16 @@ country_event = {
 }
 
 # triggered by on_planet_zero_pops and on_planet_zero_pops_ground_combat
-# ROOT = planet
-# FROM = country, doer of bad things (bombard, collateral damager)
+# root = planet
+# from = country, doer of bad things (bombard, collateral damager)
 planet_event = {
 	id = eldar_evt.10
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
 		has_planet_flag = is_shroud_attack_planet_target
-		FROM = { is_country_type = shroud_spirits }
+		exists = from
+		from = { is_country_type = shroud_spirits }
 	}
 	immediate = {
 		solar_system = {
@@ -473,7 +454,7 @@ planet_event = {
 }
 
 # fired by eldar_evt.9 and eldar_evt.10
-# ROOT = fleet
+# root = fleet
 fleet_event = {
 	id = eldar_evt.11
 	is_triggered_only = yes
@@ -484,6 +465,7 @@ fleet_event = {
 			any_system_planet = {
 				has_planet_flag = is_shroud_attack_planet_target
 				NOT = { is_planet_class = pc_shrouded }
+				is_pd_shroud_world = no
 			}
 		}
 	}
@@ -493,6 +475,7 @@ fleet_event = {
 				limit = {
 					has_planet_flag = is_shroud_attack_planet_target
 					NOT = { is_planet_class = pc_shrouded }
+					is_pd_shroud_world = no
 				}
 				position = 0
 				order_by = trigger:planet_devastation
@@ -502,7 +485,7 @@ fleet_event = {
 		if = {
 			limit = { exists = event_target:shroud_bombard_planet }
 			clear_orders = yes
-			clear_fleet_actions = THIS
+			clear_fleet_actions = this
 			set_fleet_bombardment_stance = armageddon
 			queue_actions = {
 				find_random_planet = {
@@ -511,8 +494,8 @@ fleet_event = {
 						is_planet = event_target:shroud_bombard_planet
 					}
 					found_planet = {
-						move_to = THIS
-						orbit_planet = THIS
+						move_to = this
+						orbit_planet = this
 					}
 				}
 			}
@@ -521,9 +504,9 @@ fleet_event = {
 }
 
 # triggered by on_planet_defenders_lose
-# ROOT = country, planet owner
-# FROM = country, attack leader
-# FROMFROM = planet
+# root = country, planet owner
+# from = country, attack leader
+# fromfrom = planet
 country_event = {
 	id = eldar_evt.14
 	is_triggered_only = yes
@@ -531,13 +514,15 @@ country_event = {
 	desc = eldar_evt.9.desc
 	picture = GFX_evt_burning_settlement
 	show_sound = event_ghost_town
-	location = FROMFROM
+	location = fromfrom
 	trigger = {
-		FROM = { is_country_type = shroud_spirits }
-		FROMFROM = { has_planet_flag = is_shroud_attack_planet_target }
+		exists = from
+		from = { is_country_type = shroud_spirits }
+		exists = fromfrom
+		fromfrom = { has_planet_flag = is_shroud_attack_planet_target }
 	}
 	immediate = {
-		FROMFROM = {
+		fromfrom = {
 			every_owned_pop = {
 				set_pop_flag = event_purge
 				unemploy_pop = yes
@@ -550,23 +535,24 @@ country_event = {
 }
 
 # triggered by on_planet_attackers_win
-# ROOT = country, attack leader
-# FROM = country, planet owner
-# FROMFROM = planet
+# root = country, attack leader
+# from = country, planet owner
+# fromfrom = planet
 country_event = {
 	id = eldar_evt.15
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
-		FROMFROM = {
+		exists = fromfrom
+		fromfrom = {
 			has_planet_flag = is_shroud_attack_planet_target
 			any_owned_pop = { has_pop_flag = event_purge }
 			controller = { is_country_type = shroud_spirits }
 		}
 	}
 	immediate = {
-		FROMFROM = {
-			set_owner = ROOT
+		fromfrom = {
+			set_owner = root
 			every_owned_pop = {
 				remove_pop_flag = event_purge
 				unemploy_pop = yes
@@ -581,9 +567,9 @@ country_event = {
 }
 
 # triggerd by on_pop_purged
-# ROOT = planet
-# FROM = country, planet owner
-# FROMFROM = pop, purged
+# root = planet
+# from = country, planet owner
+# fromfrom = pop, purged
 planet_event = {
 	id = eldar_evt.16
 	is_triggered_only = yes
@@ -591,8 +577,10 @@ planet_event = {
 	trigger = {
 		has_planet_flag = is_shroud_attack_planet_target
 		num_pops <= 1 # last Pop is still alive when on_pop_purged is fired
+		exists = controller
 		controller = { is_country_type = shroud_spirits }
-		FROMFROM = { has_pop_flag = event_purge }
+		exists = fromfrom
+		fromfrom = { has_pop_flag = event_purge }
 	}
 	immediate = {
 		planet_event = {
@@ -602,15 +590,16 @@ planet_event = {
 }
 
 # triggerd on_planet_zero_pops
-# ROOT = planet
-# FROM = country, bombarder
+# root = planet
+# from = country, bombarder
 planet_event = {
 	id = eldar_evt.17
 	is_triggered_only = yes
 	hide_window = yes
 	trigger = {
 		has_planet_flag = is_shroud_attack_planet_target
-		FROM = { is_country_type = shroud_spirits }
+		exists = from
+		from = { is_country_type = shroud_spirits }
 	}
 	immediate = {
 		planet_event = {
@@ -620,15 +609,13 @@ planet_event = {
 }
 
 # triggerd on_planet_zero_pops_ground_combat
-# ROOT = planet
-# FROM = country, army owner
+# root = planet
+# from = country, army owner
 planet_event = {
 	id = eldar_evt.18
 	is_triggered_only = yes
 	hide_window = yes
-	pre_triggers = {
-		has_ground_combat = yes
-	}
+	pre_triggers = { has_ground_combat = yes }
 	trigger = {
 		has_planet_flag = is_shroud_attack_planet_target
 		any_planet_army = { owner = { is_country_type = shroud_spirits } }
@@ -641,7 +628,7 @@ planet_event = {
 }
 
 # triggerd by eldar_evt.16, eldar_evt.17, and eldar_evt.18
-# ROOT = planet
+# root = planet
 planet_event = {
 	id = eldar_evt.19
 	is_triggered_only = yes
@@ -649,10 +636,8 @@ planet_event = {
 	desc = eldar_evt.10.desc
 	picture = GFX_evt_shrouded_planet
 	show_sound = pc_shroud_eaten
-	location = ROOT
-	trigger = {
-		has_planet_flag = is_shroud_attack_planet_target
-	}
+	location = root
+	trigger = { has_planet_flag = is_shroud_attack_planet_target }
 	immediate = {
 		set_variable = {
 			which = current_devastation

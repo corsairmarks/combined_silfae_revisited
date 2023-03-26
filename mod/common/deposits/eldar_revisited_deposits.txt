@@ -15,7 +15,7 @@ d_massive_crevice_eldar_system = {
 	}
 }
 
-# duplicate of d_ancient_reactor_pits nut only provides +3 generator districts
+# duplicate of d_ancient_reactor_pits but only provides +3 generator districts
 d_ancient_reactor_pits_eldar_system = {
 	is_for_colonizable = yes
 	icon = d_reactor
@@ -47,9 +47,9 @@ d_ruined_arcology_eldar_system = {
 			}
 			custom_tooltip = minor_artifacts_found
 			random_list = {
-				33 = { owner = { add_resource = { minor_artifacts = 1 } } }
-				33 = { owner = { add_resource = { minor_artifacts = 3 } } }
-				33 = { owner = { add_resource = { minor_artifacts = 5 } } }
+				33 = { owner = { add_resource = { minor_artifacts = 10 } } }
+				33 = { owner = { add_resource = { minor_artifacts = 30 } } }
+				33 = { owner = { add_resource = { minor_artifacts = 50 } } }
 			}
 		}
 		if = {
@@ -60,6 +60,9 @@ d_ruined_arcology_eldar_system = {
 			custom_tooltip = rediscover_tech
 			hidden_effect = { owner = { country_event = { id = origin.3100 } } }
 		}
+	}
+	ai_weight = {
+		weight = 2
 	}
 }
 
@@ -115,39 +118,18 @@ d_arcane_replicator_eldar_system = {
 		category = planet_deposits
 		produces = {
 			alloys = 12
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { country_uses_consumer_goods = yes }
+			}
 			consumer_goods = 4
 		}
 		produces = {
 			trigger = {
-				owner = {
-					any_owned_pop = {
-						has_trait = trait_exotic_metabolism
-					}
-				}
-			}
-			exotic_gases = 4
-		}
-	}
-}
-
-# requires Federations
-d_arcane_replicator_eldar_system_gestalt = {
-	is_for_colonizable = yes
-	icon = d_station_reactor
-	category = deposit_cat_rare
-	potential = { always = no }
-	resources = {
-		category = planet_deposits
-		produces = {
-			alloys = 12
-		}
-		produces = {
-			trigger = {
-				owner = {
-					any_owned_pop = {
-						has_trait = trait_exotic_metabolism
-					}
-				}
+				exists = owner
+				owner = { any_owned_pop = { has_trait = trait_exotic_metabolism } }
 			}
 			exotic_gases = 4
 		}
