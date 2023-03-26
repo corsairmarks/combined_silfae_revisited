@@ -360,9 +360,12 @@ generate_eldar_system_start_buildings_and_districts = {
 	}
 	else = {
 		add_building = building_capital
-		while = {
-			count = 2
-			add_district = district_city
+		if = {
+			limit = { owner = { is_anglers_empire = no } }
+			while = {
+				count = 2
+				add_district = district_city
+			}
 		}
 		if = {
 			limit = { owner = { is_eager_explorer_empire = no } }
