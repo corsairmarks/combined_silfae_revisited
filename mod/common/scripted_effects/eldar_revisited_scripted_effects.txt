@@ -463,7 +463,19 @@ generate_eldar_system_start_buildings_and_districts = {
 	}
 	if = {
 		limit = { owner = { NOT = { has_origin = origin_broken_shackles } } }
-		add_district = district_industrial # +1 industrial all
+		# +1 mining anglers+catalytic, +1 industrial others
+		if = {
+			limit = {
+				owner = {
+					is_anglers_empire = yes
+					is_catalytic_empire = yes
+				}
+			}
+			epr_add_planet_appropriate_mining_district = yes
+		}
+		else = {
+			add_district = district_industrial
+		}
 		# +1 farming for catalytic, +1 mining for others
 		if = {
 			limit = { owner = { is_catalytic_empire = yes } }
@@ -506,10 +518,14 @@ generate_eldar_system_start_buildings_and_districts = {
 			else = {
 				epr_add_planet_appropriate_mining_district = yes
 			}
-			# +1 generator for machines, +1 industrial for others
+			# +1 generator for machines, +1 farming for anglers, +1 industrial for others
 			if = {
 				limit = { owner = { is_machine_empire = yes } }
 				epr_add_planet_appropriate_generator_district = yes
+			}
+			else_if = {
+				limit = { owner = { is_anglers_empire = yes } }
+				epr_add_planet_appropriate_farming_district = yes
 			}
 			else = {
 				add_district = district_industrial
