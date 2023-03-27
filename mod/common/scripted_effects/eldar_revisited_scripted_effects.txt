@@ -467,19 +467,7 @@ generate_eldar_system_start_buildings_and_districts = {
 		# +1 farming for catalytic, +1 mining for others
 		if = {
 			limit = { owner = { is_catalytic_empire = yes } }
-			if = {
-				limit = {
-					owner = {
-						is_anglers_empire = no
-						NOT = { has_origin = origin_tree_of_life }
-					}
-				}
-				epr_add_authority_appropriate_housing_district = yes
-				add_building = building_hydroponics_farm
-			}
-			else = {
-				epr_add_planet_appropriate_farming_district = yes
-			}
+			epr_add_appropriate_farming_district_or_building = yes
 		}
 		else = {
 			epr_add_planet_appropriate_mining_district = yes
@@ -497,19 +485,7 @@ generate_eldar_system_start_buildings_and_districts = {
 					}
 				}
 			}
-			if = {
-				limit = {
-					owner = {
-						is_anglers_empire = no
-						NOT = { has_origin = origin_tree_of_life }
-					}
-				}
-				epr_add_authority_appropriate_housing_district = yes
-				add_building = building_hydroponics_farm
-			}
-			else = {
-				epr_add_planet_appropriate_farming_district = yes
-			}
+			epr_add_appropriate_farming_district_or_building = yes
 		}
 		else_if = {
 			limit = { owner = { is_machine_empire = yes } }
@@ -525,19 +501,7 @@ generate_eldar_system_start_buildings_and_districts = {
 			# +1 farming for catalytic, +1 mining for others
 			if = {
 				limit = { owner = { is_catalytic_empire = yes } }
-				if = {
-					limit = {
-						owner = {
-							is_anglers_empire = no
-							NOT = { has_origin = origin_tree_of_life }
-						}
-					}
-					epr_add_authority_appropriate_housing_district = yes
-					add_building = building_hydroponics_farm
-				}
-				else = {
-					epr_add_planet_appropriate_farming_district = yes
-				}
+				epr_add_appropriate_farming_district_or_building = yes
 			}
 			else = {
 				epr_add_planet_appropriate_mining_district = yes
@@ -559,18 +523,8 @@ generate_eldar_system_start_buildings_and_districts = {
 				limit = { owner = { is_lithoid_empire = yes } }
 				epr_add_planet_appropriate_mining_district = yes
 			}
-			else_if = {
-				limit = {
-					owner = {
-						is_anglers_empire = no
-						NOT = { has_origin = origin_tree_of_life }
-					}
-				}
-				epr_add_authority_appropriate_housing_district = yes
-				add_building = building_hydroponics_farm
-			}
 			else = {
-				epr_add_planet_appropriate_farming_district = yes
+				epr_add_appropriate_farming_district_or_building = yes
 			}
 		}
 
@@ -1055,6 +1009,25 @@ epr_add_planet_appropriate_farming_district = {
 	}
 	else = {
 		add_district = district_farming
+	}
+}
+
+# anglers/tree of life gets a farming districts, others get a relevant city district and hydroponics farm
+# this = planet
+epr_add_appropriate_farming_district_or_building = {
+	optimize_memory
+	if = {
+		limit = {
+			owner = {
+				is_anglers_empire = no
+				NOT = { has_origin = origin_tree_of_life }
+			}
+		}
+		epr_add_authority_appropriate_housing_district = yes
+		add_building = building_hydroponics_farm
+	}
+	else = {
+		epr_add_planet_appropriate_farming_district = yes
 	}
 }
 
