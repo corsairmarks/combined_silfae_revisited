@@ -288,6 +288,9 @@ generate_eldar_system_start_deposits_and_blockers = {
 			}
 		}
 	}
+	else = {
+		add_deposit = d_resource_consolidation_1
+	}
 }
 
 # set up the buildings for the custom initializer
