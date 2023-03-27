@@ -296,16 +296,12 @@ generate_eldar_system_start_deposits_and_blockers = {
 generate_eldar_system_start_buildings_and_districts = {
 	optimize_memory
 	if = {
+		limit = { owner = { is_eager_explorer_empire = no } }
+		epr_add_authority_appropriate_housing_district = yes
+	}
+	if = {
 		limit = { owner = { is_machine_empire = yes } }
 		add_building = building_machine_capital
-		while = {
-			count = 2
-			add_district = district_nexus
-		}
-		if = {
-			limit = { owner = { is_eager_explorer_empire = no } }
-			add_district = district_nexus
-		}
 		add_building = building_machine_assembly_plant
 		add_building = building_uplink_node
 		if = {
@@ -319,17 +315,6 @@ generate_eldar_system_start_buildings_and_districts = {
 	else_if = {
 		limit = { owner = { is_hive_empire = yes } }
 		add_building = building_hive_capital
-		if = {
-			limit = { owner = { NOT = { has_origin = origin_tree_of_life } } }
-			while = {
-				count = 2
-				add_district = district_hive
-			}
-		}
-		if = {
-			limit = { owner = { is_eager_explorer_empire = no } }
-			add_district = district_hive
-		}
 		if = { # This building is very useless for Devouring Swarm Necrophages
 			limit = {
 				owner = {
@@ -360,17 +345,6 @@ generate_eldar_system_start_buildings_and_districts = {
 	}
 	else = {
 		add_building = building_capital
-		if = {
-			limit = { owner = { is_anglers_empire = no } }
-			while = {
-				count = 2
-				add_district = district_city
-			}
-		}
-		if = {
-			limit = { owner = { is_eager_explorer_empire = no } }
-			add_district = district_city
-		}
 		if = {
 			limit = { owner = { has_origin = origin_mechanists } }
 			add_building = building_robot_assembly_plant
@@ -489,17 +463,36 @@ generate_eldar_system_start_buildings_and_districts = {
 	}
 	if = {
 		limit = { owner = { NOT = { has_origin = origin_broken_shackles } } }
-		add_district = district_industrial
-		epr_add_planet_appropriate_mining_district = yes
-		epr_add_planet_appropriate_generator_district = yes
+		add_district = district_industrial # +1 industrial all
+		# +1 farming for catalytic, +1 mining for others
+		if = {
+			limit = { owner = { is_catalytic_empire = yes } }
+			if = {
+				limit = {
+					owner = {
+						is_anglers_empire = no
+						NOT = { has_origin = origin_tree_of_life }
+					}
+				}
+				epr_add_authority_appropriate_housing_district = yes
+				add_building = building_hydroponics_farm
+			}
+			else = {
+				epr_add_planet_appropriate_farming_district = yes
+			}
+		}
+		else = {
+			epr_add_planet_appropriate_mining_district = yes
+		}
+		epr_add_planet_appropriate_generator_district = yes # +1 generator for all
+		# +1 farming for regular/catalytic/tree, +1 generator for machines, +1 mining for lithoid without a non-lithoids subspecies
 		if = {
 			limit = {
 				owner = {
 					OR = {
-						AND = {
-							is_machine_empire = no
-							is_lithoid_empire = no
-						}
+						is_regular_empire = yes
+						is_catalytic_empire = yes
+						has_origin = origin_tree_of_life
 						has_country_flag = non_lithoid_subspecies
 					}
 				}
@@ -511,11 +504,16 @@ generate_eldar_system_start_buildings_and_districts = {
 						NOT = { has_origin = origin_tree_of_life }
 					}
 				}
+				epr_add_authority_appropriate_housing_district = yes
 				add_building = building_hydroponics_farm
 			}
 			else = {
 				epr_add_planet_appropriate_farming_district = yes
 			}
+		}
+		else_if = {
+			limit = { owner = { is_machine_empire = yes } }
+			epr_add_planet_appropriate_generator_district = yes
 		}
 		else = {
 			epr_add_planet_appropriate_mining_district = yes
@@ -524,16 +522,17 @@ generate_eldar_system_start_buildings_and_districts = {
 		# Origin: Payback gets 3 fewer districts (incl. food building)
 		if = {
 			limit = { owner = { NOT = { has_origin = origin_payback } } }
-			epr_add_planet_appropriate_mining_district = yes
+			# +1 farming for catalytic, +1 mining for others
 			if = {
-				limit = { owner = { is_machine_empire = yes } }
-				epr_add_planet_appropriate_generator_district = yes
-			}
-			else_if = {
-				limit = { owner = { is_hive_empire = yes } }
+				limit = { owner = { is_catalytic_empire = yes } }
 				if = {
-					limit = { owner = { NOT = { has_origin = origin_tree_of_life } } }
-					add_district = district_hive
+					limit = {
+						owner = {
+							is_anglers_empire = no
+							NOT = { has_origin = origin_tree_of_life }
+						}
+					}
+					epr_add_authority_appropriate_housing_district = yes
 					add_building = building_hydroponics_farm
 				}
 				else = {
@@ -541,11 +540,24 @@ generate_eldar_system_start_buildings_and_districts = {
 				}
 			}
 			else = {
-				add_district = district_industrial
+				epr_add_planet_appropriate_mining_district = yes
 			}
+			# +1 generator for machines, +1 industrial for others
 			if = {
 				limit = { owner = { is_machine_empire = yes } }
 				epr_add_planet_appropriate_generator_district = yes
+			}
+			else = {
+				add_district = district_industrial
+			}
+			# +1 generator machines, +1 mining lithoid, +1 farming others
+			if = {
+				limit = { owner = { is_machine_empire = yes } }
+				epr_add_planet_appropriate_generator_district = yes
+			}
+			else_if = {
+				limit = { owner = { is_lithoid_empire = yes } }
+				epr_add_planet_appropriate_mining_district = yes
 			}
 			else_if = {
 				limit = {
@@ -554,6 +566,7 @@ generate_eldar_system_start_buildings_and_districts = {
 						NOT = { has_origin = origin_tree_of_life }
 					}
 				}
+				epr_add_authority_appropriate_housing_district = yes
 				add_building = building_hydroponics_farm
 			}
 			else = {
@@ -1042,5 +1055,21 @@ epr_add_planet_appropriate_farming_district = {
 	}
 	else = {
 		add_district = district_farming
+	}
+}
+
+# this = planet
+epr_add_authority_appropriate_housing_district = {
+	optimize_memory
+	if = {
+		limit = { owner = { is_hive_empire = yes } }
+		add_district = district_hive
+	}
+	else_if = {
+		limit = { owner = { is_machine_empire = yes } }
+		add_district = district_nexus
+	}
+	else = {
+		add_district = district_city
 	}
 }
