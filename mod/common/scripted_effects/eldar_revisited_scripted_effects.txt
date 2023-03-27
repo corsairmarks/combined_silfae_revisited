@@ -307,11 +307,6 @@ generate_eldar_system_start_buildings_and_districts = {
 		add_building = building_machine_capital
 		add_building = building_machine_assembly_plant
 		add_building = building_uplink_node
-		if = {
-			limit = { owner = { has_valid_civic = civic_machine_servitor } }
-			epr_add_authority_appropriate_housing_district = yes
-			add_building = building_organic_sanctuary
-		}
 	}
 	else_if = {
 		limit = { owner = { is_hive_empire = yes } }
@@ -531,14 +526,14 @@ generate_eldar_system_start_buildings_and_districts = {
 			else = {
 				add_district = district_industrial
 			}
-			# +1 generator machines, +1 mining lithoid, +1 farming others
+			# +1 organic sancuary servitors, +1 generator machines, +1 mining lithoid, +1 farming others
 			if = {
-				limit = {
-					owner = {
-						is_machine_empire = yes
-						NOT = { has_valid_civic = civic_machine_servitor } # received a bonus nexus, above
-					}
-				}
+				limit = { owner = { has_valid_civic = civic_machine_servitor } }
+				epr_add_authority_appropriate_housing_district = yes
+				add_building = building_organic_sanctuary
+			}
+			else_if = {
+				limit = { owner = { is_machine_empire = yes } }
 				epr_add_planet_appropriate_generator_district = yes
 			}
 			else_if = {
