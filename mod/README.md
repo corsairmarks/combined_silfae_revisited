@@ -57,7 +57,6 @@ Job-related triggers overridden:
 
 * `complex_specialist_job_check_trigger` Holodrones and Holowarriors can't do complicated work but they are smart enough for non-complicated specialist/drone jobs
 * `is_organic_species` most Holofrixits qualify as organic
-* `is_robotic_species` Holofrixigrams are entirely mechanical
 
 Furthermore, this mod alters some core game rules in `common/game_rules/00_rules.txt` to implement some of the Pop reproduction/assembly requirements and special rules for Holofrixit leaders.  In particular, these rules:
 
@@ -84,24 +83,24 @@ This mod should be added before the game has started.  If you remove it from a g
 This mod overwrites the corresponding species class added by "Silfae's city sets updated."  Instead, the original species class from Silfae (with localisation) is used.  It also overwrites a total of 4 triggers and 13 jobs from the base game; expect to see 18 lines in error.log similar to these:
 
 ```
-[04:11:29][game_singleobjectdatabase.h:165]: Object with key: Silfae-Holofrixit already exists, using the one at  file: common/species_classes/zz_silfae_cities_holofrixit_exclude.txt line: 2
-[04:11:31][game_singleobjectdatabase.h:165]: Object with key: has_energy_upkeep already exists, using the one at  file: common/scripted_triggers/01_holofrixit_revisited_scripted_trigger_overrides.txt line: 1
-[04:11:31][game_singleobjectdatabase.h:165]: Object with key: complex_specialist_job_check_trigger already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 1
-[04:11:31][game_singleobjectdatabase.h:165]: Object with key: is_organic_species already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 20
-[04:11:31][game_singleobjectdatabase.h:165]: Object with key: is_robotic_species already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 38
-[04:11:32][game_singleobjectdatabase.h:165]: Object with key: head_researcher already exists, using the one at  file: common/pop_jobs/11_holofrixit_revisited_ruler_job_overrides.txt line: 6
-[04:11:32][game_singleobjectdatabase.h:165]: Object with key: enforcer already exists, using the one at  file: common/pop_jobs/12_holofrixit_revisited_specialist_job_overrides.txt line: 7
-[04:11:32][game_singleobjectdatabase.h:165]: Object with key: soldier already exists, using the one at  file: common/pop_jobs/13_holofrixit_revisited_worker_job_overrides.txt line: 6
-[04:11:32][game_singleobjectdatabase.h:165]: Object with key: coordinator already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 6
-[04:11:32][game_singleobjectdatabase.h:165]: Object with key: evaluator already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 56
-[04:11:32][game_singleobjectdatabase.h:165]: Object with key: synapse_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 107
-[04:11:32][game_singleobjectdatabase.h:165]: Object with key: brain_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 171
-[04:11:32][game_singleobjectdatabase.h:165]: Object with key: calculator already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 213
-[04:11:32][game_singleobjectdatabase.h:165]: Object with key: patrol_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 256
-[04:11:32][game_singleobjectdatabase.h:165]: Object with key: warrior_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 348
-[04:11:32][game_singleobjectdatabase.h:165]: Object with key: chronicle_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 470
-[04:11:32][game_singleobjectdatabase.h:165]: Object with key: dimensional_portal_researcher_gestalt already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 6
-[04:11:32][game_singleobjectdatabase.h:165]: Object with key: space_time_anomaly_researcher_gestalt already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 237
+[17:18:06][game_singleobjectdatabase.h:165]: Object with key: Silfae-Holofrixit already exists, using the one at  file: common/species_classes/zz_silfae_cities_holofrixit_exclude.txt line: 2
+[17:18:06][game_singleobjectdatabase.h:165]: Object with key: has_energy_upkeep already exists, using the one at  file: common/scripted_triggers/01_holofrixit_revisited_scripted_trigger_overrides.txt line: 2
+[17:18:06][game_singleobjectdatabase.h:165]: Object with key: complex_specialist_job_check_trigger already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 1
+[17:18:06][game_singleobjectdatabase.h:165]: Object with key: is_organic_species already exists, using the one at  file: common/scripted_triggers/02_holofrixit_revisited_scripted_triggers_jobs_overrides.txt line: 17
+[17:18:06][game_singleobjectdatabase.h:165]: Object with key: head_researcher already exists, using the one at  file: common/pop_jobs/11_holofrixit_revisited_ruler_job_overrides.txt line: 6
+[17:18:06][game_singleobjectdatabase.h:165]: Object with key: enforcer already exists, using the one at  file: common/pop_jobs/12_holofrixit_revisited_specialist_job_overrides.txt line: 7
+[17:18:06][game_singleobjectdatabase.h:165]: Object with key: soldier already exists, using the one at  file: common/pop_jobs/13_holofrixit_revisited_worker_job_overrides.txt line: 6
+[17:18:06][game_singleobjectdatabase.h:165]: Object with key: coordinator already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 6
+[17:18:06][game_singleobjectdatabase.h:165]: Object with key: evaluator already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 65
+[17:18:06][game_singleobjectdatabase.h:165]: Object with key: synapse_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 114
+[17:18:06][game_singleobjectdatabase.h:165]: Object with key: brain_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 185
+[17:18:06][game_singleobjectdatabase.h:165]: Object with key: calculator already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 248
+[17:18:06][game_singleobjectdatabase.h:165]: Object with key: patrol_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 311
+[17:18:06][game_singleobjectdatabase.h:165]: Object with key: warrior_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 401
+[17:18:06][game_singleobjectdatabase.h:165]: Object with key: chronicle_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 523
+[17:18:06][game_singleobjectdatabase.h:165]: Object with key: dimensional_portal_researcher_gestalt already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 6
+[17:18:06][game_singleobjectdatabase.h:165]: Object with key: space_time_anomaly_researcher_gestalt already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 194
+
 ```
 
 ## Changelog
@@ -181,6 +180,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Add compatibility with Planetary Diversity
     * Remove global flag
     * Add compatibility trigger `has_holosphere_portraits_revisited_active`
+* 7.1.0 Add additional compatibility triggers to support [The Merger of Rules](https://steamcommunity.com/sharedfiles/filedetails/?id=2807759164)
 
 ## Source Code
 

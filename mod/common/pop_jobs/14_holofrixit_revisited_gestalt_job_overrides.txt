@@ -386,18 +386,12 @@ patrol_drone = {
 		}
 		modifier = {
 			factor = 0.5
-			has_trait = trait_holofrixit
-			NOR = {
-				has_trait = trait_holowarrior
-				has_trait = trait_holowarrior_2
-			}
+			has_species_trait_holofrixit = yes
+			has_species_trait_holowarrior = no
 		}
 		modifier = {
 			factor = 2
-			OR = {
-				has_trait = trait_holowarrior
-				has_trait = trait_holowarrior_2
-			}
+			has_species_trait_holowarrior = yes
 		}
 	}
 }
@@ -515,18 +509,12 @@ warrior_drone = {
 		}
 		modifier = {
 			factor = 0.5
-			has_trait = trait_holofrixit
-			NOR = {
-				has_trait = trait_holowarrior
-				has_trait = trait_holowarrior_2
-			}
+			has_species_trait_holofrixit = yes
+			has_species_trait_holowarrior = no
 		}
 		modifier = {
 			factor = 2
-			OR = {
-				has_trait = trait_holowarrior
-				has_trait = trait_holowarrior_2
-			}
+			has_species_trait_holowarrior = yes
 		}
 	}
 }
@@ -553,7 +541,7 @@ chronicle_drone = {
 			unity = 4
 		}
 		upkeep = {
-			trigger = { is_robotic_species = yes }
+			trigger = { is_robot_pop = yes }
 			minerals = 1
 			energy = 2
 		}

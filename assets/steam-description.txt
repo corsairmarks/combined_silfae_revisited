@@ -59,7 +59,6 @@ Job-related triggers overridden:
 [list]
 [*]complex_specialist_job_check_trigger - Holodrones and Holowarriors can't do complicated work but they are smart enough for non-complicated specialist/drone jobs
 [*]is_organic_species - most Holofrixits qualify as organic
-[*]is_robotic_species - Holofrixigrams are entirely mechanical
 [/list]
 Furthermore, this mod alters some core game rules in [b]common/game_rules/00_rules.txt[/b] to implement some of the Pop reproduction/assembly requirements and special rules for Holofrixit leaders. In particular, these rules:
 [list]

@@ -2,13 +2,10 @@ complex_specialist_job_check_trigger = {
 	optimize_memory
 	hidden_trigger = {
 		exists = owner
-		NOR = {
-			has_trait = trait_holowarrior
-			has_trait = trait_holowarrior_2
-			has_trait = trait_holodrone
-		}
+		has_species_trait_holowarrior = no
+		has_species_trait_holodrone = no
 		OR = {
-			is_robotic_species = no
+			is_robot_pop = no
 			owner = {
 				has_technology = tech_droid_workers
 				NOT = { has_policy_flag = ai_outlawed }
@@ -25,11 +22,7 @@ is_organic_species = {
 			is_archetype = LITHOID
 			AND = {
 				is_archetype = HOLOARCH
-				NOR = {
-					has_trait = trait_holofrixigram
-					has_trait = trait_holofrixigram_2
-					has_trait = trait_holofrixigram_3
-				}
+				has_species_trait_holofrixigram = no
 			}
 		}
 	}

@@ -8,7 +8,7 @@ gov_holofrixit = {
 	dynastic_last_names = no
 	should_force_rename = no
 	possible = {
-		has_authority = auth_holofrixit
+		has_auth_holofrixit = yes
 		hidden_trigger = { is_fallen_empire = no }
 	}
 	weight = {

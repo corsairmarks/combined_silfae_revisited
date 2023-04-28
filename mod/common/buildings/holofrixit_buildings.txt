@@ -9,14 +9,14 @@ building_polarizing_nexus_1 = {
 	potential = {
 		is_special_colony_type = no
 		exists = owner
-		owner = { has_authority = auth_holofrixit }
+		owner = { has_auth_holofrixit = yes }
 	}
 	destroy_trigger = {
 		OR = {
 			is_special_colony_type = yes
 			AND = {
 				exists = owner 
-				owner = { NOT = { has_authority = auth_holofrixit } }
+				owner = { has_auth_holofrixit = no }
 			}
 		}
 	}
@@ -43,7 +43,7 @@ building_polarizing_nexus_1 = {
 		modifier = { planet_technician_energy_produces_mult = 0.025 }
 	}
 	prerequisites = { tech_power_plant_1 }
-	show_tech_unlock_if = { has_authority = auth_holofrixit }
+	show_tech_unlock_if = { has_auth_holofrixit = yes }
 	upgrades = { building_polarizing_nexus_2 }
 }
 
@@ -55,14 +55,14 @@ building_polarizing_nexus_2 = {
 	potential = {
 		is_special_colony_type = no
 		exists = owner
-		owner = { has_authority = auth_holofrixit }
+		owner = { has_auth_holofrixit = yes }
 	}
 	destroy_trigger = {
 		OR = {
 			is_special_colony_type = yes
 			AND = {
 				exists = owner 
-				owner = { NOT = { has_authority = auth_holofrixit } }
+				owner = { has_auth_holofrixit = no }
 			}
 		}
 	}
@@ -90,7 +90,7 @@ building_polarizing_nexus_2 = {
 		modifier = { planet_technician_energy_produces_mult = 0.05 }
 	}
 	prerequisites = { tech_power_plant_2 }
-	show_tech_unlock_if = { has_authority = auth_holofrixit }
+	show_tech_unlock_if = { has_auth_holofrixit = yes }
 	upgrades = { building_polarizing_nexus_3 }
 }
 
@@ -102,14 +102,14 @@ building_polarizing_nexus_3 = {
 	potential = {
 		is_special_colony_type = no
 		exists = owner
-		owner = { has_authority = auth_holofrixit }
+		owner = { has_auth_holofrixit = yes }
 	}
 	destroy_trigger = {
 		OR = {
 			is_special_colony_type = yes
 			AND = {
 				exists = owner 
-				owner = { NOT = { has_authority = auth_holofrixit } }
+				owner = { has_auth_holofrixit = no }
 			}
 		}
 	}
@@ -137,5 +137,5 @@ building_polarizing_nexus_3 = {
 		modifier = { planet_technician_energy_produces_mult = 0.075 }
 	}
 	prerequisites = { tech_power_plant_3 }
-	show_tech_unlock_if = { has_authority = auth_holofrixit }
+	show_tech_unlock_if = { has_auth_holofrixit = yes }
 }

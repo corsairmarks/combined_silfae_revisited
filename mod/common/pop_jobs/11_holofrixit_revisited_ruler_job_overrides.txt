@@ -22,7 +22,7 @@ head_researcher = {
 		OR = {
 			is_enslaved = no
 			AND = {
-				has_trait = trait_hologanglion
+				has_species_trait_hologanglion = yes
 				owner = { has_origin = origin_holofrixit }
 			}
 		}
@@ -100,7 +100,7 @@ head_researcher = {
 		}
 		modifier = {
 			factor = 10
-			has_trait = trait_hologanglion
+			has_species_trait_hologanglion = yes
 		}
 	}
 }
