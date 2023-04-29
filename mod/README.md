@@ -13,7 +13,7 @@ This is a bundle of mods to make it a little easier to sub and ensure cross-comp
 * [Animated Eldar Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2581388205) ([Source](https://github.com/corsairmarks/eldar_portraits_revisited) 7.0.1)
 * [Animated Hidden Eye Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2585946800) ([Source](https://github.com/corsairmarks/slreptilian_portraits_revisited) 6.0.0)
 * [Animated Hollow Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2578037235) ([Source](https://github.com/corsairmarks/horrorworm_portraits_revisited) 7.0.1)
-* [Animated Holosphere Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2592592503) ([Source](https://github.com/corsairmarks/holosphere_rising_revisited) 7.0.0)
+* [Animated Holosphere Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2592592503) ([Source](https://github.com/corsairmarks/holosphere_rising_revisited) 7.1.0)
 * [Animated Hyena Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2576290763) ([Source](https://github.com/corsairmarks/hyenafolk_portraits_revisited) 6.0.1)
 * [Animated Octee-lan Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2584680339) ([Source](https://github.com/corsairmarks/octeelan_portraits_revisited) 7.0.0)
 * [Animated Quarian Portraits: Revisited](https://steamcommunity.com/workshop/filedetails/?id=2583358569) ([Source](https://github.com/corsairmarks/quarian_portraits_revisited) 7.0.1)
@@ -108,3 +108,5 @@ You should only add this mod before starting a new game, or remove it before sta
 * 5.1.0 Update merged mod Animated Hollow Portraits: Revisited at 5.1.0
 * 6.0.0 Update all merged mods for Stellaris version 3.6 "Orion"
 * 7.0.0 Update all merged mods for Stellaris version 3.7 "Canis Minor"
+* 7.0.1 Update merged mods:
+    * Updated: Animated Holosphere Portraits: Revisited at 7.1.0
