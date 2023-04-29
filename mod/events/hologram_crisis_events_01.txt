@@ -1021,28 +1021,21 @@ planet_event = {
 		random_owned_pop = { kill_pop = yes }
 		random_owned_pop = { kill_pop = yes }
 		every_owned_species = {
-			limit = {
-				NOR = {
-					has_trait = trait_holofrixigram
-					has_trait = trait_holofrixigram_2
-					has_trait = trait_holofrixigram_3
-				}
-			}
+			limit = { has_species_trait_holofrixigram = no }
 			set_citizenship_type = {
 				type = citizenship_slavery
+				country = prev
 			}
-			set_slavery_type = { type = slavery_normal }
+			set_slavery_type = {
+				type = slavery_normal
+				country = prev
+			}
 		}
 		every_owned_species = {
-			limit = {
-				OR = {
-					has_trait = trait_holofrixigram
-					has_trait = trait_holofrixigram_2
-					has_trait = trait_holofrixigram_3
-				}
-			}
+			limit = { has_species_trait_holofrixigram = yes }
 			set_citizenship_type = {
 				type = citizenship_full
+				country = prev
 			}
 			every_species_pop = {
 				limit = {
@@ -1964,26 +1957,14 @@ country_event = {
 			random_owned_pop = { kill_pop = yes }
 			random_owned_pop = { kill_pop = yes }
 			every_owned_pop_species = {
-				limit = {
-					NOR = {
-						has_trait = trait_holofrixigram
-						has_trait = trait_holofrixigram_2
-						has_trait = trait_holofrixigram_3
-					}
-				}
+				limit = { has_species_trait_holofrixigram = no }
 				set_citizenship_type = {
 					type = citizenship_slavery
 					country = prev.owner
 				}
 			}
 			every_owned_pop_species = {
-				limit = {
-					OR = {
-						has_trait = trait_holofrixigram
-						has_trait = trait_holofrixigram_2
-						has_trait = trait_holofrixigram_3
-					}
-				}
+				limit = { has_species_trait_holofrixigram = yes }
 				set_citizenship_type = {
 					type = citizenship_full
 					country = prev.owner

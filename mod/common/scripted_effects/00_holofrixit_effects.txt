@@ -336,15 +336,11 @@ ensure_leader_species_correct_holofrixit_caste = {
 	if = {
 		limit = {
 			species = {
-				has_trait = trait_holofrixit
+				has_species_trait_holofrixit = yes
 				NOR = {
 					has_trait = $TRAIT$
 					AND = {
-						OR = {
-							has_trait = trait_holofrixigram
-							has_trait = trait_holofrixigram_2
-							has_trait = trait_holofrixigram_3
-						}
+						has_species_trait_holofrixigram = yes
 						prev.owner = { has_technology = tech_synthetic_leaders }
 					}
 				}

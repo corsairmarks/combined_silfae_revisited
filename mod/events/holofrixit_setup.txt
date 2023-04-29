@@ -149,9 +149,9 @@ country_event = {
 	immediate = {
 		every_galaxy_species = {
 			limit = {
-				has_trait = trait_holofrixit
+				has_species_trait_holofrixit = yes
 				has_species_flag = holofrixit_caste@prev
-				NOT = { has_trait = trait_holooverseer }
+				has_species_trait_holooverseer = no
 			}
 			if = {
 				limit = { has_species_flag = hologanglion_species@prev }
@@ -271,8 +271,8 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		has_authority = auth_holofrixit
-		has_trait = trait_holooverseer
+		has_auth_holofrixit = yes
+		has_species_trait_holooverseer = yes
 		OR = {
 			last_increased_tech = tech_epigenetic_triggers
 			last_increased_tech = tech_biomechanics
@@ -346,8 +346,8 @@ leader_event = {
 	is_triggered_only = yes
 	trigger = {
 		exists = owner
-		owner = { has_authority = auth_holofrixit }
-		species = { has_trait = trait_holofrixit }
+		owner = { has_auth_holofrixit = yes }
+		species = { has_species_trait_holofrixit = yes }
 	}
 	immediate = {
 		switch = {
@@ -381,9 +381,9 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		has_authority = auth_holofrixit
+		has_auth_holofrixit = yes
 		exists = from
-		from.species = { has_trait = trait_holofrixit }
+		from.species = { has_species_trait_holofrixit = yes }
 	}
 	immediate = {
 		from = {
@@ -401,12 +401,10 @@ country_event = {
 	id = holofrixit_evt.8
 	hide_window = yes
 	is_triggered_only = yes
-	trigger = {
-		has_authority = auth_holofrixit
-	}
+	trigger = { has_auth_holofrixit = yes }
 	immediate = {
 		every_owned_leader = {
-			limit = { species = { has_trait = trait_holofrixit } }
+			limit = { species = { has_species_trait_holofrixit = yes } }
 			leader_event = {
 				id = holofrixit_evt.6
 			}
