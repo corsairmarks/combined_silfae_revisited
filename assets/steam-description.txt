@@ -1,10 +1,10 @@
 [h1]Overview[/h1]
-Have you seen the razor-sharp good looks of Silfae's "Animated Raptor Portraits" mod?  Do you wish that the gameplay elements were up-to-date so that you can play the Glorious Crescent as originally designed?  Then this mod is for you!
+Have you seen the razor-sharp good looks of Silfae's "Animated Raptor Portraits" mod? Do you wish that the gameplay elements were up-to-date so that you can play the Glorious Crescent as originally designed? Then this mod is for you!
 
-There are lots of other mods which contain these portraits, so why should you choose this one?  None of the others update the custom solar system initializer, special primitives, and guaranteed neighbor systems, but this one does!  Please enjoy my translation of Silfae's custom empire into modern Stellaris.
+There are lots of other mods which contain these portraits, so why should you choose this one? None of the others update the custom solar system initializer, special primitives, and guaranteed neighbor systems, but this one does! Please enjoy my translation of Silfae's custom empire into modern Stellaris.
 
 [h1]Changes[/h1]
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.7 "Canis Minor," the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.8 "Gemini," the latest version when this was written. Updates include:
 [list]
 [*]Enhance portrait selectors to specialize some Pops with appropriate clothing (because the clothing is built in to each portrait file, I can't change to clothing selectors instead of phenotypes)
 [*]Update the namelist to account for all built-in army types, remove obsolete entries
@@ -12,14 +12,15 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 [*]All seven custom neighboring systems updated, and eliminated chance for one of them to double-spawn
 [*]Custom starting initializer now supports a variety of civics and origin starts (all the built-in ones)
 [*]Update the AI personality to account for new game features
-[*]Support being able to choose a single-gender species (new in Stellaris 3.2)
+[*]The Saurischians are part of the Reptilian species class (since Stellaris 3.8)
+[*]Support being able to choose a single-gender species (since Stellaris 3.2)
 [/list]
 [h2]Compatibility[/h2]
-Compatible with any mod that does not add the same portraits, species class, or art assets.
+Compatible with any mod that does not add the same portraits or art assets.
 
-The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
+The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number. This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed. You can safely ignore the out-of-date warning for the dependency mods.
 
-Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements.
+Built for Stellaris version 3.8 "Gemini." Not compatible with achievements.
 
 [h3]Dependencies[/h3]
 In order for this mod to function, you [b]must[/b] install these two mods and load them before this one:
@@ -28,12 +29,12 @@ In order for this mod to function, you [b]must[/b] install these two mods and lo
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2247427791]Silfae's city sets updated[/url] by Nozeminer
 [/list]
 [h3]When to Install[/h3]
-This mod should be added before the game has started.  If you remove it from a game in progress, your game may have graphical problems if any species was using the custom portraits or city graphics.
+This mod should be added before the game has started. If you remove it from a game in progress, your game may have graphical problems if any species was using the custom portraits or city graphics.
 
 [h2]Known Issues[/h2]
-This mod overwrites the corresponding species class added by "Silfae's city sets updated" so that it will not be available for use.  Instead, the original species class from Silfae (with localisation) is used.  Expect to see one line in error.log like this:
+This mod overwrites the corresponding species class added by "Silfae's city sets updated" so that it will not be available for use. Expect to see one line in error.log like this:
 [code]
-[23:27:00][game_singleobjectdatabase.h:165]: Object with key: Silfae-Saur already exists, using the one at  file: common/species_classes/zz_silfae_cities_saurischian_exclude.txt line: 2
+[23:27:00][game_singleobjectdatabase.h:165]: Object with key: Silfae-Saur already exists, using the one at file: common/species_classes/zz_silfae_cities_saurischian_exclude.txt line: 2
 [/code]
 [h2]Changelog[/h2]
 [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2577216891]Change Notes[/url]
@@ -42,7 +43,7 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 Hosted on [url=https://github.com/corsairmarks/saurischian_portraits_revisited]GitHub[/url].
 
 [h1]Special Thanks[/h1]
-I was inspired to extend the original mod when I saw [url=https://steamcommunity.com/profiles/76561198037630876/myworkshopfiles/]Endugu[/url]'s [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1584824947]expansion[/url] of [url=https://steamcommunity.com/profiles/76561198021525667/myworkshopfiles/]Silfae[/url]'s [url=https://steamcommunity.com/workshop/filedetails/?id=881118424]Animated Xirmian Portraits[/url].  Modular mods that require downloading the original mod(s) help give credit where credit is due.
+I was inspired to extend the original mod when I saw [url=https://steamcommunity.com/profiles/76561198037630876/myworkshopfiles/]Endugu[/url]'s [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1584824947]expansion[/url] of [url=https://steamcommunity.com/profiles/76561198021525667/myworkshopfiles/]Silfae[/url]'s [url=https://steamcommunity.com/workshop/filedetails/?id=881118424]Animated Xirmian Portraits[/url]. Modular mods that require downloading the original mod(s) help give credit where credit is due.
 
 An extra special thanks to Silfae for creating and sharing so many detailed, animated portraits for the community.
 
