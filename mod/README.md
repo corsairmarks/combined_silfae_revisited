@@ -80,7 +80,7 @@ This mod should be added before the game has started.  If you remove it from a g
 
 ## Known Issues
 
-This mod overwrites the corresponding species class added by "Silfae's city sets updated."  Instead, the original species class from Silfae (with localisation) is used.  It also overwrites a total of 4 triggers and 13 jobs from the base game; expect to see 18 lines in error.log similar to these:
+This mod overwrites the corresponding species class added by "Silfae's city sets updated."  It also overwrites a total of 4 triggers and 13 jobs from the base game; expect to see 18 lines in error.log similar to these:
 
 ```
 [17:18:06][game_singleobjectdatabase.h:165]: Object with key: Silfae-Holofrixit already exists, using the one at  file: common/species_classes/zz_silfae_cities_holofrixit_exclude.txt line: 2
