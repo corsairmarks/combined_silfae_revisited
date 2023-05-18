@@ -9,27 +9,27 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 [*]Enhance clothing selectors to be influenced by Pop job
 [*]Update the namelist to account for all built-in army types, remove obsolete entries
 [*]Add custom trait "Ældari Longevity"
-    [list]
-    [*]This trait makes their leaders begin at an older age (previously this effect was from species class itself)
-    [*]Add bonus lifespan to compensate for their older starting age
-    [*]Automatically given to any species designed with the Eldar portraits
-    [/list]
+	[list]
+	[*]This trait makes their leaders begin at an older age (previously this effect was from species class itself)
+	[*]Add bonus lifespan to compensate for their older starting age
+	[*]Automatically given to any species designed with the Eldar portraits
+	[/list]
 [*]Update pre-scripted empire
-    [list]
-    [*]Now has Origin: Remnants (requires Ancient Relics)
-    [*]Can randomly spawn
-    [*]Gains Psionic Theory for free
-    [*]Ulthwé names and colors are a somewhat more lore-friendly
-    [/list]
+	[list]
+	[*]Now has Origin: Remnants (requires Ancient Relics)
+	[*]Can randomly spawn
+	[*]Gains Psionic Theory for free
+	[*]Ulthwé names and colors are a somewhat more lore-friendly
+	[/list]
 [*]Rebuilt challenge-start custom solar system initializer
-    [list]
-    [*]Setup to work correctly for all origins/civics in unmodded Stellaris that do not restrict the starting system initializers (i.e. Origin: Shattered Ring or Origin: Void Dwellers)
-    [*]Rebuild district and building creation and Pop generation
-    [*]Any empire using this initializer gains Hydroponics Farming ([b]tech_hydroponics[/b]) and Weather Control Systems ([b]tech_housing_1[/b]) for free
-    [*]Add modified Origin: Remnants starting capital deposits for use with this initializer
-    [*]The Eye of Terror is its own graphics entity with a Stellaris-flavored description and adds the negative effects of [i]both[/i] black holes and pulsars
-    [*]Expect Shroud entities to become progressively more successful in their attempts to manifest in the system
-    [/list]
+	[list]
+	[*]Setup to work correctly for all origins/civics in unmodded Stellaris that do not restrict the starting system initializers (i.e. Origin: Shattered Ring or Origin: Void Dwellers)
+	[*]Rebuild district and building creation and Pop generation
+	[*]Any empire using this initializer gains Hydroponics Farming ([b]tech_hydroponics[/b]) and Weather Control Systems ([b]tech_housing_1[/b]) for free
+	[*]Add modified Origin: Remnants starting capital deposits for use with this initializer
+	[*]The Eye of Terror is its own graphics entity with a Stellaris-flavored description and adds the negative effects of [i]both[/i] black holes and pulsars
+	[*]Expect Shroud entities to become progressively more successful in their attempts to manifest in the system
+	[/list]
 [*]You can use the Eldar portraits and/or custom initializer for your own empire without any DLC requirements
 [*]The Eldar are part of the Humanoid species class (since Stellaris 3.8)
 [*]Fix the file type on the included event image - it was a [b].png[/b] with the [b].dds[/b] extension - it is now distributed in the correct [b].dds[/b] format for Stellaris
