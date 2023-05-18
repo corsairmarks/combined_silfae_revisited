@@ -23,13 +23,6 @@ tech_alien_life_studies_gestalt = {
 			has_valid_civic = civic_machine_servitor
 		}
 		modifier = {
-			factor = value:tech_weight_likelihood
-			research_leader = {
-				area = society
-				has_trait = leader_trait_expertise_biology
-			}
-		}
-		modifier = {
 			factor = 0
 			NOT = {
 				any_owned_planet = {
@@ -59,13 +52,6 @@ tech_alien_life_studies_gestalt = {
 		modifier = {
 			factor = 1.5
 			has_valid_civic = civic_machine_servitor
-		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = leader_trait_expertise_biology
-			}
 		}
 		modifier = {
 			factor = 0
