@@ -10,7 +10,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 
 * Enhance clothing selectors to be influenced by Pop job
 * Update the namelist to account for all built-in army types, remove obsolete entries
-* Add custom trait "Ældari Longevity" to the Eldar species class
+* Add custom trait "Ældari Longevity"
     * This trait makes their leaders begin at an older age (previously this effect was from species class itself)
     * Add bonus lifespan to compensate for their older starting age
     * Automatically given to any species designed with the Eldar portraits
@@ -33,7 +33,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 
 ## Compatibility
 
-Compatible with most mods that do not add the same portraits, species class, or art assets.  May conflict with other mods that need to alter how relic worlds are upgraded or make changes to Armageddon Bombardment.
+Compatible with most mods that do not add the same portraits or art assets.  May conflict with other mods that need to alter how relic worlds are upgraded or make changes to Armageddon Bombardment.
 
 The Launcher will tell you that some mods are outdated - that is because the dependency is out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mod.
 
