@@ -1,0 +1,35 @@
+# file renamed so that portraits appear after all built-in portraits
+
+# species classes are additive as of Stellaris 3.8 "Gemini"
+ART = {
+	custom_portraits = {
+		playable = { always = yes }
+		randomized = { always = no }
+		portraits = {
+			"holofrixit"
+		}
+	}
+}
+
+HLFRXT = {
+	archetype = HOLOARCH
+	randomized = no
+	playable = { always = yes }
+	possible_secondary = { always = yes }
+	portraits = {
+		"holofrixit"
+	}
+	custom_portraits = {
+		randomized = { always = no }
+		playable = { always = no }
+		portraits = {
+			"holooverseer"
+			"hologanglion"
+			"holowarrior"
+			"holodrone"
+			"holofrixigram"
+		}
+	}
+	graphical_culture = holofrixit_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+}
