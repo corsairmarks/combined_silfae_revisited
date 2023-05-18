@@ -1,0 +1,28 @@
+# file renamed so that portraits appear after all built-in portraits
+
+HRWRM = {
+	randomized = yes
+	playable = { has_necroids = no }
+	archetype = BIOLOGICAL
+	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
+	portraits = {
+		"horrorworm"
+	}
+	gender = no
+	graphical_culture = horrorworm_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+}
+
+HRWRM_NEC = {
+	randomized =  no # does not have an associated namelist, which results in errors when randomly selected
+	playable = { has_necroids = yes }
+	archetype = BIOLOGICAL
+	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
+	possible_secondary = { always = yes }
+	portraits = {
+		"horrorworm"
+	}
+	gender = no
+	graphical_culture = horrorworm_02
+	move_pop_sound_effect = "moving_pop_confirmation"
+}

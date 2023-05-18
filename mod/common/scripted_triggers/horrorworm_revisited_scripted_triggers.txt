@@ -20,6 +20,6 @@ is_horrorworm_species_class = {
 	optimize_memory
 	OR = {
 		is_species_class = HRWRM
-		is_species_class = HRWRM2
+		is_species_class = HRWRM_NEC
 	}
 }
