@@ -1,7 +1,7 @@
 saurischian1 = {
 	ship_prefix = PRESCRIPTED_ship_prefix_saurischian1
 	species = {
-		class = SRSCN
+		class = REP
 		portrait = saurischian
 		name = PRESCRIPTED_species_name_saurischian1
 		plural = PRESCRIPTED_species_plural_saurischian1
