@@ -6,7 +6,7 @@ There are lots of other mods which contain these portraits, so why should you ch
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.7 "Canis Minor," the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.8 "Gemini," the latest version when this was written.  Updates include:
 
 * Fix the broken portrait clothing selector for male rulers
 * Update the namelist to account for all built-in army types, remove obsolete entries
@@ -16,15 +16,16 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 * Custom starting initializer now supports a variety of civics and origin starts (all the built-in ones)
 * Remove a species trait (Resilient) from the prescripted empire, because Charismatic is now 2 points
 * Portraits may be randomly chosen by the AI
-* Support being able to choose a single-gender species (new in Stellaris 3.2)
+* The Aquilesi are part of the Avian species class (since Stellaris 3.8)
+* Support being able to choose a single-gender species (since Stellaris 3.2)
 
 ## Compatibility
 
-Compatible with any mod that does not add the same portraits, species class, or art assets.
+Compatible with any mod that does not add the same portraits or art assets.
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements.
+Built for Stellaris version 3.8 "Gemini."  Not compatible with achievements.
 
 ### Dependencies
 
@@ -80,6 +81,10 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Update custom starting system with underlying changes to pre-FTL civilizations
     * Remove global flag
     * Add compatibility trigger `has_romaneagles_portraits_revisited_active`
+* 7.0.0 Update for Stellaris version 3.8 "Gemini"
+    * Aquilesi are now part of the Avian species class (thanks to changes by Paradox, this is no longer mod-unfriendly)
+    * Update prescripted empire to use the new prescripted ruler class and trait system
+    * Update shared triggers
 
 ## Source Code
 
