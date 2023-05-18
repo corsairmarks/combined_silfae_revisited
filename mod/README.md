@@ -6,7 +6,7 @@ There are lots of other mods which contain these portraits, so why should you ch
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.7 "Canis Minor," the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.8 "Gemini," the latest version when this was written.  Updates include:
 
 * Enhance clothing selectors to be influenced by Pop job
 * Update the namelist to account for all built-in army types, remove obsolete entries
@@ -27,8 +27,9 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     * The Eye of Terror is its own graphics entity with a Stellaris-flavored description and adds the negative effects of _both_ black holes and pulsars
     * Expect Shroud entities to become progressively more successful in their attempts to manifest in the system
 * You can use the Eldar portraits and/or custom initializer for your own empire without any DLC requirements
+* The Eldar are part of the Humanoid species class (since Stellaris 3.8)
 * Fix the file type on the included event image - it was a `.png` with the `.dds` extension - it is now distributed in the correct `.dds` format for Stellaris
-* Support being able to choose a single-gender species (new in Stellaris 3.2)
+* Support being able to choose a single-gender species (since Stellaris 3.2)
 
 ## Compatibility
 
@@ -36,7 +37,7 @@ Compatible with most mods that do not add the same portraits, species class, or 
 
 The Launcher will tell you that some mods are outdated - that is because the dependency is out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mod.
 
-Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements.
+Built for Stellaris version 3.8 "Gemini."  Not compatible with achievements.
 
 ### Partial Overrides
 
@@ -113,6 +114,11 @@ This mod preempts one event from the base game related to restoring relic worlds
 * 7.0.1 Bugfixes
     * Address incorrect buildings/districts for Catalytic/Angler empires in the Eye of Terror
     * Remove obsolete grant of the technology for Aquaponics Farms
+* 8.0.0 Update for Stellaris version 3.8 "Gemini"
+    * Eldar are now part of the Humanoid species class (thanks to changes by Paradox, this is no longer mod-unfriendly)
+    * Update prescripted empire to use the new prescripted ruler class and trait system
+    * Update shared triggers
+    * Integrate underlying game changes
 
 ## Source Code
 
