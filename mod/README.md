@@ -6,7 +6,7 @@ There are other mods which contain the same portraits, so why should you choose 
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.7 "Canis Minor," the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.8 "Gemini," the latest version when this was written.  Updates include:
 
 * Remove duplication in room selector
 * Remove alternate (blank) city graphics - mostly they were to try and get a static diplomacy backdrop but only worked for colonies with city size 4; set the `graphical_culture` to not define a cityset
@@ -14,12 +14,11 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 * Original room (with see-through viewport) also remains available for use with custom empires
 * Update the namelist to account for all built-in army types, remove obsolete entries
 * Fix definitions for Octee-lan custom greeting sound
-* Robot species (Beep-Boop) now uses the default robot sounds instead of (non-robotic) mammalian sounds
-* Code now sets any leader using the Octee-lan portrait to have `gender = female`
-    * This is now implemented through the feature introduced in Stellaris 3.2 to specify a mono-gender species during empire creation
-* Add gestalt version of the Alien Zoo (both a building and technology) which is available to non-genocidal gestalt empires
+* Machine species (Beep-Boop) now uses the default robot sounds instead of (non-robotic) mammalian sounds
+* Add gestalt version of the Alien Zoo (building, technology, and job) which is available to non-genocidal gestalt empires
 * Update pre-scripted empire (Kuri-octa-Xibi):
     * Octee-lan species:
+    * Female mono-gender species (since Stellaris 3.2)
         * Swap Rapid Breeders to Aquatic (requires the Aquatic Species Pack) to fit the role-play better
         * Remove Communal because Charismatic is now 2 trait points now
     * Uses Origin: Syncretic Evolution (the Quoi-chi are the secondary species; requires Utopia)
@@ -33,20 +32,20 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     * Your former overlords, the Beep Boops, will spawn if the Synthetic Dawn DLC is active
     * Beep-Boop species: removed High Maintenance, add Efficient Processors so that all points are spent
     * Beep-Boop empire: now a regular empire, with a special exception allowing them to have a colony in the same system (in order to fight you)
+    * The Beep-Boops begin with a starbase above their planet, or an orbital ring if the Overlord DLC is active
     * You cannot close your borders to the Beep-Boops, nor can they close theirs to you
     * Beep-Boops will hate you for rejecting them
-* You can use the Octee-lan portraits for your own empires without any DLC requirements
-* You can use the Beep-Boop portrait (there is only one) for your own machine empires if you have Synthetic Dawn
+* The Octee-lan are part of the Aquatic species class (if you own the Aquatics Species Pack) or Molluscoid species class (if you don't) (since Stellaris 3.8)
+* The Beep-Boop portrait (there is only one) is part of the Machine and Robot species classes, meaning you can use it for your own amchine empire or as alternate robot portraits (since Stellaris 3.8)
+* You can use the Octee-lan portraits for your own empires without any DLC requirements as well as the robotic Beep-Boops (the machine version requires Synthetic Dawn)
 
 ## Compatibility
 
-In order to make the Alien Zoo available to gestalts (needed for the Beep-Boops), it is necessary to override `d_alien_pets_deposit`.  That means this mod is incompatible with other mods that modify that planetary deposit - although I doubt many do.
-
-This mod now overrides two diplomatic actions (Close Borders and Declare Rivalry) in order to prevent players beginning in Tsukimi Pool from closing their borders to the Beep-Boops (which would otherwise their fleets stuck permanently MIA).  That means this mod is not compatible with others that make changes to the same diplomatic actions (but does not conflict with mods that add extra diplomatic message text).  Otherwise compatible with any other mod that does not add the same portraits, species class, or art assets.
+This mod overrides two diplomatic actions (Close Borders and Declare Rivalry) in order to prevent players beginning in Tsukimi Pool from closing their borders to the Beep-Boops (which would otherwise cause their fleets to be stuck permanently MIA).  That means this mod is not compatible with others that make changes to the same diplomatic actions (but does not conflict with mods that add extra diplomatic message text).  Otherwise compatible with any other mod that does not add the same portraits, species class, or art assets.
 
 The Launcher will tell you that some mods are outdated - that is because the dependency is out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mod.
 
-Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements.
+Built for Stellaris version 3.8 "Gemini."  Not compatible with achievements.
 
 ### Event Preemption
 
@@ -64,13 +63,12 @@ This mod should be added before the game has started.  If you remove it from a g
 
 ## Known Issues
 
-This mod preempts one event and overrides a deposit and two diplomatic actions, which generates four lines in the error log like this:
+This mod preempts one event and overrides two diplomatic actions, which generates three lines in the error log like this:
 
 ```
-[23:27:06][game_singleobjectdatabase.h:165]: Object with key: action_make_rival already exists, using the one at  file: common/diplomatic_actions/10_octeelan_revisited_diplomatic_action_overrides.txt line: 2
-[23:27:06][game_singleobjectdatabase.h:165]: Object with key: action_close_borders already exists, using the one at  file: common/diplomatic_actions/10_octeelan_revisited_diplomatic_action_overrides.txt line: 92
-[23:27:10][eventmanager.cpp:361]: an event with id [action.85] already exists!  file: events/on_action_events_1.txt line: 8824
-[23:27:11][game_singleobjectdatabase.h:165]: Object with key: d_alien_pets_deposit already exists, using the one at  file: common/deposits/02_octeelan_revisited_planetary_deposits_overrides.txt line: 3
+[00:23:32][game_singleobjectdatabase.h:153]: Object with key: action_make_rival already exists, using the one at  file: common/diplomatic_actions/10_octeelan_revisited_diplomatic_action_overrides.txt line: 2
+[00:23:32][game_singleobjectdatabase.h:153]: Object with key: action_close_borders already exists, using the one at  file: common/diplomatic_actions/10_octeelan_revisited_diplomatic_action_overrides.txt line: 117
+[00:23:36][eventmanager.cpp:369]: an event with id [action.85] already exists!  file: events/on_action_events_1.txt line: 6590
 ```
 
 ## Changelog
@@ -119,6 +117,12 @@ This mod preempts one event and overrides a deposit and two diplomatic actions, 
     * Add new jobs for the Xeno Zoo (gestalt) based on the new Zookeeper and Protected Fauna/Conserved Fauna jobs
     * Remove global flag
     * Add compatibility trigger `has_octeelan_portraits_revisited_active`
+* 8.0.0 Update for Stellaris version 3.8 "Gemini"
+    * Octee-lan are now part of the Aquatic (with Aquatic SPecies Pack) or Molluscoid (without) species class (thanks to changes by Paradox, this is no longer mod-unfriendly)
+    * Beep-Boops are now part of the machine and robot species classes
+    * Beep-Boops begin with an orbital ring (T1) instead of a starbase when the Overlord DLC is active
+    * Update prescripted empire to use the new prescripted ruler class and trait system
+    * Update shared triggers
 
 ## Source Code
 
