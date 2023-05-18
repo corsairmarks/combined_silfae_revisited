@@ -55,8 +55,7 @@ horrorworm1 = {
 		clothes = 0
 		ruler_title = RT_BLANK_STRING
 		ruler_title_female = RT_BLANK_STRING
-		leader_class = ruler
-		trait = leader_trait_ruler_hive_mind 
+		leader_class = general
 		trait = trait_ruler_warlike 
 	}
 	flags = { is_horrorworms custom_start_screen }
@@ -121,8 +120,7 @@ horrorworm2 = {
 		clothes = 0
 		ruler_title = RT_BLANK_STRING
 		ruler_title_female = RT_BLANK_STRING
-		leader_class = ruler
-		trait = leader_trait_ruler_hive_mind 
+		leader_class = general
 		trait = trait_ruler_warlike 
 	}
 	flags = { is_horrorworms custom_start_screen }
