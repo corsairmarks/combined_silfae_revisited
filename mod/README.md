@@ -6,7 +6,7 @@ There are lots of other mods which contain the same or similar portraits, so why
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.7 "Canis Minor," the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.8 "Gemini," the latest version when this was written.  Updates include:
 
 * Fix invalid texture reference in `quarian_female_01_portrait.mesh` (caused lots of error logs)
 * Improve Quarian clothing selectors to be influenced by Pop job
@@ -23,17 +23,18 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     * Starting leader begins with three traits: Home in the Sky, Space Miner, and Fleet Organizer
     * Can randomly spawn
 * You can use the Quarian portraits for your own empire without any DLC requirements
-* Support being able to choose a single-gender species (new in Stellaris 3.2)
+* The Quarians are part of the Humanoid species class (since Stellaris 3.8)
+* Support being able to choose a single-gender species (since Stellaris 3.2)
 
 ## Compatibility
 
 In order to add a new solar system initializer that is compatible with Void Dwellers, it is necessary to override `origin_void_dwellers` add it to the list of allowed initializers.  That means this mod is incompatible with other mods that modify that origin definition, such as other mods that add new initializers for Void Dwellers.
 
-Compatible with any other mod that does not add the same portraits, species class, or art assets.
+Compatible with any other mod that does not add the same portraits or art assets.
 
 The Launcher will tell you that some mods are outdated - that is because the dependency is out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mod.
 
-Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements.
+Built for Stellaris version 3.8 "Gemini."  Not compatible with achievements.
 
 ### Dependencies
 
@@ -93,6 +94,10 @@ This mod overrides `origin_void_dwellers` in order to add its new initializer to
     * Remove global flag
     * Add compatibility trigger `has_quarian_portraits_revisited_active`
 * 7.0.1 Fix compatibility scripted trigger to have the right name
+* 8.0.0 Update for Stellaris version 3.8 "Gemini"
+    * Quarians are now part of the Humanoid species class (thanks to changes by Paradox, this is no longer mod-unfriendly)
+    * Update prescripted empire to use the new prescripted ruler class and trait system
+    * Update shared triggers
 
 ## Source Code
 
