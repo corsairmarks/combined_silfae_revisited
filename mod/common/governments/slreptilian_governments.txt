@@ -21,16 +21,6 @@ gov_oldones_ascendancy = {
 gov_concealed_overlordship = {
 	ruler_title = RT_AWAKENED_GRAND_MASTER
 	ruler_title_female = RT_AWAKENED_GRAND_MISTRESS
-	election_candidates = {
-		modifier = {
-			add = 100
-			leader_class = ruler
-		}
-		modifier = {
-			add = 10
-			leader_class = scientist
-		}
-	}
 	possible = {
 		has_authority = auth_dictatorial
 		has_origin = origin_shadowy_evolution
@@ -44,20 +34,6 @@ gov_concealed_overlordship = {
 gov_secretworld_order = {
 	ruler_title = RT_ILLUMINATED_MASTER
 	ruler_title_female = RT_ILLUMINATED_MISTRESS
-	election_candidates = {
-		modifier = {
-			add = 100
-			leader_class = ruler
-		}
-		modifier = {
-			add = 10
-			leader_class = governor
-		}
-		modifier = {
-			add = -1000
-			NOT = { leader_class = governor }
-		}
-	}
 	possible = {
 		has_authority = auth_oligarchic
 		has_origin = origin_shadowy_evolution
@@ -71,21 +47,6 @@ gov_secretworld_order = {
 gov_esoteric_masquerade = {
 	ruler_title = RT_SHADOW_MINISTER
 	ruler_title_female = RT_SHADOW_MINISTER
-
-	election_candidates = {
-		modifier = {
-			add = 50
-			leader_class = ruler
-		}
-		modifier = {
-			add = 10
-			leader_class = governor
-		}
-		modifier = {
-			add = 10
-			leader_class = scientist
-		}
-	}
 	possible = {
 		has_authority = auth_democratic
 		has_origin = origin_shadowy_evolution
