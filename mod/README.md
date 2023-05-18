@@ -6,7 +6,7 @@ There are other mods which contain these portraits, so why should you choose thi
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.7 "Canis Minor," the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.8 "Gemini," the latest version when this was written.  Updates include:
 
 * Update Holofrixit shipset (reuse of Unbidden) to work with current Stellaris - starbases, titans, juggernauts, and colossi fall back to molluscoid (the fallback for the Unbidden)
 * Enhance Holofrixit portrait usage:
@@ -28,18 +28,18 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 * Remove unnecessary old army overrides
 * Adjust Holowarrior and Hologenotype armies
 * Update Polarizing Nexus energy storage building
-* Pop portraits influenced by job stratum
+* Pop portraits influenced by job and job stratum
 * You can use Silfae's Holofrixit portraits for your own empires without any DLC requirements
     * Using the main Holofrixit species class will consume energy instead of food
-    * Added a second species class (Holofrixit Alt.) that is a `BIOLOGICAL` archetype, so you can choose to play without the requirement for energy upkeep
+    * Holofrixit portraits are also available as Arthropoids, so you can choose to play without the requirement for energy upkeep (since Stellaris 3.8)
 * Disable the "Holocrisis" - a duplicate of original AI rebellion - at least until I can spend more time updating it to work with the current game version **postponed indefinitely**
-* Support being able to choose a single-gender species (new in Stellaris 3.2)
+* Support being able to choose a single-gender species (since Stellaris 3.2)
 
 ## Compatibility
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements.
+Built for Stellaris version 3.8 "Gemini."  Not compatible with achievements.
 
 ### Partial Overrides
 
@@ -100,7 +100,6 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
 [17:18:06][game_singleobjectdatabase.h:165]: Object with key: chronicle_drone already exists, using the one at  file: common/pop_jobs/14_holofrixit_revisited_gestalt_job_overrides.txt line: 523
 [17:18:06][game_singleobjectdatabase.h:165]: Object with key: dimensional_portal_researcher_gestalt already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 6
 [17:18:06][game_singleobjectdatabase.h:165]: Object with key: space_time_anomaly_researcher_gestalt already exists, using the one at  file: common/pop_jobs/16_holofrixit_revisited_event_job_overrides.txt line: 194
-
 ```
 
 ## Changelog
@@ -181,6 +180,11 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Remove global flag
     * Add compatibility trigger `has_holosphere_portraits_revisited_active`
 * 7.1.0 Add additional compatibility triggers to support [The Merger of Rules](https://steamcommunity.com/sharedfiles/filedetails/?id=2807759164)
+* 8.0.0 Update for Stellaris version 3.8 "Gemini"
+    * Holofrixit (alternate) are now part of the Arthropoid species class (thanks to changes by Paradox, this is no longer mod-unfriendly)
+    * Update prescripted empire to use the new prescripted ruler class and trait system
+    * Update shared triggers
+    * Integrate underlying game changes
 
 ## Source Code
 

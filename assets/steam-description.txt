@@ -4,7 +4,7 @@ Have you seen the azure, chitinous portraits from Silfae's "Holosphere Rising" m
 There are other mods which contain these portraits, so why should you choose this one? None of the others update special holofrixit caste-based gameplay, but this one does! Please enjoy my adaptation of Silfae's custom empire into modern Stellaris.
 
 [h1]Changes[/h1]
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.7 "Canis Minor," the latest version when this was written. Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.8 "Gemini," the latest version when this was written. Updates include:
 [list]
 [*]Update Holofrixit shipset (Unbidden) - fallback to molluscoid (the fallback for the Unbidden)
 [*]Enhance Holofrixit portrait usage:
@@ -34,15 +34,15 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 [*]You can use Silfae's Holofrixit portraits for your own empires without any DLC requirements
 	[list]
 	[*]Main Holofrixit species class consumes energy instead of food
-	[*]Added second species class (Holofrixit Alt.) that is [b]BIOLOGICAL[/b] archetype, so you can play without the requirement for energy upkeep
+	[*]Holofrixit portraits are also available as Arthropoids, so you can choose to play without the requirement for energy upkeep (since Stellaris 3.8)
 	[/list]
 [*]Disable the "Holocrisis" until updated [b]postponed indefinitely[/b]
-[*]Support being able to choose a single-gender species (new in Stellaris 3.2)
+[*]Support being able to choose a single-gender species (since Stellaris 3.2)
 [/list]
 [h2]Compatibility[/h2]
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number. This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed. You can safely ignore the out-of-date warning for the dependency mods.
 
-Built for Stellaris version 3.7 "Canis Minor." Not compatible with achievements.
+Built for Stellaris version 3.8 "Gemini." Not compatible with achievements.
 
 [h3]Partial Overrides[/h3]
 This mod also alters the requirements for ruler-stratum jobs and some "complicated" specialist/complex drone-stratum jobs. Only Xechiros can work the majority of ruler jobs (Ganglions can be Head Researchers), and Drones cannot work any jobs that require "thinking" (similar to syncretic proles or zombies). Jobs have also been re-weighted so the Holowarriors prefer military jobs. These overrides [i]also[/i] mean that this mod will need to be explicitly updated any time Paradox makes changes to the overridden jobs.
