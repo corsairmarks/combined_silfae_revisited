@@ -15,31 +15,31 @@ All gameplay features from the original mod are upgraded to be fully compatible 
 [*]Machine species (Beep-Boop) now uses the default robot sounds instead of (non-robotic) mammalian sounds
 [*]Add gestalt version of the Alien Zoo (building, technology, and job) which is available to non-genocidal gestalt empires
 [*]Update pre-scripted empire (Kuri-octa-Xibi):
-    [list]
-    [*]Octee-lan species
-        [list]
-        [*]Female mono-gender species (since Stellaris 3.2)
-        [*]Swap Rapid Breeders to Aquatic (requires the Aquatic Species Pack) to fit the role-play better
-        [*]Remove Communal because Charismatic is now 2 trait points now
-        [/list]
-    [*]Uses Origin: Syncretic Evolution (the Quoi-chi are the secondary species; requires Utopia)
-    [*]Uses Aquatic cities and ships (requires the Aquatic Species Pack)
-    [*]Can randomly spawn
-    [/list]
+	[list]
+	[*]Octee-lan species
+		[list]
+		[*]Female mono-gender species (since Stellaris 3.2)
+		[*]Swap Rapid Breeders to Aquatic (requires the Aquatic Species Pack) to fit the role-play better
+		[*]Remove Communal because Charismatic is now 2 trait points now
+		[/list]
+	[*]Uses Origin: Syncretic Evolution (the Quoi-chi are the secondary species; requires Utopia)
+	[*]Uses Aquatic cities and ships (requires the Aquatic Species Pack)
+	[*]Can randomly spawn
+	[/list]
 [*]Update custom starting initializer (Tsukimi Pool):
-    [list]
-    [*]Now supports a variety of civics and origin starts (all the built-in ones)
-    [*]Muubul species: add Natural Engineers because they had an extra trait point
-    [*]Yuibitt species: add Aquatic and Slow Learners to use all available trait points
-    [*]Xueench species: add Quick Learners because they had an extra trait point
-    [*]Your former overlords, the Beep Boops, will spawn if the Synthetic Dawn DLC is active
-    [*]Beep-Boop species: removed High Maintenance, add Efficient Processors so that all points are spent
-    [*]Beep-Boop empire: now a regular empire, with a special exception allowing them to have a colony in the same system (in order to fight you)
-    [*]The Beep-Boops begin with a starbase above their planet, or an orbital ring if the Overlord DLC is active
-    [*]You cannot close your borders to the Beep-Boops, nor can they close theirs to you
-    [*]Beep-Boops will hate you for rejecting them
-    [/list]
-[*]The Octee-lan are part of the Aquatic species class (if you own the Aquatics Species Pack) or Molluscoid species class (if you don't) (since Stellaris 3.8)
+	[list]
+	[*]Now supports a variety of civics and origin starts (all the built-in ones)
+	[*]Muubul species: add Natural Engineers because they had an extra trait point
+	[*]Yuibitt species: add Aquatic and Slow Learners to use all available trait points
+	[*]Xueench species: add Quick Learners because they had an extra trait point
+	[*]Your former overlords, the Beep Boops, will spawn if the Synthetic Dawn DLC is active
+	[*]Beep-Boop species: removed High Maintenance, add Efficient Processors so that all points are spent
+	[*]Beep-Boop empire: now a regular empire, with a special exception allowing them to have a colony in the same system (in order to fight you)
+	[*]The Beep-Boops begin with a starbase above their planet, or an orbital ring if the Overlord DLC is active
+	[*]You cannot close your borders to the Beep-Boops, nor can they close theirs to you
+	[*]Beep-Boops will hate you for rejecting them
+	[/list]
+[*]The Octee-lan are part of the Aquatic species class (with the Aquatics Species Pack) or Molluscoid species class (without) (since Stellaris 3.8)
 [*]The Beep-Boop portrait (there is only one) is part of the Machine and Robot species classes, meaning you can use it for your own amchine empire or as alternate robot portraits (since Stellaris 3.8)
 [*]You can use the Octee-lan portraits for your own empires without any DLC requirements as well as the robotic Beep-Boops (the machine version requires Synthetic Dawn)
 [/list]

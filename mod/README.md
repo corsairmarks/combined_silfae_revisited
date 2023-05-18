@@ -35,7 +35,7 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     * The Beep-Boops begin with a starbase above their planet, or an orbital ring if the Overlord DLC is active
     * You cannot close your borders to the Beep-Boops, nor can they close theirs to you
     * Beep-Boops will hate you for rejecting them
-* The Octee-lan are part of the Aquatic species class (if you own the Aquatics Species Pack) or Molluscoid species class (if you don't) (since Stellaris 3.8)
+* The Octee-lan are part of the Aquatic species class (with the Aquatics Species Pack) or Molluscoid species class (without) (since Stellaris 3.8)
 * The Beep-Boop portrait (there is only one) is part of the Machine and Robot species classes, meaning you can use it for your own amchine empire or as alternate robot portraits (since Stellaris 3.8)
 * You can use the Octee-lan portraits for your own empires without any DLC requirements as well as the robotic Beep-Boops (the machine version requires Synthetic Dawn)
 
@@ -118,7 +118,7 @@ This mod preempts one event and overrides two diplomatic actions, which generate
     * Remove global flag
     * Add compatibility trigger `has_octeelan_portraits_revisited_active`
 * 8.0.0 Update for Stellaris version 3.8 "Gemini"
-    * Octee-lan are now part of the Aquatic (with Aquatic SPecies Pack) or Molluscoid (without) species class (thanks to changes by Paradox, this is no longer mod-unfriendly)
+    * Octee-lan are now part of the Aquatic (with Aquatic Species Pack) or Molluscoid (without) species class (thanks to changes by Paradox, this is no longer mod-unfriendly)
     * Beep-Boops are now part of the machine and robot species classes
     * Beep-Boops begin with an orbital ring (T1) instead of a starbase when the Overlord DLC is active
     * Update prescripted empire to use the new prescripted ruler class and trait system
