@@ -51,7 +51,7 @@ eldarcraft1 = {
 		}
 	}
 	ruler = {
-		leader_class = ruler
+		leader_class = general
 		gender = male
 		name = PRESCRIPTED_ruler_name_eldarcraft1
 		portrait = eldar_male_01
@@ -62,6 +62,7 @@ eldarcraft1 = {
 		ruler_title_female = RT_ELDAR_Farseer
 		heir_title = HT_ELDAR_Seer
 		heir_title_female = HT_ELDAR_Seer
+		trait = trait_ruler_warlike
 	}
 	flags = { is_silfae_eldar }
 }
