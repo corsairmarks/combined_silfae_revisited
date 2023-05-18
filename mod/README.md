@@ -6,7 +6,7 @@ There are lots of other mods which contain these portraits, so why should you ch
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.7 "Canis Minor," the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.8 "Gemini," the latest version when this was written.  Updates include:
 
 * Clothing selector enhancements
     * Fixed a broken clothing selector for male rulers
@@ -20,15 +20,16 @@ All gameplay features from the original mod are upgraded to be fully compatible 
     * Less complex that some of Silfae's other starting systems, so it already works with newer civics and origins
 * Update the AI personality to account for new game features
 * Remove a species trait (Communal) from the prescripted empire, because Charismatic is now 2 points
-* Support being able to choose a single-gender species (new in Stellaris 3.2)
+* The Xirmians are part of the Humanoidd species class (since Stellaris 3.8)
+* Support being able to choose a single-gender species (since Stellaris 3.2)
 
 ## Compatibility
 
-Compatible with any mod that does not add the same portraits, species class, or art assets.
+Compatible with any mod that does not add the same portraits or art assets.
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements.
+Built for Stellaris version 3.8 "Gemini."  Not compatible with achievements.
 
 ### Dependencies
 
@@ -43,7 +44,7 @@ This mod should be added before the game has started.  If you remove it from a g
 
 ## Known Issues
 
-This mod overwrites the corresponding species class added by "Silfae's city sets updated" so that it will not be available for use.  Instead, the original species class from Silfae (with localisation) is used.  Expect to see one line in error.log like this:
+This mod overwrites the corresponding species class added by "Silfae's city sets updated" so that it will not be available for use.  Expect to see one line in error.log like this:
 
 ```
 [23:27:00][game_singleobjectdatabase.h:165]: Object with key: Silfae-Xirmian already exists, using the one at  file: common/species_classes/zz_silfae_cities_xirmian_exclude.txt line: 2
@@ -78,6 +79,10 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Remove global flag
     * Add compatibility trigger `has_xirmian_portraits_revisited_active`
 * 6.0.1 Add missing research pact acceptance to Flamboyant Diplomats
+* 7.0.0 Update for Stellaris version 3.8 "Gemini"
+    * Xirmians are now part of the Humanoid species class (thanks to changes by Paradox, this is no longer mod-unfriendly)
+    * Update prescripted empire to use the new prescripted ruler class and trait system
+    * Update shared triggers
 
 ## Source Code
 
