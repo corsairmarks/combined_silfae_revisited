@@ -81,7 +81,6 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Viverrokan are now part of the Mammalian species class (thanks to changes by Paradox, this is no longer mod-unfriendly)
     * Update prescripted empire to use the new prescripted ruler class and trait system
     * Update shared triggers
-    * Integrate underlying game changes
 
 ## Source Code
 
