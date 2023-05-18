@@ -1,0 +1,30 @@
+# file renamed so that portraits appear after all built-in portraits
+
+# used only for graphical_culture (cites/ships) and namelists
+ROEAGLE = {
+	randomized = no
+	possible = { always = no }
+	possible_secondary = { always = no }
+	graphical_culture = romaneagles_01
+}
+
+# species classes are additive as of Stellaris 3.8 "Gemini"
+AVI = {
+	custom_portraits = {
+		playable = { always = yes }
+		randomized = { always = yes }
+		portraits = {
+			"romaneagles"
+		}
+	}
+}
+
+# species classes are additive as of Stellaris 3.8 "Gemini"
+PRE_AVI = {
+	portraits = {
+		"romaneagles"
+	}
+	uplifted_portraits = {
+		"romaneagles"
+	}
+}
