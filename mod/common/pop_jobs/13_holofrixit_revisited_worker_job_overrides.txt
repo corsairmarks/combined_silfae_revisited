@@ -74,8 +74,11 @@ soldier = {
 			planet_building_build_speed_mult = 0.05
 		}
 		potential = {
-			exists = army_leader
-			army_leader = { has_trait = leader_trait_taskmaster }
+			exists = planet
+			planet = {
+				exists = army_leader
+				army_leader = { has_trait = leader_trait_taskmaster }
+			}
 		}
 	}
 
