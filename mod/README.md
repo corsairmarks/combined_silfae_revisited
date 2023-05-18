@@ -56,7 +56,7 @@ The solar system initializer for Hollow Rift fills the planet with ancient ruins
 
 ### Error Logs
 
-This mod overwrites the corresponding species class added by "Silfae's city sets updated" so that it will not be available for use.  Instead, the original species class from Silfae (with localisation) is used.  Expect to see one line in error.log like this:
+This mod overwrites the corresponding species class added by "Silfae's city sets updated" so that it will not be available for use.  Expect to see one line in error.log like this:
 
 ```
 [23:27:00][game_singleobjectdatabase.h:165]: Object with key: Silfae-Horror already exists, using the one at  file: common/species_classes/zz_silfae_cities_horror_exclude.txt line: 2
