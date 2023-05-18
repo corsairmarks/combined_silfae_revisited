@@ -1926,7 +1926,7 @@ country_event = {
 
 	immediate = {
 		kill_leader = {
-			type = ruler
+			ruler = yes
 			show_notification = no
 		}
 	}

@@ -352,7 +352,6 @@ leader_event = {
 	immediate = {
 		switch = {
 			trigger = leader_class
-			ruler = { ensure_leader_species_correct_holofrixit_caste = { TRAIT = trait_holooverseer } }
 			envoy = { ensure_leader_species_correct_holofrixit_caste = { TRAIT = trait_holooverseer } }
 			governor = { ensure_leader_species_correct_holofrixit_caste = { TRAIT = trait_holooverseer } }
 			scientist = { ensure_leader_species_correct_holofrixit_caste = { TRAIT = trait_hologanglion } }

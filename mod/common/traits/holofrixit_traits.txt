@@ -107,7 +107,7 @@ trait_holooverseer = {
 
 trait_holodrone = {
 	cost = 0
-	icon = gfx/interface/icons/traits/leader_traits/leader_trait_eager.dds
+	icon = gfx/interface/icons/traits/trait_presapient_proles.dds
 	allowed_archetypes = { HOLOARCH }
 	potential_crossbreeding_chance = 0
 	species_potential_add = { always = no }
