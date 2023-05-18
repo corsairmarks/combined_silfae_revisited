@@ -653,3 +653,21 @@ planet_event = {
 		name = DOTDOTDOT
 	}
 }
+
+# triggered by on_game_start
+event = {
+	id = eldar_evt.20
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_galaxy_species = {
+			limit = {
+				species_portrait = eldar
+				NOT = { has_trait = trait_eldar_age }
+			}
+			change_species_characteristics = {
+				add_trait = trait_eldar_age
+			}
+		}
+	}
+}
