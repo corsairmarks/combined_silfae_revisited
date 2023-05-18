@@ -1,7 +1,7 @@
 xirmian1 = {
 	ship_prefix = PRESCRIPTED_ship_prefix_xirmian1
 	species = {
-		class = XIRM
+		class = HUM
 		portrait = xirmian
 		name = PRESCRIPTED_species_name_xirmian1
 		plural = PRESCRIPTED_species_plural_xirmian1
