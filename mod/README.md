@@ -6,7 +6,7 @@ There are other mods which contain these portraits, so why should you choose thi
 
 # Changes
 
-All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.7 "Canis Minor," the latest version when this was written.  Updates include:
+All gameplay features from the original mod are upgraded to be fully compatible with Stellaris 3.8 "Gemini," the latest version when this was written.  Updates include:
 
 * Fix the included Prethoryn-swap shipset `horrorworm_01`
     * Ensure the ship entities are blank for ship sections and instead use the ship hull as the attachment point for the modified Prethoryn graphics
@@ -37,7 +37,7 @@ Compatible with any mod that does not add the same portraits, species class, shi
 
 The Launcher will tell you that some mods are outdated - that is because the dependencies are both out of date with the game's version number.  This mod overwrites and replaces all incompatible code so that the portrait mod will function as originally designed.  You can safely ignore the out-of-date warning for the dependency mods.
 
-Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements.  The shipset does not have NSC classes.
+Built for Stellaris version 3.8 "Gemini."  Not compatible with achievements.  The shipset does not have NSC classes.
 
 ### Dependencies
 
@@ -115,6 +115,9 @@ In game terms, the fourth color of Phenotype 9 is the same as the third color.
     * Remove global flag
     * Add compatibility trigger `has_horrorworm_portraits_revisited_active`
 * 7.0.1 Do not randomize the second horrorworm portrait set - causes issue due to not having corresponding namelist(s)
+* 8.0.0 Update for Stellaris version 3.8 "Gemini"
+    * Update prescripted empire to use the new prescripted ruler class and trait system
+    * Update shared triggers
 
 ## Source Code
 
