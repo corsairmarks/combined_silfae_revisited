@@ -1,7 +1,23 @@
+# fired when the game starts
+on_game_start = {
+	events = {
+		asari_evt.1
+	}
+}
+
 # fired during empire initialization when starting a new game
 # this = country
 empire_init_add_technologies = {
 	events = {
 		asari_evt.4
+	}
+}
+
+# fired during empire initialization when starting a new game
+# this = planet, capital
+# from = species, founder
+empire_init_capital_planet = {
+	events = {
+		asari_evt.2
 	}
 }
