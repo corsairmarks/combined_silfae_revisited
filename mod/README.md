@@ -44,7 +44,7 @@ Each of the source repositories above is added as a remote to this repository on
 
 # Compatibility
 
-Requires Stellaris 3.7 "Canis Minor" and disables achievements.
+Requires Stellaris 3.8 "Gemini" and disables achievements.
 
 Check each of the contained mods for an explicit list of incompatibility notes.  Notably some Pop jobs (13 for the Holofrixits) are overridden.  These job overrides help Pops with Holofrixit caste traits be attracted to jobs for which they are well-suited.  If overridden by another mod, the job(s) in question will no longer attract Holofrixits based on their caste role, which could lead to some Pops working jobs they are less-suited for (primarily military-related jobs for normal empires, or "complex" drone jobs for gestalts).
 
@@ -110,3 +110,4 @@ You should only add this mod before starting a new game, or remove it before sta
 * 7.0.0 Update all merged mods for Stellaris version 3.7 "Canis Minor"
 * 7.0.1 Update merged mods:
     * Updated: Animated Holosphere Portraits: Revisited at 7.1.0
+* 8.0.0 Update all merged mods for Stellaris version 3.8 "Gemini"

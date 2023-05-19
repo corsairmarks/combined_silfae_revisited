@@ -25,7 +25,7 @@ This is a bundle of mods to make it a little easier to sub and ensure cross-comp
 Hosted on [url=https://github.com/corsairmarks/combined_silfae_revisited]Github[/url]
 
 [h1]Compatibility[/h1]
-Requires Stellaris 3.7 "Canis Minor" and disables achievements.
+Requires Stellaris 3.8 "Gemini" and disables achievements.
 
 Check each of the contained mods for an explicit list of incompatibility notes.  Notably some Pop jobs (13 for the Holofrixits) are overridden.  These job overrides help Pops with Holofrixit caste traits be attracted to jobs for which they are well-suited.  If overridden by another mod, the job(s) in question will no longer attract Holofrixits based on their caste role, which could lead to some Pops working jobs they are less-suited for (primarily military-related jobs for normal empires, or "complex" drone jobs for gestalts).
 
