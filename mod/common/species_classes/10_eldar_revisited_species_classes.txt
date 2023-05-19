@@ -1,0 +1,18 @@
+# used only for namelist
+ELDR = {
+	randomized = no
+	possible = { always = no }
+	possible_secondary = { always = no }
+	graphical_culture = mammalian_01
+}
+
+# species classes are additive as of Stellaris 3.8 "Gemini"
+HUM = {
+	custom_portraits = {
+		playable = { always = yes }
+		randomized = { always = yes }
+		portraits = {
+			"eldar"
+		}
+	}
+}

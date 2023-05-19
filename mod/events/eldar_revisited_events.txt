@@ -653,3 +653,97 @@ planet_event = {
 		name = DOTDOTDOT
 	}
 }
+
+# triggered by on_game_start
+event = {
+	id = eldar_evt.20
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_country = {
+			every_owned_leader = {
+				limit = {
+					species = {
+						species_portrait = eldar
+						OR = {
+							NOT = { has_trait = trait_eldar_age }
+							prev = { is_ruler = yes }
+							leader_age <= 35
+						}
+					}
+				}
+				set_variable_to_random_value = {
+					which = leader_extra_age
+					min = 35
+					max = 55
+				}
+				add_age = leader_extra_age
+				clear_variable = leader_extra_age
+			}
+			every_pool_leader = {
+				limit = {
+					species = {
+						species_portrait = eldar
+						NOT = { has_trait = trait_eldar_age }
+					}
+				}
+				set_variable_to_random_value = {
+					which = leader_extra_age
+					min = 35
+					max = 55
+				}
+				add_age = leader_extra_age
+				clear_variable = leader_extra_age
+			}
+			every_envoy = {
+				limit = {
+					species = {
+						species_portrait = eldar
+						NOT = { has_trait = trait_eldar_age }
+					}
+				}
+				set_variable_to_random_value = {
+					which = leader_extra_age
+					min = 35
+					max = 55
+				}
+				add_age = leader_extra_age
+				clear_variable = leader_extra_age
+			}
+		}
+		# add the trait _after_ using its pabsense to determine whether to add age
+		every_galaxy_species = {
+			limit = {
+				species_portrait = eldar
+				NOT = { has_trait = trait_eldar_age }
+			}
+			change_species_characteristics = { add_trait = trait_eldar_age }
+		}
+	}
+}
+
+# triggered by empire_init_capital_planet
+planet_event = {
+	id = eldar_evt.21
+	hide_window = yes
+	is_triggered_only = yes
+	pre_triggers = { has_owner = yes }
+	trigger = { exists = from }
+	immediate = {
+		last_created_species = {
+			if = {
+				limit = {
+					NOT = { is_same_value = from }
+					species_portrait = eldar
+				}
+				change_species_characteristics = { add_trait = trait_eldar_age }
+			}
+		}
+		from = {
+			if = {
+				limit = { species_portrait = eldar }
+				change_species_characteristics = { add_trait = trait_eldar_age }
+			}
+		}
+	}
+}

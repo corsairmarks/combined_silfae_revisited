@@ -1,3 +1,10 @@
+# fired when the game starts
+on_game_start = {
+	events = {
+		eldar_evt.20
+	}
+}
+
 # fired when the game starts for each country
 # this = country
 on_game_start_country = {
@@ -20,6 +27,7 @@ empire_init_add_technologies = {
 # from = species, founder
 empire_init_capital_planet = {
 	events = {
+		eldar_evt.21
 		eldar_evt.1
 	}
 }
