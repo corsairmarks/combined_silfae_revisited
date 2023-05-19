@@ -210,9 +210,8 @@ brain_drone = {
 		}
 		upkeep = {
 			trigger = {
-				planet = {
-					has_planet_flag = has_science_ministry
-				}
+				exists = planet
+				planet = { has_planet_flag = has_science_ministry }
 			}
 			minerals = 3
 		}
@@ -481,8 +480,8 @@ warrior_drone = {
 		}
 		modifier = {
 			factor = 0.9
-			exists = owner
 			years_passed < 1
+			exists = owner
 			owner = { has_valid_civic = civic_machine_assimilator }
 			has_trait = trait_cybernetic
 		}

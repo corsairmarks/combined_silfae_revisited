@@ -9,28 +9,48 @@ soldier = {
 	building_icon = building_stronghold
 	clothes_texture_index = 4
 
-	country_modifier = {
-		country_naval_cap_add = 4
-	}
 	resources = {
 		category = planet_soldiers
 	}
 
+	country_modifier = {
+		country_naval_cap_add = 4
+	}
+
 	triggered_country_modifier = {
 		potential = {
-			exists = planet
-			planet = {
-				exists = owner
-				owner = { has_technology = "tech_ground_defense_planning" }
-			}
+			exists = owner
+			owner = { has_technology = tech_ground_defense_planning }
 		}
 		modifier = {
 			country_naval_cap_add = 2
 		}
 	}
 
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_trait_in_council = { TRAIT = leader_trait_bellicose } }
+		}
+		modifier = {
+			country_naval_cap_add = 2
+		}
+		mult = value:bellicose_naval_cap
+	}
+
 	pop_modifier = {
 		pop_defense_armies_add = 3
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_trait_in_council = { TRAIT = leader_trait_bellicose } }
+		}
+		modifier = {
+			pop_defense_armies_add = 1
+		}
+		mult = value:bellicose_naval_cap
 	}
 
 	triggered_planet_modifier = {
@@ -39,6 +59,27 @@ soldier = {
 			planet_stability_add = 1
 		}
 		mult = planet.modifier:job_soldier_stability_add
+	}
+
+	triggered_planet_modifier = {
+		potential = { has_councilor = { COUNCILOR = councilor_private_military_companies } }
+		modifier = {
+			planet_stability_add = @councilor_private_military_companies_stability
+		}
+		mult = value:councilor_level|TYPE|councilor_private_military_companies|
+	}
+
+	triggered_planet_modifier = {
+		modifier = {
+			planet_building_build_speed_mult = 0.05
+		}
+		potential = {
+			exists = planet
+			planet = {
+				exists = army_leader
+				army_leader = { has_trait = leader_trait_taskmaster }
+			}
+		}
 	}
 
 	possible_pre_triggers = {

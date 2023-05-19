@@ -1,5 +1,3 @@
-#######################
-
 # Holofrixit Xechiros Protocol
 gov_holofrixit = {
 	ruler_title = RT_NETMINISTRATOR
@@ -14,19 +12,4 @@ gov_holofrixit = {
 	weight = {
 		base = 1000
 	}
-	election_candidates = {
-		modifier = {
-			add = 100
-			leader_class = ruler
-		}
-		modifier = {
-			add = 60
-			leader_class = governor
-		}
-		modifier = {
-			add = -1000
-			NOT = { leader_class = governor }
-		}
-	}
-	leader_class = governor
 }
