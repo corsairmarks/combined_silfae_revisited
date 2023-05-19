@@ -1,0 +1,30 @@
+# file renamed so that portraits appear after all built-in portraits
+
+# used only for graphical_culture (cites/ships) and namelists
+SRPT = {
+	randomized = no
+	possible = { always = no }
+	possible_secondary = { always = no }
+	graphical_culture = serpentoid_01
+}
+
+# species classes are additive as of Stellaris 3.8 "Gemini"
+REP = {
+	custom_portraits = {
+		playable = { always = yes }
+		randomized = { always = yes }
+		portraits = {
+			"serpentoid"
+		}
+	}
+}
+
+# species classes are additive as of Stellaris 3.8 "Gemini"
+PRE_REP = {
+	portraits = {
+		"serpentoid"
+	}
+	uplifted_portraits = {
+		"serpentoid"
+	}
+}
