@@ -119,6 +119,7 @@ This mod preempts one event from the base game related to restoring relic worlds
     * Update prescripted empire to use the new prescripted ruler class and trait system
     * Update shared triggers
     * Integrate underlying game changes
+* 8.0.1 Fix a minor scope error
 
 ## Source Code
 
