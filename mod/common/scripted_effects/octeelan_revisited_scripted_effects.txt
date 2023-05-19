@@ -553,7 +553,7 @@ setup_peepboop_homeworld = {
 		plural = PRESCRIPTED_species_plural_peepboop1
 		adjective = PRESCRIPTED_species_adjective_peepboop1
 		name_list = AI
-		class = PEEBOOP
+		class = MACHINE
 		portrait = peepboop1
 		homeworld = this
 		traits = {
@@ -752,31 +752,58 @@ setup_peepboop_homeworld = {
 			}
 		}
 	}
-	event_target:peepboop_planet = {
+	if = {
+		limit = { has_overlord_dlc = yes }
+		# welcome to the jank!
+		# in order to have a valid design for an orbital ring, we need to copy the design from the player empire
+		# because empires created after game_start don't receive default designs for them
+		space_owner = {
+			random_owned_design = {
+				limit = { is_ship_size = orbital_ring_tier_1 }
+				save_event_target_as = design_orbital_ring_tier_1
+			}
+		}
+		event_target:peepboop_country = {
+			give_technology = {
+				tech = tech_orbital_ring_tier_1
+				message = no
+			}
+			add_ship_design = event_target:design_orbital_ring_tier_1
+		}
+		create_starbase = {
+			size = orbital_ring_tier_1
+			owner = event_target:peepboop_country
+			module = orbital_ring_shipyard
+			module = orbital_ring_anchorage
+			effect = { save_event_target_as = peepboop_starbase }
+		}
+	}
+	else = {
 		create_starbase = {
 			size = starbase_starport
 			owner = event_target:peepboop_country
 			building = crew_quarters
 			module = shipyard
-			module = solar_panel_network
-			effect = {
-				set_starbase_flag = peepboop_country_starbase@event_target:peepboop_country
-				create_ship = {
-					name = random
-					design = DESIGN_military_station_small_point_defense_peepboop
-					prefix = no
-				}
-				create_ship = {
-					name = random
-					design = DESIGN_military_station_small_line_peepboop
-					prefix = no
-				}
-				create_ship = {
-					name = random
-					design = DESIGN_military_station_small_strike_craft_peepboop
-					prefix = no
-				}
-			}
+			module = anchorage
+			effect = { save_event_target_as = peepboop_starbase }
+		}
+	}
+	event_target:peepboop_starbase = {
+		set_starbase_flag = peepboop_country_starbase@event_target:peepboop_country
+		create_ship = {
+			name = random
+			design = DESIGN_military_station_small_point_defense_peepboop
+			prefix = no
+		}
+		create_ship = {
+			name = random
+			design = DESIGN_military_station_small_line_peepboop
+			prefix = no
+		}
+		create_ship = {
+			name = random
+			design = DESIGN_military_station_small_strike_craft_peepboop
+			prefix = no
 		}
 	}
 }
