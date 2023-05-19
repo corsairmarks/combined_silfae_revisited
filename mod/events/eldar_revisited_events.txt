@@ -667,8 +667,10 @@ event = {
 						species_portrait = eldar
 						OR = {
 							NOT = { has_trait = trait_eldar_age }
-							prev = { is_ruler = yes }
-							leader_age <= 35
+							prev = {
+								is_ruler = yes
+								leader_age <= 35
+							}
 						}
 					}
 				}
