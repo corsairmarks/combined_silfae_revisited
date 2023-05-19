@@ -185,6 +185,8 @@ This mod overwrites the corresponding species class added by "Silfae's city sets
     * Update prescripted empire to use the new prescripted ruler class and trait system
     * Update shared triggers
     * Integrate underlying game changes
+    * Convince Hologanglions to once again work in their specialty (research-focused jobs) and Holowarriors to work as enforcers regardless of crime
+    * Convert most Holofrixit traits back to affecting specific resource output rather than job categories
 
 ## Source Code
 
