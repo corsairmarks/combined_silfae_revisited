@@ -1,7 +1,7 @@
 saurischian1 = {
 	ship_prefix = PRESCRIPTED_ship_prefix_saurischian1
 	species = {
-		class = SRSCN
+		class = REP
 		portrait = saurischian
 		name = PRESCRIPTED_species_name_saurischian1
 		plural = PRESCRIPTED_species_plural_saurischian1
@@ -49,8 +49,7 @@ saurischian1 = {
 		texture = 3
 		ruler_title = RT_ALPHA
 		ruler_title_female = RT_ALPHA_FEMALE
-		leader_class = ruler
-		trait = trait_ruler_military_pioneer 
+		leader_class = general
 		trait = trait_ruler_warlike 
 	}
 	flags = { is_astroraptors custom_start_screen }
