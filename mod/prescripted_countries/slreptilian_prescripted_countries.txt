@@ -2,7 +2,7 @@ slreptilian1 = {
 	playable = has_utopia
 	ship_prefix = PRESCRIPTED_ship_prefix_slreptilian1
 	species = {
-		class = SLRPTLN
+		class = REP
 		portrait = slreptilian
 		name = PRESCRIPTED_species_name_slreptilian1
 		plural = PRESCRIPTED_species_plural_slreptilian1
@@ -55,7 +55,7 @@ slreptilian1 = {
 	}
 	flags = { is_slreptilians custom_start_screen }
 	ruler = {
-		leader_class = ruler
+		leader_class = governor
 		gender = male
 		name = PRESCRIPTED_ruler_name_slreptilian1
 		portrait = slreptilian_male_02
@@ -63,6 +63,7 @@ slreptilian1 = {
 		clothes = 0
 		ruler_title = RT_ILLUMINATED_MASTER
 		ruler_title_female = RT_ILLUMINATED_MISTRESS
+		trait = trait_ruler_charismatic
 	}
 	spawn_enabled = yes
 	spawn_as_fallen = no

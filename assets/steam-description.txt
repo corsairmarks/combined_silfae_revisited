@@ -9,7 +9,7 @@ This is a bundle of mods to make it a little easier to sub and ensure cross-comp
 [*][url=https://steamcommunity.com/workshop/filedetails/?id=2576769521]Animated Aquilese Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/romaneagles_portraits_revisited]Source[/url] 6.0.0)
 [*][url=https://steamcommunity.com/workshop/filedetails/?id=2581752619]Animated Asari Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/asari_portraits_revisited]Source[/url] 7.0.0)
 [*][url=https://steamcommunity.com/workshop/filedetails/?id=2581388205]Animated Eldar Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/eldar_portraits_revisited]Source[/url] 7.0.1)
-[*][url=https://steamcommunity.com/workshop/filedetails/?id=2585946800]Animated Hidden Eye Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/slreptilian_portraits_revisited]Source[/url] 6.0.0)
+[*][url=https://steamcommunity.com/workshop/filedetails/?id=2585946800]Animated Hidden Eye Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/slreptilian_portraits_revisited]Source[/url] 7.0.0)
 [*][url=https://steamcommunity.com/workshop/filedetails/?id=2578037235]Animated Hollow Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/horrorworm_portraits_revisited]Source[/url] 7.0.1)
 [*][url=https://steamcommunity.com/workshop/filedetails/?id=2592592503]Animated Holosphere Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/holosphere_rising_revisited]Source[/url] 7.1.0)
 [*][url=https://steamcommunity.com/workshop/filedetails/?id=2576290763]Animated Hyena Portraits: Revisited[/url] ([url=https://github.com/corsairmarks/hyenafolk_portraits_revisited]Source[/url] 7.0.0)
