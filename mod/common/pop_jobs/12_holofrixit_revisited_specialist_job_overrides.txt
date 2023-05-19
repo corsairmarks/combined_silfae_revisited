@@ -78,12 +78,13 @@ enforcer = {
 		}
 		modifier = {
 			factor = 10
-			planet = { planet_crime > 15}
+			planet = { planet_crime > 15 }
 			NOT = { has_job = enforcer }
 		}
 		modifier = {
 			factor = 0.01
-			planet = { planet_crime <= 15}
+			has_species_trait_holowarrior = no
+			planet = { planet_crime <= 15 }
 			NOT = { has_job = enforcer }
 		}
 		modifier = {
