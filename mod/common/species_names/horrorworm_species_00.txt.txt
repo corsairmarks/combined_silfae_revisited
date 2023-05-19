@@ -15,24 +15,7 @@ HRWRM = {
 	}
 }
 
-HRWRM2 = {
-	horrorworm1 = {
-		name = SPEC_HRWRM_horrorworm1
-		plural = SPEC_HRWRM_horrorworm1_plural
-		home_planet = SPEC_HRWRM_horrorworm1_planet
-		home_system = SPEC_HRWRM_horrorworm1_system
-		name_list = HRWRM1
-	}
-	horrorworm2 = {
-		name = SPEC_HRWRM_horrorworm2
-		plural = SPEC_HRWRM_horrorworm2_plural
-		home_planet = SPEC_HRWRM_horrorworm2_planet
-		home_system = SPEC_HRWRM_horrorworm2_system
-		name_list = HRWRM1
-	}
-}
-
-HRWRM2 = {
+HRWRM_NEC = {
 	horrorworm1 = {
 		name = SPEC_HRWRM_horrorworm1
 		plural = SPEC_HRWRM_horrorworm1_plural
